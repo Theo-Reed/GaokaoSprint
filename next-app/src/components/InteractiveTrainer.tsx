@@ -1,8 +1,9 @@
 "use client";
 
+// Interactive Trainer Component
 import React, { useState } from "react";
-import { SentenceAnalyzer } from "./SentenceAnalyzer";
-import { GrammarQuiz } from "./GrammarQuiz";
+import { SentenceAnalyzer } from "@/components/SentenceAnalyzer";
+import { GrammarQuiz } from "@/components/GrammarQuiz";
 
 // Simple icon wrapper to avoid external deps for now
 const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (

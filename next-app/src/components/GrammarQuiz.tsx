@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "@/data/training-data";
+import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "../data/training-data";
 import { sample, sampleSize } from "lodash";
 
 export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
@@ -11,11 +11,12 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     title: isCn ? '极速快问' : 'Speed Quiz',
     question: isCn ? '问题' : 'Q',
     combo: isCn ? '连对' : 'Combo',
-    next: isCn ? '下一题' : 'Next',
+    next: isCn ? '下一题' : 'Next Question',
     check: isCn ? '提交答案' : 'Check Answer',
-    solved: isCn ? '已解决!' : 'Solved!',
+    solved: isCn ? '下一题' : 'Next Question',
+    trySimilar: isCn ? '试试同类题' : 'Try Similar Question',
     correct: isCn ? '🎉 正确! ' : '🎉 CORRECT! ',
-    incorrect: isCn ? '❌ 错误。正在切换题目...' : '❌ Incorrect. Try another.',
+    incorrect: isCn ? '❌ 错误。请看解析：' : '❌ Incorrect. See explanation:',
     loading: isCn ? '正在加载题库...' : 'Loading Exam Matrix...',
     complete: isCn ? '🚀 练习完成！加载新一轮...' : '🚀 Session Complete! Loading new set...',
     placeholder: isCn ? '输入答案...' : 'Type answer...'
@@ -56,35 +57,44 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     e.preventDefault();
     if (!currentQuiz) return;
 
-    const userAnswer = examInput.trim();
-    if (userAnswer.toLowerCase() === currentQuiz.expected.toLowerCase()) {
+    const userAnswer = examInput.trim().toLowerCase();
+    const isCorrect = Array.isArray(currentQuiz.expected)
+        ? currentQuiz.expected.some(exp => exp.toLowerCase() === userAnswer)
+        : currentQuiz.expected.toLowerCase() === userAnswer;
+
+    if (isCorrect) {
       setIsExamCorrect(true);
       setExamFeedback(text.correct + currentQuiz.explanation);
       setSessionScore(prev => prev + 1);
     } else {
       setIsExamCorrect(false);
-      setExamFeedback(text.incorrect);
-      
-      // Auto-swap incorrect question for variety (staying within same category)
-      setTimeout(() => {
-         // Find other questions of the SAME category to maintain the 12-level structure
-         const sameCategoryCandidates = EXAM_POOL.filter(q => 
-            q.categoryId === currentQuiz.categoryId && 
-            q.id !== currentQuiz.id
-         );
-         
-         if (sameCategoryCandidates.length > 0) {
-             const newQuestion = sample(sameCategoryCandidates)!;
-             setQuizPool(prev => {
-                 const newPool = [...prev];
-                 newPool[currentQuizIndex] = newQuestion;
-                 return newPool;
-             });
-             setExamInput("");
-             setExamFeedback("");
-         }
-      }, 1500);
+      // Show explanation even if wrong
+      setExamFeedback(`${text.incorrect} ${currentQuiz.explanation}`);
     }
+  };
+
+  const handleRetry = () => {
+     // Find other questions of the SAME category to maintain the 12-level structure
+     const sameCategoryCandidates = EXAM_POOL.filter(q => 
+        q.categoryId === currentQuiz.categoryId && 
+        q.id !== currentQuiz.id
+     );
+     
+     if (sameCategoryCandidates.length > 0) {
+         const newQuestion = sample(sameCategoryCandidates)!;
+         setQuizPool(prev => {
+             const newPool = [...prev];
+             newPool[currentQuizIndex] = newQuestion;
+             return newPool;
+         });
+         setExamInput("");
+         setExamFeedback("");
+     } else {
+         // Fallback if no other questions exist in category
+         setExamInput("");
+         setExamFeedback("");
+         alert("No other questions available for this category yet.");
+     }
   };
 
   const nextQuiz = () => {
@@ -114,14 +124,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
           </p>
         </div>
         <div>
-           {isExamCorrect && (
-              <button 
-                  onClick={nextQuiz}
-                  className="px-3 py-1 bg-white text-purple-700 rounded-lg hover:bg-purple-50 text-xs font-bold animate-pulse shadow-sm"
-              >
-                  {text.next} →
-              </button>
-           )}
+           {/* Header "Next" button removed */}
         </div>
       </div>
 
@@ -136,7 +139,22 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
             </p>
         </div>
 
-        <form onSubmit={handleExamSubmit} className="mt-auto">
+        <form onSubmit={(e) => {
+            // If already correct, next question
+            if (isExamCorrect) {
+                e.preventDefault();
+                nextQuiz();
+                return;
+            }
+            // If incorrect and showing feedback, retry
+            if (!isExamCorrect && examFeedback) {
+                e.preventDefault();
+                handleRetry();
+                return;
+            }
+            // Default: submit answer
+            handleExamSubmit(e);
+        }} className="mt-auto">
             <div className="flex gap-2 mb-3">
                 <input 
                     type="text" 
@@ -144,20 +162,24 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                     onChange={(e) => setExamInput(e.target.value)}
                     placeholder={text.placeholder}
                     className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
-                    disabled={isExamCorrect}
+                    disabled={isExamCorrect || (!!examFeedback && !isExamCorrect)}
                 />
             </div>
             
             <button 
                 type="submit"
-                disabled={!examInput}
+                // Disable if input empty (unless we are in a "next" or "retry" state)
+                disabled={!examInput && !examFeedback}
                 className={`w-full py-2.5 rounded-lg font-bold text-white shadow-sm transition-all ${
                     isExamCorrect 
                     ? 'bg-green-500 hover:bg-green-600' 
-                    : 'bg-slate-900 hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed'
+                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-slate-900 hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed')
                 }`}
             >
-                {isExamCorrect ? text.solved : text.check}
+                {isExamCorrect 
+                    ? text.solved // "Next Question"
+                    : (examFeedback ? text.trySimilar : text.check) // "Try Similar" or "Check"
+                }
             </button>
         </form>
 

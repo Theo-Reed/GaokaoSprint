@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ANALYSIS_LEVELS } from "@/data/training-data";
+import { ANALYSIS_LEVELS } from "../data/training-data";
 
 type ToolType = "subject" | "verb" | "object" | null;
 
