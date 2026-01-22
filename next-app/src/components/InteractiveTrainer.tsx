@@ -42,21 +42,31 @@ export const InteractiveTrainer = () => {
     if (correctIndices.includes(index)) {
       // Correct!
       if (!foundIndices[selectedTool].includes(index)) {
+        // ... (existing success logic)
         setFoundIndices(prev => ({
           ...prev,
           [selectedTool]: [...prev[selectedTool], index]
         }));
         setMessage("✅ Correct! Keep going.");
         setFeedbackColor("text-green-600");
-        checkCompletion();
-      } else {
-        setMessage("ℹ️ You already found this one.");
       }
     } else {
-      // Incorrect logic
-      setMessage(`❌ Logic Error: This word is NOT part of the ${selectedTool.toUpperCase()}. Look closely.`);
-      setFeedbackColor("text-red-600");
+      // 1. Check if it's a known TRAP
+      if (currentSentence.traps && currentSentence.traps[index]) {
+        setMessage(currentSentence.traps[index]); // Show specific trap explanation
+        setFeedbackColor("text-red-600 font-bold");
+      } else {
+        // 2. Generic Error
+        setMessage(`❌ Logic Error: This word is NOT part of the ${selectedTool.toUpperCase()}. Look for clues.`);
+        setFeedbackColor("text-red-600");
+      }
     }
+  };
+
+  const showAlgorithm = () => {
+    // Helper to toggle algorithm visibility (could be a modal or expansion panel)
+    // For demo simplicity, we just inject it into message area or add a new UI section
+    alert(currentSentence.algorithm.join("\n"));
   };
 
   const checkCompletion = () => {
@@ -86,6 +96,12 @@ export const InteractiveTrainer = () => {
           <p className="text-slate-400 text-sm">Level {currentLevelIndex + 1} / {TRAINING_LEVELS.length} • Difficulty: {currentSentence.difficulty}</p>
         </div>
         <div className="flex gap-2">
+            <button 
+                onClick={() => alert(`LOGIC ALGORITHM:\n\n${currentSentence.algorithm.join('\n')}`)}
+                className="px-3 py-1 bg-yellow-600 rounded hover:bg-yellow-500 text-xs font-bold text-white mr-2"
+            >
+                💡 Logic Hint
+            </button>
             <button 
                 onClick={() => setCurrentLevelIndex(Math.max(0, currentLevelIndex - 1))}
                 className="px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 text-xs"
