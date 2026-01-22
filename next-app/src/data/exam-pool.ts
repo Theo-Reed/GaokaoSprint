@@ -145,8 +145,13 @@ export const EXAM_POOL: QuizQuestion[] = [
   // Coverage: Comparison, Articles (a/an/the), Word Order
   // ==========================================
   { id: 'aaa_3', categoryId: 'adj_adv', question: "This is ______ most interesting book.", expected: ["a", "the"], explanation: "a most = very (一本非常...的书); the most = 最(最高级)。" },
-  { id: 'aaa_7', categoryId: 'adj_adv', question: "The weather is becoming ______ (bad) and ______ (bad).", expected: ["worse worse", "worse"], explanation: "比较级 and 比较级 (越来越...)。" },
-  { id: 'aaa_8', categoryId: 'adj_adv', question: "He is ______ (smart) of the two boys.", expected: "the smarter", explanation: "Of the two -> 特指两者中较...的一个，加 the。" },
+  { id: 'aaa_9', categoryId: 'adj_adv', question: "Of the two sisters, Betty is ______ (rich) one.", expected: "the richer", explanation: "Of the two... -> Both determined and comparative (the + comparative)." },
+  { id: 'aaa_10', categoryId: 'adj_adv', question: "He is ______ (lazy) than stupid.", expected: "more lazy", explanation: "Comparing two qualities of the same person: use 'more ... than ...' (not lazier)." },
+  { id: 'aaa_11', categoryId: 'adj_adv', question: "I have never spent a ______ (pleasant) day.", expected: "more pleasant", explanation: "Negation + Comparative = Superlative meaning (never ... more ... = this is the most ...)." },
+  { id: 'aaa_12', categoryId: 'adj_adv', question: "He speaks ______ (high) of the new teacher.", expected: "highly", explanation: "speak highly of = praise. 'High' refers to height, 'highly' means degree/opinion." },
+  { id: 'aaa_13', categoryId: 'adj_adv', question: "The more you learn, the ______ (modest) you become.", expected: "more modest", explanation: "Double comparative: The more ..., the more ..." },
+  { id: 'aaa_14', categoryId: 'adj_adv', question: "The climate here is like ______ (that) of Kunming.", expected: "that", explanation: "Comparison of equivalent nouns: use 'that' for singular, 'those' for plural." },
+  { id: 'aaa_15', categoryId: 'adj_adv', question: "He was elected ______ monitor of the class.", expected: ["-", "/"], explanation: "Zero article for unique titles/positions (elected monitor). Type '-' for zero article." },
 
   // ==========================================
   // LEVEL 12: SV Agreement (主谓一致)

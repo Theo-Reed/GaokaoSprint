@@ -19,7 +19,9 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     incorrect: isCn ? '❌ 错误。请看解析：' : '❌ Incorrect. See explanation:',
     loading: isCn ? '正在加载题库...' : 'Loading Exam Matrix...',
     complete: isCn ? '🚀 练习完成！加载新一轮...' : '🚀 Session Complete! Loading new set...',
-    placeholder: isCn ? '输入答案...' : 'Type answer...'
+    placeholder: isCn ? '输入答案...' : 'Type answer...',
+    reset: isCn ? '重置进度' : 'Reset Progress',
+    resetConfirm: isCn ? '确定要清除所有做题记录吗？' : 'Are you sure you want to clear all history?'
   };
 
   const [quizPool, setQuizPool] = useState<QuizQuestion[]>([]);
@@ -63,12 +65,37 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     const completed = getCompletedQuestions();
     if (!completed.includes(id)) {
       const updated = [...completed, id];
-      localStorage.setItem('gaokao_completed_questions', JSON.stringify(updated));
+      const jsonStr = JSON.stringify(updated);
+      localStorage.setItem('gaokao_completed_questions', jsonStr);
+      // Debug log when saving
+      console.log(`[GrammarQuiz] Progress saved. Total completed: ${updated.length}`);
     }
   };
 
+  const clearHistory = () => {
+    if (confirm(text.resetConfirm)) {
+      localStorage.removeItem('gaokao_completed_questions');
+      console.log('[GrammarQuiz] History cleared.');
+      startNewExamSession();
+    }
+  };
+
+  // Expose clearHistory to window for console access
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).resetGrammarQuiz = clearHistory;
+      console.log('[GrammarQuiz] Debug tool available: window.resetGrammarQuiz()');
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        delete (window as any).resetGrammarQuiz;
+      }
+    };
+  }, []);
+
   const startNewExamSession = () => {
     const completedIds = getCompletedQuestions();
+    console.log(`[GrammarQuiz] Starting new session. Found ${completedIds.length} completed questions.`);
     
     // Generate a 12-question exam, one from each Analysis Level
     const sessionQuestions = ANALYSIS_LEVELS.map(level => {
@@ -77,6 +104,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       
       // Filter out completed questions first
       const unseenCandidates = candidates.filter(q => !completedIds.includes(q.id));
+      console.log(`[GrammarQuiz] Level ${level.categoryId}: Total ${candidates.length}, Unseen ${unseenCandidates.length}`);
       
       // Priority: Unseen -> Any
       const poolToSample = unseenCandidates.length > 0 ? unseenCandidates : candidates;
@@ -167,7 +195,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
             <span>⚔️</span> {text.title}
           </h3>
           <p className="text-purple-200 text-xs mt-1">
-            {text.question} {currentQuizIndex + 1} / {quizPool.length} • {text.combo}: {sessionScore}
+            {text.question} {currentQuizIndex + 1} / {quizPool.length}
           </p>
         </div>
         <div>
