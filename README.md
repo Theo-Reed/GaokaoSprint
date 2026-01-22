@@ -13,4 +13,4 @@ By combining cutting-edge LLMs with biological optimization (Bio-Hacking) and hi
 
 ## Documentation
 - **[English Documentation](./en/README.md)**: Detailed guides and subject resources in English.
-- **[中文详细文档](./cn/README.md)**: 详细的中午指南与学科资源。
+- **[中文详细文档](./cn/README.md)**: 详细的中文指南与学科资源。
