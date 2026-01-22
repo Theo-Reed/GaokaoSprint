@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "../data/training-data";
 import { sample, sampleSize } from "lodash";
 
@@ -29,6 +29,19 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   const [isExamCorrect, setIsExamCorrect] = useState(false);
   const [sessionScore, setSessionScore] = useState(0);
 
+  const inputRef = useRef<HTMLInputElement>(null);
+  const submitRef = useRef<HTMLButtonElement>(null);
+
+  // Auto-focus logic: Focus input for typing, Focus button for "Next" action
+  useEffect(() => {
+    if (examFeedback || isExamCorrect) {
+       submitRef.current?.focus();
+    } else {
+       // Small timeout to ensure disabled attribute is removed before focusing
+       setTimeout(() => inputRef.current?.focus(), 50);
+    }
+  }, [examFeedback, isExamCorrect, currentQuizIndex]);
+
   const currentQuiz = quizPool[currentQuizIndex];
 
   // Initialize Exam Session
@@ -36,13 +49,40 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     startNewExamSession();
   }, []);
 
+  const getCompletedQuestions = (): string[] => {
+    if (typeof window === 'undefined') return [];
+    try {
+      const stored = localStorage.getItem('gaokao_completed_questions');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  };
+
+  const markQuestionAsCompleted = (id: string) => {
+    const completed = getCompletedQuestions();
+    if (!completed.includes(id)) {
+      const updated = [...completed, id];
+      localStorage.setItem('gaokao_completed_questions', JSON.stringify(updated));
+    }
+  };
+
   const startNewExamSession = () => {
+    const completedIds = getCompletedQuestions();
+    
     // Generate a 12-question exam, one from each Analysis Level
     const sessionQuestions = ANALYSIS_LEVELS.map(level => {
       // Find all questions matching this level's category
       const candidates = EXAM_POOL.filter(q => q.categoryId === level.categoryId);
-      // Pick one random question from the candidates, or fallback to any if missing
-      return sample(candidates) || candidates[0];
+      
+      // Filter out completed questions first
+      const unseenCandidates = candidates.filter(q => !completedIds.includes(q.id));
+      
+      // Priority: Unseen -> Any
+      const poolToSample = unseenCandidates.length > 0 ? unseenCandidates : candidates;
+      
+      // Pick one random question from the pool
+      return sample(poolToSample) || candidates[0];
     }).filter(Boolean) as QuizQuestion[];
 
     setQuizPool(sessionQuestions);
@@ -66,6 +106,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       setIsExamCorrect(true);
       setExamFeedback(text.correct + currentQuiz.explanation);
       setSessionScore(prev => prev + 1);
+      markQuestionAsCompleted(currentQuiz.id);
     } else {
       setIsExamCorrect(false);
       // Show explanation even if wrong
@@ -74,14 +115,20 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   };
 
   const handleRetry = () => {
+     const completedIds = getCompletedQuestions();
+     
      // Find other questions of the SAME category to maintain the 12-level structure
      const sameCategoryCandidates = EXAM_POOL.filter(q => 
         q.categoryId === currentQuiz.categoryId && 
         q.id !== currentQuiz.id
      );
      
-     if (sameCategoryCandidates.length > 0) {
-         const newQuestion = sample(sameCategoryCandidates)!;
+     // Filter unseen
+     const unseenCandidates = sameCategoryCandidates.filter(q => !completedIds.includes(q.id));
+     const poolToSample = unseenCandidates.length > 0 ? unseenCandidates : sameCategoryCandidates;
+     
+     if (poolToSample.length > 0) {
+         const newQuestion = sample(poolToSample)!;
          setQuizPool(prev => {
              const newPool = [...prev];
              newPool[currentQuizIndex] = newQuestion;
@@ -157,6 +204,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
         }} className="mt-auto">
             <div className="flex gap-2 mb-3">
                 <input 
+                    ref={inputRef}
                     type="text" 
                     value={examInput}
                     onChange={(e) => setExamInput(e.target.value)}
@@ -167,6 +215,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
             </div>
             
             <button 
+                ref={submitRef}
                 type="submit"
                 // Disable if input empty (unless we are in a "next" or "retry" state)
                 disabled={!examInput && !examFeedback}

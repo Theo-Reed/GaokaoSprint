@@ -18,7 +18,7 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'tv_2', categoryId: 'tense_voice', question: "Since I came here, I ______ (meet) no one.", expected: "have met", explanation: "since + 过去时间 -> 现在完成时 (have done)。" },
   { id: 'tv_3', categoryId: 'tense_voice', question: "The book ______ (write) by Mo Yan in 1990.", expected: "was written", explanation: "明确过去时间 (1990) + 被动语态 -> 一般过去时被动 (was done)。" },
   { id: 'tv_4', categoryId: 'tense_voice', question: "When I arrived at the station, the train ______ (leave) already.", expected: "had left", explanation: "过去的过去 -> 过去完成时 (had done)。" },
-  { id: 'tv_5', categoryId: 'tense_voice', question: "Look! The bridge ______ (repair) now.", expected: ["is being repaired", "is being repaired"], explanation: "now表示正在进行 + 被动 -> 现在进行时的被动 (is being done)。" },
+  { id: 'tv_5', categoryId: 'tense_voice', question: "Look! The bridge ______ (repair) now.", expected: ["is being repaired"], explanation: "now表示正在进行 + 被动 -> 现在进行时的被动 (is being done)。" },
   { id: 'tv_6', categoryId: 'tense_voice', question: "If it ______ (rain) tomorrow, we will stay at home.", expected: "rains", explanation: "主将从现：条件状语从句用一般现在时表将来。" },
   { id: 'tv_7', categoryId: 'tense_voice', question: "I ______ (read) a book when he came in.", expected: "was reading", explanation: "过去某一动作正在进行 -> 过去进行时 (was doing)。" },
   { id: 'tv_8', categoryId: 'tense_voice', question: "Great changes ______ (take place) in our city in the last ten years.", expected: "have taken place", explanation: "in the last...years -> 现在完成时 (have done)。" },
@@ -70,7 +70,7 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'att_2', categoryId: 'attributive', question: "The man to ______ I spoke is the boss.", expected: "whom", explanation: "介词(to) + 指人 -> whom。" },
   { id: 'att_3', categoryId: 'attributive', question: "I'll never forget the day ______ we met.", expected: ["when", "on which"], explanation: "先行词day（时间） + 从句完整 -> when 或 on which。" },
   { id: 'att_4', categoryId: 'attributive', question: "This is the reason ______ he came late.", expected: ["why", "for which"], explanation: "先行词reason（原因） + 从句完整 -> why 或 for which。" },
-  { id: 'att_5', categoryId: 'attributive', question: "The student ______ (whose) father is a doctor stands there.", expected: "whose", explanation: "student's father -> 所属关系用 whose。" },
+  { id: 'att_5', categoryId: 'attributive', question: "The student ______ father is a doctor stands there.", expected: "whose", explanation: "student's father -> 所属关系用 whose。" },
   { id: 'att_6', categoryId: 'attributive', question: "He has two sons, both of ______ are doctors.", expected: "whom", explanation: "介词of + 指人（且在非限制性从句中） -> whom。" },
   { id: 'att_7', categoryId: 'attributive', question: "This is the factory ______ I visited last year.", expected: ["that", "which", ""], explanation: "visit缺宾语 -> that/which/省略。" },
   { id: 'att_8', categoryId: 'attributive', question: "This is the factory ______ I worked last year.", expected: ["where", "in which"], explanation: "work不缺宾语（地点状语） -> where / in which。" },
@@ -85,7 +85,7 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'nc_4', categoryId: 'noun_clauses', question: "The problem is ______ we can get there.", expected: "how", explanation: "表语从句，表示“如何” -> how。" },
   { id: 'nc_5', categoryId: 'noun_clauses', question: "That is ______ he refused my offer.", expected: "why", explanation: "That is why... = 那就是...的原因。" },
   { id: 'nc_6', categoryId: 'noun_clauses', question: "It is suggested ______ we (should) go there.", expected: "that", explanation: "It做形式主语，真正主语从句用 that 引导。" },
-  { id: 'nc_7', categoryId: 'noun_clauses', question: "We doubt ______ he is honest.", expected: "whether", explanation: "doubt在肯定句中，通常接 whether/if 表示怀疑。" },
+  { id: 'nc_7', categoryId: 'noun_clauses', question: "We doubt ______ he is honest.", expected: ["whether", "if"], explanation: "doubt在肯定句中，通常接 whether/if 表示怀疑。" },
   { id: 'nc_8', categoryId: 'noun_clauses', question: "There is no doubt ______ he is honest.", expected: "that", explanation: "no doubt (否定怀疑) -> 用 that 引导同位语从句。" },
 
   // ==========================================
@@ -122,8 +122,8 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'emp_2', categoryId: 'emphasis_it', question: "I found ______ difficult to master English.", expected: "it", explanation: "形式宾语：find it adj to do。" },
   { id: 'emp_3', categoryId: 'emphasis_it', question: "Was ______ he that called you?", expected: "it", explanation: "强调句的一般疑问句：Was it ... that ...?" },
   { id: 'emp_4', categoryId: 'emphasis_it', question: "It is Tom ______ (who) is to blame.", expected: ["who", "that"], explanation: "强调人 (Tom) -> 可用 who 或 that。" },
-  { id: 'emp_5', categoryId: 'emphasis_it', question: "It ______ (hit) me that I had forgotten the keys.", expected: "hit", explanation: "It hits sb that... (某人突然想起...)。" },
-  { id: 'emp_6', categoryId: 'emphasis_it', question: "It looks ______ (as if) it is going to rain.", expected: ["as if", "like"], explanation: "It looks as if... (看起来好像...)。" },
+  { id: 'emp_5', categoryId: 'emphasis_it', question: "It ______ (hit) me that I had forgotten the keys.", expected: "hit", explanation: "It hits sb that... (某人突然想起...)。句中有 had forgotten (过去完成时)，主句通常对应过去时。Hit 的过去式也是 hit。" },
+  { id: 'emp_6', categoryId: 'emphasis_it', question: "It looks ______ it is going to rain.", expected: ["as if", "like"], explanation: "It looks as if... (看起来好像...)。" },
   { id: 'emp_7', categoryId: 'emphasis_it', question: "I make ______ a rule to get up early.", expected: "it", explanation: "make it a rule to do (把...定为规矩)。" },
   { id: 'emp_8', categoryId: 'emphasis_it', question: "It was not until yesterday ______ I knew the news.", expected: "that", explanation: "强调 not until 句型：It was not until ... that ..." },
 
@@ -134,7 +134,7 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'sub_1', categoryId: 'subjunctive', question: "If I ______ (be) a bird, I would fly.", expected: "were", explanation: "与现在事实相反 -> be动词用 were。" },
   { id: 'sub_2', categoryId: 'subjunctive', question: "I wish I ______ (know) the answer yesterday.", expected: "had known", explanation: "Wish后接虚拟：与过去事实相反 -> 过去完成时 (had done)。" },
   { id: 'sub_3', categoryId: 'subjunctive', question: "It is high time we ______ (go) home.", expected: ["went", "should go"], explanation: "It is high time did/should do (该是做...的时候了)。" },
-  { id: 'sub_4', categoryId: 'subjunctive', question: "Without water, implies if there ______ (be) no water.", expected: ["were", "was"], explanation: "Without含有虚拟条件意味 -> 与现在/客观相反用 were/was。" },
+  { id: 'sub_4', categoryId: 'subjunctive', question: "If there ______ (be) no water, fish could not live.", expected: ["were", "was"], explanation: "与现在事实相反的假设 -> be动词用 were/was。" },
   { id: 'sub_5', categoryId: 'subjunctive', question: "He suggested that we ______ (go) there at once.", expected: ["should go", "go"], explanation: "Suggest(建议)后的宾语从句 -> (should) + 动词原形。" },
   { id: 'sub_6', categoryId: 'subjunctive', question: "If he ______ (come) tomorrow, I would speak to him.", expected: ["were to come", "should come", "came"], explanation: "与将来事实相反 -> past tense / should / were to do。" },
   { id: 'sub_7', categoryId: 'subjunctive', question: "I would rather you ______ (come) tomorrow.", expected: "came", explanation: "Would rather + 从句：用过去式表示对将来的愿望。" },
@@ -144,8 +144,8 @@ export const EXAM_POOL: QuizQuestion[] = [
   // LEVEL 11: Adj/Adv/Art (形容词/副词/冠词)
   // Coverage: Comparison, Articles (a/an/the), Word Order
   // ==========================================
-  { id: 'aaa_1', categoryId: 'adj_adv', question: "The ______ (good), the better.", expected: "more", explanation: "The more..., the better... (越多越好)。" },
-  { id: 'aaa_2', categoryId: 'adj_adv', question: "He is ______ (tall) than me.", expected: ["taller", "more tall"], explanation: "形容词比较级。" },
+  { id: 'aaa_1', categoryId: 'adj_adv', question: "The ______ (much), the better.", expected: "more", explanation: "The more..., the better... (越多越好)。" },
+  { id: 'aaa_2', categoryId: 'adj_adv', question: "He is ______ (tall) than me.", expected: "taller", explanation: "形容词比较级。" },
   { id: 'aaa_3', categoryId: 'adj_adv', question: "This is ______ most interesting book.", expected: ["a", "the"], explanation: "a most = very (一本非常...的书); the most = 最(最高级)。" },
   { id: 'aaa_4', categoryId: 'adj_adv', question: "He works ______ (hard).", expected: "hard", explanation: "hard = 努力地 (副词); hardly = 几乎不。" },
   { id: 'aaa_5', categoryId: 'adj_adv', question: "He is ______ (two) years older than I.", expected: "two", explanation: "数量词 + 比较级。" },
