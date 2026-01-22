@@ -1,53 +1,68 @@
-# 4-Month Gaokao Study Plan (From Zero to Target 550)
+# Gaokao High-Intensity Study Plan (4 Months / Target 550)
 
-## Overview
-- Duration: 4 months (approx. 16 weeks)
-- Daily study window: 08:00–22:00 (14 hours) on weekdays; weekends for rest/light review.
-- Goal: Build fundamentals, progress to past-paper training and targeted drills, reach total score ~550.
+## I. Strategy for Target 550
+To reach 550 (assuming a total of 750), we prioritize the subjects with the highest return on investment (ROI):
+1. **Math (120+)**: Focus on "Big Questions" types and fundamental theorems. See `Math/`.
+2. **English (135+)**: High score is achievable with vocabulary saturation and fixed grammar patterns. See `English/`.
+3. **Chinese (110+)**: Focus on classical text patterns and logic of argumentative essays. See `Chinese/`.
+4. **Science Subjects (185+)**: Total score for Physics/Chemistry/Biology. Prioritize high-frequency concepts. See `Physics/`, `Chemistry/`, `Biology/`.
 
-## Phase Goals
-- Month 1 (Weeks 1–4): Foundations — core concepts in Chinese, Math, English; basic vocab and common problem types.
-- Month 2 (Weeks 5–8): Expansion — fill gaps in science/social subjects, improve speed and solution structure.
-- Month 3 (Weeks 9–12): Past-paper practice — frequent real exam papers and full mock exams; maintain a mistake log.
-- Month 4 (Weeks 13–16): Final sprint — timed mock exams, exam skills, mental and physical conditioning, last weak-point fixes.
+## II. The 4-Month Timeline
 
-## Weekly Rhythm (example)
-- Mon–Fri: follow daily template below.
-- Sat–Sun: rest and recovery; 30–60 minutes active review each day; full mock every two weeks.
+### Month 1: Foundation Reconstruction (Weeks 1-4)
+- **Focus**: Clear all logical blind spots in textbooks.
+- **Goal**: Reach 400-450 baseline.
+- **Action**: 
+  - Complete 1 round of core vocabulary (3500 words).
+  - Solve all textbook example problems for Math.
+  - Review fundamental laws for Science subjects.
 
-## Daily Template (Mon–Fri, 08:00–22:00)
-- 08:00–08:30 — Morning routine, breakfast, plan for the day.
-- 08:30–10:30 — Study block 1 (2.0 h): primary subject deep work (e.g., Math theory & problem practice).
-- 10:30–10:45 — Short break (15 min).
-- 10:45–12:15 — Study block 2 (1.5 h): Chinese reading or English grammar/vocab practice.
-- 12:15–13:15 — Lunch and short rest (20–30 min nap optional).
-- 13:15–15:15 — Study block 3 (2.0 h): science subject focus (Physics/Chemistry/Biology).
-- 15:15–15:30 — Short break (15 min).
-- 15:30–17:00 — Study block 4 (1.5 h): humanities or weaker-subject focus (History/Politics/Geography).
-- 17:00–17:30 — Physical exercise (30 min; run or HIIT).
-- 17:30–18:00 — Shower and relax.
-- 18:00–19:00 — Dinner.
-- 19:00–21:00 — Evening study (2.0 h): practice & mistake review / homework.
-- 21:00–22:00 — Review and memory consolidation (1.0 h): review mistakes, plan next day, short spaced-repetition.
+### Month 2: Module-Based Attack (Weeks 5-8)
+- **Focus**: Master specific question patterns (Topic-by-topic).
+- **Goal**: Reach 480-500.
+- **Action**:
+  - Deep-dive into Math (Conic sections, sequences).
+  - English: Cloze test and Reading comprehension drills.
+  - Science: Systematic problem sets for mechanics/electromagnetism.
 
-## Subject Rotation (weekly sample)
-- Mon: Math (morning), Chinese (late morning), Physics (afternoon)
-- Tue: Math, English, Chemistry
-- Wed: Chinese, Physics/History mix, English listening/writing
-- Thu: Math problem types, humanities topics, lab/experiment questions
-- Fri: Half-day mock or timed practice + analysis
+### Month 3: Past Paper Saturation (Weeks 9-12)
+- **Focus**: Mimicking exam conditions and timing.
+- **Goal**: Peak at 530+ in mocks.
+- **Action**:
+  - 1 Mock Exam every 3 days.
+  - Mistake Log analysis (2 hours per day).
+  - Speed training (e.g., 40 mins for English reading section).
 
-## Methods & Tools
-- Use time-blocking (Pomodoro or 50/10) during deep study blocks.
-- Maintain a mistake log organized by chapter and problem type; review weekly.
-- Full mock exam every two weeks, graded strictly.
+### Month 4: Final Precision Buffing (Weeks 13-16)
+- **Focus**: Mental state, exam skills, and "The Last 20 Points."
+- **Goal**: Solidify 550.
+- **Action**:
+  - Review Mistake Logs daily.
+  - Half-day mocks to maintain "biological rhythm" of exams.
+  - Memorize essay templates for Chinese and English.
 
-## Rest & Mental Health
-- Aim for 7–8 hours nightly sleep. If ending study at 22:00, be in bed before 23:00.
-- Use weekends for hobbies/outdoor activity to avoid burnout.
+## III. Daily 14-Hour High-Performance Template
+*Note: Refer to `diet_plan.md` and `fatigue_intervention.md` for physiological support.*
 
-## Personalization
-- Start broad to cover major topics; reprioritize weak areas after each bi-weekly mock.
+| Time | Activity | Category |
+| :--- | :--- | :--- |
+| 08:00 - 08:30 | **Morning Wake-up** | Cold water, logic check, high-carb breakfast |
+| 08:30 - 10:30 | **Deep Work Block 1** | **Math**: High cognitive load tasks |
+| 10:45 - 12:15 | **Deep Work Block 2** | **English**: High frequency vocabulary/drills |
+| 12:15 - 13:30 | **Lunch & Rest** | 20 min NSDR or Nap; Glycemic stability |
+| 13:30 - 15:30 | **Deep Work Block 3** | **Physics/Chemistry**: Problem solving |
+| 15:45 - 17:15 | **Deep Work Block 4** | **Biology/Chinese**: Memory intensive blocks |
+| 17:15 - 18:30 | **Active Recovery** | HIIT/Run, shower, high-protein dinner |
+| 18:30 - 20:30 | **Mistake Consolidation** | Re-solving today's failed problems |
+| 20:45 - 22:00 | **Passive Input** | Listening, essay reading, light review |
+
+## IV. Subject Directory Usage
+- `en/English/`: Vocab lists, grammar templates.
+- `en/Math/`: Formula sheets, derivative/conic section cheat sheets.
+- `en/Physics/`: Energy-momentum conservation logic.
+- `en/Chemistry/`: Inorganic reactions, organic structural groups.
+- `en/Biology/`: Cell cycles, inheritance calculations.
+- `en/Chinese/`: Poetry analysis patterns, argumentative essay prompts.
 - Reduce workload and increase rest if performance or health declines.
 
 ---

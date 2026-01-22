@@ -1,15 +1,22 @@
 # GaokaoSprint
 
-[English](./README.md) | [中文版 (Chinese)](./cn/README.md)
+[English (Primary)](./en/README.md) | [中文版 (Chinese)](./cn/README.md)
 
-Includes:
-- `study_schedule_en.md`: 4-month study plan (Target 550).
-- `diet_plan_en.md`: High-performance nutritional plan.
-- `environment_en.md`: Biological hacking for study environment.
-- `fatigue_intervention_en.md`: 3-tier drowsiness management.
+A high-performance preparation framework for the National College Entrance Examination (Gaokao), optimized for short-term (4-month) score maximization through biological and cognitive optimization.
 
-Usage:
-- These templates are designed for high-intensity, short-term Gaokao preparation.
-- Adjust parameters (calories, schedule) based on individual baseline.
+## Project Structure
 
-- I can split the plan into weekly and daily to-dos, create calendar import files, or connect AI helpers for subject practice and mistake management.
+- **[en/](./en/)**: English documentation and subject resources.
+  - Subjects: `Math`, `English`, `Physics`, `Chemistry`, `Biology`, `Chinese`.
+- **[cn/](./cn/)**: 中文版文档与学科资源。
+  - 学科分级：`数学`、`英语`、`物理`、`化学`、`生物`、`语文`。
+
+## Quick Links
+
+- **Study Plan**: [English](./en/study_schedule.md) | [中文](./cn/study_schedule.md)
+- **Diet & Nutrition**: [English](./en/diet_plan.md) | [中文](./cn/diet_plan.md)
+- **Environment**: [English](./en/environment.md) | [中文](./cn/environment.md)
+- **Fatigue Recovery**: [English](./en/fatigue_intervention.md) | [中文](./cn/fatigue_intervention.md)
+
+---
+*For high-intensity training (14 hours/day). Focus on glucose stability, CO2 management, and synaptic recovery.*
