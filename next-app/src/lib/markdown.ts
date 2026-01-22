@@ -50,6 +50,39 @@ export async function getMarkdownContent(lang: string, slugPath: string[]): Prom
   };
 }
 
+function getFilesRecursively(dir: string, fileList: string[] = [], baseDir: string = ''): string[] {
+    const files = fs.readdirSync(dir);
+    
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory()) {
+            getFilesRecursively(filePath, fileList, path.join(baseDir, file));
+        } else {
+            if (file.endsWith('.md')) { // Only md files
+                fileList.push(path.join(baseDir, file));
+            }
+        }
+    });
+    return fileList;
+}
+
+export function getAllSlugs(lang: string): string[][] {
+    const langDir = path.join(contentDirectory, lang);
+    if (!fs.existsSync(langDir)) return [];
+
+    const files = getFilesRecursively(langDir);
+    
+    return files.map(file => {
+        const parts = file.replace(/\.md$/, '').split(path.sep);
+        if (parts[parts.length - 1] === 'README') {
+            return parts.slice(0, -1);
+        }
+        return parts;
+    }).filter(slug => slug.length > 0);
+}
+
 export function getNavigation(lang: string) {
     // Hardcoded navigation structure based on known folders
     // In a real app we might scan folders
@@ -76,7 +109,7 @@ export function getNavigation(lang: string) {
         {
             title: lang === 'cn' ? '工具' : 'Tools',
             items: [
-                { title: lang === 'cn' ? '英语听力特训' : 'English Trainer', href: `/${lang}/trainer` }
+                { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` }
             ]
         }
     ];

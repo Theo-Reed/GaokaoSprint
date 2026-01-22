@@ -1,7 +1,8 @@
 import { InteractiveTrainer } from "@/components/InteractiveTrainer";
 
-export default function TrainerPage({ params }: { params: { lang: string } }) {
-  const isCn = params.lang === 'cn';
+export default async function TrainerPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const isCn = lang === 'cn';
 
   return (
     <div className="space-y-8 animate-in fade-in zoom-in duration-500">
@@ -19,7 +20,7 @@ export default function TrainerPage({ params }: { params: { lang: string } }) {
 
       {/* Core Training Module */}
       <section>
-        <InteractiveTrainer />
+        <InteractiveTrainer lang={lang} />
       </section>
       
       <div className="mt-16 text-center">

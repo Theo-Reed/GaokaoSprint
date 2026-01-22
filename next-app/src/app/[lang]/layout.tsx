@@ -1,15 +1,17 @@
 import Sidebar from '@/components/Sidebar';
 
-export default function LangLayout({
+export default async function LangLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
+
   return (
     <div className="min-h-screen bg-white">
-      <Sidebar lang={params.lang} />
+      <Sidebar lang={lang} />
       <main className="md:ml-64 min-h-screen">
         <div className="max-w-4xl mx-auto p-8">
           {children}
@@ -18,3 +20,8 @@ export default function LangLayout({
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  return [{ lang: 'cn' }, { lang: 'en' }];
+}
+

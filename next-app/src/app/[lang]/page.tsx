@@ -1,8 +1,8 @@
 import { getMarkdownContent } from '@/lib/markdown';
 import { notFound } from 'next/navigation';
 
-export default async function LanguageHome({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+export default async function LanguageHome({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   // Load README.md as the home content for the language
   const data = await getMarkdownContent(lang, ['README']);
 
