@@ -1,8 +1,13 @@
 # GaokaoSprint
 
-[English (Primary)](./en/README.md) | [中文版 (Chinese)](./cn/README.md)
+[English (Primary)](./README.md) | [中文版 (Chinese)](./README_CN.md)
 
-A high-performance preparation framework for the National College Entrance Examination (Gaokao), optimized for short-term (4-month) score maximization through biological and cognitive optimization.
+**GaokaoSprint** is an AI-augmented acceleration framework designed to take a student from zero baseline to a target Gaokao score in just 4 months. By combining cutting-edge LLMs (AI Assistant) with biological optimization and high-intensity cognitive training, we maximize every minute of preparation.
+
+## Core Strategy: AI + Bio-Hacking
+- **AI-Driven Personalization**: Use AI to generate bespoke problem sets, analyze mistake patterns, and simulate exam grading.
+- **Biological Optimization**: Precise control over glucose (Diet), CO2 (Environment), and Neuronal Recovery (Fatigue Intervention).
+- **Short-Term Rapid Progression**: High-ROI subject prioritization and "Saturation Training" methodology.
 
 ## Project Structure
 
