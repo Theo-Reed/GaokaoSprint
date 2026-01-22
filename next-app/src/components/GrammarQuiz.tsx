@@ -154,13 +154,13 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
 
     if (isCorrect) {
       setIsExamCorrect(true);
-      setExamFeedback(text.correct + currentQuiz.explanation);
+      setExamFeedback(text.correct + (isCn ? currentQuiz.explanationCN : currentQuiz.explanationEN));
       setSessionScore(prev => prev + 1);
       markQuestionAsCompleted(currentQuiz.id);
     } else {
       setIsExamCorrect(false);
       // Show explanation even if wrong
-      setExamFeedback(`${text.incorrect} ${currentQuiz.explanation}`);
+      setExamFeedback(`${text.incorrect} ${isCn ? currentQuiz.explanationCN : currentQuiz.explanationEN}`);
     }
   };
 
