@@ -92,26 +92,26 @@ export const EXAM_POOL: QuizQuestion[] = [
   // LEVEL 7: Adverbial Clauses (状语从句)
   // Coverage: Time, Condition, Concession, Cause, Result
   // ==========================================
-  { id: 'adv_1', categoryId: 'adverbial', question: "______ (Although) he is old, he runs fast.", expected: ["Although", "Though", "While"], explanation: "让步状语：虽然...但是...。" },
-  { id: 'adv_2', categoryId: 'adverbial', question: "______ (If) it rains tomorrow, we will cancel.", expected: "If", explanation: "条件状语：如果...。" },
-  { id: 'adv_3', categoryId: 'adverbial', question: "I will wait ______ (until) you finish.", expected: ["until", "till"], explanation: "时间状语：直到...。" },
-  { id: 'adv_4', categoryId: 'adverbial', question: "Hard ______ (as) he tried, he failed.", expected: ["as", "though"], explanation: "倒装让步：Adj + as/though + 主谓。" },
+  { id: 'adv_1', categoryId: 'adverbial', question: "______ he is old, he runs fast.", expected: ["Although", "Though", "While"], explanation: "让步状语：虽然...但是...。" },
+  { id: 'adv_2', categoryId: 'adverbial', question: "______ it rains tomorrow, we will cancel.", expected: "If", explanation: "条件状语：如果...。" },
+  { id: 'adv_3', categoryId: 'adverbial', question: "I will wait ______ you finish.", expected: ["until", "till"], explanation: "时间状语：直到...。" },
+  { id: 'adv_4', categoryId: 'adverbial', question: "Hard ______ he tried, he failed.", expected: ["as", "though"], explanation: "倒装让步：Adj + as/though + 主谓。" },
   { id: 'adv_5', categoryId: 'adverbial', question: "He speaks English so well ______ people think he is native.", expected: "that", explanation: "结果状语：so...that... (如此...以至于)。" },
   { id: 'adv_6', categoryId: 'adverbial', question: "Use the umbrella ______ you get wet.", expected: ["in case", "lest"], explanation: "目的/防备：in case (以免/万一)。" },
-  { id: 'adv_7', categoryId: 'adverbial', question: "______ (Since) you are here, you'd better stay.", expected: ["Since", "Now that"], explanation: "原因状语：既然...。" },
+  { id: 'adv_7', categoryId: 'adverbial', question: "______ you are here, you'd better stay.", expected: ["Since", "Now that"], explanation: "原因状语：既然...。" },
   { id: 'adv_8', categoryId: 'adverbial', question: "It was not ______ midnight that he came back.", expected: "until", explanation: "not...until... 直到...才...。" },
 
   // ==========================================
   // LEVEL 8: Inversion (特殊句式：倒装)
   // Coverage: Partial Inversion (Negative, Only), Full Inversion (Here/There)
   // ==========================================
-  { id: 'inv_1', categoryId: 'inversion', question: "Never ______ (have) I seen such a thing.", expected: "have", explanation: "否定词(Never)置于句首 -> 部分倒装 (助动词提前)。" },
-  { id: 'inv_2', categoryId: 'inversion', question: "Only in this way ______ (can) you solve it.", expected: "can", explanation: "Only + 状语置于句首 -> 部分倒装。" },
+  { id: 'inv_1', categoryId: 'inversion', question: "Never ______ I seen such a thing.", expected: "have", explanation: "否定词(Never)置于句首 -> 部分倒装 (助动词提前)。" },
+  { id: 'inv_2', categoryId: 'inversion', question: "Only in this way ______ you solve it.", expected: "can", explanation: "Only + 状语置于句首 -> 部分倒装。" },
   { id: 'inv_3', categoryId: 'inversion', question: "Here ______ (come) the bus!", expected: "comes", explanation: "方位词(Here)置于句首 + 名词主语 -> 全部倒装 (comes...bus)。" },
-  { id: 'inv_4', categoryId: 'inversion', question: "So fast ______ (do) he run that no one could catch him.", expected: "did", explanation: "So + adj/adv 位于句首 -> 部分倒装 (did...run)。" },
-  { id: 'inv_5', categoryId: 'inversion', question: "Not only ______ (do) he speak English, but also French.", expected: ["does", "can"], explanation: "Not only 置于句首 -> 部分倒装。" },
+  { id: 'inv_4', categoryId: 'inversion', question: "So fast ______ he run that no one could catch him.", expected: "did", explanation: "So + adj/adv 位于句首 -> 部分倒装 (did...run)。" },
+  { id: 'inv_5', categoryId: 'inversion', question: "Not only ______ he speak English, but also French.", expected: ["does", "can"], explanation: "Not only 置于句首 -> 部分倒装。" },
   { id: 'inv_6', categoryId: 'inversion', question: "Hardly had I arrived ______ the phone rang.", expected: "when", explanation: "Hardly...when... (刚一...就...)，Hardly部分倒装。" },
-  { id: 'inv_7', categoryId: 'inversion', question: "Little ______ (do) he know about the truth.", expected: ["did", "does"], explanation: "否定词(Little)置于句首 -> 部分倒装。" },
+  { id: 'inv_7', categoryId: 'inversion', question: "Little ______ he know about the truth.", expected: ["did", "does"], explanation: "否定词(Little)置于句首 -> 部分倒装。" },
   { id: 'inv_8', categoryId: 'inversion', question: "Away ______ (fly) the bird.", expected: "flew", explanation: "方位副词(Away) + 动词 + 名词主语 -> 全部倒装。" },
 
   // ==========================================
@@ -144,21 +144,14 @@ export const EXAM_POOL: QuizQuestion[] = [
   // LEVEL 11: Adj/Adv/Art (形容词/副词/冠词)
   // Coverage: Comparison, Articles (a/an/the), Word Order
   // ==========================================
-  { id: 'aaa_1', categoryId: 'adj_adv', question: "The ______ (much), the better.", expected: "more", explanation: "The more..., the better... (越多越好)。" },
-  { id: 'aaa_2', categoryId: 'adj_adv', question: "He is ______ (tall) than me.", expected: "taller", explanation: "形容词比较级。" },
   { id: 'aaa_3', categoryId: 'adj_adv', question: "This is ______ most interesting book.", expected: ["a", "the"], explanation: "a most = very (一本非常...的书); the most = 最(最高级)。" },
-  { id: 'aaa_4', categoryId: 'adj_adv', question: "He works ______ (hard).", expected: "hard", explanation: "hard = 努力地 (副词); hardly = 几乎不。" },
-  { id: 'aaa_5', categoryId: 'adj_adv', question: "He is ______ (two) years older than I.", expected: "two", explanation: "数量词 + 比较级。" },
-  { id: 'aaa_6', categoryId: 'adj_adv', question: "I have ______ (little) money than you.", expected: "less", explanation: "little的比较级 is less。" },
-  { id: 'aaa_7', categoryId: 'adj_adv', question: "The weather is becoming ______ (bad) and ______ (bad).", expected: ["worse and worse"], explanation: "比较级 and 比较级 (越来越...)。" },
+  { id: 'aaa_7', categoryId: 'adj_adv', question: "The weather is becoming ______ (bad) and ______ (bad).", expected: ["worse worse", "worse"], explanation: "比较级 and 比较级 (越来越...)。" },
   { id: 'aaa_8', categoryId: 'adj_adv', question: "He is ______ (smart) of the two boys.", expected: "the smarter", explanation: "Of the two -> 特指两者中较...的一个，加 the。" },
 
   // ==========================================
   // LEVEL 12: SV Agreement (主谓一致)
   // Coverage: Grammatical, Notional, Proximity rules
   // ==========================================
-  { id: 'sva_1', categoryId: 'agreement', question: "Each of the boys ______ (have) a pen.", expected: "has", explanation: "Many a / Each / Every -> 单数谓语。" },
-  { id: 'sva_2', categoryId: 'agreement', question: "Everything ______ (be) ready.", expected: "is", explanation: "不定代词 (Everything/Something) -> 单数谓语。" },
   { id: 'sva_3', categoryId: 'agreement', question: "Not only you but he ______ (be) wrong.", expected: "is", explanation: "就近原则：Not only...but also... (与 he 一致)。" },
   { id: 'sva_4', categoryId: 'agreement', question: "The police ______ (be) coming.", expected: ["are", "were"], explanation: "集合名词 (Police/People/Cattle) -> 复数谓语。" },
   { id: 'sva_5', categoryId: 'agreement', question: "The teacher as well as the students ______ (be) happy.", expected: ["is", "was"], explanation: "就远原则? No, A as well as B -> 与前面 A 一致 (teacher -> is)。" },
@@ -229,7 +222,7 @@ export const EXAM_POOL: QuizQuestion[] = [
     id: 'ult_7', 
     categoryId: 'ultimate_context', 
     question: "Looking at the modern layout, it is hard to believe that this is the very factory ______ my grandfather worked for forty years before he finally retired.", 
-    expected: "where", 
+    expected: ["where", "in which"], 
     explanation: "Attributive Clause: Missing adverbial of place (worked IN the factory). 'When/Where' decision depends on the verb 'work' needing 'in'." 
   },
   { 
