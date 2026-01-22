@@ -25,16 +25,16 @@ export const EXAM_POOL: QuizQuestion[] = [
 
   // ==========================================
   // LEVEL 2: Modals (情态动词)
-  // Coverage: Deduction (Must/Can't), Regret (Should have), Probability (May/Might), Ability/Permission
+  // Coverage: Deduction, Regret, Probability, Ability/Permission (Hard Mode)
   // ==========================================
-  { id: 'md_1', categoryId: 'modals', question: "The lights are off; they ______ (must) be out.", expected: "must", explanation: "must be = 肯定在（推测），只用于肯定句。" },
-  { id: 'md_2', categoryId: 'modals', question: "You ______ (should, not) have told him about it; he is so angry now.", expected: ["shouldn't", "should not"], explanation: "shouldn't have done = 本不该做却做了（表示责备/后悔）。" },
-  { id: 'md_3', categoryId: 'modals', question: "He ______ (miss) the bus, but I'm not sure.", expected: ["may have missed", "might have missed", "could have missed"], explanation: "对过去的推测，语气不确定 -> may/might/could have done。" },
-  { id: 'md_4', categoryId: 'modals', question: "______ (Can) I keep the book for a week?", expected: ["Can", "May", "Could"], explanation: "Could/May 表示委婉请求许可。" },
-  { id: 'md_5', categoryId: 'modals', question: "The door ______ (will, not) open.", expected: ["won't", "will not"], explanation: "will not 表示“不肯/总是不能”（指物体的习性）。" },
-  { id: 'md_6', categoryId: 'modals', question: "I ______ (need, not) go there because it's Sunday.", expected: ["needn't", "need not", "don't need to"], explanation: "needn't = 不必（作为情态动词）；don't need to (实义动词)。" },
-  { id: 'md_7', categoryId: 'modals', question: "He ______ (can, not) be at home; I saw him in the library just now.", expected: ["can't", "cannot"], explanation: "can't be = 不可能（强烈的否定推测）。" },
-  { id: 'md_8', categoryId: 'modals', question: "You ______ (must) finish your homework before watching TV.", expected: "must", explanation: "must = 必须（强烈的义务）。" },
+  { id: 'md_1', categoryId: 'modals', question: "According to the school rules, no student ______ be allowed to enter the lab without permission.", expected: "shall", explanation: "Shall 用于第三人称表示条约、规定、法令等强制性规定。" },
+  { id: 'md_2', categoryId: 'modals', question: "I bought a new ticket, but I ______ have done so because the old one was still valid.", expected: ["needn't", "need not"], explanation: "needn't have done = 本来不必做但做了。" },
+  { id: 'md_3', categoryId: 'modals', question: "The letter was mailed three days ago, so it ______ (arrive) by now.", expected: "should have arrived", explanation: "should have done: 表示按理说应该已经发生（推测）。" },
+  { id: 'md_4', categoryId: 'modals', question: "The road is unpaved. It ______ (rain) heavily last night.", expected: "must have rained", explanation: "must have done: 对过去情况的肯定推测。" },
+  { id: 'md_5', categoryId: 'modals', question: "It is strange that he ______ say such a thing to his mother.", expected: "should", explanation: "Should 用在 It is strange/surprising/pity that... 中表示惊讶或情绪（竟然）。" },
+  { id: 'md_6', categoryId: 'modals', question: "Even an experienced climber ______ get into trouble on this mountain.", expected: "can", explanation: "Can 表示理论上的可能性（“有时候可能会”），而非具体某次发生的可能性。" },
+  { id: 'md_7', categoryId: 'modals', question: "The door ______ open no matter how hard I pushed.", expected: ["wouldn't", "would not"], explanation: "Would not 表示过去“总是不能/不愿/拒绝”（指由于物体特性而卡住）。" },
+  { id: 'md_8', categoryId: 'modals', question: "You ______ at least say thank you for his help.", expected: ["might", "could"], explanation: "Might/Could + do implies a mild suggestion or reproach (You could at least...)." },
 
   // ==========================================
   // LEVEL 3: Non-Finite Basic (不定式与动名词)

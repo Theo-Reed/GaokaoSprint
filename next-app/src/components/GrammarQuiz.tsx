@@ -34,6 +34,28 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const submitRef = useRef<HTMLButtonElement>(null);
 
+  const getCategoryName = (id: string) => {
+    const names: Record<string, {en: string, cn: string}> = {
+      'tense_voice': { en: 'Tense & Voice', cn: '时态与语态' },
+      'modals': { en: 'Modals', cn: '情态动词' },
+      'nonfinite_basic': { en: 'Non-Finite (Basic)', cn: '非谓语(基础)' },
+      'nonfinite_adv': { en: 'Non-Finite (Advanced)', cn: '非谓语(进阶)' },
+      'attributive': { en: 'Attributive Clauses', cn: '定语从句' },
+      'noun_clauses': { en: 'Noun Clauses', cn: '名词性从句' },
+      'adverbial': { en: 'Adverbial Clauses', cn: '状语从句' },
+      'inversion': { en: 'Inversion', cn: '倒装句' },
+      'emphasis_it': { en: 'Emphasis & It', cn: '强调句与It用法' },
+      'subjunctive': { en: 'Subjunctive Mood', cn: '虚拟语气' },
+      'adj_adv': { en: 'Adj / Adv / Art', cn: '形容词/副词/冠词' },
+      'agreement': { en: 'Subject-Verb Agreement', cn: '主谓一致' },
+      'phrasal_collo': { en: 'Phrases & Collocations', cn: '固定搭配' },
+      'ultimate_context': { en: 'Context Challenge', cn: '终极语境挑战' },
+    };
+    const entry = names[id];
+    if (!entry) return id.replace(/_/g, ' ').toUpperCase();
+    return isCn ? entry.cn : entry.en.toUpperCase();
+  };
+
   // Auto-focus logic: Focus input for typing, Focus button for "Next" action
   useEffect(() => {
     if (examFeedback || isExamCorrect) {
@@ -207,7 +229,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       <div className="p-6 flex-1 flex flex-col">
         <div className="mb-6">
             <span className="inline-block px-2 py-0.5 bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
-                {currentQuiz.categoryId.replace(/_/g, ' ')}
+                {getCategoryName(currentQuiz.categoryId)}
             </span>
             <p className="text-lg font-serif text-slate-800 leading-relaxed">
                 {currentQuiz.question}
