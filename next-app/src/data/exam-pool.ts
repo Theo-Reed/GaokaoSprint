@@ -34,7 +34,7 @@ export const EXAM_POOL: QuizQuestion[] = [
   { id: 'md_5', categoryId: 'modals', question: "It is strange that he ______ say such a thing to his mother.", expected: "should", explanation: "Should 用在 It is strange/surprising/pity that... 中表示惊讶或情绪（竟然）。" },
   { id: 'md_6', categoryId: 'modals', question: "Even an experienced climber ______ get into trouble on this mountain.", expected: "can", explanation: "Can 表示理论上的可能性（“有时候可能会”），而非具体某次发生的可能性。" },
   { id: 'md_7', categoryId: 'modals', question: "The door ______ open no matter how hard I pushed.", expected: ["wouldn't", "would not"], explanation: "Would not 表示过去“总是不能/不愿/拒绝”（指由于物体特性而卡住）。" },
-  { id: 'md_8', categoryId: 'modals', question: "You ______ at least say thank you for his help.", expected: ["might", "could"], explanation: "Might/Could + do implies a mild suggestion or reproach (You could at least...)." },
+  { id: 'md_8', categoryId: 'modals', question: "I have told you the truth. Why ______ you not believe me?", expected: "must", explanation: "Must indicates insistence or an annoying habit (偏要/非得)。这里表示不满：为什么你非得不信我？" },
 
   // ==========================================
   // LEVEL 3: Non-Finite Basic (不定式与动名词)
