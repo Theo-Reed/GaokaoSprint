@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { EXAM_POOL, QuizQuestion } from "@/data/training-data";
-import { sampleSize } from "lodash";
+import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "@/data/training-data";
+import { sample, sampleSize } from "lodash";
 
 export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   const isCn = lang === 'cn';
@@ -36,8 +36,14 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   }, []);
 
   const startNewExamSession = () => {
-    // Pick 4 random unique questions from the pool
-    const sessionQuestions = sampleSize(EXAM_POOL, 4);
+    // Generate a 12-question exam, one from each Analysis Level
+    const sessionQuestions = ANALYSIS_LEVELS.map(level => {
+      // Find all questions matching this level's category
+      const candidates = EXAM_POOL.filter(q => q.categoryId === level.categoryId);
+      // Pick one random question from the candidates, or fallback to any if missing
+      return sample(candidates) || candidates[0];
+    }).filter(Boolean) as QuizQuestion[];
+
     setQuizPool(sessionQuestions);
     setCurrentQuizIndex(0);
     setExamInput("");
@@ -59,11 +65,16 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       setIsExamCorrect(false);
       setExamFeedback(text.incorrect);
       
-      // Auto-swap incorrect question for variety
+      // Auto-swap incorrect question for variety (staying within same category)
       setTimeout(() => {
-         const remainingPool = EXAM_POOL.filter(q => q.id !== currentQuiz.id && !quizPool.find(p => p.id === q.id));
-         if (remainingPool.length > 0) {
-             const newQuestion = sampleSize(remainingPool, 1)[0];
+         // Find other questions of the SAME category to maintain the 12-level structure
+         const sameCategoryCandidates = EXAM_POOL.filter(q => 
+            q.categoryId === currentQuiz.categoryId && 
+            q.id !== currentQuiz.id
+         );
+         
+         if (sameCategoryCandidates.length > 0) {
+             const newQuestion = sample(sameCategoryCandidates)!;
              setQuizPool(prev => {
                  const newPool = [...prev];
                  newPool[currentQuizIndex] = newQuestion;

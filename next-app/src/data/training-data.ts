@@ -12,32 +12,32 @@ export interface SentenceData {
   algorithm: string[];
   traps: Record<number, string>;
   tips?: string;
-  categoryId?: string; // Links to QuizPool category
+  categoryId?: string;
 }
 
 export interface QuizQuestion {
   id: string;
-  question: string; // The sentence with a blank as underscores
-  expected: string; // The correct answer word
+  question: string;
+  expected: string;
   explanation: string;
-  categoryId: string; // 'attributive', 'gerund', 'non-predicate', etc.
+  categoryId: string;
 }
 
-// Map existing levels to Categories
+// 12 Levels = 12 Distinct Knowledge Points
 export const ANALYSIS_LEVELS: SentenceData[] = [
-  // --- LEVEL 1: 基础定语从句 (The "Which" Trap) ---
+  // L1: Attributive Clause (General)
   {
     id: 1,
     text: "The experiment that the scientists conducted failed due to the temperature changes.",
     answerKey: { subject: [0, 1], verb: [6], object: [] },
     translation: "科学家们进行的那个实验因为温度变化而失败了。",
     difficulty: "Level 1",
-    tags: ["Attributive Clause", "Subject Separation"],
-    algorithm: ["1. Scan verbs...", "2. 'Conducted' follows 'that'...", "3. Eliminate clause...", "4. 'Failed' is Main Verb."],
-    traps: { 5: "❌ 'Conducted' is inside the clause.", 11: "❌ 'Changes' is part of 'due to'." },
-    categoryId: "attributive"
+    tags: ["Attributive Clause"],
+    algorithm: ["1. Scan verbs...", "2. 'Conducted' follows 'that'...", "3. 'Failed' is Main Verb."],
+    traps: { 5: "❌ 'Conducted' is inside the clause." },
+    categoryId: "attributive_general"
   },
-  // --- LEVEL 2: 动名词作主语 (The "Ing" Trap) ---
+  // L2: Gerund Subject
   {
     id: 2,
     text: "Understanding the cultural differences helps tourists avoid embarrassing situations.",
@@ -45,11 +45,11 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     translation: "理解文化差异有助于游客避免尴尬的处境。",
     difficulty: "Level 2",
     tags: ["Gerund Subject"],
-    algorithm: ["1. 'Understanding' starts sentence...", "2. Is it Gerund? Yes.", "3. Main Verb is 'helps'."],
-    traps: { 0: "ℹ️ Head of subject.", 6: "❌ 'Avoid' is object complement." },
-    categoryId: "gerund"
+    algorithm: ["1. 'Understanding' starts sentence -> Gerund Subject.", "2. Main Verb is 'helps'."],
+    traps: { 6: "❌ 'Avoid' is object complement." },
+    categoryId: "gerund_subject"
   },
-  // --- LEVEL 2: 从句套娃 (Noun Clause) ---
+  // L3: Noun Clause (Subject Clause)
   {
     id: 3,
     text: "What matters is not what you say but what you do.",
@@ -59,9 +59,9 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     tags: ["Noun Clause"],
     algorithm: ["1. 'What matters' is subject clause.", "2. 'Is' is link verb."],
     traps: { 1: "❌ Verb inside subject clause." },
-    categoryId: "noun_clause"
+    categoryId: "noun_clause_subject"
   },
-  // --- LEVEL 3: 非谓语 (Past Participle) ---
+  // L4: Past Participle (Modifier)
   {
     id: 4,
     text: "The question discussed at the meeting yesterday was very important.",
@@ -69,23 +69,23 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     translation: "昨天会议上讨论的那个问题非常重要。",
     difficulty: "Level 3",
     tags: ["Past Participle"],
-    algorithm: ["1. 'Question' is discussed (passive).", "2. 'Discussed' is modifier.", "3. 'Was' is main verb."],
+    algorithm: ["1. 'Discussed' is passive modifier.", "2. 'Was' is main verb."],
     traps: { 2: "❌ 'Discussed' is a modifier here." },
-    categoryId: "non_predicate"
+    categoryId: "past_participle"
   },
-  // --- LEVEL 3: 伴随状语 (Present Participle) ---
+  // L5: Present Participle (Adverbial)
   {
     id: 5,
     text: "Walking down the street, I saw a friend of mine.",
     answerKey: { subject: [4], verb: [5], object: [6, 7, 8, 9] },
     translation: "走在街上时，我看见了我的一位朋友。",
     difficulty: "Level 3",
-    tags: ["Adverbial Phrase"],
-    algorithm: ["1. 'Walking...' is background action.", "2. Subject is 'I'."],
+    tags: ["Present Participle"],
+    algorithm: ["1. 'Walking...' is adverbial.", "2. Subject is 'I'."],
     traps: { 0: "❌ Modifier, not subject." },
-    categoryId: "non_predicate"
+    categoryId: "present_participle"
   },
-  // --- BOSS FIGHT: 同位语从句 ---
+  // L6: Appositive Clause
   {
     id: 6,
     text: "The fact that he failed the exam surprised us all.",
@@ -95,9 +95,9 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     tags: ["Appositive Clause"],
     algorithm: ["1. 'Fact' + 'that' = Appositive.", "2. 'Surprised' is main verb."],
     traps: { 4: "❌ Verb inside clause." },
-    categoryId: "noun_clause"
+    categoryId: "appositive_clause"
   },
-  // --- BOSS FIGHT: 倒装句 ---
+  // L7: Inversion
   {
     id: 7,
     text: "Only by working hard can you achieve your goal.",
@@ -105,23 +105,23 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     translation: "只有努力工作，你才能实现目标。",
     difficulty: "Boss Fight",
     tags: ["Inversion"],
-    algorithm: ["1. Only + Adverbial -> Partial Inversion.", "2. 'Can' moves before subject."],
+    algorithm: ["1. Only + Adverbial -> Inversion.", "2. 'Can' moves before subject."],
     traps: { 4: "⚠️ Standard inversion." },
     categoryId: "inversion"
   },
-  // --- BOSS FIGHT: 介词+Which ---
+  // L8: Attributive with Preposition
   {
     id: 8,
     text: "The house in which he lives stands on a hill.",
     answerKey: { subject: [0, 1], verb: [6], object: [] },
     translation: "他住的那座房子位于小山上。",
     difficulty: "Boss Fight",
-    tags: ["Attributive Clause"],
-    algorithm: ["1. 'In which' = Relative Clause.", "2. 'Stands' is main verb."],
+    tags: ["Attributive + Prep"],
+    algorithm: ["1. 'In which' starts clause.", "2. 'Stands' is main verb."],
     traps: { 5: "❌ Verb inside clause." },
-    categoryId: "attributive"
+    categoryId: "attributive_prep"
   },
-  // --- LEVEL 4: 虚拟语气 ---
+  // L9: Subjunctive Mood
   {
     id: 9,
     text: "If I were you, I would seize the opportunity without hesitation.",
@@ -133,7 +133,7 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     traps: { 2: "ℹ️ 'Were' is subjunctive be." },
     categoryId: "subjunctive"
   },
-  // --- LEVEL 4: 强调句 ---
+  // L10: Emphasis
   {
     id: 10,
     text: "It was in the library that I met the professor yesterday.",
@@ -141,11 +141,11 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     translation: "正是昨天在图书馆，我遇见了那位教授。",
     difficulty: "Level 3",
     tags: ["Emphasis"],
-    algorithm: ["1. It is...that structure.", "2. Remaining sentence is complete."],
+    algorithm: ["1. It is...that structure.", "2. Emphasis on location."],
     traps: { 5: "⚠️ 'That' is part of emphasis frame." },
     categoryId: "emphasis"
   },
-  // --- BOSS: 形式宾语 ---
+  // L11: Formal Object (It)
   {
     id: 11,
     text: "I found it difficult to finish the work on time.",
@@ -155,9 +155,9 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     tags: ["Formal Object"],
     algorithm: ["1. 'It' is placeholder object.", "2. Real object is infinitive."],
     traps: { 2: "⚠️ Formal Object." },
-    categoryId: "it_usage"
+    categoryId: "formal_object"
   },
-  // --- BOSS: 主谓一致 ---
+  // L12: Subject-Verb Agreement
   {
     id: 12,
     text: "The teacher as well as the students was excited about the trip.",
@@ -167,98 +167,82 @@ export const ANALYSIS_LEVELS: SentenceData[] = [
     tags: ["Agreement"],
     algorithm: ["1. 'A as well as B' -> Agrees with A.", "2. 'Teacher' is singular."],
     traps: { 6: "❌ 'Students' is plural but ignored." },
-    categoryId: "agreement"
+    categoryId: "sv_agreement"
   }
 ];
 
+// 12 Quiz Categories matching the 12 Levels
 export const EXAM_POOL: QuizQuestion[] = [
-  // --- Attributive Clauses ---
-  { id: 'att_1', categoryId: 'attributive', question: "The experiment that the scientists ______ (conduct) failed.", expected: "conducted", explanation: "定语从句谓语，描述过去动作。" },
-  { id: 'att_2', categoryId: 'attributive', question: "The man ______ (stand) there is my teacher.", expected: "standing", explanation: "现在分词作后置定语（The man who is standing）。" },
-  { id: 'att_3', categoryId: 'attributive', question: "I visited the factory ______ my father worked 20 years ago.", expected: "where", explanation: "先行词是地点，且从句结构完整，用where。" },
-  { id: 'att_4', categoryId: 'attributive', question: "This is the only book ______ captures my imagination.", expected: "that", explanation: "先行词有only修饰，关系代词只能用that。" },
-  { id: 'att_5', categoryId: 'attributive', question: "The detailed plan, about ______ I spoke to you yesterday, is ready.", expected: "which", explanation: "介词后接指物的关系代词，用which。" },
-  { id: 'att_6', categoryId: 'attributive', question: "He is the very man ______ I am looking for.", expected: "that", explanation: "先行词有the very修饰，习惯用that。" },
-  { id: 'att_7', categoryId: 'attributive', question: "The reason ______ he was late is unknown.", expected: "why", explanation: "reason做先行词，从句不缺成分，用why。" },
-  { id: 'att_8', categoryId: 'attributive', question: "All ______ glitters is not gold.", expected: "that", explanation: "先行词是不定代词all，关系代词用that。" },
+  
+  // 1. Attributive General (that/which/who/whose)
+  { id: 'att_1', categoryId: 'attributive_general', question: "The book ______ cover is broken is mine.", expected: "whose", explanation: "先行词book与cover是所属关系 (book's cover)。" },
+  { id: 'att_2', categoryId: 'attributive_general', question: "He is the man ______ helped me.", expected: "who", explanation: "先行词man是指人，做主语。" },
+  { id: 'att_3', categoryId: 'attributive_general', question: "The car ______ bought yesterday is fast.", expected: "which", explanation: "先行词car指物，可以用which/that。" },
+  { id: 'att_4', categoryId: 'attributive_general', question: "I remember the day ______ we met.", expected: "when", explanation: "先行词day指时间，从句完整，用when。" },
 
-  // --- Gerunds & Infinitives ---
-  { id: 'ger_1', categoryId: 'gerund', question: "________ (Understand) the rules is crucial.", expected: "Understanding", explanation: "动名词作主语。" },
-  { id: 'ger_2', categoryId: 'gerund', question: "He devoted his life to ______ (help) the poor.", expected: "helping", explanation: "devote to中的to is 介词，后接ing。" },
-  { id: 'ger_3', categoryId: 'gerund', question: "I regret ______ (tell) you that you failed.", expected: "to tell", explanation: "regret to tell (遗憾地告知) vs regret telling (后悔做了)。" },
-  { id: 'ger_4', categoryId: 'gerund', question: "The book is worth ______ (read).", expected: "reading", explanation: "be worth doing sth. (某事值得被做，主动表被动)。" },
-  { id: 'ger_5', categoryId: 'gerund', question: "Stop ______ (talk) and listen to me.", expected: "talking", explanation: "stop doing (停止正在做的事)。" },
-  { id: 'ger_6', categoryId: 'gerund', question: "It is no use ______ (argue) with him.", expected: "arguing", explanation: "It is no use doing sth. 固定句型。" },
-  { id: 'ger_7', categoryId: 'gerund', question: "We look forward to ______ (see) you soon.", expected: "seeing", explanation: "look forward to 中的 to 是介词。" },
-  { id: 'ger_8', categoryId: 'gerund', question: "Instead of ______ (stay) at home, he went out.", expected: "staying", explanation: "Instead of + doing (介词后接动名词)。" },
+  // 2. Gerund Subject (Doing...)
+  { id: 'ger_1', categoryId: 'gerund_subject', question: "______ (Swim) is good for health.", expected: "Swimming", explanation: "动名词作主语，谓语用单数。" },
+  { id: 'ger_2', categoryId: 'gerund_subject', question: "______ (Read) aloud helps pronunciation.", expected: "Reading", explanation: "动名词作主语。" },
+  { id: 'ger_3', categoryId: 'gerund_subject', question: "It is no use ______ (cry) over spilt milk.", expected: "crying", explanation: "It is no use doing sth." },
+  { id: 'ger_4', categoryId: 'gerund_subject', question: "Your ______ (come) late made him angry.", expected: "coming", explanation: "动名词复合结构 (Your coming)。" },
 
-  // --- Noun Clauses ---
-  { id: 'nc_1', categoryId: 'noun_clause', question: "______ matters is what you do.", expected: "What", explanation: "主语从句缺少主语。" },
-  { id: 'nc_2', categoryId: 'noun_clause', question: "The news ______ our team won excited everyone.", expected: "that", explanation: "同位语从句，解释news内容，结构完整，用that。" },
-  { id: 'nc_3', categoryId: 'noun_clause', question: "I don't know ______ he will come or not.", expected: "whether", explanation: "whether...or not 固定搭配。" },
-  { id: 'nc_4', categoryId: 'noun_clause', question: "That is ______ we disagree.", expected: "where", explanation: "表语从句，表示'...的地方/点'。" },
-  { id: 'nc_5', categoryId: 'noun_clause', question: "It depends on ______ you can finish it.", expected: "whether", explanation: "介词后一般接whether不接if。" },
-  { id: 'nc_6', categoryId: 'noun_clause', question: "The problem is ______ we can get enough money.", expected: "how", explanation: "表语从句，根据语义选择 '如何'。" },
-  { id: 'nc_7', categoryId: 'noun_clause', question: "It is uncertain ______ team will win.", expected: "which", explanation: "主语从句，表示 '哪一个'。" },
-  { id: 'nc_8', categoryId: 'noun_clause', question: "______ he said turned out to be true.", expected: "What", explanation: "主语从句中做said的宾语。" },
+  // 3. Noun Clause - Subject/Object (What/That...)
+  { id: 'nc_1', categoryId: 'noun_clause_subject', question: "______ he said is true.", expected: "What", explanation: "从句缺宾语(said what)，主句缺主语，用What。" },
+  { id: 'nc_2', categoryId: 'noun_clause_subject', question: "______ the earth goes round the sun is a fact.", expected: "That", explanation: "主语从句结构完整，不缺成分，但That不可省。" },
+  { id: 'nc_3', categoryId: 'noun_clause_subject', question: "It is unknown ______ he will come.", expected: "whether", explanation: "It做形式主语，真正主语从句表'是否'。" },
+  { id: 'nc_4', categoryId: 'noun_clause_subject', question: "______ we need is time.", expected: "What", explanation: "need缺宾语，用What。" },
 
-  // --- Non-Predicates (Past/Present Participle) ---
-  { id: 'np_1', categoryId: 'non_predicate', question: "The question ______ (discuss) yesterday was hard.", expected: "discussed", explanation: "过去分词作定语，表示被动。" },
-  { id: 'np_2', categoryId: 'non_predicate', question: "______ (Walk) down the street, I saw him.", expected: "Walking", explanation: "现在分词作状语，主语I与Walk是主动关系。" },
-  { id: 'np_3', categoryId: 'non_predicate', question: "______ (Give) more time, I could have done better.", expected: "Given", explanation: "过去分词作状语，表示被给时间 (If I were given...)。" },
-  { id: 'np_4', categoryId: 'non_predicate', question: "He sat there, ______ (read) a book.", expected: "reading", explanation: "伴随状语，主动。" },
-  { id: 'np_5', categoryId: 'non_predicate', question: "The glass ______ (break) by the boy is mine.", expected: "broken", explanation: "过去分词短语作后置定语。" },
-  { id: 'np_6', categoryId: 'non_predicate', question: "______ (Hear) the news, she burst into tears.", expected: "Hearing", explanation: "时间状语，一...就...，主动关系。" },
-  { id: 'np_7', categoryId: 'non_predicate', question: "The bridge ______ (build) now will be finished soon.", expected: "being built", explanation: "现在分词的被动语态作定语，表示正在被建设。" },
-  { id: 'np_8', categoryId: 'non_predicate', question: "To be honest, ______ (speak) of exams makes me nervous.", expected: "speaking", explanation: "Generally speaking, frankly speaking 等固定用法。" },
+  // 4. Past Participle (Modifier/Passive)
+  { id: 'pp_1', categoryId: 'past_participle', question: "The cup ______ (break) by him was expensive.", expected: "broken", explanation: "过去分词作后置定语，表被动。" },
+  { id: 'pp_2', categoryId: 'past_participle', question: "______ (Compare) with him, I am lucky.", expected: "Compared", explanation: "过去分词作状语，I与Compare是被动关系。" },
+  { id: 'pp_3', categoryId: 'past_participle', question: "Is this the book ______ (write) by Lu Xun?", expected: "written", explanation: "过去分词作定语。" },
+  { id: 'pp_4', categoryId: 'past_participle', question: "The city, ______ (locate) in the north, is cold.", expected: "located", explanation: "be located in, 过去分词作非限制性定语/状语。" },
 
-  // --- Inversion ---
-  { id: 'inv_1', categoryId: 'inversion', question: "Only by working hard ______ (can) you succeed.", expected: "can", explanation: "Only+状语位于句首，部分倒装。" },
-  { id: 'inv_2', categoryId: 'inversion', question: "Never ______ (have) I seen such a movie.", expected: "have", explanation: "否定词放句首，部分倒装。" },
-  { id: 'inv_3', categoryId: 'inversion', question: "So fast ______ (do) he run that I couldn't catch him.", expected: "did", explanation: "So + adj/adv 位于句首，部分倒装。" },
-  { id: 'inv_4', categoryId: 'inversion', question: "Not until yesterday ______ (do) I know the truth.", expected: "did", explanation: "Not until... 位于句首，主句倒装。" },
-  { id: 'inv_5', categoryId: 'inversion', question: "Here ______ (come) the bus.", expected: "comes", explanation: "Here位于句首，全部倒装 (主语为名词)。" },
-  { id: 'inv_6', categoryId: 'inversion', question: "Hardly had we arrived ______ it began to rain.", expected: "when", explanation: "Hardly...when... 固定搭配。" },
-  { id: 'inv_7', categoryId: 'inversion', question: "Seldom ______ (do) he go to the cinema.", expected: "does", explanation: "Seldom否定副词置于句首，部分倒装。" },
-  { id: 'inv_8', categoryId: 'inversion', question: "In the bushes ______ (lie) a tiger.", expected: "lay", explanation: "地点状语置于句首，全部倒装。" },
+  // 5. Present Participle (Active/Adverbial)
+  { id: 'prp_1', categoryId: 'present_participle', question: "______ (Hear) the noise, he jumped up.", expected: "Hearing", explanation: "主动动作，一...就...。" },
+  { id: 'prp_2', categoryId: 'present_participle', question: "The girl ______ (stand) there is my sister.", expected: "standing", explanation: "现在分词作后置定语，表主动进行。" },
+  { id: 'prp_3', categoryId: 'present_participle', question: "He sat there, ______ (wait) for the bus.", expected: "waiting", explanation: "伴随状语，主动。" },
+  { id: 'prp_4', categoryId: 'present_participle', question: "Time ______ (permit), we will go.", expected: "permitting", explanation: "独立主格结构，Time与permit是主动关系。" },
 
-  // --- Subjunctive Mood ---
-  { id: 'sub_1', categoryId: 'subjunctive', question: "If I ______ (be) you, I would go.", expected: "were", explanation: "虚拟语气是对现在的假设，be用were。" },
-  { id: 'sub_2', categoryId: 'subjunctive', question: "I wish I ______ (know) the answer now.", expected: "knew", explanation: "wish后接从句，对现在虚拟用过去式。" },
-  { id: 'sub_3', categoryId: 'subjunctive', question: "It is high time we ______ (go) home.", expected: "went", explanation: "It is high time... 用过去式 (did) 或 shoud do。" },
-  { id: 'sub_4', categoryId: 'subjunctive', question: "Without your help, I ______ (can not) have succeeded.", expected: "could not", explanation: "含蓄虚拟条件句，对过去虚拟 (could have done)。" },
-  { id: 'sub_5', categoryId: 'subjunctive', question: "He talks as if he ______ (be) a boss.", expected: "were", explanation: "as if 后接虚拟语气。" },
-  { id: 'sub_6', categoryId: 'subjunctive', question: "If it ______ (rain) tomorrow, the match would be cancelled.", expected: "should rain", explanation: "对将来的虚拟：should do / were to do / did。" },
-  { id: 'sub_7', categoryId: 'subjunctive', question: "I suggest that he ______ (go) at once.", expected: "go", explanation: "Suggest hinter clause uses (should) + do." },
-  { id: 'sub_8', categoryId: 'subjunctive', question: "Would you rather I ______ (leave) now?", expected: "left", explanation: "would rather + 过去式 (虚拟)。" },
+  // 6. Appositive Clause (Fact/News that...)
+  { id: 'app_1', categoryId: 'appositive_clause', question: "The news ______ our team won is true.", expected: "that", explanation: "同位语从句，解释news，结构完整，用that。" },
+  { id: 'app_2', categoryId: 'appositive_clause', question: "He expressed the hope ______ he would visit China.", expected: "that", explanation: "解释hope的内容。" },
+  { id: 'app_3', categoryId: 'appositive_clause', question: "There is no doubt ______ he is honest.", expected: "that", explanation: "no doubt后接that从句。" },
+  { id: 'app_4', categoryId: 'appositive_clause', question: "I define the idea ______ money is everything.", expected: "that", explanation: "同位语从句解释idea。" },
 
-  // --- Emphasis ---
-  { id: 'emp_1', categoryId: 'emphasis', question: "It was usually in the library ______ he studied.", expected: "that", explanation: "强调句型 It was...that..." },
-  { id: 'emp_2', categoryId: 'emphasis', question: "It is NOT money ______ brings happiness.", expected: "that", explanation: "强调句型强调主语 money。" },
-  { id: 'emp_3', categoryId: 'emphasis', question: "Was it yesterday ______ you arrived?", expected: "that", explanation: "强调句的一般疑问句形式。" },
-  { id: 'emp_4', categoryId: 'emphasis', question: "Who was it ______ broke the window?", expected: "that", explanation: "强调句的特殊疑问句形式。" },
-  { id: 'emp_5', categoryId: 'emphasis', question: "It was because of the rain ______ we stopped.", expected: "that", explanation: "强调原因状语。" },
-  { id: 'emp_6', categoryId: 'emphasis', question: "It is this book ______ I want to buy.", expected: "that", explanation: "Basic emphasis structure." },
-  { id: 'emp_7', categoryId: 'emphasis', question: "When was it ______ you met him?", expected: "that", explanation: "Question word + was it + that..." },
-  { id: 'emp_8', categoryId: 'emphasis', question: "It was not until midnight ______ he came back.", expected: "that", explanation: "Emphasis on 'not until...'." },
+  // 7. Inversion (Only/Never...)
+  { id: 'inv_1', categoryId: 'inversion', question: "Never ______ (will) I give up.", expected: "will", explanation: "Never置于句首，部分倒装。" },
+  { id: 'inv_2', categoryId: 'inversion', question: "Only then ______ (did) I realize my mistake.", expected: "did", explanation: "Only+状语置于句首，部分倒装。" },
+  { id: 'inv_3', categoryId: 'inversion', question: "Hardly had I arrived ______ the phone rang.", expected: "when", explanation: "Hardly...when..." },
+  { id: 'inv_4', categoryId: 'inversion', question: "Down ______ (jump) the cat.", expected: "jumped", explanation: "方位副词置于句首，全部倒装。" },
 
-  // --- It Usage (Formal) ---
-  { id: 'it_1', categoryId: 'it_usage', question: "I found ______ hard to finish the work.", expected: "it", explanation: "it 作形式宾语。" },
-  { id: 'it_2', categoryId: 'it_usage', question: "______ is no use crying over spilt milk.", expected: "It", explanation: "It is no use doing sth." },
-  { id: 'it_3', categoryId: 'it_usage', question: "He made ______ clear that he objected.", expected: "it", explanation: "make it + adj + that clause。" },
-  { id: 'it_4', categoryId: 'it_usage', question: "I feel ______ my duty to help you.", expected: "it", explanation: "feel it + n + to do sth。" },
-  { id: 'it_5', categoryId: 'it_usage', question: "Does ______ matter if I am late?", expected: "it", explanation: "it 作形式主语。" },
-  { id: 'it_6', categoryId: 'it_usage', question: "I think ______ necessary to learn English.", expected: "it", explanation: "think it + adj + to do sth." },
-  { id: 'it_7', categoryId: 'it_usage', question: "______ takes two hours to fly there.", expected: "It", explanation: "It takes time..." },
-  { id: 'it_8', categoryId: 'it_usage', question: "He found ______ strange that she didn't come.", expected: "it", explanation: "found it + adj + that clause." },
+  // 8. Attributive + Preposition (in which...)
+  { id: 'attp_1', categoryId: 'attributive_prep', question: "The room in ______ I live is small.", expected: "which", explanation: "介词in后指物用which。" },
+  { id: 'attp_2', categoryId: 'attributive_prep', question: "The person with ______ I talked is nice.", expected: "whom", explanation: "介词with后指人用whom。" },
+  { id: 'attp_3', categoryId: 'attributive_prep', question: "The reason for ______ he was late is clear.", expected: "which", explanation: "for which = why。" },
+  { id: 'attp_4', categoryId: 'attributive_prep', question: "This is the pen with ______ he writes.", expected: "which", explanation: "Tool case: write with the pen." },
 
-  // --- Agreement ---
-  { id: 'agr_1', categoryId: 'agreement', question: "The teacher as well as the students ______ (be) here.", expected: "is", explanation: "as well as 就远原则，谓语随 teacher。" },
-  { id: 'agr_2', categoryId: 'agreement', question: "Neither you nor I ______ (be) wrong.", expected: "am", explanation: "Neither...nor... 就近原则，谓语随 I。" },
-  { id: 'agr_3', categoryId: 'agreement', question: "The number of students ______ (be) increasing.", expected: "is", explanation: "The number of... 表示...的数量，谓语单数。" },
-  { id: 'agr_4', categoryId: 'agreement', question: "A number of students ______ (be) playing.", expected: "are", explanation: "A number of... 表示许多，谓语复数。" },
-  { id: 'agr_5', categoryId: 'agreement', question: "Either he or she ______ (have) the key.", expected: "has", explanation: "Either...or... 就近原则。" },
-  { id: 'agr_6', categoryId: 'agreement', question: "Thirty years ______ (be) a long time.", expected: "is", explanation: "Time/distance/money viewed as a unit -> singular." },
-  { id: 'agr_7', categoryId: 'agreement', question: "The rich ______ (be) not always happy.", expected: "are", explanation: "The + adj (group of people) -> plural." },
-  { id: 'agr_8', categoryId: 'agreement', question: "Each of the boys ______ (have) an apple.", expected: "has", explanation: "Each of... -> singular." }
+  // 9. Subjunctive Mood (If...were...)
+  { id: 'sub_1', categoryId: 'subjunctive', question: "If I ______ (know) his number, I would call him.", expected: "knew", explanation: "对现在情况的虚拟，从句用过去式。" },
+  { id: 'sub_2', categoryId: 'subjunctive', question: "He looks as if he ______ (be) ill.", expected: "were", explanation: "as if后接虚拟。" },
+  { id: 'sub_3', categoryId: 'subjunctive', question: "I wish I ______ (go) to the party yesterday.", expected: "had gone", explanation: "对过去情况的虚拟 (had done)。" },
+  { id: 'sub_4', categoryId: 'subjunctive', question: "If it ______ (rain) tomorrow, we would stay home.", expected: "should rain", explanation: "对将来的虚拟 (should do/were to do)。" },
+
+  // 10. Emphasis (It is...that...)
+  { id: 'emp_1', categoryId: 'emphasis', question: "It was yesterday ______ I met him.", expected: "that", explanation: "强调时间状语。" },
+  { id: 'emp_2', categoryId: 'emphasis', question: "It is Tom ______ broke the window.", expected: "who", explanation: "强调人，可以用who或that。" },
+  { id: 'emp_3', categoryId: 'emphasis', question: "Was it at school ______ you saw her?", expected: "that", explanation: "强调句疑问形式。" },
+  { id: 'emp_4', categoryId: 'emphasis', question: "It was not until 9pm ______ he came back.", expected: "that", explanation: "强调not until结构。" },
+
+  // 11. Formal Object (it)
+  { id: 'fo_1', categoryId: 'formal_object', question: "I find ______ hard to learn Math.", expected: "it", explanation: "find it adj to do." },
+  { id: 'fo_2', categoryId: 'formal_object', question: "He thinks ______ necessary to wait.", expected: "it", explanation: "think it adj to do." },
+  { id: 'fo_3', categoryId: 'formal_object', question: "They made ______ clear that they would go.", expected: "it", explanation: "make it clear that..." },
+  { id: 'fo_4', categoryId: 'formal_object', question: "I feel ______ a honor to be here.", expected: "it", explanation: "feel it a noun to do." },
+
+  // 12. Subject-Verb Agreement
+  { id: 'sva_1', categoryId: 'sv_agreement', question: "The teacher, with his students, ______ (is) coming.", expected: "is", explanation: "with连接主语，谓语看前面的主语。" },
+  { id: 'sva_2', categoryId: 'sv_agreement', question: "Either you or he ______ (be) right.", expected: "is", explanation: "Either...or... 就近原则 (he is)。" },
+  { id: 'sva_3', categoryId: 'sv_agreement', question: "Two hours ______ (be) enough.", expected: "is", explanation: "时间金钱距离看作整体，单数。" },
+  { id: 'sva_4', categoryId: 'sv_agreement', question: "Not only I but also he ______ (like) soccer.", expected: "likes", explanation: "Not only...but also... 就近原则 (he likes)。" },
 ];
