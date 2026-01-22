@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
 export default function RootPage() {
-  redirect('/cn');
+  redirect('/cn/trainer');
 }
 
