@@ -1,19 +1,16 @@
-# GaokaoSprint - Chinese Detailed Guide
+# 高考冲刺 - 驾驶舱仪表盘
 
-[Back to Global Home](../README_CN.md) | [English Version](../en/README.md)
+本面板包含 GaokaoSprint 系统的核心策略与状态监控。
 
-本目录包含 GaokaoSprint 系统的中文核心配置文件，旨在通过“AI + 生物干预”实现短期快速提分。
+## 模块导航
 
-## 文件详细列表说明
-
-### 1. [学习计划表 (study_schedule.md)](./study_schedule.md)
+### 1. [学习计划表 (Schedule)](./study_schedule)
 - **目标**：在 16 周内从零基础冲刺至 550 分。
 - **核心内容**：
     - 四阶段时间轴：基础重筑、模块攻坚、真题饱和、精准打磨。
     - 每日 14 小时高强度时间片段划分。
-    - 各学科（语数英、理化生）的 ROI (产出比) 分析及目录定位。
 
-### 2. [饮食营养方案 (diet_plan.md)](./diet_plan.md)
+### 2. [饮食营养方案 (Diet)](./diet_plan)
 - **目标**：为高强度逻辑工作提供每小时 100-110kcal 的稳定大脑能量。
 - **核心内容**：
     - 每日 2400-2500 kcal 总量，3+2 分餐模式。

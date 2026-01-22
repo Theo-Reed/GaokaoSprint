@@ -1,19 +1,16 @@
-# GaokaoSprint - English Detailed Guide
+# GaokaoSprint - Cockpit Dashboard
 
-[Back to Global Home](../README.md) | [中文版详细指南](../cn/README.md)
+This dashboard monitors the core strategies and status of the GaokaoSprint system.
 
-This directory contains the core English configuration files for the GaokaoSprint system, designed for rapid score acceleration through AI and biological optimization.
+## Module Navigation
 
-## Detailed Component Overview
-
-### 1. [Study Schedule (study_schedule.md)](./study_schedule.md)
+### 1. [Study Schedule](./study_schedule)
 - **Objective**: Zero to 550 total score within 16 weeks.
 - **Key Features**: 
   - 4-Phase Progression: Foundations, Module Attack, Mock Saturation, and Final Polishing.
   - 14-hour daily timeline designed for high-intensity cognitive output.
-  - Subject-by-subject ROI analysis and resource mapping.
 
-### 2. [Diet & Nutrition (diet_plan.md)](./diet_plan.md)
+### 2. [Diet & Nutrition](./diet_plan)
 - **Objective**: Sustain ATP production for 14 hours of logic-intensive work.
 - **Key Features**: 
   - 2400-2500 kcal target with a 3+2 meal distribution.
