@@ -3,9 +3,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "../data/training-data";
 import { sample, sampleSize } from "lodash";
+import { useGrammarProgress } from "@/hooks/useGrammarProgress";
 
 export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   const isCn = lang === 'cn';
+  const { completedIds, markCompleted, loading: progressLoading } = useGrammarProgress(isCn);
   
   const text = {
     title: isCn ? '极速快问' : 'Speed Quiz',
@@ -68,36 +70,24 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
 
   const currentQuiz = quizPool[currentQuizIndex];
 
-  // Initialize Exam Session
+  // Initialize Exam Session when progress is ready
   useEffect(() => {
-    startNewExamSession();
-  }, []);
-
-  const getCompletedQuestions = (): string[] => {
-    if (typeof window === 'undefined') return [];
-    try {
-      const stored = localStorage.getItem('gaokao_completed_questions');
-      return stored ? JSON.parse(stored) : [];
-    } catch {
-      return [];
+    if (!progressLoading) {
+      startNewExamSession();
     }
-  };
+  }, [progressLoading]); // Re-run when progress loads
 
-  const markQuestionAsCompleted = (id: string) => {
-    const completed = getCompletedQuestions();
-    if (!completed.includes(id)) {
-      const updated = [...completed, id];
-      const jsonStr = JSON.stringify(updated);
-      localStorage.setItem('gaokao_completed_questions', jsonStr);
-      // Debug log when saving
-      console.log(`[GrammarQuiz] Progress saved. Total completed: ${updated.length}`);
-    }
-  };
-
+  // --- Removed LocalStorage only logic, now using hook ---
+  // const getCompletedQuestions ... 
+  
   const clearHistory = () => {
     if (confirm(text.resetConfirm)) {
       localStorage.removeItem('gaokao_completed_questions');
-      console.log('[GrammarQuiz] History cleared.');
+      // Note: We can't easily clear DB without a new function, 
+      // but for now we clear local specific things if any.
+      // This button might need to be hidden or updated to say "Contact admin" 
+      // or we impl a delete. For now, let's just create a new session.
+      console.log('[GrammarQuiz] Session reset.');
       startNewExamSession();
     }
   };
@@ -106,7 +96,6 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).resetGrammarQuiz = clearHistory;
-      console.log('[GrammarQuiz] Debug tool available: window.resetGrammarQuiz()');
     }
     return () => {
       if (typeof window !== 'undefined') {
@@ -116,7 +105,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   }, []);
 
   const startNewExamSession = () => {
-    const completedIds = getCompletedQuestions();
+    // Uses the hook's completedIds
     console.log(`[GrammarQuiz] Starting new session. Found ${completedIds.length} completed questions.`);
     
     // Generate a 12-question exam, one from each Analysis Level
@@ -126,7 +115,6 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       
       // Filter out completed questions first
       const unseenCandidates = candidates.filter(q => !completedIds.includes(q.id));
-      console.log(`[GrammarQuiz] Level ${level.categoryId}: Total ${candidates.length}, Unseen ${unseenCandidates.length}`);
       
       // Priority: Unseen -> Any
       const poolToSample = unseenCandidates.length > 0 ? unseenCandidates : candidates;
@@ -156,7 +144,9 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       setIsExamCorrect(true);
       setExamFeedback(text.correct + (isCn ? currentQuiz.explanationCN : currentQuiz.explanationEN));
       setSessionScore(prev => prev + 1);
-      markQuestionAsCompleted(currentQuiz.id);
+      
+      // Mark as completed using hook (DB + State)
+      markCompleted(currentQuiz.id);
     } else {
       setIsExamCorrect(false);
       // Show explanation even if wrong
@@ -165,7 +155,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   };
 
   const handleRetry = () => {
-     const completedIds = getCompletedQuestions();
+     // completedIds comes from hook
      
      // Find other questions of the SAME category to maintain the 12-level structure
      const sameCategoryCandidates = EXAM_POOL.filter(q => 
@@ -186,6 +176,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
          });
          setExamInput("");
          setExamFeedback("");
+         setIsExamCorrect(false); // Reset correct state on retry
      } else {
          // Fallback if no other questions exist in category
          setExamInput("");
@@ -193,6 +184,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
          alert("No other questions available for this category yet.");
      }
   };
+
 
   const nextQuiz = () => {
       if (currentQuizIndex < quizPool.length - 1) {

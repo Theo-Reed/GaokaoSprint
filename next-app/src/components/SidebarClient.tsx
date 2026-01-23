@@ -71,6 +71,16 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
             </Link>
           </div>
 
+          <div className="mb-6 flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-100 shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+              S
+            </div>
+            <div>
+              <p className="text-sm font-bold text-slate-700">Student User</p>
+              <p className="text-xs text-slate-400">Level 3 • 450 words</p>
+            </div>
+          </div>
+
           <nav className="space-y-6">
             {nav.map((section) => (
               <div key={section.title}>

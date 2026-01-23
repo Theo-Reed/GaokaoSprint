@@ -4,6 +4,8 @@
 import React, { useState } from "react";
 import { SentenceAnalyzer } from "@/components/SentenceAnalyzer";
 import { GrammarQuiz } from "@/components/GrammarQuiz";
+import { useGrammarProgress } from "@/hooks/useGrammarProgress";
+import AuthOverlay from "@/components/AuthOverlay";
 
 // Simple icon wrapper to avoid external deps for now
 const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
@@ -58,6 +60,14 @@ const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, col
 
 export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
   const isCn = lang === 'cn';
+  const { session, loading } = useGrammarProgress(isCn);
+  const [showAuth, setShowAuth] = useState(false);
+
+  // 如果未登录且加载完毕，强制显示登录 (Strict Mode per user request)
+  // 但是 InteractiveTrainer 之前可能是公开的？
+  // 用户说 "把语法特训工具也储存到数据库"，暗示需要登录。
+  // 我们可以像 Vocab 那样做一个 Overlay。
+  const isBlocking = !session && !loading;
 
   const text = {
     mainTitle: isCn ? '高考英语 • 核心能力特训系统' : 'GaoKao English Mastery System',
@@ -73,8 +83,33 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+    <div className="w-full max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700 relative">
       
+      {/* Auth Blocking Overlay */}
+      {isBlocking && (
+         <div className="absolute inset-0 z-50 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-xl">
+            <div className="text-center p-8 bg-white shadow-2xl rounded-2xl border border-blue-100 max-w-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                    {isCn ? '需要登录' : 'Login Required'}
+                </h3>
+                <p className="text-gray-500 mb-6 text-sm">
+                    {isCn 
+                        ? '为了同步您的做题进度和错题本，请先登录数据库。' 
+                        : 'Please login to sync your progress and error log.'}
+                </p>
+                <div className="relative h-64">
+                    {/* Reuse AuthOverlay logic but we need it to be mounted. 
+                        Actually AuthOverlay is fixed screen. 
+                        Let's just render AuthOverlay if blocking.
+                    */}
+                </div>
+            </div>
+         </div>
+      )}
+
+      {isBlocking && <AuthOverlay onLoginSuccess={() => {}} />}
+
+
       <div className="text-center mb-10">
         <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
           {text.mainTitle}

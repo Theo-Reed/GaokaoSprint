@@ -109,7 +109,8 @@ export function getNavigation(lang: string) {
         {
             title: lang === 'cn' ? '工具' : 'Tools',
             items: [
-                { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` }
+                { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` },
+                { title: lang === 'cn' ? '英语单词特训' : 'Vocabulary Trainer', href: `/${lang}/vocabulary` }
             ]
         }
     ];
