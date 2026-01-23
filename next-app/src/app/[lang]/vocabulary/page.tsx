@@ -289,7 +289,7 @@ export default function TrainerPage() {
         </div>
 
         <div className="text-xs font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-          {queueIndex + 1} / {dailyQueue.length} <span className="text-gray-300 mx-1">|</span> 斩: {masteredCount}
+          已掌握：{masteredCount} / {(rawData as WordData[]).length}
         </div>
       </div>
 
@@ -351,7 +351,7 @@ export default function TrainerPage() {
              <div className="w-full h-full overflow-y-auto no-scrollbar pb-10">
                 <div className="mt-8"> {/* Spacer for top buttons */}
                    <ul className="space-y-4">
-                     {currentWord.meanings.en?.slice(0, 3).map((m, i) => (
+                     {currentWord.meanings.en?.map((m, i) => (
                        <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-indigo-400 pl-3">
                           {definitionMode === 'bilingual' ? (
                               <div>
@@ -371,6 +371,19 @@ export default function TrainerPage() {
                      ))}
                    </ul>
                 </div>
+
+                {currentWord.examples?.teach && (
+                  <div className="mt-6">
+                    <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Context</h3>
+                    <div className="space-y-3">
+                      {currentWord.examples.teach.map((ex, i) => (
+                        <div key={i} className="text-gray-600 bg-gray-50 p-3 rounded-xl text-sm leading-relaxed"
+                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-blue-600 font-bold">$1</span>') }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
              </div>
           </div>
         </div>
