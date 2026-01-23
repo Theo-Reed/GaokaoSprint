@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { supabase } from '@/lib/supabase';
 
 interface NavItem {
   title: string;
@@ -20,6 +21,15 @@ interface SidebarClientProps {
 
 export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user?.email) {
+          setUserEmail(session.user.email);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -71,15 +81,11 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
             </Link>
           </div>
 
-          <div className="mb-6 flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-100 shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
-              S
+          {userEmail && (
+            <div className="mb-6 p-3 bg-white rounded-lg border border-slate-100 shadow-sm overflow-hidden">
+                <p className="text-sm font-bold text-slate-700 truncate" title={userEmail}>{userEmail}</p>
             </div>
-            <div>
-              <p className="text-sm font-bold text-slate-700">Student User</p>
-              <p className="text-xs text-slate-400">Level 3 • 450 words</p>
-            </div>
-          </div>
+          )}
 
           <nav className="space-y-6">
             {nav.map((section) => (

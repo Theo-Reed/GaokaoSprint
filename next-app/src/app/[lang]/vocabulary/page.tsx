@@ -55,7 +55,12 @@ export default function TrainerPage() {
     setLoading(true);
     const { data } = await supabase.from('user_progress').select('word_id');
     if (data) {
-      const learned = new Set(data.map(item => item.word_id));
+      // 过滤掉 'syntax:' 前缀的记录 (那是语法特训的进度)
+      const learned = new Set(
+          data
+          .map(item => item.word_id)
+          .filter(id => !id.startsWith('syntax:'))
+      );
       setRemoteLearnedSet(learned);
     }
     setLoading(false);
@@ -163,12 +168,9 @@ export default function TrainerPage() {
       )}
       
       {/* Top Bar */}
-      <div className="flex justify-between items-center p-4 bg-white shadow-sm z-10">
-        <div className="text-sm font-bold text-gray-800 truncate max-w-[150px]">
-             {session ? session.user.email : '未登录'}
-        </div>
+      <div className="flex justify-end items-center p-4 bg-white shadow-sm z-10">
         <div className="text-xs font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-          斩词: {todayLearnedCount} | 总进度: {remoteLearnedSet.size}
+          已斩: {remoteLearnedSet.size} / {(rawData as WordData[]).length}
         </div>
       </div>
 
@@ -226,8 +228,8 @@ export default function TrainerPage() {
                     <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Context</h3>
                     <div className="space-y-3">
                       {word.examples.teach.map((ex, i) => (
-                        <div key={i} className="text-gray-600 bg-gray-50 p-3 rounded-xl text-sm italic leading-relaxed"
-                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-blue-600 font-bold not-italic">$1</span>') }}
+                        <div key={i} className="text-gray-600 bg-gray-50 p-3 rounded-xl text-sm leading-relaxed"
+                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-blue-600 font-bold">$1</span>') }}
                         />
                       ))}
                     </div>

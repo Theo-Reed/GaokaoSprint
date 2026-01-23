@@ -107,14 +107,30 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
         <div className="w-[400px] shrink-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden sticky top-4 flex flex-col max-h-[85vh] animate-in slide-in-from-right-4 duration-200">
           {/* Header */}
           <div className="bg-slate-50 p-5 border-b border-slate-200">
-            <div className="flex justify-between items-start mb-3">
-              <h3 className="text-3xl font-bold text-slate-800 capitalize">{selectedWord.word}</h3>
+            {/* Top Toolbar */}
+            <div className="flex justify-between items-center mb-4">
+               <button
+                  onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
+                  className="text-xs font-bold px-2 py-1 rounded bg-white border border-slate-200 text-slate-600 hover:border-slate-300 transition-colors shadow-sm flex items-center gap-2"
+                  title="Switch Language Mode"
+               >
+                  <span className={definitionMode === 'english' ? 'text-slate-400' : 'text-blue-600'}>中 / En</span>
+                  <div className={`w-8 h-4 rounded-full p-0.5 transition-colors ${definitionMode === 'english' ? 'bg-indigo-500' : 'bg-slate-200'}`}>
+                      <div className={`w-3 h-3 bg-white rounded-full shadow-sm transform transition-transform ${definitionMode === 'english' ? 'translate-x-4' : 'translate-x-0'}`} />
+                  </div>
+                  <span className={definitionMode === 'english' ? 'text-indigo-600' : 'text-slate-400'}>En</span>
+               </button>
+
               <button 
                 onClick={() => setSelectedWord(null)}
                 className="text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded-full p-1 transition-colors"
               >
                 <X size={24} />
               </button>
+            </div>
+
+            <div className="flex justify-between items-start mb-3">
+              <h3 className="text-3xl font-bold text-slate-800 capitalize">{selectedWord.word}</h3>
             </div>
             
             <div className="flex flex-wrap gap-2 mb-4">
@@ -159,14 +175,19 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
               <div className="space-y-3">
                 {selectedWord.pos.map((pos, idx) => (
                   <div key={idx} className="group">
-                    <div className="flex items-baseline gap-2 mb-1">
-                        <span className="text-xs font-bold text-slate-400 uppercase w-12 text-right shrink-0">{pos}</span>
-                        <span className="font-bold text-slate-800 text-lg">{selectedWord.meanings.cn[idx]}</span>
+                     {/* Primary Definition Line */}
+                    <div className="flex items-start gap-1 mb-1">
+                        <span className={`font-bold text-slate-800 ${definitionMode === 'english' ? 'text-base' : 'text-lg'}`}>
+                              <span className="text-slate-500 font-bold mr-1 italic">{pos}.</span>
+                              {definitionMode === 'bilingual' ? selectedWord.meanings.cn[idx] : selectedWord.meanings.en[idx]}
+                        </span>
                     </div>
-                    <div className="flex items-baseline gap-2">
-                        <span className="w-12 shrink-0"></span>
-                        <span className="text-sm text-slate-500 italic leading-relaxed">{selectedWord.meanings.en[idx]}</span>
-                    </div>
+                    {/* Secondary Definition Line (only if bilingual) */}
+                    {definitionMode === 'bilingual' && (
+                        <div className="flex items-baseline gap-2 pl-6">
+                            <span className="text-sm text-slate-500 leading-relaxed">{selectedWord.meanings.en[idx]}</span>
+                        </div>
+                    )}
                   </div>
                 ))}
               </div>
