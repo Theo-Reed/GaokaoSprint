@@ -103,14 +103,20 @@ export default function TrainerPage() {
         // 过滤掉旧的 syntax 数据
         if (item.word_id.startsWith('syntax:')) return;
         
+        // Map 自动去重，保留最后一条（通常是数据库返回顺序，或者我们可以由查询排序控制）
+        // 但最好还是依靠数据库唯一约束。若有重复，Map 会覆盖。
         map.set(item.word_id, {
-          status: item.status as any || 'learning', // 兼容旧数据默认 learning
+          status: item.status as any || 'learning', 
           last_reviewed_at: item.last_reviewed_at
         });
-
-        if (item.status === 'mastered') mCount++;
       });
     }
+
+    // 重新计算 masteredCount，确保去重后准确
+    let mCount = 0;
+    map.forEach(val => {
+        if (val.status === 'mastered') mCount++;
+    });
     
     setProgressMap(map);
     setMasteredCount(mCount);
