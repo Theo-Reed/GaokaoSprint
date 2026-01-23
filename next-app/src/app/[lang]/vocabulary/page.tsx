@@ -5,13 +5,15 @@ import { useState, useEffect } from 'react';
 import rawData from '@/data/vocabulary_app_data_refined_final.json';
 import { supabase } from '@/lib/supabase';
 import AuthOverlay from '@/components/AuthOverlay';
+import { Languages } from 'lucide-react';
 
 // --- 类型 ---
 type WordData = {
   word: string;
   stats: { freq: number; stars: number };
-  meanings: { en: string[] }; 
+  meanings: { en: string[]; cn: string[] }; 
   examples?: { teach?: string[] };
+  pos: string[];
 };
 
 type QueueItem = {
@@ -29,6 +31,7 @@ export default function TrainerPage() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [learningQueue, setLearningQueue] = useState<WordData[]>([]);
   const [todayLearnedCount, setTodayLearnedCount] = useState(0);
+  const [definitionMode, setDefinitionMode] = useState<'bilingual' | 'english'>('bilingual');
 
   // 这里的 Set 用于快速判断是否学过（从数据库拉取）
   const [remoteLearnedSet, setRemoteLearnedSet] = useState<Set<string>>(new Set());
@@ -168,7 +171,14 @@ export default function TrainerPage() {
       )}
       
       {/* Top Bar */}
-      <div className="flex justify-end items-center p-4 bg-white shadow-sm z-10">
+      <div className="flex justify-between items-center p-4 bg-white shadow-sm z-10">
+        <button
+            onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
+            className="text-xs font-bold px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600 transition-colors shadow-sm flex items-center gap-2"
+        >
+            <Languages size={14} />
+            <span>{definitionMode === 'bilingual' ? '中英' : '英英'}</span>
+        </button>
         <div className="text-xs font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
           已斩: {remoteLearnedSet.size} / {(rawData as WordData[]).length}
         </div>
@@ -186,7 +196,7 @@ export default function TrainerPage() {
       <div className="flex-1 p-4 flex flex-col justify-center relative">
         <div 
           onClick={() => setIsFlipped(!isFlipped)} 
-          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full min-h-[400px] flex flex-col items-center justify-center p-6 cursor-pointer relative group border border-gray-100"
+          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full min-h-[360px] flex flex-col items-center justify-center p-6 cursor-pointer relative group border border-gray-100"
         >
           {/* Source Tag */}
           <div className="absolute top-6 right-6">
@@ -216,9 +226,18 @@ export default function TrainerPage() {
              <div className="flex-1 overflow-y-auto no-scrollbar space-y-6">
                 <div>
                    <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Definition</h3>
-                   <ul className="space-y-2">
-                     {word.meanings.en?.slice(0, 2).map((m, i) => (
-                       <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-blue-500 pl-3">{m}</li>
+                   <ul className="space-y-4">
+                     {word.meanings.en?.slice(0, 3).map((m, i) => (
+                       <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-blue-500 pl-3">
+                          {definitionMode === 'bilingual' ? (
+                              <div>
+                                  <div className="font-bold text-gray-900 mb-1">{word.pos?.[i] || 'v'}. {word.meanings.cn?.[i] || ''}</div>
+                                  <div className="text-base text-gray-500 font-normal">{m}</div>
+                              </div>
+                          ) : (
+                              <span>{m}</span>
+                          )}
+                       </li>
                      ))}
                    </ul>
                 </div>

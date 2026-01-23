@@ -2,12 +2,38 @@
 
 import React, { useState } from 'react';
 import { getVocabEntry, VocabEntry } from '@/lib/vocabulary';
-import { X, BookOpen, GraduationCap, Target, CheckCircle, RotateCcw } from 'lucide-react';
+import { X, BookOpen, GraduationCap, Target, CheckCircle, RotateCcw, Languages } from 'lucide-react';
 
 interface TextReaderProps {
   content: string;
   title?: string;
 }
+
+const posAbbreviations: Record<string, string> = {
+  noun: 'n',
+  verb: 'v',
+  adj: 'adj',
+  adjective: 'adj',
+  adv: 'adv',
+  adverb: 'adv',
+  prep: 'prep',
+  preposition: 'prep',
+  conj: 'conj',
+  conjunction: 'conj',
+  pron: 'pron',
+  pronoun: 'pron',
+  art: 'art',
+  article: 'art',
+  num: 'num',
+  number: 'num',
+  int: 'int',
+  interjection: 'int',
+};
+
+const formatPos = (pos: string) => {
+    const lower = pos.toLowerCase();
+    return posAbbreviations[lower] || pos;
+};
 
 export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
   const [selectedWord, setSelectedWord] = useState<VocabEntry | null>(null);
@@ -104,21 +130,18 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
 
       {/* Floating Sidebar */}
       {selectedWord && (
-        <div className="w-[400px] shrink-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden sticky top-4 flex flex-col max-h-[85vh] animate-in slide-in-from-right-4 duration-200">
+        <div className="w-[360px] shrink-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden sticky top-4 flex flex-col max-h-[85vh] animate-in slide-in-from-right-4 duration-200">
           {/* Header */}
           <div className="bg-slate-50 p-5 border-b border-slate-200">
             {/* Top Toolbar */}
             <div className="flex justify-between items-center mb-4">
                <button
                   onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
-                  className="text-xs font-bold px-2 py-1 rounded bg-white border border-slate-200 text-slate-600 hover:border-slate-300 transition-colors shadow-sm flex items-center gap-2"
-                  title="Switch Language Mode"
+                  className="text-xs font-bold px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600 transition-colors shadow-sm flex items-center gap-2"
+                  title="Switch between Bilingual and English-only definitions"
                >
-                  <span className={definitionMode === 'english' ? 'text-slate-400' : 'text-blue-600'}>中 / En</span>
-                  <div className={`w-8 h-4 rounded-full p-0.5 transition-colors ${definitionMode === 'english' ? 'bg-indigo-500' : 'bg-slate-200'}`}>
-                      <div className={`w-3 h-3 bg-white rounded-full shadow-sm transform transition-transform ${definitionMode === 'english' ? 'translate-x-4' : 'translate-x-0'}`} />
-                  </div>
-                  <span className={definitionMode === 'english' ? 'text-indigo-600' : 'text-slate-400'}>En</span>
+                  <Languages size={14} />
+                  <span>{definitionMode === 'bilingual' ? '中英' : '英英'}</span>
                </button>
 
               <button 
@@ -178,7 +201,7 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
                      {/* Primary Definition Line */}
                     <div className="flex items-start gap-1 mb-1">
                         <span className={`font-bold text-slate-800 ${definitionMode === 'english' ? 'text-base' : 'text-lg'}`}>
-                              <span className="text-slate-500 font-bold mr-1 italic">{pos}.</span>
+                              <span className="text-slate-500 font-bold mr-1 italic">{formatPos(pos)}.</span>
                               {definitionMode === 'bilingual' ? selectedWord.meanings.cn[idx] : selectedWord.meanings.en[idx]}
                         </span>
                     </div>
