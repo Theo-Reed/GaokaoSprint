@@ -272,7 +272,8 @@ export default function TrainerPage() {
 
   // 正常渲染
   return (
-    <div className="flex flex-col h-[100dvh] max-w-md mx-auto bg-gray-50 border-x border-gray-100 relative overflow-hidden text-gray-900">
+    <div className="fixed top-0 left-0 md:left-64 w-full md:w-auto right-0 h-[100dvh] flex flex-col overflow-hidden bg-gray-50 text-gray-900 overscroll-none z-0">
+      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-gray-100 relative">
       
       {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       
@@ -409,6 +410,7 @@ export default function TrainerPage() {
           <span className="font-bold text-sm">下一个</span>
         </button>
       </div>
+     </div>
     </div>
   );
 }
