@@ -272,7 +272,7 @@ export default function TrainerPage() {
 
   // 正常渲染
   return (
-    <div className="flex flex-col h-screen max-w-md mx-auto bg-gray-50 border-x border-gray-100 relative overflow-hidden text-gray-900">
+    <div className="flex flex-col h-[100dvh] max-w-md mx-auto bg-gray-50 border-x border-gray-100 relative overflow-hidden text-gray-900">
       
       {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       
@@ -295,10 +295,10 @@ export default function TrainerPage() {
 
       {/* Main Card Area */}
       {currentWord && (
-      <div className="flex-1 p-4 flex flex-col justify-center relative">
+      <div className="flex-1 min-h-0 p-4 flex flex-col relative overflow-hidden">
         <div 
           onClick={() => setIsFlipped(!isFlipped)} 
-          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full min-h-[420px] max-h-[70vh] flex flex-col items-center justify-center p-6 cursor-pointer relative group border border-gray-100"
+          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 overflow-hidden"
         >
           {/* 左上角：已掌握/取消已掌握 按钮 (浮在卡片上) */}
           <div 
@@ -332,23 +332,25 @@ export default function TrainerPage() {
           </div>
 
           {/* 单词主显 */}
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center break-words w-full px-2 mt-8">
-            {currentWord.word}
-          </h1>
+          <div className="flex-1 flex flex-col items-center justify-center w-full">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center break-words w-full px-2 mt-8">
+              {currentWord.word}
+            </h1>
 
-          <div className="flex space-x-1 mb-6 opacity-30">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-black' : 'text-gray-200'}`}>★</span>
-            ))}
+            <div className="flex space-x-1 mb-6 opacity-30">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-black' : 'text-gray-200'}`}>★</span>
+              ))}
+            </div>
+
+            {!isFlipped && (
+              <div className="text-gray-300 text-sm animate-pulse mt-4">点击查看释义</div>
+            )}
           </div>
 
-          {!isFlipped && (
-             <div className="text-gray-300 text-sm animate-pulse mt-4">点击查看释义</div>
-          )}
-
           {/* B面 (答案) */}
-          <div className={`absolute inset-0 bg-white/95 backdrop-blur-xl z-10 flex flex-col p-8 text-left transition-all duration-300 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-             <div className="w-full h-full overflow-y-auto no-scrollbar pb-10">
+          <div className={`absolute inset-0 bg-white/95 backdrop-blur-xl z-10 flex flex-col text-left transition-all duration-300 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+             <div className="h-full overflow-y-auto no-scrollbar pt-12 pb-10 px-8">
                 <div className="mt-8"> {/* Spacer for top buttons */}
                    <ul className="space-y-4">
                      {currentWord.meanings.en?.map((m, i) => (
