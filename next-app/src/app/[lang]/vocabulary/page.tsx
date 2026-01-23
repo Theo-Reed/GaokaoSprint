@@ -159,16 +159,17 @@ export default function TrainerPage() {
       }
     });
 
-    // 排序逻辑 (根据用户最新需求)
-    // 1. 今天正在攻克的 (恢复现场)
-    // 2. 昨天/以前没学会的 (硬骨头)
-    // 3. 昨天/以前熟悉的 (复习)
-    // 4. 新词
-    // 5. 今天已会的 (兜底)
+    // 排序逻辑 (根据用户最新需求 - 修正版)
+    // 优先级优化：
+    // 1. reviewLearning: 昨天/以前没学会的 (优先复习，恢复进度)
+    // 2. reviewFamiliar: 昨天/以前熟悉的 (复习巩固，恢复进度)
+    // 3. todayLearning: 今天正在学的 (刚才点了Next的，排在未看过的后面，避免一刷新就重来)
+    // 4. newWords: 新词 (最后学)
+    // 5. todayFamiliar: 今天已熟悉的 (垫底)
     const queue = [
-        ...todayLearning, 
         ...reviewLearning, 
         ...reviewFamiliar, 
+        ...todayLearning, 
         ...newWords, 
         ...todayFamiliar
     ];
