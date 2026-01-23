@@ -96,7 +96,6 @@ export default function TrainerPage() {
       .select('word_id, status, last_reviewed_at');
     
     const map = new Map<string, UserProgress>();
-    let mCount = 0;
 
     if (data) {
       data.forEach(item => {
@@ -127,29 +126,53 @@ export default function TrainerPage() {
   // 3. 构建每日学习队列
   const buildQueue = (map: Map<string, UserProgress>) => {
     const allWords = rawData as WordData[];
+    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
     
-    // 分组
-    const learning: WordData[] = [];
-    const newWords: WordData[] = [];
-    const familiar: WordData[] = [];
+    // 优先级分组
+    const todayLearning: WordData[] = []; // A. 今天正在学的 (Next过) -> 最优先 (恢复现场)
+    const reviewLearning: WordData[] = [];// B. 往日遗留的 Learning -> 优先复习
+    const reviewFamiliar: WordData[] = [];// C. 往日熟悉的 -> 复习巩固
+    const newWords: WordData[] = [];      // D. 新词 -> 正常学习
+    const todayFamiliar: WordData[] = []; // E. 今天已熟悉的 -> 垫底 (防止空跑)
 
     allWords.forEach(w => {
       const p = map.get(w.word);
-      if (p?.status === 'mastered') return; // 已掌握的不放入日常队列
+      if (p?.status === 'mastered') return; // 已掌握的不放入
 
       if (!p) {
         newWords.push(w);
-      } else if (p.status === 'familiar') {
-        familiar.push(w);
       } else {
-        // learning or others
-        learning.push(w);
+        // Handle timezone/date loosely. Assuming stored is ISO UTC.
+        // Convert stored time to local YYYY-MM-DD for comparison? 
+        // Or simpler: just check string prefix if we trust environment? 
+        // Let's use Date object to be safe.
+        const reviewDate = new Date(p.last_reviewed_at).toISOString().split('T')[0];
+        const isToday = reviewDate === today;
+
+        if (isToday) {
+            if (p.status === 'learning') todayLearning.push(w);
+            else todayFamiliar.push(w);
+        } else {
+            if (p.status === 'learning') reviewLearning.push(w);
+            else reviewFamiliar.push(w);
+        }
       }
     });
 
-    // 排序逻辑 (这里简单按入库顺序，也可按时间倒序优化)
-    // 优先级: Learning (复习) -> New (新词) -> Familiar (巩固)
-    const queue = [...learning, ...newWords, ...familiar];
+    // 排序逻辑 (根据用户最新需求)
+    // 1. 今天正在攻克的 (恢复现场)
+    // 2. 昨天/以前没学会的 (硬骨头)
+    // 3. 昨天/以前熟悉的 (复习)
+    // 4. 新词
+    // 5. 今天已会的 (兜底)
+    const queue = [
+        ...todayLearning, 
+        ...reviewLearning, 
+        ...reviewFamiliar, 
+        ...newWords, 
+        ...todayFamiliar
+    ];
+
     setDailyQueue(queue);
     setQueueIndex(0);
     if (queue.length > 0) {
