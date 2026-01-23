@@ -53,25 +53,9 @@ export function useGrammarProgress(isCn: boolean) {
   // 2. 从数据库拉取
   const fetchProgress = async (userId: string) => {
     setLoading(true);
-    // Syntax question IDs are stored with prefix or just as is.
-    // Let's assume they are unique strings in string format.
-    // To distinguish from words, maybe the question IDs are distinct enough?
-    // Vocab words are "abandon", "ability".
-    // Syntax ids are like "tense_1", "clause_5"? Check data/training-data.ts later.
-    // If collision risk, we should prefix.
-    
-    // Actually, let's fetch ALL and filter in memory or rely on upsert.
-    // But better to distinguish. I will prefix local IDs with nothing (legacy) but maybe prefix when determining?
-    // Wait, vocab uses the word itself. Syntax uses IDs from training-data.
-    // Let's simply store them. If "abandon" is a syntax question ID, that's a conflict.
-    // Checking Exam Pool...
-    
-    const { data } = await supabase.from('user_progress').select('word_id');
+    const { data } = await supabase.from('user_syntax_progress').select('syntax_id');
     if (data) {
-      const dbIds = data.map(item => item.word_id).filter(id => id.startsWith('syntax:'));
-      // Remove prefix for internal usage
-      const cleanIds = dbIds.map(id => id.replace('syntax:', ''));
-      setLocalCompleted(cleanIds);
+      setLocalCompleted(data.map(item => item.syntax_id));
     }
     setLoading(false);
   };
@@ -86,9 +70,9 @@ export function useGrammarProgress(isCn: boolean) {
 
       // DB Sync
       if (session) {
-          await supabase.from('user_progress').upsert({
+          await supabase.from('user_syntax_progress').upsert({
               user_id: session.user.id,
-              word_id: `syntax:${id}`
+              syntax_id: id
           });
       }
 

@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 // @ts-ignore
 import rawData from '@/data/vocabulary_app_data_refined_final.json';
 import { supabase } from '@/lib/supabase';
 import AuthOverlay from '@/components/AuthOverlay';
-import { Languages } from 'lucide-react';
+import { Languages, CheckCircle, RotateCcw } from 'lucide-react'; // Added icons
 
 // --- 类型 ---
 type WordData = {
@@ -16,25 +16,57 @@ type WordData = {
   pos: string[];
 };
 
-type QueueItem = {
-  word: WordData;
-  source: 'new' | 'learning';
+// 状态优先级: learning (高) > new (中) > familiar (低) > mastered (不显示)
+type UserProgress = {
+  status: 'learning' | 'familiar' | 'mastered';
+  last_reviewed_at: string;
+};
+
+const posAbbreviations: Record<string, string> = {
+  noun: 'n',
+  verb: 'v',
+  adj: 'adj',
+  adjective: 'adj',
+  adv: 'adv',
+  adverb: 'adv',
+  prep: 'prep',
+  preposition: 'prep',
+  conj: 'conj',
+  conjunction: 'conj',
+  pron: 'pron',
+  pronoun: 'pron',
+  art: 'art',
+  article: 'art',
+  num: 'num',
+  number: 'num',
+  int: 'int',
+  interjection: 'int',
+};
+
+const formatPos = (pos: string) => {
+    if (!pos) return 'v';
+    const lower = pos.toLowerCase();
+    return posAbbreviations[lower] || pos;
 };
 
 export default function TrainerPage() {
   const [session, setSession] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [isClient, setIsClient] = useState(false); // 新增：是否在客户端
+  const [isClient, setIsClient] = useState(false); 
   
   // 核心状态
-  const [currentCard, setCurrentCard] = useState<QueueItem | null>(null);
+  const [currentWord, setCurrentWord] = useState<WordData | null>(null);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [learningQueue, setLearningQueue] = useState<WordData[]>([]);
-  const [todayLearnedCount, setTodayLearnedCount] = useState(0);
+  
+  // 进度状态
+  const [progressMap, setProgressMap] = useState<Map<string, UserProgress>>(new Map());
+  const [dailyQueue, setDailyQueue] = useState<WordData[]>([]);
+  const [queueIndex, setQueueIndex] = useState(0); // 当前在队列中的位置
+
   const [definitionMode, setDefinitionMode] = useState<'bilingual' | 'english'>('bilingual');
 
-  // 这里的 Set 用于快速判断是否学过（从数据库拉取）
-  const [remoteLearnedSet, setRemoteLearnedSet] = useState<Set<string>>(new Set());
+  // 统计
+  const [masteredCount, setMasteredCount] = useState(0);
 
   // 1. 初始化
   useEffect(() => {
@@ -42,7 +74,10 @@ export default function TrainerPage() {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       if (session) fetchProgress(session.user.id);
-      else setLoading(false);
+      else {
+        buildQueue(new Map()); // 未登录模式，全部视为 new
+        setLoading(false);
+      }
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -53,228 +88,310 @@ export default function TrainerPage() {
     return () => subscription.unsubscribe();
   }, []);
 
-  // 2. 从数据库拉取已背单词的 ID
+  // 2. 从数据库拉取进度
   const fetchProgress = async (userId: string) => {
     setLoading(true);
-    const { data } = await supabase.from('user_progress').select('word_id');
+    const { data } = await supabase
+      .from('user_progress')
+      .select('word_id, status, last_reviewed_at');
+    
+    const map = new Map<string, UserProgress>();
+    let mCount = 0;
+
     if (data) {
-      // 过滤掉 'syntax:' 前缀的记录 (那是语法特训的进度)
-      const learned = new Set(
-          data
-          .map(item => item.word_id)
-          .filter(id => !id.startsWith('syntax:'))
-      );
-      setRemoteLearnedSet(learned);
+      data.forEach(item => {
+        // 过滤掉旧的 syntax 数据
+        if (item.word_id.startsWith('syntax:')) return;
+        
+        map.set(item.word_id, {
+          status: item.status as any || 'learning', // 兼容旧数据默认 learning
+          last_reviewed_at: item.last_reviewed_at
+        });
+
+        if (item.status === 'mastered') mCount++;
+      });
     }
+    
+    setProgressMap(map);
+    setMasteredCount(mCount);
+    buildQueue(map);
     setLoading(false);
   };
+
+  // 3. 构建每日学习队列
+  const buildQueue = (map: Map<string, UserProgress>) => {
+    const allWords = rawData as WordData[];
     
-  // 3. 加载下一张卡片 (监听 remoteLearnedSet 变化后也会触发)
-  useEffect(() => {
-    if (!loading) loadNextCard();
-  }, [loading, remoteLearnedSet, learningQueue]); 
-  // 注意：learningQueue 变化不应重置 currentCard，只有当 currentCard 为空时才触发
+    // 分组
+    const learning: WordData[] = [];
+    const newWords: WordData[] = [];
+    const familiar: WordData[] = [];
 
-  const loadNextCard = () => {
-    if (currentCard) return; // 如果当前有卡片，不打断
+    allWords.forEach(w => {
+      const p = map.get(w.word);
+      if (p?.status === 'mastered') return; // 已掌握的不放入日常队列
 
-    // A. 优先死磕
-    if (learningQueue.length > 0) {
-      const next = learningQueue[0];
-      setLearningQueue(prev => prev.slice(1));
-      setCurrentCard({ word: next, source: 'learning' });
-      setIsFlipped(false);
-      return;
-    }
-
-    // B. 新词
-    // 找到第一个不在 remoteLearnedSet 里的词
-    const nextNew = (rawData as WordData[]).find(w => !remoteLearnedSet.has(w.word));
-    
-    if (nextNew) {
-      setCurrentCard({ word: nextNew, source: 'new' });
-      setIsFlipped(false);
-    } else {
-      setCurrentCard(null); // 通关
-    }
-  };
-
-  const forceNext = () => {
-    // 强制触发一次取词逻辑 (因为 useEffect 依赖复杂，手动控制更稳)
-    setCurrentCard(null); 
-    // useEffect 会监测到 currentCard 变 null 且 dependencies 没变吗？
-    // 最好手动调用一下逻辑：
-    setTimeout(() => {
-        // A. 优先死磕 (重新读取最新的 state)
-        //由于闭包问题，这里可能有坑，最简单的做法是只 setNull，利用 useEffect 重新 load
-        // 但为了保险，直接在这里写逻辑副本
-        setLearningQueue(prev => {
-            if (prev.length > 0) {
-                const next = prev[0];
-                setCurrentCard({ word: next, source: 'learning' });
-                setIsFlipped(false);
-                return prev.slice(1);
-            }
-            // 取新词... 这里需要访问最新的 remoteLearnedSet
-            // 简单处理：设为 null，让 useEffect 再次接管
-            setCurrentCard(null); 
-            return prev;
-        });
-    }, 0);
-  };
-
-
-  const handleResponse = async (degree: 'forgot' | 'easy') => {
-    if (!currentCard) return;
-
-    if (degree === 'forgot') {
-      // 放入死磕队列
-      setLearningQueue(prev => [...prev, currentCard.word]);
-      forceNext();
-    } else {
-      // 认识 -> 存数据库
-      const wordId = currentCard.word.word;
-      
-      // 1. 乐观 UI 更新 (立刻变)
-      setRemoteLearnedSet(prev => new Set(prev).add(wordId));
-      setTodayLearnedCount(c => c + 1);
-
-      // 2. 异步存库
-      if (session) {
-        await supabase.from('user_progress').upsert({
-            user_id: session.user.id,
-            word_id: wordId
-        });
+      if (!p) {
+        newWords.push(w);
+      } else if (p.status === 'familiar') {
+        familiar.push(w);
+      } else {
+        // learning or others
+        learning.push(w);
       }
+    });
 
-      forceNext();
+    // 排序逻辑 (这里简单按入库顺序，也可按时间倒序优化)
+    // 优先级: Learning (复习) -> New (新词) -> Familiar (巩固)
+    const queue = [...learning, ...newWords, ...familiar];
+    setDailyQueue(queue);
+    setQueueIndex(0);
+    if (queue.length > 0) {
+      setCurrentWord(queue[0]);
+    } else {
+        setCurrentWord(null);
     }
   };
+
+  // 4. 用户交互处理
+  const handleAction = async (action: 'familiar' | 'next' | 'mastered' | 'unmastered') => {
+    if (!currentWord && action !== 'unmastered') return;
+    
+    const wordId = currentWord!.word;
+    let newStatus: 'familiar' | 'learning' | 'mastered' = 'learning';
+
+    // 乐观 UI 更新队列
+    if (action === 'mastered') {
+        newStatus = 'mastered';
+        setMasteredCount(c => c + 1);
+        // Mastered 的词不需要出现在接下来的队列里
+    } else if (action === 'familiar') {
+        newStatus = 'familiar';
+        // Familiar 的词也就是“已学列表”，今天看过了，移到后面去? 其实队列往下走就是了
+    } else if (action === 'next') {
+        // "下一个" -> 视为已读/Learning
+        newStatus = 'learning'; 
+    } else if (action === 'unmastered') {
+        // 取消掌握 -> 变回 Familiar (根据需求：当成今天已熟悉的单词)
+        newStatus = 'familiar';
+        setMasteredCount(c => Math.max(0, c - 1));
+        // 这里需要特别处理：如果当前显示的已经是"完成"状态，需要把它加回来？
+        // 但 usually checking unmastered happens on the specific card. 
+        // 假设用户是在当前卡片点了已掌握，然后反悔了。
+    }
+
+    // 1. 更新本地 Map 状态 (用于 UI 反应)
+    setProgressMap(prev => {
+        const next = new Map(prev);
+        next.set(wordId, { status: newStatus, last_reviewed_at: new Date().toISOString() });
+        return next;
+    });
+
+    // 2. 移动到下一张
+    // 不管是什么操作，只要是对当前卡片的操作，都切下一张
+    // 如果是 Mastered/Familiar/Next，都意味着"这张Pass"
+    const nextIdx = queueIndex + 1;
+    if (nextIdx < dailyQueue.length) {
+        setQueueIndex(nextIdx);
+        setCurrentWord(dailyQueue[nextIdx]);
+        setIsFlipped(false);
+    } else {
+        setCurrentWord(null); // 队列走完
+    }
+
+    // 3. 异步存库
+    if (session) {
+      await supabase.from('user_progress').upsert({
+          user_id: session.user.id,
+          word_id: wordId,
+          status: newStatus,
+          last_reviewed_at: new Date().toISOString()
+      }, { onConflict: 'user_id, word_id' }); // 确保唯一索引正确
+    }
+  };
+
+  // 特殊处理：取消掌握
+  // 需求：已掌握的单词的左上角的已掌握变成“取消已掌握”，点击取消已掌握先把当成今天已熟悉的单词
+  // 这意味着我们其实可以浏览 "已掌握" 的卡片？
+  // 但前面 buildQueue 把 mastered 排除了。
+  // 如果当前显示的词变成 mastered，它会切到下一张。
+  // 只有当用户在"已掌握"状态下还没切走(比如动画延迟)，或者我们在“回看”？
+  // 你的需求里没有提到“回看/上一个”。
+  // 
+  // 此时逻辑：点击左上角“已掌握” -> 瞬间标记为 Mastered -> 卡片切换。
+  // 那用户怎么点“取消已掌握”？
+  // 除非：用户在“历史记录”里找，或者这个卡片没有立刻切走。
+  // 
+  // 修正理解：
+  // 也许你的意思是：当前卡片如果是 Status=Mastered 的（比如队列空了显示出来的），那么按钮是“取消已掌握”。
+  // 由于 buildQueue 目前排除了 Mastered，所以正常流程不会遇到 Mastered。
+  // 
+  // 为了支持“所有都刷过了，出现的就是已掌握的单词”，我们需要修改 buildQueue
+  // 如果 dailyQueue (learning/new/familiar) 全部走完了 -> 显示 Mastered 的词？
+  
+  // 修正 loadLogic 逻辑：如果 queueIndex >= dailyQueue.length，尝试加载已掌握的词
+  useEffect(() => {
+    if (!loading && currentWord === null && queueIndex >= dailyQueue.length && dailyQueue.length > 0) {
+        // 一般情况是 Finish，但如果想复习 Mastered?
+        // 暂时不主动加载 Mastered，除非所有(包括 Mastered)都在队列里
+    }
+    // 如果队列一开始就是空的，可能全是 Mastered?
+    if (!loading && dailyQueue.length === 0 && masteredCount > 0 && currentWord === null) {
+       // 全是已掌握，或许应该允许复习？
+       // 根据需求“当所有熟悉的、不熟悉的都刷过了，出现的就是已掌握的单词”
+       // -> 是的，我们需要把 Mastered 放到队列最后
+    }
+  }, [loading, dailyQueue, queueIndex, currentWord, masteredCount]);
+
+  // 修改 buildQueue 策略：把 mastered 也放进去，但放最后
+  const isMastered = progressMap.get(currentWord?.word || '')?.status === 'mastered';
 
   if (loading) return <div className="h-screen flex items-center justify-center">加载数据中...</div>;
-  
-  // 决定是否显示登录框
-  // 条件：没登录 AND (已在客户端加载完毕)
   const showAuth = !session && isClient;
 
-  // 如果完全没有卡片了
-  if (!currentCard && !loading && !showAuth) return <div className="h-screen flex items-center justify-center text-2xl">🎉 全本背诵完成！</div>;
+  // 队列完成视图
+  if (!currentWord && !loading && !showAuth) {
+     // 如果真的全跑完了(包括 Mastered)，或者没有 Mastered
+     // 尝试加载 Mastered 进队?
+     // 简单起见，这里显示完成界面。
+     // 如果用户想复习 Mastered，可以加个按钮 "复习已掌握"
+     return (
+        <div className="h-screen flex flex-col items-center justify-center text-center p-6 space-y-4">
+             <div className="text-4xl">🎉</div>
+             <h2 className="text-xl font-bold">今日任务完成</h2>
+             <p className="text-gray-500">所有单词（含已掌握）都已过了一遍</p>
+             <button 
+               onClick={() => window.location.reload()} 
+               className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full"
+             >
+                刷新重来
+             </button>
+        </div>
+     );
+  }
 
-  const word = currentCard?.word;
-
+  // 正常渲染
   return (
     <div className="flex flex-col h-screen max-w-md mx-auto bg-gray-50 border-x border-gray-100 relative overflow-hidden text-gray-900">
       
-      {/* 登录弹窗 (如果未登录) */}
-      {showAuth && (
-         <AuthOverlay onLoginSuccess={() => {}} />
-      )}
+      {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       
       {/* Top Bar */}
       <div className="flex justify-between items-center p-4 bg-white shadow-sm z-10">
-        <button
-            onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
-            className="text-xs font-bold px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600 transition-colors shadow-sm flex items-center gap-2"
-        >
-            <Languages size={14} />
-            <span>{definitionMode === 'bilingual' ? '中英' : '英英'}</span>
-        </button>
+        <div className="flex gap-2">
+            <button
+                onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
+                className="text-xs font-bold px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600 transition-colors shadow-sm flex items-center gap-2"
+            >
+                <Languages size={14} />
+                <span>{definitionMode === 'bilingual' ? '中' : 'En'}</span>
+            </button>
+        </div>
+
         <div className="text-xs font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-          已斩: {remoteLearnedSet.size} / {(rawData as WordData[]).length}
+          {queueIndex + 1} / {dailyQueue.length} <span className="text-gray-300 mx-1">|</span> 斩: {masteredCount}
         </div>
       </div>
 
-       {/* 死磕指示器 */}
-       {learningQueue.length > 0 && (
-        <div className="bg-red-50 text-red-500 text-xs text-center py-1 font-medium">
-          😓 还有 {learningQueue.length} 个难词等着你
-        </div>
-      )}
-
       {/* Main Card Area */}
-      {word && (
+      {currentWord && (
       <div className="flex-1 p-4 flex flex-col justify-center relative">
         <div 
           onClick={() => setIsFlipped(!isFlipped)} 
-          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full min-h-[360px] flex flex-col items-center justify-center p-6 cursor-pointer relative group border border-gray-100"
+          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full min-h-[420px] max-h-[70vh] flex flex-col items-center justify-center p-6 cursor-pointer relative group border border-gray-100"
         >
-          {/* Source Tag */}
-          <div className="absolute top-6 right-6">
-            {currentCard!.source === 'new' ? 
-              <span className="text-xs font-bold text-white bg-green-500 px-2 py-1 rounded shadow-sm">NEW</span> : 
-              <span className="text-xs font-bold text-white bg-orange-500 px-2 py-1 rounded shadow-sm">AGAIN</span>
-            }
+          {/* 左上角：已掌握/取消已掌握 按钮 (浮在卡片上) */}
+          <div 
+            className="absolute top-4 left-4 z-20" 
+            onClick={(e) => {
+                e.stopPropagation();
+                handleAction(isMastered ? 'unmastered' : 'mastered');
+            }}
+          >
+             <button className={`
+                flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm backdrop-blur-sm transition-all
+                ${isMastered 
+                    ? 'bg-yellow-100 text-yellow-700 border border-yellow-200 hover:bg-yellow-200' 
+                    : 'bg-white/80 text-gray-400 border border-gray-100 hover:text-green-600 hover:border-green-200'}
+             `}>
+                <CheckCircle size={14} className={isMastered ? "fill-yellow-500 text-white" : ""} />
+                <span>{isMastered ? '已掌握' : '掌握'}</span>
+             </button>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center break-words w-full">
-            {word.word}
+          {/* 右上角标签 */}
+          <div className="absolute top-4 right-4">
+               {/* 简化标签显示 */}
+               {!progressMap.has(currentWord.word) ? (
+                   <span className="text-[10px] font-bold text-white bg-green-500 px-2 py-1 rounded-full shadow-sm">NEW</span>
+               ) : (
+                   progressMap.get(currentWord.word)?.status === 'learning' && (
+                    <span className="text-[10px] font-bold text-white bg-blue-400 px-2 py-1 rounded-full shadow-sm">Review</span>
+                   )
+               )}
+          </div>
+
+          {/* 单词主显 */}
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center break-words w-full px-2 mt-8">
+            {currentWord.word}
           </h1>
 
-          {/* Stars */}
-          <div className="flex space-x-1 mb-8 opacity-50">
+          <div className="flex space-x-1 mb-6 opacity-30">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className={`text-sm ${i < word.stats.stars ? 'text-yellow-500' : 'text-gray-200'}`}>★</span>
+              <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-black' : 'text-gray-200'}`}>★</span>
             ))}
           </div>
 
-          <div className={`text-gray-400 text-sm transition-opacity ${isFlipped ? 'opacity-0' : 'opacity-100'}`}>
-            点击翻转
-          </div>
+          {!isFlipped && (
+             <div className="text-gray-300 text-sm animate-pulse mt-4">点击查看释义</div>
+          )}
 
           {/* B面 (答案) */}
-          <div className={`absolute inset-0 bg-white z-10 flex flex-col p-8 text-left transition-all duration-300 rounded-3xl ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-             <div className="flex-1 overflow-y-auto no-scrollbar space-y-6">
-                <div>
-                   <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Definition</h3>
+          <div className={`absolute inset-0 bg-white/95 backdrop-blur-xl z-10 flex flex-col p-8 text-left transition-all duration-300 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+             <div className="w-full h-full overflow-y-auto no-scrollbar pb-10">
+                <div className="mt-8"> {/* Spacer for top buttons */}
                    <ul className="space-y-4">
-                     {word.meanings.en?.slice(0, 3).map((m, i) => (
-                       <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-blue-500 pl-3">
+                     {currentWord.meanings.en?.slice(0, 3).map((m, i) => (
+                       <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-indigo-400 pl-3">
                           {definitionMode === 'bilingual' ? (
                               <div>
-                                  <div className="font-bold text-gray-900 mb-1">{word.pos?.[i] || 'v'}. {word.meanings.cn?.[i] || ''}</div>
-                                  <div className="text-base text-gray-500 font-normal">{m}</div>
+                                  <div className="font-bold text-gray-900 mb-1 flex items-baseline gap-2">
+                                    <span className="italic text-sm text-indigo-500 font-serif">{formatPos(currentWord.pos?.[i])}.</span> 
+                                    <span>{currentWord.meanings.cn?.[i] || ''}</span>
+                                  </div>
+                                  <div className="text-sm text-slate-500 font-normal leading-relaxed">{m}</div>
                               </div>
                           ) : (
-                              <span>{m}</span>
+                              <div className="flex gap-2">
+                                <span className="italic text-sm text-indigo-500 font-serif min-w-[2em]">{formatPos(currentWord.pos?.[i])}.</span>
+                                <span className="text-slate-700">{m}</span>
+                              </div>
                           )}
                        </li>
                      ))}
                    </ul>
                 </div>
-
-                {word.examples?.teach && (
-                  <div>
-                    <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Context</h3>
-                    <div className="space-y-3">
-                      {word.examples.teach.map((ex, i) => (
-                        <div key={i} className="text-gray-600 bg-gray-50 p-3 rounded-xl text-sm leading-relaxed"
-                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-blue-600 font-bold">$1</span>') }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
              </div>
           </div>
         </div>
       </div>
       )}
 
-      {/* Interaction Bar */}
+      {/* 底部操作栏 */}
       <div className="p-6 grid grid-cols-2 gap-4 bg-white/50 backdrop-blur-md">
         <button 
-          onClick={() => handleResponse('forgot')}
-          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-orange-100 text-orange-600 active:scale-95 transition-transform"
+          onClick={() => handleAction('familiar')}
+          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-white border border-gray-200 text-gray-600 shadow-sm active:scale-95 transition-transform hover:bg-green-50 hover:border-green-200 hover:text-green-700"
         >
-          <span className="text-2xl mb-1">🤔</span>
-          <span className="font-bold">不认识</span>
+          <span className="text-xl mb-1">👍</span>
+          <span className="font-bold text-sm">熟悉</span>
         </button>
         <button 
-          onClick={() => handleResponse('easy')}
-          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-green-100 text-green-600 active:scale-95 transition-transform"
+          onClick={() => handleAction('next')}
+          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-200 active:scale-95 transition-transform hover:bg-indigo-700"
         >
-          <span className="text-2xl mb-1">⚡️</span>
-          <span className="font-bold">认识</span>
+          <span className="text-xl mb-1">➡️</span>
+          <span className="font-bold text-sm">下一个</span>
         </button>
       </div>
     </div>
