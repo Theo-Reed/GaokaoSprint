@@ -163,14 +163,14 @@ export default function TrainerPage() {
     // 优先级优化：
     // 1. reviewLearning: 昨天/以前没学会的 (优先复习，恢复进度)
     // 2. reviewFamiliar: 昨天/以前熟悉的 (复习巩固，恢复进度)
-    // 3. todayLearning: 今天正在学的 (刚才点了Next的，排在未看过的后面，避免一刷新就重来)
-    // 4. newWords: 新词 (最后学)
+    // 3. newWords: 新词 
+    // 4. todayLearning: 今天正在学的 (刚才点了Next的，排在未看过的后面，避免一刷新就重来)
     // 5. todayFamiliar: 今天已熟悉的 (垫底)
     const queue = [
         ...reviewLearning, 
         ...reviewFamiliar, 
-        ...todayLearning, 
         ...newWords, 
+        ...todayLearning, 
         ...todayFamiliar
     ];
 
