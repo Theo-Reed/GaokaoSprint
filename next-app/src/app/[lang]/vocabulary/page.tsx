@@ -93,7 +93,8 @@ export default function TrainerPage() {
     setLoading(true);
     const { data } = await supabase
       .from('user_progress')
-      .select('word_id, status, last_reviewed_at');
+      .select('word_id, status, last_reviewed_at')
+      .eq('user_id', userId);
     
     const map = new Map<string, UserProgress>();
 
