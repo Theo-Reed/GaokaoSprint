@@ -89,6 +89,56 @@ export default function TrainerPage() {
     return () => subscription.unsubscribe();
   }, []);
 
+  // 1.5 实时同步：监听数据库变化
+  useEffect(() => {
+    if (!session?.user?.id) return;
+
+    const channel = supabase
+      .channel('realtime_vocabulary_progress')
+      .on(
+        'postgres_changes',
+        {
+          event: '*', // 监听所有变更 (INSERT, UPDATE, DELETE)
+          schema: 'public',
+          table: 'user_progress',
+          filter: `user_id=eq.${session.user.id}`,
+        },
+        (payload) => {
+          // 只有当变更不是来自当前窗口的本地更新时，才可能需要处理（虽然 upsert 也会触发，但 Map.set 是幂等的）
+          const newData = payload.new as any;
+          if (newData && newData.word_id) {
+            setProgressMap(prev => {
+              const currentInMap = prev.get(newData.word_id);
+              // 如果状态没变，就不更新，减少重渲染
+              if (currentInMap?.status === newData.status && currentInMap?.last_reviewed_at === newData.last_reviewed_at) {
+                return prev;
+              }
+              
+              const next = new Map(prev);
+              next.set(newData.word_id, {
+                status: newData.status,
+                last_reviewed_at: newData.last_reviewed_at
+              });
+
+              // 同步更新 masteredCount
+              if (newData.status === 'mastered' && currentInMap?.status !== 'mastered') {
+                setMasteredCount(c => c + 1);
+              } else if (newData.status !== 'mastered' && currentInMap?.status === 'mastered') {
+                setMasteredCount(c => Math.max(0, c - 1));
+              }
+
+              return next;
+            });
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [session?.user?.id]);
+
   // 2. 从数据库拉取进度
   const fetchProgress = async (userId: string) => {
     setLoading(true);
@@ -128,52 +178,45 @@ export default function TrainerPage() {
   // 3. 构建每日学习队列
   const buildQueue = (map: Map<string, UserProgress>) => {
     const allWords = rawData as WordData[];
-    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+    const now = new Date();
     
     // 优先级分组
-    const todayLearning: WordData[] = []; // A. 今天正在学的 (Next过) -> 最优先 (恢复现场)
-    const reviewLearning: WordData[] = [];// B. 往日遗留的 Learning -> 优先复习
-    const reviewFamiliar: WordData[] = [];// C. 往日熟悉的 -> 复习巩固
-    const newWords: WordData[] = [];      // D. 新词 -> 正常学习
-    const todayFamiliar: WordData[] = []; // E. 今天已熟悉的 -> 垫底 (防止空跑)
+    const learningOld: WordData[] = [];   // 1. 12h 之前看过的 (Learning)
+    const familiarOld: WordData[] = [];   // 2. 24h 之前熟悉的 (Familiar)
+    const newWords: WordData[] = [];      // 3. 新词 (New)
+    const learningRecent: WordData[] = [];// 4. 12h 之内看过的 (Learning)
+    const familiarRecent: WordData[] = [];// 5. 24h 之内熟悉的 (Familiar)
+    const masteredWords: WordData[] = []; // 6. 已掌握 (Mastered)
 
     allWords.forEach(w => {
       const p = map.get(w.word);
-      if (p?.status === 'mastered') return; // 已掌握的不放入
 
       if (!p) {
         newWords.push(w);
       } else {
-        // Handle timezone/date loosely. Assuming stored is ISO UTC.
-        // Convert stored time to local YYYY-MM-DD for comparison? 
-        // Or simpler: just check string prefix if we trust environment? 
-        // Let's use Date object to be safe.
-        const reviewDate = new Date(p.last_reviewed_at).toISOString().split('T')[0];
-        const isToday = reviewDate === today;
+        const lastTime = new Date(p.last_reviewed_at);
+        const hoursSince = (now.getTime() - lastTime.getTime()) / (1000 * 60 * 60);
 
-        if (isToday) {
-            if (p.status === 'learning') todayLearning.push(w);
-            else todayFamiliar.push(w);
-        } else {
-            if (p.status === 'learning') reviewLearning.push(w);
-            else reviewFamiliar.push(w);
+        if (p.status === 'mastered') {
+            masteredWords.push(w);
+        } else if (p.status === 'learning') {
+            if (hoursSince >= 12) learningOld.push(w);
+            else learningRecent.push(w);
+        } else if (p.status === 'familiar') {
+            if (hoursSince >= 24) familiarOld.push(w);
+            else familiarRecent.push(w);
         }
       }
     });
 
-    // 排序逻辑 (根据用户最新需求 - 修正版)
-    // 优先级优化：
-    // 1. reviewLearning: 昨天/以前没学会的 (优先复习，恢复进度)
-    // 2. reviewFamiliar: 昨天/以前熟悉的 (复习巩固，恢复进度)
-    // 3. newWords: 新词 
-    // 4. todayLearning: 今天正在学的 (刚才点了Next的，排在未看过的后面，避免一刷新就重来)
-    // 5. todayFamiliar: 今天已熟悉的 (垫底)
+    // 组合队列
     const queue = [
-        ...reviewLearning, 
-        ...reviewFamiliar, 
+        ...learningOld, 
+        ...familiarOld, 
         ...newWords, 
-        ...todayLearning, 
-        ...todayFamiliar
+        ...learningRecent, 
+        ...familiarRecent,
+        ...masteredWords
     ];
 
     setDailyQueue(queue);
