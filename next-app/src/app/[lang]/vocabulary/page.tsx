@@ -331,13 +331,14 @@ export default function TrainerPage() {
       {currentWord && (
       <div className="flex-1 min-h-0 p-4 flex flex-col relative overflow-hidden">
         <div 
+          key={currentWord.word}
           onClick={() => {
             const selection = window.getSelection();
             if (selection && selection.toString().length > 0) return;
             setIsFlipped(!isFlipped);
           }} 
           className={`bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 overflow-hidden
-            ${isExiting ? 'opacity-0 scale-95 -translate-y-4' : 'opacity-100 scale-100 translate-y-0'}`}
+            ${isExiting ? 'opacity-0 scale-95 -translate-y-8 pointer-events-none' : 'opacity-100 scale-100 translate-y-0 animate-in fade-in slide-in-from-bottom-2'}`}
         >
           {/* 左上角：撤回 (可选，之前为已掌握，现在留空或做成撤回) */}
           {/* <div className="absolute top-4 left-4 z-20"></div> */}

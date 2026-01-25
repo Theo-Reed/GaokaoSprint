@@ -76,12 +76,12 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       `}>
         <div className="p-6">
           <Link href={`/${lang}`} onClick={() => setIsOpen(false)}>
-            <h1 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">
+            <h1 className="text-2xl font-black text-slate-900 mb-4.5 tracking-tight">
               高考 <span className="text-indigo-600">Gaokao</span>
             </h1>
           </Link>
           
-          <div className="flex gap-3 text-xs mb-6">
+          <div className="flex gap-3 text-xs mb-4.5">
             <Link href="/cn" className={`px-4 py-2 rounded-full font-bold transition-all ${lang === 'cn' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100' : 'text-slate-500 hover:bg-slate-200'}`}>
               中文
             </Link>
