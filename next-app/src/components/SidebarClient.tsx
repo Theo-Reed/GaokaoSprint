@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface NavItem {
   title: string;
@@ -22,6 +23,14 @@ interface SidebarClientProps {
 export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
+
+  const toggleSection = (title: string) => {
+    setCollapsedSections(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -59,24 +68,24 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
       {/* Sidebar Container */}
       <div className={`
-        fixed top-0 left-0 h-screen w-64 bg-gray-50 border-r border-gray-200 
+        fixed top-0 left-0 h-screen w-64 bg-slate-50 border-r border-slate-200 
         transform transition-transform duration-300 ease-in-out z-40
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0 md:block
-        overflow-y-auto
+        overflow-y-auto no-scrollbar
       `}>
         <div className="p-6">
           <Link href={`/${lang}`} onClick={() => setIsOpen(false)}>
-            <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-2">
-              Gaokao Cockpit
+            <h1 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">
+              高考 <span className="text-indigo-600">Gaokao</span>
             </h1>
           </Link>
           
-          <div className="flex gap-2 text-sm mb-6">
-            <Link href="/cn" className={`px-2 py-1 rounded ${lang === 'cn' ? 'bg-blue-100 text-blue-700' : 'text-gray-500 hover:bg-gray-100'}`}>
+          <div className="flex gap-3 text-xs mb-6">
+            <Link href="/cn" className={`px-4 py-2 rounded-full font-bold transition-all ${lang === 'cn' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100' : 'text-slate-500 hover:bg-slate-200'}`}>
               中文
             </Link>
-            <Link href="/en" className={`px-2 py-1 rounded ${lang === 'en' ? 'bg-blue-100 text-blue-700' : 'text-gray-500 hover:bg-gray-100'}`}>
+            <Link href="/en" className={`px-4 py-2 rounded-full font-bold transition-all ${lang === 'en' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100' : 'text-slate-500 hover:bg-slate-200'}`}>
               English
             </Link>
           </div>
@@ -89,17 +98,24 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
           <nav className="space-y-6">
             {nav.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                  {section.title}
-                </h3>
-                <ul className="space-y-1">
+              <div key={section.title} className="space-y-2">
+                <button 
+                  onClick={() => toggleSection(section.title)}
+                  className="w-full flex items-center justify-between text-sm font-black text-slate-500 uppercase tracking-widest hover:text-indigo-600 transition-colors group"
+                >
+                  <span>{section.title}</span>
+                  <span className={`transform transition-transform duration-200 ${collapsedSections[section.title] ? '-rotate-90' : 'rotate-0'}`}>
+                    <ChevronDown size={16} className="opacity-70 group-hover:opacity-100" />
+                  </span>
+                </button>
+                
+                <ul className={`space-y-1 overflow-hidden transition-all duration-300 ease-in-out ${collapsedSections[section.title] ? 'max-h-0 opacity-0' : 'max-h-[500px] opacity-100'}`}>
                   {section.items.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-white hover:shadow-sm transition-all duration-200"
+                        className="block px-3 py-2 text-sm text-slate-600 rounded-xl hover:bg-white hover:text-indigo-600 hover:shadow-sm transition-all duration-200"
                       >
                         {item.title}
                       </Link>

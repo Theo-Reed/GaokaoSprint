@@ -57,6 +57,7 @@ export default function TrainerPage() {
   // 核心状态
   const [currentWord, setCurrentWord] = useState<WordData | null>(null);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
   
   // 进度状态
   const [progressMap, setProgressMap] = useState<Map<string, UserProgress>>(new Map());
@@ -187,58 +188,59 @@ export default function TrainerPage() {
   // 4. 用户交互处理
   const handleAction = async (action: 'familiar' | 'next' | 'mastered' | 'unmastered') => {
     if (!currentWord && action !== 'unmastered') return;
-    
+    if (isExiting) return; // 防止连续点击
+
     const wordId = currentWord!.word;
-    let newStatus: 'familiar' | 'learning' | 'mastered' = 'learning';
+    
+    // 触发退出动画
+    setIsExiting(true);
 
-    // 乐观 UI 更新队列
-    if (action === 'mastered') {
-        newStatus = 'mastered';
-        setMasteredCount(c => c + 1);
-        // Mastered 的词不需要出现在接下来的队列里
-    } else if (action === 'familiar') {
-        newStatus = 'familiar';
-        // Familiar 的词也就是“已学列表”，今天看过了，移到后面去? 其实队列往下走就是了
-    } else if (action === 'next') {
-        // "下一个" -> 视为已读/Learning
-        newStatus = 'learning'; 
-    } else if (action === 'unmastered') {
-        // 取消掌握 -> 变回 Familiar (根据需求：当成今天已熟悉的单词)
-        newStatus = 'familiar';
-        setMasteredCount(c => Math.max(0, c - 1));
-        // 这里需要特别处理：如果当前显示的已经是"完成"状态，需要把它加回来？
-        // 但 usually checking unmastered happens on the specific card. 
-        // 假设用户是在当前卡片点了已掌握，然后反悔了。
-    }
+    // 等待动画时间 (0.3s) 结束后再更新状态，防止 UI 闪烁或按钮变色
+    setTimeout(async () => {
+      let newStatus: 'familiar' | 'learning' | 'mastered' = 'learning';
 
-    // 1. 更新本地 Map 状态 (用于 UI 反应)
-    setProgressMap(prev => {
-        const next = new Map(prev);
-        next.set(wordId, { status: newStatus, last_reviewed_at: new Date().toISOString() });
-        return next;
-    });
+      if (action === 'mastered') {
+          newStatus = 'mastered';
+          setMasteredCount(c => c + 1);
+      } else if (action === 'familiar') {
+          newStatus = 'familiar';
+      } else if (action === 'next') {
+          newStatus = 'learning'; 
+      } else if (action === 'unmastered') {
+          newStatus = 'familiar';
+          setMasteredCount(c => Math.max(0, c - 1));
+      }
 
-    // 2. 移动到下一张
-    // 不管是什么操作，只要是对当前卡片的操作，都切下一张
-    // 如果是 Mastered/Familiar/Next，都意味着"这张Pass"
-    const nextIdx = queueIndex + 1;
-    if (nextIdx < dailyQueue.length) {
-        setQueueIndex(nextIdx);
-        setCurrentWord(dailyQueue[nextIdx]);
-        setIsFlipped(false);
-    } else {
-        setCurrentWord(null); // 队列走完
-    }
+      // 1. 更新本地 Map 状态
+      setProgressMap(prev => {
+          const next = new Map(prev);
+          next.set(wordId, { status: newStatus, last_reviewed_at: new Date().toISOString() });
+          return next;
+      });
 
-    // 3. 异步存库
-    if (session) {
-      await supabase.from('user_progress').upsert({
-          user_id: session.user.id,
-          word_id: wordId,
-          status: newStatus,
-          last_reviewed_at: new Date().toISOString()
-      }, { onConflict: 'user_id, word_id' }); // 确保唯一索引正确
-    }
+      // 2. 移动到下一张
+      const nextIdx = queueIndex + 1;
+      if (nextIdx < dailyQueue.length) {
+          setQueueIndex(nextIdx);
+          setCurrentWord(dailyQueue[nextIdx]);
+          setIsFlipped(false);
+      } else {
+          setCurrentWord(null); 
+      }
+      
+      // 3. 结束退出状态
+      setIsExiting(false);
+
+      // 4. 异步存库
+      if (session) {
+        supabase.from('user_progress').upsert({
+            user_id: session.user.id,
+            word_id: wordId,
+            status: newStatus,
+            last_reviewed_at: new Date().toISOString()
+        }, { onConflict: 'user_id, word_id' }).then();
+      }
+    }, 300);
   };
 
   // 特殊处理：取消掌握
@@ -303,25 +305,25 @@ export default function TrainerPage() {
 
   // 正常渲染
   return (
-    <div className="fixed top-0 left-0 md:left-64 w-full md:w-auto right-0 h-[100dvh] flex flex-col overflow-hidden bg-gray-50 text-gray-900 overscroll-none z-0">
-      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-gray-100 relative">
+    <div className="fixed inset-0 md:left-64 flex flex-col overflow-hidden bg-slate-50 text-slate-900 overscroll-none z-0">
+      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-slate-200 relative bg-white md:shadow-2xl">
       
       {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       
       {/* Top Bar */}
-      <div className="flex justify-between items-center p-4 bg-white shadow-sm z-10">
+      <div className="flex justify-between items-center p-4 border-b border-slate-100 z-10">
         <div className="flex gap-2">
             <button
                 onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
-                className="text-xs font-bold px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-300 hover:text-indigo-600 transition-colors shadow-sm flex items-center gap-2"
+                className="text-[10px] uppercase tracking-widest font-black px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-500 hover:border-indigo-400 hover:text-indigo-600 transition-all shadow-sm flex items-center gap-2 active:scale-95"
             >
                 <Languages size={14} />
-                <span>{definitionMode === 'bilingual' ? '中' : 'En'}</span>
+                <span>{definitionMode === 'bilingual' ? 'Bilingual' : 'English Only'}</span>
             </button>
         </div>
 
-        <div className="text-xs font-mono text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-          已掌握：{masteredCount} / {(rawData as WordData[]).length}
+        <div className="text-[10px] font-black tracking-tighter text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg border border-indigo-100 uppercase">
+          Mastery: {masteredCount}
         </div>
       </div>
 
@@ -329,33 +331,22 @@ export default function TrainerPage() {
       {currentWord && (
       <div className="flex-1 min-h-0 p-4 flex flex-col relative overflow-hidden">
         <div 
-          onClick={() => setIsFlipped(!isFlipped)} 
-          className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 overflow-hidden"
+          onClick={() => {
+            const selection = window.getSelection();
+            if (selection && selection.toString().length > 0) return;
+            setIsFlipped(!isFlipped);
+          }} 
+          className={`bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 overflow-hidden
+            ${isExiting ? 'opacity-0 scale-95 -translate-y-4' : 'opacity-100 scale-100 translate-y-0'}`}
         >
-          {/* 左上角：已掌握/取消已掌握 按钮 (浮在卡片上) */}
-          <div 
-            className="absolute top-4 left-4 z-20" 
-            onClick={(e) => {
-                e.stopPropagation();
-                handleAction(isMastered ? 'unmastered' : 'mastered');
-            }}
-          >
-             <button className={`
-                flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm backdrop-blur-sm transition-all
-                ${isMastered 
-                    ? 'bg-yellow-100 text-yellow-700 border border-yellow-200 hover:bg-yellow-200' 
-                    : 'bg-white/80 text-gray-400 border border-gray-100 hover:text-green-600 hover:border-green-200'}
-             `}>
-                <CheckCircle size={14} className={isMastered ? "fill-yellow-500 text-white" : ""} />
-                <span>{isMastered ? '已掌握' : '掌握'}</span>
-             </button>
-          </div>
+          {/* 左上角：撤回 (可选，之前为已掌握，现在留空或做成撤回) */}
+          {/* <div className="absolute top-4 left-4 z-20"></div> */}
 
           {/* 右上角标签 */}
           <div className="absolute top-4 right-4">
                {/* 简化标签显示 */}
                {!progressMap.has(currentWord.word) ? (
-                   <span className="text-[10px] font-bold text-white bg-green-500 px-2 py-1 rounded-full shadow-sm">NEW</span>
+                   <span className="text-[10px] font-bold text-white bg-indigo-400 px-2 py-1 rounded-full shadow-sm">NEW</span>
                ) : (
                    progressMap.get(currentWord.word)?.status === 'learning' && (
                     <span className="text-[10px] font-bold text-white bg-blue-400 px-2 py-1 rounded-full shadow-sm">Review</span>
@@ -369,36 +360,34 @@ export default function TrainerPage() {
               {currentWord.word}
             </h1>
 
-            <div className="flex space-x-1 mb-6 opacity-30">
+            <div className="flex space-x-1 mb-6 opacity-20">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-black' : 'text-gray-200'}`}>★</span>
+                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-indigo-600' : 'text-slate-200'}`}>★</span>
               ))}
             </div>
 
-            {!isFlipped && (
-              <div className="text-gray-300 text-sm animate-pulse mt-4">点击查看释义</div>
-            )}
+            <div className="text-slate-300 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse mt-4">Tap to reveal</div>
           </div>
 
           {/* B面 (答案) */}
-          <div className={`absolute inset-0 bg-white/95 backdrop-blur-xl z-10 flex flex-col text-left transition-all duration-300 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-             <div className="h-full overflow-y-auto no-scrollbar pt-12 pb-10 px-8">
-                <div className="mt-8"> {/* Spacer for top buttons */}
+          <div className={`absolute inset-0 bg-white/98 backdrop-blur-2xl z-10 flex flex-col text-left transition-all duration-500 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
+             <div className="h-full overflow-y-auto no-scrollbar pt-5 pb-10 px-8">
+                <div className="mt-4"> {/* Compacted spacer */}
                    <ul className="space-y-4">
                      {currentWord.meanings.en?.map((m, i) => (
-                       <li key={i} className="text-lg leading-snug text-gray-700 border-l-2 border-indigo-400 pl-3">
+                       <li key={i} className="text-lg leading-snug text-slate-700 border-l-2 border-indigo-500 pl-3">
                           {definitionMode === 'bilingual' ? (
                               <div>
-                                  <div className="font-bold text-gray-900 mb-1 flex items-baseline gap-2">
-                                    <span className="italic text-sm text-indigo-500 font-serif">{formatPos(currentWord.pos?.[i])}.</span> 
-                                    <span>{currentWord.meanings.cn?.[i] || ''}</span>
+                                  <div className="font-black text-slate-900 mb-1 flex items-baseline gap-2">
+                                    <span className="italic text-xs text-indigo-500 font-serif leading-none">{formatPos(currentWord.pos?.[i])}.</span> 
+                                    <span className="text-xl">{currentWord.meanings.cn?.[i] || ''}</span>
                                   </div>
-                                  <div className="text-sm text-slate-500 font-normal leading-relaxed">{m}</div>
+                                  <div className="text-sm text-slate-500 font-medium leading-relaxed">{m}</div>
                               </div>
                           ) : (
-                              <div className="flex gap-2">
-                                <span className="italic text-sm text-indigo-500 font-serif min-w-[2em]">{formatPos(currentWord.pos?.[i])}.</span>
-                                <span className="text-slate-700">{m}</span>
+                              <div className="flex gap-3">
+                                <span className="italic text-xs text-indigo-500 font-serif min-w-[2.5em] mt-1">{formatPos(currentWord.pos?.[i])}.</span>
+                                <span className="text-slate-700 font-medium">{m}</span>
                               </div>
                           )}
                        </li>
@@ -408,11 +397,11 @@ export default function TrainerPage() {
 
                 {currentWord.examples?.teach && (
                   <div className="mt-6">
-                    <h3 className="text-xs font-black text-gray-300 uppercase tracking-wider mb-2">Context</h3>
+                    <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 pb-1">Usage Context</h3>
                     <div className="space-y-3">
                       {currentWord.examples.teach.map((ex, i) => (
-                        <div key={i} className="text-gray-600 bg-gray-50 p-3 rounded-xl text-sm leading-relaxed"
-                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-blue-600 font-bold">$1</span>') }}
+                        <div key={i} className="text-slate-600 bg-slate-50/50 border border-slate-100/50 p-3 rounded-2xl text-sm leading-relaxed"
+                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 font-black decoration-indigo-200 decoration-2 underline-offset-4">$1</span>') }}
                         />
                       ))}
                     </div>
@@ -425,20 +414,29 @@ export default function TrainerPage() {
       )}
 
       {/* 底部操作栏 */}
-      <div className="p-6 grid grid-cols-2 gap-4 bg-white/50 backdrop-blur-md">
+      <div className="p-6 grid grid-cols-3 gap-4 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+        <button 
+          onClick={() => handleAction('mastered')}
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white border border-slate-200 text-slate-400 transition-all active:scale-95 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50/30"
+        >
+          <span className="text-xl mb-1">👑</span>
+          <span className="font-black text-[10px] uppercase tracking-wider">掌握</span>
+        </button>
+
         <button 
           onClick={() => handleAction('familiar')}
-          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-white border border-gray-200 text-gray-600 shadow-sm active:scale-95 transition-transform hover:bg-green-50 hover:border-green-200 hover:text-green-700"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white border border-slate-200 text-slate-400 transition-all active:scale-95 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50/30"
         >
           <span className="text-xl mb-1">👍</span>
-          <span className="font-bold text-sm">熟悉</span>
+          <span className="font-black text-[10px] uppercase tracking-wider">认识</span>
         </button>
+        
         <button 
           onClick={() => handleAction('next')}
-          className="flex flex-col items-center justify-center py-4 rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-200 active:scale-95 transition-transform hover:bg-indigo-700"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-indigo-600 text-white shadow-xl shadow-indigo-200 transition-all active:scale-95 hover:bg-indigo-700"
         >
           <span className="text-xl mb-1">➡️</span>
-          <span className="font-bold text-sm">下一个</span>
+          <span className="font-black text-[10px] uppercase tracking-wider">下一个</span>
         </button>
       </div>
      </div>
