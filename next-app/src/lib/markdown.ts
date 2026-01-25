@@ -88,6 +88,13 @@ export function getNavigation(lang: string) {
     // In a real app we might scan folders
     const nav = [
         {
+            title: lang === 'cn' ? '工具' : 'Tools',
+            items: [
+                { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` },
+                { title: lang === 'cn' ? '英语单词特训' : 'Vocabulary Trainer', href: `/${lang}/vocabulary` }
+            ]
+        },
+        {
             title: lang === 'cn' ? '生活与健康' : 'Life & Health',
             items: [
                 { title: lang === 'cn' ? '饮食计划' : 'Diet Plan', href: `/${lang}/diet_plan` },
@@ -104,13 +111,6 @@ export function getNavigation(lang: string) {
                 // Previous list_dir showed: cn/数学/strategy.md
                 // So URLs might need to match file system or we map them.
                 // It's easier if URLs match file system.
-            ]
-        },
-        {
-            title: lang === 'cn' ? '工具' : 'Tools',
-            items: [
-                { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` },
-                { title: lang === 'cn' ? '英语单词特训' : 'Vocabulary Trainer', href: `/${lang}/vocabulary` }
             ]
         }
     ];
