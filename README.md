@@ -6,6 +6,10 @@
 
 By combining cutting-edge LLMs with biological optimization (Bio-Hacking) and high-intensity cognitive training, we maximize every minute of preparation for the 14-hour study day.
 
+## Live Demo / 在线试用
+
+- [**Try it online (English)**](https://theo-reed.github.io/GaokaoSprint/en/vocabulary)
+
 ## Key Features
 - **AI-Powered**: Personalized drill generation and logic-based mistake analysis.
 - **Bio-Hacking**: Precise control over nutrition, air quality, and neural recovery.
