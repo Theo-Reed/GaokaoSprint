@@ -1,6 +1,6 @@
 # GaokaoSprint
 
-[**Try it online/在线网站**](https://theo-reed.github.io/GaokaoSprint/en/vocabulary)
+[**Try it online / 在线网址**](https://theo-reed.github.io/GaokaoSprint/en/vocabulary)
 
 **GaokaoSprint** is an AI-augmented acceleration framework designed to take a student from zero baseline to a target Gaokao score in just 4 months.
 
