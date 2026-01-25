@@ -4227,68 +4227,6 @@
     "_mcp_refined": true
   },
   {
-    "word": "next",
-    "stats": {
-      "freq": 142,
-      "years_count": 17,
-      "last_seen": 2025,
-      "stars": 5,
-      "pos_distribution": {
-        "ADJ": 109,
-        "ADV": 32
-      }
-    },
-    "tags": [
-      "multi-pos",
-      "syllabus",
-      "core",
-      "high-freq"
-    ],
-    "pos": [
-      "adj",
-      "adv"
-    ],
-    "meanings": {
-      "cn": [
-        "下一个的；紧接着的",
-        "其次；然后；紧接着地"
-      ],
-      "en": [
-        "immediately following; nearest in place",
-        "immediately afterward; in the nearest place"
-      ]
-    },
-    "examples": {
-      "teach": [
-        "The **next** bus will arrive in about ten minutes.",
-        "He finished his homework and **next**, he started reading a book."
-      ],
-      "exams": [
-        {
-          "year": 2025,
-          "text": "Therefore, he was left in the care of Mrs. Hill, an old lady who lived **next** door."
-        },
-        {
-          "year": 2025,
-          "text": "**Next** time you see a young person lost in thought, don’t rush to pull them back."
-        },
-        {
-          "year": 2025,
-          "text": "They might just be imagining the **next** great idea. 40."
-        },
-        {
-          "year": 2023,
-          "text": "No matter where I buy them, one steamer is ____64____ (rare) enough, yet two seems greedy, so I am always left ______65______ (want) more **next** time."
-        },
-        {
-          "year": 2023,
-          "text": "Informed by neuroaesthetics, the **next** time I create my art I will value the process even more, enjoying the activation of the aesthetic triad in my brain as I admire the vivid images that I have created."
-        }
-      ]
-    },
-    "_mcp_refined": true
-  },
-  {
     "word": "fit",
     "stats": {
       "freq": 141,
