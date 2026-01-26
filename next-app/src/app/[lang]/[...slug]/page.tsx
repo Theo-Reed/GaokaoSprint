@@ -1,5 +1,9 @@
 import { getMarkdownContent, getAllSlugs } from '@/lib/markdown';
 import { notFound } from 'next/navigation';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
 
 interface PageProps {
   params: Promise<{
@@ -29,7 +33,12 @@ export default async function MarkdownPage({ params }: PageProps) {
   return (
     <article className="prose prose-slate lg:prose-lg max-w-none">
       <div className="overflow-x-auto">
-        <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} />
+        <ReactMarkdown 
+          remarkPlugins={[remarkGfm, remarkMath]} 
+          rehypePlugins={[rehypeKatex]}
+        >
+          {data.content}
+        </ReactMarkdown>
       </div>
     </article>
   );

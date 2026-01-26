@@ -17,6 +17,7 @@ if (!fs.existsSync(contentDirectory)) {
 export interface MarkdownData {
   title: string;
   contentHtml: string;
+  content: string;
   [key: string]: any;
 }
 
@@ -64,6 +65,7 @@ export async function getMarkdownContent(lang: string, slugPath: string[]): Prom
   return {
     title: matterResult.data.title || slugPath[slugPath.length - 1],
     contentHtml,
+    content: matterResult.content,
     ...matterResult.data,
   };
 }
