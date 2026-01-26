@@ -1,5 +1,5 @@
 
-# Drowsiness & Acute Fatigue Interventions — Three-Tier Model
+# Fatigue Intervention
 
 This file defines a practical three-tier response to acute drowsiness during study: (1) seconds-level physiological hacks for immediate alerting, (2) minutes-level metabolic reshaping for stronger recovery, and (3) system-level prevention for recurring patterns.
 

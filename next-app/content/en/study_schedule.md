@@ -1,4 +1,4 @@
-# Gaokao High-Intensity Study Plan (4 Months / Target 550)
+# Study Schedule
 
 ## I. Strategy for Target 550
 To reach 550 (assuming a total of 750), we prioritize the subjects with the highest return on investment (ROI):

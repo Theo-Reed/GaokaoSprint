@@ -1,4 +1,4 @@
-# Study Environment
+# Environment
 
 1. Air quality — CO₂ monitoring (highest priority)
 

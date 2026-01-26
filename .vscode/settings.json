@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python3 -c \"\nimport os\n\nfiles = \\{\n    'diet_plan\\.md': 'Diet Plan',\n    'environment\\.md': 'Environment',\n    'fatigue_intervention\\.md': 'Fatigue Intervention',\n    'study_schedule\\.md': 'Study Schedule'\n\\}\n\nbase_path = 'next-app/content/en'\n\nfor filename, title in files\\.items\\(\\):\n    path = os\\.path\\.join\\(base_path, filename\\)\n    if os\\.path\\.exists\\(path\\):\n        with open\\(path, 'r', encoding='utf-8'\\) as f:\n            content = f\\.read\\(\\)\n        lines = content\\.split\\('\\\\n'\\)\n        new_lines = \\[\\]\n        found_h1 = False\n        for line in lines:\n            if not found_h1 and line\\.startswith\\('# '\\):\n                new_lines\\.append\\(f'# \\{title\\}'\\)\n                found_h1 = True\n            else:\n                new_lines\\.append\\(line\\)\n        with open\\(path, 'w', encoding='utf-8'\\) as f:\n            f\\.write\\('\\\\n'\\.join\\(new_lines\\)\\)\n\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

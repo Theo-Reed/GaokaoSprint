@@ -18,7 +18,6 @@ export default async function MarkdownPage({ params }: PageProps) {
 
   return (
     <article className="prose prose-slate lg:prose-lg mx-auto">
-      <h1>{data.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} />
     </article>
   );
