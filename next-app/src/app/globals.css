@@ -35,4 +35,29 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Improve GFM Table styles in prose */
+  .prose table {
+    width: 100% !important;
+    display: table;
+    table-layout: auto;
+  }
+  
+  .prose th {
+    white-space: nowrap;
+    background-color: var(--color-slate-50, #f8fafc);
+    padding: 0.75rem 1rem !important;
+  }
+
+  .prose td {
+    word-break: break-word;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Add horizontal scroll for small screens if table overflows */
+  .prose .table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }

@@ -13,7 +13,7 @@ export default async function LangLayout({
     <div className="min-h-screen bg-white">
       <Sidebar lang={lang} />
       <main className="md:ml-64 min-h-screen">
-        <div className="max-w-4xl mx-auto p-8">
+        <div className="max-w-5xl mx-auto p-8">
           {children}
         </div>
       </main>
