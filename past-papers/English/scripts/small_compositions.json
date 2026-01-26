@@ -11,7 +11,8 @@
     "scaffold": {
       "start": "Dear Jenny,\nI really like the idea of adding a new column to our English newspaper.",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "分享观点"
   },
   {
     "year": 2025,
@@ -25,11 +26,15 @@
     "scaffold": {
       "start": "Dear Chris,",
       "end": "Best wishes,\nLi Hua"
-    }
+    },
+    "task": "礼貌催稿"
   },
   {
     "year": 2024,
-    "region": ["新课标Ⅰ卷", "新课标Ⅱ卷"],
+    "region": [
+      "新课标Ⅰ卷",
+      "新课标Ⅱ卷"
+    ],
     "genre": "Email",
     "prompt": "假定你是李华，上周五你们班在公园上了一堂美术课。请你给英国朋友Chris写一封邮件分享这次经历，内容包括：\n（1）你完成的作品；\n（2）你的感想。",
     "note": [
@@ -39,7 +44,8 @@
     "scaffold": {
       "start": "Dear Chris,\nI’m writing to share with you an art class I had in a park last Friday.",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "分享经历"
   },
   {
     "year": 2023,
@@ -53,7 +59,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "介绍人物"
   },
   {
     "year": 2023,
@@ -67,7 +74,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "分享经历"
   },
   {
     "year": 2023,
@@ -84,7 +92,8 @@
     "scaffold": {
       "start": "Dear Ryan,\nI’m Li Hua from Class 3.",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2022,
@@ -97,7 +106,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "发出倡议"
   },
   {
     "year": 2022,
@@ -111,7 +121,8 @@
     "scaffold": {
       "start": "Dear Caroline,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "发出邀请"
   },
   {
     "year": 2022,
@@ -125,7 +136,8 @@
     "scaffold": {
       "start": "Dear Caroline,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "发出邀请"
   },
   {
     "year": 2021,
@@ -143,7 +155,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "分享经历"
   },
   {
     "year": 2020,
@@ -158,7 +171,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "撰写报道"
   },
   {
     "year": 2020,
@@ -172,7 +186,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "介绍人物"
   },
   {
     "year": 2020,
@@ -187,7 +202,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "分享经历"
   },
   {
     "year": 2020,
@@ -201,7 +217,8 @@
     "scaffold": {
       "start": "Dear Miss Evans,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "寻求指导"
   },
   {
     "year": 2019,
@@ -216,7 +233,8 @@
     "scaffold": {
       "start": "Dear Sir/Madam,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "申请报名"
   },
   {
     "year": 2019,
@@ -231,7 +249,8 @@
     "scaffold": {
       "start": "Dear Sir or Madam,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "申请报名"
   },
   {
     "year": 2019,
@@ -245,7 +264,8 @@
     "scaffold": {
       "start": "Dear Chris,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "通知比赛"
   },
   {
     "year": 2019,
@@ -259,7 +279,8 @@
     "scaffold": {
       "start": "Dear Chris,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "通知比赛"
   },
   {
     "year": 2019,
@@ -273,7 +294,8 @@
     "scaffold": {
       "start": "Dear Allen,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2019,
@@ -287,7 +309,8 @@
     "scaffold": {
       "start": "Dear Allen,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2018,
@@ -301,7 +324,8 @@
     "scaffold": {
       "start": "Dear Terry,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "介绍习俗"
   },
   {
     "year": 2018,
@@ -315,7 +339,8 @@
     "scaffold": {
       "start": "Notice",
       "end": "Student Union"
-    }
+    },
+    "task": "发布通知"
   },
   {
     "year": 2018,
@@ -329,7 +354,8 @@
     "scaffold": {
       "start": "Dear Peter,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "介绍情况"
   },
   {
     "year": 2017,
@@ -343,7 +369,8 @@
     "scaffold": {
       "start": "Dear Leslie,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "告知安排"
   },
   {
     "year": 2017,
@@ -357,7 +384,8 @@
     "scaffold": {
       "start": "Dear Henry,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2017,
@@ -371,7 +399,8 @@
     "scaffold": {
       "start": "Dear Eric,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "发出邀请"
   },
   {
     "year": 2016,
@@ -385,7 +414,8 @@
     "scaffold": {
       "start": "Dear Ms Jenkins,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "寻求指导"
   },
   {
     "year": 2016,
@@ -399,7 +429,8 @@
     "scaffold": {
       "start": "Dear Peter,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "征集作品"
   },
   {
     "year": 2016,
@@ -413,7 +444,8 @@
     "scaffold": {
       "start": "Dear Bob,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "表达歉意"
   },
   {
     "year": 2015,
@@ -428,7 +460,8 @@
     "scaffold": {
       "start": "Dear Peter,\nI’d like to ask you to write an article for our school’s English newspaper.",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "约稿邀请"
   },
   {
     "year": 2015,
@@ -443,7 +476,8 @@
     "scaffold": {
       "start": "Dear Lucy,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2014,
@@ -458,7 +492,8 @@
     "scaffold": {
       "start": "I often imagine what my life will be like in the future.",
       "end": ""
-    }
+    },
+    "task": "展望未来"
   },
   {
     "year": 2013,
@@ -473,7 +508,8 @@
     "scaffold": {
       "start": "Dear Peter,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "请求接机"
   },
   {
     "year": 2013,
@@ -488,7 +524,8 @@
     "scaffold": {
       "start": "Dear Tom,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "请求代卖"
   },
   {
     "year": 2012,
@@ -503,7 +540,8 @@
     "scaffold": {
       "start": "Dear Sir or Madam,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "申请报名"
   },
   {
     "year": 2025,
@@ -518,7 +556,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "陈述看法"
   },
   {
     "year": 2024,
@@ -533,7 +572,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "运动推荐"
   },
   {
     "year": 2023,
@@ -548,7 +588,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "撰写报道"
   },
   {
     "year": 2022,
@@ -562,7 +603,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "邀请体验"
   },
   {
     "year": 2022,
@@ -576,7 +618,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "分享收获"
   },
   {
     "year": 2021,
@@ -590,7 +633,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "展览宣传"
   },
   {
     "year": 2021,
@@ -604,7 +648,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "表示欢迎"
   },
   {
     "year": 2020,
@@ -618,7 +663,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "慰问近况"
   },
   {
     "year": 2020,
@@ -632,7 +678,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2019,
@@ -646,7 +693,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "表达感谢"
   },
   {
     "year": 2018,
@@ -660,7 +708,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "寻求帮助"
   },
   {
     "year": 2018,
@@ -674,7 +723,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "申请报名"
   },
   {
     "year": 2017,
@@ -688,7 +738,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "邀请过节"
   },
   {
     "year": 2017,
@@ -702,7 +753,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2016,
@@ -716,7 +768,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "行前咨询"
   },
   {
     "year": 2025,
@@ -730,7 +783,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2024,
@@ -744,7 +798,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2023,
@@ -758,7 +813,8 @@
     "scaffold": {
       "start": "Dear Jim，",
       "end": "Yours，\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2022,
@@ -772,7 +828,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours\nLi Hua"
-    }
+    },
+    "task": "邀请交流"
   },
   {
     "year": 2021,
@@ -786,7 +843,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours\nLi Hua"
-    }
+    },
+    "task": "表达歉意"
   },
   {
     "year": 2020,
@@ -800,7 +858,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "请求推荐"
   },
   {
     "year": 2019,
@@ -814,7 +873,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "回复咨询"
   },
   {
     "year": 2018,
@@ -828,7 +888,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2017,
@@ -842,7 +903,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "建议选择"
   },
   {
     "year": 2016,
@@ -856,7 +918,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yours,\nLi Hua."
-    }
+    },
+    "task": "介绍人物"
   },
   {
     "year": 2015,
@@ -871,7 +934,8 @@
     "scaffold": {
       "start": "Dear Jim,",
       "end": "Yous,\nLi Hua"
-    }
+    },
+    "task": "邀请参加"
   },
   {
     "year": 2014,
@@ -886,7 +950,8 @@
     "scaffold": {
       "start": "Dear Chris,",
       "end": "Yours,\nJoe"
-    }
+    },
+    "task": "表达歉意"
   },
   {
     "year": 2023,
@@ -897,7 +962,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "物品介绍"
   },
   {
     "year": 2023,
@@ -908,7 +974,8 @@
     "scaffold": {
       "start": "Dear Tom,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2022,
@@ -919,7 +986,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "做出选择"
   },
   {
     "year": 2022,
@@ -930,7 +998,8 @@
     "scaffold": {
       "start": "Dear Student Union,",
       "end": "Yours sincerely,\nLi Ming"
-    }
+    },
+    "task": "提出建议"
   },
   {
     "year": 2021,
@@ -941,7 +1010,8 @@
     "scaffold": {
       "start": "Dear Lucy,",
       "end": "Yours sincerely,\nWang Jia"
-    }
+    },
+    "task": "做出选择"
   },
   {
     "year": 2020,
@@ -952,7 +1022,8 @@
     "scaffold": {
       "start": "Dear Wang Lei,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "说服参与"
   },
   {
     "year": 2020,
@@ -963,7 +1034,8 @@
     "scaffold": {
       "start": "Dear Manager,",
       "end": "Yours sincerely,\nLi Hua"
-    }
+    },
+    "task": "发表看法"
   },
   {
     "year": 2019,
@@ -974,7 +1046,8 @@
     "scaffold": {
       "start": "Dear Editor,",
       "end": "Yours sincerely,\nLi Min"
-    }
+    },
+    "task": "发表看法"
   },
   {
     "year": 2019,
@@ -985,7 +1058,8 @@
     "scaffold": {
       "start": "Dear Li Nan,",
       "end": "Yours,\nLi Hua"
-    }
+    },
+    "task": "反馈意见"
   },
   {
     "year": 2018,
@@ -997,7 +1071,8 @@
     "scaffold": {
       "start": "",
       "end": ""
-    }
+    },
+    "task": "介绍人物"
   },
   {
     "year": 2018,
@@ -1008,7 +1083,8 @@
     "scaffold": {
       "start": "Hi,",
       "end": "Wang Lei"
-    }
+    },
+    "task": "做出选择"
   },
   {
     "year": 2017,
@@ -1019,7 +1095,8 @@
     "scaffold": {
       "start": "Dear Li Hong,",
       "end": "Yours sincerely,\nWang Lei"
-    }
+    },
+    "task": "建议选择"
   },
   {
     "year": 2014,
@@ -1030,7 +1107,8 @@
     "scaffold": {
       "start": "Dear Editor,",
       "end": "Yours sincerely,\nCheng Fei"
-    }
+    },
+    "task": "做出选择"
   },
   {
     "year": 2013,
@@ -1041,6 +1119,7 @@
     "scaffold": {
       "start": "Dear Sir/Madam,",
       "end": "Yours sincerely,\nWang Min"
-    }
+    },
+    "task": "做出选择"
   }
 ]

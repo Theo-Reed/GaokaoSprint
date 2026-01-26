@@ -117,7 +117,7 @@ export function getNavigation(lang: string) {
 
     // Special handling for language differences in folder structure
     if (lang === 'cn') {
-        nav[1].items = [
+        nav[2].items = [
              { title: '数学', href: '/cn/数学/strategy' },
              { title: '物理', href: '/cn/物理/strategy' },
              { title: '化学', href: '/cn/化学/strategy' },
@@ -126,7 +126,7 @@ export function getNavigation(lang: string) {
              { title: '语文', href: '/cn/语文/strategy' },
         ];
     } else {
-         nav[1].items = [
+         nav[2].items = [
              { title: 'Math', href: '/en/Math/strategy' },
              { title: 'Physics', href: '/en/Physics/strategy' },
              { title: 'Chemistry', href: '/en/Chemistry/strategy' },
