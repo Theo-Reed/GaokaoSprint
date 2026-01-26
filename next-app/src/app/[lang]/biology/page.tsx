@@ -1,5 +1,9 @@
 import BiologyExplorer from '@/components/BiologyExplorer';
 
+export async function generateStaticParams() {
+  return [{ lang: 'cn' }, { lang: 'en' }];
+}
+
 export default async function BiologyPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   

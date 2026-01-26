@@ -23,16 +23,16 @@ export default async function MarkdownPage({ params }: PageProps) {
   );
 }
 
-export async function generateStaticParams() {
-  const params: { lang: string; slug: string[] }[] = [];
+export async function generateStaticParams({ params }: { params: { lang: string } }) {
+  const { lang } = params;
+  const slugs = getAllSlugs(lang);
   
-  ['cn', 'en'].forEach(lang => {
-    const slugs = getAllSlugs(lang);
-    slugs.forEach(slug => {
-       params.push({ lang, slug });
-    });
-  });
+  if (slugs.length === 0) {
+    console.warn(`No slugs found for language: ${lang}`);
+  }
 
-  return params;
+  return slugs.map(slug => ({
+    slug: slug
+  }));
 }
 

@@ -4,7 +4,14 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const contentDirectory = path.join(process.cwd(), 'content');
+const contentDirectory = fs.existsSync(path.join(process.cwd(), 'content'))
+  ? path.join(process.cwd(), 'content')
+  : path.join(process.cwd(), 'next-app', 'content');
+
+// Helper to check and log content directory
+if (!fs.existsSync(contentDirectory)) {
+    console.warn(`Warning: Content directory not found at ${contentDirectory}. CWD is ${process.cwd()}`);
+}
 
 export interface MarkdownData {
   title: string;

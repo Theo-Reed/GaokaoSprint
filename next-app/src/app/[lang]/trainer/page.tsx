@@ -1,5 +1,9 @@
 import { InteractiveTrainer } from "@/components/InteractiveTrainer";
 
+export async function generateStaticParams() {
+  return [{ lang: 'cn' }, { lang: 'en' }];
+}
+
 export default async function TrainerPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isCn = lang === 'cn';

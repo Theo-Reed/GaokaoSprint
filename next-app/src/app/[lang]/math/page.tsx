@@ -16,6 +16,10 @@ const CATEGORIES: Category[] = [
   { id: 'probability', name: '概率统计', icon: '🎲' },
 ];
 
+export async function generateStaticParams() {
+  return [{ lang: 'cn' }, { lang: 'en' }];
+}
+
 export default async function MathDashboard({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
 
