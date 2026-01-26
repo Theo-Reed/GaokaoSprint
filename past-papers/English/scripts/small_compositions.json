@@ -29,7 +29,7 @@
   },
   {
     "year": 2024,
-    "region": "新课标Ⅰ卷",
+    "region": ["新课标Ⅰ卷", "新课标Ⅱ卷"],
     "genre": "Email",
     "prompt": "假定你是李华，上周五你们班在公园上了一堂美术课。请你给英国朋友Chris写一封邮件分享这次经历，内容包括：\n（1）你完成的作品；\n（2）你的感想。",
     "note": [
@@ -38,20 +38,6 @@
     ],
     "scaffold": {
       "start": "Dear Chris,\nI’m writing to share with you an art class I had in a park last Friday.",
-      "end": "Yours,\nLi Hua"
-    }
-  },
-  {
-    "year": 2024,
-    "region": "新课标Ⅱ卷",
-    "genre": "Email",
-    "prompt": "假定你是李华，上周五你们班在公园上了一堂美术课。请你给英国朋友Chris写一封邮件分享这次经历，内容包括：\n（1）你完成的作品；\n（2）你的感想。",
-    "note": [
-      "写作词数应为80个左右",
-      "请按如下格式在答题纸的相应位置作答"
-    ],
-    "scaffold": {
-      "start": "Dear Chris,\nI’m writing to share with you an art class I had in a park last Friday",
       "end": "Yours,\nLi Hua"
     }
   },
