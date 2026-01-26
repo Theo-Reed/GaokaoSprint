@@ -44,6 +44,19 @@ const CATEGORY_NAMES: Record<string, string> = {
   'probability': '概率统计'
 };
 
+export async function generateStaticParams() {
+  const languages = ['cn', 'en'];
+  const categories = Object.keys(CATEGORY_NAMES);
+
+  const params: { lang: string; category: string }[] = [];
+  for (const lang of languages) {
+    for (const category of categories) {
+      params.push({ lang, category });
+    }
+  }
+  return params;
+}
+
 export default function MathDrillPage({ params }: PageProps) {
     // Unwrap params using React.use() or await in useEffect (but this is a client component, so we use useEffect or just unwrap if it was server component)
     // Actually, in Next.js 15, params is a Promise. Let's use a hook to unwrap it properly or make this a server component that passes data to client.
