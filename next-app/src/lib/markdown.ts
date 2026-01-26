@@ -24,7 +24,16 @@ export async function getMarkdownContent(lang: string, slugPath: string[]): Prom
   // Construct path: content/[lang]/[k1]/[k2].md
   // slugPath is array, e.g. ['diet_plan'] or ['Math', 'strategy']
   
-  const relativePath = slugPath.join('/');
+  // Normalize each part of the slug to NFC
+  const normalizedSlug = slugPath.map(s => {
+    try {
+      return decodeURIComponent(s).normalize('NFC');
+    } catch {
+      return s.normalize('NFC');
+    }
+  });
+
+  const relativePath = normalizedSlug.join('/');
   let fullPath = path.join(contentDirectory, lang, `${relativePath}.md`);
 
   // Check if file exists, if not, try index.md if it's a folder? 
@@ -126,11 +135,7 @@ export function getNavigation(lang: string) {
         {
             title: lang === 'cn' ? '学科策略' : 'Strategies',
             items: [
-                { title: lang === 'cn' ? '数学' : 'Math', href: `/${lang}/Math/strategy` }, // Note: Folder names in content/en are English, content/cn are Chinese?
-                // Wait, let's check folder names in content/cn
-                // Previous list_dir showed: cn/数学/strategy.md
-                // So URLs might need to match file system or we map them.
-                // It's easier if URLs match file system.
+                { title: lang === 'cn' ? '数学' : 'Math', href: `/${lang}/Math/strategy` }, 
             ]
         }
     ];
@@ -138,12 +143,12 @@ export function getNavigation(lang: string) {
     // Special handling for language differences in folder structure
     if (lang === 'cn') {
         nav[2].items = [
-             { title: '数学', href: '/cn/数学/strategy' },
-             { title: '物理', href: '/cn/物理/strategy' },
-             { title: '化学', href: '/cn/化学/strategy' },
-             { title: '生物', href: '/cn/生物/strategy' },
-             { title: '英语', href: '/cn/英语/strategy' },
-             { title: '语文', href: '/cn/语文/strategy' },
+             { title: '数学', href: '/cn/Math/strategy' },
+             { title: '物理', href: '/cn/Physics/strategy' },
+             { title: '化学', href: '/cn/Chemistry/strategy' },
+             { title: '生物', href: '/cn/Biology/strategy' },
+             { title: '英语', href: '/cn/English/strategy' },
+             { title: '语文', href: '/cn/Chinese/strategy' },
         ];
     } else {
          nav[2].items = [
@@ -153,7 +158,7 @@ export function getNavigation(lang: string) {
              { title: 'Biology', href: '/en/Biology/strategy' },
              { title: 'English', href: '/en/English/strategy' },
              { title: 'Chinese', href: '/en/Chinese/strategy' },
-        ];
+         ];
     }
 
     return nav;

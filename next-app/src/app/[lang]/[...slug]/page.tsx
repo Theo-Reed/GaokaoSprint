@@ -42,14 +42,10 @@ export async function generateStaticParams() {
     const slugs = getAllSlugs(lang);
     for (const slug of slugs) {
       if (slug.length > 0) {
-        // Push decoded version (standard)
+        // Just push the direct slug array. 
+        // Next.js handles the path mapping automatically.
+        // We ensure it's normalized in the slug collection logic.
         params.push({ lang, slug });
-        
-        // Push encoded version (to satisfy strict matching if browser sends encoded path)
-        const encodedSlug = slug.map(s => encodeURIComponent(s));
-        if (JSON.stringify(slug) !== JSON.stringify(encodedSlug)) {
-             params.push({ lang, slug: encodedSlug });
-        }
       }
     }
   }

@@ -37,27 +37,40 @@ body {
   }
 
   /* Improve GFM Table styles in prose */
-  .prose table {
+  .prose :where(table) {
     width: 100% !important;
-    display: table;
-    table-layout: auto;
+    display: table !important;
+    table-layout: auto !important;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
-  .prose th {
-    white-space: nowrap;
-    background-color: var(--color-slate-50, #f8fafc);
+  .prose :where(thead th) {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    background-color: #f8fafc !important; /* slate-50 */
     padding: 0.75rem 1rem !important;
+    min-width: 140px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    font-weight: 600;
   }
 
-  .prose td {
+  .prose :where(tbody td) {
     word-break: break-word;
     padding: 0.75rem 1rem !important;
+    border: 1px solid #e2e8f0;
+    line-height: 1.6;
+    vertical-align: top;
   }
 
   /* Add horizontal scroll for small screens if table overflows */
   .prose .table-container {
     overflow-x: auto;
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   }
 }
