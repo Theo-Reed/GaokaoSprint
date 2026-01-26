@@ -21,7 +21,5 @@ export default async function LangLayout({
   );
 }
 
-export async function generateStaticParams() {
-  return [{ lang: 'cn' }, { lang: 'en' }];
-}
+// generateStaticParams removed from here
 

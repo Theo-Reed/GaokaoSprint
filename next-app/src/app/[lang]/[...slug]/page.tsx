@@ -10,7 +10,17 @@ interface PageProps {
 
 export default async function MarkdownPage({ params }: PageProps) {
   const { lang, slug } = await params;
-  const data = await getMarkdownContent(lang, slug);
+  
+  // Ensure we are working with decoded strings
+  const decodedSlug = slug.map(s => {
+      try {
+          return decodeURIComponent(s);
+      } catch {
+          return s;
+      }
+  });
+
+  const data = await getMarkdownContent(lang, decodedSlug);
 
   if (!data) {
     return notFound();
@@ -23,16 +33,25 @@ export default async function MarkdownPage({ params }: PageProps) {
   );
 }
 
-export async function generateStaticParams({ params }: { params: { lang: string } }) {
-  const { lang } = params;
-  const slugs = getAllSlugs(lang);
+export async function generateStaticParams() {
+  const params: { lang: string; slug: string[] }[] = [];
   
-  if (slugs.length === 0) {
-    console.warn(`No slugs found for language: ${lang}`);
+  for (const lang of ['cn', 'en']) {
+    const slugs = getAllSlugs(lang);
+    for (const slug of slugs) {
+      if (slug.length > 0) {
+        // Push decoded version (standard)
+        params.push({ lang, slug });
+        
+        // Push encoded version (to satisfy strict matching if browser sends encoded path)
+        const encodedSlug = slug.map(s => encodeURIComponent(s));
+        if (JSON.stringify(slug) !== JSON.stringify(encodedSlug)) {
+             params.push({ lang, slug: encodedSlug });
+        }
+      }
+    }
   }
 
-  return slugs.map(slug => ({
-    slug: slug
-  }));
+  return params;
 }
 

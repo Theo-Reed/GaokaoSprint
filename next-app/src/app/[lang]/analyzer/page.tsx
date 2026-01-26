@@ -1,6 +1,10 @@
 import React from 'react';
 import { TextReader } from '@/components/TextReader';
 
+export async function generateStaticParams() {
+  return [{ lang: 'cn' }, { lang: 'en' }];
+}
+
 export default function AnalyzerPage() {
   const sampleText = `
     In the modern world, time is a precious resource. 

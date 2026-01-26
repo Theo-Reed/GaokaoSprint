@@ -83,10 +83,19 @@ export function getAllSlugs(lang: string): string[][] {
     
     return files.map(file => {
         const parts = file.replace(/\.md$/, '').split(path.sep);
-        if (parts[parts.length - 1] === 'README') {
-            return parts.slice(0, -1);
+        // Normalize to NFC and decode any URI encoded segments from the filesystem
+        const normalizedParts = parts.map(p => {
+            try {
+                return decodeURIComponent(p).normalize('NFC');
+            } catch (e) {
+                return p.normalize('NFC');
+            }
+        });
+        
+        if (normalizedParts[normalizedParts.length - 1] === 'README') {
+            return normalizedParts.slice(0, -1);
         }
-        return parts;
+        return normalizedParts;
     }).filter(slug => slug.length > 0);
 }
 
