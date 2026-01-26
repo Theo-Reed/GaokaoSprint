@@ -240,24 +240,38 @@ export default function TrainerPage() {
 
     // 等待动画时间 (0.3s) 结束后再更新状态，防止 UI 闪烁或按钮变色
     setTimeout(async () => {
-      let newStatus: 'familiar' | 'learning' | 'mastered' = 'learning';
+      const currentProg = progressMap.get(wordId);
+      const currentStatus = currentProg?.status || 'learning';
+      let newStatus: 'familiar' | 'learning' | 'mastered' = currentStatus;
 
       if (action === 'mastered') {
-          newStatus = 'mastered';
-          setMasteredCount(c => c + 1);
+          if (currentStatus !== 'mastered') {
+              newStatus = 'mastered';
+              setMasteredCount(c => c + 1);
+          }
       } else if (action === 'familiar') {
-          newStatus = 'familiar';
+          // 只有 learning 状态点击“认识”才会升级到 familiar
+          // 如果已经是 familiar 或 mastered，保持当前状态（防止降级）
+          if (currentStatus === 'learning') {
+              newStatus = 'familiar';
+          }
       } else if (action === 'next') {
-          newStatus = 'learning'; 
+          // 点击下一个（不认识/跳过），保持原有状态不变
+          newStatus = currentStatus; 
       } else if (action === 'unmastered') {
+          // 这是一个明确的降级操作：从 mastered 回退到 familiar
           newStatus = 'familiar';
-          setMasteredCount(c => Math.max(0, c - 1));
+          if (currentStatus === 'mastered') {
+              setMasteredCount(c => Math.max(0, c - 1));
+          }
       }
+
+      const now = new Date().toISOString();
 
       // 1. 更新本地 Map 状态
       setProgressMap(prev => {
           const next = new Map(prev);
-          next.set(wordId, { status: newStatus, last_reviewed_at: new Date().toISOString() });
+          next.set(wordId, { status: newStatus, last_reviewed_at: now });
           return next;
       });
 
@@ -280,7 +294,7 @@ export default function TrainerPage() {
             user_id: session.user.id,
             word_id: wordId,
             status: newStatus,
-            last_reviewed_at: new Date().toISOString()
+            last_reviewed_at: now
         }, { onConflict: 'user_id, word_id' }).then();
       }
     }, 300);

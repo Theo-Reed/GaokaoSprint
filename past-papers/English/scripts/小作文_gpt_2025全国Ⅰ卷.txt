@@ -1,0 +1,12 @@
+Requirement: 假定你是李华，你班的英语报要增设一个栏目。外教 Jenny 提出“Fun at my school”和“Guess who I am”两个选项供大家选择。请给Jenny写一封邮件，内容包括：
+(1)你的选择；
+(2)说明理由。
+------------------------------
+Dear Jenny,
+I really like the idea of adding a new column to our English newspaper. Given the two options, I would prefer “Fun at my school”, not only because it feels inclusive but also because it can be updated consistently.
+
+First, featuring real campus moments—sports meets, club fairs, and class projects—will demonstrate our spirit with vivid photos and brief captions, making the newspaper more engaging. Second, by inviting students to contribute, we can strengthen community ties; I once interviewed a shy classmate, and, encouraged by the feedback, he later volunteered again. Finally, the column is indispensable for newcomers who want to understand what makes our school unique.
+
+To sum up, “Fun at my school” can record our growth and connect us profoundly; should you approve it, I’d be honored to help organize the first issue.
+Yours,
+Li Hua
