@@ -9737,42 +9737,6 @@
     "_mcp_refined": true
   },
   {
-    "word": "rich",
-    "stats": {
-      "freq": 80,
-      "years_count": 16,
-      "last_seen": 2025,
-      "stars": 4,
-      "pos_distribution": {
-        "ADJ": 77,
-        "NOUN": 3
-      }
-    },
-    "tags": [
-      "syllabus",
-      "core"
-    ],
-    "pos": [
-      "adj",
-      "noun"
-    ],
-    "meanings": {
-      "cn": [
-        "富有的；丰富的",
-        "富人；有钱人"
-      ],
-      "en": [
-        "having great material wealth",
-        "wealthy people as a group"
-      ]
-    },
-    "examples": [
-      "The country is **rich** in natural resources, making many people **rich**.",
-      "The **rich** often donate to charities, but many still struggle to relate to those less fortunate."
-    ],
-    "_mcp_refined": true
-  },
-  {
     "word": "medium",
     "stats": {
       "freq": 79,
@@ -9953,42 +9917,6 @@
     "examples": [
       "The **major** issue is the lack of funding for the project.",
       "Her **major** is in computer science, so she is a **major** asset to the team."
-    ],
-    "_mcp_refined": true
-  },
-  {
-    "word": "quite",
-    "stats": {
-      "freq": 76,
-      "years_count": 18,
-      "last_seen": 2025,
-      "stars": 4,
-      "pos_distribution": {
-        "ADV": 74,
-        "ADJ": 2
-      }
-    },
-    "tags": [
-      "syllabus",
-      "core"
-    ],
-    "pos": [
-      "adv",
-      "adj"
-    ],
-    "meanings": {
-      "cn": [
-        "相当；颇",
-        "完全；十分"
-      ],
-      "en": [
-        "to a considerable extent",
-        "completely; totally"
-      ]
-    },
-    "examples": [
-      "The movie was **quite** enjoyable, although the ending was a little abrupt.",
-      "The situation is **quite** hopeless, and there is nothing more we can do."
     ],
     "_mcp_refined": true
   },
