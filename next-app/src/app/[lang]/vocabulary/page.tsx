@@ -12,7 +12,7 @@ type WordData = {
   word: string;
   stats: { freq: number; stars: number };
   meanings: { en: string[]; cn: string[] }; 
-  examples?: { teach?: string[] };
+  examples?: string[] | { teach?: string[] };
   pos: string[];
 };
 
@@ -109,13 +109,13 @@ export default function TrainerPage() {
           if (newData && newData.word_id) {
             setProgressMap(prev => {
               const currentInMap = prev.get(newData.word_id);
-              // 如果状态没变，就不更新，减少重渲染
               if (currentInMap?.status === newData.status && currentInMap?.last_reviewed_at === newData.last_reviewed_at) {
                 return prev;
               }
               
               const next = new Map(prev);
               next.set(newData.word_id, {
+
                 status: newData.status,
                 last_reviewed_at: newData.last_reviewed_at
               });
@@ -142,37 +142,42 @@ export default function TrainerPage() {
   // 2. 从数据库拉取进度
   const fetchProgress = async (userId: string) => {
     setLoading(true);
-    const { data } = await supabase
-      .from('user_progress')
-      .select('word_id, status, last_reviewed_at')
-      .eq('user_id', userId);
-    
-    const map = new Map<string, UserProgress>();
+    try {
+      const { data, error } = await supabase
+        .from('user_progress')
+        .select('word_id, status, last_reviewed_at')
+        .eq('user_id', userId)
+        .order('last_reviewed_at', { ascending: true });
+      
+      const map = new Map<string, UserProgress>();
 
-    if (data) {
-      data.forEach(item => {
-        // 过滤掉旧的 syntax 数据
-        if (item.word_id.startsWith('syntax:')) return;
-        
-        // Map 自动去重，保留最后一条（通常是数据库返回顺序，或者我们可以由查询排序控制）
-        // 但最好还是依靠数据库唯一约束。若有重复，Map 会覆盖。
-        map.set(item.word_id, {
-          status: item.status as any || 'learning', 
-          last_reviewed_at: item.last_reviewed_at
+      if (error) {
+        console.error('Fetch progress failed (Check RLS Policies):', error.code, error.message);
+      } else if (data) {
+        data.forEach(item => {
+          if (item.word_id.startsWith('syntax:')) return;
+          map.set(item.word_id, {
+            status: item.status as any || 'learning', 
+            last_reviewed_at: item.last_reviewed_at
+          });
         });
-      });
-    }
+      }
 
-    // 重新计算 masteredCount，确保去重后准确
-    let mCount = 0;
-    map.forEach(val => {
-        if (val.status === 'mastered') mCount++;
-    });
-    
-    setProgressMap(map);
-    setMasteredCount(mCount);
-    buildQueue(map);
-    setLoading(false);
+      // 重新计算 masteredCount
+      let mCount = 0;
+      map.forEach(val => {
+          if (val.status === 'mastered') mCount++;
+      });
+      
+      setProgressMap(map);
+      setMasteredCount(mCount);
+      buildQueue(map);
+    } catch (err) {
+      console.error('Unexpected error in fetchProgress:', err);
+      buildQueue(new Map()); // 即使出错也展示基础数据
+    } finally {
+      setLoading(false);
+    }
   };
 
   // 3. 构建每日学习队列
@@ -195,7 +200,9 @@ export default function TrainerPage() {
         newWords.push(w);
       } else {
         const lastTime = new Date(p.last_reviewed_at);
-        const hoursSince = (now.getTime() - lastTime.getTime()) / (1000 * 60 * 60);
+        const hoursSince = isNaN(lastTime.getTime()) 
+            ? 999 
+            : (now.getTime() - lastTime.getTime()) / (1000 * 60 * 60);
 
         if (p.status === 'mastered') {
             masteredWords.push(w);
@@ -234,48 +241,64 @@ export default function TrainerPage() {
     if (isExiting) return; // 防止连续点击
 
     const wordId = currentWord!.word;
-    
-    // 触发退出动画
+    const currentProg = progressMap.get(wordId);
+    const currentStatus = currentProg?.status || 'learning';
+    let newStatus: 'familiar' | 'learning' | 'mastered' = currentStatus;
+
+    if (action === 'mastered') {
+        if (currentStatus !== 'mastered') {
+            newStatus = 'mastered';
+            setMasteredCount(c => c + 1);
+        }
+    } else if (action === 'familiar') {
+        if (currentStatus === 'learning') {
+            newStatus = 'familiar';
+        }
+    } else if (action === 'next') {
+        newStatus = currentStatus; 
+    } else if (action === 'unmastered') {
+        newStatus = 'familiar';
+        if (currentStatus === 'mastered') {
+            setMasteredCount(c => Math.max(0, c - 1));
+        }
+    }
+
+    const now = new Date().toISOString();
+
+    // 1. 立即发起数据库更新
+    if (session) {
+      supabase.from('user_progress')
+        .upsert({
+            user_id: session.user.id,
+            word_id: wordId,
+            status: newStatus,
+            last_reviewed_at: now
+        }, { onConflict: 'user_id,word_id' })
+        .then(({ error }) => {
+            if (error) {
+                console.error('Database Sync Error (Check INSERT/UPDATE RLS):', error.code, error.message, error.details);
+            } else {
+                console.log('Successfully synced:', wordId, newStatus);
+            }
+        });
+    }
+
+    // 2. 触发退出动画
     setIsExiting(true);
 
-    // 等待动画时间 (0.3s) 结束后再更新状态，防止 UI 闪烁或按钮变色
-    setTimeout(async () => {
-      const currentProg = progressMap.get(wordId);
-      const currentStatus = currentProg?.status || 'learning';
-      let newStatus: 'familiar' | 'learning' | 'mastered' = currentStatus;
-
-      if (action === 'mastered') {
-          if (currentStatus !== 'mastered') {
-              newStatus = 'mastered';
-              setMasteredCount(c => c + 1);
-          }
-      } else if (action === 'familiar') {
-          // 只有 learning 状态点击“认识”才会升级到 familiar
-          // 如果已经是 familiar 或 mastered，保持当前状态（防止降级）
-          if (currentStatus === 'learning') {
-              newStatus = 'familiar';
-          }
-      } else if (action === 'next') {
-          // 点击下一个（不认识/跳过），保持原有状态不变
-          newStatus = currentStatus; 
-      } else if (action === 'unmastered') {
-          // 这是一个明确的降级操作：从 mastered 回退到 familiar
-          newStatus = 'familiar';
-          if (currentStatus === 'mastered') {
-              setMasteredCount(c => Math.max(0, c - 1));
-          }
-      }
-
-      const now = new Date().toISOString();
-
-      // 1. 更新本地 Map 状态
+    // 3. 等待动画时间 (0.3s) 结束后再更新本地 UI 状态
+    setTimeout(() => {
+      // 更新本地 Map 状态
       setProgressMap(prev => {
           const next = new Map(prev);
-          next.set(wordId, { status: newStatus, last_reviewed_at: now });
+          next.set(wordId, { 
+              status: newStatus, 
+              last_reviewed_at: now 
+          });
           return next;
       });
 
-      // 2. 移动到下一张
+      // 移动到下一张
       const nextIdx = queueIndex + 1;
       if (nextIdx < dailyQueue.length) {
           setQueueIndex(nextIdx);
@@ -285,18 +308,7 @@ export default function TrainerPage() {
           setCurrentWord(null); 
       }
       
-      // 3. 结束退出状态
       setIsExiting(false);
-
-      // 4. 异步存库
-      if (session) {
-        supabase.from('user_progress').upsert({
-            user_id: session.user.id,
-            word_id: wordId,
-            status: newStatus,
-            last_reviewed_at: now
-        }, { onConflict: 'user_id, word_id' }).then();
-      }
     }, 300);
   };
 
@@ -453,18 +465,26 @@ export default function TrainerPage() {
                    </ul>
                 </div>
 
-                {currentWord.examples?.teach && (
-                  <div className="mt-6">
-                    <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 pb-1">Usage Context</h3>
-                    <div className="space-y-3">
-                      {currentWord.examples.teach.map((ex, i) => (
-                        <div key={i} className="text-slate-600 bg-slate-50/50 border border-slate-100/50 p-3 rounded-2xl text-sm leading-relaxed"
-                             dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 font-black decoration-indigo-200 decoration-2 underline-offset-4">$1</span>') }}
-                        />
-                      ))}
+                {(() => {
+                  const examplesToDisplay = Array.isArray(currentWord.examples) 
+                    ? currentWord.examples 
+                    : currentWord.examples?.teach;
+                    
+                  if (!examplesToDisplay || examplesToDisplay.length === 0) return null;
+
+                  return (
+                    <div className="mt-6">
+                      <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 pb-1">Usage Context</h3>
+                      <div className="space-y-3">
+                        {examplesToDisplay.map((ex, i) => (
+                          <div key={i} className="text-slate-600 bg-slate-50/50 border border-slate-100/50 p-3 rounded-2xl text-sm leading-relaxed"
+                               dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 font-black decoration-indigo-200 decoration-2 underline-offset-4">$1</span>') }}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  );
+                })()}
              </div>
           </div>
         </div>
