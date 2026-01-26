@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
 
 const contentDirectory = fs.existsSync(path.join(process.cwd(), 'content'))
   ? path.join(process.cwd(), 'content')
@@ -45,6 +46,7 @@ export async function getMarkdownContent(lang: string, slugPath: string[]): Prom
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(html)
     .process(matterResult.content);
   
