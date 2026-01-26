@@ -1,4 +1,4 @@
-# 学习环境优化 (Environment Optimization)
+# 学习环境优化
 
 ## 一、空气质量监控 (Air Quality Control)
 这是环境优化中最重要的变量。大脑在缺氧和二氧化碳堆积环境下，逻辑推理速度会断崖式下跌。

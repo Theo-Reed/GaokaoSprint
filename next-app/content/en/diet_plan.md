@@ -1,4 +1,4 @@
-# Nutrition Plan (Customized for 178cm/65kg Male)
+# Nutrition Plan
 
 ## 1. Total Daily Targets
 Based on a **178cm, 65kg Male** profile and a 14-hour high-intensity cognitive workload, the brain requires high energy turnover. The following targets are set to maintain body weight and supply ATP for sustained neural activity:
