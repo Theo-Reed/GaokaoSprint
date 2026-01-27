@@ -76,7 +76,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
   const fetchGrade = async (model: keyof GradingResult) => {
     try {
       const isGenerating = mode === 'generate';
-      const endpoint = isGenerating ? '/GaokaoSprint/api/generate-essay/' : '/GaokaoSprint/api/grade/';
+      const endpoint = isGenerating ? '/api/generate-essay/' : '/api/grade/';
       
       const payload = isGenerating ? {
         topic: topic.prompt,
