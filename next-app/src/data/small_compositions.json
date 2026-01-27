@@ -1,0 +1,1125 @@
+[
+  {
+    "year": 2025,
+    "region": "全国Ⅰ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你班的英语报要增设一个栏目。外教 Jenny 提出“Fun at my school”和“Guess who I am”两个选项供大家选择。请给Jenny写一封邮件，内容包括：\n(1)你的选择；\n(2)说明理由。",
+    "note": [
+      "写作词数应为80个左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Jenny,\nI really like the idea of adding a new column to our English newspaper.",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "分享观点"
+  },
+  {
+    "year": 2025,
+    "region": "全国Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假定你是校英文报编辑李华，外教Chris上个月答应写一篇介绍加拿大体育运动的文章。请给 Chris写一封邮件，内容包括：\n(1)询问进展；\n(2)提醒交稿时间。",
+    "note": [
+      "写作词数应为80个左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Chris,",
+      "end": "Best wishes,\nLi Hua"
+    },
+    "task": "礼貌催稿"
+  },
+  {
+    "year": 2024,
+    "region": [
+      "新课标Ⅰ卷",
+      "新课标Ⅱ卷"
+    ],
+    "genre": "Email",
+    "prompt": "假定你是李华，上周五你们班在公园上了一堂美术课。请你给英国朋友Chris写一封邮件分享这次经历，内容包括：\n（1）你完成的作品；\n（2）你的感想。",
+    "note": [
+      "写作词数应为80个左右",
+      "请按如下格式在答题纸的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Chris,\nI’m writing to share with you an art class I had in a park last Friday.",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "分享经历"
+  },
+  {
+    "year": 2023,
+    "region": "全国甲卷",
+    "genre": "Article/Submission",
+    "prompt": "你们学校正举办主题为“用英文讲中国故事”的征文活动。请你以一位中国历史人物为题写一篇短文投稿，内容包括：\n1.人物简介及事迹；\n2. 意义或启示。",
+    "note": [
+      "词数100左右",
+      "题目已为你写好"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "介绍人物"
+  },
+  {
+    "year": 2023,
+    "region": "全国乙卷",
+    "genre": "Article/Submission",
+    "prompt": "请以向学校英文报投稿的方式，用英语描述学习一项新技能的经历，及从中获得的体验和感受。",
+    "note": [
+      "词数100左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "分享经历"
+  },
+  {
+    "year": 2023,
+    "region": [
+      "新课标Ⅰ卷",
+      "新课标Ⅱ卷"
+    ],
+    "genre": "Email",
+    "prompt": "假定你是李华，外教Ryan准备将学生随机分为两人一组，让大家课后练习口语，你认为这样分组存在问题。请你给外教写一封邮件，内容包括：\n1. 说明问题；\n2. 提出建议。",
+    "note": [
+      "写作词数应为80个左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Ryan,\nI’m Li Hua from Class 3.",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2022,
+    "region": "全国甲卷",
+    "genre": "Article/Submission",
+    "prompt": "你校将以六月八日世界海洋日为主题，举办英语征文比赛，请你写一篇短文投稿。\n内容包括：\n1. 海洋的重要性；\n2. 保护海洋的倡议。",
+    "note": [
+      "词数100左右"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "发出倡议"
+  },
+  {
+    "year": 2022,
+    "region": "新高考Ⅰ卷",
+    "genre": "Email",
+    "prompt": "假定你是校广播站英语节目“Talk and Talk”的负责人李华，请给外教Caroline写邮件邀请她做一次访谈。内容包括：\n1. 节目介绍；\n2. 访谈的时间和话题。",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Caroline,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "发出邀请"
+  },
+  {
+    "year": 2022,
+    "region": "新高考Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假定你是校广播站英语节目“Talk and Talk”的负责人李华，请给外教Caroline写邮件邀请她做一次访谈。内容包括：\n1. 节目介绍；\n2. 访谈的时间和话题。",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "scaffold": {
+      "start": "Dear Caroline,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "发出邀请"
+  },
+  {
+    "year": 2021,
+    "region": [
+      "新高考Ⅰ卷",
+      "新高考Ⅱ卷"
+    ],
+    "genre": "Article/Submission",
+    "prompt": "你校英文报Youth正在庆祝创刊十周年。请你写一篇短文投稿，内容包括：\n1. 读报的经历；\n2. 喜爱的栏目；\n3. 期望和祝福。",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "header": "Youth and Me",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "分享经历"
+  },
+  {
+    "year": 2020,
+    "region": "新高考Ⅰ/Ⅱ卷",
+    "genre": "Report",
+    "prompt": "假定你是李华, 上周日你校举办了5公里越野赛跑活动。请你为校英文报写一篇报道, 内容包括:\n1. 参加人员:\n2. 跑步路线:从校门口到南山脚下:\n3. 活动反响。",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题卡的相应位置作答"
+    ],
+    "header": "A Cross-Country Running Race",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "撰写报道"
+  },
+  {
+    "year": 2020,
+    "region": "新课标Ⅰ卷",
+    "genre": "Article/Submission",
+    "prompt": "你校正在组织英语作文比赛。请以身边值得尊敬和爱戴的人为题，写一篇短文参赛，内容包括:\n1. 人物简介；\n2. 尊敬和爱戴的原因。",
+    "note": [
+      "词数100左右",
+      "短文题目和首句已为你写好"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "介绍人物"
+  },
+  {
+    "year": 2020,
+    "region": "新课标Ⅱ卷",
+    "genre": "Article/Submission",
+    "prompt": "上周末，你和同学参加了一次采摘活动。请你为班级英语角写一篇短文，介绍这次活动，内容包括:\n1. 农场情况；\n2. 采摘过程；\n3. 个人感受",
+    "note": [
+      "词数100左右",
+      "题目已为你写好"
+    ],
+    "header": "My Weekend",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "分享经历"
+  },
+  {
+    "year": 2020,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你和同学根据英语课文改编了一个短剧。给外教Miss Evans写封邮件，请她帮忙指导。邮件内容包括:\n1. 剧情简介；\n2. 指导内容；\n3. 商定时间地点。",
+    "note": [
+      "词数100左右",
+      "结束语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Miss Evans,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "寻求指导"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅰ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，暑假在伦敦学习，得知当地美术馆要申办中国画展。请写一封信申请做志愿者，内容包括:\n1.写信目的:\n2.个人优势:\n3.能做的事情。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "结束语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Sir/Madam,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "申请报名"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅰ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，暑假在伦敦学习，得知当地美术馆要剧版中国画展。请写一封信申请做志愿者，内容包括:\n1.写信目的:\n2.个人优势:\n3.能做的事情。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "结束语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Sir or Madam,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "申请报名"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假定你是校排球队队长李华。请写封邮件告知 your 队友 Chris 球队近期将参加比赛，内容包括:\n1.比赛信息；\n2.赛前准备；\n3.表达期待。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Chris,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "通知比赛"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假定你是校排球队队长李华。请写封邮件告知你的队友Chris球队近期将参加比赛，内容包括:\n1.比赛信息；\n2.赛前准备；\n3.表达期待。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Chris,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "通知比赛"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你校将举办音乐节。请写封邮件邀请 your 英国朋友 Allen 参加，内容包括:\n1.时间；\n2.活动安排；\n3.欢迎他表演节目。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Allen,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2019,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你校将举办音乐节。请写封邮件邀请你的英国朋友Allen参加，内容包括:\n1.时间；\n2.活动安排；\n3.欢迎他表演节目。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Allen,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2018,
+    "region": "新课标Ⅰ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你的新西兰朋友Terry将去中国朋友家做客，发邮件向你询问有关习俗。请你回复邮件。内容包括：\n1. 到达时间；\n2. 合适的礼物；\n3. 餐桌礼仪．",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Terry,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "介绍习俗"
+  },
+  {
+    "year": 2018,
+    "region": "新课标Ⅱ卷",
+    "genre": "Notice",
+    "prompt": "你受学生会委托为校宣传栏“英语天地”写一则通知，请大家观看一部英文短片Growing Together, 内容包括：\n1. 短片内容：学校的发展；\n2. 放映时间、地点；\n3. 欢迎对短片提出意见。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Notice",
+      "end": "Student Union"
+    },
+    "task": "发布通知"
+  },
+  {
+    "year": 2018,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，你的英国朋友Peter来信询问你校学生体育运动情况。请给他回信，内容包括：\n1. 学校的体育场馆；\n2. 主要的运动项目；\n3. 你喜欢的项目。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Peter,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "介绍情况"
+  },
+  {
+    "year": 2017,
+    "region": "新课标Ⅰ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，正在教你的英国朋友Leslie学习汉语。请你写封邮件告知下次上课的计划。内容包括：\n1.时间和地点；\n2.内容：学习唐诗；\n3.课前准备：简要了解唐朝的历史。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Leslie,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "告知安排"
+  },
+  {
+    "year": 2017,
+    "region": "新课标Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，想邀请外教Henry一起参观中国剪纸（paper-cutting）艺术展。请给他写封邮件，内容包括：\n1.展览时间、地点；\n2.展览内容。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Henry,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2017,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华。你所在的校乒乓球队正在招收新队员。请给你的留学生朋友Eric写封邮件邀请他加入，内容包括：\n1. 球队活动；\n2. 报名方式及截止日期。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Eric,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "发出邀请"
+  },
+  {
+    "year": 2016,
+    "region": "新课标Ⅰ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，暑假想去一家外贸公司兼职，已写好申请书 and 个人简历（resume）。给外教Ms Jenkins 写信，请她帮你修改所附材料的文字和格式（format）。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，已使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Ms Jenkins,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "寻求指导"
+  },
+  {
+    "year": 2016,
+    "region": "新课标Ⅱ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，你校摄影俱乐部（photography club）将举办国际中学生摄影展。请给你的英国朋友Peter写封信。请他提供作品。信的内容包括：\n1．主题：环境保护；\n2．展览时间；\n3．投稿邮箱：intlphotoshow@gmschool.com.",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Peter,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "征集作品"
+  },
+  {
+    "year": 2016,
+    "region": "新课标Ⅲ卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，与留学生朋友Bob约好一起去书店，因故不能赴约。请给他写封邮件，内容包括：\n1．表示歉意；\n2．说明原因；\n3．另约时间。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "Dear Bob,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "表达歉意"
+  },
+  {
+    "year": 2015,
+    "region": "新课标Ⅰ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，你校英文报“外国文化”栏目拟刊登介绍美国节日风俗和中学生生活的短文。请给美国朋友彼得写信约稿，要点如下：\n1. 栏目介绍；\n2. 稿件内容；\n3. 稿件长度：约 400 词；\n4. 交稿日期：6月28 日前。",
+    "note": [
+      "词数 100 左右",
+      "可以适当增加细节，以使行文连贯",
+      "开头语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Peter,\nI’d like to ask you to write an article for our school’s English newspaper.",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "约稿邀请"
+  },
+  {
+    "year": 2015,
+    "region": "新课标Ⅱ卷",
+    "genre": "Email",
+    "prompt": "假如你是李华，计划和同学去敬老院（nursing home）陪老人们过重阳节（the Double Ninth Festival）。请给外教露西写封邮件，邀她一同前往，内容包括：\n1. 出发及返回时间；\n2. 活动：包饺子、表演节目等。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "结语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Lucy,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2014,
+    "region": "新课标Ⅱ卷",
+    "genre": "Article/Submission",
+    "prompt": "一家英语报社向中学生征文，主题是“十年后的我”，请根据下列要点和你的畅想完成短文。\n1. 家庭；\n2. 工作；\n3. 业余生活。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "开头语已为你写好"
+    ],
+    "scaffold": {
+      "start": "I often imagine what my life will be like in the future.",
+      "end": ""
+    },
+    "task": "展望未来"
+  },
+  {
+    "year": 2013,
+    "region": "新课标Ⅰ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华．请你给笔友Peter写封信，告诉他你叔叔李明将去他所在城市开会，带去他想要的那幅中国画，同时询问他是否可以接机．信中还需说明：\n李明：高个子，戴眼镜；航班号：CA985；到达：8月6日上午11：30.",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "开头语和结束语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Peter,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "请求接机"
+  },
+  {
+    "year": 2013,
+    "region": "新课标Ⅱ卷",
+    "genre": "Letter",
+    "prompt": "假定你是李华，自制一些中国结（Chinese knot）。给开网店的美国朋友Tom写封信，请他代卖，要点包括：\n1. 外观（尺寸、颜色、材料）；\n2. 象征意义；\n3. 价格。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "开头语已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Tom,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "请求代卖"
+  },
+  {
+    "year": 2012,
+    "region": "新课标卷",
+    "genre": "Email",
+    "prompt": "假定你是李华，从互联网上得知一个国际中学生组织将在新加坡（Singapore）举办夏令营，欢迎各国学生参加。请写一封电子邮件申请参加。\n内容主要包括:\n1. 自我介绍（包括英语能力）；\n2. 参加意图（介绍中国、了解其他国家）；\n3. 希望获准。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯",
+      "邮件开头和结尾已为你写好"
+    ],
+    "scaffold": {
+      "start": "Dear Sir or Madam,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "申请报名"
+  },
+  {
+    "year": 2025,
+    "region": "浙江（1月）",
+    "genre": "Speech",
+    "prompt": "你将参加英语课上的“一分钟演讲”活动。请你针对部分同学在校园内用手机拍摄短视频的现象写一篇演讲稿，内容包括：\n(1) 陈述看法；\n(2) 提出建议。",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题纸的相应位置作答"
+    ],
+    "header": "My Views on Filming Short Videos on Campus",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "陈述看法"
+  },
+  {
+    "year": 2024,
+    "region": "浙江（1月）",
+    "genre": "Article/Submission",
+    "prompt": "请你写一篇短文向校英文报“Sports and Health”栏目投稿，向同学们推荐一项适合课间开展的运动，内容包括：\n1. 介绍这项运动；\n2. 说明推荐理由。",
+    "note": [
+      "写作词数应为80个左右",
+      "请按如下格式在答题卡的相应位置作答："
+    ],
+    "header": "Stand Up and Exercise, Everybody!",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "运动推荐"
+  },
+  {
+    "year": 2023,
+    "region": "浙江（1月）",
+    "genre": "Report",
+    "prompt": "上周末你参加了校学生会组织的“认识我们身边的植物”活动。请为校英文报写篇报道，内容包括：\n1. 活动的过程；\n2. 收获与感想",
+    "note": [
+      "写作词数应为80左右",
+      "请按如下格式在答题纸的相应位置作答"
+    ],
+    "header": "Getting to Know the Plants Around Us",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "撰写报道"
+  },
+  {
+    "year": 2022,
+    "region": "浙江（7月）",
+    "genre": "Letter",
+    "prompt": "假定你是李华，你校图书馆新开设“小组学习室”，请你给你的留学生同学Michael写一封信，邀请 he一同体验，内容包括：\n1.位置与开放时间； 2.室内设施和功能。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "邀请体验"
+  },
+  {
+    "year": 2022,
+    "region": "浙江（1月）",
+    "genre": "Email",
+    "prompt": "假定你是李华，在“中国-爱尔兰文化节”活动中结识了爱尔兰朋友Chris，现在 he已回国，请你给 he写一封邮件，内容包括：\n1. 回忆活动经历；2. 分享个人收获；3. 希望保持联系。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "分享收获"
+  },
+  {
+    "year": 2021,
+    "region": "浙江（6月）",
+    "genre": "Article/Submission",
+    "prompt": "昨天你参观了学校举办的学生国画作品展。请给校英文报写一篇宣传，内容包括：\n1. 展览时间、地点；\n2. 观展感受；\n3. 推荐观展。",
+    "note": [
+      "词数80左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "展览宣传"
+  },
+  {
+    "year": 2021,
+    "region": "浙江（1月）",
+    "genre": "Speech",
+    "prompt": "假定你是李华，下周有新西兰学生访问你校，你将作为学生代表致欢迎辞。请为此写一篇 发言稿，内容包括：\n1. 表示欢迎；\n2. 介绍活动安排；\n3. 表达祝愿。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "表示欢迎"
+  },
+  {
+    "year": 2020,
+    "region": "浙江（7月）",
+    "genre": "Email",
+    "prompt": "假定你是李华，你校来自爱尔兰的外教Peter因病回国休假。请给他写一封电子邮件，内容包括:1. 询问近况；2. 分享班级最新消息；3. 表达祝愿。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "慰问近况"
+  },
+  {
+    "year": 2020,
+    "region": "浙江（1月）",
+    "genre": "Email",
+    "prompt": "假定你是李华,你校将举办外国学生中文演讲比赛,请给你的英国朋友 George写封邮件邀请 he参加内容包括:\n1.比赛时间; 2.演讲话题; 3.报名方式。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节,以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2019,
+    "region": "浙江（6月）",
+    "genre": "Email",
+    "prompt": "假定你是李华，经常帮助你学习英语的朋友Alex即将返回自己的国家。请给他写一封邮件，内容包括:\n1.表示感谢；\n2.回顾Alex对你的帮助；\n3.临别祝愿。",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "表达感谢"
+  },
+  {
+    "year": 2018,
+    "region": "浙江（11月）",
+    "genre": "Email",
+    "prompt": "假定你是李华，乘坐FL753航班抵达伦敦后发现钱包遗失，请给航空公司写一封邮件说明情况并寻求帮助。内容包括：\n1. 行程信息；\n2. 钱包特征；\n3. 联系方式。",
+    "note": [
+      "词数80左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "寻求帮助"
+  },
+  {
+    "year": 2018,
+    "region": "浙江（6月）",
+    "genre": "Letter",
+    "prompt": "假定你是李华，你校英语协会招聘志愿者，接待来访的国外中学生。请你写信应聘，内容包括：\n1. 口语能力：\n2. 相关经验；\n3. 应聘目的。",
+    "note": [
+      "词数80左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "申请报名"
+  },
+  {
+    "year": 2017,
+    "region": "浙江（11月）",
+    "genre": "Letter",
+    "prompt": "假定你是李华，得知外教Mr. Hall寒假不回国，想邀请他到你家过春节。请给他写一封信，内容包括：\n 1.时间；\n 2.一同过节的家人；\n 3.活动。",
+    "note": [
+      "词数100左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "邀请过节"
+  },
+  {
+    "year": 2017,
+    "region": "浙江（6月）",
+    "genre": "Email",
+    "prompt": "假定你是李华，计划组织一次郊游，请给你的英国朋友Chris写封邮件邀请他参加。内容包括：\n1. 参加者；\n2. 时间、地点；\n3. 活动：登山、野餐等。",
+    "note": [
+      "词数80左右",
+      "可以适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2016,
+    "region": "浙江（10月）",
+    "genre": "Email",
+    "prompt": "假定你是李华。下学期你将作为交换生（exchange student）去加拿大一所高中学习，住在Lynn家里。请给Lynn写一封邮件，内容包括：\n1.介绍自己: 2.告知到达时间： 3.询问应做何准备.",
+    "note": [
+      "词数80左右",
+      "可适当增加细节，以使行文连贯"
+    ],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "行前咨询"
+  },
+  {
+    "year": 2025,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。联合国正面向全球青少年开展倡议征集活动。你的外国好友 Jim打算参加，为此发来邮件，就倡议内容询问你的建议。请你用英文给他回复，内容包括：\n1. 提出的建议；\n2. 建议的理由。\n提示词：倡议 proposal",
+    "note": [
+      "词数 100 左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2024,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你的外国好友Jim准备给其校报的Asia Today栏目投稿。得知今年新中国成立75周年，他打算重点介绍中国的发展成就，发来邮件询问你的建议。请你用英文给他回复，内容包括：\n(1)建议投稿内容；\n(2)就以上建议简要说明理由。",
+    "note": [
+      "词数100左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2023,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你的英国好友Jim正在策划一次以“绿色北京”为主题的社团活动，他发来邮件询问你的建议。请你用英文给他回复，内容包括：\n(1)活动形式；\n(2)活动内容。",
+    "note": [
+      "词数100左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim，",
+      "end": "Yours，\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2022,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你打算邀请英国好友Jim为你们班做一次关于英语写作的线上经验交流。请你用英文给他写一封电子邮件，内容包括：\n1．建议交流的具体内容及其原因；\n2．交流时间和其他相关事项。",
+    "note": [
+      "词数100左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours\nLi Hua"
+    },
+    "task": "邀请交流"
+  },
+  {
+    "year": 2021,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你和英国好友Jim原定本周末一起外出，你因故不能赴约。请你用英文给他写一封电子邮件，内容包括：\n1.表达歉意并说明原因；\n2.提出建议并给出理由。",
+    "note": [
+      "词数100左右",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours\nLi Hua"
+    },
+    "task": "表达歉意"
+  },
+  {
+    "year": 2020,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你们学校英语戏剧俱乐部外籍指导教师Jim因疫情滞留英国。复学在即，作为俱乐部负责人，你给Jim写一封电子邮件，请他推荐一名外籍指导教师，内容包括：\n1. 条件及要求；\n2. 表示感谢并提醒注意防护。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "请求推荐"
+  },
+  {
+    "year": 2019,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你的英国好友Jim打算暑假期间来北京、天津和上海旅游，发来邮件询问相关信息。请你给他回复邮件，内容包括:\n1. 交通出行；\n2. 必备衣物。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已经给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "回复咨询"
+  },
+  {
+    "year": 2018,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华，你的英国朋友Jim在给你的邮件中提到他对中国文化感兴趣，计划明年来北京上大学。他向你咨询相关信息。请给他回邮件，内容包括：\n1. 表示欢迎；\n2. 推荐 he上哪所大学；\n3. 建议 he做哪些准备工作。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2017,
+    "region": "北京",
+    "genre": "Letter",
+    "prompt": "你的英国朋友Jim所在的学校要组织学生来中国旅行，有两条线路可以选择：“长江之行”或者“泰山之旅”。Jim来信希望你能给些建议。请你给他回信，内容包括：\n1.你建议的线路；\n2.你的理由；\n3.你的祝愿。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "建议选择"
+  },
+  {
+    "year": 2016,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华。你的英国朋友Jim在给你的邮件中提到他对中国历史很感兴趣, 并请你介绍一位你喜欢的中国历史人物.请你给Jim回信, 内容包括：\n1.该人物是谁；\n2.该人物的主要贡献；\n3.该人物对你的影响。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yours,\nLi Hua."
+    },
+    "task": "介绍人物"
+  },
+  {
+    "year": 2015,
+    "region": "北京",
+    "genre": "Email",
+    "prompt": "假设你是红星中学高三学生李华，请给你的美国朋友Jim写一封 邮件，告诉他你打算参加龙舟训练营，希望他一起参加。邮件的内容 包括：\n1. 介绍训练营的相关内容（例如：时间、地点、参加者等）；\n2. 说明你打算参加的原因；\n3. 询问对方的意向。",
+    "note": [
+      "词数不少于50",
+      "开头和结尾已给出，不计入总词数",
+      "提示词：龙舟训练营 Dragon Boat Training Camp"
+    ],
+    "scaffold": {
+      "start": "Dear Jim,",
+      "end": "Yous,\nLi Hua"
+    },
+    "task": "邀请参加"
+  },
+  {
+    "year": 2014,
+    "region": "北京",
+    "genre": "Letter",
+    "prompt": "你给英国朋友Chris写一封信，内容包括：\n1.你们原计划7月份一同去云南旅游；\n2.由于脚部受伤，你无法按原计划前往；\n3.表达你的歉意并建议将旅行推迟到8月份。",
+    "note": [
+      "词数不少于50",
+      "可适当增加细节，以使行文连贯",
+      "开头和结尾已给出，不计入总词数"
+    ],
+    "scaffold": {
+      "start": "Dear Chris,",
+      "end": "Yours,\nJoe"
+    },
+    "task": "表达歉意"
+  },
+  {
+    "year": 2023,
+    "region": "上海（秋考）",
+    "genre": "Article/Submission",
+    "prompt": "你是明启中学高三学生吴磊，你校英语节即将举行主题为“快乐童年”的展览，邀请每个同学提供一件生活中物品参展，并撰写展品介绍供参观者阅读，要求描述展品以及选择原因。\n内容必须包括：\n1）对该物品的简要描述\n2）你选择该物品参展的原因",
+    "note": [],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "物品介绍"
+  },
+  {
+    "year": 2023,
+    "region": "上海（春考）",
+    "genre": "Email",
+    "prompt": "你们班的口语课外教Tom发现你们班课上互动不积极，委托你了解同学们的想法，经过你对全班同学看法的了解，有些同学表示对课堂上讨论的话题不感兴趣，有些同学害怕犯错，不敢开口。\n1. 向 Tom 反映同学的想法\n2. 向 Tom 提出建议并说明理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Tom,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2022,
+    "region": "上海（秋考）",
+    "genre": "Article/Submission",
+    "prompt": "假使你是明启中学的高三学生李华，你的学校正在组织“走进历史”主题活动，拟从三个活动形式里选择一个：走访老战士、表演历史剧和制作短视频。学校正在向全体师生征求建议。\n内容必须包含：\n（1）你的选择；\n（2）你的理由。",
+    "note": [],
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "做出选择"
+  },
+  {
+    "year": 2022,
+    "region": "上海（春考）",
+    "genre": "Email",
+    "prompt": "假设你是明启中学高三学生李明, 入冬以来，你校组织全校师生每周一至周五晨跑时间为7:30—7:50, 休息5分钟后上第一节课。但有同学反映, 晨跑后身体不适, 因此学校委托学生会征询大家对晨跑的意见。请你给学生会写一封邮件。\n内容必须包括：\n(1) 你认为该晨跑安排中存在的问题；\n(2) 你的改进建议及理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Student Union,",
+      "end": "Yours sincerely,\nLi Ming"
+    },
+    "task": "提出建议"
+  },
+  {
+    "year": 2021,
+    "region": "上海（春考）",
+    "genre": "Email",
+    "prompt": "假如你是明启中学的高三学生王佳，你学校的教师Lucy准备在高中开设关于信息素养（information literacy）的课程。课程包含以下四个板块：网站设计、大数据处理、辨别真伪信息和精确搜索信息。现在向全体同学征求建议。请你给她写一份电子邮件。\n（1）选择两个你感兴趣的板块；\n（2）说明为什么选择这个板块的理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Lucy,",
+      "end": "Yours sincerely,\nWang Jia"
+    },
+    "task": "做出选择"
+  },
+  {
+    "year": 2020,
+    "region": "上海（秋考）",
+    "genre": "Email",
+    "prompt": "明启中学的高三学生李华邀请王磊参加下周五郊外的露天音乐会，但王磊由于路远，交通不便等原因犹豫不决，写封邮件说服他一起去。信的内容包括：\n（1）提出解决问题的方法；\n（2）阐释音乐会的重要性。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Wang Lei,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "说服参与"
+  },
+  {
+    "year": 2020,
+    "region": "上海（春考）",
+    "genre": "Letter",
+    "prompt": "如果你是明启中学的高三学生李华，你在某英语节目中看到一超市对于临近保质期的食物处理办法向公众征求意见，请给超市经理写一封信谈谈你的看法。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Manager,",
+      "end": "Yours sincerely,\nLi Hua"
+    },
+    "task": "发表看法"
+  },
+  {
+    "year": 2019,
+    "region": "上海（秋考）",
+    "genre": "Letter",
+    "prompt": "假如你是李敏，在一本英文旅游杂志上，你发现了这样一条信息:某古城景区对当地人收费5美元，对外国人收费15美元，针对这一情况，请你以李敏的口吻给该杂志编辑写一封信。\n1. 介绍一下你在杂志上看到的内容;\n2. 自己针对此事的态度以及理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Editor,",
+      "end": "Yours sincerely,\nLi Min"
+    },
+    "task": "发表看法"
+  },
+  {
+    "year": 2019,
+    "region": "上海（春考）",
+    "genre": "Letter",
+    "prompt": "假如你是明启中学的李华，你的朋友李楠给你写了一封信，告诉你他要开发一个新的APP，用这个软件共享衣服，想要征集大家的看法，你是否愿意共享你的衣服，给出理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Li Nan,",
+      "end": "Yours,\nLi Hua"
+    },
+    "task": "反馈意见"
+  },
+  {
+    "year": 2018,
+    "region": "上海（秋考）",
+    "genre": "Article/Submission",
+    "prompt": "假设你是明启中学高三学生卢平，你校英语报向全体高三学生征文，题目为\"My teachers\"，你有意投稿，撰写一篇文章，内容包括:\n1. 对遇到过的老师进行分类；\n2. 具体描述每一门课目的老师。",
+    "note": [],
+    "header": "My Teachers",
+    "scaffold": {
+      "start": "",
+      "end": ""
+    },
+    "task": "介绍人物"
+  },
+  {
+    "year": 2018,
+    "region": "上海（春考）",
+    "genre": "Article/Submission",
+    "prompt": "假设你是明启中学的学生王磊，你校计划引进一个机器人担任餐厅服务员或者图书馆管理员，并在英语贴吧征求学生意见，你很感兴趣，决定回帖响应，你所写的内容应包括：\n1．你认为机器人适合担任的一个岗位，二选一；\n2．通过比较，阐述你选择的理由，可以从工作效率、服务范围等方面进行表述。",
+    "note": [],
+    "scaffold": {
+      "start": "Hi,",
+      "end": "Wang Lei"
+    },
+    "task": "做出选择"
+  },
+  {
+    "year": 2017,
+    "region": "上海（春考）",
+    "genre": "Letter",
+    "prompt": "假设你是明启中学的学生王磊，你的好友李宏今年暑期将赴英国参加为期两个月的海外交流活动。如果选择主办方安排的住宿，他需要额外支付较高的费用。但他也可以通过为当地社区养老院提供每月三十小时的义工服务，获得在养老院免费住宿的机会。李宏通过邮件向你征求意见。写一封回信，内容须包括：\n1. 你对此事的明确态度；\n2. 你的理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Li Hong,",
+      "end": "Yours sincerely,\nWang Lei"
+    },
+    "task": "建议选择"
+  },
+  {
+    "year": 2014,
+    "region": "上海（秋考）",
+    "genre": "Email",
+    "prompt": "学校英语报正在酝酿改版，拟从现有的三个栏目（健康、娱乐、文化）中去除一个，并从三个备选栏目（时尚、职业规划、读者反馈）中挑选一个纳入该报。假设你是该校学生程飞，给校报编辑写一封电子邮件，表达你的观点。邮件须包括以下内容：\n1．你建议去除的栏目及去除的理由；\n2．你建议增加的栏目及增加的理由。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Editor,",
+      "end": "Yours sincerely,\nCheng Fei"
+    },
+    "task": "做出选择"
+  },
+  {
+    "year": 2013,
+    "region": "上海（秋考）",
+    "genre": "Letter",
+    "prompt": "上海博物馆拟举办一次名画展，现就展出场所（博物馆还是社区图书馆）征集公众意见。假设你是王敏，给上海博物馆写一封信表达你的想法。你的信必须满足以下要求：\n1. 简述你写信的目的及你对场所的选择；\n2. 说明你的理由（从便利性、专业性等方面对这两个场所进行对比）。",
+    "note": [],
+    "scaffold": {
+      "start": "Dear Sir/Madam,",
+      "end": "Yours sincerely,\nWang Min"
+    },
+    "task": "做出选择"
+  }
+]

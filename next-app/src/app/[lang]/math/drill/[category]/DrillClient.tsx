@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
-import { ChevronRight, Clock, Lightbulb } from 'lucide-react';
+import { ChevronRight, Clock, Lightbulb, ChevronLeft } from 'lucide-react';
 import questionsData from '@/data/math-questions.json';
 import Link from 'next/link';
 
@@ -78,9 +78,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     if (!question) {
         return (
-            <div className="p-10 text-center">
-                <h2 className="text-xl font-bold">该题库暂无题目 ({category})</h2>
-                <Link href={`/${lang}/math`} className="text-indigo-600 hover:underline mt-4 inline-block">返回选择其他专题</Link>
+            <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
+                <h2 className="text-xl font-bold mb-4">该题库暂无题目 ({category})</h2>
+                <Link href={`/${lang}/math`} className="text-sm text-slate-500 hover:text-indigo-600 flex items-center gap-1 font-medium group">
+                    <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                    返回
+                </Link>
             </div>
         );
     }
@@ -90,8 +93,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              {/* Header */}
              <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
                  <div>
-                    <Link href={`/${lang}/math`} className="text-sm text-slate-500 hover:text-indigo-600 mb-1 inline-flex items-center">
-                        ← 返回专题列表
+                    <Link href={`/${lang}/math`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
+                        <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                        返回
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900">
                         {CATEGORY_NAMES[category] || category} <span className="text-indigo-600">强化训练</span>
