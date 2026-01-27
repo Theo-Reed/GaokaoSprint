@@ -24,7 +24,7 @@ JSON structure:
 Requirements:
 - Response in Chinese. 4 suggestions (60-80 words each).
 - Summary (60-80 words) MUST focus on "Why Deducted" (为什么扣分).
-- Raw JSON only. NO titles.`;
+- STRICTLY VALID JSON ONLY. Do not use Markdown backticks. Start with {. End with }.`;
 
 const GPT_PROMPT = `You are an elite Gaokao English examiner (GPT-4o version).
 Follow these Grading Tiers (15-point basis):
@@ -49,7 +49,8 @@ JSON structure:
 Requirements:
 - Response in Chinese. 4 suggestions (60-80 words each).
 - Summary (60-80 words) MUST detail exactly why points were lost.
-- Raw JSON only. NO titles.`;
+- STRICTLY VALID JSON ONLY. Do not use Markdown backticks. Start with {. End with }.
+- Ensure NO unescaped quotes or control characters inside JSON values.`;
 
 const DEEPSEEK_PROMPT = `你是一位顶尖高考英语阅卷专家。请严格执行以下分档标准：
 
@@ -75,7 +76,8 @@ JSON 结构：
 要求：
 - 中文回答。4条建议（每条60-80字）。
 - Summary (60-80字) 必须明确解答“为什么扣分”。
-- 只返回 JSON，不要标题前缀。`;
+- 严禁 Markdown 格式。只返回合法的 JSON 字符串。
+- 确保 JSON 值中没有未转义的换行符或引号。`;
 
 const CLAUDE_PROMPT = `You are a senior Gaokao English specialist (Claude-3.7).
 Grading Framework:
