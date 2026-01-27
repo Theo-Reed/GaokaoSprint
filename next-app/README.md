@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GaokaoSprint - Next.js App
+
+This is the AI-powered core of the GaokaoSprint project, hosted at [https://gaokao-sprint.vercel.app/cn/trainer/](https://gaokao-sprint.vercel.app/cn/trainer/).
 
 ## Getting Started
 
