@@ -43,7 +43,10 @@ SYSTEM_PROMPT = """
 - `question_number`: 题号 (例如 "15", "16", "17")
 - `large_question_rank`: 这是第几道大题 (例如 "1", "2", "3", "4", "5")。请根据这些大题在试卷中出现的先后顺序来判定。
 - `category`: 题目类型，必须是以下之一：[圆锥曲线, 导数, 立体几何, 三角函数, 数列, 概率, 其他]
-- `content`: 题目的完整文本内容。数学公式请使用 LaTeX 格式（尽量用 $ 包裹）。一定要保持原题的完整性，包括题干和所有的小问。
+- `content`: 题目的完整文本内容。数学公式请使用 LaTeX 格式。
+  **重要警告：在 JSON 字符串中，LaTeX 的反斜杠必须转义！** 
+  例如：不要写 `\frac{1}{2}`，而要写 `\\frac{1}{2}`。不要写 `\alpha`，要写 `\\alpha`。
+  一定要保持原题的完整性，包括题干和所有的小问。
 - `score`: 该题分值（如果能识别到）。
 - `thought_process`: (新增) 针对这道题，给出简要的解题思路提示（不要直接给答案，而是给切入点，例如“先利用正弦定理化简...”, “联立直线与椭圆方程...”）。
 - `source`: 试卷来源（这一点请根据试卷标题填写，例如“2024全国甲卷”）。
@@ -62,6 +65,12 @@ CATEGORY_MAP = {
     '概率统计': 'probability',
     '其他': 'other'
 }
+
+def clean_json_string(text):
+    """尝试修复常见的 JSON LaTeX 转义错误"""
+    # 1. 移除 Markdown 代码块标记
+    text = text.replace('```json', '').replace('```', '').strip()
+    return text
 
 def find_answer_section_start(pdf_path):
     """查找'解答题'开始的页码（1-based）"""
@@ -130,7 +139,7 @@ def call_gemini_with_pdf(api_key, model, prompt, pdf_path, source_name="Unknown"
             ]
         }],
         "generationConfig": {
-            "temperature": 0.5,
+            "temperature": 0.4, 
             "response_mime_type": "application/json"
         }
     }
@@ -149,9 +158,25 @@ def call_gemini_with_pdf(api_key, model, prompt, pdf_path, source_name="Unknown"
             
             if 'candidates' in data and len(data['candidates']) > 0:
                 text_response = data['candidates'][0]['content']['parts'][0]['text']
-                text_response = text_response.replace('```json', '').replace('```', '').strip()
-                result_questions = json.loads(text_response)
-                break 
+                cleaned_text = clean_json_string(text_response)
+                try:
+                    result_questions = json.loads(cleaned_text)
+                    break 
+                except json.JSONDecodeError as e:
+                    print(f"JSON Parse Error (Position {e.pos}): {e.msg}")
+                    # Try a very aggressive fix 
+                    print("Trying aggressive regex fix for LaTeX backslashes...")
+                    fixed_text = re.sub(r'\\(?![\\/bfnrtu"\'`])', r'\\\\', cleaned_text)
+                    try:
+                        result_questions = json.loads(fixed_text)
+                        print("Aggressive fix Success!")
+                        break
+                    except json.JSONDecodeError as e2:
+                        print(f"Aggressive fix Failed: {e2.msg} at {e2.pos}")
+                            
+                    time.sleep(2)
+                    continue
+
             else:
                 print(f"Warning: No candidates returned for {source_name}")
         except requests.exceptions.RequestException as e:
@@ -200,14 +225,13 @@ def main():
         
         if year_match and os.path.isdir(os.path.join(MATH_PAPERS_ROOT, ydir)):
             current_year_dir = os.path.join(MATH_PAPERS_ROOT, ydir)
-            files = [f for f in os.listdir(current_year_dir) if f.endswith('.pdf') and '空白卷' in f]
+            files = [f for f in os.listdir(current_year_dir) if f.endswith('.pdf') and '空白卷' in f and '_truncated' not in f]
             
             for filename in files:
                 name = filename.replace('（空白卷）.pdf', '').replace('.pdf', '')
                 # Skip if already processed
                 if name in existing_sources or \
                    any(s in name for s in existing_sources if len(s) > 5): # Fuzzy match check
-                    # print(f"Skipping {name} (Already in DB)")
                    pass
                 else:
                      tasks.append({
@@ -250,7 +274,7 @@ def main():
             print(f"X {task['name']} 提取失败。")
         
         # Sleep to be nice to the API
-        time.sleep(10)
+        time.sleep(5)
 
     print(f"\n全部任务完成。当前总题目数: {len(all_questions)}")
 
