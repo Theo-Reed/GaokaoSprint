@@ -44,12 +44,12 @@ export default function AuthOverlay({ onLoginSuccess }: { onLoginSuccess: () => 
         
         <div className="space-y-4">
             <input 
-            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all" 
+            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
             placeholder="Email Address" 
             value={email} onChange={e => setEmail(e.target.value)}
             />
             <input 
-            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all" 
+            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
             type="password" placeholder="Password (6+ chars)" 
             value={password} onChange={e => setPassword(e.target.value)}
             />

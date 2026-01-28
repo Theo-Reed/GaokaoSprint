@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BIOLOGY_SC1_DATA, BiologyPoint } from '@/data/biology-sc1-data';
+import { BIOLOGY_SC1_DATA, BiologyPoint } from '@/data/biology/sc1-data';
 
 export default function BiologyExplorer() {
   const [selectedPoint, setSelectedPoint] = useState<BiologyPoint>(BIOLOGY_SC1_DATA[0]);

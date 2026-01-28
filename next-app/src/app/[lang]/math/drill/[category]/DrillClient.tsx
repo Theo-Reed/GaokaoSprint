@@ -7,15 +7,17 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, Lightbulb, ChevronLeft } from 'lucide-react';
-import questionsData from '@/data/math-questions.json';
+import questionsData from '@/data/math/questions.json';
 import Link from 'next/link';
 
 interface Question {
   question_number: string;
+  large_question_rank?: string;
   category: string;
   content: string;
   score: string;
   thought_process: string;
+  source?: string;
 }
 
 interface DrillClientProps {
@@ -27,6 +29,26 @@ const getRandomQuestion = (category: string) => {
     const filtered = questionsData.filter(q => q.category === category);
     if (filtered.length === 0) return null;
     return filtered[Math.floor(Math.random() * filtered.length)];
+};
+
+const getQuestionRankInSource = (currentQ: Question): number | null => {
+    if (!currentQ.source) return null;
+    
+    // Filter questions from the same source
+    // Note: casting questionsData to any[] to avoid strict type checks on json import if needed, 
+    // but here it matches implicitly. Use explicit filter.
+    const sameSourceQs = (questionsData as unknown as Question[]).filter(q => q.source === currentQ.source);
+    
+    // Sort by question_number strictly as integers
+    sameSourceQs.sort((a, b) => {
+        const numA = parseInt(a.question_number);
+        const numB = parseInt(b.question_number);
+        return numA - numB;
+    });
+    
+    // Find index
+    const index = sameSourceQs.findIndex(q => q.question_number === currentQ.question_number);
+    return index !== -1 ? index + 1 : null;
 };
 
 const CATEGORY_NAMES: Record<string, string> = {
@@ -46,7 +68,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     useEffect(() => {
         const q = getRandomQuestion(category);
-        setQuestion(q);
+        setQuestion(q as Question);
         setTimer(0);
         setIsRunning(true);
         setShowHint(false);
@@ -70,11 +92,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     const handleNext = () => {
         const q = getRandomQuestion(category);
-        setQuestion(q);
+        setQuestion(q as Question);
         setTimer(0);
         setIsRunning(true);
         setShowHint(false);
     };
+
+    // Calculate source rank if available
+    const sourceRank = question ? getQuestionRankInSource(question) : null;
+
 
     if (!question) {
         return (
@@ -111,7 +137,29 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              </div>
 
              {/* Question Card */}
-             <div className="bg-white shadow-lg rounded-2xl p-8 mb-8 border border-slate-100 flex-grow">
+             <div className="bg-white shadow-lg rounded-2xl p-8 mb-8 border border-slate-100 flex-grow relative overflow-hidden">
+                {/* Source Badge */}
+                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
+                    {question.source && (
+                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full border border-indigo-100">
+                            {question.source}
+                        </span>
+                    )}
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-sm font-medium rounded-full border border-slate-200">
+                        {question.large_question_rank 
+                            ? `第 ${question.question_number} 题 / 第 ${question.large_question_rank} 道大题`
+                            : sourceRank
+                                ? `第 ${question.question_number} 题 / 第 ${sourceRank} 道大题`
+                                : `第 ${question.question_number} 题`
+                        }
+                    </span>
+                    {question.score && question.score !== "Not specified" && (
+                         <span className="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium rounded-full border border-amber-100 ml-auto">
+                            {question.score} 分
+                        </span>
+                    )}
+                </div>
+
                 <div className="prose prose-slate prose-lg max-w-none">
                     <ReactMarkdown 
                         remarkPlugins={[remarkMath]} 

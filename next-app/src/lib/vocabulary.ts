@@ -1,4 +1,4 @@
-import vocabularyData from '@/data/vocabulary_app_data_refined_final.json';
+import vocabularyData from '@/data/english/vocabulary.json';
 
 export interface Meaning {
   cn: string[];

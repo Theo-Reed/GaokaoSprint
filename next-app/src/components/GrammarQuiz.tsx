@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "../data/training-data";
+import { EXAM_POOL, QuizQuestion, ANALYSIS_LEVELS } from "../data/english/training-data";
 import { sample, sampleSize } from "lodash";
 import { useGrammarProgress } from "@/hooks/useGrammarProgress";
 
@@ -203,12 +203,12 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-indigo-600 text-white p-4 flex justify-between items-center">
+      <div className="bg-indigo-500 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>⚔️</span> {text.title}
           </h3>
-          <p className="text-indigo-200 text-xs mt-1">
+          <p className="text-indigo-100 text-xs mt-1">
             {text.question} {currentQuizIndex + 1} / {quizPool.length}
           </p>
         </div>
@@ -251,7 +251,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                     value={examInput}
                     onChange={(e) => setExamInput(e.target.value)}
                     placeholder={text.placeholder}
-                    className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 outline-none transition-all"
+                    className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 outline-none transition-all text-slate-900 font-medium placeholder:text-slate-400"
                     disabled={isExamCorrect || (!!examFeedback && !isExamCorrect)}
                 />
             </div>
@@ -263,8 +263,8 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                 disabled={!examInput && !examFeedback}
                 className={`w-full py-2.5 rounded-lg font-bold text-white shadow-sm transition-all ${
                     isExamCorrect 
-                    ? 'bg-green-500 hover:bg-green-600' 
-                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-slate-900 hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed')
+                    ? 'bg-green-600 hover:bg-green-700' 
+                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed')
                 }`}
             >
                 {isExamCorrect 

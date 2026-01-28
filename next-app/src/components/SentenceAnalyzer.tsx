@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ANALYSIS_LEVELS } from "../data/training-data";
+import { ANALYSIS_LEVELS } from "../data/english/training-data";
 
 type ToolType = "subject" | "verb" | "object" | null;
 
@@ -79,26 +79,26 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-indigo-600 text-white p-4 flex justify-between items-center">
+      <div className="bg-indigo-500 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>🧬</span> {text.title}
           </h3>
-          <p className="text-indigo-100 text-xs mt-1">
+          <p className="text-indigo-50 text-xs mt-1">
             {text.level} {currentAnalyzeIndex + 1} / {ANALYSIS_LEVELS.length} • {currentSentence.difficulty}
           </p>
         </div>
         <div className="flex gap-2">
            <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.max(0, currentAnalyzeIndex - 1))}
-                className="p-2 bg-indigo-700 rounded hover:bg-indigo-500 text-xs disabled:opacity-50"
+                className="p-2 bg-indigo-600 rounded hover:bg-indigo-400 text-xs disabled:opacity-50"
                 disabled={currentAnalyzeIndex === 0}
             >
                 {text.prev}
             </button>
             <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.min(ANALYSIS_LEVELS.length - 1, currentAnalyzeIndex + 1))}
-                className="p-2 bg-white text-indigo-700 rounded hover:bg-indigo-50 text-xs font-bold disabled:opacity-50"
+                className="p-2 bg-white text-indigo-500 rounded hover:bg-indigo-50 text-xs font-bold disabled:opacity-50"
                 disabled={currentAnalyzeIndex === ANALYSIS_LEVELS.length - 1}
             >
                 {text.next}
@@ -112,7 +112,7 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
         <div className="mb-6 flex gap-2 justify-center w-full">
           <ToolButton label={text.tools.s} color="red" active={selectedTool === 'subject'} onClick={() => setSelectedTool('subject')} />
           <ToolButton label={text.tools.v} color="yellow" active={selectedTool === 'verb'} onClick={() => setSelectedTool('verb')} />
-          <ToolButton label={text.tools.o} color="blue" active={selectedTool === 'object'} onClick={() => setSelectedTool('object')} />
+          <ToolButton label={text.tools.o} color="indigo" active={selectedTool === 'object'} onClick={() => setSelectedTool('object')} />
         </div>
 
         {/* Sentence Display */}
@@ -121,7 +121,7 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
             let style = "border-b-4 border-transparent hover:bg-slate-50 cursor-pointer transition-all px-1 rounded";
             if (foundIndices.subject.includes(index)) style = "border-b-4 border-red-500 bg-red-50 text-red-900";
             if (foundIndices.verb.includes(index))    style = "border-b-4 border-yellow-500 bg-yellow-50 text-yellow-900 font-bold transform scale-105 shadow-sm";
-            if (foundIndices.object.includes(index))  style = "border-b-4 border-blue-500 bg-blue-50 text-blue-900";
+            if (foundIndices.object.includes(index))  style = "border-b-4 border-indigo-500 bg-indigo-50 text-indigo-900";
 
             return (
               <span key={index} className={style} onClick={() => handleWordClick(index)}>{word}</span>
@@ -151,7 +151,7 @@ const ToolButton = ({ label, color, active, onClick }: { label: string, color: s
   const colorMap: Record<string, string> = {
     red:    active ? "bg-red-500 text-white border-red-600 shadow-md transform scale-105" : "bg-white text-red-600 border-red-200 hover:bg-red-50",
     yellow: active ? "bg-amber-400 text-amber-900 border-amber-600 shadow-md transform scale-105" : "bg-white text-amber-600 border-amber-200 hover:bg-amber-50",
-    blue:   active ? "bg-blue-500 text-white border-blue-600 shadow-md transform scale-105" : "bg-white text-blue-600 border-blue-200 hover:bg-blue-50",
+    indigo: active ? "bg-indigo-500 text-white border-indigo-600 shadow-md transform scale-105" : "bg-white text-indigo-500 border-indigo-100 hover:bg-indigo-50",
   };
 
   return (

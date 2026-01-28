@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 // @ts-ignore
-import rawData from '@/data/vocabulary_app_data_refined_final.json';
+import rawData from '@/data/english/vocabulary.json';
 import { supabase } from '@/lib/supabase';
 import AuthOverlay from '@/components/AuthOverlay';
 import { Languages, CheckCircle, RotateCcw } from 'lucide-react'; // Added icons

@@ -17,7 +17,6 @@ if (!fs.existsSync(contentDirectory)) {
 export interface MarkdownData {
   title: string;
   contentHtml: string;
-  content: string;
   [key: string]: any;
 }
 
@@ -65,7 +64,6 @@ export async function getMarkdownContent(lang: string, slugPath: string[]): Prom
   return {
     title: matterResult.data.title || slugPath[slugPath.length - 1],
     contentHtml,
-    content: matterResult.content,
     ...matterResult.data,
   };
 }
@@ -120,8 +118,8 @@ export function getNavigation(lang: string) {
             title: lang === 'cn' ? '工具' : 'Tools',
             items: [
                 { title: lang === 'cn' ? '英语语法特训' : 'English Syntax Trainer', href: `/${lang}/trainer` },
+                { title: lang === 'cn' ? '英语作文特训' : 'English Writing Trainer', href: `/${lang}/composition` },
                 { title: lang === 'cn' ? '英语单词特训' : 'Vocabulary Trainer', href: `/${lang}/vocabulary` },
-                { title: lang === 'cn' ? '英语作文特训' : 'Composition Trainer', href: `/${lang}/composition` },
                 { title: lang === 'cn' ? '数学大题特训' : 'Math Problem Trainer', href: `/${lang}/math` },
                 { title: lang === 'cn' ? '生物背书引擎' : 'Biology Memorization Engine', href: `/${lang}/biology` }
             ]
