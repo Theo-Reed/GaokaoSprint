@@ -228,20 +228,6 @@ if __name__ == "__main__":
     
     # Process one by one to avoid large simultaneous overhead
     tasks = [
-        # 2023
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（文）（全国乙卷）（空白卷）.pdf", "2023年高考数学试卷（文）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（文）（全国甲卷）（空白卷）.pdf", "2023年高考数学试卷（文）（全国甲卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（新课标Ⅰ卷）（空白卷）.pdf", "2023年高考数学试卷（新课标Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（新课标Ⅱ卷）（空白卷）.pdf", "2023年高考数学试卷（新课标Ⅱ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（理）（全国乙卷）（空白卷）.pdf", "2023年高考数学试卷（理）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（理）（全国甲卷）（空白卷）.pdf", "2023年高考数学试卷（理）（全国甲卷）"),
-        # 2022
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（文）（全国乙卷）（空白卷）.pdf", "2022年高考数学试卷（文）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（文）（全国甲卷）（空白卷）.pdf", "2022年高考数学试卷（文）（全国甲卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（新高考Ⅰ卷）（空白卷）.pdf", "2022年高考数学试卷（新高考Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（新高考Ⅱ卷）（空白卷）.pdf", "2022年高考数学试卷（新高考Ⅱ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（理）（全国乙卷）（空白卷）.pdf", "2022年高考数学试卷（理）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（理）（全国甲卷）（空白卷）.pdf", "2022年高考数学试卷（理）（全国甲卷）"),
         # 2021
         ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）（空白卷）.pdf", "2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）"),
         ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国甲卷）（空白卷）.pdf", "2021年高考数学试卷（文）（全国甲卷）"),

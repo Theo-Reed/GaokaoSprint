@@ -12,42 +12,60 @@ def extract_answers_from_pdf(pdf_path, source_name):
             full_text += page.extract_text() + "\n"
         
         results = {}
+        # New strategy: support multiple tags used in different paper versions
+        # 【答案】 is standard for some, 故选： and 故答案为： for others
+        results = {}
         
-        # New strategy: find all positions of "【答案】"
-        # For each position, look backwards for the first pattern like "\n1. " or " 1. "
-        tag = "【答案】"
-        pos = full_text.find(tag)
-        while pos != -1:
+        # We'll use a regex to find any of these tags
+        tag_pattern = r'【答案】|故选：|故答案为：'
+        matches = list(re.finditer(tag_pattern, full_text))
+        
+        for m in matches:
+            pos = m.start()
+            tag = m.group()
+            
             lookback_start = max(0, pos - 2000)
             lookback_text = full_text[lookback_start:pos]
             
-            # Question headers usually start at the beginning of a line in these PDFs
-            # or have a very distinctive format like "1. " or "1．"
+            # Question headers usually start at the beginning of a line or after a marker
+            # format like "1. " or "1．" or sometimes just "1 " or "1\n"
             # We want the LAST one before the answer tag.
-            num_matches = list(re.finditer(r'(?:^|\n)(\d+)[\.．]', lookback_text))
+            # Try specific patterns first (with dot or parenthesis)
+            num_matches = list(re.finditer(r'(?:^|\n|　)(\d+)[\.．（]', lookback_text))
+            if not num_matches:
+                # Fallback for older or weirdly formatted papers where it's just a number on its own line
+                num_matches = list(re.finditer(r'(?:^|\n|　)(\d+)\s*[\n\r]', lookback_text))
             
             if num_matches:
                 q_num = num_matches[-1].group(1)
                 
                 # Answer extraction
-                text_after_tag = full_text[pos + len(tag):pos + len(tag) + 100] # Take a window
+                # Increase window to handle longer answers or weird formatting
+                text_after_tag = full_text[pos + len(tag):pos + len(tag) + 300]
                 
                 # Check for choice first
-                ans_match = re.match(r'^\s*([A-D]+)', text_after_tag)
-                if ans_match:
-                    ans = ans_match.group(1)
+                # We look at the very beginning of the cleaned text
+                clean_after = text_after_tag.strip()
+                
+                # Choice matching: A-D followed by something that clearly ends the answer
+                choice_match = re.match(r'^([A-D]+)(?:\s+|【解析】|．|\n|$)', clean_after)
+                if choice_match:
+                    ans = choice_match.group(1)
                     if q_num not in results:
                         results[q_num] = list(ans) if len(ans) > 1 else ans
                 else:
-                    # It might be a fill-in answer. 
-                    # Usually ends at the next newline or "【解析】"
-                    fill_in_match = re.match(r'^\s*(.*?)(?=\n|【解析】|$)', text_after_tag, re.DOTALL)
+                    # Fill-in answer extraction
+                    # Take everything until next delimiter or double newline
+                    fill_in_match = re.search(r'^(.*?)(?=【解析】|【分析】|【解答】|\n\s*\d+[\.．]|\n\n|．|$)', clean_after, re.DOTALL)
                     if fill_in_match:
                         ans = fill_in_match.group(1).strip()
                         if ans and q_num not in results:
-                            results[q_num] = ans
+                            # Extra cleanup
+                            ans = ans.replace('$', '').strip()
+                            if ans: # Avoid empty strings
+                                results[q_num] = ans
             
-            pos = full_text.find(tag, pos + len(tag))
+            # pos = full_text.find(tag, pos + len(tag)) -- handled by finditer now
 
         print(f"  Found {len(results)} answers for {source_name}")
         # Debug: list found numbers
@@ -56,10 +74,6 @@ def extract_answers_from_pdf(pdf_path, source_name):
             print(f"  Numbers: {nums}")
             
         return results
-
-    except Exception as e:
-        print(f"Error reading {pdf_path}: {e}")
-        return {}
 
     except Exception as e:
         print(f"Error reading {pdf_path}: {e}")
@@ -96,20 +110,6 @@ if __name__ == "__main__":
     target_json = "/Users/yeatom/VSCodeProjects/gaokao/next-app/src/data/math/small_questions.json"
     
     tasks = [
-        # 2023
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（文）（全国乙卷）（解析卷）.pdf", "2023年高考数学试卷（文）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（文）（全国甲卷）（解析卷）.pdf", "2023年高考数学试卷（文）（全国甲卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（新课标Ⅰ卷）（解析卷）.pdf", "2023年高考数学试卷（新课标Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（新课标Ⅱ卷）（解析卷）.pdf", "2023年高考数学试卷（新课标Ⅱ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（理）（全国乙卷）（解析卷）.pdf", "2023年高考数学试卷（理）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2023·高考数学真题/2023年高考数学试卷（理）（全国甲卷）（解析卷）.pdf", "2023年高考数学试卷（理）（全国甲卷）"),
-        # 2022
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（文）（全国乙卷）（解析卷）.pdf", "2022年高考数学试卷（文）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（文）（全国甲卷）（解析卷）.pdf", "2022年高考数学试卷（文）（全国甲卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（新高考Ⅰ卷）（解析卷）.pdf", "2022年高考数学试卷（新高考Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（新高考Ⅱ卷）（解析卷）.pdf", "2022年高考数学试卷（新高考Ⅱ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（理）（全国乙卷）（解析卷）.pdf", "2022年高考数学试卷（理）（全国乙卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2022·高考数学真题/2022年高考数学试卷（理）（全国甲卷）（解析卷）.pdf", "2022年高考数学试卷（理）（全国甲卷）"),
         # 2021
         ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）（解析卷）.pdf", "2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）"),
         ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国甲卷）（解析卷）.pdf", "2021年高考数学试卷（文）（全国甲卷）"),
