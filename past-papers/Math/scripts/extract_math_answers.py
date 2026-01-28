@@ -3,6 +3,30 @@ import json
 import re
 from pypdf import PdfReader
 
+def normalize_math(text: str) -> str:
+    """Normalize math shorthand into LaTeX."""
+    if not text: return text
+    
+    # 1. Merge fragmented lines from PDF
+    text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text).strip()
+
+    # 2. Fix common math symbols missing backslash
+    symbols = [
+        'pi', 'sqrt', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 
+        'sin', 'cos', 'tan', 'log', 'ln', 'sigma', 'lambda', 'mu'
+    ]
+    for sym in symbols:
+        text = re.sub(r'(?<!\\)\b' + sym + r'\b', r'\\' + sym + ' ', text)
+    
+    # 3. Handle sqrtN -> \sqrt{N}
+    text = re.sub(r'\\sqrt\s*(\d+)', r'\\sqrt{\1}', text)
+    
+    # 4. Wrap math symbols in $ if they are not already
+    if any('\\' + sym in text for sym in symbols) and '$' not in text:
+        text = f"${text}$"
+        
+    return text.replace('  ', ' ').strip()
+
 def extract_answers_from_pdf(pdf_path, source_name):
     print(f"Extracting answers from {pdf_path}...")
     try:
@@ -58,16 +82,9 @@ def extract_answers_from_pdf(pdf_path, source_name):
                     # Take everything until next delimiter or double newline
                     fill_in_match = re.search(r'^(.*?)(?=【解析】|【分析】|【解答】|\n\s*\d+[\.．]|\n\n|．|$)', clean_after, re.DOTALL)
                     if fill_in_match:
-                        ans = fill_in_match.group(1).strip()
+                        ans = normalize_math(fill_in_match.group(1).strip())
                         if ans and q_num not in results:
-                            # NO LONGER stripping $ here
-                            # Clean fixes for common shorthand
-                            ans = re.sub(r'(?<!\\)\bpi\b', r'\\pi', ans)
-                            ans = re.sub(r'(?<!\\)\bsqrt', r'\\sqrt', ans)
-                            
-                            ans = ans.replace('$$', '$')
-                            if ans: # Avoid empty strings
-                                results[q_num] = ans
+                            results[q_num] = ans
             
             # pos = full_text.find(tag, pos + len(tag)) -- handled by finditer now
 

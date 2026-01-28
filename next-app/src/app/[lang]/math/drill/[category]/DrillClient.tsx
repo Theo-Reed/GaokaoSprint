@@ -63,27 +63,54 @@ const CATEGORY_NAMES: Record<string, string> = {
 const sanitizeMath = (text: string) => {
     if (!text || typeof text !== 'string') return text;
     
-    // Always try to fix basic missing backslashes for pi and sqrt, 
-    // using lookbehind to ensure we don't double-escape
-    let fixed = text
-        .replace(/(?<!\\)\bpi\b/g, '\\pi')
-        .replace(/(?<!\\)\bsqrt\b/g, '\\sqrt');
+    // 1. Basic formatting cleanup: normalize newlines and double dollars
+    let clean = text
+        .replace(/(?<!\n)\n(?!\n)/g, ' ')
+        .replace(/\r/g, '')
+        .replace(/\$\$/g, '$');
+    
+    // 2. Split by '$' to process text segments and math segments
+    const parts = clean.split('$');
+    
+    return parts.map((part, index) => {
+        let segment = part;
+        const isMathMode = index % 2 === 1;
 
-    // If the result looks like LaTeX (has backslash) but has no dollars, wrap it
-    if ((fixed.includes('\\frac') || fixed.includes('\\sqrt') || fixed.includes('\\pi') || fixed.includes('^')) && !fixed.includes('$')) {
-        fixed = `$${fixed}$`;
-    }
+        if (isMathMode) {
+            // INSIDE MATH MODE ($...$)
+            const mathSymbols = [
+                'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'ln', 'log', 'lg',
+                'pi', 'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho'
+            ];
 
-    // Basic standalone pi or sqrt cleanup
-    if (fixed === '\\pi') return '$\\pi$';
-    
-    // Handle standalone "sqrt2" pattern which might have become "\sqrt2"
-    fixed = fixed.replace(/\\sqrt\s*(\d+)/g, '\\sqrt{$1}');
-    
-    // Final sanity check for unescaped math props
-    if (fixed.includes('\\sqrt') && !fixed.includes('$')) fixed = `$${fixed}$`;
-    
-    return fixed;
+            mathSymbols.forEach(sym => {
+                 const regex = new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g');
+                 segment = segment.replace(regex, `\\${sym} `);
+            });
+
+            return segment;
+        } else {
+            // OUTSIDE MATH MODE (Text)
+            segment = segment.replace(/(?<!\\)\bsqrt\s*(\d+|\([^\)]+\))/g, '$\\sqrt{$1}$');
+
+            const symbols = [
+                'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho',
+                'pi', 'sin', 'cos', 'tan', 'ln', 'log'
+            ];
+            
+            symbols.forEach(sym => {
+                const regex = new RegExp(`(?<!\\\\)\\b${sym}([0-9a-z^\\{\\}\\(\\)\\[\\]\\+\\-\\*\\/\\=\\>\\<\\.\\,]*)(?=\\s|\\b|$)`, 'gi');
+                segment = segment.replace(regex, (match, suite) => {
+                    if (match.length < 2) return match;
+                    return `$\\${sym}${suite}$`;
+                });
+            });
+            
+            segment = segment.replace(/(?<![$\\])\b([a-z])\^(\d+|\{[^}]+\})/g, '$$$1^$2$$');
+
+            return segment;
+        }
+    }).join('$').replace(/\${2,}/g, '$');
 };
 
 export default function DrillClient({ lang, category }: DrillClientProps) {

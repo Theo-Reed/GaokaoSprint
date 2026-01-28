@@ -117,17 +117,30 @@ def clean_question_content(questions):
     
     def fix_text(text):
         if not isinstance(text, str): return text
-        # 1. Replace single newlines with space, but keep double newlines (paragraphs)
+        # 1. Replace single newlines with space to merge fragmented lines from PDF
+        # We also look for cases where a newline is preceded by math symbols that shouldn't be split
         content = text.replace('\r', '')
         text = re.sub(r'(?<!\n)\n(?!\n)', ' ', content).strip()
         
-        # 2. Fix common math shorthand missing backslash/wrap
-        # Use simple lookbehind logic to fix pi/sqrt whether logic thinks it's latex or not
-        text = re.sub(r'(?<!\\)\bpi\b', r'\\pi', text)
-        text = re.sub(r'(?<!\\)\bsqrt', r'\\sqrt', text)
+        # 2. Fix common math shorthand missing backslash
+        symbols = [
+            'pi', 'sqrt', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 
+            'sin', 'cos', 'tan', 'log', 'ln', 'sigma', 'lambda', 'mu'
+        ]
+        for sym in symbols:
+            # Match word boundary, ensuring no backslash already exists
+            text = re.sub(r'(?<!\\)\b' + sym + r'\b', r'\\' + sym + ' ', text)
         
-        # Clean up double dollars
-        return text.replace('$$', '$')
+        # 3. Handle sqrtN -> \sqrt{N}
+        text = re.sub(r'\\sqrt\s*(\d+)', r'\\sqrt{\1}', text)
+        
+        # 4. Wrap math symbols in $ if they are not already (conservative)
+        if any('\\' + sym in text for sym in symbols) and '$' not in text:
+            text = f"${text}$"
+        
+        # Clean up double dollars and excess spaces
+        text = text.replace('$$', '$').replace('  ', ' ')
+        return text.strip()
 
     for q in questions:
         if "content" in q:

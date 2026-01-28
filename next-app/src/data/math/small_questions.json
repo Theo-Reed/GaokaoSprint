@@ -5,7 +5,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "complex",
-    "content": "$(1+5i)i$ 的虚部为（   ）",
+    "content": "$(1+5i)i$ 的虚部为（ ）",
     "options": [
       {
         "label": "A",
@@ -34,7 +34,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "logic",
-    "content": "设全集 $U = \\{x | x$ 是小于 $9$ 的正整数$\\}$, 集合 $A = \\{1, 3, 5\\}$，则 $\\complement_U A$ 中元素个数为（   ）",
+    "content": "设全集 $U = \\{x | x$ 是小于 $9$ 的正整数$\\}$, 集合 $A = \\{1, 3, 5\\}$，则 $\\complement_U A$ 中元素个数为（ ）",
     "options": [
       {
         "label": "A",
@@ -63,7 +63,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "conic",
-    "content": "若双曲线 C 虚轴长为实轴长的 $\\sqrt{7}$ 倍，则 C 的离心率为（   ）",
+    "content": "若双曲线 C 虚轴长为实轴长的 $\\sqrt{7}$ 倍，则 C 的离心率为（ ）",
     "options": [
       {
         "label": "A",
@@ -92,7 +92,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "trigo_func",
-    "content": "若点 $(a, 0)(a > 0)$ 是函数 $y = \\tan(2x - \\frac{\\pi}{3})$ 图象的一个对称中心，则 $a$ 的最小值为（   ）",
+    "content": "若点 $(a, 0)(a > 0)$ 是函数 $y = 2\\tan(x - \\frac{\\pi}{3})$ 图象的一个对称中心，则 $a$ 的最小值为（   ）",
     "options": [
       {
         "label": "A",
@@ -121,7 +121,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "function",
-    "content": "设 $f(x)$ 是定义在 R 上且周期为 2 的偶函数，当 $2 \\le x \\le 3$ 时，$f(x) = 5 - 2x$，则 $f(-\\frac{3}{4}) = $（   ）",
+    "content": "设 $f(x)$ 是定义在 R 上且周期为 2 的偶函数，当 $2 \\le x \\le 3$ 时，$f(x) = 5 - 2x$，则 $f(-\\frac{3}{4}) = $（ ）",
     "options": [
       {
         "label": "A",
@@ -150,7 +150,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "vector",
-    "content": "帆船比赛中，运动员可借助风力计测定风速的大小和方向，测出的结果在航海学中称为视风风速，视风风速对应的向量，是真风风速对应的向量与船行风速对应的向量之和，其中船行风速对应的向量与船速对应的向量大小相等，方向相反.图 1 给出了部分风力等级、名称与风速大小的对应关系.已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图 2（风速的大小和向量的大小相同） ，单位（m/s），则真风为（   ）\n等级 风速大小 m/s 名称\n2 1.1~3.3 轻风\n3 3.4~5.4 微风\n4 5.5~7.9 和风\n5 8.0~10.1 劲风",
+    "content": "帆船比赛中，运动员可借助风力计测定风速的大小和方向，测出的结果在航海学中称为视风风速，视风风速对应的向量，是真风风速对应的向量与船行风速对应的向量之和，其中船行风速对应的向量与船速对应的向量大小相等，方向相反.图 1 给出了部分风力等级、名称与风速大小的对应关系.已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图 2（风速的大小和向量的大小相同） ，单位（m/s），则真风为（ ） 等级 风速大小 m/s 名称 2 1.1~3.3 轻风 3 3.4~5.4 微风 4 5.5~7.9 和风 5 8.0~10.1 劲风",
     "options": [
       {
         "label": "A",
@@ -179,7 +179,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "line_circle",
-    "content": "若圆 $(x+2)^2 + y^2 = r^2 (r>0)$ 上到直线 $y = \\sqrt{3}x + 2$ 的距离为 1 的点有且仅有 2 个，则 $r$ 的取值范围是（   ）",
+    "content": "若圆 $(x+2)^2 + y^2 = r^2 (r>0)$ 上到直线 $y = \\sqrt{3}x + 2$ 的距离为 1 的点有且仅有 2 个，则 $r$ 的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -208,7 +208,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "inequality",
-    "content": "若实数 $x, y, z$ 满足 $2 + \\log_2 x = 3 + \\log_3 y = 5 + \\log_5 z$，则 $x, y, z$ 的大小关系不可能是（   ）",
+    "content": "若实数 $x, y, z$ 满足 $2 + \\log_2 x = 3 + \\log_3 y = 5 + \\log_5 z$，则 $x, y, z$ 的大小关系不可能是（ ）",
     "options": [
       {
         "label": "A",
@@ -237,7 +237,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "solid_geometry",
-    "content": "在正三棱柱 $ABC-A_1B_1C_1$ 中，$D$ 为 $BC$ 中点，则（    ）",
+    "content": "在正三棱柱 $ABC-A_1B_1C_1$ 中，$D$ 为 $BC$ 中点，则（ ）",
     "options": [
       {
         "label": "A",
@@ -269,7 +269,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "conic",
-    "content": "设抛物线 $C: y^2 = 6x$ 的焦点为 $F$，过 $F$ 的直线交 $C$ 于 $A, B$，过 $F$ 且垂直于 $AB$ 的直线交 $l: x = -\\frac{3}{2}$ 于 $E$，过点 $A$ 作准线 $l$ 的垂线，垂足为 $D$，则（    ）",
+    "content": "设抛物线 $C: y^2 = 6x$ 的焦点为 $F$，过 $F$ 的直线交 $C$ 于 $A, B$，过 $F$ 且垂直于 $AB$ 的直线交 $l: x = -\\frac{3}{2}$ 于 $E$，过点 $A$ 作准线 $l$ 的垂线，垂足为 $D$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -302,7 +302,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "trigo_sol",
-    "content": "已知 $\\triangle ABC$ 的面积为 $\\frac{1}{4}$，若 $\\cos 2A + \\cos 2B + 2\\sin C = 1$，且 $\\cos A \\cos B = \\sin^2\\frac{C}{2}$，则（   ）",
+    "content": "已知 $\\triangle ABC$ 的面积为 $\\frac{1}{4}$，若 $\\cos 2A + \\cos 2B + 2\\sin C = 1$，且 $\\cos A \\cos B = \\sin^2\\frac{C}{2}$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -347,7 +347,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "probability",
-    "content": "样本数据2，8，14，16，20平均数为（   ）",
+    "content": "样本数据2，8，14，16，20平均数为（ ）",
     "options": [
       {
         "label": "A",
@@ -376,7 +376,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "complex",
-    "content": "已知$z=1+i$，则$\\frac{1}{1-z}=$（   ）",
+    "content": "已知$z=1+i$，则$\\frac{1}{1-z}=$（ ）",
     "options": [
       {
         "label": "A",
@@ -405,7 +405,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "logic",
-    "content": "已知集合 $A = \\{-4,0,1, 2,8\\}$, $B = \\{x | x^3 = x\\}$，则$A \\cap B=$（   ）",
+    "content": "已知集合 $A = \\{-4,0,1, 2,8\\}$, $B = \\{x | x^3 = x\\}$，则$A \\cap B=$（ ）",
     "options": [
       {
         "label": "A",
@@ -434,7 +434,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "inequality",
-    "content": "不等式$\\frac{4-x}{x-2} \\ge 1$的解集是（   ）",
+    "content": "不等式$\\frac{4-x}{x-2} \\ge 1$的解集是（ ）",
     "options": [
       {
         "label": "A",
@@ -463,7 +463,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "trigo_sol",
-    "content": "在$\\triangle ABC$中，$BC=2$，$AC=1+\\sqrt{3}$，$AB=\\sqrt{6}$，则$A=$（   ）",
+    "content": "在$\\triangle ABC$中，$BC=2$，$AC=1+\\sqrt{3}$，$AB=\\sqrt{6}$，则$A=$（ ）",
     "options": [
       {
         "label": "A",
@@ -492,7 +492,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "conic",
-    "content": "设抛物线$C: y^2 = 2px (p>0)$的焦点为$F$，点 $A$在 $C$上，过 $A$作$C$的准线的垂线，垂足为 $B$，若直线$BF$的方程为$y = 2x - 2$，则$|AF|=$（   ）",
+    "content": "设抛物线$C: y^2 = 2px (p>0)$的焦点为$F$，点 $A$在 $C$上，过 $A$作$C$的准线的垂线，垂足为 $B$，若直线$BF$的方程为$y = 2x - 2$，则$|AF|=$（ ）",
     "options": [
       {
         "label": "A",
@@ -521,7 +521,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "sequence",
-    "content": "记$S_n$为等差数列$\\{a_n\\}$前 $n$ 项和，若$S_3=6$, $S_5=-5$，则$S_6=$（   ）",
+    "content": "记$S_n$为等差数列$\\{a_n\\}$前 $n$ 项和，若$S_3=6$, $S_5=-5$，则$S_6=$（ ）",
     "options": [
       {
         "label": "A",
@@ -550,7 +550,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "trigo_func",
-    "content": "已知$0 < \\alpha < \\pi$， $\\cos{2\\alpha} = \\frac{7}{25}$，则$\\sin(\\frac{\\pi}{4} - \\alpha) = $（   ）",
+    "content": "已知$0 < \\alpha < \\pi$， $\\cos{2\\alpha} = \\frac{7}{25}$，则$\\sin(\\frac{\\pi}{4} - \\alpha) = $（ ）",
     "options": [
       {
         "label": "A",
@@ -579,7 +579,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "sequence",
-    "content": "记$S_n$为等比数列$\\{a_n\\}$的前 $n$ 项和，$q$为$\\{a_n\\}$的公比，$q>0$，若$S_3=7$, $a_3=1$，则（   ）",
+    "content": "记$S_n$为等比数列$\\{a_n\\}$的前 $n$ 项和，$q$为$\\{a_n\\}$的公比，$q>0$，若$S_3=7$, $a_3=1$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -611,7 +611,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "derivative",
-    "content": "已知$f(x)$是定义在 R 上的奇函数，且当$x>0$时，$f(x) = (x^2-3)e^x + 2$，则（   ）",
+    "content": "已知$f(x)$是定义在 R 上的奇函数，且当$x>0$时，$f(x) = (x^2-3)e^x + 2$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -644,7 +644,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "conic",
-    "content": "双曲线$C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的左、右焦点分别是$F_1, F_2$，左、右顶点分别为$A_1, A_2$，以$F_1F_2$为直径的圆与 $C$的一条渐近线交于 $M、N$两点，且$\\angle NA_1M = \\frac{5\\pi}{6}$，则（   ）",
+    "content": "双曲线$C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的左、右焦点分别是$F_1, F_2$，左、右顶点分别为$A_1, A_2$，以$F_1F_2$为直径的圆与 $C$的一条渐近线交于 $M、N$两点，且$\\angle NA_1M = \\frac{5\\pi}{6}$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -701,7 +701,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "logic",
-    "content": "设集合$A=\\\\{x|1 \\\\le x \\\\le 3\\\\}$，$B=\\\\{x|2<x<4\\\\}$，则$A \\\\cup B=$（    ）",
+    "content": "设集合$A=\\\\{x|1 \\\\le x \\\\le 3\\\\}$，$B=\\\\{x|2<x<4\\\\}$，则$A \\\\cup B=$（ ）",
     "options": [
       {
         "label": "A",
@@ -730,7 +730,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "complex",
-    "content": "$\\frac{2-\\\\mathrm{i}}{1+2\\\\mathrm{i}}=$（    ）",
+    "content": "$\\frac{2-\\\\mathrm{i}}{1+2\\\\mathrm{i}}=$（ ）",
     "options": [
       {
         "label": "A",
@@ -759,7 +759,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "probability",
-    "content": "6名同学到甲、乙、丙三个场馆做志愿者，每名同学只去1个场馆，甲场馆安排1名，乙场馆安排2名，丙场馆安排3名，则不同的安排方法共有（    ）",
+    "content": "6名同学到甲、乙、丙三个场馆做志愿者，每名同学只去1个场馆，甲场馆安排1名，乙场馆安排2名，丙场馆安排3名，则不同的安排方法共有（ ）",
     "options": [
       {
         "label": "A",
@@ -788,7 +788,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "日晷是中国古代用来测定时间的仪器，利用与晷面垂直的晷针投射到晷面的影子来测定时间．把地球看成一个球(球心记为$O$)，地球上一点$A$的纬度是指$OA$与地球赤道所在平面所成角，点$A$处的水平面是指过点$A$且与$OA$垂直的平面.在点$A$处放置一个日晷，若晷面与赤道所在平面平行，点$A$处的纬度为北纬40°，则晷针与点$A$处的水平面所成角为（    ）",
+    "content": "日晷是中国古代用来测定时间的仪器，利用与晷面垂直的晷针投射到晷面的影子来测定时间．把地球看成一个球(球心记为$O$)，地球上一点$A$的纬度是指$OA$与地球赤道所在平面所成角，点$A$处的水平面是指过点$A$且与$OA$垂直的平面.在点$A$处放置一个日晷，若晷面与赤道所在平面平行，点$A$处的纬度为北纬40°，则晷针与点$A$处的水平面所成角为（ ）",
     "options": [
       {
         "label": "A",
@@ -817,7 +817,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "logic",
-    "content": "某中学的学生积极参加体育锻炼，其中有96%的学生喜欢足球或游泳，60%的学生喜欢足球，82%的学生喜欢游泳，则该中学既喜欢足球又喜欢游泳的学生数占该校学生总数的比例是（    ）",
+    "content": "某中学的学生积极参加体育锻炼，其中有96%的学生喜欢足球或游泳，60%的学生喜欢足球，82%的学生喜欢游泳，则该中学既喜欢足球又喜欢游泳的学生数占该校学生总数的比例是（ ）",
     "options": [
       {
         "label": "A",
@@ -846,7 +846,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "function",
-    "content": "基本再生数$R_0$与世代间隔$T$是新冠肺炎的流行病学基本参数.基本再生数指一个感染者传染的平均人数，世代间隔指相邻两代间传染所需的平均时间.在新冠肺炎疫情初始阶段，可以用指数模型：$I(t)=\\\\mathrm{e}^{rt}$描述累计感染病例数$I(t)$随时间$t$(单位:天)的变化规律，指数增长率$r$与$R_0$，$T$近似满足$R_0 \\\\approx 1+rT$.有学者基于已有数据估计出$R_0=3.28$，$T=6$.据此，在新冠肺炎疫情初始阶段，累计感染病例数增加1倍需要的时间约为($\\\\ln 2 \\\\approx 0.69$) （    ）",
+    "content": "基本再生数$R_0$与世代间隔$T$是新冠肺炎的流行病学基本参数.基本再生数指一个感染者传染的平均人数，世代间隔指相邻两代间传染所需的平均时间.在新冠肺炎疫情初始阶段，可以用指数模型：$I(t)=\\\\mathrm{e}^{rt}$描述累计感染病例数$I(t)$随时间$t$(单位:天)的变化规律，指数增长率$r$与$R_0$，$T$近似满足$R_0 \\\\approx 1+rT$.有学者基于已有数据估计出$R_0=3.28$，$T=6$.据此，在新冠肺炎疫情初始阶段，累计感染病例数增加1倍需要的时间约为($\\\\ln 2 \\\\approx 0.69$) （ ）",
     "options": [
       {
         "label": "A",
@@ -875,7 +875,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "vector",
-    "content": "已知$P$是边长为2的正六边形$ABCDEF$内的一点，则$\\\\vec{AP} \\\\cdot \\\\vec{AB}$的取值范围是（    ）",
+    "content": "已知$P$是边长为2的正六边形$ABCDEF$内的一点，则$\\\\vec{AP} \\\\cdot \\\\vec{AB}$的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -904,7 +904,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "function",
-    "content": "若定义在$\\\\mathbb{R}$的奇函数$f(x)$在$(-\\\\infty, 0)$单调递减，且$f(2)=0$，则满足$x f(x-1) \\\\ge 0$的$x$的取值范围是（    ）",
+    "content": "若定义在$\\\\mathbb{R}$的奇函数$f(x)$在$(-\\\\infty, 0)$单调递减，且$f(2)=0$，则满足$x f(x-1) \\\\ge 0$的$x$的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -933,7 +933,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "conic",
-    "content": "已知曲线 $C: mx^2 + ny^2 = 1$.（    ）",
+    "content": "已知曲线 $C: mx^2 + ny^2 = 1$.（ ）",
     "options": [
       {
         "label": "A",
@@ -966,7 +966,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "trigo_func",
-    "content": "下图是函数$y= \\\\sin(\\\\omega x+\\\\varphi)$的部分图像，则$\\\\sin(\\\\omega x+\\\\varphi)=$ （    ）",
+    "content": "下图是函数$y= \\\\sin(\\\\omega x+\\\\varphi)$的部分图像，则$\\\\sin(\\\\omega x+\\\\varphi)=$ （ ）",
     "options": [
       {
         "label": "A",
@@ -998,7 +998,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "inequality",
-    "content": "已知$a>0, b>0$，且$a+b=1$，则（    ）",
+    "content": "已知$a>0, b>0$，且$a+b=1$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -1031,7 +1031,7 @@
     "type": "multi_choice",
     "type_rank": 4,
     "category": "probability",
-    "content": "信息熵是信息论中的一个重要概念.设随机变量$X$所有可能的取值为$1, 2, \\\\dots, n$，且 $P(X=i) = p_i > 0 (i=1,2,\\\\dots,n), \\\\sum_{i=1}^{n} p_i = 1$，定义$X$的信息熵$H(X) = -\\\\sum_{i=1}^{n} p_i \\\\log_2 p_i$.（    ）",
+    "content": "信息熵是信息论中的一个重要概念.设随机变量$X$所有可能的取值为$1, 2, \\\\dots, n$，且 $P(X=i) = p_i > 0 (i=1,2,\\\\dots,n), \\\\sum_{i=1}^{n} p_i = 1$，定义$X$的信息熵$H(X) = -\\\\sum_{i=1}^{n} p_i \\\\log_2 p_i$.（ ）",
     "options": [
       {
         "label": "A",
@@ -1111,26 +1111,26 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "logic",
-    "content": "设集合$A=\\{x|x^2-4x+3<0\\}$, $B=\\{x|2x-3>0\\}$, 则$A \\cap B = (\\quad)$",
+    "content": "设集合$A=\\\\{x|x^2-4x+3<0\\\\}$，$B=\\\\{x|2x-3>0\\\\}$，则$A\\\\cap B=$",
     "options": [
       {
         "label": "A",
-        "text": "$(-3, -\\frac{3}{2})$"
+        "text": "（-3，-$\\frac{3}{2}$）"
       },
       {
         "label": "B",
-        "text": "$(-3, \\frac{3}{2})$"
+        "text": "（-3，$\\frac{3}{2}$）"
       },
       {
         "label": "C",
-        "text": "$(1, \\frac{3}{2})$"
+        "text": "（1，$\\frac{3}{2}$）"
       },
       {
         "label": "D",
-        "text": "$(\\frac{3}{2}, 3)$"
+        "text": "（$\\frac{3}{2}$，3）"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "D"
   },
@@ -1140,7 +1140,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "complex",
-    "content": "设$(1+i)x=1+yi$，其中$x, y$是实数，则$|x+yi| = (\\quad)$",
+    "content": "设$(1+i)x=1+yi$，其中$x，y$是实数，则$|x+yi|=$",
     "options": [
       {
         "label": "A",
@@ -1148,18 +1148,18 @@
       },
       {
         "label": "B",
-        "text": "$\\sqrt{2}$"
+        "text": "$\\\\sqrt{2}$"
       },
       {
         "label": "C",
-        "text": "$\\sqrt{3}$"
+        "text": "$\\\\sqrt{3}$"
       },
       {
         "label": "D",
         "text": "2"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "B"
   },
@@ -1169,7 +1169,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "sequence",
-    "content": "已知等差数列$\\{a_n\\}$前9项的和为27，$a_{10}=8$，则$a_{100}=( \\quad )$",
+    "content": "已知等差数列$\\\\{a_n\\\\}$前9项的和为27，$a_{10}=8$，则$a_{100}=$",
     "options": [
       {
         "label": "A",
@@ -1188,7 +1188,7 @@
         "text": "97"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "C"
   },
@@ -1198,7 +1198,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "probability",
-    "content": "某公司的班车在7:00, 8:00, 8:30发车，小明在7:50至8:30之间到达发车站乘坐班车，且到达发车站的时刻是随机的，则他等车时间不超过10分钟的概率是( \\quad )",
+    "content": "某公司的班车在7：00，8：00，8：30发车，小明在7：50至8：30之间到达发车站乘坐班车，且到达发车站的时刻是随机的，则他等车时间不超过10分钟的概率是",
     "options": [
       {
         "label": "A",
@@ -1217,7 +1217,7 @@
         "text": "$\\frac{3}{4}$"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "B"
   },
@@ -1227,26 +1227,26 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "conic",
-    "content": "已知方程$\\frac{x^2}{m^2+n} - \\frac{y^2}{3m^2-n} = 1$表示双曲线，且该双曲线两焦点间的距离为4，则$n$的取值范围是( \\quad )",
+    "content": "已知方程$\\frac{x^2}{3-n} - \\frac{y^2}{n+1} = 1$表示双曲线，且该双曲线两焦点间的距离为4，则$n$的取值范围是",
     "options": [
       {
         "label": "A",
-        "text": "$(-1, 3)$"
+        "text": "（-1，3）"
       },
       {
         "label": "B",
-        "text": "$(-1, \\sqrt{3})$"
+        "text": "（-1，$\\\\sqrt{3}$）"
       },
       {
         "label": "C",
-        "text": "$(0, 3)$"
+        "text": "（0，3）"
       },
       {
         "label": "D",
-        "text": "$(0, \\sqrt{3})$"
+        "text": "（0，$\\\\sqrt{3}$）"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "A"
   },
@@ -1256,26 +1256,26 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "solid_geometry",
-    "content": "如图，某几何体的三视图是三个半径相等的圆及每个圆中两条相互垂直的半径. 若该几何体的体积是$\\frac{28\\pi}{3}$，则它的表面积是( \\quad )",
+    "content": "如图，某几何体的三视图是三个半径相等的圆及每个圆中两条相互垂直的半径．若该几何体的体积是$\\frac{28\\\\pi}{3}$，则它的表面积是",
     "options": [
       {
         "label": "A",
-        "text": "$17\\pi$"
+        "text": "17π"
       },
       {
         "label": "B",
-        "text": "$18\\pi$"
+        "text": "18π"
       },
       {
         "label": "C",
-        "text": "$20\\pi$"
+        "text": "20π"
       },
       {
         "label": "D",
-        "text": "$28\\pi$"
+        "text": "28π"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "A"
   },
@@ -1285,26 +1285,26 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "function",
-    "content": "函数$y=2x^2 - e^{|x|}$在$[-2, 2]$的图象大致为( \\quad )",
+    "content": "函数$y=2x^2-e^{|x|}$在$[ -2, 2 ]$的图象大致为",
     "options": [
       {
         "label": "A",
-        "text": "图A"
+        "text": "（图象）"
       },
       {
         "label": "B",
-        "text": "图B"
+        "text": "（图象）"
       },
       {
         "label": "C",
-        "text": "图C"
+        "text": "（图象）"
       },
       {
         "label": "D",
-        "text": "图D"
+        "text": "（图象）"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "D"
   },
@@ -1314,7 +1314,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "inequality",
-    "content": "若$a>b>1, 0<c<1$，则( \\quad )",
+    "content": "若$a > b > 1$，$0 < c < 1$，则",
     "options": [
       {
         "label": "A",
@@ -1322,18 +1322,18 @@
       },
       {
         "label": "B",
-        "text": "$ab^c < ba^c$"
+        "text": "$a b^c < b a^c$"
       },
       {
         "label": "C",
-        "text": "$a \\log_b c < b \\log_a c$"
+        "text": "$a\\\\log_b c < b\\\\log_a c$"
       },
       {
         "label": "D",
-        "text": "$\\log_a c < \\log_b c$"
+        "text": "$\\\\log_a c < \\\\log_b c$"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "C"
   },
@@ -1341,9 +1341,9 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-10",
     "question_number": "10",
     "type": "single_choice",
-    "type_rank": 10,
+    "type_rank": 9,
     "category": "conic",
-    "content": "以抛物线$C$的顶点为圆心的圆交$C$于$A, B$两点，交$C$的准线于$D, E$两点. 已知$|AB|=4\\sqrt{2}, |DE|=2\\sqrt{5}$，则$C$的焦点到准线的距离为( \\quad )",
+    "content": "以抛物线C的顶点为圆心的圆交C于A、B两点，交C的准线于D、E两点．已知$|AB|=4\\\\sqrt{2}$， $|DE|=2\\\\sqrt{5}$，则C的焦点到准线的距离为",
     "options": [
       {
         "label": "A",
@@ -1362,7 +1362,7 @@
         "text": "8"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "B"
   },
@@ -1370,28 +1370,28 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-11",
     "question_number": "11",
     "type": "single_choice",
-    "type_rank": 11,
+    "type_rank": 10,
     "category": "solid_geometry",
-    "content": "平面$\\alpha$过正方体$ABCD-A_1B_1C_1D_1$的顶点$A$，$\\alpha // \\text{平面} CB_1D_1$，$\\alpha \\cap \\text{平面} ABCD=m$，$\\alpha \\cap \\text{平面} ABB_1A_1=n$，则$m, n$所成角的正弦值为( \\quad )",
+    "content": "平面$\\\\alpha$过正方体$ABCD-A_1B_1C_1D_1$的顶点A，$\\\\alpha \\\\parallel$平面$CB_1D_1$，$\\\\alpha \\\\cap$平面$ABCD=m$，$\\\\alpha \\\\cap$平面$ABB_1A_1=n$，则$m、n$所成角的正弦值为",
     "options": [
       {
         "label": "A",
-        "text": "$\\frac{\\sqrt{3}}{2}$"
+        "text": "$\\frac{\\\\sqrt{3}}{3}$"
       },
       {
         "label": "B",
-        "text": "$\\frac{\\sqrt{2}}{2}$"
+        "text": "$\\frac{\\\\sqrt{2}}{2}$"
       },
       {
         "label": "C",
-        "text": "$\\frac{\\sqrt{3}}{3}$"
+        "text": "$\\frac{\\\\sqrt{6}}{3}$"
       },
       {
         "label": "D",
-        "text": "$\\frac{1}{3}$"
+        "text": "$\\frac{1}{2}$"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "A"
   },
@@ -1399,9 +1399,9 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-12",
     "question_number": "12",
     "type": "single_choice",
-    "type_rank": 12,
+    "type_rank": 11,
     "category": "trigo_func",
-    "content": "已知函数$f(x)=\\sin(\\omega x+\\phi)(\\omega > 0, |\\phi|\\le\\frac{\\pi}{2})$，$x=-\\frac{\\pi}{4}$为$f(x)$的零点，$x=\\frac{\\pi}{4}$为$y=f(x)$图象的对称轴，且$f(x)$在$(\\frac{\\pi}{18}, \\frac{5\\pi}{36})$上单调，则$\\omega$的最大值为( \\quad )",
+    "content": "已知函数$f(x) = \\\\sin(\\\\omega x + \\\\phi)$（$\\\\omega > 0, |\\\\phi| \\\\le \\frac{\\\\pi}{2}$），$x = -\\frac{\\\\pi}{6}$为$f(x)$的零点，$x = \\frac{\\\\pi}{3}$为$y=f(x)$图象的对称轴，且$f(x)$在$(\\frac{\\\\pi}{6}, \\frac{\\\\pi}{3})$上单调，则$\\\\omega$的最大值为",
     "options": [
       {
         "label": "A",
@@ -1420,7 +1420,7 @@
         "text": "5"
       }
     ],
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "B"
   },
@@ -1430,9 +1430,9 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "vector",
-    "content": "设向量$\\vec{a}=(m, 1), \\vec{b}=(1, 2)$，且$|\\vec{a}+\\vec{b}|^2=|\\vec{a}|^2+|\\vec{b}|^2$，则$m=$_____.",
+    "content": "设向量$\\\\vec{a}=(m, 1)$，$\\\\vec{b}=(1, 2)$，且$|\\\\vec{a} + \\\\vec{b}|^2 = |\\\\vec{a}|^2 + |\\\\vec{b}|^2$，则$m=$",
     "options": null,
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "﹣2"
   },
@@ -1442,9 +1442,9 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "sequence",
-    "content": "$(2x+\\sqrt{x})^5$的展开式中，$x^3$的系数是_____. (用数字填写答案)",
+    "content": "$(2x+\\\\sqrt{x})^5$的展开式中，$x^3$的系数是",
     "options": null,
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "10"
   },
@@ -1454,9 +1454,9 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "sequence",
-    "content": "设等比数列$\\{a_n\\}$满足$a_1+a_3=10, a_2+a_4=5$，则$a_1a_2...a_n$的最大值为_____.",
+    "content": "设等比数列$\\\\{a_n\\\\}$满足$a_1+a_3=10$，$a_2+a_4=5$，则$a_1a_2…a_n$的最大值为",
     "options": null,
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "64"
   },
@@ -1466,9 +1466,9 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "inequality",
-    "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料. 生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时. 生产一件产品A的利润为2100元，生产一件产品B的利润为900元. 该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为____元.",
+    "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料．生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时，生产一件产品A的利润为2100元，生产一件产品B的利润为900元．该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为",
     "options": null,
-    "score_rule": "每小题5分",
+    "score_rule": "5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
     "answer": "216000"
   },
@@ -1746,7 +1746,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "probability",
-    "content": "为了解推动出口后的亩收入（单位：万元）情况，从该种植区抽取样本，得到推动出口后亩收入的样本均值 $\\bar{x}=2.1$，样本方差 $s^2=0.01$，已知该种植区以往的亩收入 $X$ 服从正态分布 $N(1.8, 0.1^2)$，假设推动出口后的亩收入 $Y$ 服从正态分布 $N(\\bar{x}, s^2)$， 则（    ）（若随机变量 $Z$ 服从正态分布 $N(\\mu, \\sigma^2)$， $P(Z<\\mu+\\sigma) \\approx 0.8413$）",
+    "content": "为了解推动出口后的亩收入（单位：万元）情况，从该种植区抽取样本，得到推动出口后亩收入的样本均值 $\\bar{x}=2.1$，样本方差 $s^2=0.01$，已知该种植区以往的亩收入 $X$ 服从正态分布 $N(1.8, 0.1^2)$，假设推动出口后的亩收入 $Y$ 服从正态分布 $N(\\bar{x}, s^2)$， 则（ ）（若随机变量 $Z$ 服从正态分布 $N(\\mu, \\sigma^2)$， $P(Z<\\mu+\\sigma) \\approx 0.8413$）",
     "options": [
       {
         "label": "A",
@@ -1898,7 +1898,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "probability",
-    "content": "某农业研究部门在面积相等的 100 块稻田上种植一种新型水稻，得到各块稻田的亩产量（单位：kg）并部分整理下表\n亩产量 [900，950） [950，1000） [1000，1050） [1100，1150） [1150，1200）\n频数 6 12 18 24 10\n据表中数据，结论中正确的是",
+    "content": "某农业研究部门在面积相等的 100 块稻田上种植一种新型水稻，得到各块稻田的亩产量（单位：kg）并部分整理下表 亩产量 [900，950） [950，1000） [1000，1050） [1100，1150） [1150，1200） 频数 6 12 18 24 10 据表中数据，结论中正确的是",
     "options": [
       {
         "label": "A",
@@ -2275,7 +2275,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "solid_geometry",
-    "content": "设 $\\alpha, \\beta$ 两个平面，$m, n$ 是两条直线，且 $m = \\alpha \\cap \\beta$. 下列四个命题：\n①若 $m // n$，则 $n // \\alpha$ 或 $n // \\beta$ \n②若 $m \\perp n$，则 $n \\perp \\alpha, n \\perp \\beta$ \n③若 $n // \\alpha$，且 $n // \\beta$，则 $m // n$ \n④若 $n$ 与 $\\alpha$ 和 $\\beta$ 所成的角相等，则 $m \\perp n$\n其中所有真命题的编号是",
+    "content": "设 $\\alpha, \\beta$ 两个平面，$m, n$ 是两条直线，且 $m = \\alpha \\cap \\beta$. 下列四个命题： ①若 $m // n$，则 $n // \\alpha$ 或 $n // \\beta$ ②若 $m \\perp n$，则 $n \\perp \\alpha, n \\perp \\beta$ ③若 $n // \\alpha$，且 $n // \\beta$，则 $m // n$ ④若 $n$ 与 $\\alpha$ 和 $\\beta$ 所成的角相等，则 $m \\perp n$ 其中所有真命题的编号是",
     "options": [
       {
         "label": "A",
@@ -2671,7 +2671,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "solid_geometry",
-    "content": "设$\\alpha, \\beta$是两个平面，$m, n$是两条直线，且$m = \\alpha \\cap \\beta$.下列四个命题：\n①若$m // n$，则$n // \\alpha$或$n // \\beta$\n②若$m \\perp n$，则$n \\perp \\alpha, n \\perp \\beta$\n③若$n // \\alpha$，且$n // \\beta$，则$m // n$\n④若$n$与$\\alpha$和$\\beta$所成的角相等，则$m \\perp n$\n其中所有真命题的编号是",
+    "content": "设$\\alpha, \\beta$是两个平面，$m, n$是两条直线，且$m = \\alpha \\cap \\beta$.下列四个命题： ①若$m // n$，则$n // \\alpha$或$n // \\beta$ ②若$m \\perp n$，则$n \\perp \\alpha, n \\perp \\beta$ ③若$n // \\alpha$，且$n // \\beta$，则$m // n$ ④若$n$与$\\alpha$和$\\beta$所成的角相等，则$m \\perp n$ 其中所有真命题的编号是",
     "options": [
       {
         "label": "A",
@@ -3054,7 +3054,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "solid_geometry",
-    "content": "如图，网格纸上绘制的一个零件的三视图，网格小正方形的边长为 1，则该零件的表面积为（    ）",
+    "content": "如图，网格纸上绘制的一个零件的三视图，网格小正方形的边长为 1，则该零件的表面积为（ ）",
     "options": [
       {
         "label": "A",
@@ -3083,7 +3083,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "trigo_sol",
-    "content": "在$\\triangle ABC$中，内角$A, B, C$的对边分别是$a, b, c$，若$a\\\\cos B - b\\\\cos A = c$，且$C=\\frac{\\\\pi}{5}$，则$\\\\angle B =$（    ）",
+    "content": "在$\\triangle ABC$中，内角$A, B, C$的对边分别是$a, b, c$，若$a\\\\cos B - b\\\\cos A = c$，且$C=\\frac{\\\\pi}{5}$，则$\\\\angle B =$（ ）",
     "options": [
       {
         "label": "A",
@@ -3112,7 +3112,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "function",
-    "content": "已知 $f(x)=\\frac{e^{ax}}{e^x-1}$是偶函数，则$a=$（    ）",
+    "content": "已知 $f(x)=\\frac{e^{ax}}{e^x-1}$是偶函数，则$a=$（ ）",
     "options": [
       {
         "label": "A",
@@ -3141,7 +3141,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "vector",
-    "content": "正方形$ABCD$的边长是 2，$E$是$AB$的中点，则$\\\\vec{EC} \\\\cdot \\\\vec{ED} =$（    ）",
+    "content": "正方形$ABCD$的边长是 2，$E$是$AB$的中点，则$\\\\vec{EC} \\\\cdot \\\\vec{ED} =$（ ）",
     "options": [
       {
         "label": "A",
@@ -3170,7 +3170,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "probability",
-    "content": "设 $O$ 为平面坐标系的坐标原点，在区域$\\\\{(x,y) | 1 \\\\le x^2+y^2 \\\\le 4\\\\}$内随机取一点 $A$，则直线 $OA$ 的倾斜角不大于$\\frac{\\\\pi}{4}$的概率为（    ）",
+    "content": "设 $O$ 为平面坐标系的坐标原点，在区域$\\\\{(x,y) | 1 \\\\le x^2+y^2 \\\\le 4\\\\}$内随机取一点 $A$，则直线 $OA$ 的倾斜角不大于$\\frac{\\\\pi}{4}$的概率为（ ）",
     "options": [
       {
         "label": "A",
@@ -3199,7 +3199,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "derivative",
-    "content": "函数$f(x)=x^3+ax+2$存在 3 个零点，则$a$的取值范围是（    ）",
+    "content": "函数$f(x)=x^3+ax+2$存在 3 个零点，则$a$的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -3228,7 +3228,7 @@
     "type": "single_choice",
     "type_rank": 9,
     "category": "probability",
-    "content": "某学校举办作文比赛，共 6 个主题，每位参赛同学从中随机抽取一个主题准备作文，则甲、乙两位参赛同学抽到不同主题概率为（    ）",
+    "content": "某学校举办作文比赛，共 6 个主题，每位参赛同学从中随机抽取一个主题准备作文，则甲、乙两位参赛同学抽到不同主题概率为（ ）",
     "options": [
       {
         "label": "A",
@@ -3257,7 +3257,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "trigo_func",
-    "content": "已知函数$f(x)=\\\\sin(\\\\omega x + \\\\phi)$在区间$(\\frac{\\\\pi}{6}, \\frac{2\\\\pi}{3})$单调递增，直线$x=\\frac{\\\\pi}{6}$和$x=\\frac{2\\\\pi}{3}$为函数$y=f(x)$的图像的两条对称轴，则$f(-\\frac{5\\\\pi}{12})=$（    ）",
+    "content": "已知函数$f(x)=\\\\sin(\\\\omega x + \\\\phi)$在区间$(\\frac{\\\\pi}{6}, \\frac{2\\\\pi}{3})$单调递增，直线$x=\\frac{\\\\pi}{6}$和$x=\\frac{2\\\\pi}{3}$为函数$y=f(x)$的图像的两条对称轴，则$f(-\\frac{5\\\\pi}{12})=$（ ）",
     "options": [
       {
         "label": "A",
@@ -3286,7 +3286,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "line_circle",
-    "content": "已知实数$x, y$满足$x^2+y^2-4x-2y-4=0$，则$x-y$的最大值是（    ）",
+    "content": "已知实数$x, y$满足$x^2+y^2-4x-2y-4=0$，则$x-y$的最大值是（ ）",
     "options": [
       {
         "label": "A",
@@ -3315,7 +3315,7 @@
     "type": "single_choice",
     "type_rank": 12,
     "category": "conic",
-    "content": "设 A，B为双曲线$\\frac{x^2}{9}-y^2=1$上两点，下列四个点中，可为线段 AB中点的是（    ）",
+    "content": "设 A，B为双曲线$\\frac{x^2}{9}-y^2=1$上两点，下列四个点中，可为线段 AB中点的是（ ）",
     "options": [
       {
         "label": "A",
@@ -3392,7 +3392,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "logic",
-    "content": "已知集合$M = \\\\{-2, -1, 0, 1, 2\\\\}$，$N = \\\\{x | x^2 - x - 6 \\\\ge 0\\\\}$，则$M \\\\cap N =$（    ）",
+    "content": "已知集合$M = \\\\{-2, -1, 0, 1, 2\\\\}$，$N = \\\\{x | x^2 - x - 6 \\\\ge 0\\\\}$，则$M \\\\cap N =$（ ）",
     "options": [
       {
         "label": "A",
@@ -3421,7 +3421,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "complex",
-    "content": "已知$\\frac{1 - i}{2 + 2i} = z$，则$z - \\bar{z} =$（    ）",
+    "content": "已知$\\frac{1 - i}{2 + 2i} = z$，则$z - \\bar{z} =$（ ）",
     "options": [
       {
         "label": "A",
@@ -3450,7 +3450,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "vector",
-    "content": "已知向量$\\\\vec{a} = (1, 1), \\\\vec{b} = (1, -1)$，若$(\\\\lambda\\\\vec{a} + \\\\mu\\\\vec{b}) \\\\perp (\\\\vec{a} + \\\\vec{b})$，则（    ）",
+    "content": "已知向量$\\\\vec{a} = (1, 1), \\\\vec{b} = (1, -1)$，若$(\\\\lambda\\\\vec{a} + \\\\mu\\\\vec{b}) \\\\perp (\\\\vec{a} + \\\\vec{b})$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -3479,7 +3479,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "derivative",
-    "content": "设函数$f(x) = (x-a)2^x$在区间$(0, 1)$上单调递减，则$a$的取值范围是（    ）",
+    "content": "设函数$f(x) = (x-a)2^x$在区间$(0, 1)$上单调递减，则$a$的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -3508,7 +3508,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "conic",
-    "content": "设椭圆$C_1: \\frac{x^2}{a^2} + y^2 = 1 (a>1), C_2: \\frac{x^2}{4} + y^2 = 1$的离心率分别为$e_1, e_2$．若$e_2 = \\\\sqrt{3}e_1$，则$a=$（    ）",
+    "content": "设椭圆$C_1: \\frac{x^2}{a^2} + y^2 = 1 (a>1), C_2: \\frac{x^2}{4} + y^2 = 1$的离心率分别为$e_1, e_2$．若$e_2 = \\\\sqrt{3}e_1$，则$a=$（ ）",
     "options": [
       {
         "label": "A",
@@ -3537,7 +3537,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "line_circle",
-    "content": "过点$(0, -2)$与圆$x^2 + y^2 - 4x - 1 = 0$相切的两条直线的夹角为$\\\\alpha$，则$\\\\sin\\\\alpha=$（    ）",
+    "content": "过点$(0, -2)$与圆$x^2 + y^2 - 4x - 1 = 0$相切的两条直线的夹角为$\\\\alpha$，则$\\\\sin\\\\alpha=$（ ）",
     "options": [
       {
         "label": "A",
@@ -3566,7 +3566,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "sequence",
-    "content": "记$S_n$为数列$\\\\{a_n\\\\}$的前$n$项和，设甲：$\\\\{a_n\\\\}$为等差数列；乙：$\\\\{\\frac{S_n}{n}\\\\}$为等差数列，则（    ）",
+    "content": "记$S_n$为数列$\\\\{a_n\\\\}$的前$n$项和，设甲：$\\\\{a_n\\\\}$为等差数列；乙：$\\\\{\\frac{S_n}{n}\\\\}$为等差数列，则（ ）",
     "options": [
       {
         "label": "A",
@@ -3595,7 +3595,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "trigo_func",
-    "content": "已知$\\\\sin(\\\\alpha - \\beta) = \\frac{1}{3}, \\\\cos\\\\alpha\\\\sin\\beta = \\frac{1}{6}$，则$\\\\cos(2\\\\alpha + 2\\beta) =$（    ）",
+    "content": "已知$\\\\sin(\\\\alpha - \\beta) = \\frac{1}{3}, \\\\cos\\\\alpha\\\\sin\\beta = \\frac{1}{6}$，则$\\\\cos(2\\\\alpha + 2\\beta) =$（ ）",
     "options": [
       {
         "label": "A",
@@ -3624,7 +3624,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "probability",
-    "content": "有一组样本数据$x_1, x_2, \\\\dots, x_6$，其中$x_1$是最小值，$x_6$是最大值，则（    ）",
+    "content": "有一组样本数据$x_1, x_2, \\\\dots, x_6$，其中$x_1$是最小值，$x_6$是最大值，则（ ）",
     "options": [
       {
         "label": "A",
@@ -3656,7 +3656,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "function",
-    "content": "噪声污染问题越来越受到重视．用声压级来度量声音的强弱，定义声压级$L_p = 20 \\\\lg\\frac{p}{p_0}$，其中常数$p_0 (p_0 > 0)$是听觉下限阈值，$p$是实际声压．下表为不同声源的声压级：\n声源 与声源的距离/m 声压级/dB\n燃油汽车 10 60~90\n混合动力汽车 10 50~60\n电动汽车 10 40\n已知在距离燃油汽车、混合动力汽车、电动汽车10m处测得实际声压分别为$p_1, p_2, p_3$，则（    ）",
+    "content": "噪声污染问题越来越受到重视．用声压级来度量声音的强弱，定义声压级$L_p = 20 \\\\lg\\frac{p}{p_0}$，其中常数$p_0 (p_0 > 0)$是听觉下限阈值，$p$是实际声压．下表为不同声源的声压级： 声源 与声源的距离/m 声压级/dB 燃油汽车 10 60~90 混合动力汽车 10 50~60 电动汽车 10 40 已知在距离燃油汽车、混合动力汽车、电动汽车10m处测得实际声压分别为$p_1, p_2, p_3$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -3689,7 +3689,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "function",
-    "content": "已知函数$f(x)$定义域为R，$f(x+y)+f(x-y)=2f(x)f(y)$，则（    ）",
+    "content": "已知函数$f(x)$定义域为R，$f(x+y)+f(x-y)=2f(x)f(y)$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -3722,7 +3722,7 @@
     "type": "multi_choice",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "下列物体中，能够被整体放入棱长为1（单位：m）的正方体容器（容器壁厚度忽略不计）内的有（    ）",
+    "content": "下列物体中，能够被整体放入棱长为1（单位：m）的正方体容器（容器壁厚度忽略不计）内的有（ ）",
     "options": [
       {
         "label": "A",
@@ -4933,7 +4933,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "complex",
-    "content": "在复平面内，$(1+3i)(3-i)$对应的点位于（    ） ．",
+    "content": "在复平面内，$(1+3i)(3-i)$对应的点位于（ ） ．",
     "options": [
       {
         "label": "A",
@@ -4962,7 +4962,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "logic",
-    "content": "设集合$A=\\\\{0, -a\\\\}$，$B=\\\\{1, a-2, 2a-2\\\\}$，若$A \\\\subseteq B$，则$a=$（    ） ．",
+    "content": "设集合$A=\\\\{0, -a\\\\}$，$B=\\\\{1, a-2, 2a-2\\\\}$，若$A \\\\subseteq B$，则$a=$（ ） ．",
     "options": [
       {
         "label": "A",
@@ -4991,7 +4991,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "probability",
-    "content": "某学校为了解学生参加体育运动的情况，用比例分配的分层随机抽样方法作抽样调查，拟从初中部和高中部两层共抽取 60 名学生，已知该校初中部和高中部分别有 400 名和 200 名学生，则不同的抽样结果共有（    ） ．",
+    "content": "某学校为了解学生参加体育运动的情况，用比例分配的分层随机抽样方法作抽样调查，拟从初中部和高中部两层共抽取 60 名学生，已知该校初中部和高中部分别有 400 名和 200 名学生，则不同的抽样结果共有（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5020,7 +5020,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "function",
-    "content": "若$f(x)=\\frac{\\\\ln(e^{2x+1}+a)}{2x-1}$为偶函数，则$a=$（    ） ．",
+    "content": "若$f(x)=\\frac{\\\\ln(e^{2x+1}+a)}{2x-1}$为偶函数，则$a=$（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5049,7 +5049,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "conic",
-    "content": "已知椭圆$C: \\frac{x^2}{3} + y^2 = 1$的左、右焦点分别为$F_1$，$F_2$，直线$y = x + m$与 C交于 A，B两点，若$\\triangle F_1 AB$面积是$\\triangle F_2 AB$面积的 2 倍，则$m=$（    ） ．",
+    "content": "已知椭圆$C: \\frac{x^2}{3} + y^2 = 1$的左、右焦点分别为$F_1$，$F_2$，直线$y = x + m$与 C交于 A，B两点，若$\\triangle F_1 AB$面积是$\\triangle F_2 AB$面积的 2 倍，则$m=$（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5078,7 +5078,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "derivative",
-    "content": "已知函数$f(x) = \\frac{e^x}{x} - a \\\\ln x$在区间$(1, 2)$上单调递增，则 a 的最小值为（    ） ．",
+    "content": "已知函数$f(x) = \\frac{e^x}{x} - a \\\\ln x$在区间$(1, 2)$上单调递增，则 a 的最小值为（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5107,7 +5107,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "trigo_sol",
-    "content": "已知$\\\\alpha$为锐角，$\\\\cos\\\\alpha = \\frac{\\\\sqrt{5}-1}{4}$，则$\\\\sin(2\\\\alpha)=$（    ） ．",
+    "content": "已知$\\\\alpha$为锐角，$\\\\cos\\\\alpha = \\frac{\\\\sqrt{5}-1}{4}$，则$\\\\sin(2\\\\alpha)=$（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5136,7 +5136,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "sequence",
-    "content": "记$S_n$为等比数列$\\\\{a_n\\\\}$的前 n 项和，若$S_4=-5$，$S_6=21S_2$，则$S_8=$（    ） ．",
+    "content": "记$S_n$为等比数列$\\\\{a_n\\\\}$的前 n 项和，若$S_4=-5$，$S_6=21S_2$，则$S_8=$（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5165,7 +5165,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "solid_geometry",
-    "content": "已知圆锥的顶点为 P，底面圆心为 O，AB为底面直径，$\\\\angle APB = 120^\\\\circ$，$PA=2$，点 C在底面圆周上，且二面角$P-AC-O$为 45°，则（    ） ．",
+    "content": "已知圆锥的顶点为 P，底面圆心为 O，AB为底面直径，$\\\\angle APB = 120^\\\\circ$，$PA=2$，点 C在底面圆周上，且二面角$P-AC-O$为 45°，则（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5197,7 +5197,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "conic",
-    "content": "设 O 为坐标原点，直线$y = \\\\sqrt{3}(x-1)$过抛物线$C: y^2 = 2px (p > 0)$的焦点，且与 C交于 M，N两点，l为 C的准线，则（    ） ．",
+    "content": "设 O 为坐标原点，直线$y = \\\\sqrt{3}(x-1)$过抛物线$C: y^2 = 2px (p > 0)$的焦点，且与 C交于 M，N两点，l为 C的准线，则（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5229,7 +5229,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "derivative",
-    "content": "若函数$f(x) = ax^2 + \\frac{b}{x} + c \\\\ln x (a \\neq 0)$既有极大值也有极小值，则（    ） ．",
+    "content": "若函数$f(x) = ax^2 + \\frac{b}{x} + c \\\\ln x (a \\neq 0)$既有极大值也有极小值，则（ ） ．",
     "options": [
       {
         "label": "A",
@@ -5343,7 +5343,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "logic",
-    "content": "设集合 $A = \\\\{ -2, -1, 0, 1, 2 \\\\}$, $B = \\\\{ x | 0 \\\\le x < 2 \\\\}$，则$A \\\\cap B=$（    ）",
+    "content": "设集合 $A = \\\\{ -2, -1, 0, 1, 2 \\\\}$, $B = \\\\{ x | 0 \\\\le x < 2 \\\\}$，则$A \\\\cap B=$（ ）",
     "options": [
       {
         "label": "A",
@@ -5372,7 +5372,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "probability",
-    "content": "某社区通过公益讲座以普及社区居民 垃圾分类知识．为了解讲座效果，随机抽取 10 位社区居民，让他们在讲座前和讲座后各回答一份垃圾分类知识问卷，这 10 位社区居民在讲座前和讲座后问卷答题的正确率如下图：\n则（    ）",
+    "content": "某社区通过公益讲座以普及社区居民 垃圾分类知识．为了解讲座效果，随机抽取 10 位社区居民，让他们在讲座前和讲座后各回答一份垃圾分类知识问卷，这 10 位社区居民在讲座前和讲座后问卷答题的正确率如下图： 则（ ）",
     "options": [
       {
         "label": "A",
@@ -5401,7 +5401,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "complex",
-    "content": "若$z = 1 + i$．则$| z + i\\bar{z} |=$（    ）",
+    "content": "若$z = 1 + i$．则$| z + i\\bar{z} |=$（ ）",
     "options": [
       {
         "label": "A",
@@ -5430,7 +5430,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "如图，网格纸上绘制的是一个多面体的三视图，网格小正方形的边长为 1，则该多面体的体积为（    ）",
+    "content": "如图，网格纸上绘制的是一个多面体的三视图，网格小正方形的边长为 1，则该多面体的体积为（ ）",
     "options": [
       {
         "label": "A",
@@ -5459,7 +5459,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "trigo_func",
-    "content": "将函数$f(x) = \\\\sin(\\\\omega x + \\frac{\\\\pi}{3})$ ($\\\\omega > 0$)的图像向左平移$\\frac{\\\\pi}{2}$个单位长度后得到曲线 C，若 C关于 y轴对称，则$\\\\omega$的最小值是（    ）",
+    "content": "将函数$f(x) = \\\\sin(\\\\omega x + \\frac{\\\\pi}{3})$ ($\\\\omega > 0$)的图像向左平移$\\frac{\\\\pi}{2}$个单位长度后得到曲线 C，若 C关于 y轴对称，则$\\\\omega$的最小值是（ ）",
     "options": [
       {
         "label": "A",
@@ -5488,7 +5488,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "probability",
-    "content": "从分别写有 1，2，3，4，5，6 的 6 张卡片中无放回随机抽取 2 张，则抽到的 2 张卡片上的数字之积是 4 的倍数的概率为（    ）",
+    "content": "从分别写有 1，2，3，4，5，6 的 6 张卡片中无放回随机抽取 2 张，则抽到的 2 张卡片上的数字之积是 4 的倍数的概率为（ ）",
     "options": [
       {
         "label": "A",
@@ -5517,7 +5517,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "function",
-    "content": "函数$y = x^3 - 3x\\\\cos x$在区间$[ -\\frac{\\\\pi}{2}, \\frac{\\\\pi}{2} ]$的图象大致为（    ）",
+    "content": "函数$y = x^3 - 3x\\\\cos x$在区间$[ -\\frac{\\\\pi}{2}, \\frac{\\\\pi}{2} ]$的图象大致为（ ）",
     "options": [
       {
         "label": "A",
@@ -5546,7 +5546,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "derivative",
-    "content": "当$x=1$时，函数$f(x) = a\\\\ln x + \\frac{b}{x}$取得最大值-2，则$f'(2)=$（    ）",
+    "content": "当$x=1$时，函数$f(x) = a\\\\ln x + \\frac{b}{x}$取得最大值-2，则$f'(2)=$（ ）",
     "options": [
       {
         "label": "A",
@@ -5575,7 +5575,7 @@
     "type": "single_choice",
     "type_rank": 9,
     "category": "solid_geometry",
-    "content": "在长方体 $ABCD-A_1B_1C_1D_1$中，已知$B_1D$与平面$ABCD$和平面$AA_1B_1B$所成角均为30°，则（    ）",
+    "content": "在长方体 $ABCD-A_1B_1C_1D_1$中，已知$B_1D$与平面$ABCD$和平面$AA_1B_1B$所成角均为30°，则（ ）",
     "options": [
       {
         "label": "A",
@@ -5604,7 +5604,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "solid_geometry",
-    "content": "甲、乙两个圆锥的母线长相等，侧面展开图的圆心角之和为$2\\\\pi$，侧面积分别为$S_{甲}$和$S_{乙}$，体积分别为$V_{甲}$和$V_{乙}$．若$\\frac{S_{甲}}{S_{乙}}=2$，则$\\frac{V_{甲}}{V_{乙}}=$（    ）",
+    "content": "甲、乙两个圆锥的母线长相等，侧面展开图的圆心角之和为$2\\\\pi$，侧面积分别为$S_{甲}$和$S_{乙}$，体积分别为$V_{甲}$和$V_{乙}$．若$\\frac{S_{甲}}{S_{乙}}=2$，则$\\frac{V_{甲}}{V_{乙}}=$（ ）",
     "options": [
       {
         "label": "A",
@@ -5633,7 +5633,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "conic",
-    "content": "已知椭圆$C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)$的离心率为$\\frac{1}{3}$，$A_1, A_2$分别为 C的左、右顶点，B为 C的上顶点．若$\\\\overrightarrow{BA_1} \\\\cdot \\\\overrightarrow{BA_2} = -1$，则 C的方程为（    ）",
+    "content": "已知椭圆$C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 (a > b > 0)$的离心率为$\\frac{1}{3}$，$A_1, A_2$分别为 C的左、右顶点，B为 C的上顶点．若$\\\\overrightarrow{BA_1} \\\\cdot \\\\overrightarrow{BA_2} = -1$，则 C的方程为（ ）",
     "options": [
       {
         "label": "A",
@@ -5662,7 +5662,7 @@
     "type": "single_choice",
     "type_rank": 12,
     "category": "inequality",
-    "content": "已知$9^{10}, 10^{11}, 8^9m m ma b= = - = -$, 则（    ）",
+    "content": "已知$9^{10}, 10^{11}, 8^9m m ma b= = - = -$, 则（ ）",
     "options": [
       {
         "label": "A",
@@ -6545,7 +6545,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "complex",
-    "content": "若$1 3iz= - +$，则$1zzz=-$（    ）",
+    "content": "若$1 3iz= - +$，则$1zzz=-$（ ）",
     "options": [
       {
         "label": "A",
@@ -6574,7 +6574,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "probability",
-    "content": "某社区通过公益讲座以普及社区居民的垃圾分类知识．为了解讲座效果，随机抽取 10 位社区居民，让他们在讲座前和讲座后各回答一份垃圾分类知识问卷，这 10 位社区居民在讲座前和讲座后问卷答题的正确率如下图：\n\n则（    ）",
+    "content": "某社区通过公益讲座以普及社区居民的垃圾分类知识．为了解讲座效果，随机抽取 10 位社区居民，让他们在讲座前和讲座后各回答一份垃圾分类知识问卷，这 10 位社区居民在讲座前和讲座后问卷答题的正确率如下图：\n\n则（ ）",
     "options": [
       {
         "label": "A",
@@ -6603,7 +6603,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "logic",
-    "content": "设全集$U= \\\\{ -2, -1,0,1, 2,3\\\\}$，集合 $A= \\\\{ -1, 2\\\\}, B = \\\\{x | x^2 - 4x + 3 = 0\\\\}$，则$\\\\complement_U(A \\\\cup B) =$（    ）",
+    "content": "设全集$U= \\\\{ -2, -1,0,1, 2,3\\\\}$，集合 $A= \\\\{ -1, 2\\\\}, B = \\\\{x | x^2 - 4x + 3 = 0\\\\}$，则$\\\\complement_U(A \\\\cup B) =$（ ）",
     "options": [
       {
         "label": "A",
@@ -6632,7 +6632,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "如图，网格纸上绘制的是一个多面体的三视图，网格小正方形的边长为 1，则该多面体的体积为（    ）",
+    "content": "如图，网格纸上绘制的是一个多面体的三视图，网格小正方形的边长为 1，则该多面体的体积为（ ）",
     "options": [
       {
         "label": "A",
@@ -6661,23 +6661,23 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "function",
-    "content": "函数$y = x^3 - 3 \\\\cos x$在区间$[ -\\frac{\\\\pi}{2}, \\frac{\\\\pi}{2} ]$的图象大致为（    ）",
+    "content": "函数$y = x^3 - 3 \\\\cos x$在区间$[ -\\frac{\\\\pi}{2}, \\frac{\\\\pi}{2} ]$的图象大致为（ ）",
     "options": [
       {
         "label": "A",
-        "text": " "
+        "text": ""
       },
       {
         "label": "B",
-        "text": " "
+        "text": ""
       },
       {
         "label": "C",
-        "text": " "
+        "text": ""
       },
       {
         "label": "D",
-        "text": " "
+        "text": ""
       }
     ],
     "score_rule": "每小题5分",
@@ -6690,7 +6690,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "derivative",
-    "content": "当$x=1$时，函数$f(x) = a \\\\ln x + \\frac{b}{x}$取得最大值$-2$，则$f'(2)=$（    ）",
+    "content": "当$x=1$时，函数$f(x) = a \\\\ln x + \\frac{b}{x}$取得最大值$-2$，则$f'(2)=$（ ）",
     "options": [
       {
         "label": "A",
@@ -6719,7 +6719,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "solid_geometry",
-    "content": "在长方体 $ABCD - A_1B_1C_1D_1$中，已知$B_1D$与平面$ABCD$和平面$AA_1B_1B$所成的角均为$30^\\\\circ$，则（    ）",
+    "content": "在长方体 $ABCD - A_1B_1C_1D_1$中，已知$B_1D$与平面$ABCD$和平面$AA_1B_1B$所成的角均为$30^\\\\circ$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -6748,7 +6748,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "trigo_sol",
-    "content": "沈括的《梦溪笔谈》是中国古代科技史上的杰作，其中收录了计算圆弧长度的“会圆术”，如图，$\\\\stackrel{\\frown}{AB}$是以 O 为圆心，OA 为半径的圆弧，C是 AB的中点，D 在$\\\\stackrel{\\frown}{AB}$上，$CD \\\\perp AB$．“会圆术”给出$\\\\stackrel{\\frown}{AB}$的弧长的近似值 s 的计算公式：$s = AB + \\frac{2CD^2}{OA}$．当$OA=2, \\\\angle AOB = 60^\\\\circ$时，$s=$（    ）",
+    "content": "沈括的《梦溪笔谈》是中国古代科技史上的杰作，其中收录了计算圆弧长度的“会圆术”，如图，$\\\\stackrel{\\frown}{AB}$是以 O 为圆心，OA 为半径的圆弧，C是 AB的中点，D 在$\\\\stackrel{\\frown}{AB}$上，$CD \\\\perp AB$．“会圆术”给出$\\\\stackrel{\\frown}{AB}$的弧长的近似值 s 的计算公式：$s = AB + \\frac{2CD^2}{OA}$．当$OA=2, \\\\angle AOB = 60^\\\\circ$时，$s=$（ ）",
     "options": [
       {
         "label": "A",
@@ -6777,7 +6777,7 @@
     "type": "single_choice",
     "type_rank": 9,
     "category": "solid_geometry",
-    "content": "甲、乙两个圆锥 母线长相等，侧面展开图的圆心角之和为$2\\\\pi$，侧面积分别为$S_{甲}$和$S_{乙}$，体积分别为$V_{甲}$和$V_{乙}$．若$\\frac{S_{甲}}{S_{乙}}=2$，则$\\frac{V_{甲}}{V_{乙}}=$（    ）",
+    "content": "甲、乙两个圆锥 母线长相等，侧面展开图的圆心角之和为$2\\\\pi$，侧面积分别为$S_{甲}$和$S_{乙}$，体积分别为$V_{甲}$和$V_{乙}$．若$\\frac{S_{甲}}{S_{乙}}=2$，则$\\frac{V_{甲}}{V_{乙}}=$（ ）",
     "options": [
       {
         "label": "A",
@@ -6806,7 +6806,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "conic",
-    "content": "椭圆$C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1(a>b>0)$的左顶点为 A，点 P，Q 均在 C上，且关于 y轴对称．若直线$AP,AQ$的斜率之积为$\\frac{1}{4}$，则 C的离心率为（    ）",
+    "content": "椭圆$C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1(a>b>0)$的左顶点为 A，点 P，Q 均在 C上，且关于 y轴对称．若直线$AP,AQ$的斜率之积为$\\frac{1}{4}$，则 C的离心率为（ ）",
     "options": [
       {
         "label": "A",
@@ -6835,7 +6835,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "trigo_func",
-    "content": "设函数$f(x) = \\\\sin(\\\\omega x + \\frac{\\\\pi}{3})$在区间$(0, \\\\pi)$恰有三个极值点、两个零点，则$\\\\omega$的取值范围是（    ）",
+    "content": "设函数$f(x) = \\\\sin(\\\\omega x + \\frac{\\\\pi}{3})$在区间$(0, \\\\pi)$恰有三个极值点、两个零点，则$\\\\omega$的取值范围是（ ）",
     "options": [
       {
         "label": "A",
@@ -6864,7 +6864,7 @@
     "type": "single_choice",
     "type_rank": 12,
     "category": "inequality",
-    "content": "已知$a = \\frac{3}{32}, b = \\\\cos^2 \\frac{1}{4}, c = \\frac{4}{3}\\\\sin^2 \\frac{1}{4}$，则（    ）",
+    "content": "已知$a = \\frac{3}{32}, b = \\\\cos^2 \\frac{1}{4}, c = \\frac{4}{3}\\\\sin^2 \\frac{1}{4}$，则（ ）",
     "options": [
       {
         "label": "A",
@@ -7717,7 +7717,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "logic",
-    "content": "设集合$M = \\\\{x | 0 < x < 4\\\\}$, $N = \\\\{x | \\frac{1}{3} \\\\le x \\\\le 5\\\\}$，则$M \\\\cap N=$（    ）",
+    "content": "设集合$M = \\\\{x | 0 < x < 4\\\\}$, $N = \\\\{x | \\frac{1}{3} \\\\le x \\\\le 5\\\\}$，则$M \\\\cap N=$（ ）",
     "options": [
       {
         "label": "A",
@@ -7746,7 +7746,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "probability",
-    "content": "为了解某地农村经济情况，对该地农户家庭年收入进行抽样调查，将农户家庭年收入调查数据整理得到如下频率分布直方图：\n根据此频率分布直方图，下面结论中不正确的是（    ）",
+    "content": "为了解某地农村经济情况，对该地农户家庭年收入进行抽样调查，将农户家庭年收入调查数据整理得到如下频率分布直方图： 根据此频率分布直方图，下面结论中不正确的是（ ）",
     "options": [
       {
         "label": "A",
@@ -7775,7 +7775,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "complex",
-    "content": "已知 $(1-i)^2 z = 3+2i$，则$z=$（    ）",
+    "content": "已知 $(1-i)^2 z = 3+2i$，则$z=$（ ）",
     "options": [
       {
         "label": "A",
@@ -7804,7 +7804,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "function",
-    "content": "青少年视力是社会普遍关注的问题，视力情况可借助视力表测量．通常用五分记录法和小数记录法记录视力数据，五分记录法的数据$L$和小数记录表的数据$V$的满足$L = 5 + \\\\lg V$．已知某同学视力的五分记录法的数据为4.9，则其视力的小数记录法的数据为（    ）（$10^{0.1} \\\\approx 1.259$）",
+    "content": "青少年视力是社会普遍关注的问题，视力情况可借助视力表测量．通常用五分记录法和小数记录法记录视力数据，五分记录法的数据$L$和小数记录表的数据$V$的满足$L = 5 + \\\\lg V$．已知某同学视力的五分记录法的数据为4.9，则其视力的小数记录法的数据为（ ）（$10^{0.1} \\\\approx 1.259$）",
     "options": [
       {
         "label": "A",
@@ -7833,7 +7833,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "conic",
-    "content": "已知$F_1, F_2$是双曲线$C$的两个焦点，$P$为$C$上一点，且$\\\\angle F_1PF_2 = 60^\\\\circ, |PF_1| = 3|PF_2|$，则$C$的离心率为（    ）",
+    "content": "已知$F_1, F_2$是双曲线$C$的两个焦点，$P$为$C$上一点，且$\\\\angle F_1PF_2 = 60^\\\\circ, |PF_1| = 3|PF_2|$，则$C$的离心率为（ ）",
     "options": [
       {
         "label": "A",
@@ -7862,7 +7862,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "solid_geometry",
-    "content": "在一个正方体中，过顶点$A$的三条棱的中点分别为$E，F，G$．该正方体截去三棱锥$A-EFG$后，所得多面体的三视图中，正视图如图所示，则相应的侧视图是（    ）",
+    "content": "在一个正方体中，过顶点$A$的三条棱的中点分别为$E，F，G$．该正方体截去三棱锥$A-EFG$后，所得多面体的三视图中，正视图如图所示，则相应的侧视图是（ ）",
     "options": [
       {
         "label": "A",
@@ -7891,7 +7891,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "sequence",
-    "content": "等比数列$\\\\{a_n\\\\}$的公比为$q$，前$n$项和为$S_n$，设甲：$q>0$，乙：$\\\\{S_n\\\\}$是递增数列，则（    ）",
+    "content": "等比数列$\\\\{a_n\\\\}$的公比为$q$，前$n$项和为$S_n$，设甲：$q>0$，乙：$\\\\{S_n\\\\}$是递增数列，则（ ）",
     "options": [
       {
         "label": "A",
@@ -7920,7 +7920,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "trigo_sol",
-    "content": "2020年12月8日，中国和尼泊尔联合公布珠穆朗玛峰最新高程为8848.86（单位：m），三角高程测量法是珠峰高程测量方法之一．如图是三角高程测量法的一个示意图，现有$A, B, C$三点，且$A, B, C$在同一水平面上的投影$A', B', C'$满足$\\\\angle A'C'B' = 45^\\\\circ$，$\\\\angle A'B'C' = 60^\\\\circ$．由$C$点测得$B$点的仰角为$15^\\\\circ$，$BB'$与$CC'$的差为100；由$B$点测得$A$点的仰角为$45^\\\\circ$，则$A, C$两点到水平面$A'B'C'$的高度差$AA' - CC'$约为（$\\\\sqrt{3} \\\\approx 1.732$）（    ）",
+    "content": "2020年12月8日，中国和尼泊尔联合公布珠穆朗玛峰最新高程为8848.86（单位：m），三角高程测量法是珠峰高程测量方法之一．如图是三角高程测量法的一个示意图，现有$A, B, C$三点，且$A, B, C$在同一水平面上的投影$A', B', C'$满足$\\\\angle A'C'B' = 45^\\\\circ$，$\\\\angle A'B'C' = 60^\\\\circ$．由$C$点测得$B$点的仰角为$15^\\\\circ$，$BB'$与$CC'$的差为100；由$B$点测得$A$点的仰角为$45^\\\\circ$，则$A, C$两点到水平面$A'B'C'$的高度差$AA' - CC'$约为（$\\\\sqrt{3} \\\\approx 1.732$）（ ）",
     "options": [
       {
         "label": "A",
@@ -7949,7 +7949,7 @@
     "type": "single_choice",
     "type_rank": 9,
     "category": "trigo_func",
-    "content": "若$\\\\alpha \\\\in (0, \\frac{\\\\pi}{2}), \\tan 2\\\\alpha = \\frac{\\\\cos \\\\alpha}{2 - \\\\sin \\\\alpha}$，则$\\tan \\\\alpha=$（    ）",
+    "content": "若$\\\\alpha \\\\in (0, \\frac{\\\\pi}{2}), \\tan 2\\\\alpha = \\frac{\\\\cos \\\\alpha}{2 - \\\\sin \\\\alpha}$，则$\\tan \\\\alpha=$（ ）",
     "options": [
       {
         "label": "A",
@@ -7978,7 +7978,7 @@
     "type": "single_choice",
     "type_rank": 10,
     "category": "probability",
-    "content": "将4个1和2个0随机排成一行，则2个0不相邻的概率为（    ）",
+    "content": "将4个1和2个0随机排成一行，则2个0不相邻的概率为（ ）",
     "options": [
       {
         "label": "A",
@@ -8007,7 +8007,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "solid_geometry",
-    "content": "已知$A, B, C$是半径为1的球$O$的球面上的三个点，且$AC \\\\perp BC, AC = BC = 1$，则三棱锥$O-ABC$的体积为（    ）",
+    "content": "已知$A, B, C$是半径为1的球$O$的球面上的三个点，且$AC \\\\perp BC, AC = BC = 1$，则三棱锥$O-ABC$的体积为（ ）",
     "options": [
       {
         "label": "A",
@@ -8036,7 +8036,7 @@
     "type": "single_choice",
     "type_rank": 12,
     "category": "function",
-    "content": "设函数$f(x)$的定义域为$R$，$f(x+1)$为奇函数，$f(x+2)$为偶函数，当$x \\\\in [1, 2]$时，$f(x) = ax^2 + b$．若$f(0) + f(3) = 6$，则$f(\\frac{9}{2})=$（    ）",
+    "content": "设函数$f(x)$的定义域为$R$，$f(x+1)$为奇函数，$f(x+2)$为偶函数，当$x \\\\in [1, 2]$时，$f(x) = ax^2 + b$．若$f(0) + f(3) = 6$，则$f(\\frac{9}{2})=$（ ）",
     "options": [
       {
         "label": "A",
@@ -8514,7 +8514,7 @@
     "options": null,
     "score_rule": "5分",
     "source": "2021年高考数学试卷（新高考Ⅰ卷）",
-    "answer": "(1). 5    (2). 415 37202nn-+-"
+    "answer": "(1). 5  (2). 415 37202nn-+-"
   },
   {
     "id": "2021年高考数学试卷（文）（全国甲卷）-1",
@@ -8551,7 +8551,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "probability",
-    "content": "为了解某地农村经济情况，对该地农户家庭年收入进行抽样调查，将农户家庭年收入的调查数据整理得到如下频率分布直方图：\n根据此频率分布直方图，下面结论中不正确的是",
+    "content": "为了解某地农村经济情况，对该地农户家庭年收入进行抽样调查，将农户家庭年收入的调查数据整理得到如下频率分布直方图： 根据此频率分布直方图，下面结论中不正确的是",
     "options": [
       {
         "label": "A",
@@ -8667,7 +8667,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "function",
-    "content": "青少年视力是社会普遍关注的问题，视力情况可借助视力表测量．通常用五分记录法和小数记录法记录视力数据，五分记录法的数据$L$和小数记录表的数据$V$的满足$L = 5 + \\\\lg V$．已知某同学视力的五分记录法的数据为4.9，则其视力的小数记录法的数据为（    ）（$\\\\sqrt[10]{10} \\\\approx 1.259$）",
+    "content": "青少年视力是社会普遍关注的问题，视力情况可借助视力表测量．通常用五分记录法和小数记录法记录视力数据，五分记录法的数据$L$和小数记录表的数据$V$的满足$L = 5 + \\\\lg V$．已知某同学视力的五分记录法的数据为4.9，则其视力的小数记录法的数据为（ ）（$\\\\sqrt[10]{10} \\\\approx 1.259$）",
     "options": [
       {
         "label": "A",
@@ -9316,7 +9316,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "以图①为正视图，在图②③④⑤中选两个分别作为侧视图和俯视图，组成某个三棱锥的三视图，则所选侧视图和俯视图的编号依次为        （写出符合要求的一组答案即可）.",
+    "content": "以图①为正视图，在图②③④⑤中选两个分别作为侧视图和俯视图，组成某个三棱锥的三视图，则所选侧视图和俯视图的编号依次为 （写出符合要求的一组答案即可）.",
     "options": null,
     "score_rule": "本题满分5分",
     "source": "2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）"
@@ -9327,7 +9327,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "complex",
-    "content": "复数$\\frac{2-i}{1+3i}$在复平面内对应点所在的象限为（     ）",
+    "content": "复数$\\frac{2-i}{1+3i}$在复平面内对应点所在的象限为（ ）",
     "options": [
       {
         "label": "A",
@@ -9356,7 +9356,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "logic",
-    "content": "设集合$U = \\\\{ 1,2,3,4,5,6\\\\}, A = \\\\{ 1,3,6\\\\}, B = \\\\{2,3,4\\\\}$，则$\\\\complement_U (A \\\\cap B)=$（    ）",
+    "content": "设集合$U = \\\\{ 1,2,3,4,5,6\\\\}, A = \\\\{ 1,3,6\\\\}, B = \\\\{2,3,4\\\\}$，则$\\\\complement_U (A \\\\cap B)=$（ ）",
     "options": [
       {
         "label": "A",
@@ -9385,7 +9385,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "conic",
-    "content": "抛物线$y^2=2px (p>0)$的焦点到直线$y=x+1$的距离为$\\\\sqrt{2}$，则$p=$（    ）",
+    "content": "抛物线$y^2=2px (p>0)$的焦点到直线$y=x+1$的距离为$\\\\sqrt{2}$，则$p=$（ ）",
     "options": [
       {
         "label": "A",
@@ -9414,7 +9414,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "北斗三号全球卫星导航系统是我国航天事业的重要成果．在卫星导航系统中，地球静止同步卫星的轨道位于地球赤道所在平面，轨道高度为36000km（轨道高度是指卫星到地球表面的距离）．将地球看作是一个球心为O，半径r为6400km的球，其上点A的纬度是指OA与赤道平面所成角的度数．地球表面上能直接观测到一颗地球静止同步轨道卫星点的纬度最大值为$\\\\alpha$，记卫星信号覆盖地球表面的表面积为$S=2\\\\pi r^2(1-\\\\cos \\\\alpha)$（单位：km$^2$），则S占地球表面积的百分比约为（    ）",
+    "content": "北斗三号全球卫星导航系统是我国航天事业的重要成果．在卫星导航系统中，地球静止同步卫星的轨道位于地球赤道所在平面，轨道高度为36000km（轨道高度是指卫星到地球表面的距离）．将地球看作是一个球心为O，半径r为6400km的球，其上点A的纬度是指OA与赤道平面所成角的度数．地球表面上能直接观测到一颗地球静止同步轨道卫星点的纬度最大值为$\\\\alpha$，记卫星信号覆盖地球表面的表面积为$S=2\\\\pi r^2(1-\\\\cos \\\\alpha)$（单位：km$^2$），则S占地球表面积的百分比约为（ ）",
     "options": [
       {
         "label": "A",
@@ -9443,7 +9443,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "solid_geometry",
-    "content": "正四棱台 上､下底面的边长分别为 2，4，侧棱长为2，则其体积为（    ）",
+    "content": "正四棱台 上､下底面的边长分别为 2，4，侧棱长为2，则其体积为（ ）",
     "options": [
       {
         "label": "A",
@@ -9472,7 +9472,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "probability",
-    "content": "某物理量的测量结果服从正态分布$N(10, s^2)$，下列结论中不正确的是（    ）",
+    "content": "某物理量的测量结果服从正态分布$N(10, s^2)$，下列结论中不正确的是（ ）",
     "options": [
       {
         "label": "A",
@@ -9501,7 +9501,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "inequality",
-    "content": "已知 $a=\\\\log_5 2$， $b=\\\\log_8 3$， $c=\\frac{1}{2}$，则下列判断正确的是（    ）",
+    "content": "已知 $a=\\\\log_5 2$， $b=\\\\log_8 3$， $c=\\frac{1}{2}$，则下列判断正确的是（ ）",
     "options": [
       {
         "label": "A",
@@ -9530,7 +9530,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "function",
-    "content": "已知函数$f(x)$的定义域为$R$，$f(x+2)$为偶函数，$f(2x+1)$为奇函数，则（    ）",
+    "content": "已知函数$f(x)$的定义域为$R$，$f(x+2)$为偶函数，$f(2x+1)$为奇函数，则（ ）",
     "options": [
       {
         "label": "A",
@@ -9559,7 +9559,7 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "probability",
-    "content": "下列统计量中，能度量样本$x_1, x_2, \\\\dots, x_n$的离散程度的是（    ）",
+    "content": "下列统计量中，能度量样本$x_1, x_2, \\\\dots, x_n$的离散程度的是（ ）",
     "options": [
       {
         "label": "A",
@@ -9591,7 +9591,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "solid_geometry",
-    "content": "如图，在正方体中，O为底面的中心，P为所在棱的中点，M，N为正方体的顶点．则满足$MN \\\\perp OP$的是（    ）",
+    "content": "如图，在正方体中，O为底面的中心，P为所在棱的中点，M，N为正方体的顶点．则满足$MN \\\\perp OP$的是（ ）",
     "options": [
       {
         "label": "A",
@@ -9623,7 +9623,7 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "line_circle",
-    "content": "已知直线 $l: ax+by-2r=0$与圆$C: x^2+y^2=r^2$，点$A(a, b)$，则下列说法正确的是（    ）",
+    "content": "已知直线 $l: ax+by-2r=0$与圆$C: x^2+y^2=r^2$，点$A(a, b)$，则下列说法正确的是（ ）",
     "options": [
       {
         "label": "A",
@@ -9656,7 +9656,7 @@
     "type": "multi_choice",
     "type_rank": 4,
     "category": "logic",
-    "content": "设正整数 $n = a_k \\times 2^k + a_{k-1} \\times 2^{k-1} + \\\\dots + a_1 \\times 2^1 + a_0 \\times 2^0$，其中$a_i \\\\in \\\\{0,1\\\\}$，记$w(n) = a_0 + a_1 + \\\\dots + a_k$．则（    ）",
+    "content": "设正整数 $n = a_k \\times 2^k + a_{k-1} \\times 2^{k-1} + \\\\dots + a_1 \\times 2^1 + a_0 \\times 2^0$，其中$a_i \\\\in \\\\{0,1\\\\}$，记$w(n) = a_0 + a_1 + \\\\dots + a_k$．则（ ）",
     "options": [
       {
         "label": "A",
@@ -10073,7 +10073,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "conic",
-    "content": "已知双曲线C：$\\frac{x^2}{m}-y^2 = 1$（$m>0$）的一条渐近线为$3x+my=0$，则C的焦距为           .",
+    "content": "已知双曲线C：$\\frac{x^2}{m}-y^2 = 1$（$m>0$）的一条渐近线为$3x+my=0$，则C的焦距为 .",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）"
@@ -10084,7 +10084,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "vector",
-    "content": "已知向量$\\\\vec{a}=（1，3）$ ，$\\\\vec{b}=（3，4）$ ，若$(\\\\vec{a}-\\\\lambda \\\\vec{b})\\\\perp \\\\vec{b}$，则$\\\\lambda=$            。",
+    "content": "已知向量$\\\\vec{a}=（1，3）$ ，$\\\\vec{b}=（3，4）$ ，若$(\\\\vec{a}-\\\\lambda \\\\vec{b})\\\\perp \\\\vec{b}$，则$\\\\lambda=$ 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）"
@@ -10095,7 +10095,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "trigo_sol",
-    "content": "记$\\triangle ABC$的内角A，B，C的对边分别为a，b，c，面积为$\\\\sqrt{3}$，B=60°，$a^2+c^2=3ac$，则b=           .",
+    "content": "记$\\triangle ABC$的内角A，B，C的对边分别为a，b，c，面积为$\\\\sqrt{3}$，B=60°，$a^2+c^2=3ac$，则b= .",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）"
@@ -10106,7 +10106,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "以图①为正视图，在图②③④⑤中选两个分别作为侧视图和俯视图，组成某个三棱锥的三视图， 则所选侧视图和俯视图的编号依次为           （写出符合要求的一组答案即可）.",
+    "content": "以图①为正视图，在图②③④⑤中选两个分别作为侧视图和俯视图，组成某个三棱锥的三视图， 则所选侧视图和俯视图的编号依次为 （写出符合要求的一组答案即可）.",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）"
@@ -10501,7 +10501,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "logic",
-    "content": "设有下列四个命题：\n$p_1$：两两相交且不过同一点的三条直线必在同一平面内.\n$p_2$：过空间中任意三点有且仅有一个平面.\n$p_3$：若空间两条直线不相交，则这两条直线平行.\n$p_4$：若直线$l \\\\subset$平面$\\\\alpha$，直线$m \\\\perp$平面$\\\\alpha$，则$m \\\\perp l$.\n则下述命题中所有真命题的序号是__________.\n① $p_1 \\\\land p_4$ ② $p_1 \\\\land p_2$ ③ $\\neg p_2 \\\\lor p_3$ ④ $\\neg p_3 \\\\lor \\neg p_4$",
+    "content": "设有下列四个命题： $p_1$：两两相交且不过同一点的三条直线必在同一平面内. $p_2$：过空间中任意三点有且仅有一个平面. $p_3$：若空间两条直线不相交，则这两条直线平行. $p_4$：若直线$l \\\\subset$平面$\\\\alpha$，直线$m \\\\perp$平面$\\\\alpha$，则$m \\\\perp l$. 则下述命题中所有真命题的序号是__________. ① $p_1 \\\\land p_4$ ② $p_1 \\\\land p_2$ ③ $\\neg p_2 \\\\lor p_3$ ④ $\\neg p_3 \\\\lor \\neg p_4$",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅱ）",
@@ -10629,7 +10629,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "probability",
-    "content": "某校一个课外学习小组为研究某作物种子的发芽率$y$和温度$x$(单位：℃)的关系，在20个不同的温度条件下进行种子发芽实验，电邮实验数$(x_i，y_i)(i＝1，2，…，20)$得到下面的散点图：\n由此散点图，在10°C至40°C之间，下面四个回归方程类型中最适宜作为发芽率$y$和温度$x$的回归方程类型的是",
+    "content": "某校一个课外学习小组为研究某作物种子的发芽率$y$和温度$x$(单位：℃)的关系，在20个不同的温度条件下进行种子发芽实验，电邮实验数$(x_i，y_i)(i＝1，2，…，20)$得到下面的散点图： 由此散点图，在10°C至40°C之间，下面四个回归方程类型中最适宜作为发芽率$y$和温度$x$的回归方程类型的是",
     "options": [
       {
         "label": "A",
@@ -10832,7 +10832,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "inequality",
-    "content": "若$x，y$满足约束条件$\\begin{cases} 2x+y-2 \\\\le 0 \\\\\\ x-y-1 \\\\ge 0 \\\\\\ y+1 \\\\ge 0 \\\\end{cases}$，则$z＝x＋7y$的最大值为            。",
+    "content": "若$x，y$满足约束条件$\\begin{cases} 2x+y-2 \\\\le 0 \\\\\\ x-y-1 \\\\ge 0 \\\\\\ y+1 \\\\ge 0 \\\\end{cases}$，则$z＝x＋7y$的最大值为 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅰ）",
@@ -10844,7 +10844,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "vector",
-    "content": "设向量$a＝(1，－1)$，$b＝(m＋1，2m－4)$，若$a⊥b$，则$m＝$            。",
+    "content": "设向量$a＝(1，－1)$，$b＝(m＋1，2m－4)$，若$a⊥b$，则$m＝$ 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅰ）",
@@ -10856,7 +10856,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "derivative",
-    "content": "曲线$y＝\\\\ln x＋x＋1$的一条切线的斜率为2，则该切线的方程为            。",
+    "content": "曲线$y＝\\\\ln x＋x＋1$的一条切线的斜率为2，则该切线的方程为 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅰ）",
@@ -10868,7 +10868,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "sequence",
-    "content": "数列$\\\\{a_n\\\\}$满足$a_{n＋2}＋(－1)^na_n＝3n－1$，前16项和为540，则$a_1＝$            。",
+    "content": "数列$\\\\{a_n\\\\}$满足$a_{n＋2}＋(－1)^na_n＝3n－1$，前16项和为540，则$a_1＝$ 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅰ）",
@@ -11232,7 +11232,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（理）（新课标Ⅲ）",
-    "answer": "7\n的\n第9页 | 共24页"
+    "answer": "7 的 第9页 | 共24页"
   },
   {
     "id": "2020年高考数学试卷（理）（新课标Ⅲ）-14",
@@ -12099,7 +12099,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "logic",
-    "content": "设有下列四个命题：\n$p_1$：两两相交且不过同一点的三条直线必在同一平面内.\n$p_2$：过空间中任意三点有且仅有一个平面.\n$p_3$：若空间两条直线不相交，则这两条直线平行.\n$p_4$：若直线$l \\\\subset$平面$\\\\alpha$，直线$m \\\\perp$平面$\\\\alpha$，则$m \\\\perp l$.\n则下述命题中所有真命题的序号是__________.\n① $p_1 \\\\land p_4$ ② $p_1 \\\\land p_2$ ③ $\\neg p_2 \\\\lor p_3$ ④ $\\neg p_3 \\\\lor \\neg p_4$",
+    "content": "设有下列四个命题： $p_1$：两两相交且不过同一点的三条直线必在同一平面内. $p_2$：过空间中任意三点有且仅有一个平面. $p_3$：若空间两条直线不相交，则这两条直线平行. $p_4$：若直线$l \\\\subset$平面$\\\\alpha$，直线$m \\\\perp$平面$\\\\alpha$，则$m \\\\perp l$. 则下述命题中所有真命题的序号是__________. ① $p_1 \\\\land p_4$ ② $p_1 \\\\land p_2$ ③ $\\neg p_2 \\\\lor p_3$ ④ $\\neg p_3 \\\\lor \\neg p_4$",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（理）（新课标Ⅱ）",
@@ -12459,7 +12459,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "inequality",
-    "content": "若$x，y$满足约束条件$\\begin{cases} x+y \\\\ge 0 \\\\\\ 2x-y \\\\ge 0 \\\\\\ x \\\\le 1 \\\\end{cases}$，则$z＝3x＋2y$的最大值为            。",
+    "content": "若$x，y$满足约束条件$\\begin{cases} x+y \\\\ge 0 \\\\\\ 2x-y \\\\ge 0 \\\\\\ x \\\\le 1 \\\\end{cases}$，则$z＝3x＋2y$的最大值为 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅲ）",
@@ -12471,7 +12471,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "conic",
-    "content": "设双曲线$C：\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的一条渐近线为$y＝2x$，则C的离心率为            。",
+    "content": "设双曲线$C：\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的一条渐近线为$y＝2x$，则C的离心率为 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅲ）",
@@ -12483,7 +12483,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "derivative",
-    "content": "设函数$f(x)＝(x+a)e^x$，若$f'(1)＝4e$，则$a＝$            。",
+    "content": "设函数$f(x)＝(x+a)e^x$，若$f'(1)＝4e$，则$a＝$ 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅲ）",
@@ -12495,7 +12495,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "已知圆锥的底面半径为1，母线长为3，则该圆锥内半径最大的球的体积为            。",
+    "content": "已知圆锥的底面半径为1，母线长为3，则该圆锥内半径最大的球的体积为 。",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（文）（新课标Ⅲ）",
@@ -12623,7 +12623,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "probability",
-    "content": "某校一个课外学习小组为研究某作物种子的发芽率$y$和温度$x$(单位：℃)的关系，在20个不同的温度条件下进行种子发芽实验，由实验数据$(x_i, y_i)(i=1, 2, \\\\dots, 20)$得到下面的散点图：\n由此散点图，在10℃~40℃之间，下面四个回归方程类型中最适宜作为发芽率$y$和温度$x$的回归方程类型的是",
+    "content": "某校一个课外学习小组为研究某作物种子的发芽率$y$和温度$x$(单位：℃)的关系，在20个不同的温度条件下进行种子发芽实验，由实验数据$(x_i, y_i)(i=1, 2, \\\\dots, 20)$得到下面的散点图： 由此散点图，在10℃~40℃之间，下面四个回归方程类型中最适宜作为发芽率$y$和温度$x$的回归方程类型的是",
     "options": [
       {
         "label": "A",
@@ -13193,7 +13193,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "inequality",
-    "content": "记不等式组 $\\begin{cases} x+y \\\\le 6 \\\\\\ x-2y \\\\ge 0 \\\\end{cases}$ 表示的平面区域为D. 命题 $p: \\\\exists (x, y) \\\\in D, x+2y \\\\ge 9$；命题 $q: \\forall (x, y) \\\\in D, x+2y \\\\le 12$.下面给出了四个命题\n①$p \\\\lor q$ ②$\\neg p \\\\lor q$ ③$p \\\\land \\neg q$ ④$\\neg p \\\\land \\neg q$\n这四个命题中，所有真命题的编号是",
+    "content": "记不等式组 $\\begin{cases} x+y \\\\le 6 \\\\\\ x-2y \\\\ge 0 \\\\end{cases}$ 表示的平面区域为D. 命题 $p: \\\\exists (x, y) \\\\in D, x+2y \\\\ge 9$；命题 $q: \\forall (x, y) \\\\in D, x+2y \\\\le 12$.下面给出了四个命题 ①$p \\\\lor q$ ②$\\neg p \\\\lor q$ ③$p \\\\land \\neg q$ ④$\\neg p \\\\land \\neg q$ 这四个命题中，所有真命题的编号是",
     "options": [
       {
         "label": "A",
@@ -13560,7 +13560,7 @@
     "type": "single_choice",
     "type_rank": 11,
     "category": "trigo_func",
-    "content": "关于函数$f(x) = \\\\sin|x| + |\\\\sin x|$有下述四个结论：\n①$f(x)$是偶函数\n②$f(x)$在区间$(\\frac{\\\\pi}{2}, \\\\pi)$单调递增\n③$f(x)$在$[-\\\\pi, \\\\pi]$有4个零点\n④$f(x)$的最大值为2\n其中所有正确结论的编号是",
+    "content": "关于函数$f(x) = \\\\sin|x| + |\\\\sin x|$有下述四个结论： ①$f(x)$是偶函数 ②$f(x)$在区间$(\\frac{\\\\pi}{2}, \\\\pi)$单调递增 ③$f(x)$在$[-\\\\pi, \\\\pi]$有4个零点 ④$f(x)$的最大值为2 其中所有正确结论的编号是",
     "options": [
       {
         "label": "A",
@@ -13634,7 +13634,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2019年高考数学试卷（理）（新课标Ⅰ）",
-    "answer": "1213\n."
+    "answer": "1213 ."
   },
   {
     "id": "2019年高考数学试卷（理）（新课标Ⅰ）-15",
@@ -14054,7 +14054,7 @@
     "options": null,
     "score_rule": "本题第一空2分，第二空3分.",
     "source": "2019年高考数学试卷（理）（新课标Ⅱ）",
-    "answer": "(1). 共26个面.    (2). 棱长为2 1."
+    "answer": "(1). 共26个面.  (2). 棱长为2 1."
   },
   {
     "id": "2019年高考数学试卷（文）（新课标Ⅰ）-1",
@@ -14397,7 +14397,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2019年高考数学试卷（文）（新课标Ⅰ）",
-    "answer": "58\n."
+    "answer": "58 ."
   },
   {
     "id": "2019年高考数学试卷（文）（新课标Ⅰ）-15",
@@ -14719,7 +14719,7 @@
     "type": "single_choice",
     "type_rank": 12,
     "category": "trigo_func",
-    "content": "设函数 $f(x)=\\\\sin(\\\\omega x + \\frac{\\\\pi}{5})$ ($\\\\omega > 0$)，已知 $f(x)$ 在 $[0, 2\\\\pi]$ 有且仅有5个零点，下述四个结论：\n①$f(x)$在$(0, 2\\\\pi)$有且仅有3个极大值点\n②$f(x)$在$(0, 2\\\\pi)$有且仅有2个极小值点\n③$f(x)$在$(0, \\frac{\\\\pi}{10})$单调递增\n④$\\\\omega$的取值范围是$[\\frac{12}{5}, \\frac{29}{10})$\n其中所有正确结论的编号是",
+    "content": "设函数 $f(x)=\\\\sin(\\\\omega x + \\frac{\\\\pi}{5})$ ($\\\\omega > 0$)，已知 $f(x)$ 在 $[0, 2\\\\pi]$ 有且仅有5个零点，下述四个结论： ①$f(x)$在$(0, 2\\\\pi)$有且仅有3个极大值点 ②$f(x)$在$(0, 2\\\\pi)$有且仅有2个极小值点 ③$f(x)$在$(0, \\frac{\\\\pi}{10})$单调递增 ④$\\\\omega$的取值范围是$[\\frac{12}{5}, \\frac{29}{10})$ 其中所有正确结论的编号是",
     "options": [
       {
         "label": "A",
@@ -14912,7 +14912,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "logic",
-    "content": "在“一带一路”知识测验后，甲、乙、丙三人对成绩进行预测．\n甲：我的成绩比乙高．\n乙：丙的成绩比我和甲的都高．\n丙：我的成绩比乙高．\n成绩公布后，三人成绩互不相同且只有一个人预测正确，那么三人按成绩由高到低的次序为",
+    "content": "在“一带一路”知识测验后，甲、乙、丙三人对成绩进行预测． 甲：我的成绩比乙高． 乙：丙的成绩比我和甲的都高． 丙：我的成绩比乙高． 成绩公布后，三人成绩互不相同且只有一个人预测正确，那么三人按成绩由高到低的次序为",
     "options": [
       {
         "label": "A",
@@ -15184,7 +15184,7 @@
     "options": null,
     "score_rule": "本题第一空2分，第二空3分",
     "source": "2019年高考数学试卷（文）（新课标Ⅱ）",
-    "answer": "(1). 共26个面.    (2). 棱长为2 1-."
+    "answer": "(1). 共26个面.  (2). 棱长为2 1-."
   },
   {
     "id": "2018年高考数学试卷（理）（新课标Ⅱ）-1",
@@ -16011,7 +16011,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "probability",
-    "content": "某地区经过一年的新农村建设，农村的经济收入增加了一倍，实现翻番．为更好地了解该地区农村的经济收入变化情况，统计了该地区新农村建设前后农村的经济收入构成比例，得到如下饼图：\n则下面结论中不正确的是",
+    "content": "某地区经过一年的新农村建设，农村的经济收入增加了一倍，实现翻番．为更好地了解该地区农村的经济收入变化情况，统计了该地区新农村建设前后农村的经济收入构成比例，得到如下饼图： 则下面结论中不正确的是",
     "options": [
       {
         "label": "A",
@@ -16305,7 +16305,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2018年高考数学试卷（理）（新课标Ⅰ）",
-    "answer": "6\n【点评】本题主要考查线性规划的应用，利用目标函数的几何意义以及数形结\n合是解决本题的关键"
+    "answer": "6 【点评】本题主要考查线性规划的应用，利用目标函数的几何意义以及数形结 合是解决本题的关键"
   },
   {
     "id": "2018年高考数学试卷（理）（新课标Ⅰ）-14",
@@ -16317,7 +16317,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2018年高考数学试卷（理）（新课标Ⅰ）",
-    "answer": "﹣63\n【点评】本题考查了数列的递推公式和等比数列的求和公式，属于基础题"
+    "answer": "﹣63 【点评】本题考查了数列的递推公式和等比数列的求和公式，属于基础题"
   },
   {
     "id": "2018年高考数学试卷（理）（新课标Ⅰ）-15",
@@ -16325,11 +16325,11 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "probability",
-    "content": "从2位女生，4位男生中选3人参加科技比赛，且至少有1位女生入选，则不同的选法共有　   　种．（用数字填写答案）",
+    "content": "从2位女生，4位男生中选3人参加科技比赛，且至少有1位女生入选，则不同的选法共有　 　种．（用数字填写答案）",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2018年高考数学试卷（理）（新课标Ⅰ）",
-    "answer": "16\n【点评】本题考查了分类计数原理，属于基础题"
+    "answer": "16 【点评】本题考查了分类计数原理，属于基础题"
   },
   {
     "id": "2018年高考数学试卷（理）（新课标Ⅰ）-16",
@@ -16772,7 +16772,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "probability",
-    "content": "某地区经过一年的新农村建设，农村的经济收入增加了一倍，实现翻番．为更好地了解该地区农村的经济收入变化情况，统计了该地区新农村建设前后农村的经济收入构成比例，得到如下饼图：\n则下面结论中不正确的是",
+    "content": "某地区经过一年的新农村建设，农村的经济收入增加了一倍，实现翻番．为更好地了解该地区农村的经济收入变化情况，统计了该地区新农村建设前后农村的经济收入构成比例，得到如下饼图： 则下面结论中不正确的是",
     "options": [
       {
         "label": "A",
@@ -17484,7 +17484,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2018年高考数学试卷（理）（新课标Ⅲ）",
-    "answer": "3\n【点评】本题考查了余弦函数的图象和性质以及函数零点的问题，属于基础题"
+    "answer": "3 【点评】本题考查了余弦函数的图象和性质以及函数零点的问题，属于基础题"
   },
   {
     "id": "2018年高考数学试卷（理）（新课标Ⅲ）-16",
@@ -17838,7 +17838,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅱ）",
-    "answer": "12\n【点评】本题考查的知识点是函数奇偶性的性质，函数求值，难度不大，属于\n基础题"
+    "answer": "12 【点评】本题考查的知识点是函数奇偶性的性质，函数求值，难度不大，属于 基础题"
   },
   {
     "id": "2017年高考数学试卷（文）（新课标Ⅱ）-15",
@@ -17862,7 +17862,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅱ）",
-    "answer": "【点评】本题考查了正弦定理和两角和的正弦公式和诱导公式，属于基础题\n　\n三、解答题：共70分"
+    "answer": "【点评】本题考查了正弦定理和两角和的正弦公式和诱导公式，属于基础题 　 三、解答题：共70分"
   },
   {
     "id": "2017年高考数学试卷（文）（新课标Ⅰ）-1",
@@ -18217,7 +18217,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅰ）",
-    "answer": "【点评】本题考查了同角的三角函数的关系以及余弦公式，考查了学生的运算\n能力，属于基础题"
+    "answer": "【点评】本题考查了同角的三角函数的关系以及余弦公式，考查了学生的运算 能力，属于基础题"
   },
   {
     "id": "2017年高考数学试卷（文）（新课标Ⅰ）-16",
@@ -18295,7 +18295,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "probability",
-    "content": "某城市为了解游客人数的变化规律，提高旅游服务质量，收集并整理了2014年1月至2016年12月期间月接待游客量（单位：万人）的数据，绘制了下面的折线图．\n根据该折线图，下列结论错误的是（　　）",
+    "content": "某城市为了解游客人数的变化规律，提高旅游服务质量，收集并整理了2014年1月至2016年12月期间月接待游客量（单位：万人）的数据，绘制了下面的折线图． 根据该折线图，下列结论错误的是（　　）",
     "options": [
       {
         "label": "A",
@@ -18556,7 +18556,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "inequality",
-    "content": "若$x, y$满足约束条件 $\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-3 \\\\ge 0 \\\\\\ x \\\\le 2 \\\\end{cases}$ ，则$z=3x-4y$的最小值为　   　．",
+    "content": "若$x, y$满足约束条件 $\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-3 \\\\ge 0 \\\\\\ x \\\\le 2 \\\\end{cases}$ ，则$z=3x-4y$的最小值为　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅲ）",
@@ -18568,7 +18568,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "sequence",
-    "content": "设等比数列${a_n}$满足$a_1+a_2=-1$，$a_1-a_3=-3$，则$a_4$=　   　．",
+    "content": "设等比数列${a_n}$满足$a_1+a_2=-1$，$a_1-a_3=-3$，则$a_4$=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅲ）",
@@ -18580,7 +18580,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "function",
-    "content": "设函数$f(x)=\\begin{cases} x+1, & x \\\\le 0 \\\\\\ 2^x, & x > 0 \\\\end{cases}$，则满足$f(x)+f(x-\\frac{1}{2})>1$的$x$的取值范围是　   　．",
+    "content": "设函数$f(x)=\\begin{cases} x+1, & x \\\\le 0 \\\\\\ 2^x, & x > 0 \\\\end{cases}$，则满足$f(x)+f(x-\\frac{1}{2})>1$的$x$的取值范围是　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅲ）",
@@ -18592,7 +18592,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "$a, b$为空间中两条互相垂直的直线，等腰直角三角形ABC的直角边AC所在直线与$a, b$都垂直，斜边AB以直线AC为旋转轴旋转，有下列结论：\n①当直线AB与$a$成60°角时，AB与$b$成30°角；\n②当直线AB与$a$成60°角时，AB与$b$成60°角；\n③直线AB与$a$所成角的最小值为45°；\n④直线AB与$a$所成角的最小值为60°；\n其中正确的是　   　．（填写所有正确结论的编号）",
+    "content": "$a, b$为空间中两条互相垂直的直线，等腰直角三角形ABC的直角边AC所在直线与$a, b$都垂直，斜边AB以直线AC为旋转轴旋转，有下列结论： ①当直线AB与$a$成60°角时，AB与$b$成30°角； ②当直线AB与$a$成60°角时，AB与$b$成60°角； ③直线AB与$a$所成角的最小值为45°； ④直线AB与$a$所成角的最小值为60°； 其中正确的是　 　．（填写所有正确结论的编号）",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅲ）",
@@ -18923,7 +18923,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "probability",
-    "content": "一批产品的二等品率为0.02，从这批产品中每次随机取一件，有放回地抽取100次．X表示抽到的二等品件数，则$DX$=　   　．",
+    "content": "一批产品的二等品率为0.02，从这批产品中每次随机取一件，有放回地抽取100次．X表示抽到的二等品件数，则$DX$=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅱ）"
@@ -18934,11 +18934,11 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "trigo_func",
-    "content": "函数$f(x)=\\\\sin^2x+\\\\cos x-|\\\\cos x-\\frac{1}{2}| (x \\\\in [0, \\frac{\\\\pi}{2}])$的最大值是　   　．",
+    "content": "函数$f(x)=\\\\sin^2x+\\\\cos x-|\\\\cos x-\\frac{1}{2}| (x \\\\in [0, \\frac{\\\\pi}{2}])$的最大值是　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅱ）",
-    "answer": "1\n【点评】本题考查了同角的三角函数的关系以及二次函数的性质，属于基础题"
+    "answer": "1 【点评】本题考查了同角的三角函数的关系以及二次函数的性质，属于基础题"
   },
   {
     "id": "2017年高考数学试卷（理）（新课标Ⅱ）-15",
@@ -18946,7 +18946,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "sequence",
-    "content": "等差数列$\\\\{a_n\\\\}$的前n项和为$S_n$，$a_3=3$，$S_4=10$，则$\\\\sum_{k=1}^{10} \\frac{1}{S_k}$=　   　．",
+    "content": "等差数列$\\\\{a_n\\\\}$的前n项和为$S_n$，$a_3=3$，$S_4=10$，则$\\\\sum_{k=1}^{10} \\frac{1}{S_k}$=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅱ）"
@@ -18957,7 +18957,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "conic",
-    "content": "已知F是抛物线$C: y^2=8x$的焦点，M是C上一点，FM的延长线交y轴于点N．若M为FN的中点，则$|FN|$=　   　．",
+    "content": "已知F是抛物线$C: y^2=8x$的焦点，M是C上一点，FM的延长线交y轴于点N．若M为FN的中点，则$|FN|$=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅱ）",
@@ -19288,7 +19288,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "vector",
-    "content": "已知向量$\\\\vec{a}$=（﹣2，3），$\\\\vec{b}$=（3，m），且$\\\\vec{a} \\\\perp \\\\vec{b}$，则m=　   　．",
+    "content": "已知向量$\\\\vec{a}$=（﹣2，3），$\\\\vec{b}$=（3，m），且$\\\\vec{a} \\\\perp \\\\vec{b}$，则m=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅲ）",
@@ -19300,7 +19300,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "conic",
-    "content": "双曲线$\\frac{x^2}{a^2} - \\frac{y^2}{3} = 1$（a＞0）的一条渐近线方程为$y=\\frac{\\\\sqrt{3}}{2}x$，则a=　   　．",
+    "content": "双曲线$\\frac{x^2}{a^2} - \\frac{y^2}{3} = 1$（a＞0）的一条渐近线方程为$y=\\frac{\\\\sqrt{3}}{2}x$，则a=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅲ）",
@@ -19312,7 +19312,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "trigo_sol",
-    "content": "△ABC的内角A，B，C的对边分别为a，b，c，已知C=60°，b=$\\\\sqrt{6}$，c=3，则A=　   　．",
+    "content": "△ABC的内角A，B，C的对边分别为a，b，c，已知C=60°，b=$\\\\sqrt{6}$，c=3，则A=　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅲ）",
@@ -19324,7 +19324,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "function",
-    "content": "设函数$f(x)=\\begin{cases} x+1, & x \\\\le 0 \\\\\\ 2^x, & x > 0 \\\\end{cases}$，则满足$f(x)+f(x-\\frac{1}{2})>1$的x的取值范围是　   　．",
+    "content": "设函数$f(x)=\\begin{cases} x+1, & x \\\\le 0 \\\\\\ 2^x, & x > 0 \\\\end{cases}$，则满足$f(x)+f(x-\\frac{1}{2})>1$的x的取值范围是　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2017年高考数学试卷（文）（新课标Ⅲ）",
@@ -19655,7 +19655,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "vector",
-    "content": "已知向量$\\\\vec{a}$，$\\\\vec{b}$的夹角为$60^\\\\circ$，$|\\\\vec{a}|=2$，$|\\\\vec{b}|=1$，则$|\\\\vec{a}+2\\\\vec{b}|=$　   　．",
+    "content": "已知向量$\\\\vec{a}$，$\\\\vec{b}$的夹角为$60^\\\\circ$，$|\\\\vec{a}|=2$，$|\\\\vec{b}|=1$，则$|\\\\vec{a}+2\\\\vec{b}|=$　 　．",
     "options": null,
     "score_rule": "5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅰ）",
@@ -19667,7 +19667,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "inequality",
-    "content": "设$x，y$满足约束条件$\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-3 \\\\ge 0 \\\\\\ x \\\\le 2 \\\\end{cases}$，则$z=3x-2y$的最小值为　   　．",
+    "content": "设$x，y$满足约束条件$\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-3 \\\\ge 0 \\\\\\ x \\\\le 2 \\\\end{cases}$，则$z=3x-2y$的最小值为　 　．",
     "options": null,
     "score_rule": "5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅰ）",
@@ -19679,7 +19679,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "conic",
-    "content": "已知双曲线$C：\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$（$a>0，b>0$）的右顶点为$A$，以$A$为圆心，$b$为半径作圆$A$，圆$A$与双曲线$C$的一条渐近线交于$M、N$两点．若$\\\\angle MAN=60^\\\\circ$，则$C$的离心率为　   　．",
+    "content": "已知双曲线$C：\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$（$a>0，b>0$）的右顶点为$A$，以$A$为圆心，$b$为半径作圆$A$，圆$A$与双曲线$C$的一条渐近线交于$M、N$两点．若$\\\\angle MAN=60^\\\\circ$，则$C$的离心率为　 　．",
     "options": null,
     "score_rule": "5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅰ）"
@@ -19690,7 +19690,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "solid_geometry",
-    "content": "如图，圆形纸片的圆心为$O$，半径为$5cm$，该纸片上的等边三角形$ABC$的中心为$O$．$D、E、F$为圆$O$上的点，$\\triangle DBC$，$\\triangle ECA$，$\\triangle FAB$分别是以$BC$，$CA$，$AB$为底边的等腰三角形．沿虚线剪开后，分别以$BC$，$CA$，$AB$为折痕折起$\\triangle DBC$，$\\triangle ECA$，$\\triangle FAB$，使得$D、E、F$重合，得到三棱锥．当$\\triangle ABC$的边长变化时，所得三棱锥体积（单位：$cm^3$）的最大值为　   　．",
+    "content": "如图，圆形纸片的圆心为$O$，半径为$5cm$，该纸片上的等边三角形$ABC$的中心为$O$．$D、E、F$为圆$O$上的点，$\\triangle DBC$，$\\triangle ECA$，$\\triangle FAB$分别是以$BC$，$CA$，$AB$为底边的等腰三角形．沿虚线剪开后，分别以$BC$，$CA$，$AB$为折痕折起$\\triangle DBC$，$\\triangle ECA$，$\\triangle FAB$，使得$D、E、F$重合，得到三棱锥．当$\\triangle ABC$的边长变化时，所得三棱锥体积（单位：$cm^3$）的最大值为　 　．",
     "options": null,
     "score_rule": "5分",
     "source": "2017年高考数学试卷（理）（新课标Ⅰ）",
@@ -20048,7 +20048,7 @@
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅰ）",
-    "answer": "4π\n【点评】本题考查的知识点是直线与圆相交的性质，点到直线的距离公式，难\n度中档"
+    "answer": "4π 【点评】本题考查的知识点是直线与圆相交的性质，点到直线的距离公式，难 度中档"
   },
   {
     "id": "2016年高考数学试卷（文）（新课标Ⅰ）-16",
@@ -20056,7 +20056,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "inequality",
-    "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料．生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时，生产一件产品A的利润为2100元，生产一件产品B的利润为900元．该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为　   　元．",
+    "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料．生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时，生产一件产品A的利润为2100元，生产一件产品B的利润为900元．该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为　 　元．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅰ）",
@@ -20752,7 +20752,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "vector",
-    "content": "已知向量$\\\\vec{a}=(m, 4)$，$\\\\vec{b}=(3, -2)$，且$\\\\vec{a} \\\\parallel \\\\vec{b}$，则$m=$　   　．",
+    "content": "已知向量$\\\\vec{a}=(m, 4)$，$\\\\vec{b}=(3, -2)$，且$\\\\vec{a} \\\\parallel \\\\vec{b}$，则$m=$　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅱ）",
@@ -20764,7 +20764,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "inequality",
-    "content": "若$x, y$满足约束条件$\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-1 \\\\ge 0 \\\\\\ x \\\\le 3 \\\\end{cases}$，则$z=x-2y$的最小值为　   　．",
+    "content": "若$x, y$满足约束条件$\\begin{cases} x-y+1 \\\\ge 0 \\\\\\ x+y-1 \\\\ge 0 \\\\\\ x \\\\le 3 \\\\end{cases}$，则$z=x-2y$的最小值为　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅱ）",
@@ -20776,7 +20776,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "trigo_sol",
-    "content": "$\\triangle ABC$的内角$A, B, C$的对边分别为$a, b, c$，若$\\\\cos A=\\frac{4}{5}$，$\\\\cos C=\\frac{5}{13}$，$a=1$，则$b=$　   　．",
+    "content": "$\\triangle ABC$的内角$A, B, C$的对边分别为$a, b, c$，若$\\\\cos A=\\frac{4}{5}$，$\\\\cos C=\\frac{5}{13}$，$a=1$，则$b=$　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅱ）"
@@ -20787,7 +20787,7 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "logic",
-    "content": "有三张卡片，分别写有1和2，1和3，2和3．甲，乙，丙三人各取走一张卡片，甲看了乙的卡片后说：“我与乙的卡片上相同的数字不是2”，乙看了丙的卡片后说：“我与丙的卡片上相同的数字不是1”，丙说：“我的卡片上的数字之和不是5”，则甲的卡片上的数字是　   　．",
+    "content": "有三张卡片，分别写有1和2，1和3，2和3．甲，乙，丙三人各取走一张卡片，甲看了乙的卡片后说：“我与乙的卡片上相同的数字不是2”，乙看了丙的卡片后说：“我与丙的卡片上相同的数字不是1”，丙说：“我的卡片上的数字之和不是5”，则甲的卡片上的数字是　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅱ）",
@@ -21118,7 +21118,7 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "inequality",
-    "content": "设$x$，$y$满足约束条件$\\begin{cases} x-3y+1 \\\\ge 0 \\\\\\ x-y-1 \\\\le 0 \\\\\\ x+y-3 \\\\le 0 \\\\end{cases}$，则$z=2x+3y-5$的最小值为　   　．",
+    "content": "设$x$，$y$满足约束条件$\\begin{cases} x-3y+1 \\\\ge 0 \\\\\\ x-y-1 \\\\le 0 \\\\\\ x+y-3 \\\\le 0 \\\\end{cases}$，则$z=2x+3y-5$的最小值为　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅲ）",
@@ -21130,7 +21130,7 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "trigo_func",
-    "content": "函数$y=\\\\sin x - \\\\sqrt{3}\\\\cos x$的图象可由函数$y=2\\\\sin x$的图象至少向右平移　   　个单位长度得到．",
+    "content": "函数$y=\\\\sin x - \\\\sqrt{3}\\\\cos x$的图象可由函数$y=2\\\\sin x$的图象至少向右平移　 　个单位长度得到．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅲ）"
@@ -21141,7 +21141,7 @@
     "type": "fill_in",
     "type_rank": 3,
     "category": "line_circle",
-    "content": "已知直线$l：x-\\\\sqrt{3}y+6=0$与圆$x^2+y^2=12$交于$A$，$B$两点，过$A$，$B$分别作$l$的垂线与$x$轴交于$C$，$D$两点．则$|CD|=$　   　．",
+    "content": "已知直线$l：x-\\\\sqrt{3}y+6=0$与圆$x^2+y^2=12$交于$A$，$B$两点，过$A$，$B$分别作$l$的垂线与$x$轴交于$C$，$D$两点．则$|CD|=$　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅲ）",
@@ -21153,10 +21153,375 @@
     "type": "fill_in",
     "type_rank": 4,
     "category": "derivative",
-    "content": "已知$f(x)$为偶函数，当$x\\\\le 0$时，$f(x)=e^{-x-1}-x$，则曲线$y=f(x)$在点$(1, 2)$处的切线方程是　   　．",
+    "content": "已知$f(x)$为偶函数，当$x\\\\le 0$时，$f(x)=e^{-x-1}-x$，则曲线$y=f(x)$在点$(1, 2)$处的切线方程是　 　．",
     "options": null,
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（文）（新课标Ⅲ）",
     "answer": "y=2x"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "complex",
+    "content": "已知$z=(m+3)+(m-1)i$在复平面内对应的点在第四象限，则实数$m$的取值范围是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(-3, 1)$"
+      },
+      {
+        "label": "B",
+        "text": "$(-1, 3)$"
+      },
+      {
+        "label": "C",
+        "text": "$(1, +\\\\infty)$"
+      },
+      {
+        "label": "D",
+        "text": "$(-\\\\infty, -3)$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "A"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "logic",
+    "content": "已知集合$A=\\\\{1, 2, 3\\\\}$，$B=\\\\{x|(x+1)(x-2)<0, x \\\\in Z\\\\}$，则$A \\\\cup B$等于",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\{1\\\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\{1, 2\\\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\{0, 1, 2, 3\\\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\\\{-1, 0, 1, 2, 3\\\\}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "C"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "vector",
+    "content": "已知向量$\\\\vec{a}=(1, m)$，$\\\\vec{b}=(3, -2)$，且$(\\\\vec{a}+\\\\vec{b}) \\\\perp \\\\vec{b}$，则$m=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-8$"
+      },
+      {
+        "label": "B",
+        "text": "$-6$"
+      },
+      {
+        "label": "C",
+        "text": "$6$"
+      },
+      {
+        "label": "D",
+        "text": "$8$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "D"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "line_circle",
+    "content": "圆$x^2+y^2-2x-8y+13=0$的圆心到直线$ax+y-1=0$的距离为1，则$a=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-\\frac{4}{3}$"
+      },
+      {
+        "label": "B",
+        "text": "$-\\frac{3}{4}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\sqrt{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$2$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "A"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "probability",
+    "content": "如图，小明从街道的E处出发，先到F处与小红会合，再一起到位于G处的老年公寓参加志愿者活动，则小明到老年公寓可以选择的最短路径条数为",
+    "options": [
+      {
+        "label": "A",
+        "text": "24"
+      },
+      {
+        "label": "B",
+        "text": "18"
+      },
+      {
+        "label": "C",
+        "text": "12"
+      },
+      {
+        "label": "D",
+        "text": "9"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "B"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "solid_geometry",
+    "content": "如图是由圆柱与圆锥组合而成的几何体的三视图，则该几何体的表面积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$20\\\\pi$"
+      },
+      {
+        "label": "B",
+        "text": "$24\\\\pi$"
+      },
+      {
+        "label": "C",
+        "text": "$28\\\\pi$"
+      },
+      {
+        "label": "D",
+        "text": "$32\\\\pi$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "C"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "trigo_func",
+    "content": "若将函数$y=2\\\\sin2x$的图象向左平移$\\frac{\\\\pi}{12}$个单位长度，则平移后的图象的对称轴为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$x=\\frac{k\\\\pi}{2}-\\frac{\\\\pi}{6} (k \\\\in Z)$"
+      },
+      {
+        "label": "B",
+        "text": "$x=\\frac{k\\\\pi}{2}+\\frac{\\\\pi}{6} (k \\\\in Z)$"
+      },
+      {
+        "label": "C",
+        "text": "$x=\\frac{k\\\\pi}{2}-\\frac{\\\\pi}{12} (k \\\\in Z)$"
+      },
+      {
+        "label": "D",
+        "text": "$x=\\frac{k\\\\pi}{2}+\\frac{\\\\pi}{12} (k \\\\in Z)$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "B"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "trigo_func",
+    "content": "若$\\\\cos(\\frac{\\\\pi}{4}-\\\\alpha)=\\frac{3}{5}$，则$\\\\sin2\\\\alpha=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{7}{25}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{5}$"
+      },
+      {
+        "label": "C",
+        "text": "$-\\frac{1}{5}$"
+      },
+      {
+        "label": "D",
+        "text": "$-\\frac{7}{25}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "D"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "probability",
+    "content": "从区间$[0, 1]$随机抽取$2n$个数$x_1, x_2, \\\\dots, x_n, y_1, y_2, \\\\dots, y_n$构成$n$个数对$(x_1, y_1), (x_2, y_2) \\\\dots (x_n, y_n)$，其中两数的平方和小于1的数对共有$m$个，则用随机模拟的方法得到的圆周率$\\\\pi$的近似值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{4n}{m}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{m}{n}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{4m}{n}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{m}{4n}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "C"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "conic",
+    "content": "已知$F_1, F_2$是双曲线$E: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$的左，右焦点，点$M$在$E$上，$MF_1$与$x$轴垂直，$\\\\sin\\\\angle MF_2F_1=\\frac{1}{3}$，则$E$的离心率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\sqrt{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{3}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\sqrt{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$2$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "A"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-12",
+    "question_number": "12",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "function",
+    "content": "已知函数$f(x) (x \\\\in R)$满足$f(-x)=2-f(x)$，若函数$y=\\frac{x+1}{x}$与$y=f(x)$图象的交点为$(x_1, y_1), (x_2, y_2), \\\\dots, (x_m, y_m)$，则$\\\\sum_{i=1}^{m} (x_i+y_i)=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "m"
+      },
+      {
+        "label": "C",
+        "text": "2m"
+      },
+      {
+        "label": "D",
+        "text": "4m"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "B"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "trigo_sol",
+    "content": "$\\triangle ABC$的内角$A, B, C$的对边分别为$a, b, c$，若$\\\\cos A=\\frac{4}{5}$，$\\\\cos C=\\frac{5}{13}$，$a=1$，则$b=$",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "solid_geometry",
+    "content": "$\\\\alpha, \\beta$是两个平面，$m, n$是两条直线，有下列四个命题：①如果$m \\\\perp n$，$m \\\\perp \\\\alpha$，$n \\\\parallel \\beta$，那么$\\\\alpha \\\\perp \\beta$．②如果$m \\\\perp \\\\alpha$，$n \\\\parallel \\\\alpha$，那么$m \\\\perp n$．③如果$\\\\alpha \\\\parallel \\beta$，$m \\\\subset \\\\alpha$，那么$m \\\\parallel \\beta$．④如果$m \\\\parallel n$，$\\\\alpha \\\\parallel \\beta$，那么$m$与$\\\\alpha$所成的角和$n$与$\\beta$所成的角相等．其中正确的命题是",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "②③④ 【点评】本题以命题的真假判断与应用为载体，考查了空间直线与平面的位置 关系，难度中档"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "logic",
+    "content": "有三张卡片，分别写有1和2，1和3，2和3．甲，乙，丙三人各取走一张卡片，甲看了乙的卡片后说：“我与乙的卡片上相同的数字不是2”，乙看了丙的卡片后说：“我与丙的卡片上相同的数字不是1”，丙说：“我的卡片上的数字之和不是5”，则甲的卡片上的数字是",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）",
+    "answer": "1和3"
+  },
+  {
+    "id": "2016年高考数学试卷（理）（新课标Ⅱ）-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "derivative",
+    "content": "若直线$y=kx+b$是曲线$y=\\\\ln x+2$的切线，也是曲线$y=\\\\ln(x+1)$的切线，则$b=$",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅱ）"
   }
 ]
