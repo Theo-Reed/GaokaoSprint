@@ -15,7 +15,7 @@ export default async function TrainerPage({ params }: { params: Promise<{ lang: 
           {isCn ? '英语语法逻辑特训' : 'English Syntax Logic Trainer'}
         </h1>
         <div className="inline-flex items-center bg-white px-4 py-1 rounded-full shadow-sm border border-slate-200">
-          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+          <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
           <span className="text-slate-600 font-medium text-sm">
             {isCn ? '目标: 135+' : 'Target: 135+'}
           </span>

@@ -19,15 +19,15 @@ const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
   </svg>
 );
 
-const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, colorClass = "blue" }: any) => {
+const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, colorClass = "indigo" }: any) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const colors = {
-    blue: "bg-blue-600",
-    purple: "bg-purple-600",
+    indigo: "bg-indigo-600",
+    violet: "bg-violet-600",
   };
 
-  const selectedColor = colors[colorClass as keyof typeof colors] || colors.blue;
+  const selectedColor = colors[colorClass as keyof typeof colors] || colors.indigo;
 
   return (
     <div className="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
@@ -126,7 +126,7 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
             title={text.quizTitle} 
             subtitle={text.quizDesc}
             defaultOpen={true}
-            colorClass="purple"
+            colorClass="indigo"
         >
           <GrammarQuiz lang={lang} />
         </ExpandableSection>
@@ -136,7 +136,7 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
             title={text.analyzeTitle} 
             subtitle={text.analyzeDesc}
             defaultOpen={false}
-            colorClass="blue"
+            colorClass="violet"
         >
           <SentenceAnalyzer lang={lang} />
         </ExpandableSection>

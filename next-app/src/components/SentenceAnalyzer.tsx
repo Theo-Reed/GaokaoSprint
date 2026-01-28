@@ -79,26 +79,26 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-blue-600 text-white p-4 flex justify-between items-center">
+      <div className="bg-indigo-600 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>🧬</span> {text.title}
           </h3>
-          <p className="text-blue-100 text-xs mt-1">
+          <p className="text-indigo-100 text-xs mt-1">
             {text.level} {currentAnalyzeIndex + 1} / {ANALYSIS_LEVELS.length} • {currentSentence.difficulty}
           </p>
         </div>
         <div className="flex gap-2">
            <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.max(0, currentAnalyzeIndex - 1))}
-                className="p-2 bg-blue-700 rounded hover:bg-blue-500 text-xs disabled:opacity-50"
+                className="p-2 bg-indigo-700 rounded hover:bg-indigo-500 text-xs disabled:opacity-50"
                 disabled={currentAnalyzeIndex === 0}
             >
                 {text.prev}
             </button>
             <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.min(ANALYSIS_LEVELS.length - 1, currentAnalyzeIndex + 1))}
-                className="p-2 bg-white text-blue-700 rounded hover:bg-blue-50 text-xs font-bold disabled:opacity-50"
+                className="p-2 bg-white text-indigo-700 rounded hover:bg-indigo-50 text-xs font-bold disabled:opacity-50"
                 disabled={currentAnalyzeIndex === ANALYSIS_LEVELS.length - 1}
             >
                 {text.next}

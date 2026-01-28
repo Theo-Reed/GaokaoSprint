@@ -169,9 +169,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <button 
             onClick={() => { setMode('write'); setType('small'); startTraining('small'); }}
-            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-indigo-500 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Edit3 size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900">{isCn ? '小作文 (15分)' : 'Small Composition'}</h3>
@@ -179,9 +179,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
           </button>
           <button 
             onClick={() => { setMode('write'); setType('large'); startTraining('large'); }}
-            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-purple-500 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-indigo-500 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <BookOpen size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900">{isCn ? '读后续写 (25分)' : 'Story Continuation'}</h3>
@@ -199,9 +199,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <button 
             onClick={() => { setMode('generate'); setType('small'); startTraining('small'); }}
-            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-emerald-500 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-indigo-500 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900">{isCn ? '生成小作文范文' : 'Generate Small Comp'}</h3>
@@ -209,9 +209,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
           </button>
           <button 
             onClick={() => { setMode('generate'); setType('large'); startTraining('large'); }}
-            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-orange-500 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white border-2 border-slate-200 rounded-2xl hover:border-indigo-500 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900">{isCn ? '生成读后续写范文' : 'Generate Story Cont'}</h3>
@@ -229,7 +229,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div>
           <button 
             onClick={() => setTopic(null)}
-            className="text-sm text-slate-500 hover:text-blue-600 mb-2 flex items-center gap-1 font-medium group"
+            className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group"
           >
             <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             {isCn ? '返回' : 'Back'}
@@ -242,12 +242,12 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             )}
             <button 
               onClick={() => setIsSelecting(true)}
-              className="ml-3 group inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 rounded-lg text-sm transition-all"
+              className="ml-3 group inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 rounded-lg text-sm transition-all"
             >
-              <span className="text-slate-500 group-hover:text-blue-600 font-medium">
+              <span className="text-slate-500 group-hover:text-indigo-600 font-medium">
                 {topic.year} {Array.isArray(topic.region) ? topic.region[0] : topic.region}
               </span>
-              <Search size={14} className="text-slate-400 group-hover:text-blue-500" />
+              <Search size={14} className="text-slate-400 group-hover:text-indigo-500" />
             </button>
           </h1>
         </div>
@@ -259,7 +259,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
           </div>
           <button 
             onClick={() => startTraining(type)}
-            className="p-2 text-slate-400 hover:text-blue-600 hover:rotate-180 transition-all duration-500"
+            className="p-2 text-slate-400 hover:text-indigo-600 hover:rotate-180 transition-all duration-500"
             title={isCn ? '更换题目' : 'Change Topic'}
           >
             <RefreshCw size={24} />
@@ -272,7 +272,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div className="space-y-6">
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm overflow-auto max-h-[600px]">
             <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <AlertCircle size={20} className="text-blue-500" />
+              <AlertCircle size={20} className="text-indigo-500" />
               {isCn ? '题目要求' : 'Prompt'}
             </h3>
             <div className="prose prose-slate max-w-none text-slate-700 leading-relaxed">
@@ -284,13 +284,13 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                  <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">帮助结构 (Scaffold)</h4>
                  {topic.scaffold.start && (
                    <div className="mb-4">
-                     <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded mb-1 inline-block">开头必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded mb-1 inline-block">开头必须接续:</span>
                      <p className="text-sm italic text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100">{topic.scaffold.start}</p>
                    </div>
                  )}
                  {topic.scaffold.end && (
                    <div>
-                     <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded mb-1 inline-block">落款必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded mb-1 inline-block">落款必须接续:</span>
                      <p className="text-sm italic text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100">{topic.scaffold.end}</p>
                    </div>
                  )}
@@ -307,7 +307,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
                 placeholder={isCn ? '在此输入你的作文...' : 'Start writing here...'}
-                className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-slate-200 rounded-2xl focus:border-blue-500 focus:ring-0 transition-all bg-white font-serif resize-none text-slate-900 shadow-sm"
+                className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-slate-200 rounded-2xl focus:border-indigo-500 focus:ring-0 transition-all bg-white font-serif resize-none text-slate-900 shadow-sm"
               />
               <div className="absolute bottom-16 right-6 text-xs text-slate-400 font-mono bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">
                 {answer.trim().split(/\s+/).filter(x => x).length} words
@@ -315,7 +315,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             </div>
           ) : (
             <div className="flex-grow min-h-[450px] w-full p-8 border-2 border-slate-200 border-dashed rounded-2xl bg-white flex flex-col items-center justify-center text-center">
-               <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 mb-6">
+               <div className="w-20 h-20 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 mb-6">
                   <Zap size={40} />
                </div>
                <h3 className="text-xl font-bold text-slate-900 mb-2">{isCn ? '满分范文 AI 生成' : 'Model Essay AI Generation'}</h3>
@@ -329,7 +329,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
               disabled={isSubmitting || (mode === 'write' && !answer.trim())}
               className={`
                 w-[80%] py-3 rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2
-                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 cursor-not-allowed' : (mode === 'write' ? 'bg-blue-600/70' : 'bg-emerald-600/70') + ' hover:shadow-blue-200 hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
+                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 cursor-not-allowed' : 'bg-indigo-600/70 hover:shadow-indigo-200 hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
               `}
             >
               {isSubmitting ? (
@@ -367,14 +367,14 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                         model === 'gemini' ? (mode === 'write' ? 'Gemini 2.5 Flash' : 'Gemini 2.5 Pro') : 
                         model.charAt(0).toUpperCase() + model.slice(1)}
                      </span>
-                     {!feedback && <RefreshCw size={14} className="animate-spin text-blue-500" />}
+                     {!feedback && <RefreshCw size={14} className="animate-spin text-indigo-500" />}
                    </div>
                    <div className="text-slate-800 leading-relaxed text-base flex-grow">
                      {feedback ? (
                        <div className="animate-in fade-in duration-300 space-y-4">
                          {mode === 'write' && (
                            <div className="flex items-baseline gap-2">
-                             <span className="text-blue-600 font-black text-xl">{isCn ? '评分：' : 'Score:'}</span>
+                             <span className="text-indigo-600 font-black text-xl">{isCn ? '评分：' : 'Score:'}</span>
                              <span className="text-3xl font-black text-slate-900">{feedback.score}</span>
                              <span className="text-sm text-slate-400 font-bold">/ {type === 'small' ? 15 : 25}</span>
                            </div>
@@ -392,9 +392,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                                  return (
                                    <li key={i} className="flex gap-2">
                                      <span className="text-slate-300 font-black shrink-0">{i + 1}.</span>
-                                     <div className="prose prose-slate prose-sm max-w-none prose-strong:text-blue-700 prose-strong:font-black">
+                                     <div className="prose prose-slate prose-sm max-w-none prose-strong:text-indigo-700 prose-strong:font-black">
                                        <div className="flex flex-col">
-                                         <strong className="text-blue-700 mb-[0.7em]">[{label}]</strong>
+                                         <strong className="text-indigo-700 mb-[0.7em]">[{label}]</strong>
                                          <div className="[&_p]:my-0 [&_>*:first-child]:mt-0 [&_>*:last-child]:mb-0 text-slate-700 leading-relaxed">
                                            <ReactMarkdown>{cleanContent}</ReactMarkdown>
                                          </div>
@@ -406,9 +406,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                                
                                {feedback.summary && (
                                  <li className="flex gap-2 mt-4 pt-4 border-t border-slate-100">
-                                   <div className="prose prose-slate prose-sm max-w-none prose-strong:text-blue-700 prose-strong:font-black w-full">
+                                   <div className="prose prose-slate prose-sm max-w-none prose-strong:text-indigo-700 prose-strong:font-black w-full">
                                      <div className="flex flex-col">
-                                       <strong className="text-blue-700 mb-[0.7em]">[{isCn ? '综合点评' : 'Summary'}]</strong>
+                                       <strong className="text-indigo-700 mb-[0.7em]">[{isCn ? '综合点评' : 'Summary'}]</strong>
                                        <div className="[&_p]:my-0 [&_>*:first-child]:mt-0 [&_>*:last-child]:mb-0 text-slate-700 leading-relaxed">
                                          <ReactMarkdown>{feedback.summary}</ReactMarkdown>
                                        </div>
@@ -462,7 +462,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                   type="text"
                   autoFocus
                   placeholder={isCn ? "搜索年份、省份 (如: 2024 浙江)..." : "Search year or region..."}
-                  className="w-full pl-12 pr-4 py-4 bg-white border-2 border-slate-200 rounded-2xl focus:border-blue-500 focus:outline-none text-lg font-medium shadow-inner"
+                  className="w-full pl-12 pr-4 py-4 bg-white border-2 border-slate-200 rounded-2xl focus:border-indigo-500 focus:outline-none text-lg font-medium shadow-inner"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -481,7 +481,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                   <button
                     key={idx}
                     onClick={() => startTraining(type, t)}
-                    className="w-full p-4 hover:bg-blue-50 border border-transparent hover:border-blue-100 rounded-2xl text-left transition-all flex items-center justify-between group"
+                    className="w-full p-4 hover:bg-indigo-50 border border-transparent hover:border-indigo-100 rounded-2xl text-left transition-all flex items-center justify-between group"
                   >
                     <div>
                       <div className="flex items-center gap-2 mb-1">
@@ -490,7 +490,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                       </div>
                       <div className="text-sm text-slate-400 line-clamp-1">{t.prompt}</div>
                     </div>
-                    <Filter size={18} className="text-slate-200 group-hover:text-blue-500 opacity-0 group-hover:opacity-100 transition-all" />
+                    <Filter size={18} className="text-slate-200 group-hover:text-indigo-500 opacity-0 group-hover:opacity-100 transition-all" />
                   </button>
                 ))
               }

@@ -203,12 +203,12 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-purple-600 text-white p-4 flex justify-between items-center">
+      <div className="bg-indigo-600 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>⚔️</span> {text.title}
           </h3>
-          <p className="text-purple-200 text-xs mt-1">
+          <p className="text-indigo-200 text-xs mt-1">
             {text.question} {currentQuizIndex + 1} / {quizPool.length}
           </p>
         </div>
@@ -220,7 +220,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       {/* Main Content */}
       <div className="p-6 flex-1 flex flex-col">
         <div className="mb-6">
-            <span className="inline-block px-2 py-0.5 bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
+            <span className="inline-block px-2 py-0.5 bg-indigo-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
                 {getCategoryName(currentQuiz.categoryId)}
             </span>
             <p className="text-lg font-serif text-slate-800 leading-relaxed">
@@ -251,7 +251,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                     value={examInput}
                     onChange={(e) => setExamInput(e.target.value)}
                     placeholder={text.placeholder}
-                    className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
+                    className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 outline-none transition-all"
                     disabled={isExamCorrect || (!!examFeedback && !isExamCorrect)}
                 />
             </div>

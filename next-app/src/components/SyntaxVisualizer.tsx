@@ -17,10 +17,10 @@ const Word: React.FC<WordProps> = ({ text, type, clauseType }) => {
   
   if (type === 'subject') className += "border-b-4 border-red-500 ";
   if (type === 'verb') className += "border-b-4 border-yellow-500 ";
-  if (type === 'object') className += "border-b-4 border-blue-500 ";
+  if (type === 'object') className += "border-b-4 border-indigo-500 ";
   
   if (type === 'clause') {
-    className += "border border-dashed border-gray-400 rounded-md relative hover:bg-green-100 hover:border-green-500 ";
+    className += "border border-dashed border-gray-400 rounded-md relative hover:bg-indigo-100 hover:border-indigo-500 ";
   }
 
   return (
@@ -45,7 +45,7 @@ export const SyntaxVisualizer = () => {
     <div className="p-8 max-w-4xl mx-auto font-sans leading-loose text-lg bg-white shadow-lg rounded-xl mt-10">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">English Syntax Visualizer (Demo)</h2>
       <p className="text-gray-500 mb-8 text-sm">
-        Hover over the dashed boxes to see clause types. Note the <span className="text-red-500 font-bold">Subject</span>, <span className="text-yellow-500 font-bold">Verb</span>, and <span className="text-blue-500 font-bold">Object</span> colors.
+        Hover over the dashed boxes to see clause types. Note the <span className="text-red-500 font-bold">Subject</span>, <span className="text-yellow-500 font-bold">Verb</span>, and <span className="text-indigo-500 font-bold">Object</span> colors.
       </p>
 
       <div className="bg-gray-50 p-6 rounded-lg leading-[3rem]">
@@ -76,7 +76,7 @@ export const SyntaxVisualizer = () => {
         .
       </div>
 
-      <div className="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm">
+      <div className="mt-8 p-4 bg-indigo-50 border-l-4 border-indigo-500 text-indigo-700 text-sm">
         <strong>Study Strategy:</strong> This visualization simplifies the "chunking" process. Every time you see a long sentence, try to visualize these boxes and lines in your mind.
       </div>
     </div>
