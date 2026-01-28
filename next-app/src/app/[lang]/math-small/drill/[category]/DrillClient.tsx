@@ -27,7 +27,6 @@ interface SmallQuestion {
   explanation?: string;
   score_rule?: string;
   source?: string;
-  has_figure?: boolean;
 }
 
 interface DrillClientProps {
@@ -173,7 +172,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             </div>
 
             {/* Question Card */}
-            <div className="bg-white shadow-lg rounded-2xl p-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
+            <div className="bg-white shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
                     {currentQ.source && (
                         <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full border border-indigo-100">
@@ -184,10 +183,17 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}
                     </span>
                     {isSubmitted && (
-                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
-                            {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}
-                            {isCorrect() ? '回答正确' : '回答错误'}
-                        </span>
+                        currentQ.type === 'fill_in' ? (
+                            <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200">
+                                <CheckCircle2 size={14} className="mr-1" />
+                                已核对答案
+                            </span>
+                        ) : (
+                            <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                                {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}
+                                {isCorrect() ? '回答正确' : '回答错误'}
+                            </span>
+                        )
                     )}
                 </div>
 
@@ -196,37 +202,31 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         remarkPlugins={[remarkMath]} 
                         rehypePlugins={[rehypeKatex]}
                         components={{
-                            p: ({children}) => <div className="text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
+                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
                         }}
                     >
                         {currentQ.content
                             .replace(/\\n/g, '\n')
-                            .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') // 将 \quad 或 $\quad$ 统一替换为明显的下划线占位符
+                            .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') 
                         }
                     </ReactMarkdown>
                 </div>
 
-                {/* 题目插图区域 */}
-                {currentQ.has_figure && (
-                    <div className="my-6 flex flex-col items-center justify-center p-4 transition-all">
-                        <img 
-                            src={`/math-images/${currentQ.id}.png`} 
-                            alt="题目插图" 
-                            className="max-h-64 object-contain mix-blend-multiply"
-                            onError={(e) => {
-                                // 如果图片加载失败且标记了 has_figure，则显示占位符
-                                (e.target as HTMLImageElement).style.display = 'none';
-                                const parent = (e.target as HTMLImageElement).parentElement;
-                                if (parent && !parent.querySelector('.img-placeholder')) {
-                                    const div = document.createElement('div');
-                                    div.className = 'img-placeholder flex flex-col items-center text-slate-300 py-4';
-                                    div.innerHTML = '<span class="text-3xl mb-2">🖼️</span><p class="text-xs italic">插图待补全: ' + currentQ.id + '.png</p>';
-                                    parent.appendChild(div);
-                                }
-                            }}
-                        />
-                    </div>
-                )}
+                {/* 题目插图区域 (自动检测是否存在) */}
+                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all">
+                    <img 
+                        src={`/math-images/${currentQ.id}.png`} 
+                        alt="题目插图" 
+                        className="max-h-80 object-contain mix-blend-multiply"
+                        onLoad={(e) => {
+                            (e.target as HTMLImageElement).parentElement!.style.padding = '1rem';
+                        }}
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                            (e.target as HTMLImageElement).parentElement!.style.padding = '0';
+                        }}
+                    />
+                </div>
 
                 {/* Options Area */}
                 {currentQ.type !== 'fill_in' && currentQ.options && (
@@ -276,19 +276,26 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {/* Fill-in Area */}
                 {currentQ.type === 'fill_in' && (
                     <div className="mt-6">
-                        <label className="block text-sm font-bold text-slate-700 mb-2">输入答案：</label>
-                        <input 
-                            type="text"
-                            value={fillInAnswer}
-                            onChange={(e) => setFillInAnswer(e.target.value)}
-                            disabled={isSubmitted}
-                            placeholder="请输入最终结果..."
-                            className="w-full md:w-1/2 p-4 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all font-mono"
-                        />
-                        {isSubmitted && (
-                            <div className={`mt-4 p-4 rounded-xl flex items-center gap-3 ${isCorrect() ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
-                                <span className="font-bold">正确答案：</span>
-                                <span className="font-mono text-lg">{String(currentQ.answer)}</span>
+                        {!isSubmitted ? (
+                            <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-slate-500 mb-4">填空题请在草稿纸上完成计算</p>
+                                <button 
+                                    onClick={handleSubmit}
+                                    className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm flex items-center gap-2"
+                                >
+                                    核对答案 <CheckCircle2 size={18} className="text-indigo-500" />
+                                </button>
+                            </div>
+                        ) : (
+                            <div className="mt-4 animate-in zoom-in-95 duration-300">
+                                <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
+                                    <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
+                                    <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
+                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                                            {String(currentQ.answer)}
+                                        </ReactMarkdown>
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </div>

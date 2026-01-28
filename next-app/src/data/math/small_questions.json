@@ -5,7 +5,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "complex",
-    "content": "$(1+5i)i$ 的虚部为 ( )",
+    "content": "$(1+5i)i$ 的虚部为（   ）",
     "options": [
       {
         "label": "A",
@@ -24,10 +24,9 @@
         "text": "6"
       }
     ],
-    "answer": "C",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-2",
@@ -35,7 +34,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "logic",
-    "content": "设全集$U = \\{x|x$是小于9的正整数$\\}$, 集合$A = \\{1,3,5\\}$, 则$∁_U A$中元素个数为 ( )",
+    "content": "设全集 $U = \\{x | x$ 是小于 $9$ 的正整数$\\}$, 集合 $A = \\{1, 3, 5\\}$，则 $\\complement_U A$ 中元素个数为（   ）",
     "options": [
       {
         "label": "A",
@@ -54,10 +53,9 @@
         "text": "8"
       }
     ],
-    "answer": "C",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-3",
@@ -65,7 +63,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "conic",
-    "content": "若双曲线C的虚轴长为实轴长的$\\sqrt{7}$倍, 则C的离心率为 ( )",
+    "content": "若双曲线 C 虚轴长为实轴长的 $\\sqrt{7}$ 倍，则 C 的离心率为（   ）",
     "options": [
       {
         "label": "A",
@@ -84,10 +82,9 @@
         "text": "$2\\sqrt{2}$"
       }
     ],
-    "answer": "D",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-4",
@@ -95,7 +92,7 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "trigo_func",
-    "content": "若点$(a,0)(a > 0)$是函数$y = 2\\tan(x-\\frac{\\pi}{3})$的图象的一个对称中心, 则$a$的最小值为 ( )",
+    "content": "若点 $(a, 0)(a > 0)$ 是函数 $y = \\tan(2x - \\frac{\\pi}{3})$ 图象的一个对称中心，则 $a$ 的最小值为（   ）",
     "options": [
       {
         "label": "A",
@@ -114,10 +111,9 @@
         "text": "$\\frac{4\\pi}{3}$"
       }
     ],
-    "answer": "C",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-5",
@@ -125,7 +121,7 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "function",
-    "content": "设$f(x)$是定义在$\\mathbb{R}$上且周期为2的偶函数, 当$2 \\le x \\le 3$时, $f(x)=5-2x$, 则$f(-\\frac{3}{4}) = ( )$",
+    "content": "设 $f(x)$ 是定义在 R 上且周期为 2 的偶函数，当 $2 \\le x \\le 3$ 时，$f(x) = 5 - 2x$，则 $f(-\\frac{3}{4}) = $（   ）",
     "options": [
       {
         "label": "A",
@@ -144,10 +140,9 @@
         "text": "$\\frac{1}{2}$"
       }
     ],
-    "answer": "A",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-6",
@@ -155,7 +150,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "vector",
-    "content": "帆船比赛中, 运动员可借助风力计测定风速的大小和方向, 测出的结果在航海学中称为视风风速, 视风风速对应的向量, 是真风风速对应的向量与船行风速对应的向量之和, 其中船行风速对应的向量与船速对应的向量大小相等, 方向相反. 图1给出了部分风力等级、名称与风速大小的对应关系. 已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图2 (风速的大小和向量的大小相同), 单位(m/s), 则真风为 ( )\n\n| 等级 | 风速大小 m/s | 名称 |\n|:---:|:---:|:---:|\n| 2 | 1.1~3.3 | 轻风 |\n| 3 | 3.4~5.4 | 微风 |\n| 4 | 5.5~7.9 | 和风 |\n| 5 | 8.0~10.1 | 劲风 |\n\n(图2显示视风风速向量的起点为(3,3)，终点为(0,2)；船速向量的起点为(2,0)，终点为(3,3))",
+    "content": "帆船比赛中，运动员可借助风力计测定风速的大小和方向，测出的结果在航海学中称为视风风速，视风风速对应的向量，是真风风速对应的向量与船行风速对应的向量之和，其中船行风速对应的向量与船速对应的向量大小相等，方向相反.图 1 给出了部分风力等级、名称与风速大小的对应关系.已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图 2（风速的大小和向量的大小相同） ，单位（m/s），则真风为（   ）\n等级 风速大小 m/s 名称\n2 1.1~3.3 轻风\n3 3.4~5.4 微风\n4 5.5~7.9 和风\n5 8.0~10.1 劲风",
     "options": [
       {
         "label": "A",
@@ -174,10 +169,9 @@
         "text": "劲风"
       }
     ],
-    "answer": "A",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-7",
@@ -185,7 +179,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "line_circle",
-    "content": "若圆 $x^2 + (y+2)^2 = r^2 (r > 0)$ 上到直线 $y = \\sqrt{3}x + 2$ 的距离为1的点有且仅有2个, 则$r$的取值范围是 ( )",
+    "content": "若圆 $(x+2)^2 + y^2 = r^2 (r>0)$ 上到直线 $y = \\sqrt{3}x + 2$ 的距离为 1 的点有且仅有 2 个，则 $r$ 的取值范围是（   ）",
     "options": [
       {
         "label": "A",
@@ -204,18 +198,17 @@
         "text": "$(0, +\\infty)$"
       }
     ],
-    "answer": "B",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-8",
     "question_number": "8",
     "type": "single_choice",
     "type_rank": 8,
-    "category": "function",
-    "content": "若实数$x,y,z$ 满足$2 + \\log_2 x = 3 + \\log_3 y = 5 + \\log_5 z$, 则$x,y,z$ 的大小关系不可能是 ( )",
+    "category": "inequality",
+    "content": "若实数 $x, y, z$ 满足 $2 + \\log_2 x = 3 + \\log_3 y = 5 + \\log_5 z$，则 $x, y, z$ 的大小关系不可能是（   ）",
     "options": [
       {
         "label": "A",
@@ -234,10 +227,9 @@
         "text": "$y > z > x$"
       }
     ],
-    "answer": "B",
-    "score_rule": "每小题5分，只有一个选项是正确的",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-9",
@@ -245,32 +237,31 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "solid_geometry",
-    "content": "在正三棱柱 $ABC-A_1B_1C_1$中, $D$为$BC$中点, 则 ( )",
+    "content": "在正三棱柱 $ABC-A_1B_1C_1$ 中，$D$ 为 $BC$ 中点，则（    ）",
     "options": [
       {
         "label": "A",
-        "text": "$AD \\perp A_1C$"
+        "text": "$A_1D \\perp A C_1$"
       },
       {
         "label": "B",
-        "text": "$BC \\perp \\text{平面 } AA_1D$"
+        "text": "$BC \\perp$ 平面 $A_1AD$"
       },
       {
         "label": "C",
-        "text": "$CC_1 // \\text{平面 } AA_1D$"
+        "text": "$CC_1 // $ 平面 $A_1AD$"
       },
       {
         "label": "D",
-        "text": "$AD // A_1B$"
+        "text": "$A_1D // A B_1$"
       }
     ],
+    "score_rule": "本题满分6分, 全部选对的得6分, 部分选对的得部分分, 有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
     "answer": [
       "B",
       "C"
-    ],
-    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-10",
@@ -278,7 +269,7 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "conic",
-    "content": "设抛物线$C: y^2 = 6x$的焦点为$F$, 过$F$的直线交$C$于$A、B$, 过$F$且垂直于$AB$的直线交准线$l: x = -\\frac{3}{2}$于$E$, 过点$A$作准线$l$的垂线, 垂足为$D$, 则 ( )",
+    "content": "设抛物线 $C: y^2 = 6x$ 的焦点为 $F$，过 $F$ 的直线交 $C$ 于 $A, B$，过 $F$ 且垂直于 $AB$ 的直线交 $l: x = -\\frac{3}{2}$ 于 $E$，过点 $A$ 作准线 $l$ 的垂线，垂足为 $D$，则（    ）",
     "options": [
       {
         "label": "A",
@@ -297,14 +288,13 @@
         "text": "$|AE| \\cdot |BE| \\ge 18$"
       }
     ],
+    "score_rule": "本题满分6分, 全部选对的得6分, 部分选对的得部分分, 有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
     "answer": [
       "A",
       "C",
       "D"
-    ],
-    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-11",
@@ -312,15 +302,15 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "trigo_sol",
-    "content": "已知$\\triangle ABC$的面积为$\\frac{1}{4}$, 若$\\cos 2A + \\cos 2B + 2\\sin C = 2$, $\\cos A \\cos B \\sin C = \\frac{1}{4}$, 则 ( )",
+    "content": "已知 $\\triangle ABC$ 的面积为 $\\frac{1}{4}$，若 $\\cos 2A + \\cos 2B + 2\\sin C = 1$，且 $\\cos A \\cos B = \\sin^2\\frac{C}{2}$，则（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$\\sin C = \\sin^2 A + \\sin^2 B$"
+        "text": "$\\sin^2 C = \\sin^2 A + \\sin^2 B$"
       },
       {
         "label": "B",
-        "text": "$AB = \\sqrt{2}$"
+        "text": "$AB=2$"
       },
       {
         "label": "C",
@@ -331,14 +321,13 @@
         "text": "$AC^2 + BC^2 = 3$"
       }
     ],
+    "score_rule": "本题满分6分, 全部选对的得6分, 部分选对的得部分分, 有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
     "answer": [
       "A",
       "B",
       "C"
-    ],
-    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅰ卷）-12",
@@ -346,12 +335,11 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "derivative",
-    "content": "若直线 $y = 2x+5$ 是曲线 $y = e^x + x + a$ 的切线, 则$a=$__________.",
+    "content": "若直线 $y = 2x + 5$ 是曲线 $y = xe^x + a$ 的切线，则 $a=$_________.",
     "options": null,
-    "answer": "4",
-    "score_rule": "每小题5分",
+    "score_rule": "本题满分5分",
     "source": "2025年高考数学试卷（全国Ⅰ卷）",
-    "has_figure": false
+    "answer": "4"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-1",
@@ -359,7 +347,7 @@
     "type": "single_choice",
     "type_rank": 1,
     "category": "probability",
-    "content": "样本数据2, 8, 14, 16, 20的平均数为（ ）",
+    "content": "样本数据2，8，14，16，20平均数为（   ）",
     "options": [
       {
         "label": "A",
@@ -378,10 +366,9 @@
         "text": "18"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-2",
@@ -389,7 +376,7 @@
     "type": "single_choice",
     "type_rank": 2,
     "category": "complex",
-    "content": "已知$z=1+i$，则$\\frac{1}{z-1}=($ )",
+    "content": "已知$z=1+i$，则$\\frac{1}{1-z}=$（   ）",
     "options": [
       {
         "label": "A",
@@ -408,10 +395,9 @@
         "text": "$1$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-3",
@@ -419,7 +405,7 @@
     "type": "single_choice",
     "type_rank": 3,
     "category": "logic",
-    "content": "已知集合 $A = \\{-4,0,1,2,8\\}, B = \\{x| x^3 = x\\}$, 则 $A \\cap B = ($ )",
+    "content": "已知集合 $A = \\{-4,0,1, 2,8\\}$, $B = \\{x | x^3 = x\\}$，则$A \\cap B=$（   ）",
     "options": [
       {
         "label": "A",
@@ -438,10 +424,9 @@
         "text": "$\\{0,1\\}$"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-4",
@@ -449,29 +434,28 @@
     "type": "single_choice",
     "type_rank": 4,
     "category": "inequality",
-    "content": "不等式 $\\frac{x-4}{x-1} \\ge 2$ 的解集是（ ）",
+    "content": "不等式$\\frac{4-x}{x-2} \\ge 1$的解集是（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$\\{x|-2 \\le x \\le 1\\}$"
+        "text": "$\\{x | -2 \\le x \\le 1\\}$"
       },
       {
         "label": "B",
-        "text": "$\\{x|x \\le -2\\}$"
+        "text": "$\\{x | x \\le -2\\}$"
       },
       {
         "label": "C",
-        "text": "$\\{x|-2 \\le x < 1\\}$"
+        "text": "$\\{x | -2 \\le x < 1\\}$"
       },
       {
         "label": "D",
-        "text": "$\\{x|x > 1\\}$"
+        "text": "$\\{x | x > 1\\}$"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-5",
@@ -479,29 +463,28 @@
     "type": "single_choice",
     "type_rank": 5,
     "category": "trigo_sol",
-    "content": "在$\\triangle ABC$中, $BC=2, AC=1+\\sqrt{3}, AB = \\sqrt{6}$, 则$A=($ )",
+    "content": "在$\\triangle ABC$中，$BC=2$，$AC=1+\\sqrt{3}$，$AB=\\sqrt{6}$，则$A=$（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$45^\\circ$"
+        "text": "$45^{\\circ}$"
       },
       {
         "label": "B",
-        "text": "$60^\\circ$"
+        "text": "$60^{\\circ}$"
       },
       {
         "label": "C",
-        "text": "$120^\\circ$"
+        "text": "$120^{\\circ}$"
       },
       {
         "label": "D",
-        "text": "$135^\\circ$"
+        "text": "$135^{\\circ}$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-6",
@@ -509,7 +492,7 @@
     "type": "single_choice",
     "type_rank": 6,
     "category": "conic",
-    "content": "设抛物线$C : y^2 = 2px(p > 0)$的焦点为$F$, 点$A$在$C$上, 过$A$作$C$的准线的垂线, 垂足为$B$, 若直线$BF$的方程为$y=-2x+2$, 则$|AF|=($ )",
+    "content": "设抛物线$C: y^2 = 2px (p>0)$的焦点为$F$，点 $A$在 $C$上，过 $A$作$C$的准线的垂线，垂足为 $B$，若直线$BF$的方程为$y = 2x - 2$，则$|AF|=$（   ）",
     "options": [
       {
         "label": "A",
@@ -528,10 +511,9 @@
         "text": "6"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-7",
@@ -539,7 +521,7 @@
     "type": "single_choice",
     "type_rank": 7,
     "category": "sequence",
-    "content": "记$S_n$为等差数列$\\{a_n\\}$的前$n$项和, 若$S_3 = 6, S_5 = -5$, 则 $S_6 = ($ )",
+    "content": "记$S_n$为等差数列$\\{a_n\\}$前 $n$ 项和，若$S_3=6$, $S_5=-5$，则$S_6=$（   ）",
     "options": [
       {
         "label": "A",
@@ -558,10 +540,9 @@
         "text": "-5"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-8",
@@ -569,7 +550,7 @@
     "type": "single_choice",
     "type_rank": 8,
     "category": "trigo_func",
-    "content": "已知$0 < \\alpha < \\pi, \\cos{\\frac{\\alpha}{2}} = \\frac{\\sqrt{5}}{5}$, 则$\\sin(\\alpha - \\frac{\\pi}{4}) = ($ )",
+    "content": "已知$0 < \\alpha < \\pi$， $\\cos{2\\alpha} = \\frac{7}{25}$，则$\\sin(\\frac{\\pi}{4} - \\alpha) = $（   ）",
     "options": [
       {
         "label": "A",
@@ -577,7 +558,7 @@
       },
       {
         "label": "B",
-        "text": "$\\frac{\\sqrt{2}}{5}$"
+        "text": "$\\frac{2}{5}$"
       },
       {
         "label": "C",
@@ -588,10 +569,9 @@
         "text": "$\\frac{7\\sqrt{2}}{10}$"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-9",
@@ -599,11 +579,11 @@
     "type": "multi_choice",
     "type_rank": 1,
     "category": "sequence",
-    "content": "记$S_n$为等比数列$\\{a_n\\}$的前$n$项和, $q$为$\\{a_n\\}$的公比, $q > 0$, 若$S_3 = 7, a_3 = 1$, 则（ ）",
+    "content": "记$S_n$为等比数列$\\{a_n\\}$的前 $n$ 项和，$q$为$\\{a_n\\}$的公比，$q>0$，若$S_3=7$, $a_3=1$，则（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$q = \\frac{1}{2}$"
+        "text": "$q=\\frac{1}{2}$"
       },
       {
         "label": "B",
@@ -611,20 +591,19 @@
       },
       {
         "label": "C",
-        "text": "$S_5 = 8$"
+        "text": "$S_5=8$"
       },
       {
         "label": "D",
-        "text": "$a_n + S_n = 8$"
+        "text": "$S_n + a_n = 8$"
       }
     ],
+    "score_rule": "本题共 3 小题，共 18 分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
     "answer": [
       "A",
       "D"
-    ],
-    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-10",
@@ -632,33 +611,32 @@
     "type": "multi_choice",
     "type_rank": 2,
     "category": "derivative",
-    "content": "已知 $f(x)$ 是定义在 $\\mathbb{R}$ 上的奇函数, 且当$x>0$时, $f(x)=(x^2-3)e^x+2$, 则（ ）",
+    "content": "已知$f(x)$是定义在 R 上的奇函数，且当$x>0$时，$f(x) = (x^2-3)e^x + 2$，则（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$f(0) = 0$"
+        "text": "$f(0)=0$"
       },
       {
         "label": "B",
-        "text": "当$x<0$时, $f(x)= -(x^2-3)e^{-x} -2$"
+        "text": "当$x<0$时，$f(x) = -(x^2-3)e^{-x}-2$"
       },
       {
         "label": "C",
-        "text": "$f(x) \\ge 2$当且仅当$x \\ge \\sqrt{3}$"
+        "text": "$f(x) \\ge 2$当且仅当$x \\ge 3$"
       },
       {
         "label": "D",
-        "text": "$x = -1$是$f(x)$的极大值点"
+        "text": "$x=-1$是$f(x)$的极大值点"
       }
     ],
+    "score_rule": "本题共 3 小题，共 18 分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
     "answer": [
       "A",
       "B",
       "D"
-    ],
-    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-11",
@@ -666,11 +644,11 @@
     "type": "multi_choice",
     "type_rank": 3,
     "category": "conic",
-    "content": "双曲线$C:\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的左、右焦点分别是$F_1, F_2$, 左、右顶点分别为$A_1, A_2$, 以$F_1F_2$为直径的圆与$C$的一条渐近线交于$M, N$两点, 且$\\angle NA_1M = \\frac{5\\pi}{6}$, 则（ ）",
+    "content": "双曲线$C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的左、右焦点分别是$F_1, F_2$，左、右顶点分别为$A_1, A_2$，以$F_1F_2$为直径的圆与 $C$的一条渐近线交于 $M、N$两点，且$\\angle NA_1M = \\frac{5\\pi}{6}$，则（   ）",
     "options": [
       {
         "label": "A",
-        "text": "$\\angle A_1MA_2 = \\frac{\\pi}{6}$"
+        "text": "$\\angle A_1MF_2 = \\frac{\\pi}{6}$"
       },
       {
         "label": "B",
@@ -678,21 +656,20 @@
       },
       {
         "label": "C",
-        "text": "$C$ 的离心率为$\\sqrt{13}$"
+        "text": "$C$的离心率为$\\sqrt{13}$"
       },
       {
         "label": "D",
-        "text": "当$a = \\sqrt{2}$时, 四边形$NA_1MA_2$的面积为$8\\sqrt{3}$"
+        "text": "当$a=2$时，四边形$NA_1MA_2$的面积为$8\\sqrt{3}$"
       }
     ],
+    "score_rule": "本题共 3 小题，共 18 分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
     "answer": [
       "A",
       "C",
       "D"
-    ],
-    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-12",
@@ -700,12 +677,11 @@
     "type": "fill_in",
     "type_rank": 1,
     "category": "vector",
-    "content": "已知平面向量$\\vec{a} = (x,1), \\vec{b} = (x-1,2x)$, 若$\\vec{a} \\perp (\\vec{a}-\\vec{b})$, 则$|\\vec{a}| = $________.",
+    "content": "已知平面向量$\\vec{a}=(x,1), \\vec{b}=(x-1, 2x)$，若$(\\vec{a}-\\vec{b}) \\perp \\vec{a}$，则$|\\vec{a}|=$___________",
     "options": null,
-    "answer": "$\\sqrt{2}$",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "2"
   },
   {
     "id": "2025年高考数学试卷（全国Ⅱ卷）-13",
@@ -713,12 +689,11 @@
     "type": "fill_in",
     "type_rank": 2,
     "category": "derivative",
-    "content": "若$x=2$是函数 $f(x) = (x-1)(x-2)(x-a)$ 的极值点, 则$f(0) = $________.",
+    "content": "若$x=2$是函数$f(x) = (x-1)(x-2)(x-a)$的极值点，则$f(0)=$___________",
     "options": null,
-    "answer": "-4",
     "score_rule": "每小题5分",
     "source": "2025年高考数学试卷（全国Ⅱ卷）",
-    "has_figure": false
+    "answer": "4-"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-1",
@@ -745,10 +720,9 @@
         "text": "$\\{x|1<x<4\\}$"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-2",
@@ -775,10 +749,9 @@
         "text": "-i"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-3",
@@ -805,10 +778,9 @@
         "text": "30种"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-4",
@@ -835,10 +807,9 @@
         "text": "90°"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-5",
@@ -865,10 +836,9 @@
         "text": "42%"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-6",
@@ -895,10 +865,9 @@
         "text": "3.5天"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-7",
@@ -925,10 +894,9 @@
         "text": "$(-4,6)$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-8",
@@ -955,10 +923,9 @@
         "text": "$[-1,0]\\cup[1, 3]$"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-9",
@@ -985,14 +952,13 @@
         "text": "若$m=0, n>0$,则$C$是两条直线"
       }
     ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
     "answer": [
       "A",
       "C",
       "D"
-    ],
-    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-10",
@@ -1019,13 +985,12 @@
         "text": "$\\cos(\\frac{5\\pi}{6}-2x)$"
       }
     ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
     "answer": [
       "B",
       "C"
-    ],
-    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-11",
@@ -1052,15 +1017,14 @@
         "text": "$\\sqrt{a} + \\sqrt{b} \\le \\sqrt{2}$"
       }
     ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
     "answer": [
       "A",
       "B",
       "C",
       "D"
-    ],
-    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-12",
@@ -1087,13 +1051,12 @@
         "text": "若$n=2m$,随机变量$Y$所有可能的取值为$1,2,\\dots,m$,且$P(Y=j) = p_j + p_{2m+1-j} (j=1,2,\\dots,m)$,则$H(X) \\le H(Y)$"
       }
     ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
     "answer": [
       "A",
       "C"
-    ],
-    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    ]
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-13",
@@ -1103,10 +1066,9 @@
     "category": "conic",
     "content": "斜率为$\\sqrt{3}$的直线过抛物线$C:y^2=4x$的焦点,且与$C$交于$A,B$两点,则$|AB|$=___.",
     "options": null,
-    "answer": "$\\frac{16}{3}$",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "$\\frac{16}{3}$"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-14",
@@ -1116,10 +1078,9 @@
     "category": "sequence",
     "content": "将数列$\\{2n-1\\}$与$\\{3n-2\\}$的公共项从小到大排列得到数列$\\{a_n\\}$,则$\\{a_n\\}$的前$n$项和为___.",
     "options": null,
-    "answer": "$3n^2-2n$",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "$3n^2-2n$"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-15",
@@ -1129,10 +1090,9 @@
     "category": "solid_geometry",
     "content": "某中学开展劳动实习,学生加工制作零件,零件的截面如图所示. $O$为圆孔及轮廓圆弧$AB$所在圆的圆心,$A$是圆弧$AB$与直线$AG$的切点,$B$是圆弧$AB$与直线$BC$的切点,四边形$DEFG$为矩形,$BC\\perp DG$,垂足为$C$, $\\tan\\angle ODC=\\frac{3}{5}$, $BH\\parallel DG$, $EF=12$ cm, $DE=2$ cm, $A$到直线$DE$和$EF$的距离均为7cm,圆孔半径为1 cm,则图中阴影部分的面积为___cm².",
     "options": null,
-    "answer": "80-2π",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "80-2π"
   },
   {
     "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-16",
@@ -1142,10 +1102,9 @@
     "category": "solid_geometry",
     "content": "已知直四棱柱$ABCD-A_1B_1C_1D_1$的棱长均为2, $\\angle BAD=60^\\circ$. 以$D_1$为球心, $\\sqrt{5}$为半径的球面与侧面$BCC_1B_1$的交线长为___.",
     "options": null,
-    "answer": "$2\\pi$",
     "score_rule": "每小题5分",
     "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
-    "has_figure": false
+    "answer": "$2\\pi$"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-1",
@@ -1172,10 +1131,9 @@
         "text": "$(\\frac{3}{2}, 3)$"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "D"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-2",
@@ -1202,10 +1160,9 @@
         "text": "2"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-3",
@@ -1232,10 +1189,9 @@
         "text": "97"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-4",
@@ -1262,10 +1218,9 @@
         "text": "$\\frac{3}{4}$"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-5",
@@ -1292,10 +1247,9 @@
         "text": "$(0, \\sqrt{3})$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-6",
@@ -1322,10 +1276,9 @@
         "text": "$28\\pi$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-7",
@@ -1352,10 +1305,9 @@
         "text": "图D"
       }
     ],
-    "answer": "D",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": true
+    "answer": "D"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-8",
@@ -1382,10 +1334,9 @@
         "text": "$\\log_a c < \\log_b c$"
       }
     ],
-    "answer": "C",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "C"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-10",
@@ -1412,10 +1363,9 @@
         "text": "8"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-11",
@@ -1442,10 +1392,9 @@
         "text": "$\\frac{1}{3}$"
       }
     ],
-    "answer": "A",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "A"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-12",
@@ -1472,10 +1421,9 @@
         "text": "5"
       }
     ],
-    "answer": "B",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "B"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-13",
@@ -1485,10 +1433,9 @@
     "category": "vector",
     "content": "设向量$\\vec{a}=(m, 1), \\vec{b}=(1, 2)$，且$|\\vec{a}+\\vec{b}|^2=|\\vec{a}|^2+|\\vec{b}|^2$，则$m=$_____.",
     "options": null,
-    "answer": "-2",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "-2"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-14",
@@ -1498,10 +1445,9 @@
     "category": "sequence",
     "content": "$(2x+\\sqrt{x})^5$的展开式中，$x^3$的系数是_____. (用数字填写答案)",
     "options": null,
-    "answer": "10",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "10"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-15",
@@ -1511,10 +1457,9 @@
     "category": "sequence",
     "content": "设等比数列$\\{a_n\\}$满足$a_1+a_3=10, a_2+a_4=5$，则$a_1a_2...a_n$的最大值为_____.",
     "options": null,
-    "answer": "64",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "64"
   },
   {
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-16",
@@ -1524,9 +1469,2638 @@
     "category": "inequality",
     "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料. 生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时. 生产一件产品A的利润为2100元，生产一件产品B的利润为900元. 该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为____元.",
     "options": null,
-    "answer": "216000",
     "score_rule": "每小题5分",
     "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
-    "has_figure": false
+    "answer": "216000"
+  },
+  {
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "sequence",
+    "content": "若一个等比数列前 4 项和为 4，前 8 项和为 68，则该等比数列的公比为_________.",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "answer": "2±"
+  },
+  {
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "probability",
+    "content": "一个箱子里有 5 个相同的球，分别以 1~5 标号，若有放回地取三次，记至少取出一次的球的个数为 X，则数学期望 $E(X)=$_________.",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "answer": "6125"
+  },
+  {
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "solid_geometry",
+    "content": "一个底面半径为4cm，高为9cm的封闭圆柱形容器（容器壁厚度忽略不计）内有两个半径相等的铁球，则铁球半径的最大值为____________cm．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "answer": "52"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "已知集合 $A = \\{x \\mid -3 < x < 5\\}$, $B = \\{-3, -1, 0, 2, 3\\}$，则 $A \\cap B=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{-1,0\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{2,3\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{-3, -1, 0\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{-1, 0, 2\\}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "若 $z(1-\\text{i}) = 2\\text{i}$，则 $z=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-1-\\text{i}$"
+      },
+      {
+        "label": "B",
+        "text": "$-1+\\text{i}$"
+      },
+      {
+        "label": "C",
+        "text": "$1-\\text{i}$"
+      },
+      {
+        "label": "D",
+        "text": "$1+\\text{i}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "vector",
+    "content": "已知向量 $\\vec{a}=(0,1), \\vec{b}=(2, x)$，若 $(\\vec{b}-4\\vec{a}) \\perp \\vec{b}$，则 $x=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "-2"
+      },
+      {
+        "label": "B",
+        "text": "-1"
+      },
+      {
+        "label": "C",
+        "text": "1"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "trigo_func",
+    "content": "已知 $\\cos(\\alpha+\\beta) = m, \\tan\\alpha \\tan\\beta = 2$，则 $\\cos(\\alpha-\\beta)=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-3m$"
+      },
+      {
+        "label": "B",
+        "text": "$-\\frac{m}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{m}{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$3m$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "solid_geometry",
+    "content": "已知圆柱和圆锥底面半径相等，侧面积相等，且它们的高均为3，则圆锥的体积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$2\\sqrt{3}\\pi$"
+      },
+      {
+        "label": "B",
+        "text": "$3\\sqrt{3}\\pi$"
+      },
+      {
+        "label": "C",
+        "text": "$6\\sqrt{3}\\pi$"
+      },
+      {
+        "label": "D",
+        "text": "$9\\sqrt{3}\\pi$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "derivative",
+    "content": "已知函数 $f(x) = \\begin{cases} x^2+2ax-a, & x<0 \\\\ e^x+\\ln(x+1), & x \\ge 0 \\end{cases}$，在 R 上单调递增，则 a 取值的范围是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(-\\infty,0]$"
+      },
+      {
+        "label": "B",
+        "text": "$[-1,0]$"
+      },
+      {
+        "label": "C",
+        "text": "$[-1,1]$"
+      },
+      {
+        "label": "D",
+        "text": "$[0, +\\infty)$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "trigo_func",
+    "content": "当 $x \\in [0, 2\\pi]$ 时，曲线 $y=\\sin x$ 与 $y=2\\sin(3x-\\frac{\\pi}{6})$ 的交点个数为",
+    "options": [
+      {
+        "label": "A",
+        "text": "3"
+      },
+      {
+        "label": "B",
+        "text": "4"
+      },
+      {
+        "label": "C",
+        "text": "6"
+      },
+      {
+        "label": "D",
+        "text": "8"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "function",
+    "content": "已知函数 $f(x)$ 的定义域为 R，$(x-1)f(x) > f(x-1)+f(x-2)$，且当 $x<3$ 时 $f(x)=x$，则下列结论中一定正确的是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$f(10) > 100$"
+      },
+      {
+        "label": "B",
+        "text": "$f(20) > 1000$"
+      },
+      {
+        "label": "C",
+        "text": "$f(10) < 1000$"
+      },
+      {
+        "label": "D",
+        "text": "$f(20) < 10000$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "probability",
+    "content": "为了解推动出口后的亩收入（单位：万元）情况，从该种植区抽取样本，得到推动出口后亩收入的样本均值 $\\bar{x}=2.1$，样本方差 $s^2=0.01$，已知该种植区以往的亩收入 $X$ 服从正态分布 $N(1.8, 0.1^2)$，假设推动出口后的亩收入 $Y$ 服从正态分布 $N(\\bar{x}, s^2)$， 则（    ）（若随机变量 $Z$ 服从正态分布 $N(\\mu, \\sigma^2)$， $P(Z<\\mu+\\sigma) \\approx 0.8413$）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$P(X>2)>0.2$"
+      },
+      {
+        "label": "B",
+        "text": "$P(X>2)<0.5$"
+      },
+      {
+        "label": "C",
+        "text": "$P(Y>2)>0.5$"
+      },
+      {
+        "label": "D",
+        "text": "$P(Y>2)<0.8$"
+      }
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "derivative",
+    "content": "设函数 $f(x)=(x-1)^2(x-4)$，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "$x=3$ 是 $f(x)$ 的极小值点"
+      },
+      {
+        "label": "B",
+        "text": "当 $0<x<1$ 时，$f(x^2)<f(x)$"
+      },
+      {
+        "label": "C",
+        "text": "当 $1<x<2$ 时，$f(2x-1)-4<0$"
+      },
+      {
+        "label": "D",
+        "text": "当 $-1<x<0$ 时，$f(x-2)>f(x)$"
+      }
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "complex",
+    "content": "已知$1 - iz= -1$，则$z=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "1"
+      },
+      {
+        "label": "C",
+        "text": "$\\sqrt{2}$"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "logic",
+    "content": "已知命题 $p：\\forall x \\in R，|x+1| > 1$；命题 $q：\\exists x > 0，x^3 = x$，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "p 和 q 都是真命题"
+      },
+      {
+        "label": "B",
+        "text": "$\\neg p$和 q 都是真命题"
+      },
+      {
+        "label": "C",
+        "text": "p和$\\neg q$都是真命题"
+      },
+      {
+        "label": "D",
+        "text": "$\\neg p$和$\\neg q$都是真命题"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "vector",
+    "content": "已知向量$\\vec{a}, \\vec{b}$满足$|\\vec{a}|=1, |\\vec{a}+2\\vec{b}|=2$，且$(\\vec{a}-2\\vec{b}) \\perp \\vec{b}$，则$|\\vec{b}|=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\sqrt{2}}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\sqrt{3}}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "probability",
+    "content": "某农业研究部门在面积相等的 100 块稻田上种植一种新型水稻，得到各块稻田的亩产量（单位：kg）并部分整理下表\n亩产量 [900，950） [950，1000） [1000，1050） [1100，1150） [1150，1200）\n频数 6 12 18 24 10\n据表中数据，结论中正确的是",
+    "options": [
+      {
+        "label": "A",
+        "text": "100 块稻田亩产量的中位数小于 1050kg"
+      },
+      {
+        "label": "B",
+        "text": "100块稻田中亩产量低于 1100kg 的稻田所占比例超过 80%"
+      },
+      {
+        "label": "C",
+        "text": "100块稻田亩产量的极差介于 200kg 至 300kg 之间"
+      },
+      {
+        "label": "D",
+        "text": "100 块稻田亩产量的平均值介于 900kg 至 1000kg之间"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "conic",
+    "content": "已知曲线 C：$x^2+y^2=16$（$y>0$） ，从C上任意一点 P向 x轴作垂线段$PP'$，$P'$为垂足，则线段$PP'$的中点 M 的轨迹方程为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{x^2}{16} + \\frac{y^2}{4} = 1$（$y>0$）"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{x^2}{16} + \\frac{y^2}{8} = 1$（$y>0$）"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{y^2}{16} + \\frac{x^2}{4} = 1$（$y>0$）"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{y^2}{16} + \\frac{x^2}{8} = 1$（$y>0$）"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "derivative",
+    "content": "设函数 $f(x) = a(x+1)^2 - 1$，$g(x) = \\cos(2x) + ax$，当$x \\in (-1,1)$时，曲线$y=f(x)$与$y=g(x)$恰有一个交点，则$a=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "-1"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "1"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "solid_geometry",
+    "content": "已知正三棱台 $A_1B_1C_1 - ABC$的体积为$\\frac{52\\sqrt{3}}{3}$，$AB=6$，$A_1B_1=2$，则$A_1A$与平面 ABC所成角的正切值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "1"
+      },
+      {
+        "label": "C",
+        "text": "2"
+      },
+      {
+        "label": "D",
+        "text": "3"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "complex",
+    "content": "设 $5+iz = i$，则 $i(z+\\bar{z})=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$10i$"
+      },
+      {
+        "label": "B",
+        "text": "$2i$"
+      },
+      {
+        "label": "C",
+        "text": "$10$"
+      },
+      {
+        "label": "D",
+        "text": "$-2$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "logic",
+    "content": "集合 $A=\\{1, 2,3, 4,5,9\\}$, $B = \\{x | \\sqrt{x} \\in A\\}$，则 $\\complement_A(A \\cap B) =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{1, 4,9\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{3, 4,9\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{1, 2,3\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{2,3,5\\}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "inequality",
+    "content": "若实数 $x, y$ 满足约束条件 $\\begin{cases} 4x - 3y - 3 \\ge 0 \\\\ 2x - y - 2 \\le 0 \\\\ 2x + 6y - 9 \\le 0 \\end{cases}$，则 $z = 5x - y$ 的最小值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$5$"
+      },
+      {
+        "label": "B",
+        "text": "$12$"
+      },
+      {
+        "label": "C",
+        "text": "$-2$"
+      },
+      {
+        "label": "D",
+        "text": "$-\\frac{7}{2}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "sequence",
+    "content": "等差数列 $\\{a_n\\}$ 的前 $n$ 项和为 $S_n$，若 $S_{10}=5S_5$， $a_5=1$，则 $a_1=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-2$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{7}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$1$"
+      },
+      {
+        "label": "D",
+        "text": "$2$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "conic",
+    "content": "已知双曲线 $C: \\frac{y^2}{a^2} - \\frac{x^2}{b^2} = 1(a > 0, b > 0)$ 的上、下焦点分别为 $F_1(0, -4), F_2(0, 4)$，点 $P(-6, 4)$ 在该双曲线上，则该双曲线的离心率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$4$"
+      },
+      {
+        "label": "B",
+        "text": "$3$"
+      },
+      {
+        "label": "C",
+        "text": "$2$"
+      },
+      {
+        "label": "D",
+        "text": "$\\sqrt{2}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "derivative",
+    "content": "设函数 $f(x) = \\frac{2e^x + 2\\sin x}{x+1}$，则曲线 $y=f(x)$ 在点 $(0, f(0))$ 处的切线与两坐标轴围成的三角形的面积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{6}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2}{3}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "function",
+    "content": "函数 $f(x) = (e^x - e^{-x})\\sin x + x^2 - x$ 在区间 $[-2.8, 2.8]$ 的大致图像为",
+    "options": [
+      {
+        "label": "A",
+        "text": "选项A的图像"
+      },
+      {
+        "label": "B",
+        "text": "选项B的图像"
+      },
+      {
+        "label": "C",
+        "text": "选项C的图像"
+      },
+      {
+        "label": "D",
+        "text": "选项D的图像"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "trigo_func",
+    "content": "已知 $\\cos(3\\alpha) = -\\cos\\alpha \\sin\\alpha$，则 $\\tan(\\alpha + \\frac{\\pi}{4})=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$2+\\sqrt{3}$"
+      },
+      {
+        "label": "B",
+        "text": "$2-\\sqrt{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{3}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$1-\\sqrt{3}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "vector",
+    "content": "已知向量 $\\vec{a} = (x+1, x), \\vec{b} = (x, 2)$，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "“$x=-3$”是“$\\vec{a} \\perp \\vec{b}$”的必要条件"
+      },
+      {
+        "label": "B",
+        "text": "“$x=-3$”是“$\\vec{a} // \\vec{b}$”的必要条件"
+      },
+      {
+        "label": "C",
+        "text": "“$x=0$”是“$\\vec{a} \\perp \\vec{b}$”的充分条件"
+      },
+      {
+        "label": "D",
+        "text": "“$x=1-\\sqrt{3}$”是“$\\vec{a} // \\vec{b}$”的充分条件"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "solid_geometry",
+    "content": "设 $\\alpha, \\beta$ 两个平面，$m, n$ 是两条直线，且 $m = \\alpha \\cap \\beta$. 下列四个命题：\n①若 $m // n$，则 $n // \\alpha$ 或 $n // \\beta$ \n②若 $m \\perp n$，则 $n \\perp \\alpha, n \\perp \\beta$ \n③若 $n // \\alpha$，且 $n // \\beta$，则 $m // n$ \n④若 $n$ 与 $\\alpha$ 和 $\\beta$ 所成的角相等，则 $m \\perp n$\n其中所有真命题的编号是",
+    "options": [
+      {
+        "label": "A",
+        "text": "①③"
+      },
+      {
+        "label": "B",
+        "text": "②④"
+      },
+      {
+        "label": "C",
+        "text": "①②③"
+      },
+      {
+        "label": "D",
+        "text": "①③④"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "trigo_sol",
+    "content": "在 $\\triangle ABC$ 中内角 $A, B, C$ 所对边分别为 $a, b, c$，若 $B=\\frac{\\pi}{3}$，$b^2 = \\frac{9}{4}ac$，则 $\\sin A + \\sin C=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\sqrt{3}}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\sqrt{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\sqrt{7}}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{3\\sqrt{2}}{2}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-12",
+    "question_number": "12",
+    "type": "single_choice",
+    "type_rank": 12,
+    "category": "line_circle",
+    "content": "已知 $b$ 是 $a, c$ 的等差中项，直线 $ax+by+c=0$ 与圆 $x^2+y^2+4y-1=0$ 交于 $A, B$ 两点，则 $AB$ 的最小值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$2$"
+      },
+      {
+        "label": "B",
+        "text": "$\\sqrt{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$4$"
+      },
+      {
+        "label": "D",
+        "text": "$2\\sqrt{5}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "sequence",
+    "content": "$(\\frac{1}{3} + x)^{10}$ 的展开式中，各项系数的最大值是______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "5"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "solid_geometry",
+    "content": "已知甲、乙两个圆台上、下底面的半径均为 $r_1$ 和 $r_2$，母线长分别为 $2(r_2-r_1)$ 和 $3(r_2-r_1)$，则两个圆台的体积之比 $\\frac{V_{甲}}{V_{乙}}=$______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "64"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "function",
+    "content": "已知 $a>1$，$\\log_8 a - \\log_4 a = -\\frac{1}{2}$，则 $a=$______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "64"
+  },
+  {
+    "id": "2024年高考数学试卷（理）（全国甲卷）-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "probability",
+    "content": "有 6 个相同的球，分别标有数字 1、2、3、4、5、6，从中不放回地随机抽取 3 次，每次取 1 个球. 记 $m$ 为前两次取出的球上数字的平均值，$n$ 为取出的三个球上数字的平均值，则 $m$ 与 $n$ 差的绝对值不超过 $\\frac{1}{2}$ 的概率是______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（理）（全国甲卷）",
+    "answer": "715"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "集合$A=\\{1, 2,3, 4,5,9\\}$，$B = \\{x | x+1 \\in A\\}$，则$A \\cap B=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{1, 2,3, 4\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{1, 2,3\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{3, 4\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{1,2,9\\}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "设$z=2i$，则$z \\cdot \\bar{z} =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "-i"
+      },
+      {
+        "label": "B",
+        "text": "1"
+      },
+      {
+        "label": "C",
+        "text": "-1"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "inequality",
+    "content": "若实数$x, y$满足约束条件$\\begin{cases} 4x-3y-3 \\ge 0 \\\\ 2x-y-2 \\le 0 \\\\ 2x+6y-9 \\le 0 \\end{cases}$，则$z=x-5y$的最小值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "5"
+      },
+      {
+        "label": "B",
+        "text": "12"
+      },
+      {
+        "label": "C",
+        "text": "-2"
+      },
+      {
+        "label": "D",
+        "text": "-\\frac{7}{2}"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "sequence",
+    "content": "等差数列$\\{a_n\\}$的前$n$项和为$S_n$，若$S_9=1$，$a_3+a_7=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "-2"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{7}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "1"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2}{9}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "D"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "probability",
+    "content": "甲、乙、丙、丁四人排成一列，丙不在排头，且甲或乙在排尾的概率是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{4}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2}{3}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "conic",
+    "content": "已知双曲线$C: \\frac{y^2}{a^2} - \\frac{x^2}{b^2} = 1(a>0, b>0)$的上、下焦点分别为$F_1(0, -4), F_2(0, 4)$， 点$P(-6, 4)$在该双曲线上，则该双曲线的离心率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "4"
+      },
+      {
+        "label": "B",
+        "text": "3"
+      },
+      {
+        "label": "C",
+        "text": "2"
+      },
+      {
+        "label": "D",
+        "text": "$\\sqrt{2}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "derivative",
+    "content": "曲线$f(x)=x^3-6x+1$在$(-1, 0)$处的切线与坐标轴围成的面积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{6}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{3}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "-\\frac{3}{2}"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "function",
+    "content": "函数$f(x)=(e^x - e^{-x}) \\sin x + x^2$在区间$[-2.8, 2.8]$的大致图像为",
+    "options": [
+      {
+        "label": "A",
+        "text": "图像A"
+      },
+      {
+        "label": "B",
+        "text": "图像B"
+      },
+      {
+        "label": "C",
+        "text": "图像C"
+      },
+      {
+        "label": "D",
+        "text": "图像D"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "trigo_func",
+    "content": "已知$\\cos \\alpha - 3\\cos \\alpha = -\\sin \\alpha$，则$\\tan(\\alpha + \\frac{\\pi}{4})=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$2\\sqrt{3}+1$"
+      },
+      {
+        "label": "B",
+        "text": "$2\\sqrt{3}-1$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{3}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$1-\\sqrt{3}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "B"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "solid_geometry",
+    "content": "设$\\alpha, \\beta$是两个平面，$m, n$是两条直线，且$m = \\alpha \\cap \\beta$.下列四个命题：\n①若$m // n$，则$n // \\alpha$或$n // \\beta$\n②若$m \\perp n$，则$n \\perp \\alpha, n \\perp \\beta$\n③若$n // \\alpha$，且$n // \\beta$，则$m // n$\n④若$n$与$\\alpha$和$\\beta$所成的角相等，则$m \\perp n$\n其中所有真命题的编号是",
+    "options": [
+      {
+        "label": "A",
+        "text": "①③"
+      },
+      {
+        "label": "B",
+        "text": "②④"
+      },
+      {
+        "label": "C",
+        "text": "①②③"
+      },
+      {
+        "label": "D",
+        "text": "①③④"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "A"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "trigo_sol",
+    "content": "在$\\triangle ABC$中内角$A, B, C$所对边分别为$a, b, c$，若$B=\\frac{\\pi}{3}$，$b^2=\\frac{9}{4}ac$，则$\\sin A + \\sin C=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{3}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{7}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{3\\sqrt{2}}{2}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-12",
+    "question_number": "12",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "trigo_func",
+    "content": "函数$f(x)=\\sin x - \\sqrt{3} \\cos x$在$[0, \\pi]$上的最大值是______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "2"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "function",
+    "content": "已知$a>1$，$\\log_a 8 - \\log_a \\frac{1}{2} = -5$，则$a=$______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "64"
+  },
+  {
+    "id": "2024年高考数学试卷（文）（全国甲卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "derivative",
+    "content": "曲线$y = x^3 - 3x$与$y = (x-a)^2 - 1$在$(0, +\\infty)$上有两个不同交点，则$a$的取值范围为______．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（文）（全国甲卷）",
+    "answer": "2,1-"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "conic",
+    "content": "造型可以做成美丽的丝带，将其看作图中曲线 $C$ 的一部分. 已知 $C$ 过坐标原点 $O$. 且 $C$ 上的点满足横坐标大于-2，到点 $F(2,0)$ 的距离与到定直线 $x=a (a<0)$ 的距离之积为 4，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "$a=-2$"
+      },
+      {
+        "label": "B",
+        "text": "点 $(2\\sqrt{2},0)$ 在 $C$ 上"
+      },
+      {
+        "label": "C",
+        "text": "$C$ 在第一象限的点的纵坐标的最大值为 1"
+      },
+      {
+        "label": "D",
+        "text": "当点 $(x_0, y_0)$ 在 $C$ 上时，$y_0 \\le \\frac{x_0+4}{2}$"
+      }
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-12",
+    "question_number": "12",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "conic",
+    "content": "设双曲线 $C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$ 的左右焦点分别为 $F_1, F_2$，过 $F_2$ 作平行于 $y$ 轴的直线交 $C$ 于 $A, B$ 两点，若 $|F_1A|=13, |AB|=10$，则 $C$ 的离心率为___________．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "32"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "derivative",
+    "content": "若曲线 $y=e^x+x$ 在点 $(0,1)$ 处的切线也是曲线 $y=\\ln(x+a)+1$ 的切线，则 $a=$__________.",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "ln 2"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅰ卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "probability",
+    "content": "甲、乙两人各有四张卡片，每张卡片上标有一个数字，甲的卡片上分别标有数字 1，3，5，7，乙的卡片上分别标有数字 2，4，6，8，两人进行四轮比赛，在每轮比赛中，两人各自从自己持有的卡片中随机选一张，并比较所选卡片上数字的大小，数字大的人得 1 分，数字小的人得 0 分，然后各自弃置此轮所选的卡片（弃置的卡片在此后的轮次中不能使用）.则四轮比赛后，甲的总得分不小于 2 的概率为_________.",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2024年高考数学试卷（新课标Ⅰ卷）",
+    "answer": "12##0.5"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "derivative",
+    "content": "设函数$f(x) = x\\ln(x+a) + b$，若$f(x) \\ge 0$，则$a^2+b^2$最小值为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{8}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{4}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "C"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "trigo_func",
+    "content": "对于函数$f(x) = \\sin(2x)$和$g(x) = \\sin(2x - \\frac{\\pi}{4})$，下列正确的有",
+    "options": [
+      {
+        "label": "A",
+        "text": "$f(x)$与$g(x)$有相同零点"
+      },
+      {
+        "label": "B",
+        "text": "$f(x)$与$g(x)$有相同最大值"
+      },
+      {
+        "label": "C",
+        "text": "$f(x)$与$g(x)$有相同最小正周期"
+      },
+      {
+        "label": "D",
+        "text": "$f(x)$与$g(x)$的图像有相同的对称轴"
+      }
+    ],
+    "score_rule": "每小题 6 分，全部选对得 6 分，选对但不全的得部分分，有选错的得 0 分.",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "conic",
+    "content": "抛物线 C：$y^2=4x$的准线为 l，P为 C上的动点， 过P作 ⊙A：$(x-4)^2+y^2=1$的一条切线，Q 为切点，过 P作 l的垂线，垂足为 B，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "l 与⊙A相切"
+      },
+      {
+        "label": "B",
+        "text": "当 P，A，B三点共线时，$|PQ| = \\sqrt{15}$"
+      },
+      {
+        "label": "C",
+        "text": "当$|PB|=2$时，$PA \\perp AB$"
+      },
+      {
+        "label": "D",
+        "text": "满足$|PA|=|PB|$的点P有且仅有 2 个"
+      }
+    ],
+    "score_rule": "每小题 6 分，全部选对得 6 分，选对但不全的得部分分，有选错的得 0 分.",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "derivative",
+    "content": "设函数 $f(x) = 2x^3 - 3ax^2 + 1$，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "当$a>1$时，$f(x)$有三个零点"
+      },
+      {
+        "label": "B",
+        "text": "当$a<0$时，$x=0$是$f(x)$的极大值点"
+      },
+      {
+        "label": "C",
+        "text": "存在 $a，b$，使得$x=b$为曲线$y=f(x)$的对称轴"
+      },
+      {
+        "label": "D",
+        "text": "存在 a，使得点$(1, f(1))$为曲线$y=f(x)$的对称中心"
+      }
+    ],
+    "score_rule": "每小题 6 分，全部选对得 6 分，选对但不全的得部分分，有选错的得 0 分.",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-12",
+    "question_number": "12",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "sequence",
+    "content": "记$S_n$为等差数列$\\{a_n\\}$的前 n 项和，若$a_3+a_4=7$，$a_2+a_5=3.5$，则$S_{10}=$________.",
+    "options": null,
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "95"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "trigo_sol",
+    "content": "已知$\\alpha$为第一象限角，$\\beta$为第三象限角，$\\tan \\alpha + \\tan \\beta = 4$，$\\tan \\alpha \\tan \\beta = 2+1$，则$\\sin(\\alpha+\\beta) = $_______.",
+    "options": null,
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "2 23-"
+  },
+  {
+    "id": "2024年高考数学试卷（新课标Ⅱ卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "probability",
+    "content": "在如图的 4×4 方格表中选 4 个方格，要求每行和每列均恰有一个方格被选中，则共有 ________种选法，在所有符合上述要求的选法中，选中方格中的 4 个数之和的最大值是________．",
+    "options": null,
+    "score_rule": "每小题 5 分",
+    "source": "2024年高考数学试卷（新课标Ⅱ卷）",
+    "answer": "①. 24    ②. 112"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "complex",
+    "content": "$2+3i + \\frac{2}{i} =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$1$"
+      },
+      {
+        "label": "B",
+        "text": "$2$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\sqrt{5}$"
+      },
+      {
+        "label": "D",
+        "text": "$5$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "logic",
+    "content": "设全集$U=\\\\{0,1,2,4,6,8\\\\}$，集合$M=\\\\{0,4,6\\\\}$, $N=\\\\{0,1,6\\\\}$，则 $M \\\\cup (\\\\complement_U N) =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\{0, 2, 4,6,8\\\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\{0,1,4,6,8\\\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\{1, 2, 4,6,8\\\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$U$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "solid_geometry",
+    "content": "如图，网格纸上绘制的一个零件的三视图，网格小正方形的边长为 1，则该零件的表面积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "24"
+      },
+      {
+        "label": "B",
+        "text": "26"
+      },
+      {
+        "label": "C",
+        "text": "28"
+      },
+      {
+        "label": "D",
+        "text": "30"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "trigo_sol",
+    "content": "在$\\triangle ABC$中，内角$A, B, C$的对边分别是$a, b, c$，若$a \\\\cos B - b \\\\cos A = c$，且 $C=\\frac{\\\\pi}{5}$，则$\\\\angle B =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\\\pi}{10}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\\\pi}{5}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{3\\\\pi}{10}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2\\\\pi}{5}$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "function",
+    "content": "已知 $f(x) = \\frac{e^{ax}}{e^x - 1}$ 是偶函数，则$a=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "-2"
+      },
+      {
+        "label": "B",
+        "text": "-1"
+      },
+      {
+        "label": "C",
+        "text": "1"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "vector",
+    "content": "正方形$ABCD$的边长是 2，$E$是$AB$的中点，则$\\\\vec{EC} \\\\cdot \\\\vec{ED} =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\sqrt{5}$"
+      },
+      {
+        "label": "B",
+        "text": "3"
+      },
+      {
+        "label": "C",
+        "text": "$2\\\\sqrt{5}$"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "probability",
+    "content": "设 $O$ 为平面坐标系的坐标原点，在区域$\\\\{(x,y) | 1 \\\\le x^2+y^2 \\\\le 4\\\\}$内随机取一点 $A$，则直线 $OA$ 的倾斜角不大于$\\frac{\\\\pi}{4}$的概率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{8}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{6}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{4}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{1}{2}$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "derivative",
+    "content": "函数$f(x) = x^3 + ax + 2$存在 3 个零点，则$a$的取值范围是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$( -\\\\infty, -2)$"
+      },
+      {
+        "label": "B",
+        "text": "$( -\\\\infty, -3)$"
+      },
+      {
+        "label": "C",
+        "text": "$(-4, -1)$"
+      },
+      {
+        "label": "D",
+        "text": "$(-3, 0)$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "probability",
+    "content": "某学校举办作文比赛，共 6 个主题，每位参赛同学从中随机抽取一个主题准备作文，则甲、乙两位参赛同学抽到不同主题概率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{5}{6}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{2}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{1}{3}$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "trigo_func",
+    "content": "已知函数$f(x) = \\\\sin(\\\\omega x + \\\\phi)$在区间$(\\frac{\\\\pi}{6}, \\frac{2\\\\pi}{3})$单调递增，直线$x=\\frac{\\\\pi}{6}$和$x=\\frac{2\\\\pi}{3}$为函数$y=f(x)$的图像的两条对称轴，则$f(-\\frac{5\\\\pi}{12})=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-\\frac{\\\\sqrt{3}}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$-\\frac{1}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{\\\\sqrt{3}}{2}$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "line_circle",
+    "content": "已知实数$x, y$满足$x^2 + y^2 - 4x - 2y - 4 = 0$，则$x-y$的最大值是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{3\\\\sqrt{2}+1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "4"
+      },
+      {
+        "label": "C",
+        "text": "$1+3\\\\sqrt{2}$"
+      },
+      {
+        "label": "D",
+        "text": "7"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-12",
+    "question_number": "12",
+    "type": "single_choice",
+    "type_rank": 12,
+    "category": "conic",
+    "content": "设 A，B为双曲线$\\frac{x^2}{9} - y^2 = 1$上两点，下列四个点中，可为线段 AB中点的是",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(1,1)$"
+      },
+      {
+        "label": "B",
+        "text": "$(1, -2)$"
+      },
+      {
+        "label": "C",
+        "text": "$(1,3)$"
+      },
+      {
+        "label": "D",
+        "text": "$(1, -4)$"
+      }
+    ],
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "conic",
+    "content": "已知点$A(1, \\\\sqrt{5})$在抛物线 $C: y^2 = 2px$上，则 $A$到 $C$的准线的距离为______.",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "trigo_func",
+    "content": "若$\\theta \\\\in (0, \\frac{\\\\pi}{2})$, $\\tan\\theta = 2$，则$\\\\sin\\theta - \\\\cos\\theta = $________．",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "inequality",
+    "content": "若 $x, y$满足约束条件$\\begin{cases} x - 3y \\\\le -1 \\\\\\ 2x + y \\\\le 9 \\\\\\ 3x + y \\\\ge 7 \\\\end{cases}}$，则$z = 2x - y$的最大值为______.",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国乙卷）-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "solid_geometry",
+    "content": "已知点$S, A, B, C$均在半径为 2 的球面上，$\\triangle ABC$是边长为 3 的等边三角形，$SA \\\\perp$平面$ABC$，则$SA=$________．",
+    "options": null,
+    "score_rule": "本题满分5分",
+    "source": "2023年高考数学试卷（文）（全国乙卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "已知集合 $M = \\\\{-2, -1, 0, 1, 2\\\\}$，$N = \\\\{x | x^2 - x - 6 \\\\ge 0\\\\}$，则 $M \\\\cap N =$（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\{-2, -1, 0, 1\\\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\{0, 1, 2\\\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\{-2\\\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\\\{2\\\\}$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "已知 $z = \\frac{1-\\\\mathrm{i}}{2+2\\\\mathrm{i}}$，则 $z - \\bar{z} =$（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "-i"
+      },
+      {
+        "label": "B",
+        "text": "i"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "vector",
+    "content": "已知向量 $\\\\vec{a}=(1,1)$，$\\\\vec{b}=(1, -1)$，若 $(l\\\\vec{a} + m\\\\vec{b}) \\\\perp (\\\\vec{a} + l\\\\vec{b})$，则（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$l + m = 1$"
+      },
+      {
+        "label": "B",
+        "text": "$l + m = -1$"
+      },
+      {
+        "label": "C",
+        "text": "$lm = 1$"
+      },
+      {
+        "label": "D",
+        "text": "$lm = -1$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "function",
+    "content": "设函数 $f(x) = 2^{x(x-a)}$ 在区间 $(0,1)$ 上单调递减，则 $a$ 的取值范围是（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(−\\\\infty, -2]$"
+      },
+      {
+        "label": "B",
+        "text": "$[-2, 0)$"
+      },
+      {
+        "label": "C",
+        "text": "$(0, 2]$"
+      },
+      {
+        "label": "D",
+        "text": "$[2, +\\\\infty)$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "conic",
+    "content": "设椭圆 $C_1: \\frac{x^2}{a^2} + y^2 = 1(a>1)$，$C_2: \\frac{x^2}{4} + y^2 = 1$ 的离心率分别为 $e_1, e_2$．若 $e_2 = \\\\sqrt{3}e_1$，则 $a=$（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{2\\\\sqrt{3}}{3}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\sqrt{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\sqrt{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\\\sqrt{6}$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "line_circle",
+    "content": "过点 $(0, -2)$ 与圆 $x^2 + y^2 - 4x - 1 = 0$ 相切的两条直线的夹角为 $\\\\alpha$，则 $\\\\sin\\\\alpha=$（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\\\sqrt{15}}{4}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\\\sqrt{10}}{4}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{\\\\sqrt{6}}{4}$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "sequence",
+    "content": "记 $S_n$ 为数列 $\\\\{a_n\\\\}$ 的前 $n$ 项和，设甲：$\\\\{a_n\\\\}$ 为等差数列；乙：$\\\\{\\frac{S_n}{n}\\\\}$ 为等差数列，则（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "甲是乙的充分条件但不是必要条件"
+      },
+      {
+        "label": "B",
+        "text": "甲是乙的必要条件但不是充分条件"
+      },
+      {
+        "label": "C",
+        "text": "甲是乙的充要条件"
+      },
+      {
+        "label": "D",
+        "text": "甲既不是乙的充分条件也不是乙的必要条件"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "trigo_func",
+    "content": "已知 $\\\\sin(\\\\alpha - \\beta) = \\frac{1}{3}$，$\\\\cos\\\\alpha\\\\sin\\beta = \\frac{1}{6}$，则 $\\\\cos(2\\\\alpha + 2\\beta) =$（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{7}{9}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{9}$"
+      },
+      {
+        "label": "C",
+        "text": "$-\\frac{1}{9}$"
+      },
+      {
+        "label": "D",
+        "text": "$-\\frac{7}{9}$"
+      }
+    ],
+    "score_rule": "本题共8小题，每小题5分，共40分.在每小题给出的四个选项中，只有一项是符合题目要求的.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "probability",
+    "content": "有一组样本数据 $x_1, x_2, \\\\dots, x_6$，其中 $x_1$ 是最小值，$x_6$ 是最大值，则（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$x_2, x_3, x_4, x_5$ 的平均数等于 $x_1, x_2, \\\\dots, x_6$ 的平均数"
+      },
+      {
+        "label": "B",
+        "text": "$x_2, x_3, x_4, x_5$ 的中位数等于 $x_1, x_2, \\\\dots, x_6$ 的中位数"
+      },
+      {
+        "label": "C",
+        "text": "$x_2, x_3, x_4, x_5$ 的标准差不小于 $x_1, x_2, \\\\dots, x_6$ 的标准差"
+      },
+      {
+        "label": "D",
+        "text": "$x_2, x_3, x_4, x_5$ 的极差不大于 $x_1, x_2, \\\\dots, x_6$ 的极差"
+      }
+    ],
+    "score_rule": "本题共 4 小题，每小题 5 分，共 20 分．在每小题给出的选项中，有多项符合题目要求．全部选对的得 5分，部分选对的得 2 分，有选错的得 0 分.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "function",
+    "content": "噪声污染问题越来越受到重视．用声压级来度量声音的强弱，定义声压级 $L_p = 20 \\\\lg \\frac{p}{p_0}$，其中常数 $p_0 (p_0 > 0)$ 是听觉下限阈值，$p$ 是实际声压．下表为不同声源的声压级：\n声源 与声源的距离/m 声压级/dB\n燃油汽车 10 60~90\n混合动力汽车 10 50~60\n电动汽车 10 40\n已知在距离燃油汽车、混合动力汽车、电动汽车10m处测得实际声压分别为 $p_1, p_2, p_3$，则（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$p_1 \\\\ge p_2$"
+      },
+      {
+        "label": "B",
+        "text": "$p_2 > 10p_3$"
+      },
+      {
+        "label": "C",
+        "text": "$p_3 = 100p_0$"
+      },
+      {
+        "label": "D",
+        "text": "$p_1 \\\\le 100p_2$"
+      }
+    ],
+    "score_rule": "本题共 4 小题，每小题 5 分，共 20 分．在每小题给出的选项中，有多项符合题目要求．全部选对的得 5分，部分选对的得 2 分，有选错的得 0 分.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "function",
+    "content": "已知函数 $f(x)$ 的定义域为 $\\\\mathbb{R}$，对任意 $x, y \\\\in \\\\mathbb{R}$，有 $f(x+y) + f(x-y) = 2f(x)f(y)$，则（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$f(0) = 0$"
+      },
+      {
+        "label": "B",
+        "text": "$f(1) = 0$"
+      },
+      {
+        "label": "C",
+        "text": "$f(x)$ 是偶函数"
+      },
+      {
+        "label": "D",
+        "text": "$x=0$ 为 $f(x)$ 的极小值点"
+      }
+    ],
+    "score_rule": "本题共 4 小题，每小题 5 分，共 20 分．在每小题给出的选项中，有多项符合题目要求．全部选对的得 5分，部分选对的得 2 分，有选错的得 0 分.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-12",
+    "question_number": "12",
+    "type": "multi_choice",
+    "type_rank": 4,
+    "category": "solid_geometry",
+    "content": "下列物体中，能够被整体放入棱长为1（单位：m）的正方体容器（容器壁厚度忽略不计）内的有（    ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "直径为0.99m的球体"
+      },
+      {
+        "label": "B",
+        "text": "所有棱长均为1.4m的四面体"
+      },
+      {
+        "label": "C",
+        "text": "底面直径为0.01m，高为1.8m的圆柱体"
+      },
+      {
+        "label": "D",
+        "text": "底面直径为1.2m，高为0.01m的圆柱体"
+      }
+    ],
+    "score_rule": "本题共 4 小题，每小题 5 分，共 20 分．在每小题给出的选项中，有多项符合题目要求．全部选对的得 5分，部分选对的得 2 分，有选错的得 0 分.",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "probability",
+    "content": "某学校开设了 4 门体育类选修课和 4 门艺术类选修课，学生需从这8 门课中选修 2 门或 3 门课，并且每类选修课至少选修 1 门，则不同的选课方案共有________种（用数字作答） ．",
+    "options": null,
+    "score_rule": "本题共 4 小题，每小题 5分，共 20 分．",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "solid_geometry",
+    "content": "在正四棱台 $ABCD-A_1B_1C_1D_1$ 中，$AB=2, A_1B_1=1, AA_1=\\\\sqrt{2}$，则该棱台的体积为________．",
+    "options": null,
+    "score_rule": "本题共 4 小题，每小题 5分，共 20 分．",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "trigo_func",
+    "content": "已知函数 $f(x) = \\\\cos(\\\\omega x) - 1 (\\\\omega > 0)$ 在区间 $[0, 2\\\\pi]$ 有且仅有 3 个零点，则 $\\\\omega$ 的取值范围是________．",
+    "options": null,
+    "score_rule": "本题共 4 小题，每小题 5分，共 20 分．",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（新课标Ⅰ卷）-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "conic",
+    "content": "已知双曲线 $C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 (a>0, b>0)$ 的左、右焦点分别为 $F_1, F_2$．点 A 在 C 上，点 B 在 y 轴上，$\\\\vec{F_1A} \\\\perp \\\\vec{F_1B}$，$\\\\vec{F_2A} = -\\frac{2}{3}\\\\vec{F_2B}$，则C的离心率为________．",
+    "options": null,
+    "score_rule": "本题共 4 小题，每小题 5分，共 20 分．",
+    "source": "2023年高考数学试卷（新课标Ⅰ卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "设全集$U=\\\\{1, 2,3, 4,5\\\\}$，集合$M=\\\\{1,4\\\\}$ , $N=\\\\{2,5\\\\}$，则$N \\\\cup (\\\\complement_{U} M)=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\\\{2,3,5\\\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\{1,3, 4\\\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\\\{1, 2, 4,5\\\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\\\{2,3, 4,5\\\\}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "若 $\\frac{1-i}{1+i} + (2-i)i = $",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-1$"
+      },
+      {
+        "label": "B",
+        "text": "$1$"
+      },
+      {
+        "label": "C",
+        "text": "$1-i$"
+      },
+      {
+        "label": "D",
+        "text": "$1+i$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "vector",
+    "content": "已知向量$\\\\vec{a}=(3,1), \\\\vec{b}=(2,2)$，则$\\\\cos \\\\langle \\\\vec{a}+\\\\vec{b}, \\\\vec{a}-\\\\vec{b} \\rangle =$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{17}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\\\sqrt{17}}{17}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\\\sqrt{5}}{5}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2\\\\sqrt{5}}{5}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "probability",
+    "content": "某校文艺部有 4 名学生，其中高一、高二年级各 2 名．从这 4 名学生中随机选 2 名组织校文艺汇演，则这 2 名学生来自不同年级的概率为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{6}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{3}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{2}{3}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "sequence",
+    "content": "记$S_n$为等差数列$\\\\{a_n\\\\}$的前$n$项和．若$a_2+a_6=10, S_9=45$，则$S_5=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "25"
+      },
+      {
+        "label": "B",
+        "text": "22"
+      },
+      {
+        "label": "C",
+        "text": "20"
+      },
+      {
+        "label": "D",
+        "text": "15"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "conic",
+    "content": "设$F_1, F_2$为椭圆$C: \\frac{x^2}{5}+y^2=1$的两个焦点，点$P$在$C$上，若$\\\\vec{PF_1} \\\\cdot \\\\vec{PF_2}=0$，则$|\\\\vec{PF_1}| \\\\cdot |\\\\vec{PF_2}|=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "4"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "derivative",
+    "content": "曲线$y=\\frac{e^x}{x+1}$在点$(1, \\frac{e}{2})$处的切线方程为",
+    "options": [
+      {
+        "label": "A",
+        "text": "$y=\\frac{e}{4}x$"
+      },
+      {
+        "label": "B",
+        "text": "$y=\\frac{e}{2}x$"
+      },
+      {
+        "label": "C",
+        "text": "$y=\\frac{e}{4}x+\\frac{e}{4}$"
+      },
+      {
+        "label": "D",
+        "text": "$y=\\frac{e}{2}x+\\frac{3e}{4}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "conic",
+    "content": "已知双曲线$\\frac{x^2}{a^2} - \\frac{y^2}{b^2}=1 (a>0, b>0)$的离心率为$\\\\sqrt{5}$，其中一条渐近线与圆$(x-2)^2 + (y-3)^2=1$交于A，B两点，则$|AB|=$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\\\sqrt{5}}{5}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{2\\\\sqrt{5}}{5}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{3\\\\sqrt{5}}{5}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{4\\\\sqrt{5}}{5}$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "solid_geometry",
+    "content": "在三棱锥$P-ABC$中，$\\triangle ABC$是边长为 2 的等边三角形， $PA=PB=2, PC=\\\\sqrt{6}$，则该棱锥的体积为",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "$\\\\sqrt{3}$"
+      },
+      {
+        "label": "C",
+        "text": "2"
+      },
+      {
+        "label": "D",
+        "text": "3"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "function",
+    "content": "已知函数$f(x)=(x-1)^2 e^x$．记$a=f(\\frac{2}{3}), b=f(\\frac{3}{2}), c=f(3)$，则",
+    "options": [
+      {
+        "label": "A",
+        "text": "$b>c>a$"
+      },
+      {
+        "label": "B",
+        "text": "$b>a>c$"
+      },
+      {
+        "label": "C",
+        "text": "$c>b>a$"
+      },
+      {
+        "label": "D",
+        "text": "$c>a>b$"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-12",
+    "question_number": "12",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "trigo_func",
+    "content": "函数$y=f(x)$的图象由$y=\\\\cos(2x+\\frac{\\\\pi}{6})$的图象向左平移$\\frac{\\\\pi}{6}$个单位长度得到，则$y=f(x)$的图象与直线$y=\\frac{1}{2}x-1$的交点个数为",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "3"
+      },
+      {
+        "label": "D",
+        "text": "4"
+      }
+    ],
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "sequence",
+    "content": "记$S_n$为等比数列$\\\\{a_n\\\\}$前$n$项和．若$S_6=9S_3$，则$\\\\{a_n\\\\}$的公比为________．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "function",
+    "content": "若$f(x)=(x^2-1)\\\\sin(x+\\frac{\\\\pi}{2}) + ax$为偶函数，则$a=$________．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "inequality",
+    "content": "若 $x, y$满足约束条件$\\begin{cases} 3x-2y \\\\le 3 \\\\\\ 2x-3y+3 \\\\le 0 \\\\\\ x+y \\\\ge 1 \\\\end{cases}$，则$z=3x+2y$的最大值为________．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
+  },
+  {
+    "id": "2023年高考数学试卷（文）（全国甲卷）-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "solid_geometry",
+    "content": "在正方体$ABCD-A_1B_1C_1D_1$中，$AB=4, O$为$AC_1$的中点，若该正方体的棱与球$O$的球面有公共点，则球$O$的半径的取值范围是________．",
+    "options": null,
+    "score_rule": "每小题5分",
+    "source": "2023年高考数学试卷（文）（全国甲卷）"
   }
 ]

@@ -124,7 +124,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         返回
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900">
-                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600">强化训练</span>
+                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600">大题特训</span>
                     </h1>
                  </div>
                  <div className={`
@@ -137,15 +137,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              </div>
 
              {/* Question Card */}
-             <div className="bg-white shadow-lg rounded-2xl p-8 mb-8 border border-slate-100 flex-grow relative overflow-hidden">
+             <div className="bg-white shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
                 {/* Source Badge */}
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
                     {question.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full border border-indigo-100">
+                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full border border-indigo-100">
                             {question.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-sm font-medium rounded-full border border-slate-200">
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full border border-slate-200">
                         {question.large_question_rank 
                             ? `第 ${question.question_number} 题 / 第 ${question.large_question_rank} 道大题`
                             : sourceRank
@@ -200,21 +200,30 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                  </div>
 
                  {/* Buttons */}
-                 <div className="flex gap-4 justify-center pb-12">
-                     <button 
-                        onClick={() => setShowHint(!showHint)}
-                        className="px-6 py-3 rounded-xl bg-white border-2 border-slate-200 text-slate-700 font-bold hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center gap-2"
-                     >
-                         <Lightbulb size={18} />
-                         {showHint ? '隐藏提示' : '没思路？看提示'}
-                     </button>
-                     <button 
-                        onClick={handleNext}
-                        className="px-8 py-3 rounded-xl bg-indigo-600 text-white font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2"
-                     >
-                         下一题
-                         <ChevronRight size={18} />
-                     </button>
+                 <div className="flex flex-col md:flex-row gap-4 items-center justify-between pb-12">
+                    <div className="text-sm text-slate-400">
+                        专题题量：{(questionsData as unknown as Question[]).filter(q => q.category === category).length}
+                    </div>
+                    <div className="flex gap-4 w-full md:w-auto">
+                         <button 
+                            onClick={() => setShowHint(!showHint)}
+                            className={`px-6 py-4 rounded-xl font-bold transition-all border ${
+                                showHint 
+                                ? 'bg-amber-100 border-amber-300 text-amber-700' 
+                                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                            } flex items-center justify-center gap-2`}
+                         >
+                             <Lightbulb size={18} />
+                             {showHint ? '隐藏暗示' : '解题思路'}
+                         </button>
+                         <button 
+                            onClick={handleNext}
+                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
+                         >
+                             下一题
+                             <ChevronRight size={18} />
+                         </button>
+                    </div>
                  </div>
              </div>
         </div>
