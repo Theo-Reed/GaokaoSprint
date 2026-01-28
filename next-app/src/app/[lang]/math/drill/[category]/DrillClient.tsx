@@ -63,54 +63,37 @@ const CATEGORY_NAMES: Record<string, string> = {
 const sanitizeMath = (text: string) => {
     if (!text || typeof text !== 'string') return text;
     
-    // 1. Basic formatting cleanup: normalize newlines and double dollars
-    let clean = text
-        .replace(/(?<!\n)\n(?!\n)/g, ' ')
-        .replace(/\r/g, '')
-        .replace(/\$\$/g, '$');
+    // 1. Critical Fix: Remove all carriage returns and fragmented newlines found in PDF extraction
+    let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
+
+    // 2. Normalize delimiters
+    clean = clean.replace(/\$\$/g, '$');
+
+    // 3. targeted fix for common error patterns observed
+    clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
+    clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
+
+    // 4. General symbol cleanup
+    const symbols = [
+        'sin', 'cos', 'tan', 'ln', 'log',
+        'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
+    ];
     
-    // 2. Split by '$' to process text segments and math segments
-    const parts = clean.split('$');
+    symbols.forEach(sym => {
+         clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
+    });
+
+    // 5. Wrap standalone sqrt numbers
+    clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
     
-    return parts.map((part, index) => {
-        let segment = part;
-        const isMathMode = index % 2 === 1;
-
-        if (isMathMode) {
-            // INSIDE MATH MODE ($...$)
-            const mathSymbols = [
-                'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'ln', 'log', 'lg',
-                'pi', 'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho'
-            ];
-
-            mathSymbols.forEach(sym => {
-                 const regex = new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g');
-                 segment = segment.replace(regex, `\\${sym} `);
-            });
-
-            return segment;
-        } else {
-            // OUTSIDE MATH MODE (Text)
-            segment = segment.replace(/(?<!\\)\bsqrt\s*(\d+|\([^\)]+\))/g, '$\\sqrt{$1}$');
-
-            const symbols = [
-                'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho',
-                'pi', 'sin', 'cos', 'tan', 'ln', 'log'
-            ];
-            
-            symbols.forEach(sym => {
-                const regex = new RegExp(`(?<!\\\\)\\b${sym}([0-9a-z^\\{\\}\\(\\)\\[\\]\\+\\-\\*\\/\\=\\>\\<\\.\\,]*)(?=\\s|\\b|$)`, 'gi');
-                segment = segment.replace(regex, (match, suite) => {
-                    if (match.length < 2) return match;
-                    return `$\\${sym}${suite}$`;
-                });
-            });
-            
-            segment = segment.replace(/(?<![$\\])\b([a-z])\^(\d+|\{[^}]+\})/g, '$$$1^$2$$');
-
-            return segment;
+    // 6. Ensure math mode if likely latex
+    if (clean.includes('\\') && !clean.includes('$')) {
+        if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
+             clean = `$${clean}$`;
         }
-    }).join('$').replace(/\${2,}/g, '$');
+    }
+
+    return clean;
 };
 
 export default function DrillClient({ lang, category }: DrillClientProps) {

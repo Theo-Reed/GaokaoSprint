@@ -152,62 +152,55 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const sanitizeMath = (text: string) => {
         if (!text || typeof text !== 'string') return text;
         
-        // 1. Basic formatting cleanup: normalize newlines and double dollars
-        let clean = text
-            .replace(/(?<!\n)\n(?!\n)/g, ' ')
-            .replace(/\r/g, '')
-            .replace(/\$\$/g, '$');
+        // 1. Critical Fix: Remove all carriage returns and fragmented newlines found in PDF extraction
+        // Replace single newlines with space. Preserve \n\n as paragraph break.
+        let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
+
+        // 2. Normalize delimiters
+        clean = clean.replace(/\$\$/g, '$');
+
+        // 3. targeted fix for common error patterns observed (e.g. pi inside frac with missing backslash)
+        // Cases like \frac{pi}{6} -> \frac{\pi}{6}
+        clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
+        clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}'); // Handle potential \\pi double escape issues?
+
+        // 4. General symbol cleanup
+        // We only want to add backslashes if they are missing.
+        // And we strictly want to avoid double-escaping which breaks rendering.
+        const symbols = [
+            'sin', 'cos', 'tan', 'ln', 'log',
+            'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
+        ];
         
-        // 2. Split by '$' to process text segments and math segments
-        const parts = clean.split('$');
+        symbols.forEach(sym => {
+             // Look for symbol NOT preceded by slash
+             // e.g. " sin " -> "\sin "
+             // e.g. "2pi" -> "2\pi"
+             clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
+             
+             // Look for symbol followed by variable text, e.g. "sin x", "omega x"
+             // clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}([a-z])`, 'g'), `\\${sym} $1`);
+        });
+
+        // 5. Wrap standalone sqrt numbers
+        clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
         
-        return parts.map((part, index) => {
-            let segment = part;
-            const isMathMode = index % 2 === 1;
-
-            if (isMathMode) {
-                // INSIDE MATH MODE ($...$)
-                const mathSymbols = [
-                    'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'ln', 'log', 'lg',
-                    'pi', 'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho'
-                ];
-
-                mathSymbols.forEach(sym => {
-                     const regex = new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g');
-                     segment = segment.replace(regex, `\\${sym} `);
-                });
-
-                return segment;
-            } else {
-                // OUTSIDE MATH MODE (Text)
-                // Identify math sequences and wrap them
-                
-                // Specific fix: sqrt
-                segment = segment.replace(/(?<!\\)\bsqrt\s*(\d+|\([^\)]+\))/g, '$\\sqrt{$1}$');
-
-                const symbols = [
-                    'alpha', 'beta', 'gamma', 'delta', 'theta', 'phi', 'sigma', 'lambda', 'mu', 'omega', 'rho',
-                    'pi', 'sin', 'cos', 'tan', 'ln', 'log'
-                ];
-                
-                symbols.forEach(sym => {
-                    // Match the symbol and any immediately following math-like characters
-                    // allowing for things like sin^2x, cos(x), pi/2, omega x
-                    // This regex ignores words like "sine" or "constant" by requiring word boundary before
-                    const regex = new RegExp(`(?<!\\\\)\\b${sym}([0-9a-z^\\{\\}\\(\\)\\[\\]\\+\\-\\*\\/\\=\\>\\<\\.\\,]*)(?=\\s|\\b|$)`, 'gi');
-                    segment = segment.replace(regex, (match, suite) => {
-                        // Check if we are capturing normal Chinese text by mistake (unlikely with this regex)
-                        if (match.length < 2) return match;
-                        return `$\\${sym}${suite}$`;
-                    });
-                });
-                
-                // Final pass for loose variables followed by exponents: x^2, t^n
-                segment = segment.replace(/(?<![$\\])\b([a-z])\^(\d+|\{[^}]+\})/g, '$$$1^$2$$');
-
-                return segment;
+        // 6. Ensure math mode if we have LaTeX commands like \frac, \sqrt, \sin but NO $ wrappers
+        if (clean.includes('\\') && !clean.includes('$')) {
+            // Rough heuristic: if it looks like latex, wrap it.
+            // But be careful of mixed text.
+            // Better strategy: Wrap specifically identified math chunks? 
+            // For now, let's just leave it to ReactMarkdown's remark-math which handles $...$
+            // If the text is "y = \sin x", remark-math might not pick it up without $.
+            // So we liberally wrap standard patterns.
+            
+            // Allow wrapping of entire string if it seems to be a formula
+            if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
+                 clean = `$${clean}$`;
             }
-        }).join('$').replace(/\${2,}/g, '$'); // Keep only single dollars
+        }
+
+        return clean;
     };
 
     return (
