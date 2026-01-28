@@ -121,6 +121,7 @@ export function getNavigation(lang: string) {
                 { title: lang === 'cn' ? '英语作文特训' : 'English Writing Trainer', href: `/${lang}/composition` },
                 { title: lang === 'cn' ? '英语单词特训' : 'Vocabulary Trainer', href: `/${lang}/vocabulary` },
                 { title: lang === 'cn' ? '数学大题特训' : 'Math Problem Trainer', href: `/${lang}/math` },
+                { title: lang === 'cn' ? '数学小题特训' : 'Math Small Questions', href: `/${lang}/math-small` },
                 { title: lang === 'cn' ? '生物背书引擎' : 'Biology Memorization Engine', href: `/${lang}/biology` }
             ]
         },

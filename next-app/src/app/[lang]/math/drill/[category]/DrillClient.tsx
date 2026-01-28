@@ -164,18 +164,17 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         }}
                     >
                         {question.content
-                            .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号（如 "17. " 或 "17 "）
-                            .split(/(\((?:\d+|i+|v|vi)\)|（\d+）)/g) // 按照小问标记分割
+                            .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
+                            .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割，排除 (0)
                             .map(part => {
-                                // 如果是小问标记，前面加两行换行供渲染
-                                if (/^(\((?:\d+|i+|v|vi)\)|（\d+）)$/.test(part)) {
+                                // 如果是小问标记，确保前面有换行
+                                if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
                                     return `\n\n${part}`;
                                 }
-                                // 对于非标记部分，如果里面有 LaTeX 关键字 (\) 但没有被 $ 包裹，尝试修复（可选）
-                                // 这里主要解决 Gemini 漏掉 $ 的问题
                                 return part;
                             })
                             .join('')
+                            .replace(/\\n/g, '\n') // 将字符串中的字面量 \n 转换为真实的换行符
                             .trim()}
                     </ReactMarkdown>
                 </div>
