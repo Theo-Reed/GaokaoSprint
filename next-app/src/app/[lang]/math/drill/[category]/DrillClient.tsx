@@ -69,21 +69,40 @@ const sanitizeMath = (text: string) => {
     // 2. Normalize delimiters
     clean = clean.replace(/\$\$/g, '$');
 
-    // 3. targeted fix for common error patterns observed
+    // 3. Fix double-escaped backslashes for common Math/LaTeX commands (Critical Fix)
+    const knownCommands = [
+        'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan',
+        'ln', 'log', 'lg', 'exp',
+        'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+        'Gamma', 'Delta', 'Theta', 'Lambda', 'Xi', 'Pi', 'Sigma', 'Upsilon', 'Phi', 'Psi', 'Omega',
+        'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty',
+        'cdot', 'times', 'div', 'pm', 'mp',
+        'le', 'ge', 'leq', 'geq', 'ne', 'neq', 'approx', 'equiv', 'cong',
+        'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset',
+        'vec', 'hat', 'bar', 'tilde',
+        'angle', 'triangle', 'bot',
+        'Leftarrow', 'Rightarrow', 'Leftrightarrow'
+    ];
+    
+    // Replace \\\\(command) with \\(command)
+    const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
+    clean = clean.replace(commandPattern, '\\$1');
+
+    // 4. Targeted fixes for pi inside frac
     clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
     clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
 
-    // 4. General symbol cleanup
-    const symbols = [
+    // 5. General symbol cleanup
+    const autoEscapeSymbols = [
         'sin', 'cos', 'tan', 'ln', 'log',
         'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
     ];
     
-    symbols.forEach(sym => {
+    autoEscapeSymbols.forEach(sym => {
          clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
     });
 
-    // 5. Wrap standalone sqrt numbers
+    // 6. Wrap standalone sqrt numbers
     clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
     
     // 6. Ensure math mode if likely latex

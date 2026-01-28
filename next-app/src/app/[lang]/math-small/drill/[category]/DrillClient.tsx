@@ -159,30 +159,46 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         // 2. Normalize delimiters
         clean = clean.replace(/\$\$/g, '$');
 
-        // 3. targeted fix for common error patterns observed (e.g. pi inside frac with missing backslash)
-        // Cases like \frac{pi}{6} -> \frac{\pi}{6}
-        clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
-        clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}'); // Handle potential \\pi double escape issues?
-
-        // 4. General symbol cleanup
-        // We only want to add backslashes if they are missing.
-        // And we strictly want to avoid double-escaping which breaks rendering.
-        const symbols = [
-            'sin', 'cos', 'tan', 'ln', 'log',
-            'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
+        // 3. Fix double-escaped backslashes for common Math/LaTeX commands (Critical Fix)
+        // The source data can contain "double escaped" artifacts (e.g. \\\\cos instead of \\cos),
+        // which renders as "newline + cos" or breaks rendering.
+        const knownCommands = [
+            'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan',
+            'ln', 'log', 'lg', 'exp',
+            'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+            'Gamma', 'Delta', 'Theta', 'Lambda', 'Xi', 'Pi', 'Sigma', 'Upsilon', 'Phi', 'Psi', 'Omega',
+            'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty',
+            'cdot', 'times', 'div', 'pm', 'mp',
+            'le', 'ge', 'leq', 'geq', 'ne', 'neq', 'approx', 'equiv', 'cong',
+            'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset',
+            'vec', 'hat', 'bar', 'tilde',
+            'angle', 'triangle', 'bot',
+            'Leftarrow', 'Rightarrow', 'Leftrightarrow'
         ];
         
-        symbols.forEach(sym => {
+        // Replace \\\\(command) with \\(command)
+        const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
+        clean = clean.replace(commandPattern, '\\$1');
+
+        // 4. Targeted fixes for pi inside frac
+        clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
+        clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
+
+        // 5. General symbol cleanup (add missing backslash)
+        const autoEscapeSymbols = [
+             'sin', 'cos', 'tan', 'ln', 'log',
+             'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
+        ];
+        
+        autoEscapeSymbols.forEach(sym => {
              // Look for symbol NOT preceded by slash
-             // e.g. " sin " -> "\sin "
-             // e.g. "2pi" -> "2\pi"
              clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
              
              // Look for symbol followed by variable text, e.g. "sin x", "omega x"
              // clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}([a-z])`, 'g'), `\\${sym} $1`);
         });
 
-        // 5. Wrap standalone sqrt numbers
+        // 6. Wrap standalone sqrt numbers
         clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
         
         // 6. Ensure math mode if we have LaTeX commands like \frac, \sqrt, \sin but NO $ wrappers
