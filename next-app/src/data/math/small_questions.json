@@ -1,6 +1,6 @@
 [
   {
-    "id": "2025-新-I-1",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-1",
     "question_number": "1",
     "type": "single_choice",
     "type_rank": 1,
@@ -26,10 +26,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-2",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-2",
     "question_number": "2",
     "type": "single_choice",
     "type_rank": 2,
@@ -55,10 +56,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-3",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-3",
     "question_number": "3",
     "type": "single_choice",
     "type_rank": 3,
@@ -84,10 +86,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-4",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-4",
     "question_number": "4",
     "type": "single_choice",
     "type_rank": 4,
@@ -113,10 +116,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-5",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-5",
     "question_number": "5",
     "type": "single_choice",
     "type_rank": 5,
@@ -142,10 +146,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-6",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-6",
     "question_number": "6",
     "type": "single_choice",
     "type_rank": 6,
@@ -171,10 +176,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-7",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-7",
     "question_number": "7",
     "type": "single_choice",
     "type_rank": 7,
@@ -200,10 +206,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-8",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-8",
     "question_number": "8",
     "type": "single_choice",
     "type_rank": 8,
@@ -229,10 +236,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分，只有一个选项是正确的",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-9",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-9",
     "question_number": "9",
     "type": "multi_choice",
     "type_rank": 1,
@@ -261,10 +269,11 @@
       "C"
     ],
     "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-10",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-10",
     "question_number": "10",
     "type": "multi_choice",
     "type_rank": 2,
@@ -294,10 +303,11 @@
       "D"
     ],
     "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-11",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-11",
     "question_number": "11",
     "type": "multi_choice",
     "type_rank": 3,
@@ -327,10 +337,11 @@
       "C"
     ],
     "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-I-12",
+    "id": "2025年高考数学试卷（全国Ⅰ卷）-12",
     "question_number": "12",
     "type": "fill_in",
     "type_rank": 1,
@@ -339,10 +350,11 @@
     "options": null,
     "answer": "4",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+    "source": "2025年高考数学试卷（全国Ⅰ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-1",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-1",
     "question_number": "1",
     "type": "single_choice",
     "type_rank": 1,
@@ -368,10 +380,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-2",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-2",
     "question_number": "2",
     "type": "single_choice",
     "type_rank": 2,
@@ -397,10 +410,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-3",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-3",
     "question_number": "3",
     "type": "single_choice",
     "type_rank": 3,
@@ -426,10 +440,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-4",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-4",
     "question_number": "4",
     "type": "single_choice",
     "type_rank": 4,
@@ -455,10 +470,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-5",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-5",
     "question_number": "5",
     "type": "single_choice",
     "type_rank": 5,
@@ -484,10 +500,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-6",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-6",
     "question_number": "6",
     "type": "single_choice",
     "type_rank": 6,
@@ -513,10 +530,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-7",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-7",
     "question_number": "7",
     "type": "single_choice",
     "type_rank": 7,
@@ -542,10 +560,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-8",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-8",
     "question_number": "8",
     "type": "single_choice",
     "type_rank": 8,
@@ -571,10 +590,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-9",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-9",
     "question_number": "9",
     "type": "multi_choice",
     "type_rank": 1,
@@ -603,10 +623,11 @@
       "D"
     ],
     "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-10",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-10",
     "question_number": "10",
     "type": "multi_choice",
     "type_rank": 2,
@@ -636,10 +657,11 @@
       "D"
     ],
     "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-11",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-11",
     "question_number": "11",
     "type": "multi_choice",
     "type_rank": 3,
@@ -669,10 +691,11 @@
       "D"
     ],
     "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-12",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-12",
     "question_number": "12",
     "type": "fill_in",
     "type_rank": 1,
@@ -681,10 +704,11 @@
     "options": null,
     "answer": "$\\sqrt{2}$",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2025-新-II-13",
+    "id": "2025年高考数学试卷（全国Ⅱ卷）-13",
     "question_number": "13",
     "type": "fill_in",
     "type_rank": 2,
@@ -693,10 +717,11 @@
     "options": null,
     "answer": "-4",
     "score_rule": "每小题5分",
-    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+    "source": "2025年高考数学试卷（全国Ⅱ卷）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-1",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-1",
     "question_number": "1",
     "type": "single_choice",
     "type_rank": 1,
@@ -722,10 +747,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-2",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-2",
     "question_number": "2",
     "type": "single_choice",
     "type_rank": 2,
@@ -751,10 +777,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-3",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-3",
     "question_number": "3",
     "type": "single_choice",
     "type_rank": 3,
@@ -780,10 +807,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-4",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-4",
     "question_number": "4",
     "type": "single_choice",
     "type_rank": 4,
@@ -809,10 +837,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-5",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-5",
     "question_number": "5",
     "type": "single_choice",
     "type_rank": 5,
@@ -838,10 +867,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-6",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-6",
     "question_number": "6",
     "type": "single_choice",
     "type_rank": 6,
@@ -867,10 +897,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-7",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-7",
     "question_number": "7",
     "type": "single_choice",
     "type_rank": 7,
@@ -896,10 +927,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-8",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-8",
     "question_number": "8",
     "type": "single_choice",
     "type_rank": 8,
@@ -925,10 +957,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-9",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-9",
     "question_number": "9",
     "type": "multi_choice",
     "type_rank": 1,
@@ -958,10 +991,11 @@
       "D"
     ],
     "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-10",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-10",
     "question_number": "10",
     "type": "multi_choice",
     "type_rank": 2,
@@ -990,10 +1024,11 @@
       "C"
     ],
     "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-11",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-11",
     "question_number": "11",
     "type": "multi_choice",
     "type_rank": 3,
@@ -1024,10 +1059,11 @@
       "D"
     ],
     "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-12",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-12",
     "question_number": "12",
     "type": "multi_choice",
     "type_rank": 4,
@@ -1056,10 +1092,11 @@
       "C"
     ],
     "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-13",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-13",
     "question_number": "13",
     "type": "fill_in",
     "type_rank": 1,
@@ -1068,10 +1105,11 @@
     "options": null,
     "answer": "$\\frac{16}{3}$",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-14",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-14",
     "question_number": "14",
     "type": "fill_in",
     "type_rank": 2,
@@ -1080,10 +1118,11 @@
     "options": null,
     "answer": "$3n^2-2n$",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-15",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-15",
     "question_number": "15",
     "type": "fill_in",
     "type_rank": 3,
@@ -1092,10 +1131,11 @@
     "options": null,
     "answer": "80-2π",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2020-新-I-16",
+    "id": "2020年高考数学试卷（新高考Ⅰ卷）（山东）-16",
     "question_number": "16",
     "type": "fill_in",
     "type_rank": 4,
@@ -1104,10 +1144,11 @@
     "options": null,
     "answer": "$2\\pi$",
     "score_rule": "每小题5分",
-    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-1",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-1",
     "question_number": "1",
     "type": "single_choice",
     "type_rank": 1,
@@ -1133,10 +1174,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-2",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-2",
     "question_number": "2",
     "type": "single_choice",
     "type_rank": 2,
@@ -1162,10 +1204,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-3",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-3",
     "question_number": "3",
     "type": "single_choice",
     "type_rank": 3,
@@ -1191,10 +1234,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-4",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-4",
     "question_number": "4",
     "type": "single_choice",
     "type_rank": 4,
@@ -1220,10 +1264,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-5",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-5",
     "question_number": "5",
     "type": "single_choice",
     "type_rank": 5,
@@ -1249,10 +1294,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-6",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-6",
     "question_number": "6",
     "type": "single_choice",
     "type_rank": 6,
@@ -1278,10 +1324,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-7",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-7",
     "question_number": "7",
     "type": "single_choice",
     "type_rank": 7,
@@ -1307,10 +1354,11 @@
     ],
     "answer": "D",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": true
   },
   {
-    "id": "2016-新-I-8",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-8",
     "question_number": "8",
     "type": "single_choice",
     "type_rank": 8,
@@ -1336,39 +1384,11 @@
     ],
     "answer": "C",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-9",
-    "question_number": "9",
-    "type": "single_choice",
-    "type_rank": 9,
-    "category": "logic",
-    "content": "执行下面的程序框图，如果输入的$x=0, y=1, n=1$，则输出$x, y$的值满足( \\quad )",
-    "options": [
-      {
-        "label": "A",
-        "text": "$y=2x$"
-      },
-      {
-        "label": "B",
-        "text": "$y=3x$"
-      },
-      {
-        "label": "C",
-        "text": "$y=4x$"
-      },
-      {
-        "label": "D",
-        "text": "$y=5x$"
-      }
-    ],
-    "answer": "C",
-    "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
-  },
-  {
-    "id": "2016-新-I-10",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-10",
     "question_number": "10",
     "type": "single_choice",
     "type_rank": 10,
@@ -1394,10 +1414,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-11",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-11",
     "question_number": "11",
     "type": "single_choice",
     "type_rank": 11,
@@ -1423,10 +1444,11 @@
     ],
     "answer": "A",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-12",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-12",
     "question_number": "12",
     "type": "single_choice",
     "type_rank": 12,
@@ -1452,10 +1474,11 @@
     ],
     "answer": "B",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-13",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-13",
     "question_number": "13",
     "type": "fill_in",
     "type_rank": 1,
@@ -1464,10 +1487,11 @@
     "options": null,
     "answer": "-2",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-14",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-14",
     "question_number": "14",
     "type": "fill_in",
     "type_rank": 2,
@@ -1476,10 +1500,11 @@
     "options": null,
     "answer": "10",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-15",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-15",
     "question_number": "15",
     "type": "fill_in",
     "type_rank": 3,
@@ -1488,10 +1513,11 @@
     "options": null,
     "answer": "64",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   },
   {
-    "id": "2016-新-I-16",
+    "id": "2016年高考数学试卷（理）（新课标Ⅰ）-16",
     "question_number": "16",
     "type": "fill_in",
     "type_rank": 4,
@@ -1500,6 +1526,7 @@
     "options": null,
     "answer": "216000",
     "score_rule": "每小题5分",
-    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）",
+    "has_figure": false
   }
 ]

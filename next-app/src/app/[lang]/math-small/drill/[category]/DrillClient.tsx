@@ -24,8 +24,10 @@ interface SmallQuestion {
   content: string;
   options: Option[] | null;
   answer: string | string[];
+  explanation?: string;
   score_rule?: string;
   source?: string;
+  has_figure?: boolean;
 }
 
 interface DrillClientProps {
@@ -57,6 +59,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [timer, setTimer] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
+    const [showExplanation, setShowExplanation] = useState(false);
 
     useEffect(() => {
         const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
@@ -81,6 +84,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         setSelectedOptions([]);
         setFillInAnswer("");
         setIsSubmitted(false);
+        setShowExplanation(false);
         setTimer(0);
         setIsTimerRunning(true);
     };
@@ -195,9 +199,34 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             p: ({children}) => <div className="text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
                         }}
                     >
-                        {currentQ.content.replace(/\\n/g, '\n')}
+                        {currentQ.content
+                            .replace(/\\n/g, '\n')
+                            .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') // 将 \quad 或 $\quad$ 统一替换为明显的下划线占位符
+                        }
                     </ReactMarkdown>
                 </div>
+
+                {/* 题目插图区域 */}
+                {currentQ.has_figure && (
+                    <div className="my-6 flex flex-col items-center justify-center p-4 transition-all">
+                        <img 
+                            src={`/math-images/${currentQ.id}.png`} 
+                            alt="题目插图" 
+                            className="max-h-64 object-contain mix-blend-multiply"
+                            onError={(e) => {
+                                // 如果图片加载失败且标记了 has_figure，则显示占位符
+                                (e.target as HTMLImageElement).style.display = 'none';
+                                const parent = (e.target as HTMLImageElement).parentElement;
+                                if (parent && !parent.querySelector('.img-placeholder')) {
+                                    const div = document.createElement('div');
+                                    div.className = 'img-placeholder flex flex-col items-center text-slate-300 py-4';
+                                    div.innerHTML = '<span class="text-3xl mb-2">🖼️</span><p class="text-xs italic">插图待补全: ' + currentQ.id + '.png</p>';
+                                    parent.appendChild(div);
+                                }
+                            }}
+                        />
+                    </div>
+                )}
 
                 {/* Options Area */}
                 {currentQ.type !== 'fill_in' && currentQ.options && (
@@ -235,7 +264,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     </span>
                                     <div className="flex-grow pt-0.5">
                                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {opt.text}
+                                            {opt.text.replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -264,6 +293,21 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         )}
                     </div>
                 )}
+
+                {/* 答题思路/解析区域 */}
+                {isSubmitted && showExplanation && currentQ.explanation && (
+                    <div className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-top-4 duration-500">
+                        <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>
+                            答题思路
+                        </h3>
+                        <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
+                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                                {currentQ.explanation.replace(/\\n/g, '\n')}
+                            </ReactMarkdown>
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Footer Actions */}
@@ -287,12 +331,26 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             检查答案
                         </button>
                     ) : (
-                        <button
-                            onClick={handleNext}
-                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
-                        >
-                            下一题 <ChevronRight size={20} />
-                        </button>
+                        <div className="flex gap-4 w-full md:w-auto">
+                            {currentQ.explanation && (
+                                <button
+                                    onClick={() => setShowExplanation(!showExplanation)}
+                                    className={`px-6 py-4 rounded-xl font-bold transition-all border ${
+                                        showExplanation 
+                                        ? 'bg-amber-100 border-amber-300 text-amber-700' 
+                                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                                    }`}
+                                >
+                                    {showExplanation ? '隐藏解析' : '查看解析'}
+                                </button>
+                            )}
+                            <button
+                                onClick={handleNext}
+                                className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
+                            >
+                                下一题 <ChevronRight size={20} />
+                            </button>
+                        </div>
                     )}
                 </div>
             </div>

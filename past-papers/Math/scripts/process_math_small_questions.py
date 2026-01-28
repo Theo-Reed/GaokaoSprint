@@ -40,11 +40,10 @@ model = genai.GenerativeModel(MODEL_NAME)
 SYSTEM_PROMPT = """你是一个高水平数学专家和JSON数据提取器。你的任务是从高考数学试卷的前半部分（选择题和填空题）提取题目。
 
 输出必须是一个JSON列表，每个题目必须包含以下字段：
-1. "id": 字符串，格式如 "2024-新-I-9"
-2. "question_number": 字符串，题目在卷面上的原始题号（如 "1", "9", "13"）
-3. "type": 字符串，必须是 "single_choice"（单选题）, "multi_choice"（多选题）, 或 "fill_in"（填空题）
-4. "type_rank": 数字，在该题型中的序号（例如：第9题是第1道多选题，则 type_rank 为 1）
-5. "category": 字符串，必须从以下分类中精准选择：
+1. "question_number": 字符串，题目在卷面上的原始题号（如 "1", "9", "13"）
+2. "type": 字符串，必须是 "single_choice"（单选题）, "multi_choice"（多选题）, 或 "fill_in"（填空题）
+3. "type_rank": 数字，在该题型中的序号（例如：第9题是第1道多选题，则 type_rank 为 1）
+4. "category": 字符串，必须从以下分类中精准选择：
    - "logic": 集合与逻辑
    - "complex": 复数专题
    - "function": 函数专题（性质、周期性、奇偶性、对称性、基本初等函数）
@@ -58,19 +57,24 @@ SYSTEM_PROMPT = """你是一个高水平数学专家和JSON数据提取器。你
    - "conic": 圆锥曲线专题（椭圆、双曲线、抛物线）
    - "solid_geometry": 立体几何
    - "probability": 概率统计
-6. "content": 题干正文。使用 LaTeX 格式书写数学公式，并用 $ $ 包围。换行符使用 \\n。
-7. "options": 如果是选择题，提供列表 [{"label": "A", "text": "..."}, {"label": "B", "text": "..."}, ...]。如果是填空题，此字段为 null。
-8. "answer": 选择题为字符串（如 "A"）或多选题数组（如 ["A", "C"]）。填空题为正确答案内容。
+5. "content": 题干正文。使用 LaTeX 格式书写数学公式，并用 $ $ 包围。换行符使用 \\n。
+6. "options": 如果是选择题，提供列表 [{"label": "A", "text": "..."}, {"label": "B", "text": "..."}, ...]。如果是填空题，此字段为 null。
+7. "answer": 选择题为字符串（如 "A"）或多选题数组（如 ["A", "C"]）。填空题为正确答案内容。
+8. "explanation": 字符串。提供详细的解题过程、思路和相关的数学公式。
 9. "score_rule": 字符串，该题的分值规则（例如："每小题5分，全部选对得5分，部分选对得2分"）。
-10. "source": 试卷全称。
+10. "has_figure": 布尔值，如果题目中包含“如图”、“图中”或者必须看图才能解题，设为 true。
 
 重要提取逻辑：
 - 识别指导语：寻找“只有一项符合要求”判断为单选，寻找“有多项符合要求”判断为多选。
 - 严禁提取解答题（通常17题及以后）。
+- 严禁提取“程序框图”或“程序算法”类题目（新高考已不再考察）。
+- 插图判断（has_figure）：必须严谨。题干中出现“如图”、“如图所示”、“图中”等关键词，或者题目涉及几何图形且不看图无法解题时，必须设为 true。
 - 分类准则：
   - 如果题目考察正余弦定理或三角形面积，归类为 trigo_sol（解三角形）。
   - 如果题目考察 $\\sin$ 或 $\\cos$ 函数本身的性质（周期、图象），归类为 trigo_func（三角函数）。
   - 如果涉及导数符号 $f'(x)$ 或切线，归类为 derivative。
+- 格式细节：
+  - 题目末尾表示选择或填空的括号，如果是空心括号，请输出为 $(\\quad)$（注意 quad 在美元符号内）。
 - 确保输出是合法的JSON。
 """
 
@@ -140,6 +144,11 @@ def process_paper(pdf_path, source_name):
         
         # Sometimes there's extra text
         questions = json.loads(json_text)
+
+        # Inject local fields
+        for q in questions:
+            q["source"] = source_name
+            q["id"] = f"{source_name}-{q['question_number']}".replace(" ", "")
         
         # Cleanup file
         genai.delete_file(myfile.name)
@@ -167,6 +176,8 @@ def merge_questions(new_questions, target_file):
         if q["id"] not in existing_ids:
             existing_data.append(q)
             added_count += 1
+            if q.get("has_figure"):
+                print(f"  [!] 需要截图: {q['id']} - {q['source']} 第 {q['question_number']} 题")
             
     with open(target_file, "w", encoding="utf-8") as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=2)
@@ -177,11 +188,6 @@ if __name__ == "__main__":
     target_json = "/Users/yeatom/VSCodeProjects/gaokao/next-app/src/data/math/small_questions.json"
     
     tasks = [
-        # 2025 All
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2025·高考数学真题/2025年高考数学试卷（全国Ⅰ卷）（解析卷）.pdf", "2025年高考数学试卷（全国Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2025·高考数学真题/2025年高考数学试卷（全国Ⅱ卷）（解析卷）.pdf", "2025年高考数学试卷（全国Ⅱ卷）"),
-        # 2020 Random
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（新高考Ⅰ卷）（山东）（解析卷）.pdf", "2020年高考数学试卷（新高考Ⅰ卷）（山东）"),
         # 2016 Random
         ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（理）（新课标Ⅰ）（解析卷）.pdf", "2016年高考数学试卷（理）（新课标Ⅰ）")
     ]
