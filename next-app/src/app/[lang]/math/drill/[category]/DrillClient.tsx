@@ -153,11 +153,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 : `第 ${question.question_number} 题`
                         }
                     </span>
-                    {question.score && question.score !== "Not specified" && (
-                         <span className="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium rounded-full border border-amber-100 ml-auto">
-                            {question.score} 分
-                        </span>
-                    )}
                 </div>
 
                 <div className="prose prose-slate prose-lg max-w-none">
@@ -165,10 +160,23 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         remarkPlugins={[remarkMath]} 
                         rehypePlugins={[rehypeKatex]}
                         components={{
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div>
+                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
                         }}
                     >
-                        {question.content}
+                        {question.content
+                            .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号（如 "17. " 或 "17 "）
+                            .split(/(\((?:\d+|i+|v|vi)\)|（\d+）)/g) // 按照小问标记分割
+                            .map(part => {
+                                // 如果是小问标记，前面加两行换行供渲染
+                                if (/^(\((?:\d+|i+|v|vi)\)|（\d+）)$/.test(part)) {
+                                    return `\n\n${part}`;
+                                }
+                                // 对于非标记部分，如果里面有 LaTeX 关键字 (\) 但没有被 $ 包裹，尝试修复（可选）
+                                // 这里主要解决 Gemini 漏掉 $ 的问题
+                                return part;
+                            })
+                            .join('')
+                            .trim()}
                     </ReactMarkdown>
                 </div>
              </div>
