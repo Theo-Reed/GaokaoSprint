@@ -149,6 +149,35 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         return userAns === correctAns;
     };
 
+    const sanitizeMath = (text: string) => {
+        if (!text || typeof text !== 'string') return text;
+        
+        // Always try to fix basic missing backslashes for pi and sqrt, 
+        // using lookbehind to ensure we don't double-escape
+        let fixed = text
+            .replace(/(?<!\\)\bpi\b/g, '\\pi')
+            .replace(/(?<!\\)\bsqrt\b/g, '\\sqrt');
+
+        // If the result looks like LaTeX (has backslash) but has no dollars, wrap it
+        // Check for common latex indicators that definitely need math mode
+        if ((fixed.includes('\\frac') || fixed.includes('\\sqrt') || fixed.includes('\\pi') || fixed.includes('^')) && !fixed.includes('$')) {
+            fixed = `$${fixed}$`;
+        }
+
+        // Basic standalone pi or sqrt cleanup if they were just simple text
+        // e.g. "pi" -> "\pi" -> "$\pi$" via above logic if wrapped, 
+        // but if it was just "pi" and became "\pi", it needs math mode.
+        if (fixed === '\\pi') return '$\\pi$';
+        
+        // Handle standalone "sqrt2" pattern which might have become "\sqrt2"
+        fixed = fixed.replace(/\\sqrt\s*(\d+)/g, '\\sqrt{$1}');
+        
+        // Final sanity check for unescaped math props
+        if (fixed.includes('\\sqrt') && !fixed.includes('$')) fixed = `$${fixed}$`;
+        
+        return fixed;
+    };
+
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             {/* Header */}
@@ -202,11 +231,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         remarkPlugins={[remarkMath]} 
                         rehypePlugins={[rehypeKatex]}
                         components={{
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
+                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div>
                         }}
                     >
-                        {currentQ.content
+                        {sanitizeMath(currentQ.content)
                             .replace(/\\n/g, '\n')
+                            .replace(/\r/g, '') // Remove carriage returns
+                            .replace(/(?<!\n)\n(?!\n)/g, ' ') // Replace single newlines with spaces
                             .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') 
                         }
                     </ReactMarkdown>
@@ -264,7 +295,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     </span>
                                     <div className="flex-grow pt-0.5">
                                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {opt.text.replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                            {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -292,7 +323,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
                                     <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
                                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {String(currentQ.answer)}
+                                            {sanitizeMath(String(currentQ.answer))}
                                         </ReactMarkdown>
                                     </div>
                                 </div>
@@ -310,7 +341,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         </h3>
                         <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
                             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                {currentQ.explanation.replace(/\\n/g, '\n')}
+                                {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                         </div>
                     </div>

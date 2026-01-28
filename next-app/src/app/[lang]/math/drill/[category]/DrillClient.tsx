@@ -60,6 +60,32 @@ const CATEGORY_NAMES: Record<string, string> = {
   'probability': '概率统计'
 };
 
+const sanitizeMath = (text: string) => {
+    if (!text || typeof text !== 'string') return text;
+    
+    // Always try to fix basic missing backslashes for pi and sqrt, 
+    // using lookbehind to ensure we don't double-escape
+    let fixed = text
+        .replace(/(?<!\\)\bpi\b/g, '\\pi')
+        .replace(/(?<!\\)\bsqrt\b/g, '\\sqrt');
+
+    // If the result looks like LaTeX (has backslash) but has no dollars, wrap it
+    if ((fixed.includes('\\frac') || fixed.includes('\\sqrt') || fixed.includes('\\pi') || fixed.includes('^')) && !fixed.includes('$')) {
+        fixed = `$${fixed}$`;
+    }
+
+    // Basic standalone pi or sqrt cleanup
+    if (fixed === '\\pi') return '$\\pi$';
+    
+    // Handle standalone "sqrt2" pattern which might have become "\sqrt2"
+    fixed = fixed.replace(/\\sqrt\s*(\d+)/g, '\\sqrt{$1}');
+    
+    // Final sanity check for unescaped math props
+    if (fixed.includes('\\sqrt') && !fixed.includes('$')) fixed = `$${fixed}$`;
+    
+    return fixed;
+};
+
 export default function DrillClient({ lang, category }: DrillClientProps) {
     const [question, setQuestion] = useState<Question | null>(null);
     const [timer, setTimer] = useState(0);
@@ -160,18 +186,19 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         remarkPlugins={[remarkMath]} 
                         rehypePlugins={[rehypeKatex]}
                         components={{
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
+                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div>
                         }}
                     >
-                        {question.content
+                        {sanitizeMath(question.content)
                             .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
-                            .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割，排除 (0)
+                            .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割
                             .map(part => {
                                 // 如果是小问标记，确保前面有换行
                                 if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
                                     return `\n\n${part}`;
                                 }
-                                return part;
+                                // 清理单行内的意外换行符
+                                return part.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
                             })
                             .join('')
                             .replace(/\\n/g, '\n') // 将字符串中的字面量 \n 转换为真实的换行符
@@ -191,7 +218,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <h3 className="font-bold text-amber-900 mb-2">AI 解题思路提示</h3>
                                 <div className="prose prose-sm prose-amber max-w-none">
                                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                        {question.thought_process}
+                                        {sanitizeMath(question.thought_process)}
                                     </ReactMarkdown>
                                 </div>
                             </div>

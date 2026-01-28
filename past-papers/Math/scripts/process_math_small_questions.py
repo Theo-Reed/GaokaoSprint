@@ -103,7 +103,41 @@ def clean_json_text(text):
     # We use a lambda to avoid backslash confusion in re.sub replacement strings.
     fixed = re.sub(r'\\(?![\\/bfnrtu])', lambda m: r'\\', text)
     
+    # 3. Handle literal newlines that might be inside JSON strings from LLM
+    # We don't want to replace ALL newlines (because the JSON structure needs them)
+    # but we want to avoid newlines within the "content" or "text" values.
+    # However, it's safer to do this AFTER parsing if possible, or very carefully here.
+    # Let's try to just clean the text field slightly if it's obviously broken.
+    
     return fixed
+
+def clean_question_content(questions):
+    """Post-process questions to remove accidental newlines in content and fix math shorthand."""
+    if not questions: return questions
+    
+    def fix_text(text):
+        if not isinstance(text, str): return text
+        # 1. Replace single newlines with space, but keep double newlines (paragraphs)
+        content = text.replace('\r', '')
+        text = re.sub(r'(?<!\n)\n(?!\n)', ' ', content).strip()
+        
+        # 2. Fix common math shorthand missing backslash/wrap
+        # Use simple lookbehind logic to fix pi/sqrt whether logic thinks it's latex or not
+        text = re.sub(r'(?<!\\)\bpi\b', r'\\pi', text)
+        text = re.sub(r'(?<!\\)\bsqrt', r'\\sqrt', text)
+        
+        # Clean up double dollars
+        return text.replace('$$', '$')
+
+    for q in questions:
+        if "content" in q:
+            q["content"] = fix_text(q["content"])
+        
+        if "options" in q and isinstance(q["options"], list):
+            for opt in q["options"]:
+                if isinstance(opt, dict) and "text" in opt:
+                    opt["text"] = fix_text(opt["text"])
+    return questions
 
 def process_paper(pdf_path, source_name):
     try:
@@ -145,7 +179,9 @@ def process_paper(pdf_path, source_name):
                     except:
                         raise je
                 
-                if questions and len(questions) >= 8: # Lowered threshold slightly just to be safe
+                if questions and len(questions) >= 8:
+                    # CLEAN CONTENT NEWLINES
+                    questions = clean_question_content(questions)
                     break
                 else:
                     print(f"  Attempt {attempt+1} got only {len(questions) if questions else 0} questions, retrying...")

@@ -60,8 +60,12 @@ def extract_answers_from_pdf(pdf_path, source_name):
                     if fill_in_match:
                         ans = fill_in_match.group(1).strip()
                         if ans and q_num not in results:
-                            # Extra cleanup
-                            ans = ans.replace('$', '').strip()
+                            # NO LONGER stripping $ here
+                            # Clean fixes for common shorthand
+                            ans = re.sub(r'(?<!\\)\bpi\b', r'\\pi', ans)
+                            ans = re.sub(r'(?<!\\)\bsqrt', r'\\sqrt', ans)
+                            
+                            ans = ans.replace('$$', '$')
                             if ans: # Avoid empty strings
                                 results[q_num] = ans
             
