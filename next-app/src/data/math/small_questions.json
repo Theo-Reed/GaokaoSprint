@@ -1,0 +1,1505 @@
+[
+  {
+    "id": "2025-新-I-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "complex",
+    "content": "$(1+5i)i$ 的虚部为 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "-1"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "1"
+      },
+      {
+        "label": "D",
+        "text": "6"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "logic",
+    "content": "设全集$U = \\{x|x$是小于9的正整数$\\}$, 集合$A = \\{1,3,5\\}$, 则$∁_U A$中元素个数为 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "3"
+      },
+      {
+        "label": "C",
+        "text": "5"
+      },
+      {
+        "label": "D",
+        "text": "8"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "conic",
+    "content": "若双曲线C的虚轴长为实轴长的$\\sqrt{7}$倍, 则C的离心率为 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\sqrt{2}$"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "$\\sqrt{7}$"
+      },
+      {
+        "label": "D",
+        "text": "$2\\sqrt{2}$"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "trigo_func",
+    "content": "若点$(a,0)(a > 0)$是函数$y = 2\\tan(x-\\frac{\\pi}{3})$的图象的一个对称中心, 则$a$的最小值为 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\pi}{4}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\pi}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\pi}{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{4\\pi}{3}$"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "function",
+    "content": "设$f(x)$是定义在$\\mathbb{R}$上且周期为2的偶函数, 当$2 \\le x \\le 3$时, $f(x)=5-2x$, 则$f(-\\frac{3}{4}) = ( )$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-\\frac{1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$-\\frac{1}{4}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{1}{4}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{1}{2}$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "vector",
+    "content": "帆船比赛中, 运动员可借助风力计测定风速的大小和方向, 测出的结果在航海学中称为视风风速, 视风风速对应的向量, 是真风风速对应的向量与船行风速对应的向量之和, 其中船行风速对应的向量与船速对应的向量大小相等, 方向相反. 图1给出了部分风力等级、名称与风速大小的对应关系. 已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图2 (风速的大小和向量的大小相同), 单位(m/s), 则真风为 ( )\n\n| 等级 | 风速大小 m/s | 名称 |\n|:---:|:---:|:---:|\n| 2 | 1.1~3.3 | 轻风 |\n| 3 | 3.4~5.4 | 微风 |\n| 4 | 5.5~7.9 | 和风 |\n| 5 | 8.0~10.1 | 劲风 |\n\n(图2显示视风风速向量的起点为(3,3)，终点为(0,2)；船速向量的起点为(2,0)，终点为(3,3))",
+    "options": [
+      {
+        "label": "A",
+        "text": "轻风"
+      },
+      {
+        "label": "B",
+        "text": "微风"
+      },
+      {
+        "label": "C",
+        "text": "和风"
+      },
+      {
+        "label": "D",
+        "text": "劲风"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "line_circle",
+    "content": "若圆 $x^2 + (y+2)^2 = r^2 (r > 0)$ 上到直线 $y = \\sqrt{3}x + 2$ 的距离为1的点有且仅有2个, 则$r$的取值范围是 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(0, 1)$"
+      },
+      {
+        "label": "B",
+        "text": "$(1, 3)$"
+      },
+      {
+        "label": "C",
+        "text": "$(3, +\\infty)$"
+      },
+      {
+        "label": "D",
+        "text": "$(0, +\\infty)$"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "function",
+    "content": "若实数$x,y,z$ 满足$2 + \\log_2 x = 3 + \\log_3 y = 5 + \\log_5 z$, 则$x,y,z$ 的大小关系不可能是 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$x > y > z$"
+      },
+      {
+        "label": "B",
+        "text": "$x > z > y$"
+      },
+      {
+        "label": "C",
+        "text": "$y > x > z$"
+      },
+      {
+        "label": "D",
+        "text": "$y > z > x$"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分，只有一个选项是正确的",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "solid_geometry",
+    "content": "在正三棱柱 $ABC-A_1B_1C_1$中, $D$为$BC$中点, 则 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$AD \\perp A_1C$"
+      },
+      {
+        "label": "B",
+        "text": "$BC \\perp \\text{平面 } AA_1D$"
+      },
+      {
+        "label": "C",
+        "text": "$CC_1 // \\text{平面 } AA_1D$"
+      },
+      {
+        "label": "D",
+        "text": "$AD // A_1B$"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "conic",
+    "content": "设抛物线$C: y^2 = 6x$的焦点为$F$, 过$F$的直线交$C$于$A、B$, 过$F$且垂直于$AB$的直线交准线$l: x = -\\frac{3}{2}$于$E$, 过点$A$作准线$l$的垂线, 垂足为$D$, 则 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$|AD| = |AF|$"
+      },
+      {
+        "label": "B",
+        "text": "$|AE| = |AB|$"
+      },
+      {
+        "label": "C",
+        "text": "$|AB| \\ge 6$"
+      },
+      {
+        "label": "D",
+        "text": "$|AE| \\cdot |BE| \\ge 18$"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "trigo_sol",
+    "content": "已知$\\triangle ABC$的面积为$\\frac{1}{4}$, 若$\\cos 2A + \\cos 2B + 2\\sin C = 2$, $\\cos A \\cos B \\sin C = \\frac{1}{4}$, 则 ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\sin C = \\sin^2 A + \\sin^2 B$"
+      },
+      {
+        "label": "B",
+        "text": "$AB = \\sqrt{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\sin A + \\sin B = \\frac{\\sqrt{6}}{2}$"
+      },
+      {
+        "label": "D",
+        "text": "$AC^2 + BC^2 = 3$"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "score_rule": "每小题6分，全部选对得6分，部分选对得部分分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-I-12",
+    "question_number": "12",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "derivative",
+    "content": "若直线 $y = 2x+5$ 是曲线 $y = e^x + x + a$ 的切线, 则$a=$__________.",
+    "options": null,
+    "answer": "4",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅰ卷）"
+  },
+  {
+    "id": "2025-新-II-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "probability",
+    "content": "样本数据2, 8, 14, 16, 20的平均数为（ ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "8"
+      },
+      {
+        "label": "B",
+        "text": "9"
+      },
+      {
+        "label": "C",
+        "text": "12"
+      },
+      {
+        "label": "D",
+        "text": "18"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "已知$z=1+i$，则$\\frac{1}{z-1}=($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$-i$"
+      },
+      {
+        "label": "B",
+        "text": "$i$"
+      },
+      {
+        "label": "C",
+        "text": "$-1$"
+      },
+      {
+        "label": "D",
+        "text": "$1$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "logic",
+    "content": "已知集合 $A = \\{-4,0,1,2,8\\}, B = \\{x| x^3 = x\\}$, 则 $A \\cap B = ($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{0,1,2\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{1,2,8\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{2,8\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{0,1\\}$"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "inequality",
+    "content": "不等式 $\\frac{x-4}{x-1} \\ge 2$ 的解集是（ ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{x|-2 \\le x \\le 1\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{x|x \\le -2\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{x|-2 \\le x < 1\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{x|x > 1\\}$"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "trigo_sol",
+    "content": "在$\\triangle ABC$中, $BC=2, AC=1+\\sqrt{3}, AB = \\sqrt{6}$, 则$A=($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$45^\\circ$"
+      },
+      {
+        "label": "B",
+        "text": "$60^\\circ$"
+      },
+      {
+        "label": "C",
+        "text": "$120^\\circ$"
+      },
+      {
+        "label": "D",
+        "text": "$135^\\circ$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "conic",
+    "content": "设抛物线$C : y^2 = 2px(p > 0)$的焦点为$F$, 点$A$在$C$上, 过$A$作$C$的准线的垂线, 垂足为$B$, 若直线$BF$的方程为$y=-2x+2$, 则$|AF|=($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "3"
+      },
+      {
+        "label": "B",
+        "text": "4"
+      },
+      {
+        "label": "C",
+        "text": "5"
+      },
+      {
+        "label": "D",
+        "text": "6"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "sequence",
+    "content": "记$S_n$为等差数列$\\{a_n\\}$的前$n$项和, 若$S_3 = 6, S_5 = -5$, 则 $S_6 = ($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "-20"
+      },
+      {
+        "label": "B",
+        "text": "-15"
+      },
+      {
+        "label": "C",
+        "text": "-10"
+      },
+      {
+        "label": "D",
+        "text": "-5"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "trigo_func",
+    "content": "已知$0 < \\alpha < \\pi, \\cos{\\frac{\\alpha}{2}} = \\frac{\\sqrt{5}}{5}$, 则$\\sin(\\alpha - \\frac{\\pi}{4}) = ($ )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\sqrt{2}}{10}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\sqrt{2}}{5}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{3\\sqrt{2}}{10}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{7\\sqrt{2}}{10}$"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "sequence",
+    "content": "记$S_n$为等比数列$\\{a_n\\}$的前$n$项和, $q$为$\\{a_n\\}$的公比, $q > 0$, 若$S_3 = 7, a_3 = 1$, 则（ ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$q = \\frac{1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$a_5 = \\frac{1}{9}$"
+      },
+      {
+        "label": "C",
+        "text": "$S_5 = 8$"
+      },
+      {
+        "label": "D",
+        "text": "$a_n + S_n = 8$"
+      }
+    ],
+    "answer": [
+      "A",
+      "D"
+    ],
+    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "derivative",
+    "content": "已知 $f(x)$ 是定义在 $\\mathbb{R}$ 上的奇函数, 且当$x>0$时, $f(x)=(x^2-3)e^x+2$, 则（ ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$f(0) = 0$"
+      },
+      {
+        "label": "B",
+        "text": "当$x<0$时, $f(x)= -(x^2-3)e^{-x} -2$"
+      },
+      {
+        "label": "C",
+        "text": "$f(x) \\ge 2$当且仅当$x \\ge \\sqrt{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$x = -1$是$f(x)$的极大值点"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "conic",
+    "content": "双曲线$C:\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1(a>0, b>0)$的左、右焦点分别是$F_1, F_2$, 左、右顶点分别为$A_1, A_2$, 以$F_1F_2$为直径的圆与$C$的一条渐近线交于$M, N$两点, 且$\\angle NA_1M = \\frac{5\\pi}{6}$, 则（ ）",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\angle A_1MA_2 = \\frac{\\pi}{6}$"
+      },
+      {
+        "label": "B",
+        "text": "$|MA_1| = 2|MA_2|$"
+      },
+      {
+        "label": "C",
+        "text": "$C$ 的离心率为$\\sqrt{13}$"
+      },
+      {
+        "label": "D",
+        "text": "当$a = \\sqrt{2}$时, 四边形$NA_1MA_2$的面积为$8\\sqrt{3}$"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "score_rule": "全部选对得5分，部分选对得2分，有选错的得0分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-12",
+    "question_number": "12",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "vector",
+    "content": "已知平面向量$\\vec{a} = (x,1), \\vec{b} = (x-1,2x)$, 若$\\vec{a} \\perp (\\vec{a}-\\vec{b})$, 则$|\\vec{a}| = $________.",
+    "options": null,
+    "answer": "$\\sqrt{2}$",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2025-新-II-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "derivative",
+    "content": "若$x=2$是函数 $f(x) = (x-1)(x-2)(x-a)$ 的极值点, 则$f(0) = $________.",
+    "options": null,
+    "answer": "-4",
+    "score_rule": "每小题5分",
+    "source": "2025年高考数学试卷（全国Ⅱ卷）"
+  },
+  {
+    "id": "2020-新-I-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "设集合$A=\\{x|1\\le x\\le 3\\}$, $B=\\{x|2<x<4\\}$,则$A\\cup B=$ ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\{x|2<x\\le 3\\}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\{x|2\\le x\\le 3\\}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\{x|1\\le x<4\\}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\{x|1<x<4\\}$"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "$\\frac{2-i}{1+2i}=$ ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "-1"
+      },
+      {
+        "label": "C",
+        "text": "i"
+      },
+      {
+        "label": "D",
+        "text": "-i"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "probability",
+    "content": "6名同学到甲、乙、丙三个场馆做志愿者,每名同学只去1个场馆,甲场馆安排1名,乙场馆安排2名,丙场馆安排3名,则不同的安排方法共有( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "120种"
+      },
+      {
+        "label": "B",
+        "text": "90种"
+      },
+      {
+        "label": "C",
+        "text": "60种"
+      },
+      {
+        "label": "D",
+        "text": "30种"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "solid_geometry",
+    "content": "日晷是中国古代用来测定时间的仪器,利用与晷面垂直的晷针投射到晷面的影子来测定时间.把地球看成一个球(球心记为$O$),地球上一点$A$的纬度是指$OA$与地球赤道所在平面所成角,点$A$处的水平面是指过点$A$且与$OA$垂直的平面.在点$A$处放置一个日晷,若晷面与赤道所在平面平行,点$A$处的纬度为北纬40°,则晷针与点$A$处的水平面所成角为( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "20°"
+      },
+      {
+        "label": "B",
+        "text": "40°"
+      },
+      {
+        "label": "C",
+        "text": "50°"
+      },
+      {
+        "label": "D",
+        "text": "90°"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "logic",
+    "content": "某中学的学生积极参加体育锻炼,其中有96%的学生喜欢足球或游泳,60%的学生喜欢足球,82%的学生喜欢游泳,则该中学既喜欢足球又喜欢游泳的学生数占该校学生总数的比例是( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "62%"
+      },
+      {
+        "label": "B",
+        "text": "56%"
+      },
+      {
+        "label": "C",
+        "text": "46%"
+      },
+      {
+        "label": "D",
+        "text": "42%"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "function",
+    "content": "基本再生数$R_0$与世代间隔$T$是新冠肺炎的流行病学基本参数.基本再生数指一个感染者传染的平均人数,世代间隔指相邻两代间传染所需的平均时间.在新冠肺炎疫情初始阶段,可以用指数模型: $I(t) = e^{rt}$ 描述累计感染病例数$I(t)$随时间$t$(单位:天)的变化规律,指数增长率$r$与$R_0$,$T$近似满足$R_0 \\approx e^{rT}$.有学者基于已有数据估计出$R_0=3.28$,$T=6$.据此,在新冠肺炎疫情初始阶段,累计感染病例数增加1倍需要的时间约为($\\ln2 \\approx 0.69$)( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "1.2天"
+      },
+      {
+        "label": "B",
+        "text": "1.8天"
+      },
+      {
+        "label": "C",
+        "text": "2.5天"
+      },
+      {
+        "label": "D",
+        "text": "3.5天"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "vector",
+    "content": "已知$P$是边长为2的正六边形$ABCDEF$内的一点,则$\\vec{AP} \\cdot \\vec{AB}$ 的取值范围是( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(-2,6)$"
+      },
+      {
+        "label": "B",
+        "text": "$(-6,2)$"
+      },
+      {
+        "label": "C",
+        "text": "$(-2,4)$"
+      },
+      {
+        "label": "D",
+        "text": "$(-4,6)$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "function",
+    "content": "若定义在$\\mathbb{R}$的奇函数$f(x)$在$(-\\infty,0)$单调递减,且$f(2)=0$,则满足 $xf(x-1) \\geq 0$ 的$x$的取值范围是( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$[-1,1]\\cup[3, +\\infty)$"
+      },
+      {
+        "label": "B",
+        "text": "$[-3,-1]\\cup[0,1]$"
+      },
+      {
+        "label": "C",
+        "text": "$[-1,0]\\cup[1, +\\infty)$"
+      },
+      {
+        "label": "D",
+        "text": "$[-1,0]\\cup[1, 3]$"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-9",
+    "question_number": "9",
+    "type": "multi_choice",
+    "type_rank": 1,
+    "category": "conic",
+    "content": "已知曲线$C: mx^2 + ny^2 = 1$. ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "若$m>n>0$,则$C$是椭圆,其焦点在$y$轴上"
+      },
+      {
+        "label": "B",
+        "text": "若$m=n>0$,则$C$是圆,其半径为$\\sqrt{n}$"
+      },
+      {
+        "label": "C",
+        "text": "若$mn<0$,则$C$是双曲线,其渐近线方程为$y=\\pm\\sqrt{-\\frac{m}{n}}x$"
+      },
+      {
+        "label": "D",
+        "text": "若$m=0, n>0$,则$C$是两条直线"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-10",
+    "question_number": "10",
+    "type": "multi_choice",
+    "type_rank": 2,
+    "category": "trigo_func",
+    "content": "下图是函数$y= \\sin(\\omega x+\\varphi)$的部分图像,则$\\sin(\\omega x+\\varphi)=$ ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\sin(x+\\frac{\\pi}{3})$"
+      },
+      {
+        "label": "B",
+        "text": "$\\sin(\\frac{\\pi}{3}-2x)$"
+      },
+      {
+        "label": "C",
+        "text": "$\\cos(2x+\\frac{\\pi}{6})$"
+      },
+      {
+        "label": "D",
+        "text": "$\\cos(\\frac{5\\pi}{6}-2x)$"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-11",
+    "question_number": "11",
+    "type": "multi_choice",
+    "type_rank": 3,
+    "category": "inequality",
+    "content": "已知$a>0, b>0$,且$a+b=1$,则( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$a^2+b^2 \\ge \\frac{1}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$2^{a-b}+2^{b-a} \\ge 2$"
+      },
+      {
+        "label": "C",
+        "text": "$\\log_2 a + \\log_2 b \\le -2$"
+      },
+      {
+        "label": "D",
+        "text": "$\\sqrt{a} + \\sqrt{b} \\le \\sqrt{2}$"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-12",
+    "question_number": "12",
+    "type": "multi_choice",
+    "type_rank": 4,
+    "category": "probability",
+    "content": "信息熵是信息论中的一个重要概念.设随机变量$X$所有可能的取值为$1,2,\\dots,n$,且$P(X=i)=p_i > 0 (i=1,2,\\dots,n)$, $\\sum_{i=1}^{n} p_i = 1$, 定义$X$的信息熵$H(X) = -\\sum_{i=1}^{n} p_i \\log_2 p_i$. ( )",
+    "options": [
+      {
+        "label": "A",
+        "text": "若$n=1$,则$H(X)=0$"
+      },
+      {
+        "label": "B",
+        "text": "若$n=2$,则$H(X)$随着 $p_1$ 的增大而增大"
+      },
+      {
+        "label": "C",
+        "text": "若 $p_i = \\frac{1}{n} (i=1,2,\\dots,n)$,则$H(X)$随着$n$的增大而增大"
+      },
+      {
+        "label": "D",
+        "text": "若$n=2m$,随机变量$Y$所有可能的取值为$1,2,\\dots,m$,且$P(Y=j) = p_j + p_{2m+1-j} (j=1,2,\\dots,m)$,则$H(X) \\le H(Y)$"
+      }
+    ],
+    "answer": [
+      "A",
+      "C"
+    ],
+    "score_rule": "每小题5分，全部选对得5分，部分选对得3分，选错得0分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "conic",
+    "content": "斜率为$\\sqrt{3}$的直线过抛物线$C:y^2=4x$的焦点,且与$C$交于$A,B$两点,则$|AB|$=___.",
+    "options": null,
+    "answer": "$\\frac{16}{3}$",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "sequence",
+    "content": "将数列$\\{2n-1\\}$与$\\{3n-2\\}$的公共项从小到大排列得到数列$\\{a_n\\}$,则$\\{a_n\\}$的前$n$项和为___.",
+    "options": null,
+    "answer": "$3n^2-2n$",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "solid_geometry",
+    "content": "某中学开展劳动实习,学生加工制作零件,零件的截面如图所示. $O$为圆孔及轮廓圆弧$AB$所在圆的圆心,$A$是圆弧$AB$与直线$AG$的切点,$B$是圆弧$AB$与直线$BC$的切点,四边形$DEFG$为矩形,$BC\\perp DG$,垂足为$C$, $\\tan\\angle ODC=\\frac{3}{5}$, $BH\\parallel DG$, $EF=12$ cm, $DE=2$ cm, $A$到直线$DE$和$EF$的距离均为7cm,圆孔半径为1 cm,则图中阴影部分的面积为___cm².",
+    "options": null,
+    "answer": "80-2π",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2020-新-I-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "solid_geometry",
+    "content": "已知直四棱柱$ABCD-A_1B_1C_1D_1$的棱长均为2, $\\angle BAD=60^\\circ$. 以$D_1$为球心, $\\sqrt{5}$为半径的球面与侧面$BCC_1B_1$的交线长为___.",
+    "options": null,
+    "answer": "$2\\pi$",
+    "score_rule": "每小题5分",
+    "source": "2020年高考数学试卷（新高考Ⅰ卷）（山东）"
+  },
+  {
+    "id": "2016-新-I-1",
+    "question_number": "1",
+    "type": "single_choice",
+    "type_rank": 1,
+    "category": "logic",
+    "content": "设集合$A=\\{x|x^2-4x+3<0\\}$, $B=\\{x|2x-3>0\\}$, 则$A \\cap B = (\\quad)$",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(-3, -\\frac{3}{2})$"
+      },
+      {
+        "label": "B",
+        "text": "$(-3, \\frac{3}{2})$"
+      },
+      {
+        "label": "C",
+        "text": "$(1, \\frac{3}{2})$"
+      },
+      {
+        "label": "D",
+        "text": "$(\\frac{3}{2}, 3)$"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-2",
+    "question_number": "2",
+    "type": "single_choice",
+    "type_rank": 2,
+    "category": "complex",
+    "content": "设$(1+i)x=1+yi$，其中$x, y$是实数，则$|x+yi| = (\\quad)$",
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "$\\sqrt{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\sqrt{3}$"
+      },
+      {
+        "label": "D",
+        "text": "2"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-3",
+    "question_number": "3",
+    "type": "single_choice",
+    "type_rank": 3,
+    "category": "sequence",
+    "content": "已知等差数列$\\{a_n\\}$前9项的和为27，$a_{10}=8$，则$a_{100}=( \\quad )$",
+    "options": [
+      {
+        "label": "A",
+        "text": "100"
+      },
+      {
+        "label": "B",
+        "text": "99"
+      },
+      {
+        "label": "C",
+        "text": "98"
+      },
+      {
+        "label": "D",
+        "text": "97"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-4",
+    "question_number": "4",
+    "type": "single_choice",
+    "type_rank": 4,
+    "category": "probability",
+    "content": "某公司的班车在7:00, 8:00, 8:30发车，小明在7:50至8:30之间到达发车站乘坐班车，且到达发车站的时刻是随机的，则他等车时间不超过10分钟的概率是( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{1}{3}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{1}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{2}{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{3}{4}$"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-5",
+    "question_number": "5",
+    "type": "single_choice",
+    "type_rank": 5,
+    "category": "conic",
+    "content": "已知方程$\\frac{x^2}{m^2+n} - \\frac{y^2}{3m^2-n} = 1$表示双曲线，且该双曲线两焦点间的距离为4，则$n$的取值范围是( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$(-1, 3)$"
+      },
+      {
+        "label": "B",
+        "text": "$(-1, \\sqrt{3})$"
+      },
+      {
+        "label": "C",
+        "text": "$(0, 3)$"
+      },
+      {
+        "label": "D",
+        "text": "$(0, \\sqrt{3})$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-6",
+    "question_number": "6",
+    "type": "single_choice",
+    "type_rank": 6,
+    "category": "solid_geometry",
+    "content": "如图，某几何体的三视图是三个半径相等的圆及每个圆中两条相互垂直的半径. 若该几何体的体积是$\\frac{28\\pi}{3}$，则它的表面积是( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$17\\pi$"
+      },
+      {
+        "label": "B",
+        "text": "$18\\pi$"
+      },
+      {
+        "label": "C",
+        "text": "$20\\pi$"
+      },
+      {
+        "label": "D",
+        "text": "$28\\pi$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-7",
+    "question_number": "7",
+    "type": "single_choice",
+    "type_rank": 7,
+    "category": "function",
+    "content": "函数$y=2x^2 - e^{|x|}$在$[-2, 2]$的图象大致为( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "图A"
+      },
+      {
+        "label": "B",
+        "text": "图B"
+      },
+      {
+        "label": "C",
+        "text": "图C"
+      },
+      {
+        "label": "D",
+        "text": "图D"
+      }
+    ],
+    "answer": "D",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-8",
+    "question_number": "8",
+    "type": "single_choice",
+    "type_rank": 8,
+    "category": "inequality",
+    "content": "若$a>b>1, 0<c<1$，则( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$a^c < b^c$"
+      },
+      {
+        "label": "B",
+        "text": "$ab^c < ba^c$"
+      },
+      {
+        "label": "C",
+        "text": "$a \\log_b c < b \\log_a c$"
+      },
+      {
+        "label": "D",
+        "text": "$\\log_a c < \\log_b c$"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-9",
+    "question_number": "9",
+    "type": "single_choice",
+    "type_rank": 9,
+    "category": "logic",
+    "content": "执行下面的程序框图，如果输入的$x=0, y=1, n=1$，则输出$x, y$的值满足( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$y=2x$"
+      },
+      {
+        "label": "B",
+        "text": "$y=3x$"
+      },
+      {
+        "label": "C",
+        "text": "$y=4x$"
+      },
+      {
+        "label": "D",
+        "text": "$y=5x$"
+      }
+    ],
+    "answer": "C",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-10",
+    "question_number": "10",
+    "type": "single_choice",
+    "type_rank": 10,
+    "category": "conic",
+    "content": "以抛物线$C$的顶点为圆心的圆交$C$于$A, B$两点，交$C$的准线于$D, E$两点. 已知$|AB|=4\\sqrt{2}, |DE|=2\\sqrt{5}$，则$C$的焦点到准线的距离为( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "2"
+      },
+      {
+        "label": "B",
+        "text": "4"
+      },
+      {
+        "label": "C",
+        "text": "6"
+      },
+      {
+        "label": "D",
+        "text": "8"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-11",
+    "question_number": "11",
+    "type": "single_choice",
+    "type_rank": 11,
+    "category": "solid_geometry",
+    "content": "平面$\\alpha$过正方体$ABCD-A_1B_1C_1D_1$的顶点$A$，$\\alpha // \\text{平面} CB_1D_1$，$\\alpha \\cap \\text{平面} ABCD=m$，$\\alpha \\cap \\text{平面} ABB_1A_1=n$，则$m, n$所成角的正弦值为( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "$\\frac{\\sqrt{3}}{2}$"
+      },
+      {
+        "label": "B",
+        "text": "$\\frac{\\sqrt{2}}{2}$"
+      },
+      {
+        "label": "C",
+        "text": "$\\frac{\\sqrt{3}}{3}$"
+      },
+      {
+        "label": "D",
+        "text": "$\\frac{1}{3}$"
+      }
+    ],
+    "answer": "A",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-12",
+    "question_number": "12",
+    "type": "single_choice",
+    "type_rank": 12,
+    "category": "trigo_func",
+    "content": "已知函数$f(x)=\\sin(\\omega x+\\phi)(\\omega > 0, |\\phi|\\le\\frac{\\pi}{2})$，$x=-\\frac{\\pi}{4}$为$f(x)$的零点，$x=\\frac{\\pi}{4}$为$y=f(x)$图象的对称轴，且$f(x)$在$(\\frac{\\pi}{18}, \\frac{5\\pi}{36})$上单调，则$\\omega$的最大值为( \\quad )",
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "9"
+      },
+      {
+        "label": "C",
+        "text": "7"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "answer": "B",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-13",
+    "question_number": "13",
+    "type": "fill_in",
+    "type_rank": 1,
+    "category": "vector",
+    "content": "设向量$\\vec{a}=(m, 1), \\vec{b}=(1, 2)$，且$|\\vec{a}+\\vec{b}|^2=|\\vec{a}|^2+|\\vec{b}|^2$，则$m=$_____.",
+    "options": null,
+    "answer": "-2",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-14",
+    "question_number": "14",
+    "type": "fill_in",
+    "type_rank": 2,
+    "category": "sequence",
+    "content": "$(2x+\\sqrt{x})^5$的展开式中，$x^3$的系数是_____. (用数字填写答案)",
+    "options": null,
+    "answer": "10",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-15",
+    "question_number": "15",
+    "type": "fill_in",
+    "type_rank": 3,
+    "category": "sequence",
+    "content": "设等比数列$\\{a_n\\}$满足$a_1+a_3=10, a_2+a_4=5$，则$a_1a_2...a_n$的最大值为_____.",
+    "options": null,
+    "answer": "64",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  },
+  {
+    "id": "2016-新-I-16",
+    "question_number": "16",
+    "type": "fill_in",
+    "type_rank": 4,
+    "category": "inequality",
+    "content": "某高科技企业生产产品A和产品B需要甲、乙两种新型材料. 生产一件产品A需要甲材料1.5kg，乙材料1kg，用5个工时；生产一件产品B需要甲材料0.5kg，乙材料0.3kg，用3个工时. 生产一件产品A的利润为2100元，生产一件产品B的利润为900元. 该企业现有甲材料150kg，乙材料90kg，则在不超过600个工时的条件下，生产产品A、产品B的利润之和的最大值为____元.",
+    "options": null,
+    "answer": "216000",
+    "score_rule": "每小题5分",
+    "source": "2016年高考数学试卷（理）（新课标Ⅰ）"
+  }
+]

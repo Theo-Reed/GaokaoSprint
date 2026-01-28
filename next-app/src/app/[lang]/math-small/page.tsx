@@ -10,14 +10,17 @@ interface Category {
 const CATEGORIES: Category[] = [
   { id: 'logic', name: '集合与逻辑', icon: '🎯' },
   { id: 'complex', name: '复数专题', icon: '🔢' },
-  { id: 'trigonometry', name: '三角函数', icon: '⛰️' },
+  { id: 'function', name: '函数专题', icon: '📈' },
+  { id: 'derivative', name: '导数专题', icon: '📉' },
+  { id: 'trigo_func', name: '三角函数', icon: '🌊' },
+  { id: 'trigo_sol', name: '解三角形', icon: '⛰️' },
   { id: 'sequence', name: '数列专题', icon: '📝' },
-  { id: 'probability', name: '概率统计', icon: '🎲' },
-  { id: 'solid_geometry', name: '立体几何', icon: '🧊' },
-  { id: 'conic', name: '圆锥曲线', icon: '📐' },
-  { id: 'derivative', name: '函数与导数', icon: '📈' },
   { id: 'vector', name: '向量专题', icon: '➡️' },
   { id: 'inequality', name: '不等式专题', icon: '⚖️' },
+  { id: 'line_circle', name: '直线与圆', icon: '⚪' },
+  { id: 'conic', name: '圆锥曲线', icon: '📐' },
+  { id: 'solid_geometry', name: '立体几何', icon: '🧊' },
+  { id: 'probability', name: '概率统计', icon: '🎲' },
 ];
 
 export async function generateStaticParams() {
