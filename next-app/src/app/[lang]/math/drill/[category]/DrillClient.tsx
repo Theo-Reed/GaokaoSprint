@@ -20,6 +20,7 @@ interface Question {
   score: string;
   thought_process: string;
   source?: string;
+  has_figure?: boolean;
 }
 
 interface DrillClientProps {
@@ -182,6 +183,21 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             .trim()}
                     </ReactMarkdown>
                 </div>
+
+                {/* 题目插图区域 (根据 has_figure 字段显示) */}
+                {question.has_figure && (
+                    <div className="my-6 flex flex-col items-center justify-center p-4 transition-all">
+                        <img 
+                            src={`/math-images/${question.source}-${question.question_number}.png`} 
+                            alt="题目插图" 
+                            className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
+                            onError={(e) => {
+                                (e.target as HTMLImageElement).style.display = 'none';
+                                (e.target as HTMLImageElement).parentElement!.style.padding = '0';
+                            }}
+                        />
+                    </div>
+                )}
              </div>
 
              {/* Actions Area */}
@@ -226,7 +242,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                          </button>
                          <button 
                             onClick={handleNext}
-                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 dark:hover:bg-indigo-700 transition-all shadow-lg shadow-slate-200 dark:shadow-none"
+                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-indigo-600 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-100 dark:shadow-none"
                          >
                              下一题
                              <ChevronRight size={18} />

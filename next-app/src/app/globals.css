@@ -2,28 +2,25 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Gemini-like Dark Mode Palette */
-  --color-slate-950: #131314; /* Main background */
-  --color-slate-900: #1e1f20; /* Card/Sidebar background */
-  --color-slate-800: #2f2f31; /* Hover/Border highlight */
-  --color-slate-200: #e3e3e3; /* Primary text */
-  --color-slate-400: #b4b4b4; /* Secondary text */
+  /* Gemini-like Dark Mode Palette (Only for Dark mode) */
 }
 
-.dark {
-  --background: #131314;
-  --foreground: #e3e3e3;
+@layer base {
+  .dark {
+    --background: #131314;
+    --foreground: #e3e3e3;
+    --color-slate-950: #131314;
+    --color-slate-900: #1e1f20;
+    --color-slate-800: #2f2f31;
+    --color-slate-200: #e3e3e3;
+    --color-slate-400: #b4b4b4;
+  }
 }
 
 body {
