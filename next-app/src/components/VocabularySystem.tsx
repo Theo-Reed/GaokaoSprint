@@ -78,13 +78,13 @@ const WordCard = ({ entry }: { entry: VocabEntry }) => {
 
             <div className="mt-4 prose prose-sm dark:prose-invert">
                 {entry.meanings.length > 0 ? (
-                    <ul className="list-disc list-inside text-slate-700 dark:text-slate-300">
+                    <ul className="list-disc list-inside text-slate-700 dark:text-slate-200">
                         {entry.meanings.map((m, i) => (
                             <li key={i}>{m}</li>
                         ))}
                     </ul>
                 ) : (
-                    <p className="text-slate-400 dark:text-slate-500 italic text-sm">No definition (Real Exam Word)</p>
+                    <p className="text-slate-400 dark:text-slate-400 italic text-sm">No definition (Real Exam Word)</p>
                 )}
             </div>
 
@@ -155,21 +155,21 @@ export const VocabularySystem = ({ data }: VocabularySystemProps) => {
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
             <header className="mb-8">
-                <h1 className="text-3xl font-bold text-slate-900 mb-2">Gaokao Vocabulary Engine</h1>
-                <p className="text-slate-500">
+                <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Gaokao Vocabulary Engine</h1>
+                <p className="text-slate-500 dark:text-slate-400">
                     Master the {data.length.toLocaleString()} words found in 18 years of real exams.
                 </p>
             </header>
 
             {/* Controls Area */}
-            <div className="sticky top-4 z-10 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-sm border border-slate-200 mb-6">
+            <div className="sticky top-4 z-10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm p-4 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 mb-6">
                 
                 {/* Search */}
                 <div className="mb-4">
                     <input 
                         type="text"
                         placeholder="Search for a word..."
-                        className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 placeholder:text-slate-400 dark:placeholder:text-slate-600"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
@@ -184,10 +184,10 @@ export const VocabularySystem = ({ data }: VocabularySystemProps) => {
                             className={`
                                 flex flex-col items-center justify-center py-3 rounded-xl transition-all border-2
                                 ${activeTier === tier 
-                                    ? tier === 1 ? 'border-blue-500 bg-blue-50 text-blue-700' 
-                                    : tier === 2 ? 'border-amber-500 bg-amber-50 text-amber-700'
-                                    : 'border-emerald-500 bg-emerald-50 text-emerald-700'
-                                    : 'border-transparent bg-slate-50 text-slate-500 hover:bg-slate-100'
+                                    ? tier === 1 ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-100' 
+                                    : tier === 2 ? 'border-amber-500 bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-100'
+                                    : 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-100'
+                                    : 'border-transparent bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
                                 }
                             `}
                         >
@@ -214,12 +214,12 @@ export const VocabularySystem = ({ data }: VocabularySystemProps) => {
                 {filteredData.length > visibleCount ? (
                     <button 
                         onClick={handleLoadMore}
-                        className="px-8 py-3 bg-white border border-slate-300 font-semibold rounded-full hover:bg-slate-50 text-slate-600 transition-colors shadow-sm"
+                        className="px-8 py-3 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 font-semibold rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors shadow-sm"
                     >
                         Load More Words ({filteredData.length - visibleCount} remaining)
                     </button>
                 ) : (
-                    <p className="text-slate-400 italic">End of list.</p>
+                    <p className="text-slate-400 dark:text-slate-600 italic">End of list.</p>
                 )}
             </div>
         </div>

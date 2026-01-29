@@ -12,11 +12,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Gemini-like Dark Mode Palette */
+  --color-slate-950: #131314; /* Main background */
+  --color-slate-900: #1e1f20; /* Card/Sidebar background */
+  --color-slate-800: #2f2f31; /* Hover/Border highlight */
+  --color-slate-200: #e3e3e3; /* Primary text */
+  --color-slate-400: #b4b4b4; /* Secondary text */
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #131314;
+  --foreground: #e3e3e3;
 }
 
 body {
@@ -54,6 +61,12 @@ body {
     text-align: left;
     font-weight: 600;
   }
+  
+  .dark .prose :where(thead th) {
+    background-color: #1e293b !important; /* slate-800 */
+    border-color: #334155 !important; /* slate-700 */
+    color: #e2e8f0 !important; /* slate-200 */
+  }
 
   .prose :where(tbody td) {
     word-break: break-word;
@@ -61,6 +74,11 @@ body {
     border: 1px solid #e2e8f0;
     line-height: 1.6;
     vertical-align: top;
+  }
+
+  .dark .prose :where(tbody td) {
+    border-color: #334155 !important; /* slate-700 */
+    color: #cbd5e1 !important; /* slate-300 */
   }
 
   /* Add horizontal scroll for small screens if table overflows */

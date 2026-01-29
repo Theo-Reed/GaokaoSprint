@@ -34,7 +34,7 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
     object: number[];
   }>({ subject: [], verb: [], object: [] });
   const [analyzeMessage, setAnalyzeMessage] = useState(text.initialMsg);
-  const [analyzeFeedbackColor, setAnalyzeFeedbackColor] = useState("text-gray-500");
+  const [analyzeFeedbackColor, setAnalyzeFeedbackColor] = useState("text-slate-500 dark:text-slate-400");
 
   const currentSentence = ANALYSIS_LEVELS[currentAnalyzeIndex];
   const analyzeWords = currentSentence.text.split(" ");
@@ -43,7 +43,7 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
   useEffect(() => {
     setFoundIndices({ subject: [], verb: [], object: [] });
     setAnalyzeMessage(text.initialMsg);
-    setAnalyzeFeedbackColor("text-gray-500");
+    setAnalyzeFeedbackColor("text-slate-500 dark:text-slate-400");
     setSelectedTool(null);
   }, [currentAnalyzeIndex, lang]); 
 

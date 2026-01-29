@@ -10,7 +10,7 @@ export default async function LangLayout({
   const { lang } = await params;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Sidebar lang={lang} />
       <main className="md:ml-64 min-h-screen">
         <div className="max-w-6xl mx-auto p-8">

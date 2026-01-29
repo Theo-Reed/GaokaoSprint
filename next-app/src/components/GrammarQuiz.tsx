@@ -198,7 +198,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       }
   };
 
-  if (!currentQuiz) return <div className="p-8 text-center text-slate-400 dark:text-slate-500">{text.loading}</div>;
+  if (!currentQuiz) return <div className="p-8 text-center text-slate-400 dark:text-slate-400">{text.loading}</div>;
 
   return (
     <div className="bg-white dark:bg-slate-900 shadow-lg rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col h-full">
@@ -251,7 +251,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                     value={examInput}
                     onChange={(e) => setExamInput(e.target.value)}
                     placeholder={text.placeholder}
-                    className="flex-1 px-4 py-2 border-2 border-slate-200 dark:border-slate-700 rounded-lg focus:border-indigo-500 dark:focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 dark:focus:ring-indigo-900/40 outline-none transition-all text-slate-900 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-500 bg-white dark:bg-slate-950"
+                    className="flex-1 px-4 py-2 border-2 border-slate-200 dark:border-slate-700 rounded-lg focus:border-indigo-500 dark:focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 dark:focus:ring-indigo-900/40 outline-none transition-all text-slate-900 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-400 bg-white dark:bg-slate-950"
                     disabled={isExamCorrect || (!!examFeedback && !isExamCorrect)}
                 />
             </div>

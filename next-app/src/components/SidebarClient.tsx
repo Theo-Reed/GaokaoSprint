@@ -69,7 +69,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
       {/* Sidebar Container */}
       <div className={`
-        fixed top-0 left-0 h-screen w-64 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800
+        fixed top-0 left-0 h-screen w-64 bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800
         transform transition-transform duration-300 ease-in-out z-40
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0 md:block

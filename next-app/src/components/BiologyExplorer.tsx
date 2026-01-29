@@ -147,7 +147,7 @@ export default function BiologyExplorer() {
             <iframe
               key={selectedPoint.id}
               src={`${assetPath(selectedPoint.pdfPath)}#page=${selectedPoint.page}&view=FitH`}
-              className="w-full h-full border-none shadow-2xl bg-white"
+              className="w-full h-full border-none shadow-2xl bg-white dark:bg-slate-900"
               title="Biology Textbook Viewer"
             />
           </div>

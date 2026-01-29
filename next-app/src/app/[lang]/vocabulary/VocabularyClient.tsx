@@ -358,13 +358,13 @@ export default function VocabularyClient() {
      // 简单起见，这里显示完成界面。
      // 如果用户想复习 Mastered，可以加个按钮 "复习已掌握"
      return (
-        <div className="h-screen flex flex-col items-center justify-center text-center p-6 space-y-4">
+        <div className="h-screen flex flex-col items-center justify-center text-center p-6 space-y-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
              <div className="text-4xl">🎉</div>
              <h2 className="text-xl font-bold">今日任务完成</h2>
-             <p className="text-gray-500">所有单词（含已掌握）都已过了一遍</p>
+             <p className="text-gray-500 dark:text-gray-400">所有单词（含已掌握）都已过了一遍</p>
              <button 
                onClick={() => window.location.reload()} 
-               className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full"
+               className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors shadow-lg shadow-blue-200 dark:shadow-none"
              >
                 刷新重来
              </button>

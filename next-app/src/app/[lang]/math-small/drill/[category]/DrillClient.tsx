@@ -301,20 +301,20 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {currentQ.type === 'fill_in' && (
                     <div className="mt-6">
                         {!isSubmitted ? (
-                            <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-                                <p className="text-slate-500 mb-4">填空题请在草稿纸上完成计算</p>
+                            <div className="bg-slate-50 dark:bg-slate-800 border border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-slate-500 dark:text-slate-400 mb-4">填空题请在草稿纸上完成计算</p>
                                 <button 
                                     onClick={handleSubmit}
-                                    className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm flex items-center gap-2"
+                                    className="px-8 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300 transition-all shadow-sm flex items-center gap-2"
                                 >
                                     核对答案 <CheckCircle2 size={18} className="text-indigo-500" />
                                 </button>
                             </div>
                         ) : (
                             <div className="mt-4 animate-in zoom-in-95 duration-300">
-                                <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
+                                <div className="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900/40 border border-indigo-100 dark:border-indigo-800 flex flex-col items-center">
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
-                                    <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
+                                    <div className="text-2xl font-serif text-indigo-900 dark:text-indigo-100 bg-white dark:bg-slate-800 px-8 py-4 rounded-xl shadow-sm border border-indigo-50 dark:border-indigo-900">
                                         <ReactMarkdown 
                                             remarkPlugins={[remarkMath]} 
                                             rehypePlugins={[rehypeKatex]}
@@ -331,12 +331,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 {/* 答题思路/解析区域 */}
                 {isSubmitted && showExplanation && currentQ.explanation && (
-                    <div className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-top-4 duration-500">
-                        <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-500">
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2">
                             <span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>
                             答题思路
                         </h3>
-                        <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
+                        <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/30 text-slate-700 dark:text-slate-300 leading-relaxed shadow-sm">
                             <ReactMarkdown 
                                 remarkPlugins={[remarkMath]} 
                                 rehypePlugins={[rehypeKatex]}
@@ -363,8 +363,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             className={`
                                 flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all
                                 ${((currentQ.type !== 'fill_in' && selectedOptions.length === 0) || (currentQ.type === 'fill_in' && !fillInAnswer.trim())) 
-                                    ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
-                                    : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100'}
+                                    ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed' 
+                                    : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100 dark:shadow-none'}
                             `}
                         >
                             检查答案
@@ -376,8 +376,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     onClick={() => setShowExplanation(!showExplanation)}
                                     className={`px-6 py-4 rounded-xl font-bold transition-all border ${
                                         showExplanation 
-                                        ? 'bg-amber-100 border-amber-300 text-amber-700' 
-                                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                                        ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' 
+                                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
                                     }`}
                                 >
                                     {showExplanation ? '隐藏解析' : '查看解析'}
@@ -385,9 +385,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             )}
                             <button
                                 onClick={handleNext}
-                                className="flex-grow md:flex-grow-0 px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 hover:border-slate-300 hover:text-indigo-600 transition-all shadow-sm"
+                                className="flex-grow md:flex-grow-0 px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm"
                             >
-                                下一题 <ChevronRight size={20} className="text-slate-400 group-hover:text-indigo-500" />
+                                下一题 <ChevronRight size={20} className="text-slate-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-400" />
                             </button>
                         </div>
                     )}
@@ -396,7 +396,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             
             {/* Score Rule Info */}
             {isSubmitted && currentQ.score_rule && (
-                <div className="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-500 italic">
+                <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-sm text-slate-500 dark:text-slate-400 italic">
                     评分规则：{currentQ.score_rule}
                 </div>
             )}
