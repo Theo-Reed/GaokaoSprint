@@ -203,7 +203,7 @@ def worker(file_path):
         update_json_database(source_name, answers, TARGET_JSON)
 
 if __name__ == "__main__":
-    BASE_DIR = "/Users/yeatom/VSCodeProjects/gaokao/past-papers/Biology/2025·高考生物真题"
+    BASE_DIR = "/Users/yeatom/VSCodeProjects/gaokao/past-papers/Biology"
     TARGET_JSON = "/Users/yeatom/VSCodeProjects/gaokao/next-app/src/data/biology/small_questions.json"
     
     # Check already answered sources

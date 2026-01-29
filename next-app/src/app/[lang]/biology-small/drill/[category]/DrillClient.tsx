@@ -4,11 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-react';
 import questionsData from '@/data/biology/small_questions.json';
 import Link from 'next/link';
+import { useDrillStrategy } from '@/hooks/useDrillStrategy';
 
 interface Option {
   label: string;
@@ -19,7 +21,7 @@ interface SmallQuestion {
   id: string;
   question_number: string;
   type: 'single_choice' | 'multi_choice' | 'fill_in';
-  type_rank: number;
+  type_rank?: number;
   category: string;
   content: string;
   options: Option[] | null;
@@ -56,8 +58,16 @@ const CATEGORY_NAMES: Record<string, string> = {
 };
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
-    const [questions, setQuestions] = useState<SmallQuestion[]>([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // Determine pool of questions for this category
+    const allCategoryQuestions = React.useMemo(() => 
+        (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category), 
+    [category]);
+
+    // Use intelligent drill strategy
+    const { pickNextQuestion, markAsCorrect, loading: strategyLoading } = useDrillStrategy(allCategoryQuestions, 'biology');
+
+    const [currentQuestion, setCurrentQuestion] = useState<SmallQuestion | null>(null);
+    const [currentIndex, setCurrentIndex] = useState(0); // Only for display progress if needed, or remove? Keeping 0 for minimal break
     const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
     const [fillInAnswer, setFillInAnswer] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -65,13 +75,14 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExplanation, setShowExplanation] = useState(false);
 
+    // Initial Pick
     useEffect(() => {
-        const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
-        const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-        setQuestions(shuffled);
-        setCurrentIndex(0);
-        resetQuestionState();
-    }, [category]);
+        if (!strategyLoading && allCategoryQuestions.length > 0 && !currentQuestion) {
+            const next = pickNextQuestion();
+            setCurrentQuestion(next);
+            resetQuestionState();
+        }
+    }, [strategyLoading, allCategoryQuestions, currentQuestion, pickNextQuestion]);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -99,11 +110,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     };
 
     const handleOptionSelect = (label: string) => {
-        if (isSubmitted) return;
-        const currentQ = questions[currentIndex];
-        if (currentQ.type === 'single_choice') {
+        if (isSubmitted || !currentQuestion) return;
+        if (currentQuestion.type === 'single_choice') {
             setSelectedOptions([label]);
-        } else if (currentQ.type === 'multi_choice') {
+        } else if (currentQuestion.type === 'multi_choice') {
             setSelectedOptions(prev => 
                 prev.includes(label) 
                     ? prev.filter(l => l !== label) 
@@ -112,26 +122,49 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         }
     };
 
+    const checkAnswerCorrectness = () => {
+        if (!currentQuestion) return false;
+        if (currentQuestion.type === 'fill_in') {
+            return fillInAnswer.trim() === String(currentQuestion.answer).trim();
+        }
+        
+        const userAns = [...selectedOptions].sort().join("");
+        
+        // Handle answer regardless of whether it is a string "ABC" or an array ["A", "B"]
+        let correctAns = "";
+        if (Array.isArray(currentQuestion.answer)) {
+            correctAns = [...currentQuestion.answer].sort().join("");
+        } else {
+            // For strings like "ABC", we should sort them too to be safe
+            correctAns = String(currentQuestion.answer).split("").sort().join("");
+        }
+        
+        return userAns === correctAns;
+    };
+
     const handleSubmit = () => {
         setIsSubmitted(true);
         setIsTimerRunning(false);
+
+        if (checkAnswerCorrectness() && currentQuestion) {
+            markAsCorrect(currentQuestion.id);
+        }
     };
 
     const handleNext = () => {
-        if (currentIndex < questions.length - 1) {
+        const next = pickNextQuestion(currentQuestion?.id);
+        if (next) {
+            setCurrentQuestion(next);
             setCurrentIndex(prev => prev + 1);
-            resetQuestionState();
-        } else {
-            const shuffled = [...questions].sort(() => Math.random() - 0.5);
-            setQuestions(shuffled);
-            setCurrentIndex(0);
             resetQuestionState();
         }
     };
 
-    const currentQ = questions[currentIndex];
+    // Alias for compatibility
+    const currentQ = currentQuestion;
 
     if (!currentQ) {
+        if (strategyLoading) return <div className="p-10 text-center">Loading Strategy...</div>;
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
                 <h2 className="text-xl font-bold mb-4 text-slate-400">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
@@ -140,21 +173,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         );
     }
 
-    const isCorrect = () => {
-        if (currentQ.type === 'fill_in') {
-            return fillInAnswer.trim() === String(currentQ.answer).trim();
-        }
-        const userAns = [...selectedOptions].sort().join("");
-        const correctAns = Array.isArray(currentQ.answer) 
-            ? [...currentQ.answer].sort().join("") 
-            : currentQ.answer;
-        return userAns === correctAns;
-    };
+    const isCorrect = checkAnswerCorrectness;
 
     // Sanitize logic preserved
     const sanitizeMath = (text: string) => {
         if (!text || typeof text !== 'string') return text;
-        let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
+        let clean = text.replace(/\r/g, '');
         clean = clean.replace(/\$\$/g, '$');
         const knownCommands = ['sin', 'cos', 'tan', 'ln', 'log', 'alpha', 'beta', 'gamma', 'delta', 'pi', 'frac', 'sqrt', 'infty', 'cdot', 'times', 'le', 'ge', 'neq', 'vec'];
         const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
@@ -194,7 +218,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         </span>
                     )}
                     <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full border border-slate-200">
-                        第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}
+                        第 {currentQ.question_number} 题
+                        <span className="ml-1 text-slate-500">
+                            （{currentQ.type === 'single_choice' ? '单选' : currentQ.type === 'multi_choice' ? '多选' : '填空'}）
+                        </span>
                     </span>
                     {isSubmitted && (
                         <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
@@ -206,17 +233,22 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 <div className="prose prose-slate prose-lg max-w-none mb-8">
                     <ReactMarkdown 
-                        remarkPlugins={[remarkMath]} 
+                        remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
-                        components={{ p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div> }}
+                        components={{ 
+                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>,
+                            table: ({children}) => <div className="table-container shadow-sm my-6 border border-slate-200 rounded-lg overflow-hidden"><table className="min-w-full divide-y divide-slate-200">{children}</table></div>,
+                            th: ({children}) => <th className="px-4 py-3 bg-slate-50 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b border-r border-slate-200 last:border-r-0">{children}</th>,
+                            td: ({children}) => <td className="px-4 py-3 text-sm text-slate-600 border-b border-r border-slate-200 last:border-r-0 bg-white">{children}</td>
+                        }}
                     >
-                        {sanitizeMath(currentQ.content).replace(/\\n/g, '\n').replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
+                        {sanitizeMath(currentQ.content).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
                     </ReactMarkdown>
                 </div>
 
                 <div className="my-6 flex flex-col items-center justify-center p-0 transition-all">
                     <img 
-                        src={`/biology-images/${currentQ.id}.png`} 
+                        src={`/biology/${currentQ.id}.png`} 
                         alt="题目插图" 
                         className="max-h-80 object-contain mix-blend-multiply"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -227,7 +259,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {currentQ.options.map((opt) => {
                             const isSelected = selectedOptions.includes(opt.label);
-                            const isCorrectOpt = Array.isArray(currentQ.answer) ? currentQ.answer.includes(opt.label) : currentQ.answer === opt.label;
+                            
+                            // Check if this specific option is part of the correct answer
+                            const isCorrectOpt = Array.isArray(currentQ.answer) 
+                                ? currentQ.answer.includes(opt.label) 
+                                : String(currentQ.answer).includes(opt.label);
                             
                             let buttonClass = "flex items-start gap-4 p-4 rounded-xl border transition-all duration-200 text-left ";
                             let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
@@ -257,7 +293,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <button key={opt.label} onClick={() => handleOptionSelect(opt.label)} disabled={isSubmitted} className={buttonClass}>
                                     <span className={badgeClass}>{opt.label}</span>
                                     <div className="flex-grow pt-0.5">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={{ 
+                                                p: ({children}) => <div className="whitespace-pre-wrap">{children}</div> 
+                                            }}
+                                        >
                                             {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
@@ -308,7 +350,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-                <div className="text-sm text-slate-400">专题进度：{currentIndex + 1} / {questions.length}</div>
+                <div className="text-sm text-slate-400">本次练习：{currentIndex + 1} / 总题库：{allCategoryQuestions.length}</div>
                 <div className="flex gap-4 w-full md:w-auto">
                     {!isSubmitted ? (
                         <button onClick={handleSubmit} disabled={(currentQ.type !== 'fill_in' && selectedOptions.length === 0)} className={`flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${(currentQ.type !== 'fill_in' && selectedOptions.length === 0) ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100'}`}>检查答案</button>
