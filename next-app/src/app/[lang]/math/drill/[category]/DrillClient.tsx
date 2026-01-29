@@ -169,17 +169,22 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     >
                         {sanitizeMath(question.content)
                             .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
+                            .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行，以便处理上下文
                             .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割
-                            .map(part => {
-                                // 如果是小问标记，确保前面有换行
+                            .map((part, index, array) => {
+                                // 如果是小问标记，检查其上下文
                                 if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
-                                    return `\n\n${part}`;
+                                    const prevPart = index > 0 ? array[index - 1] : "";
+                                    // 只有当编号位于开头，或者前面有空白字符（空格/换行）时，才触发换行
+                                    if (index === 0 || /\s$/.test(prevPart)) {
+                                        return `\n\n${part}`;
+                                    }
+                                    return part; // 否则保持原样（如在一句话中间的引用）
                                 }
                                 // Don't strip newlines
                                 return part.replace(/\r/g, '');
                             })
                             .join('')
-                            .replace(/\\n/g, '\n') // 将字符串中的字面量 \n 转换为真实的换行符
                             .trim()}
                     </ReactMarkdown>
                 </div>

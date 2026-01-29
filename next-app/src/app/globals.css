@@ -2,25 +2,58 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-@theme inline {
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --slate-50: #ffffff;
+  --slate-100: #f8fafc;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+}
+
+.dark {
+  --background: #131314;
+  --foreground: #e3e3e3;
+  --slate-50: #1e1f20;
+  --slate-100: #252526;
+  --slate-200: #333333;
+  --slate-300: #454545;
+  --slate-400: #b4b4b4;
+  --slate-500: #94a3b8;
+  --slate-600: #64748b;
+  --slate-700: #475569;
+  --slate-800: #2f2f31;
+  --slate-900: #1e1f20;
+  --slate-950: #131314;
+}
+
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Gemini-like Dark Mode Palette (Only for Dark mode) */
-}
-
-@layer base {
-  .dark {
-    --background: #131314;
-    --foreground: #e3e3e3;
-    --color-slate-950: #131314;
-    --color-slate-900: #1e1f20;
-    --color-slate-800: #2f2f31;
-    --color-slate-200: #e3e3e3;
-    --color-slate-400: #b4b4b4;
-  }
+  /* Reference our CSS variables so they update on theme change */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
 }
 
 body {
