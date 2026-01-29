@@ -1341,7 +1341,7 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-10",
     "question_number": "10",
     "type": "single_choice",
-    "type_rank": 9,
+    "type_rank": 10,
     "category": "conic",
     "content": "以抛物线C的顶点为圆心的圆交C于A、B两点，交C的准线于D、E两点．已知$|AB|=4\\\\sqrt{2}$， $|DE|=2\\\\sqrt{5}$，则C的焦点到准线的距离为",
     "options": [
@@ -1370,7 +1370,7 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-11",
     "question_number": "11",
     "type": "single_choice",
-    "type_rank": 10,
+    "type_rank": 11,
     "category": "solid_geometry",
     "content": "平面$\\\\alpha$过正方体$ABCD-A_1B_1C_1D_1$的顶点A，$\\\\alpha \\\\parallel$平面$CB_1D_1$，$\\\\alpha \\\\cap$平面$ABCD=m$，$\\\\alpha \\\\cap$平面$ABB_1A_1=n$，则$m、n$所成角的正弦值为",
     "options": [
@@ -1399,7 +1399,7 @@
     "id": "2016年高考数学试卷（理）（新课标Ⅰ）-12",
     "question_number": "12",
     "type": "single_choice",
-    "type_rank": 11,
+    "type_rank": 12,
     "category": "trigo_func",
     "content": "已知函数$f(x) = \\\\sin(\\\\omega x + \\\\phi)$（$\\\\omega > 0, |\\\\phi| \\\\le \\frac{\\\\pi}{2}$），$x = -\\frac{\\\\pi}{6}$为$f(x)$的零点，$x = \\frac{\\\\pi}{3}$为$y=f(x)$图象的对称轴，且$f(x)$在$(\\frac{\\\\pi}{6}, \\frac{\\\\pi}{3})$上单调，则$\\\\omega$的最大值为",
     "options": [

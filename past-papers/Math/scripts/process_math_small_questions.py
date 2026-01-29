@@ -5,7 +5,7 @@ import re
 import time
 from typing import List, Dict
 import google.generativeai as genai
-from pypdf import PdfReader, PdfWriter
+import docx
 
 # Configuration
 def load_api_key():
@@ -37,7 +37,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 MODEL_NAME = 'gemini-2.5-pro' 
 model = genai.GenerativeModel(MODEL_NAME)
 
-SYSTEM_PROMPT = """你是一个高水平数学专家和JSON数据提取器。你的任务是从高考数学试卷中完整提取所有选择题和填空题。
+SYSTEM_PROMPT = """你是一个高水平数学专家和JSON数据提取器。你的任务是从高考数学试卷（Word文档内容）中完整提取所有选择题和填空题。
 
 输出必须是一个JSON列表，每个题目必须包含：
 1. "question_number": 字符串（如 "1", "13"）
@@ -49,44 +49,35 @@ SYSTEM_PROMPT = """你是一个高水平数学专家和JSON数据提取器。你
 7. "score_rule": 分值说明
 
 重要约束：
-- **完整性**：必须根据试卷正文内容，完整提取所有的小题（单选题、多选题、填空题）。
-- **严重禁止**：提取任何答案、解析或解题思路。不要包含 "answer" 或 "explanation" 字段。
-- **严禁**：提取“解答题”，严禁提取“程序框图”或“算法”类题目。
+- **完整性**：必须根据文本内容，完整提取所有的小题（单选题、多选题、填空题）。
+- **严禁**：严谨提取“解答题”。
+- **跳过提取**：“程序框图”或“算法”类的选择题要跳过提取，下一道题的type_rank和question_number都相应+1。
 - **LaTeX 转义**：JSON 字符串中的所有反斜杠必须双重转义。例如：写成 "\\\\sin x" 而不是 "\\sin x"。
 - **数学公式**：确保所有数学符号都在 $ $ 内部并使用标准的 LaTeX。"""
 
-def get_dynamic_truncation_page(pdf_path):
-    """Find the page where big questions ('解答题') start."""
+def read_word_file(file_path):
+    """Read .docx or .doc (via textutil conversion) and return text."""
+    if file_path.endswith('.doc'):
+        # Convert .doc to .docx using textutil on macOS
+        docx_path = file_path + "x"
+        if not os.path.exists(docx_path):
+            print(f"Converting {file_path} to docx...")
+            os.system(f'textutil -convert docx "{file_path}"')
+        file_path = docx_path
+    
     try:
-        reader = PdfReader(pdf_path)
-        for i, page in enumerate(reader.pages):
-            text = page.extract_text()
-            # "解答题" is the safest marker. We want everything BEFORE this page and INCLUDING this page
-            # because fill-in-the-blanks might be on the same page.
-            if "解答题" in text:
-                return i + 1
-        return 6 # Fallback
+        doc = docx.Document(file_path)
+        full_text = []
+        for para in doc.paragraphs:
+            # Skip reading after "解答题" to save tokens and focus on small questions
+            if "解答题" in para.text:
+                full_text.append(para.text)
+                break
+            full_text.append(para.text)
+        return '\n'.join(full_text)
     except Exception as e:
-        print(f"Error scanning PDF {pdf_path}: {e}")
-        return 6
-
-def truncate_pdf(input_path, output_path):
-    """Keep only the first few pages containing small questions."""
-    reader = PdfReader(input_path)
-    writer = PdfWriter()
-    
-    end_page = get_dynamic_truncation_page(input_path)
-    # Ensure we at least take 2 pages if it's too small
-    if end_page < 2:
-        end_page = 4
-        
-    print(f"Truncating {input_path} up to page {end_page}")
-    
-    for i in range(0, min(end_page, len(reader.pages))):
-        writer.add_page(reader.pages[i])
-        
-    with open(output_path, "wb") as f:
-        writer.write(f)
+        print(f"Error reading Word file {file_path}: {e}")
+        return ""
 
 def clean_json_text(text):
     """Attempt to fix common JSON issues from LLM LaTeX output."""
@@ -152,20 +143,16 @@ def clean_question_content(questions):
                     opt["text"] = fix_text(opt["text"])
     return questions
 
-def process_paper(pdf_path, source_name):
+def process_paper(file_path, source_name):
     try:
-        reader = PdfReader(pdf_path)
-        end_page = get_dynamic_truncation_page(pdf_path)
-        if end_page < 2: end_page = 5
-        
-        full_text = ""
-        for i in range(min(end_page, len(reader.pages))):
-            full_text += f"\n--- Page {i+1} ---\n"
-            full_text += reader.pages[i].extract_text()
+        full_text = read_word_file(file_path)
+        if not full_text:
+            print(f"No text extracted from {source_name}")
+            return None
             
         print(f"Extracted {len(full_text)} characters from {source_name}")
         
-        # Build prompt - removed hardcoded 1-16 range
+        # Build prompt
         prompt = f"以下是从《{source_name}》中提取的文本。请从中完整提取所有的选择题和填空题。\n请注意：不要提供参考答案（answer）和解析（explanation）。\n\n{full_text}"
         
         max_retries = 5
@@ -274,63 +261,68 @@ def merge_questions(new_questions, target_file):
 
 if __name__ == "__main__":
     target_json = "/Users/yeatom/VSCodeProjects/gaokao/next-app/src/data/math/small_questions.json"
+    base_dir = "/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math"
     
-    # Process one by one to avoid large simultaneous overhead
-    tasks = [
+    # 核心提取任务列表 (对应 Word 文件名，不带后缀)
+    task_names = [
+        # 2025
+        "2025年高考数学试卷（全国Ⅰ卷）（空白卷）",
+        "2025年高考数学试卷（全国Ⅱ卷）（空白卷）",
+        # 2024
+        "2024年高考数学试卷（文）（全国甲卷）（空白卷）",
+        "2024年高考数学试卷（理）（全国甲卷）（空白卷）",
+        "2024年高考数学试卷（新课标Ⅰ卷）（空白卷）",
+        "2024年高考数学试卷（新课标Ⅱ卷）（空白卷）",
+        # 2023
+        "2023年高考数学试卷（文）（全国甲卷）（空白卷）",
+        "2023年高考数学试卷（文）（全国乙卷）（空白卷）",
+        "2023年高考数学试卷（理）（全国甲卷）（空白卷）",
+        "2023年高考数学试卷（理）（全国乙卷）（空白卷）",
+        "2023年高考数学试卷（新课标Ⅰ卷）（空白卷）",
+        "2023年高考数学试卷（新课标Ⅱ卷）（空白卷）",
+        # 2022
+        "2022年高考数学试卷（文）（全国甲卷）（空白卷）",
+        "2022年高考数学试卷（文）（全国乙卷）（空白卷）",
+        "2022年高考数学试卷（理）（全国甲卷）（空白卷）",
+        "2022年高考数学试卷（理）（全国乙卷）（空白卷）",
+        "2022年高考数学试卷（新高考Ⅰ卷）（空白卷）",
+        "2022年高考数学试卷（新高考Ⅱ卷）（空白卷）",
         # 2021
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）（空白卷）.pdf", "2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（文）（全国甲卷）（空白卷）.pdf", "2021年高考数学试卷（文）（全国甲卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（新高考Ⅰ卷）（空白卷）.pdf", "2021年高考数学试卷（新高考Ⅰ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（新高考Ⅱ卷）（空白卷）.pdf", "2021年高考数学试卷（新高考Ⅱ卷）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）（空白卷）.pdf", "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2021·高考数学真题/2021年高考数学试卷（理）（全国甲卷）（空白卷）.pdf", "2021年高考数学试卷（理）（全国甲卷）"),
+        "2021年高考数学试卷（文）（全国乙卷）（新课标Ⅰ）（空白卷）",
+        "2021年高考数学试卷（文）（全国甲卷）（空白卷）",
+        "2021年高考数学试卷（新高考Ⅰ卷）（空白卷）",
+        "2021年高考数学试卷（新高考Ⅱ卷）（空白卷）",
+        "2021年高考数学试卷（理）（全国乙卷）（新课标Ⅰ）（空白卷）",
+        "2021年高考数学试卷（理）（全国甲卷）（空白卷）",
         # 2020
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（文）（新课标Ⅰ）（空白卷）.pdf", "2020年高考数学试卷（文）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（文）（新课标Ⅱ）（空白卷）.pdf", "2020年高考数学试卷（文）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（文）（新课标Ⅲ）（空白卷）.pdf", "2020年高考数学试卷（文）（新课标Ⅲ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（新高考Ⅰ卷）（山东）（空白卷）.pdf", "2020年高考数学试卷（新高考Ⅰ卷）（山东）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（新高考Ⅱ卷）（海南）（空白卷）.pdf", "2020年高考数学试卷（新高考Ⅱ卷）（海南）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（理）（新课标Ⅰ）（空白卷）.pdf", "2020年高考数学试卷（理）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（理）（新课标Ⅱ）（空白卷）.pdf", "2020年高考数学试卷（理）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2020·高考数学真题/2020年高考数学试卷（理）（新课标Ⅲ）（空白卷）.pdf", "2020年高考数学试卷（理）（新课标Ⅲ）"),
-        # 2019
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（文）（新课标Ⅰ）（空白卷）.pdf", "2019年高考数学试卷（文）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（文）（新课标Ⅱ）（空白卷）.pdf", "2019年高考数学试卷（文）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（文）（新课标Ⅲ）（空白卷）.pdf", "2019年高考数学试卷（文）（新课标Ⅲ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（理）（新课标Ⅰ）（空白卷）.pdf", "2019年高考数学试卷（理）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（理）（新课标Ⅱ）（空白卷）.pdf", "2019年高考数学试卷（理）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2019·高考数学真题/2019年高考数学试卷（理）（新课标Ⅲ）（空白卷）.pdf", "2019年高考数学试卷（理）（新课标Ⅲ）"),
-        # 2018
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（文）（新课标Ⅰ）（空白卷）.pdf", "2018年高考数学试卷（文）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（文）（新课标Ⅱ）（空白卷）.pdf", "2018年高考数学试卷（文）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（文）（新课标Ⅲ）（空白卷）.pdf", "2018年高考数学试卷（文）（新课标Ⅲ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（理）（新课标Ⅰ）（空白卷）.pdf", "2018年高考数学试卷（理）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（理）（新课标Ⅱ）（空白卷）.pdf", "2018年高考数学试卷（理）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2018·高考数学真题/2018年高考数学试卷（理）（新课标Ⅲ）（空白卷）.pdf", "2018年高考数学试卷（理）（新课标Ⅲ）"),
-        # 2017
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（文）（新课标Ⅰ）（空白卷）.pdf", "2017年高考数学试卷（文）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（文）（新课标Ⅱ）（空白卷）.pdf", "2017年高考数学试卷（文）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（文）（新课标Ⅲ）（空白卷）.pdf", "2017年高考数学试卷（文）（新课标Ⅲ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（理）（新课标Ⅰ）（空白卷）.pdf", "2017年高考数学试卷（理）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（理）（新课标Ⅱ）（空白卷）.pdf", "2017年高考数学试卷（理）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2017·高考数学真题/2017年高考数学试卷（理）（新课标Ⅲ）（空白卷）.pdf", "2017年高考数学试卷（理）（新课标Ⅲ）"),
-        # 2016
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（文）（新课标Ⅰ）（空白卷）.pdf", "2016年高考数学试卷（文）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（文）（新课标Ⅱ）（空白卷）.pdf", "2016年高考数学试卷（文）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（文）（新课标Ⅲ）（空白卷）.pdf", "2016年高考数学试卷（文）（新课标Ⅲ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（理）（新课标Ⅰ）（空白卷）.pdf", "2016年高考数学试卷（理）（新课标Ⅰ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（理）（新课标Ⅱ）（空白卷）.pdf", "2016年高考数学试卷（理）（新课标Ⅱ）"),
-        ("/Users/yeatom/VSCodeProjects/gaokao/past-papers/Math/2016·高考数学真题/2016年高考数学试卷（理）（新课标Ⅲ）（空白卷）.pdf", "2016年高考数学试卷（理）（新课标Ⅲ）"),
+        "2020年高考数学试卷（文）（新课标Ⅰ）（空白卷）",
+        "2020年高考数学试卷（文）（新课标Ⅱ）（空白卷）",
+        "2020年高考数学试卷（文）（新课标Ⅲ）（空白卷）",
+        "2020年高考数学试卷（新高考Ⅰ卷）（山东）（空白卷）",
+        "2020年高考数学试卷（新高考Ⅱ卷）（海南）（空白卷）",
+        "2020年高考数学试卷（理）（新课标Ⅰ）（空白卷）",
+        "2020年高考数学试卷（理）（新课标Ⅱ）（空白卷）",
+        "2020年高考数学试卷（理）（新课标Ⅲ）（空白卷）",
     ]
     
-    for pdf_path, source in tasks:
-        if os.path.exists(pdf_path):
-            print(f"\nProcessing {source}...")
-            # We already have some questions, merge_questions handles duplicates
-            qs = process_paper(pdf_path, source)
+    for task_name in task_names:
+        # 生成 source 名称 (去掉 "（空白卷）" 使标签更美观)
+        source_name = task_name.replace("（空白卷）", "")
+        
+        # 优先尝试 .docx，其次尝试 .doc
+        found_path = None
+        for ext in ['.docx', '.doc']:
+            path = os.path.join(base_dir, task_name + ext)
+            if os.path.exists(path):
+                found_path = path
+                break
+        
+        if found_path:
+            print(f"\nProcessing {source_name} via {found_path}...")
+            qs = process_paper(found_path, source_name)
             if qs:
                 merge_questions(qs, target_json)
-            # Small delay between papers to keep API happy
+            # 稍微停顿，避免触发 API 限制
             time.sleep(5)
         else:
-            print(f"File not found: {pdf_path}")
+            print(f"File not found for task: {task_name}")

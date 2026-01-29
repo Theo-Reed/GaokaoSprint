@@ -88,6 +88,11 @@ const sanitizeMath = (text: string) => {
     const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
     clean = clean.replace(commandPattern, '\\$1');
 
+    // Fix double-escaped braces and pipes (often used in sets)
+    clean = clean.replace(/\\\\\{/g, '\\{');
+    clean = clean.replace(/\\\\\}/g, '\\}');
+    clean = clean.replace(/\\\\\|/g, '\\|');
+
     // 4. Targeted fixes for pi inside frac
     clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
     clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');

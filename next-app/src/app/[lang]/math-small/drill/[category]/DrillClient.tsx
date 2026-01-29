@@ -180,6 +180,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
         clean = clean.replace(commandPattern, '\\$1');
 
+        // Fix double-escaped braces and pipes (often used in sets)
+        // Cases like \\{ ... \\} or \\| which render as "newline + {" or "newline + |"
+        clean = clean.replace(/\\\\\{/g, '\\{');
+        clean = clean.replace(/\\\\\}/g, '\\}');
+        clean = clean.replace(/\\\\\|/g, '\\|');
+
         // 4. Targeted fixes for pi inside frac
         clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
         clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
