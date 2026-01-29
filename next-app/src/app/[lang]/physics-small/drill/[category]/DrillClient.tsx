@@ -7,7 +7,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-react';
-import questionsData from '@/data/biology/small_questions.json';
+import questionsData from '@/data/physics/small_questions.json';
 import Link from 'next/link';
 
 interface Option {
@@ -35,24 +35,11 @@ interface DrillClientProps {
 }
 
 const CATEGORY_NAMES: Record<string, string> = {
-  'molecular_basis': '元素、化合物与无机物',
-  'cell_structure': '细胞器与生物膜系统',
-  'transport': '物质跨膜运输',
-  'enzymes_atp': '酶与 ATP 的机制',
-  'photo_resp': '光合与呼吸',
-  'cell_lifecycle': '细胞生命历程',
-  'genetics_laws': '孟德尔遗传定律',
-  'meiosis': '减数分裂与受精',
-  'molecular_genetics': '分子遗传机制',
-  'variation_evolution': '变异、育种与进化',
-  'internal_environment': '内环境稳态',
-  'nervous_system': '神经调节',
-  'hormonal_reg': '激素/体液调节',
-  'immune_system': '免疫调节',
-  'plant_hormones': '植物激素调节',
-  'ecology_system': '生态系统及其稳态',
-  'bio_engineering': '基因与细胞工程',
-  'fermentation': '发酵工程与微生物',
+  'mechanics': '力学专题',
+  'electromagnetism': '电磁学',
+  'thermodynamics': '热学与光',
+  'atomic': '原子物理',
+  'experiment': '物理实验',
 };
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
@@ -135,7 +122,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
                 <h2 className="text-xl font-bold mb-4 text-slate-400">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
-                <Link href={`/${lang}/biology-small`} className="text-indigo-600 hover:underline">返回专题选择</Link>
+                <Link href={`/${lang}/physics-small`} className="text-indigo-600 hover:underline">返回专题选择</Link>
             </div>
         );
     }
@@ -151,12 +138,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         return userAns === correctAns;
     };
 
-    // Sanitize logic preserved
     const sanitizeMath = (text: string) => {
         if (!text || typeof text !== 'string') return text;
         let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
         clean = clean.replace(/\$\$/g, '$');
-        const knownCommands = ['sin', 'cos', 'tan', 'ln', 'log', 'alpha', 'beta', 'gamma', 'delta', 'pi', 'frac', 'sqrt', 'infty', 'cdot', 'times', 'le', 'ge', 'neq', 'vec'];
+        const knownCommands = ['sin', 'cos', 'tan', 'ln', 'log', 'alpha', 'beta', 'gamma', 'delta', 'pi', 'frac', 'sqrt', 'infty', 'cdot', 'times', 'le', 'ge', 'neq', 'vec', 'Omega', 'rho', 'lambda', 'v', 'a', 'm', 'F', 'E', 'B', 'Phi', 'mu'];
         const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
         clean = clean.replace(commandPattern, '\\$1');
         clean = clean.replace(/\\\\\{/g, '\\{').replace(/\\\\\}/g, '\\}').replace(/\\\\\|/g, '\\|');
@@ -172,7 +158,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
                 <div>
-                    <Link href={`/${lang}/biology-small`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
+                    <Link href={`/${lang}/physics-small`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         返回
                     </Link>
@@ -205,18 +191,14 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 </div>
 
                 <div className="prose prose-slate prose-lg max-w-none mb-8">
-                    <ReactMarkdown 
-                        remarkPlugins={[remarkMath]} 
-                        rehypePlugins={[rehypeKatex]}
-                        components={{ p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div> }}
-                    >
+                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={{ p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div> }}>
                         {sanitizeMath(currentQ.content).replace(/\\n/g, '\n').replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
                     </ReactMarkdown>
                 </div>
 
                 <div className="my-6 flex flex-col items-center justify-center p-0 transition-all">
                     <img 
-                        src={`/biology-images/${currentQ.id}.png`} 
+                        src={`/physics-images/${currentQ.id}.png`} 
                         alt="题目插图" 
                         className="max-h-80 object-contain mix-blend-multiply"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -228,10 +210,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         {currentQ.options.map((opt) => {
                             const isSelected = selectedOptions.includes(opt.label);
                             const isCorrectOpt = Array.isArray(currentQ.answer) ? currentQ.answer.includes(opt.label) : currentQ.answer === opt.label;
-                            
                             let buttonClass = "flex items-start gap-4 p-4 rounded-xl border transition-all duration-200 text-left ";
                             let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
-                            
                             if (isSubmitted) {
                                 if (isCorrectOpt) {
                                     buttonClass += "bg-indigo-50 border-indigo-600 text-indigo-900 ring-1 ring-indigo-600/20 ";
@@ -252,7 +232,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     badgeClass += "bg-white text-slate-500 border-slate-200";
                                 }
                             }
-
                             return (
                                 <button key={opt.label} onClick={() => handleOptionSelect(opt.label)} disabled={isSubmitted} className={buttonClass}>
                                     <span className={badgeClass}>{opt.label}</span>
@@ -267,24 +246,19 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </div>
                 )}
 
-                {/* Fill-in Logic preserved */}
                 {currentQ.type === 'fill_in' && (
                     <div className="mt-6">
                         {!isSubmitted ? (
                             <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
                                 <p className="text-slate-500 mb-4">填空题请在草稿纸上完成计算</p>
-                                <button onClick={handleSubmit} className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all shadow-sm flex items-center gap-2">
-                                    核对答案 <CheckCircle2 size={18} className="text-indigo-500" />
-                                </button>
+                                <button onClick={handleSubmit} className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all shadow-sm flex items-center gap-2">核对答案 <CheckCircle2 size={18} className="text-indigo-500" /></button>
                             </div>
                         ) : (
                             <div className="mt-4 animate-in zoom-in-95 duration-300">
                                 <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
                                     <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {sanitizeMath(String(currentQ.answer))}
-                                        </ReactMarkdown>
+                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{sanitizeMath(String(currentQ.answer))}</ReactMarkdown>
                                     </div>
                                 </div>
                             </div>
@@ -294,14 +268,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 {isSubmitted && showExplanation && currentQ.explanation && (
                     <div className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-top-4 duration-500">
-                        <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                            <span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>
-                            答题思路
-                        </h3>
+                        <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>答题思路</h3>
                         <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
-                            </ReactMarkdown>
+                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}</ReactMarkdown>
                         </div>
                     </div>
                 )}

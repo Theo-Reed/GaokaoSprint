@@ -8,11 +8,31 @@ interface Category {
 }
 
 const CATEGORIES: Category[] = [
-  { id: 'cell', name: '细胞与代谢', icon: '🧬' },
-  { id: 'genetics', name: '遗传与变异', icon: '🧬' },
-  { id: 'regulation', name: '稳态与环境', icon: '🌿' },
-  { id: 'ecology', name: '生态系统', icon: '🌎' },
-  { id: 'experiment', name: '实验专题', icon: '🧪' },
+  // 必修 1
+  { id: 'molecular_basis', name: '元素、化合物与无机物', icon: '🧪' },
+  { id: 'cell_structure', name: '细胞器与生物膜系统', icon: '🦠' },
+  { id: 'transport', name: '物质跨膜运输', icon: '🚚' },
+  { id: 'enzymes_atp', name: '酶与 ATP 的机制', icon: '⚡' },
+  { id: 'photo_resp', name: '光合与呼吸', icon: '🍃' },
+  { id: 'cell_lifecycle', name: '细胞生命历程', icon: '⏳' },
+
+  // 必修 2
+  { id: 'genetics_laws', name: '孟德尔遗传定律', icon: '🧬' },
+  { id: 'meiosis', name: '减数分裂与受精', icon: '🏹' },
+  { id: 'molecular_genetics', name: '分子遗传机制', icon: '🔗' },
+  { id: 'variation_evolution', name: '变异、育种与进化', icon: '🐵' },
+
+  // 选必 1
+  { id: 'internal_environment', name: '内环境稳态', icon: '⚖️' },
+  { id: 'nervous_system', name: '神经调节', icon: '🧠' },
+  { id: 'hormonal_reg', name: '激素/体液调节', icon: '💉' },
+  { id: 'immune_system', name: '免疫调节', icon: '🛡️' },
+  { id: 'plant_hormones', name: '植物激素调节', icon: '🌱' },
+
+  // 选必 2 & 3
+  { id: 'ecology_system', name: '生态系统及其稳态', icon: '🌍' },
+  { id: 'bio_engineering', name: '基因与细胞工程', icon: '🏗️' },
+  { id: 'fermentation', name: '发酵工程与微生物', icon: '🍺' },
 ];
 
 export async function generateStaticParams() {
