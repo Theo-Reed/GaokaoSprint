@@ -110,8 +110,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     if (!question) {
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
-                <h2 className="text-xl font-bold mb-4">该题库暂无题目 ({category})</h2>
-                <Link href={`/${lang}/math`} className="text-sm text-slate-500 hover:text-indigo-600 flex items-center gap-1 font-medium group">
+                <h2 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">该题库暂无题目 ({category})</h2>
+                <Link href={`/${lang}/math`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1 font-medium group">
                     <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                     返回
                 </Link>
@@ -122,19 +122,19 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
              {/* Header */}
-             <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
+             <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                  <div>
-                    <Link href={`/${lang}/math`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
+                    <Link href={`/${lang}/math`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-2 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         返回
                     </Link>
-                    <h1 className="text-2xl font-bold text-slate-900">
-                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600">大题特训</span>
+                    <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600 dark:text-indigo-400">大题特训</span>
                     </h1>
                  </div>
                  <div className={`
                     flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold
-                    ${timer > 600 ? 'bg-red-100 text-red-600' : 'bg-slate-100 text-slate-700'}
+                    ${timer > 600 ? 'bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-200' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}
                  `}>
                      <Clock size={20} />
                      {formatTime(timer)}
@@ -142,15 +142,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              </div>
 
              {/* Question Card */}
-             <div className="bg-white shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
+             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 {/* Source Badge */}
-                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
+                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                     {question.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full border border-indigo-100">
+                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
                             {question.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full border border-slate-200">
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                         {question.large_question_rank 
                             ? `第 ${question.question_number} 题 / 第 ${question.large_question_rank} 道大题`
                             : sourceRank
@@ -160,7 +160,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </span>
                 </div>
 
-                <div className="prose prose-slate prose-lg max-w-none">
+                <div className="prose prose-slate dark:prose-invert prose-lg max-w-none">
                     <ReactMarkdown 
                         remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
@@ -188,12 +188,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              <div className="space-y-6">
                  {/* Hint Section */}
                  <div className={`transition-all duration-500 overflow-hidden ${showHint ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+                    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6">
                         <div className="flex items-start gap-3">
-                            <Lightbulb className="text-amber-500 flex-shrink-0 mt-1" />
+                            <Lightbulb className="text-amber-500 dark:text-amber-400 flex-shrink-0 mt-1" />
                             <div>
-                                <h3 className="font-bold text-amber-900 mb-2">AI 解题思路提示</h3>
-                                <div className="prose prose-sm prose-amber max-w-none">
+                                <h3 className="font-bold text-amber-900 dark:text-amber-100 mb-2">AI 解题思路提示</h3>
+                                <div className="prose prose-sm prose-amber dark:prose-invert max-w-none">
                                     <ReactMarkdown 
                                         remarkPlugins={[remarkMath, remarkGfm]} 
                                         rehypePlugins={[rehypeKatex]}
@@ -209,7 +209,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                  {/* Buttons */}
                  <div className="flex flex-col md:flex-row gap-4 items-center justify-between pb-12">
-                    <div className="text-sm text-slate-400">
+                    <div className="text-sm text-slate-400 dark:text-slate-500">
                         专题题量：{(questionsData as unknown as Question[]).filter(q => q.category === category).length}
                     </div>
                     <div className="flex gap-4 w-full md:w-auto">
@@ -217,8 +217,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             onClick={() => setShowHint(!showHint)}
                             className={`px-6 py-4 rounded-xl font-bold transition-all border ${
                                 showHint 
-                                ? 'bg-amber-100 border-amber-300 text-amber-700' 
-                                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                                ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' 
+                                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
                             } flex items-center justify-center gap-2`}
                          >
                              <Lightbulb size={18} />
@@ -226,7 +226,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                          </button>
                          <button 
                             onClick={handleNext}
-                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
+                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 dark:hover:bg-indigo-700 transition-all shadow-lg shadow-slate-200 dark:shadow-none"
                          >
                              下一题
                              <ChevronRight size={18} />

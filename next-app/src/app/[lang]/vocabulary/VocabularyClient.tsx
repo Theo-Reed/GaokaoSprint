@@ -374,24 +374,24 @@ export default function VocabularyClient() {
 
   // 正常渲染
   return (
-    <div className="fixed inset-0 md:left-64 flex flex-col overflow-hidden bg-slate-50 text-slate-900 overscroll-none z-0">
-      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-slate-200 relative bg-white md:shadow-2xl">
+    <div className="fixed inset-0 md:left-64 flex flex-col overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overscroll-none z-0">
+      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-slate-200 dark:border-slate-800 relative bg-white dark:bg-slate-900 md:shadow-2xl">
       
       {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       
       {/* Top Bar */}
-      <div className="flex justify-between items-center p-4 border-b border-slate-100 z-10">
+      <div className="flex justify-between items-center p-4 border-b border-slate-100 dark:border-slate-800 z-10">
         <div className="flex gap-2">
             <button
                 onClick={() => setDefinitionMode(prev => prev === 'bilingual' ? 'english' : 'bilingual')}
-                className="text-[10px] uppercase tracking-widest font-black px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-500 hover:border-indigo-400 hover:text-indigo-600 transition-all shadow-sm flex items-center gap-2 active:scale-95"
+                className="text-[10px] uppercase tracking-widest font-black px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm flex items-center gap-2 active:scale-95"
             >
                 <Languages size={14} />
                 <span>{definitionMode === 'bilingual' ? 'Bilingual' : 'English Only'}</span>
             </button>
         </div>
 
-        <div className="text-[10px] font-black tracking-tighter text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg border border-indigo-100 uppercase">
+        <div className="text-[10px] font-black tracking-tighter text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-indigo-800 uppercase">
           Mastery: {masteredCount}
         </div>
       </div>
@@ -406,7 +406,7 @@ export default function VocabularyClient() {
             if (selection && selection.toString().length > 0) return;
             setIsFlipped(!isFlipped);
           }} 
-          className={`bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 overflow-hidden
+          className={`bg-white dark:bg-slate-900 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full flex flex-col items-center p-6 cursor-pointer relative group border border-gray-100 dark:border-slate-800 overflow-hidden
             ${isExiting ? 'opacity-0 scale-95 -translate-y-8 pointer-events-none' : 'opacity-100 scale-100 translate-y-0 animate-in fade-in slide-in-from-bottom-2'}`}
         >
           {/* 左上角：撤回 (可选，之前为已掌握，现在留空或做成撤回) */}
@@ -426,38 +426,38 @@ export default function VocabularyClient() {
 
           {/* 单词主显 */}
           <div className="flex-1 flex flex-col items-center justify-center w-full">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center break-words w-full px-2 mt-8">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 text-center break-words w-full px-2 mt-8">
               {currentWord.word}
             </h1>
 
             <div className="flex space-x-1 mb-6 opacity-20">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-indigo-600' : 'text-slate-200'}`}>★</span>
+                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-200 dark:text-slate-700'}`}>★</span>
               ))}
             </div>
 
-            <div className="text-slate-300 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse mt-4">Tap to reveal</div>
+            <div className="text-slate-300 dark:text-slate-600 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse mt-4">Tap to reveal</div>
           </div>
 
           {/* B面 (答案) */}
-          <div className={`absolute inset-0 bg-white/98 backdrop-blur-2xl z-10 flex flex-col text-left transition-all duration-500 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
+          <div className={`absolute inset-0 bg-white/98 dark:bg-slate-900/98 backdrop-blur-2xl z-10 flex flex-col text-left transition-all duration-500 rounded-3xl overflow-hidden ${isFlipped ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
              <div className="h-full overflow-y-auto no-scrollbar pt-5 pb-10 px-8">
                 <div className="mt-4"> {/* Compacted spacer */}
                    <ul className="space-y-4">
                      {currentWord.meanings.en?.map((m, i) => (
-                       <li key={i} className="text-lg leading-snug text-slate-700 border-l-2 border-indigo-500 pl-3">
+                       <li key={i} className="text-lg leading-snug text-slate-700 dark:text-slate-200 border-l-2 border-indigo-500 pl-3">
                           {definitionMode === 'bilingual' ? (
                               <div>
-                                  <div className="font-black text-slate-900 mb-1 flex items-baseline gap-2">
-                                    <span className="italic text-xs text-indigo-500 font-serif leading-none">{formatPos(currentWord.pos?.[i])}.</span> 
+                                  <div className="font-black text-slate-900 dark:text-white mb-1 flex items-baseline gap-2">
+                                    <span className="italic text-xs text-indigo-500 dark:text-indigo-400 font-serif leading-none">{formatPos(currentWord.pos?.[i])}.</span> 
                                     <span className="text-xl">{currentWord.meanings.cn?.[i] || ''}</span>
                                   </div>
-                                  <div className="text-sm text-slate-500 font-medium leading-relaxed">{m}</div>
+                                  <div className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{m}</div>
                               </div>
                           ) : (
                               <div className="flex gap-3">
-                                <span className="italic text-xs text-indigo-500 font-serif min-w-[2.5em] mt-1">{formatPos(currentWord.pos?.[i])}.</span>
-                                <span className="text-slate-700 font-medium">{m}</span>
+                                <span className="italic text-xs text-indigo-500 dark:text-indigo-400 font-serif min-w-[2.5em] mt-1">{formatPos(currentWord.pos?.[i])}.</span>
+                                <span className="text-slate-700 dark:text-slate-300 font-medium">{m}</span>
                               </div>
                           )}
                        </li>
@@ -474,11 +474,11 @@ export default function VocabularyClient() {
 
                   return (
                     <div className="mt-6">
-                      <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 pb-1">Usage Context</h3>
+                      <h3 className="text-[10px] font-black text-slate-300 dark:text-slate-600 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 dark:border-slate-800 pb-1">Usage Context</h3>
                       <div className="space-y-3">
                         {examplesToDisplay.map((ex, i) => (
-                          <div key={i} className="text-slate-600 bg-slate-50/50 border border-slate-100/50 p-3 rounded-2xl text-sm leading-relaxed"
-                               dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 font-black decoration-indigo-200 decoration-2 underline-offset-4">$1</span>') }}
+                          <div key={i} className="text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100/50 dark:border-slate-700/50 p-3 rounded-2xl text-sm leading-relaxed"
+                               dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 dark:text-indigo-400 font-black decoration-indigo-200 dark:decoration-indigo-800 decoration-2 underline-offset-4">$1</span>') }}
                           />
                         ))}
                       </div>
@@ -492,10 +492,10 @@ export default function VocabularyClient() {
       )}
 
       {/* 底部操作栏 */}
-      <div className="p-6 grid grid-cols-3 gap-4 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+      <div className="p-6 grid grid-cols-3 gap-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] dark:shadow-none">
         <button 
           onClick={() => handleAction('mastered')}
-          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white border border-slate-200 text-slate-400 transition-all active:scale-95 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50/30"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/30 dark:hover:bg-indigo-900/30"
         >
           <span className="text-xl mb-1">👑</span>
           <span className="font-black text-[10px] uppercase tracking-wider">掌握</span>
@@ -503,7 +503,7 @@ export default function VocabularyClient() {
 
         <button 
           onClick={() => handleAction('familiar')}
-          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white border border-slate-200 text-slate-400 transition-all active:scale-95 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50/30"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/30 dark:hover:bg-indigo-900/30"
         >
           <span className="text-xl mb-1">👍</span>
           <span className="font-black text-[10px] uppercase tracking-wider">认识</span>
@@ -511,7 +511,7 @@ export default function VocabularyClient() {
         
         <button 
           onClick={() => handleAction('next')}
-          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-indigo-600 text-white shadow-xl shadow-indigo-200 transition-all active:scale-95 hover:bg-indigo-700"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-200 dark:shadow-none transition-all active:scale-95"
         >
           <span className="text-xl mb-1">➡️</span>
           <span className="font-black text-[10px] uppercase tracking-wider">下一个</span>

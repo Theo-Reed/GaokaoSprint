@@ -39,17 +39,17 @@ export default function AuthOverlay({ onLoginSuccess }: { onLoginSuccess: () => 
 
   return (
     <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[60] flex items-center justify-center p-4">
-      <div className="bg-white rounded-[2rem] p-8 w-full max-w-sm shadow-2xl relative border border-slate-100">
-        <h2 className="text-2xl font-black mb-6 text-slate-900 tracking-tight text-center">{isSignUp ? 'Join Us' : 'Welcome Back'}</h2>
+      <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 w-full max-w-sm shadow-2xl relative border border-slate-100 dark:border-slate-800">
+        <h2 className="text-2xl font-black mb-6 text-slate-900 dark:text-white tracking-tight text-center">{isSignUp ? 'Join Us' : 'Welcome Back'}</h2>
         
         <div className="space-y-4">
             <input 
-            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+            className="w-full px-4 py-3.5 border border-slate-200 dark:border-slate-700 rounded-2xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500" 
             placeholder="Email Address" 
             value={email} onChange={e => setEmail(e.target.value)}
             />
             <input 
-            className="w-full px-4 py-3.5 border border-slate-200 rounded-2xl bg-slate-50 text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+            className="w-full px-4 py-3.5 border border-slate-200 dark:border-slate-700 rounded-2xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500" 
             type="password" placeholder="Password (6+ chars)" 
             value={password} onChange={e => setPassword(e.target.value)}
             />
@@ -58,15 +58,15 @@ export default function AuthOverlay({ onLoginSuccess }: { onLoginSuccess: () => 
         <button 
           onClick={handleAuth} 
           disabled={loading}
-          className="w-full bg-indigo-600 text-white font-black py-4 rounded-2xl disabled:opacity-50 hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 mt-6 active:scale-[0.98]"
+          className="w-full bg-indigo-600 text-white font-black py-4 rounded-2xl disabled:opacity-50 hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 dark:shadow-none mt-6 active:scale-[0.98]"
         >
           {loading ? 'Processing...' : (isSignUp ? 'Create Account' : 'Sign In')}
         </button>
 
-        {msg && <div className="text-red-500 text-sm mt-4 text-center font-medium bg-red-50 p-3 rounded-xl border border-red-100">{msg}</div>}
+        {msg && <div className="text-red-500 text-sm mt-4 text-center font-medium bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-900/50">{msg}</div>}
 
         <div className="mt-8 text-center text-xs text-slate-400 font-bold uppercase tracking-widest">
-          <span onClick={() => setIsSignUp(!isSignUp)} className="cursor-pointer hover:text-indigo-600 transition-colors">
+          <span onClick={() => setIsSignUp(!isSignUp)} className="cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
             {isSignUp ? 'Already have an account?' : 'No account yet?'}
           </span>
         </div>

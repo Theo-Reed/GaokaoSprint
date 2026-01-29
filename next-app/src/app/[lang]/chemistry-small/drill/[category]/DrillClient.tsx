@@ -121,8 +121,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     if (!currentQ) {
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
-                <h2 className="text-xl font-bold mb-4 text-slate-400">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
-                <Link href={`/${lang}/chemistry-small`} className="text-indigo-600 hover:underline">返回专题选择</Link>
+                <h2 className="text-xl font-bold mb-4 text-slate-400 dark:text-slate-500">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
+                <Link href={`/${lang}/chemistry-small`} className="text-indigo-600 dark:text-indigo-400 hover:underline">返回专题选择</Link>
             </div>
         );
     }
@@ -138,30 +138,30 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
-            <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
+            <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                 <div>
-                    <Link href={`/${lang}/chemistry-small`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
+                    <Link href={`/${lang}/chemistry-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-2 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />返回
                     </Link>
-                    <h1 className="text-2xl font-bold text-slate-900">{CATEGORY_NAMES[category]} <span className="text-indigo-600">小题特训</span></h1>
+                    <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{CATEGORY_NAMES[category]} <span className="text-indigo-600 dark:text-indigo-400">小题特训</span></h1>
                 </div>
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold ${timer > 180 ? 'bg-red-100 text-red-600' : 'bg-slate-100 text-slate-700'}`}>
+                <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold ${timer > 180 ? 'bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-200' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}`}>
                     <Clock size={20} />{formatTime(timer)}
                 </div>
             </div>
 
-            <div className="bg-white shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
-                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
-                    {currentQ.source && <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full border border-indigo-100">{currentQ.source}</span>}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full border border-slate-200">第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}</span>
+            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-700">
+                    {currentQ.source && <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">{currentQ.source}</span>}
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}</span>
                     {isSubmitted && (
-                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
+                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'}`}>
                             {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}{isCorrect() ? '回答正确' : '回答错误'}
                         </span>
                     )}
                 </div>
 
-                <div className="prose prose-slate prose-lg max-w-none mb-8">
+                <div className="prose prose-slate dark:prose-invert prose-lg max-w-none mb-8">
                     <ReactMarkdown 
                         remarkPlugins={[remarkMath]} 
                         rehypePlugins={[rehypeKatex]} 
@@ -175,7 +175,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <img 
                         src={`/chemistry-images/${currentQ.id}.png`} 
                         alt="题目插图" 
-                        className="max-h-80 object-contain mix-blend-multiply"
+                        className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                 </div>
@@ -187,24 +187,25 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             const isCorrectOpt = Array.isArray(currentQ.answer) ? currentQ.answer.includes(opt.label) : currentQ.answer === opt.label;
                             let buttonClass = "flex items-start gap-4 p-4 rounded-xl border transition-all duration-200 text-left ";
                             let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
+                            
                             if (isSubmitted) {
                                 if (isCorrectOpt) {
-                                    buttonClass += "bg-indigo-50 border-indigo-600 text-indigo-900 ring-1 ring-indigo-600/20 ";
-                                    badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
+                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/40 border-indigo-600 dark:border-indigo-500 text-indigo-900 dark:text-indigo-100 ring-1 ring-indigo-600/20 ";
+                                    badgeClass += "bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500 shadow-sm";
                                 } else if (isSelected) {
-                                    buttonClass += "bg-slate-50 border-slate-300 text-slate-400 ";
-                                    badgeClass += "bg-slate-400 text-white border-slate-400";
+                                    buttonClass += "bg-slate-50 dark:bg-red-900/20 border-slate-300 dark:border-red-900/50 text-slate-400 dark:text-red-300 ";
+                                    badgeClass += "bg-slate-400 dark:bg-red-800 text-white border-slate-400 dark:border-red-800";
                                 } else {
-                                    buttonClass += "bg-white border-slate-100 text-slate-300 ";
-                                    badgeClass += "bg-white text-slate-200 border-slate-100";
+                                    buttonClass += "bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800 text-slate-300 dark:text-slate-700 ";
+                                    badgeClass += "bg-white dark:bg-slate-900 text-slate-200 dark:text-slate-700 border-slate-100 dark:border-slate-800";
                                 }
                             } else {
                                 if (isSelected) {
-                                    buttonClass += "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-md ";
+                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 text-indigo-700 dark:text-indigo-200 shadow-md ";
                                     badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
                                 } else {
-                                    buttonClass += "bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-slate-50 ";
-                                    badgeClass += "bg-white text-slate-500 border-slate-200";
+                                    buttonClass += "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800 ";
+                                    badgeClass += "bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700";
                                 }
                             }
                             return (
@@ -228,15 +229,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {currentQ.type === 'fill_in' && (
                     <div className="mt-6">
                         {!isSubmitted ? (
-                            <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-                                <p className="text-slate-500 mb-4">填空题请在草稿纸上完成计算</p>
-                                <button onClick={handleSubmit} className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all shadow-sm flex items-center gap-2">核对答案 <CheckCircle2 size={18} className="text-indigo-500" /></button>
+                            <div className="bg-slate-50 dark:bg-slate-800 border border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-slate-500 dark:text-slate-400 mb-4">填空题请在草稿纸上完成计算</p>
+                                <button onClick={handleSubmit} className="px-8 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2">核对答案 <CheckCircle2 size={18} className="text-indigo-500" /></button>
                             </div>
                         ) : (
                             <div className="mt-4 animate-in zoom-in-95 duration-300">
-                                <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
-                                    <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
-                                    <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
+                                <div className="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 flex flex-col items-center">
+                                    <span className="text-sm font-bold text-indigo-400 dark:text-indigo-300 mb-2 uppercase tracking-wider">正确答案</span>
+                                    <div className="text-2xl font-serif text-indigo-900 dark:text-indigo-100 bg-white dark:bg-slate-800 px-8 py-4 rounded-xl shadow-sm border border-indigo-50 dark:border-indigo-900">
                                         <ReactMarkdown 
                                             remarkPlugins={[remarkMath]} 
                                             rehypePlugins={[rehypeKatex]}
@@ -252,9 +253,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 )}
 
                 {isSubmitted && showExplanation && currentQ.explanation && (
-                    <div className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-top-4 duration-500">
-                        <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>答题思路</h3>
-                        <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
+                    <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-500">
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>答题思路</h3>
+                        <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/50 text-slate-700 dark:text-slate-200 leading-relaxed shadow-sm">
                             <ReactMarkdown 
                                 remarkPlugins={[remarkMath]} 
                                 rehypePlugins={[rehypeKatex]}
@@ -268,16 +269,16 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-                <div className="text-sm text-slate-400">专题进度：{currentIndex + 1} / {questions.length}</div>
+                <div className="text-sm text-slate-400 dark:text-slate-500">专题进度：{currentIndex + 1} / {questions.length}</div>
                 <div className="flex gap-4 w-full md:w-auto">
                     {!isSubmitted ? (
-                        <button onClick={handleSubmit} disabled={(currentQ.type !== 'fill_in' && selectedOptions.length === 0)} className={`flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${(currentQ.type !== 'fill_in' && selectedOptions.length === 0) ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100'}`}>检查答案</button>
+                        <button onClick={handleSubmit} disabled={(currentQ.type !== 'fill_in' && selectedOptions.length === 0)} className={`flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${(currentQ.type !== 'fill_in' && selectedOptions.length === 0) ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100'}`}>检查答案</button>
                     ) : (
                         <div className="flex gap-4 w-full md:w-auto">
                             {currentQ.explanation && (
-                                <button onClick={() => setShowExplanation(!showExplanation)} className={`px-6 py-4 rounded-xl font-bold transition-all border ${showExplanation ? 'bg-amber-100 border-amber-300 text-amber-700' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'}`}>{showExplanation ? '隐藏解析' : '查看解析'}</button>
+                                <button onClick={() => setShowExplanation(!showExplanation)} className={`px-6 py-4 rounded-xl font-bold transition-all border ${showExplanation ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'}`}>{showExplanation ? '隐藏解析' : '查看解析'}</button>
                             )}
-                            <button onClick={handleNext} className="flex-grow md:flex-grow-0 px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 hover:text-indigo-600 transition-all shadow-sm">下一题 <ChevronRight size={20} /></button>
+                            <button onClick={handleNext} className="flex-grow md:flex-grow-0 px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm">下一题 <ChevronRight size={20} /></button>
                         </div>
                     )}
                 </div>

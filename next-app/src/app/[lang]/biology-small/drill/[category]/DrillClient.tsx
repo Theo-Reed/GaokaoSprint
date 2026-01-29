@@ -63,9 +63,21 @@ const CATEGORY_NAMES: Record<string, string> = {
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
     // Determine pool of questions for this category
-    const allCategoryQuestions = React.useMemo(() => 
-        (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category), 
-    [category]);
+    const allCategoryQuestions = React.useMemo(() => {
+        const rawQuestions = (questionsData as unknown as any[]).filter(q => q.category === category);
+        return rawQuestions.map(q => {
+            if (q.id) return q as SmallQuestion;
+            // Generate a stable ID based on content hash if ID is missing
+            const contentHash = q.content.split('').reduce((a: number, b: string) => {
+                a = ((a << 5) - a) + b.charCodeAt(0);
+                return a & a;
+            }, 0);
+            return {
+                ...q,
+                id: `bio-${q.category}-${q.question_number}-${Math.abs(contentHash).toString(16)}`
+            } as SmallQuestion;
+        });
+    }, [category]);
 
     // Use intelligent drill strategy
     const { pickNextQuestion, markAsCorrect, loading: strategyLoading } = useDrillStrategy(allCategoryQuestions, 'biology');
@@ -168,11 +180,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const currentQ = currentQuestion;
 
     if (!currentQ) {
-        if (strategyLoading) return <div className="p-10 text-center">Loading Strategy...</div>;
+        if (strategyLoading) return <div className="p-10 text-center text-slate-500 dark:text-slate-400">Loading Strategy...</div>;
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
-                <h2 className="text-xl font-bold mb-4 text-slate-400">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
-                <Link href={`/${lang}/biology-small`} className="text-indigo-600 hover:underline">返回专题选择</Link>
+                <h2 className="text-xl font-bold mb-4 text-slate-400 dark:text-slate-500">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
+                <Link href={`/${lang}/biology-small`} className="text-indigo-600 dark:text-indigo-400 hover:underline">返回专题选择</Link>
             </div>
         );
     }
@@ -181,50 +193,50 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
-            <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
+            <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                 <div>
-                    <Link href={`/${lang}/biology-small`} className="text-sm text-slate-500 hover:text-indigo-600 mb-2 flex items-center gap-1 font-medium group">
+                    <Link href={`/${lang}/biology-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-2 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         返回
                     </Link>
-                    <h1 className="text-2xl font-bold text-slate-900">
-                        {CATEGORY_NAMES[category]} <span className="text-indigo-600">小题特训</span>
+                    <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                        {CATEGORY_NAMES[category]} <span className="text-indigo-600 dark:text-indigo-400">小题特训</span>
                     </h1>
                 </div>
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold ${timer > 180 ? 'bg-red-100 text-red-600' : 'bg-slate-100 text-slate-700'}`}>
+                <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold ${timer > 180 ? 'bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-200' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}`}>
                     <Clock size={20} />
                     {formatTime(timer)}
                 </div>
             </div>
 
-            <div className="bg-white shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 flex-grow relative overflow-hidden">
-                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100">
+            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+                <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                     {currentQ.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full border border-indigo-100">
+                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
                             {currentQ.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full border border-slate-200">
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                         第 {currentQ.question_number} 题
-                        <span className="ml-1 text-slate-500">
+                        <span className="ml-1 text-slate-500 dark:text-slate-500">
                             （{currentQ.type === 'single_choice' ? '单选' : currentQ.type === 'multi_choice' ? '多选' : '填空'}）
                         </span>
                     </span>
                     {isSubmitted && (
-                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
+                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'}`}>
                             {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}
                             {isCorrect() ? '回答正确' : '回答错误'}
                         </span>
                     )}
                 </div>
 
-                <div className="prose prose-slate prose-lg max-w-none mb-8">
+                <div className="prose prose-slate dark:prose-invert prose-lg max-w-none mb-8">
                     <ReactMarkdown 
                         remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
                         components={markdownComponents}
                     >
-                        {sanitizeMath(currentQ.content).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
+                        {sanitizeMath(currentQ.content, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
                     </ReactMarkdown>
                 </div>
 
@@ -232,7 +244,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <img 
                         src={`/biology/${currentQ.id}.png`} 
                         alt="题目插图" 
-                        className="max-h-80 object-contain mix-blend-multiply"
+                        className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                 </div>
@@ -252,22 +264,22 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             
                             if (isSubmitted) {
                                 if (isCorrectOpt) {
-                                    buttonClass += "bg-indigo-50 border-indigo-600 text-indigo-900 ring-1 ring-indigo-600/20 ";
-                                    badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
+                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/40 border-indigo-600 dark:border-indigo-500 text-indigo-900 dark:text-indigo-100 ring-1 ring-indigo-600/20 ";
+                                    badgeClass += "bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500 shadow-sm";
                                 } else if (isSelected) {
-                                    buttonClass += "bg-slate-50 border-slate-300 text-slate-400 ";
-                                    badgeClass += "bg-slate-400 text-white border-slate-400";
+                                    buttonClass += "bg-slate-50 dark:bg-red-900/20 border-slate-300 dark:border-red-900/50 text-slate-400 dark:text-red-300 ";
+                                    badgeClass += "bg-slate-400 dark:bg-red-800 text-white border-slate-400 dark:border-red-800";
                                 } else {
-                                    buttonClass += "bg-white border-slate-100 text-slate-300 ";
-                                    badgeClass += "bg-white text-slate-200 border-slate-100";
+                                    buttonClass += "bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800 text-slate-300 dark:text-slate-700 ";
+                                    badgeClass += "bg-white dark:bg-slate-900 text-slate-200 dark:text-slate-700 border-slate-100 dark:border-slate-800";
                                 }
                             } else {
                                 if (isSelected) {
-                                    buttonClass += "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-md ";
+                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 text-indigo-700 dark:text-indigo-200 shadow-md ";
                                     badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
                                 } else {
-                                    buttonClass += "bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-slate-50 ";
-                                    badgeClass += "bg-white text-slate-500 border-slate-200";
+                                    buttonClass += "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800 ";
+                                    badgeClass += "bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700";
                                 }
                             }
 
@@ -280,7 +292,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                             rehypePlugins={[rehypeKatex]}
                                             components={simpleMarkdownComponents}
                                         >
-                                            {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                            {sanitizeMath(opt.text, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -293,9 +305,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {currentQ.type === 'fill_in' && (
                     <div className="mt-6">
                         {!isSubmitted ? (
-                            <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-                                <p className="text-slate-500 mb-4">填空题请在草稿纸上完成计算</p>
-                                <button onClick={handleSubmit} className="px-8 py-3 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all shadow-sm flex items-center gap-2">
+                            <div className="bg-slate-50 dark:bg-slate-800 border border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-slate-500 dark:text-slate-400 mb-4">填空题请在草稿纸上完成计算</p>
+                                <button onClick={handleSubmit} className="px-8 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2">
                                     核对答案 <CheckCircle2 size={18} className="text-indigo-500" />
                                 </button>
                             </div>
