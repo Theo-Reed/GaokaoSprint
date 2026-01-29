@@ -4,11 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft, RotateCcw } from 'lucide-react';
 import questionsData from '@/data/math/small_questions.json';
 import Link from 'next/link';
+import { sanitizeMath, markdownComponents } from '@/components/DrillMarkdownHelpers';
 
 interface Option {
   label: string;
@@ -49,6 +51,9 @@ const CATEGORY_NAMES: Record<string, string> = {
     'solid_geometry': '立体几何',
     'probability': '概率统计',
 };
+
+// Removed local sanitizeMath and markdownComponents
+
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
     const [questions, setQuestions] = useState<SmallQuestion[]>([]);
@@ -149,82 +154,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         return userAns === correctAns;
     };
 
-    const sanitizeMath = (text: string) => {
-        if (!text || typeof text !== 'string') return text;
-        
-        // 1. Critical Fix: Remove all carriage returns and fragmented newlines found in PDF extraction
-        // Replace single newlines with space. Preserve \n\n as paragraph break.
-        let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
-
-        // 2. Normalize delimiters
-        clean = clean.replace(/\$\$/g, '$');
-
-        // 3. Fix double-escaped backslashes for common Math/LaTeX commands (Critical Fix)
-        // The source data can contain "double escaped" artifacts (e.g. \\\\cos instead of \\cos),
-        // which renders as "newline + cos" or breaks rendering.
-        const knownCommands = [
-            'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan',
-            'ln', 'log', 'lg', 'exp',
-            'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-            'Gamma', 'Delta', 'Theta', 'Lambda', 'Xi', 'Pi', 'Sigma', 'Upsilon', 'Phi', 'Psi', 'Omega',
-            'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty',
-            'cdot', 'times', 'div', 'pm', 'mp',
-            'le', 'ge', 'leq', 'geq', 'ne', 'neq', 'approx', 'equiv', 'cong',
-            'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset',
-            'vec', 'hat', 'bar', 'tilde',
-            'angle', 'triangle', 'bot',
-            'Leftarrow', 'Rightarrow', 'Leftrightarrow'
-        ];
-        
-        // Replace \\\\(command) with \\(command)
-        const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
-        clean = clean.replace(commandPattern, '\\$1');
-
-        // Fix double-escaped braces and pipes (often used in sets)
-        // Cases like \\{ ... \\} or \\| which render as "newline + {" or "newline + |"
-        clean = clean.replace(/\\\\\{/g, '\\{');
-        clean = clean.replace(/\\\\\}/g, '\\}');
-        clean = clean.replace(/\\\\\|/g, '\\|');
-
-        // 4. Targeted fixes for pi inside frac
-        clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
-        clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
-
-        // 5. General symbol cleanup (add missing backslash)
-        const autoEscapeSymbols = [
-             'sin', 'cos', 'tan', 'ln', 'log',
-             'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
-        ];
-        
-        autoEscapeSymbols.forEach(sym => {
-             // Look for symbol NOT preceded by slash
-             clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
-             
-             // Look for symbol followed by variable text, e.g. "sin x", "omega x"
-             // clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}([a-z])`, 'g'), `\\${sym} $1`);
-        });
-
-        // 6. Wrap standalone sqrt numbers
-        clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
-        
-        // 6. Ensure math mode if we have LaTeX commands like \frac, \sqrt, \sin but NO $ wrappers
-        if (clean.includes('\\') && !clean.includes('$')) {
-            // Rough heuristic: if it looks like latex, wrap it.
-            // But be careful of mixed text.
-            // Better strategy: Wrap specifically identified math chunks? 
-            // For now, let's just leave it to ReactMarkdown's remark-math which handles $...$
-            // If the text is "y = \sin x", remark-math might not pick it up without $.
-            // So we liberally wrap standard patterns.
-            
-            // Allow wrapping of entire string if it seems to be a formula
-            if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
-                 clean = `$${clean}$`;
-            }
-        }
-
-        return clean;
-    };
-
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             {/* Header */}
@@ -275,13 +204,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 <div className="prose prose-slate prose-lg max-w-none mb-8">
                     <ReactMarkdown 
-                        remarkPlugins={[remarkMath]} 
+                        remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
-                        components={{
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div>
-                        }}
+                        components={markdownComponents}
                     >
-                        {sanitizeMath(currentQ.content)
+                        {sanitizeMath(currentQ.content, { stripSingleNewlines: true })
                             .replace(/\\n/g, '\n')
                             .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') 
                         }
@@ -356,8 +283,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                         {opt.label}
                                     </span>
                                     <div className="flex-grow pt-0.5">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={markdownComponents}
+                                        >
+                                            {sanitizeMath(opt.text, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -384,8 +315,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
                                     <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                            {sanitizeMath(String(currentQ.answer))}
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={markdownComponents}
+                                        >
+                                            {sanitizeMath(String(currentQ.answer), { stripSingleNewlines: true })}
                                         </ReactMarkdown>
                                     </div>
                                 </div>
@@ -402,8 +337,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             答题思路
                         </h3>
                         <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                                {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
+                            <ReactMarkdown 
+                                remarkPlugins={[remarkMath]} 
+                                rehypePlugins={[rehypeKatex]}
+                                components={markdownComponents}
+                            >
+                                {sanitizeMath(currentQ.explanation, { stripSingleNewlines: true }).replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                         </div>
                     </div>

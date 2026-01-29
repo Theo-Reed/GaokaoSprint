@@ -28,9 +28,9 @@ interface VocabularySystemProps {
 }
 
 const TierBadge = ({ tier }: { tier: number }) => {
-  if (tier === 1) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-700">Tier 1: Core</span>;
-  if (tier === 2) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-700">Tier 2: Polysemy</span>;
-  if (tier === 3) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 text-emerald-700">Tier 3: Defense</span>;
+  if (tier === 1) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-100">Tier 1: Core</span>;
+  if (tier === 2) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-100">Tier 2: Polysemy</span>;
+  if (tier === 3) return <span className="px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-100">Tier 3: Defense</span>;
   return null;
 };
 
@@ -40,9 +40,9 @@ const FrequencyGraph = ({ freq, years }: { freq: number; years: number }) => {
     const widthPercentage = Math.min((freq / maxFreq) * 100, 100);
     
     return (
-        <div className="flex items-center gap-2 text-xs text-slate-400 mt-1">
-            <div className="w-16 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full bg-indigo-500 rounded-full" style={{ width: `${widthPercentage}%` }}></div>
+        <div className="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500 mt-1">
+            <div className="w-16 h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                <div className="h-full bg-indigo-500 dark:bg-indigo-400 rounded-full" style={{ width: `${widthPercentage}%` }}></div>
             </div>
             <span>{freq} hits / {years} yrs</span>
         </div>
@@ -56,42 +56,42 @@ const WordCard = ({ entry }: { entry: VocabEntry }) => {
     const displayExamples = entry.example_sentences.slice(0, 3);
     
     return (
-        <div className="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-2">
                 <div>
-                    <h3 className="text-xl font-bold text-slate-800 font-serif tracking-wide">{entry.word}</h3>
+                    <h3 className="text-xl font-bold text-slate-800 dark:text-white font-serif tracking-wide">{entry.word}</h3>
                     <div className="flex items-center gap-2 mt-1">
-                        <span className="text-sm font-mono text-slate-500 italic">{entry.pos}</span>
+                        <span className="text-sm font-mono text-slate-500 dark:text-slate-400 italic">{entry.pos}</span>
                         <TierBadge tier={entry.tier} />
                         {entry.is_polysemy && (
-                            <span className="text-xs bg-red-50 text-red-600 px-1.5 py-0.5 rounded border border-red-100">⚠ Trap Word</span>
+                            <span className="text-xs bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300 px-1.5 py-0.5 rounded border border-red-100 dark:border-red-800">⚠ Trap Word</span>
                         )}
                     </div>
                 </div>
                 <div className="text-right">
-                    <span className="text-xs font-bold text-slate-400 block">LAST SEEN</span>
-                    <span className="text-lg font-bold text-indigo-600">{entry.last_seen_year || 'N/A'}</span>
+                    <span className="text-xs font-bold text-slate-400 dark:text-slate-500 block">LAST SEEN</span>
+                    <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{entry.last_seen_year || 'N/A'}</span>
                 </div>
             </div>
 
             <FrequencyGraph freq={entry.frequency} years={entry.years_count} />
 
-            <div className="mt-4 prose prose-sm">
+            <div className="mt-4 prose prose-sm dark:prose-invert">
                 {entry.meanings.length > 0 ? (
-                    <ul className="list-disc list-inside text-slate-700">
+                    <ul className="list-disc list-inside text-slate-700 dark:text-slate-300">
                         {entry.meanings.map((m, i) => (
                             <li key={i}>{m}</li>
                         ))}
                     </ul>
                 ) : (
-                    <p className="text-slate-400 italic text-sm">No definition (Real Exam Word)</p>
+                    <p className="text-slate-400 dark:text-slate-500 italic text-sm">No definition (Real Exam Word)</p>
                 )}
             </div>
 
-            <div className="mt-4 pt-4 border-t border-slate-100">
+            <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
                 <button 
                   onClick={() => setExpanded(!expanded)}
-                  className="w-full text-xs font-semibold text-slate-500 hover:text-indigo-600 flex items-center justify-between"
+                  className="w-full text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center justify-between"
                 >
                     <span>{expanded ? 'Hide Analysis' : `Show Exam Context (${entry.example_sentences.length})`}</span>
                     <span>{expanded ? '▲' : '▼'}</span>
@@ -101,16 +101,16 @@ const WordCard = ({ entry }: { entry: VocabEntry }) => {
                     <div className="mt-3 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                         {displayExamples.length > 0 ? (
                             displayExamples.map((ex, idx) => (
-                                <div key={idx} className="bg-slate-50 p-3 rounded-lg text-sm border border-slate-100">
-                                    <p className="text-slate-700 mb-1">"{ex.sentence}"</p>
-                                    <div className="flex justify-between text-xs text-slate-400 mt-2">
+                                <div key={idx} className="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg text-sm border border-slate-100 dark:border-slate-700">
+                                    <p className="text-slate-700 dark:text-slate-300 mb-1">"{ex.sentence}"</p>
+                                    <div className="flex justify-between text-xs text-slate-400 dark:text-slate-500 mt-2">
                                         <span>{ex.paper}</span>
                                         <span>{ex.year}</span>
                                     </div>
                                 </div>
                             ))
                         ) : (
-                            <p className="text-xs text-slate-400">No examples captured in database.</p>
+                            <p className="text-xs text-slate-400 dark:text-slate-500">No examples captured in database.</p>
                         )}
                     </div>
                 )}

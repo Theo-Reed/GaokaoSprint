@@ -4,11 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, Lightbulb, ChevronLeft } from 'lucide-react';
 import questionsData from '@/data/math/questions.json';
 import Link from 'next/link';
+import { sanitizeMath, markdownComponents, simpleMarkdownComponents } from '@/components/DrillMarkdownHelpers';
 
 interface Question {
   question_number: string;
@@ -60,65 +62,8 @@ const CATEGORY_NAMES: Record<string, string> = {
   'probability': '概率统计'
 };
 
-const sanitizeMath = (text: string) => {
-    if (!text || typeof text !== 'string') return text;
-    
-    // 1. Critical Fix: Remove all carriage returns and fragmented newlines found in PDF extraction
-    let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
+// Removed local sanitizeMath, markdownComponents, hintMarkdownComponents
 
-    // 2. Normalize delimiters
-    clean = clean.replace(/\$\$/g, '$');
-
-    // 3. Fix double-escaped backslashes for common Math/LaTeX commands (Critical Fix)
-    const knownCommands = [
-        'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan',
-        'ln', 'log', 'lg', 'exp',
-        'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-        'Gamma', 'Delta', 'Theta', 'Lambda', 'Xi', 'Pi', 'Sigma', 'Upsilon', 'Phi', 'Psi', 'Omega',
-        'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty',
-        'cdot', 'times', 'div', 'pm', 'mp',
-        'le', 'ge', 'leq', 'geq', 'ne', 'neq', 'approx', 'equiv', 'cong',
-        'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset',
-        'vec', 'hat', 'bar', 'tilde',
-        'angle', 'triangle', 'bot',
-        'Leftarrow', 'Rightarrow', 'Leftrightarrow'
-    ];
-    
-    // Replace \\\\(command) with \\(command)
-    const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
-    clean = clean.replace(commandPattern, '\\$1');
-
-    // Fix double-escaped braces and pipes (often used in sets)
-    clean = clean.replace(/\\\\\{/g, '\\{');
-    clean = clean.replace(/\\\\\}/g, '\\}');
-    clean = clean.replace(/\\\\\|/g, '\\|');
-
-    // 4. Targeted fixes for pi inside frac
-    clean = clean.replace(/\\frac\{pi\}/g, '\\frac{\\pi}'); 
-    clean = clean.replace(/\\frac\{(\\?)pi\}/g, '\\frac{\\pi}');
-
-    // 5. General symbol cleanup
-    const autoEscapeSymbols = [
-        'sin', 'cos', 'tan', 'ln', 'log',
-        'pi', 'alpha', 'beta', 'gamma', 'omega', 'theta', 'lambda', 'mu'
-    ];
-    
-    autoEscapeSymbols.forEach(sym => {
-         clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
-    });
-
-    // 6. Wrap standalone sqrt numbers
-    clean = clean.replace(/(?<!\\)\bsqrt\s*(\d+)/g, '\\sqrt{$1}');
-    
-    // 6. Ensure math mode if likely latex
-    if (clean.includes('\\') && !clean.includes('$')) {
-        if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
-             clean = `$${clean}$`;
-        }
-    }
-
-    return clean;
-};
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
     const [question, setQuestion] = useState<Question | null>(null);
@@ -217,11 +162,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 <div className="prose prose-slate prose-lg max-w-none">
                     <ReactMarkdown 
-                        remarkPlugins={[remarkMath]} 
+                        remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
-                        components={{
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div>
-                        }}
+                        components={markdownComponents}
                     >
                         {sanitizeMath(question.content)
                             .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
@@ -231,8 +174,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
                                     return `\n\n${part}`;
                                 }
-                                // 清理单行内的意外换行符
-                                return part.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
+                                // Don't strip newlines
+                                return part.replace(/\r/g, '');
                             })
                             .join('')
                             .replace(/\\n/g, '\n') // 将字符串中的字面量 \n 转换为真实的换行符
@@ -251,7 +194,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             <div>
                                 <h3 className="font-bold text-amber-900 mb-2">AI 解题思路提示</h3>
                                 <div className="prose prose-sm prose-amber max-w-none">
-                                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                                    <ReactMarkdown 
+                                        remarkPlugins={[remarkMath, remarkGfm]} 
+                                        rehypePlugins={[rehypeKatex]}
+                                        components={simpleMarkdownComponents}
+                                    >
                                         {sanitizeMath(question.thought_process)}
                                     </ReactMarkdown>
                                 </div>

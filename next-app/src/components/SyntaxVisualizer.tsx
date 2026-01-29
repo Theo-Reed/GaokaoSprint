@@ -20,7 +20,7 @@ const Word: React.FC<WordProps> = ({ text, type, clauseType }) => {
   if (type === 'object') className += "border-b-4 border-indigo-500 ";
   
   if (type === 'clause') {
-    className += "border border-dashed border-gray-400 rounded-md relative hover:bg-indigo-100 hover:border-indigo-500 ";
+    className += "border border-dashed border-gray-400 dark:border-gray-600 rounded-md relative hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:border-indigo-500 dark:hover:border-indigo-400 ";
   }
 
   return (
@@ -31,7 +31,7 @@ const Word: React.FC<WordProps> = ({ text, type, clauseType }) => {
       title={clauseType} // Simple tooltip fallback
     >
       {type === 'clause' && isHovered && (
-        <span className="absolute -top-6 left-0 text-xs text-green-600 font-bold bg-white px-1 shadow-sm rounded whitespace-nowrap z-10">
+        <span className="absolute -top-6 left-0 text-xs text-green-600 dark:text-green-400 font-bold bg-white dark:bg-slate-800 px-1 shadow-sm rounded whitespace-nowrap z-10">
           {clauseType}
         </span>
       )}
@@ -42,13 +42,13 @@ const Word: React.FC<WordProps> = ({ text, type, clauseType }) => {
 
 export const SyntaxVisualizer = () => {
   return (
-    <div className="p-8 max-w-4xl mx-auto font-sans leading-loose text-lg bg-white shadow-lg rounded-xl mt-10">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">English Syntax Visualizer (Demo)</h2>
-      <p className="text-gray-500 mb-8 text-sm">
+    <div className="p-8 max-w-4xl mx-auto font-sans leading-loose text-lg bg-white dark:bg-slate-900 shadow-lg rounded-xl mt-10">
+      <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">English Syntax Visualizer (Demo)</h2>
+      <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm">
         Hover over the dashed boxes to see clause types. Note the <span className="text-red-500 font-bold">Subject</span>, <span className="text-yellow-500 font-bold">Verb</span>, and <span className="text-indigo-500 font-bold">Object</span> colors.
       </p>
 
-      <div className="bg-gray-50 p-6 rounded-lg leading-[3rem]">
+      <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg leading-[3rem] text-slate-800 dark:text-slate-200">
         {/* Sentence: The student who studies hard will pass the exam which is difficult. */}
         
         <Word text="The student" type="subject" />
@@ -65,8 +65,8 @@ export const SyntaxVisualizer = () => {
         <Word text="the exam" type="object" />
 
         {/* Attributive Clause 2 - Fixing the structure to match the nesting visual */}
-        <span className="border border-dashed border-gray-400 rounded mx-1 hover:bg-green-50 hover:border-green-500 relative group transition-colors cursor-help">
-             <span className="absolute -top-5 left-2 text-xs text-green-600 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className="border border-dashed border-gray-400 dark:border-gray-600 rounded mx-1 hover:bg-green-50 dark:hover:bg-green-900/30 hover:border-green-500 dark:hover:border-green-400 relative group transition-colors cursor-help">
+             <span className="absolute -top-5 left-2 text-xs text-green-600 dark:text-green-400 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
                 Attributive Clause (modifies exam)
              </span>
              <span className="px-1">which</span>
@@ -76,7 +76,7 @@ export const SyntaxVisualizer = () => {
         .
       </div>
 
-      <div className="mt-8 p-4 bg-indigo-50 border-l-4 border-indigo-500 text-indigo-700 text-sm">
+      <div className="mt-8 p-4 bg-indigo-50 dark:bg-indigo-900/30 border-l-4 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 text-sm">
         <strong>Study Strategy:</strong> This visualization simplifies the "chunking" process. Every time you see a long sentence, try to visualize these boxes and lines in your mind.
       </div>
     </div>

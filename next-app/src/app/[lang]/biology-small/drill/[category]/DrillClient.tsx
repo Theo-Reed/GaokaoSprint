@@ -11,6 +11,7 @@ import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-
 import questionsData from '@/data/biology/small_questions.json';
 import Link from 'next/link';
 import { useDrillStrategy } from '@/hooks/useDrillStrategy';
+import { sanitizeMath, markdownComponents, simpleMarkdownComponents } from '@/components/DrillMarkdownHelpers';
 
 interface Option {
   label: string;
@@ -56,6 +57,9 @@ const CATEGORY_NAMES: Record<string, string> = {
   'bio_engineering': '基因与细胞工程',
   'fermentation': '发酵工程与微生物',
 };
+
+// Removed local sanitizeMath and markdownComponents definitions in favor of shared utilities
+
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
     // Determine pool of questions for this category
@@ -175,23 +179,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     const isCorrect = checkAnswerCorrectness;
 
-    // Sanitize logic preserved
-    const sanitizeMath = (text: string) => {
-        if (!text || typeof text !== 'string') return text;
-        let clean = text.replace(/\r/g, '');
-        clean = clean.replace(/\$\$/g, '$');
-        const knownCommands = ['sin', 'cos', 'tan', 'ln', 'log', 'alpha', 'beta', 'gamma', 'delta', 'pi', 'frac', 'sqrt', 'infty', 'cdot', 'times', 'le', 'ge', 'neq', 'vec'];
-        const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
-        clean = clean.replace(commandPattern, '\\$1');
-        clean = clean.replace(/\\\\\{/g, '\\{').replace(/\\\\\}/g, '\\}').replace(/\\\\\|/g, '\\|');
-        if (clean.includes('\\') && !clean.includes('$')) {
-            if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
-                 clean = `$${clean}$`;
-            }
-        }
-        return clean;
-    };
-
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
@@ -235,12 +222,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <ReactMarkdown 
                         remarkPlugins={[remarkMath, remarkGfm]} 
                         rehypePlugins={[rehypeKatex]}
-                        components={{ 
-                            p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>,
-                            table: ({children}) => <div className="table-container shadow-sm my-6 border border-slate-200 rounded-lg overflow-hidden"><table className="min-w-full divide-y divide-slate-200">{children}</table></div>,
-                            th: ({children}) => <th className="px-4 py-3 bg-slate-50 text-left text-xs font-bold text-slate-500 uppercase tracking-wider border-b border-r border-slate-200 last:border-r-0">{children}</th>,
-                            td: ({children}) => <td className="px-4 py-3 text-sm text-slate-600 border-b border-r border-slate-200 last:border-r-0 bg-white">{children}</td>
-                        }}
+                        components={markdownComponents}
                     >
                         {sanitizeMath(currentQ.content).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
                     </ReactMarkdown>
@@ -296,9 +278,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                         <ReactMarkdown 
                                             remarkPlugins={[remarkMath]} 
                                             rehypePlugins={[rehypeKatex]}
-                                            components={{ 
-                                                p: ({children}) => <div className="whitespace-pre-wrap">{children}</div> 
-                                            }}
+                                            components={simpleMarkdownComponents}
                                         >
                                             {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
@@ -324,7 +304,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
                                     <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={simpleMarkdownComponents}
+                                        >
                                             {sanitizeMath(String(currentQ.answer))}
                                         </ReactMarkdown>
                                     </div>
@@ -341,7 +325,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             答题思路
                         </h3>
                         <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                            <ReactMarkdown 
+                                remarkPlugins={[remarkMath]} 
+                                rehypePlugins={[rehypeKatex]}
+                                components={simpleMarkdownComponents}
+                            >
                                 {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                         </div>

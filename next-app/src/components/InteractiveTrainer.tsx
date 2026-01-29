@@ -30,19 +30,19 @@ const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, col
   const selectedColor = colors[colorClass as keyof typeof colors] || colors.indigo;
 
   return (
-    <div className="border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+    <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white dark:bg-slate-900">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full flex items-center justify-between p-5 text-left transition-colors ${isOpen ? 'bg-slate-50' : 'bg-white'}`}
+        className={`w-full flex items-center justify-between p-5 text-left transition-colors ${isOpen ? 'bg-slate-50 dark:bg-slate-800' : 'bg-white dark:bg-slate-900'}`}
       >
         <div className="flex items-center gap-4">
           <div className={`w-1.5 h-12 rounded-full ${selectedColor}`}></div>
           <div>
-            <h3 className="text-xl font-bold text-slate-800">{title}</h3>
-            <p className="text-sm text-slate-500">{subtitle}</p>
+            <h3 className="text-xl font-bold text-slate-800 dark:text-white">{title}</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{subtitle}</p>
           </div>
         </div>
-        <div className="text-slate-400">
+        <div className="text-slate-400 dark:text-slate-500">
           <ChevronIcon isOpen={isOpen} />
         </div>
       </button>
@@ -50,7 +50,7 @@ const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, col
       <div 
         className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${isOpen ? 'max-h-[1200px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div className="p-6 border-t border-slate-100 bg-slate-50/50">
+        <div className="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
            {children}
         </div>
       </div>
@@ -87,12 +87,12 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
       
       {/* Auth Blocking Overlay */}
       {isBlocking && (
-         <div className="absolute inset-0 z-50 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-xl">
-            <div className="text-center p-8 bg-white shadow-2xl rounded-2xl border border-blue-100 max-w-sm">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+         <div className="absolute inset-0 z-50 bg-white/60 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center rounded-xl">
+            <div className="text-center p-8 bg-white dark:bg-slate-900 shadow-2xl rounded-2xl border border-blue-100 dark:border-slate-800 max-w-sm">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
                     {isCn ? '需要登录' : 'Login Required'}
                 </h3>
-                <p className="text-gray-500 mb-6 text-sm">
+                <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
                     {isCn 
                         ? '为了同步您的做题进度和错题本，请先登录数据库。' 
                         : 'Please login to sync your progress and error log.'}
@@ -111,10 +111,10 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
 
 
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
           {text.mainTitle}
         </h2>
-        <p className="text-slate-500 text-lg">
+        <p className="text-slate-500 dark:text-slate-400 text-lg">
           {text.subTitle}
         </p>
       </div>

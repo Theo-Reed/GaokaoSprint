@@ -198,17 +198,17 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       }
   };
 
-  if (!currentQuiz) return <div className="p-8 text-center text-slate-400">{text.loading}</div>;
+  if (!currentQuiz) return <div className="p-8 text-center text-slate-400 dark:text-slate-500">{text.loading}</div>;
 
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100 flex flex-col h-full">
+    <div className="bg-white dark:bg-slate-900 shadow-lg rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-indigo-500 text-white p-4 flex justify-between items-center">
+      <div className="bg-indigo-500 dark:bg-indigo-700 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>⚔️</span> {text.title}
           </h3>
-          <p className="text-indigo-100 text-xs mt-1">
+          <p className="text-indigo-100 dark:text-indigo-200 text-xs mt-1">
             {text.question} {currentQuizIndex + 1} / {quizPool.length}
           </p>
         </div>
@@ -220,10 +220,10 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       {/* Main Content */}
       <div className="p-6 flex-1 flex flex-col">
         <div className="mb-6">
-            <span className="inline-block px-2 py-0.5 bg-indigo-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
+            <span className="inline-block px-2 py-0.5 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
                 {getCategoryName(currentQuiz.categoryId)}
             </span>
-            <p className="text-lg font-serif text-slate-800 leading-relaxed">
+            <p className="text-lg font-serif text-slate-800 dark:text-slate-200 leading-relaxed">
                 {currentQuiz.question}
             </p>
         </div>
@@ -251,7 +251,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                     value={examInput}
                     onChange={(e) => setExamInput(e.target.value)}
                     placeholder={text.placeholder}
-                    className="flex-1 px-4 py-2 border-2 border-slate-200 rounded-lg focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 outline-none transition-all text-slate-900 font-medium placeholder:text-slate-400"
+                    className="flex-1 px-4 py-2 border-2 border-slate-200 dark:border-slate-700 rounded-lg focus:border-indigo-500 dark:focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 dark:focus:ring-indigo-900/40 outline-none transition-all text-slate-900 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-500 bg-white dark:bg-slate-950"
                     disabled={isExamCorrect || (!!examFeedback && !isExamCorrect)}
                 />
             </div>
@@ -264,7 +264,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                 className={`w-full py-2.5 rounded-lg font-bold text-white shadow-sm transition-all ${
                     isExamCorrect 
                     ? 'bg-green-600 hover:bg-green-700' 
-                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed')
+                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed')
                 }`}
             >
                 {isExamCorrect 
@@ -276,7 +276,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
 
         <div className="min-h-[40px] mt-4 flex items-center justify-center text-center">
             {examFeedback && (
-            <div className={`text-sm px-3 py-1 rounded-md ${isExamCorrect ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+            <div className={`text-sm px-3 py-1 rounded-md ${isExamCorrect ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300' : 'bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300'}`}>
                 {examFeedback}
             </div>
             )}

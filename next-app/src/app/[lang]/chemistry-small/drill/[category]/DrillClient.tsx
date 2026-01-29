@@ -9,6 +9,7 @@ import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-react';
 import questionsData from '@/data/chemistry/small_questions.json';
 import Link from 'next/link';
+import { sanitizeMath, markdownComponents } from '@/components/DrillMarkdownHelpers';
 
 interface Option {
   label: string;
@@ -41,6 +42,9 @@ const CATEGORY_NAMES: Record<string, string> = {
   'physical_chem': '反应原理',
   'experiment': '化学实验',
 };
+
+// Removed local sanitizeMath and markdownComponents
+
 
 export default function DrillClient({ lang, category }: DrillClientProps) {
     const [questions, setQuestions] = useState<SmallQuestion[]>([]);
@@ -132,22 +136,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         return userAns === correctAns;
     };
 
-    const sanitizeMath = (text: string) => {
-        if (!text || typeof text !== 'string') return text;
-        let clean = text.replace(/\r/g, '').replace(/(?<!\n)\n(?!\n)/g, ' ');
-        clean = clean.replace(/\$\$/g, '$');
-        const knownCommands = ['sin', 'cos', 'tan', 'ln', 'log', 'alpha', 'beta', 'gamma', 'delta', 'pi', 'frac', 'sqrt', 'infty', 'cdot', 'times', 'le', 'ge', 'neq', 'vec', 'bar', 'triangle', 'rightarrow', 'leftharpoons', 'uparrow', 'downarrow', 'mol', 'aq', 's', 'l', 'g', 'Delta', 'pH', 'c', 'K', 'Q', 'E'];
-        const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
-        clean = clean.replace(commandPattern, '\\$1');
-        clean = clean.replace(/\\\\\{/g, '\\{').replace(/\\\\\}/g, '\\}').replace(/\\\\\|/g, '\\|');
-        if (clean.includes('\\') && !clean.includes('$')) {
-            if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
-                 clean = `$${clean}$`;
-            }
-        }
-        return clean;
-    };
-
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
@@ -174,8 +162,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 </div>
 
                 <div className="prose prose-slate prose-lg max-w-none mb-8">
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={{ p: ({children}) => <div className="mb-4 text-slate-800 leading-relaxed font-serif">{children}</div> }}>
-                        {sanitizeMath(currentQ.content).replace(/\\n/g, '\n').replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
+                    <ReactMarkdown 
+                        remarkPlugins={[remarkMath]} 
+                        rehypePlugins={[rehypeKatex]} 
+                        components={markdownComponents}
+                    >
+                        {sanitizeMath(currentQ.content, { stripSingleNewlines: true }).replace(/\\n/g, '\n').replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
                     </ReactMarkdown>
                 </div>
 
@@ -219,7 +211,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <button key={opt.label} onClick={() => handleOptionSelect(opt.label)} disabled={isSubmitted} className={buttonClass}>
                                     <span className={badgeClass}>{opt.label}</span>
                                     <div className="flex-grow pt-0.5">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}</ReactMarkdown>
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={markdownComponents}
+                                        >
+                                            {sanitizeMath(opt.text, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                        </ReactMarkdown>
                                     </div>
                                 </button>
                             );
@@ -239,7 +237,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 <div className="p-6 rounded-2xl bg-indigo-50 border border-indigo-100 flex flex-col items-center">
                                     <span className="text-sm font-bold text-indigo-400 mb-2 uppercase tracking-wider">正确答案</span>
                                     <div className="text-2xl font-serif text-indigo-900 bg-white px-8 py-4 rounded-xl shadow-sm border border-indigo-50">
-                                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{sanitizeMath(String(currentQ.answer))}</ReactMarkdown>
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkMath]} 
+                                            rehypePlugins={[rehypeKatex]}
+                                            components={markdownComponents}
+                                        >
+                                            {sanitizeMath(String(currentQ.answer), { stripSingleNewlines: true })}
+                                        </ReactMarkdown>
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +255,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <div className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-top-4 duration-500">
                         <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>答题思路</h3>
                         <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-slate-700 leading-relaxed shadow-sm">
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}</ReactMarkdown>
+                            <ReactMarkdown 
+                                remarkPlugins={[remarkMath]} 
+                                rehypePlugins={[rehypeKatex]}
+                                components={markdownComponents}
+                            >
+                                {sanitizeMath(currentQ.explanation, { stripSingleNewlines: true }).replace(/\\n/g, '\n')}
+                            </ReactMarkdown>
                         </div>
                     </div>
                 )}
