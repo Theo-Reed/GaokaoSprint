@@ -323,6 +323,24 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 else buttonClass += "bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-slate-50 ";
                             }
 
+                            // Calculate badge classes preventing conflict
+                            let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
+                            if (isSubmitted) {
+                                if (isCorrectOpt) {
+                                    badgeClass += "bg-green-600 text-white border-green-600";
+                                } else if (isSelected) {
+                                    badgeClass += "bg-red-600 text-white border-red-600";
+                                } else {
+                                    badgeClass += "bg-white text-slate-500 border-slate-200";
+                                }
+                            } else {
+                                if (isSelected) {
+                                    badgeClass += "bg-indigo-600 text-white border-indigo-600";
+                                } else {
+                                    badgeClass += "bg-white text-slate-500 border-slate-200";
+                                }
+                            }
+
                             return (
                                 <button
                                     key={opt.label}
@@ -330,12 +348,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     disabled={isSubmitted}
                                     className={buttonClass}
                                 >
-                                    <span className={`
-                                        flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border
-                                        ${isSelected ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-500 border-slate-200'}
-                                        ${isSubmitted && isCorrectOpt ? 'bg-green-600 text-white border-green-600' : ''}
-                                        ${isSubmitted && isSelected && !isCorrectOpt ? 'bg-red-600 text-white border-red-600' : ''}
-                                    `}>
+                                    <span className={badgeClass}>
                                         {opt.label}
                                     </span>
                                     <div className="flex-grow pt-0.5">
