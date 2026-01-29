@@ -1,1 +1,7511 @@
-[]
+[
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "2025 年，国家持续推进“体重管理年”行动。为践行“健康饮食、科学运动”，应持有的正确认识是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "饮食中元素种类越多所含能量越高"
+      },
+      {
+        "label": "B",
+        "text": "饮食中用糖代替脂肪即可控制体重"
+      },
+      {
+        "label": "C",
+        "text": "无氧运动比有氧运动更有利于控制体重"
+      },
+      {
+        "label": "D",
+        "text": "在生活中既要均衡饮食又要适量运动"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（北京卷）-1",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "下图是植物细胞局部亚显微结构示意图。在有氧呼吸过程中，细胞不同部位产生 ATP 的量不同。以下选项正确的是（ ）\n\n| 选项 | 部位 1 | 部位 2 | 部位 3 | 部位 4 |\n| :--- | :--- | :--- | :--- | :--- |\n| A | 大量 | 少量 | 少量 | 无 |\n| B | 大量 | 大量 | 少量 | 无 |\n| C | 少量 | 大量 | 无 | 少量 |\n| D | 少量 | 无 | 大量 | 大量 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "A"
+      },
+      {
+        "label": "B",
+        "text": "B"
+      },
+      {
+        "label": "C",
+        "text": "C"
+      },
+      {
+        "label": "D",
+        "text": "D"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（北京卷）-2",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "某种加酶洗衣粉包装袋上注有下列信息：本品含有蛋白酶、脂肪酶和淀粉酶；洗涤前先浸泡 15～20min，特别脏的衣物可减少浸泡用水量；请勿使用 60℃以上热水。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "该洗衣粉含多种酶，不适合洗涤纯棉衣物"
+      },
+      {
+        "label": "B",
+        "text": "洗涤前浸泡有利于酶与污渍结合催化其分解"
+      },
+      {
+        "label": "C",
+        "text": "减少浸泡衣物的用水量可提高酶的浓度"
+      },
+      {
+        "label": "D",
+        "text": "水温过高导致酶活性下降"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（北京卷）-3",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "科学家对线虫进行诱变，发现 C3 基因功能缺失突变体中本应凋亡的细胞存活，C9 基因功能缺失突变体中本不应凋亡的细胞发生凋亡。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "C3 基因促进细胞凋亡"
+      },
+      {
+        "label": "B",
+        "text": "C9 基因抑制细胞凋亡"
+      },
+      {
+        "label": "C",
+        "text": "细胞凋亡不利于线虫发育"
+      },
+      {
+        "label": "D",
+        "text": "细胞凋亡受基因的调控"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（北京卷）-4",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "1958 年，Meselson 和 Stahl 通过 $^{15}N$ 标记 DNA 实验，证明了 DNA 的半保留复制。关于这一经典实验的叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "因为 $^{15}N$ 有放射性，所以能够区分 DNA 的母链和子链"
+      },
+      {
+        "label": "B",
+        "text": "得到的 DNA 带的位置有三个，证明了 DNA 的半保留复制"
+      },
+      {
+        "label": "C",
+        "text": "将 DNA 变成单链后再进行离心也能得到相同的实验结果"
+      },
+      {
+        "label": "D",
+        "text": "选择大肠杆菌作为实验材料是因为它有环状质粒 DNA"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（北京卷）-5",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "meiosis",
+    "content": "用于啤酒生产 酿酒酵母是真核生物，其生活史如图。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "由 (2n) 营养细胞产生 (n) 细胞的过程涉及减数分裂"
+      },
+      {
+        "label": "B",
+        "text": "(n) 营养细胞与 (2n) 营养细胞均能通过有丝分裂进行芽殖"
+      },
+      {
+        "label": "C",
+        "text": "细胞核融合后，子代细胞中染色体组数加倍"
+      },
+      {
+        "label": "D",
+        "text": "图示过程体现了基因重组，有利于酵母菌适应环境变化"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（北京卷）-6",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "answer": "B"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "下列关于耐高温的 DNA 聚合酶的叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "基本单位是脱氧核苷酸"
+      },
+      {
+        "label": "B",
+        "text": "在细胞内或细胞外均可发挥作用"
+      },
+      {
+        "label": "C",
+        "text": "当模板 DNA 和脱氧核苷酸存在时即可催化反应"
+      },
+      {
+        "label": "D",
+        "text": "为维持较高活性，适宜在 70℃~75℃下保存"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-1",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "下列关于现代生物进化理论的叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "进化的基本单位是种群"
+      },
+      {
+        "label": "B",
+        "text": "可遗传变异使种群基因频率定向改变，导致生物进化"
+      },
+      {
+        "label": "C",
+        "text": "某些物种经过地理隔离后出现生殖隔离会产生新物种"
+      },
+      {
+        "label": "D",
+        "text": "不同物种间、生物与无机环境之间在相互影响中不断进化和发展"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-2",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "下列关于人体内环境稳态的叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "胰岛素受体被破坏，可引起血糖升高"
+      },
+      {
+        "label": "B",
+        "text": "抗利尿激素分泌不足时，可引起尿量减少"
+      },
+      {
+        "label": "C",
+        "text": "醛固酮分泌过多，可引起血钠含量上升"
+      },
+      {
+        "label": "D",
+        "text": "血液中 $Ca^{2+}$ 浓度过低，可引起肌肉抽搐"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-3",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "科研人员通过稀释涂布平板法筛选出高耐受且降解金霉素（$C_{22}H_{23}ClN_2O_8$）能力强的菌株，旨在解决金霉素过量使用所导致的环境污染问题。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "以金霉素为唯一碳源可制备选择培养基"
+      },
+      {
+        "label": "B",
+        "text": "逐步提高培养基中金霉素的浓度有助于获得高耐受的菌株"
+      },
+      {
+        "label": "C",
+        "text": "配制选择培养基时，需确保 pH 满足实验要求"
+      },
+      {
+        "label": "D",
+        "text": "用接种环将菌液均匀地涂布在培养基表面"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-4",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "下图为某森林生态系统的部分食物网。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "图中的生物及其非生物环境构成生态系统"
+      },
+      {
+        "label": "B",
+        "text": "野猪数量下降时，虎对豹的排斥加剧"
+      },
+      {
+        "label": "C",
+        "text": "图中食物网共由 6 条食物链组成"
+      },
+      {
+        "label": "D",
+        "text": "树木同化的能量约有 10%~20%流入到野猪"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-5",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "为修复矿藏开采对土壤、植被等造成的毁坏，采用生态工程技术对矿区开展生态修复。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "修复首先要对土壤进行改良，为植物生长提供条件"
+      },
+      {
+        "label": "B",
+        "text": "修复应遵循生态工程的协调原理，因地制宜配置物种"
+      },
+      {
+        "label": "C",
+        "text": "修复后，植物多样性提升，丰富了动物栖息环境，促进了群落演替"
+      },
+      {
+        "label": "D",
+        "text": "修复后，生物群落能实现自我更新和维持，体现了生态工程整体原理"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-6",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "红藻兼具无性生殖和有性生殖。海蟑螂依赖红藻躲避天敌，并取食红藻表面附生的硅藻，在此过程中携带了红藻的雄配子，使红藻有性生殖成功率提升。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "海蟑螂与红藻存在互惠关系，二者协同进化"
+      },
+      {
+        "label": "B",
+        "text": "海蟑螂数量减少不利于红藻形成多样的变异"
+      },
+      {
+        "label": "C",
+        "text": "硅藻附生于红藻，因此二者存在寄生关系"
+      },
+      {
+        "label": "D",
+        "text": "海蟑螂与红藻的关系类似传粉昆虫与虫媒花"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-7",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "利用植物组织培养技术获得红豆杉试管苗，有助于解决紫杉醇药源短缺问题。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞分裂素和生长素的比例会影响愈伤组织的形成"
+      },
+      {
+        "label": "B",
+        "text": "培养基先分装到锥形瓶，封口后用干热灭菌法灭菌"
+      },
+      {
+        "label": "C",
+        "text": "芽原基细胞由于基因选择性表达，不能用作外植体"
+      },
+      {
+        "label": "D",
+        "text": "紫杉醇不能通过细胞产物的工厂化生产来获取，植物组织培养优势明显"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-8",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "佝偻病伴发的手足抽搐症状与人体内某种元素缺乏有关。该元素还可以（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "参与构成叶绿素"
+      },
+      {
+        "label": "B",
+        "text": "用于诱导原生质体融合"
+      },
+      {
+        "label": "C",
+        "text": "辅助血红蛋白携氧"
+      },
+      {
+        "label": "D",
+        "text": "参与构成甲状腺激素"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-1",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "某樱桃品种由北方引种到南方后，栽培于平地和同一地区高山的相比，花芽小且产量较低。研究人员分析了花芽的激素含量，结果如下表。下列叙述错误的是（ ）\n\n| 栽培地点 | 海拔（m） | 年均温度（℃） | 细胞分裂素 (ng·$g^{-1}$) | 赤霉素 (ng·$g^{-1}$) | 脱落酸 (ng·$g^{-1}$) | 生长素 (ng·$g^{-1}$) | 每 100 个花芽的质量 (g) |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 平地 | 10 | 18.7 | 17.2 | 4.1 | 102.8 | 43.1 | 6.6 |\n| 高山 | 1058 | 13.4 | 20.9 | 4.9 | 95.9 | 41.9 | 7.3 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "樱桃花芽的发育受多种植物激素的共同调控"
+      },
+      {
+        "label": "B",
+        "text": "平地和高山的樱桃花芽激素含量受温度影响"
+      },
+      {
+        "label": "C",
+        "text": "樱桃花芽发育中赤霉素和脱落酸的作用相反"
+      },
+      {
+        "label": "D",
+        "text": "生长素与细胞分裂素比值高有利于花芽膨大"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-2",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "我国是世界上最大的柠檬酸生产国。利用黑曲霉通过深层通气液体发酵技术生产柠檬酸，流程如下图。下列叙述错误的是（ ）\n流程图：选育菌种/扩大培养 -> 接种 -> 发酵罐内发酵（通入无菌空气） -> 分离、提纯产物；另有淀粉水解糖 -> 灭菌 -> 进入发酵罐。",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "淀粉水解糖为发酵提供碳源和能源"
+      },
+      {
+        "label": "B",
+        "text": "扩大培养可提供足量的黑曲霉菌种"
+      },
+      {
+        "label": "C",
+        "text": "培养基、发酵罐和空气的灭菌方法相同"
+      },
+      {
+        "label": "D",
+        "text": "通气、搅拌有利于溶解氧增加和柠檬酸积累"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-3",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "细胞衰老表现为细胞形态、结构和功能的改变。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞持续分裂过程中端粒缩短可引起细胞衰老"
+      },
+      {
+        "label": "B",
+        "text": "皮肤生发层新形成细胞替代衰老细胞过程中有新蛋白合成"
+      },
+      {
+        "label": "C",
+        "text": "哺乳动物成熟红细胞的程序性死亡会导致机体的衰老"
+      },
+      {
+        "label": "D",
+        "text": "衰老小肠上皮细胞的膜通透性改变，物质吸收效率降低"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-4",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "对下列关于中学生物学实验的描述错误的是（ ）\n①探究淀粉酶对淀粉和蔗糖的水解作用\n②观察植物细胞的质壁分离现象\n③探究培养液中酵母菌种群数量的变化\n④观察植物细胞的有丝分裂\n⑤观察叶绿体和细胞质的流动\n⑥DNA 的粗提取与鉴定",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "①⑥通过观察颜色判断实验结果"
+      },
+      {
+        "label": "B",
+        "text": "③⑥均须进行离心操作"
+      },
+      {
+        "label": "C",
+        "text": "②④均可使用洋葱作为实验材料"
+      },
+      {
+        "label": "D",
+        "text": "②⑤实验过程均须保持细胞活性"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-5",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "临床上常用能量合剂给患者提供能量，改善细胞功能，提高治疗效果。某能量合剂的配方如下表，其中辅酶 A 参与糖和脂肪等有机物的氧化分解。下列叙述错误的是（ ）\n\n| 成分 | ATP | 辅酶 A | 10%KCl | 5%$\\text{NaHCO}_3$ |\n| :--- | :--- | :--- | :--- | :--- |\n| 用量 | 60mg | 100U | 10mL | 50mL |\n| 用法 | 溶于 500mL5% 葡萄糖溶液后，静脉滴注 | | | |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$K^+$经协助扩散内流以维持神经细胞静息电位"
+      },
+      {
+        "label": "B",
+        "text": "补充辅酶 A 可增强细胞呼吸促进 ATP 生成"
+      },
+      {
+        "label": "C",
+        "text": "$\\text{HCO}_3^- / \\text{H}_2\\text{CO}_3$ 在维持血浆 pH 稳定中起重要作用"
+      },
+      {
+        "label": "D",
+        "text": "合剂中的无机盐离子参与细胞外液渗透压的维持"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-6",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "科研人员通过对绵羊受精卵进行基因编辑和胚胎移植等操作，获得了羊毛长度显著长于对照组的优良品系。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "为获取足够的卵子，需对供体绵羊注射促性腺激素进行超数排卵处理"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-7",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "answer": "C"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "研究显示，约 70%的小鼠体细胞核移植胚胎未能成功发育至囊胚期，且仅有约 2%的胚胎移植到代孕母鼠后可正常发育。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "体细胞核进入去核 MⅡ期卵母细胞形成重构胚"
+      },
+      {
+        "label": "B",
+        "text": "移植前胚胎发育率低，可能是植入的体细胞核不能完全恢复分化前的功能状态"
+      },
+      {
+        "label": "C",
+        "text": "胚胎移植到代孕母鼠后成活率低，可能是早期胚胎未能及时从滋养层内孵化"
+      },
+      {
+        "label": "D",
+        "text": "为提高胚胎成活率，可用胚胎细胞核移植代替体细胞核移植"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-9",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "黑暗条件下，叶绿体内膜的载体蛋白 NTT 顺浓度梯度运输 $ATP$、$ADP$ 和 $Pi$ 的过程示意图如下。其他条件均适宜，下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$ATP$、$ADP$ 和 $Pi$ 通过 NTT 时，无需与 NTT 结合"
+      },
+      {
+        "label": "B",
+        "text": "NTT 转运 $ATP$、$ADP$ 和 $Pi$ 的方式为主动运输"
+      },
+      {
+        "label": "C",
+        "text": "图中进入叶绿体基质的 $ATP$ 均由线粒体产生"
+      },
+      {
+        "label": "D",
+        "text": "光照充足，NTT 运出 $ADP$ 的数量会减少甚至停止"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-10",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "下列关于实验操作和现象的叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "观察叶绿体的形态和分布，需先用低倍镜找到叶绿体再换用高倍镜"
+      },
+      {
+        "label": "B",
+        "text": "用斐林试剂检测梨汁中的还原糖时，需要加热后才能呈现砖红色"
+      },
+      {
+        "label": "C",
+        "text": "将染色后的洋葱根尖置于载玻片上，滴清水并盖上盖玻片即可观察染色体"
+      },
+      {
+        "label": "D",
+        "text": "分离菠菜叶中的色素时，因层析液有挥发性，需在通风好的条件下进行"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-11",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "黄毛鼠在不同环境温度下独居或聚群时的耗氧量（代表产热量）测定值见下图。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "与 $20^{\\circ}C$ 相比，$10^{\\circ}C$ 时，黄毛鼠产热量增加，散热量减少"
+      },
+      {
+        "label": "B",
+        "text": "$10^{\\circ}C$ 时，聚群个体的产热量和散热量比独居的多"
+      },
+      {
+        "label": "C",
+        "text": "$10^{\\circ}C$ 时，聚群个体下丘脑合成和分泌 TRH 比独居的少"
+      },
+      {
+        "label": "D",
+        "text": "聚群是黄毛鼠在低温环境下减少能量消耗的生理性调节"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-12",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "光照、植物激素 EBR、脱落酸和赤霉素均参与调节拟南芥种子的萌发，部分作用关系如下图。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "光敏色素是一类含有色素的脂质化合物"
+      },
+      {
+        "label": "B",
+        "text": "图中激素①是赤霉素，激素②是脱落酸"
+      },
+      {
+        "label": "C",
+        "text": "EBR 和赤霉素是相抗衡的关系"
+      },
+      {
+        "label": "D",
+        "text": "红光和 EBR 均能诱导拟南芥种子萌发"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-13",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "下列关于基因表达及其调控的叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "转录和翻译过程中，碱基互补配对的方式不同"
+      },
+      {
+        "label": "B",
+        "text": "转录时通过 $RNA$ 聚合酶打开 $DNA$ 双链"
+      },
+      {
+        "label": "C",
+        "text": "某些 $DNA$ 甲基化可通过抑制基因转录影响生物表型"
+      },
+      {
+        "label": "D",
+        "text": "核糖体与 $mRNA$ 的结合部位形成 1 个 $tRNA$ 结合位点"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-14",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "抗维生素 D 佝偻病是一种伴 X 染色体显性遗传病。正常女子与男患者所生子女患该病的概率是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "男孩 100%"
+      },
+      {
+        "label": "B",
+        "text": "女孩 100%"
+      },
+      {
+        "label": "C",
+        "text": "男孩 50%"
+      },
+      {
+        "label": "D",
+        "text": "女孩 50%"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-7",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "蝴蝶幼虫取食植物叶片，萝藦类植物进化出产生 CA 的能力，CA 抑制动物细胞膜上 N 酶的活性，对动物产生毒性，从而阻止大部分蝴蝶幼虫取食。斑蝶类蝴蝶因 N 酶发生了一个氨基酸替换而对 CA 不敏感，其幼虫可以取食萝藦。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "斑蝶类蝴蝶对 CA 的适应主要源自基因突变和选择"
+      },
+      {
+        "label": "B",
+        "text": "斑蝶类蝴蝶取食萝藦可减少与其他蝴蝶竞争食物"
+      },
+      {
+        "label": "C",
+        "text": "N 酶基因突变导致斑蝶类蝴蝶与其他蝴蝶发生生殖隔离"
+      },
+      {
+        "label": "D",
+        "text": "萝藦类植物和斑蝶类蝴蝶的进化是一个协同进化的实例"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-8",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "油菜素内酯可促进 Z 蛋白进入细胞核调节基因表达，进而促进下胚轴生长。用生长素分别处理野生型和 Z 基因功能缺失突变体的拟南芥幼苗，结果如图。综合以上信息，不能得出的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "Z 蛋白是油菜素内酯信号途径的组成成分"
+      },
+      {
+        "label": "B",
+        "text": "生长素和油菜素内酯都能调控下胚轴生长"
+      },
+      {
+        "label": "C",
+        "text": "生长素促进下胚轴生长依赖于 Z 蛋白"
+      },
+      {
+        "label": "D",
+        "text": "油菜素内酯促进下胚轴生长依赖于生长素"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-9",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "外科医生给足外伤患者缝合伤口时，先在伤口附近注射局部麻醉药，以减轻患者疼痛。局部麻醉药的作用原理是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "降低伤口处效应器的功能"
+      },
+      {
+        "label": "B",
+        "text": "降低脊髓中枢的反射能力"
+      },
+      {
+        "label": "C",
+        "text": "阻断相关传出神经纤维的传导"
+      },
+      {
+        "label": "D",
+        "text": "阻断相关传入神经纤维的传导"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-10",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "为了解甲基苯丙胺（MA，俗称冰毒）对心脏功能影响，研究者比较了吸食与不吸食 MA 人群左心室的泵血能力，结果如图。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "滥用 MA 会导致左心室收缩能力下降"
+      },
+      {
+        "label": "B",
+        "text": "左心室功能的显著下降导致吸食 MA 成瘾"
+      },
+      {
+        "label": "C",
+        "text": "MA 可以阻断神经对心脏活动的调节"
+      },
+      {
+        "label": "D",
+        "text": "MA 通过破坏血管影响左心室泵血功能"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-11",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "塞罕坝曾森林茂密，后来由于人类活动破坏而逐渐变成荒原。上世纪 60 年代以来，林业工人不断努力，种植了华北落叶松等多种树木，如今已将森林覆盖率提高到 75%以上，成为人类改善自然环境的典范。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "塞罕坝造林经验可推广到各类荒原的治理，以提高森林覆盖率"
+      },
+      {
+        "label": "B",
+        "text": "植树造林时要尽量种植多种树木，以利于提高生态系统稳定性"
+      },
+      {
+        "label": "C",
+        "text": "塞罕坝的变化说明，人类活动可以影响群落演替的进程和方向"
+      },
+      {
+        "label": "D",
+        "text": "与上世纪 60 年代相比，现在塞罕坝生态系统的固碳量大幅增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-12",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "近年来，北京建设了许多大型湿地公园，对于生态环境的改善产生了积极作用。以下关于湿地公园生态功能的叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "调蓄洪水，减缓水旱灾害"
+      },
+      {
+        "label": "B",
+        "text": "改变温带季风气候"
+      },
+      {
+        "label": "C",
+        "text": "自然净化污水"
+      },
+      {
+        "label": "D",
+        "text": "为野生动物提供栖息地"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-13",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "动物细胞培养基一般呈淡红色。某次实验时，调控 pH 的 $CO_2$ 耗尽，培养基转为黄色。由此推断使培养基呈淡红色的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "必需氨基酸"
+      },
+      {
+        "label": "B",
+        "text": "抗生素"
+      },
+      {
+        "label": "C",
+        "text": "酸碱指示剂"
+      },
+      {
+        "label": "D",
+        "text": "血清"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-14",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "丙酮酸是糖代谢过程的重要中间物质。丙酮酸转运蛋白（MPC）运输丙酮酸通过线粒体内膜的过程如下图。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "MPC 功能减弱的动物细胞中乳酸积累将会增加"
+      },
+      {
+        "label": "B",
+        "text": "丙酮酸根、$H^+$共同与 MPC 结合使后者构象改变"
+      },
+      {
+        "label": "C",
+        "text": "线粒体内外膜间隙 pH 变化影响丙酮酸根转运速率"
+      },
+      {
+        "label": "D",
+        "text": "线粒体内膜两侧的丙酮酸根浓度差越大其转运速率越高"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-8",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "专食性绢蝶幼虫以半荷包紫堇叶片为食，成体绢蝶偏好在绿叶型半荷包紫堇植株附近产卵。生长于某冰川地域的半荷包紫堇因 bHLH35 基因突变使叶片呈现类似岩石的灰色，不易被成体绢蝶识别。冰川消融导致裸露岩石增多、分布范围扩大，则该地区（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "半荷包紫堇突变的 bHLH35 基因频率会逐渐增加"
+      },
+      {
+        "label": "B",
+        "text": "半荷包紫堇 bHLH35 基因突变会引起绢蝶的变异"
+      },
+      {
+        "label": "C",
+        "text": "灰叶型半荷包紫堇的出现标志着新物种的形成"
+      },
+      {
+        "label": "D",
+        "text": "冰川消融导致绢蝶受到的选择压力减小"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-9",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "金刚鹦鹉的羽毛色彩缤纷。研究发现乙醛脱氢酶能催化鹦鹉黄素的醛基转化为羧基，造成羽色由红到黄的渐变。同一只鹦鹉不同部位的羽色有红黄差异，该现象最不可能源于（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "乙醛脱氢酶基因序列的差异"
+      },
+      {
+        "label": "B",
+        "text": "编码乙醛脱氢酶 mRNA 量的差异"
+      },
+      {
+        "label": "C",
+        "text": "乙醛脱氢酶活性的差异"
+      },
+      {
+        "label": "D",
+        "text": "鹦鹉黄素醛基转化为羧基数的差异"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-10",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "入侵物种线虫甲和本土物种线虫乙常引起松树成片死亡。为探究两者的竞争关系，在相同实验条件下对甲和乙混合培养，部分结果如下表。下列叙述错误的是（ ）\n组别 | 甲初始数量（条） | 乙初始数量（条） | 存活物种\n--- | --- | --- | ---\n1 | $9♂+9♀$ | $10♂+10♀$ | 甲\n2 | $6♂+6♀$ | $10♂+10♀$ | 甲\n3 | $4♂+4♀$ | $10♂+10♀$ | 甲\n4 | $3♂+3♀$ | $10♂+10♀$ | 乙",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "相同条件下甲单独培养时的 K 值比混合培养时大"
+      },
+      {
+        "label": "B",
+        "text": "实验中仅存活一种线虫的原因是两者生态位相似"
+      },
+      {
+        "label": "C",
+        "text": "设置相同雌雄比是为排除性比对实验结果的干扰"
+      },
+      {
+        "label": "D",
+        "text": "结果表明野外释放乙是生物防治甲入侵的有效措施"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-11",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "我国自主研发某单克隆抗体药物能够与特异性细胞因子受体结合，用于治疗季节性过敏性鼻炎，部分过程示意图如下。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "抗原呈递细胞和辅助性 T 细胞都能摄取、加工处理和呈递抗原"
+      },
+      {
+        "label": "B",
+        "text": "活化 B 细胞需要过敏原和辅助性 T 细胞传递的信号刺激"
+      },
+      {
+        "label": "C",
+        "text": "过敏原再次进入机体与肥大细胞表面的抗体 IgE 结合后引发过敏反应"
+      },
+      {
+        "label": "D",
+        "text": "该抗体药物能与特异性细胞因子受体结合，减少抗体 IgE 的产生"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-12",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "丛枝菌根真菌（AMF）可以帮助植物吸收磷，同时从植物中获取有机物。我国科研人员最近研究发现，小麦 CNGC15 基因突变后根细胞合成和分泌的黄酮类物质增加，吸引更多的 AMF 在小麦根部定殖。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "该基因突变可以增加生物多样性"
+      },
+      {
+        "label": "B",
+        "text": "低磷条件下 AMF 与小麦互利共生"
+      },
+      {
+        "label": "C",
+        "text": "小麦和 AMF 通过化学信息调节种间关系"
+      },
+      {
+        "label": "D",
+        "text": "该基因突变不影响 AMF 和小麦种群间能量流动"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-13",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "“n+1”型两种，其中“n+1”型的花粉只有约 50%的受精率，而卵子不受影响。该变异株自交，假设四体（2n+2）细胞无法存活，预期子一代中三体变异株的比例约为（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "3/5"
+      },
+      {
+        "label": "B",
+        "text": "3/4"
+      },
+      {
+        "label": "C",
+        "text": "2/3"
+      },
+      {
+        "label": "D",
+        "text": "1/2"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-15",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "下图为植物细胞呼吸的部分反应过程示意图，图中 $NADH$ 可储存能量，①、②和③表示不同反应阶段。下列叙述正确的是（多选）（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "①发生在细胞质基质，②和③发生在线粒体"
+      },
+      {
+        "label": "B",
+        "text": "③中 $NADH$ 通过一系列的化学反应参与了水的形成"
+      },
+      {
+        "label": "C",
+        "text": "无氧条件下，③不能进行，①和②能正常进行"
+      },
+      {
+        "label": "D",
+        "text": "无氧条件下，①产生的 $NADH$ 中的部分能量转移到 $ATP$ 中"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-16",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "AB"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "T 细胞通过 T 细胞受体（TCR）识别肿瘤抗原，为研究 TCR 与抗原结合的亲和力对肿瘤生长的影响，将高、低两种亲和力的特异性 T 细胞输入至肿瘤模型小鼠，检测肿瘤生长情况（图 1）及评估 T 细胞耗竭程度（图 2）。T 细胞耗竭指 T 细胞功能下降和增殖能力减弱，表达耗竭标志物的 T 细胞比例与其耗竭程度正相关。下列叙述正确的是（多选）（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "T 细胞的抗肿瘤作用体现了免疫自稳功能"
+      },
+      {
+        "label": "B",
+        "text": "T 细胞在抗肿瘤免疫中不需要抗原呈递细胞参与"
+      },
+      {
+        "label": "C",
+        "text": "低亲和力 T 细胞能够抑制肿瘤生长"
+      },
+      {
+        "label": "D",
+        "text": "高亲和力 T 细胞更易耗竭且能抑制小鼠的免疫"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-17",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "CD"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某山体公园自然条件下猕猴种群的环境容纳量约为 840 只。1986 年后，游客的投喂和以保护为目的的固定投食，致使猕猴种群数量快速增长，引发了人猴冲突。为减少冲突事件的发生，研究人员做了相关调查，结果如下图。下列叙述正确的是（多选）（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "调查期间猕猴种群的 $\\lambda>1$，若现有条件不变，种群数量会持续增长"
+      },
+      {
+        "label": "B",
+        "text": "2013 年人猴冲突事件减少，是因为猕猴种群数量接近自然条件下的环境容纳量"
+      },
+      {
+        "label": "C",
+        "text": "2016 年后，猕猴种群数量超过自然条件下环境容纳量的主要原因是人为投食"
+      },
+      {
+        "label": "D",
+        "text": "为保护猕猴和减少人猴冲突，应适时迁出部分猕猴族群达到人与动物和谐相处"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-18",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "CD"
+  },
+  {
+    "question_number": "19",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "下图是制备抗白细胞介素-6（IL-6）单克隆抗体的示意图。下列叙述错误的是（多选）（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "步骤①给小鼠注射 IL-6 后，应从脾中分离筛选 T 淋巴细胞"
+      },
+      {
+        "label": "B",
+        "text": "步骤②在脾组织中加入胃蛋白酶，制成单细胞悬液"
+      },
+      {
+        "label": "C",
+        "text": "步骤③加入灭活病毒或 PEG 诱导细胞融合，体现了细胞膜的流动性"
+      },
+      {
+        "label": "D",
+        "text": "步骤④经过克隆化培养和抗体检测筛选出了杂交瘤细胞"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-19",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "ABD"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "高温胁迫导致植物细胞中错误折叠或未折叠蛋白质在内质网中异常积累，使细胞合成更多的参与蛋白质折叠的分子伴侣蛋白，以恢复内质网中正常的蛋白质合成与加工，此过程称为“未折叠蛋白质应答反应（UPR）”。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "错误折叠或未折叠蛋白质被转运至高尔基体降解"
+      },
+      {
+        "label": "B",
+        "text": "合成新的分子伴侣所需能量全部由线粒体提供"
+      },
+      {
+        "label": "C",
+        "text": "UPR 过程需要细胞核、核糖体和内质网的协作"
+      },
+      {
+        "label": "D",
+        "text": "阻碍 UPR 可增强植物对高温胁迫 耐受性"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-14",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "冰川融水会将溪流沿岸无机盐和有机物残体等带入湖泊，如图（a）。环境 DNA（eDNA）技术通过检测环境样品中特异性基因序列来识别物种，利用该技术分析青藏高原某冰川前缘、溪流到下游湖泊的 15 个采样点的物种丰富度，如图（b）。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "冰川前缘至少有 2 个营养级，湖泊中至少有 4 个营养级"
+      },
+      {
+        "label": "B",
+        "text": "eDNA 结果可同时反映水体及周边陆地生态系统物种多样性"
+      },
+      {
+        "label": "C",
+        "text": "从高山流石滩到高寒草甸生物的分布体现了群落的垂直结构"
+      },
+      {
+        "label": "D",
+        "text": "蓝细菌等生产者固定的太阳能是输入湖泊生态系统的总能量"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-15",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "某常染色体遗传病致病基因为 $H$，在一些个体中可因甲基化而失活（不表达），又会因去甲基化而恢复表达。由于遗传背景的差异，$H$ 基因在精子中为甲基化状态，在卵细胞中为去甲基化状态，且都在受精后被子代保留。该病的某系谱图如下，$III_1$ 的基因型为 $Hh$，不考虑其他表观遗传效应和变异的影响，下列分析错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$I_1$ 和 $I_2$ 均含有甲基化的 $H$ 基因"
+      },
+      {
+        "label": "B",
+        "text": "$II_1$ 为杂合子的概率 2/3"
+      },
+      {
+        "label": "C",
+        "text": "$II_2$ 和 $II_3$ 再生育子女的患病概率是 1/2"
+      },
+      {
+        "label": "D",
+        "text": "$III_1$ 的 $h$ 基因只能来自父亲"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（陕晋青宁卷）-16",
+    "source": "2025年高考生物试卷（陕晋青宁卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "“探究植物细胞的吸水和失水”实验中，在清水和 $0.3g/mL$ 蔗糖溶液中处于稳定状态的细胞如图。以下叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "图 1，水分子通过渗透作用进出细胞"
+      },
+      {
+        "label": "B",
+        "text": "图 1，细胞壁限制过多的水进入细胞"
+      },
+      {
+        "label": "C",
+        "text": "图 2，细胞失去的水分子是自由水"
+      },
+      {
+        "label": "D",
+        "text": "与图 1 相比，图 2 中细胞液浓度小"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（北京卷）-15",
+    "source": "2025年高考生物试卷（北京卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "20",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "...茧雄蚕（亲本 2）杂交选育红卵、结绿茧的纯合品系。不考虑突变，下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$F_1$ 雌蚕均表现出红卵、结绿茧表型"
+      },
+      {
+        "label": "B",
+        "text": "$F_1$ 雄蚕次级精母细胞中的基因组成可能有 $RRGG$、$rr$ 等类型"
+      },
+      {
+        "label": "C",
+        "text": "$F_1$ 随机交配得到的 $F_2$ 中，红卵、结绿茧的个体比例是 $3/8$"
+      },
+      {
+        "label": "D",
+        "text": "$F_2$ 中红卵、结绿茧的个体随机交配，子代中目的个体的比例是 $2/9$"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（黑吉辽蒙卷）-20",
+    "source": "2025年高考生物试卷（黑吉辽蒙卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      6
+    ]
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "我国积极稳妥推进“碳中和”战略，努力实现 $CO_2$，相对“零排放”。下列措施不能减少 $CO_2$ 排放的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "鼓励使用新能源汽车"
+      },
+      {
+        "label": "B",
+        "text": "减少煤炭等火力发电"
+      },
+      {
+        "label": "C",
+        "text": "推广使用一次性木筷"
+      },
+      {
+        "label": "D",
+        "text": "乘坐公交等绿色出行"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-1",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "无机盐对生物体维持生命活动有重要的作用。人体缺铁会直接引起",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "血红蛋白含量降低"
+      },
+      {
+        "label": "B",
+        "text": "肌肉抽搐"
+      },
+      {
+        "label": "C",
+        "text": "神经细胞兴奋性降低"
+      },
+      {
+        "label": "D",
+        "text": "甲状腺肿大"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-2",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "人体内环境保持相对稳定以维持正常生命活动。下列物质不存在于内环境中的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$Ca^{2+}$"
+      },
+      {
+        "label": "B",
+        "text": "淀粉"
+      },
+      {
+        "label": "C",
+        "text": "葡萄糖"
+      },
+      {
+        "label": "D",
+        "text": "氨基酸"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-3",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "$ATP$ 是细胞生命活动的直接能源物质。下列物质运输过程需要消耗 $ATP$ 的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$O_2$ 进入红细胞"
+      },
+      {
+        "label": "B",
+        "text": "组织细胞排出 $CO_2$"
+      },
+      {
+        "label": "C",
+        "text": "浆细胞分泌抗体"
+      },
+      {
+        "label": "D",
+        "text": "神经细胞内 $K^+$ 顺浓度梯度外流"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-4",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "调查发现，中国男性群体的红绿色盲率接近 7%，女性群体约为 0.5%。男性的红绿色盲基因只传给女儿，不传给儿子。控制人类红绿色盲的基因是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "常染色体上的隐性基因"
+      },
+      {
+        "label": "B",
+        "text": "X 染色体上的隐性基因"
+      },
+      {
+        "label": "C",
+        "text": "常染色体上的显性基因"
+      },
+      {
+        "label": "D",
+        "text": "X 染色体上的显性基因"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-5",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "群落演替指一个群落替代另一个群落的过程，包括初生演替和次生演替。下列实例属于初生演替的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "裸岩的表面长出地衣"
+      },
+      {
+        "label": "B",
+        "text": "草原过度放牧后出现大片裸地"
+      },
+      {
+        "label": "C",
+        "text": "荒草地改造成荷花塘"
+      },
+      {
+        "label": "D",
+        "text": "云杉林被大量砍伐后杂草丛生"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-6",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "由于 DDT 严重危害生物的健康且不易降解，许多国家禁用 DDT。但 DDT 能杀灭按蚊，有效控制疟疾的传播，因此 2006 年世界卫生组织宣布允许非洲国家重新使用 DDT，使得非洲疟疾的新增病例大幅下降。下列叙述不合理的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "喷施低浓度的 DDT，也会在生物体内积累"
+      },
+      {
+        "label": "B",
+        "text": "DDT 不易降解，不会在生物圈中大面积扩散"
+      },
+      {
+        "label": "C",
+        "text": "在严格管控的情况下，DDT 可以局部用于预防疟疾"
+      },
+      {
+        "label": "D",
+        "text": "与第二营养级相比，第三营养级生物体内的 DDT 含量更高"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-7",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "传统发酵技术为我们提供了多种食品、饮料及调味品。下列叙述错误的是",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "泡菜的风味由乳酸菌的种类决定"
+      },
+      {
+        "label": "B",
+        "text": "用果酒发酵制作果醋的主要菌种是醋酸菌"
+      },
+      {
+        "label": "C",
+        "text": "家庭酿制米酒的过程既有需氧呼吸又有厌氧呼吸"
+      },
+      {
+        "label": "D",
+        "text": "传统发酵通常是利用多种微生物进行的混合发酵"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-8",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "某同学利用幼嫩的黑藻叶片完成“观察叶绿体和细胞质流动”实验后，继续进行“质壁分离”实验，示意图如下。下列叙述正确的是",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "实验过程中叶肉细胞处于失活状态"
+      },
+      {
+        "label": "B",
+        "text": "①与②的分离，与①的选择透过性无关"
+      },
+      {
+        "label": "C",
+        "text": "与图甲相比，图乙细胞吸水能力更强"
+      },
+      {
+        "label": "D",
+        "text": "与图甲相比，图乙细胞体积明显变小"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-9",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "在细胞的生命活动中，下列细胞器或结构不会出现核酸分子的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "高尔基体"
+      },
+      {
+        "label": "B",
+        "text": "溶酶体"
+      },
+      {
+        "label": "C",
+        "text": "核糖体"
+      },
+      {
+        "label": "D",
+        "text": "端粒"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-1",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "生长于 $NaCl$ 浓度稳定在 $100 mmol/L$ 的液体培养基中的酵母菌，可通过离子通道吸收 $Na^+$，但细胞质基质中 $Na^+$ 浓度超过 $30 mmol/L$ 时会导致酵母菌死亡。为避免细胞质基质 $Na^+$ 浓度过高，液泡膜上的蛋白 $N$ 可将 $Na^+$ 以主动运输的方式转运到液泡中，细胞膜上的蛋白 $W$ 也可将 $Na^+$ 排出细胞。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$Na^+$ 在液泡中的积累有利于酵母细胞吸水"
+      },
+      {
+        "label": "B",
+        "text": "蛋白 $N$ 转运 $Na^+$ 过程中自身构象会发生改变"
+      },
+      {
+        "label": "C",
+        "text": "通过蛋白 $W$ 外排 $Na^+$ 的过程不需要细胞提供能量"
+      },
+      {
+        "label": "D",
+        "text": "$Na^+$ 通过离子通道进入细胞时不需要与通道蛋白结合"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-2",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "利用病毒样颗粒递送调控细胞死亡的执行蛋白可控制细胞的死亡方式。细胞接收执行蛋白后，若激活蛋白 $P$，则诱导细胞发生凋亡，细胞膜突起形成小泡，染色质固缩；若激活蛋白 $Q$，则诱导细胞发生焦亡，细胞肿涨破裂，释放大量细胞因子。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞焦亡可能引发机体的免疫反应"
+      },
+      {
+        "label": "B",
+        "text": "细胞凋亡是由基因所决定的程序性细胞死亡"
+      },
+      {
+        "label": "C",
+        "text": "细胞凋亡和细胞焦亡受不同蛋白活性变化的影响"
+      },
+      {
+        "label": "D",
+        "text": "通过细胞自噬清除衰老线粒体的过程属于细胞凋亡"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-3",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "关于细胞以葡萄糖为原料进行有氧呼吸和无氧呼吸的过程，下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "有氧呼吸的前两个阶段均需要 $O_2$ 作为原料"
+      },
+      {
+        "label": "B",
+        "text": "有氧呼吸的第二阶段需要 $H_2O$ 作为原料"
+      },
+      {
+        "label": "C",
+        "text": "无氧呼吸的两个阶段均不产生 $NADH$"
+      },
+      {
+        "label": "D",
+        "text": "经过无氧呼吸，葡萄糖分子中的大部分能量以热能的形式散失"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-4",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "关于豌豆胞核中淀粉酶基因遗传信息传递的复制、转录和翻译三个过程，下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "三个过程均存在碱基互补配对现象"
+      },
+      {
+        "label": "B",
+        "text": "三个过程中只有复制和转录发生在细胞核内"
+      },
+      {
+        "label": "C",
+        "text": "根据三个过程的产物序列均可确定其模板序列"
+      },
+      {
+        "label": "D",
+        "text": "$RNA$ 聚合酶与核糖体沿模板链的移动方向不同"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-5",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "镰状细胞贫血是由等位基因 $H$、$h$ 控制的遗传病。患者（$hh$）的红细胞只含异常血红蛋白，仅少数患者可存活到成年；正常人（$HH$）的红细胞只含正常血红蛋白；携带者（$Hh$）的红细胞含有正常和异常血红蛋白，并对疟疾有较强的抵抗力。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "引起镰状细胞贫血的基因突变为中性突变"
+      },
+      {
+        "label": "B",
+        "text": "疟疾流行区，基因 $h$ 不会在进化历程中消失"
+      },
+      {
+        "label": "C",
+        "text": "基因 $h$ 通过控制血红蛋白的结构影响红细胞的形态"
+      },
+      {
+        "label": "D",
+        "text": "基因 $h$ 可影响多个性状，不能体现基因突变的不定向性"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-6",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "某动物家系的系谱图如图所示。$a1$、$a2$、$a3$、$a4$ 是位于 $X$ 染色体上的等位基因，Ⅰ-1 基因型为 $X^{a1}X^{a2}$，Ⅰ-2 基因型为 $X^{a3}Y$，Ⅱ-1 和 Ⅱ-4 基因型均为 $X^{a4}Y$，Ⅳ-1 为纯合子的概率为（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "3/64"
+      },
+      {
+        "label": "B",
+        "text": "3/32"
+      },
+      {
+        "label": "C",
+        "text": "1/8"
+      },
+      {
+        "label": "D",
+        "text": "3/16"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-7",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "神经细胞动作电位产生后，$K^+$ 外流使膜电位恢复为静息状态的过程中，膜上的钠钾泵转运 $K^+$、$Na^+$ 的活动增强，促使膜内外的 $K^+$、$Na^+$ 分布也恢复到静息状态。已知胞内 $K^+$ 浓度总是高于胞外，胞外 $Na^+$ 浓度总是高于胞内。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "若增加神经细胞外的 $Na^+$ 浓度，动作电位的幅度增大"
+      },
+      {
+        "label": "B",
+        "text": "若静息状态下 $Na^+$ 通道的通透性增加，静息电位的幅度不变"
+      },
+      {
+        "label": "C",
+        "text": "若抑制钠钾泵活动，静息电位和动作电位的幅度都减小"
+      },
+      {
+        "label": "D",
+        "text": "神经细胞的 $K^+$、$Na^+$ 跨膜运输方式均包含主动运输和被动运输"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（山东卷）-8",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "根据实验数据表分析，下列叙述正确的是（ ）\n组别：1, 2, 3, 4, 5\n温度（$^{\\circ}C$）：27, 37, 47, 57, 67\n滤液变澄清时间（min）：16, 9, 4, 6, 50min未澄清",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "滤液变澄清的时间与该蛋白酶活性呈正相关"
+      },
+      {
+        "label": "B",
+        "text": "组 3 滤液变澄清时间最短，酶促反应速率最快"
+      },
+      {
+        "label": "C",
+        "text": "若实验温度 $52^{\\circ}C$，则滤液变澄清时间为 4~6min"
+      },
+      {
+        "label": "D",
+        "text": "若实验后再将组 5 放置在 $57^{\\circ}C$，则滤液变澄清时间为 6min"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-10",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "近年报道了多起猴痘病毒感染病例，人体感染猴痘病毒后会产生一系列的免疫应答。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "猴痘病毒的增殖发生在血浆内"
+      },
+      {
+        "label": "B",
+        "text": "注射猴痘病毒疫苗属于人工被动免疫"
+      },
+      {
+        "label": "C",
+        "text": "体内的各种 B 淋巴细胞都能识别猴痘病毒"
+      },
+      {
+        "label": "D",
+        "text": "在抵抗猴痘病毒过程中，辅助性 T 细胞既参与体液免疫也参与细胞免疫"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-11",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "某哺乳动物的体细胞核 DNA 含量为 $2C$，对其体外培养细胞的核 DNA 含量进行检测，结果如图所示，其中甲（$72.60\\%$，核 DNA 含量为 $2C$）、乙（$18.03\\%$，核 DNA 含量为 $2C \\sim 4C$）、丙（$9.37\\%$，核 DNA 含量为 $4C$）表示不同核 DNA 含量的细胞及其占细胞总数的百分比。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲中细胞具有核膜和核仁"
+      },
+      {
+        "label": "B",
+        "text": "乙中细胞进行核 DNA 复制"
+      },
+      {
+        "label": "C",
+        "text": "丙中部分细胞的染色体着丝粒排列在细胞中央的平面上"
+      },
+      {
+        "label": "D",
+        "text": "若培养液中加入秋水仙素，丙占细胞总数的百分比会减小"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-12",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "多种多样的生物通过遗传信息控制性状，并通过繁殖将遗传物质传递给子代。下列关于遗传物质的叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "S 型肺炎链球菌的遗传物质主要通过质粒传递给子代"
+      },
+      {
+        "label": "B",
+        "text": "水稻、小麦和玉米三大粮食作物的遗传物质主要是 DNA"
+      },
+      {
+        "label": "C",
+        "text": "控制伞藻伞帽的遗传物质通过半保留复制表达遗传信息"
+      },
+      {
+        "label": "D",
+        "text": "烟草叶肉细胞的遗传物质水解后可产生 4 种脱氧核苷酸"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-13",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "科学家将拟南芥的细胞分裂素氧化酶基因 AtCKX1 和 AtCKX2 分别导入到野生型烟草（WT）中，获得两种转基因烟草 Y1 和 Y2，培养并测定相关指标，结果如表所示。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "与 WT 相比，Y2 光合总面积增加"
+      },
+      {
+        "label": "B",
+        "text": "Y1 和 Y2 的细胞分裂素含量相同且低于 WT"
+      },
+      {
+        "label": "C",
+        "text": "若对 Y1 施加细胞分裂素类似物，叶片数会增加"
+      },
+      {
+        "label": "D",
+        "text": "若对 Y2 施加细胞分裂素类似物，侧根和不定根数会增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-14",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "hormonal_reg",
+    "content": "为研究甲状腺激素分泌的调控，某同学给大鼠注射抗促甲状腺激素血清后，测定其血液中相关激素的含量并进行分析。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲状腺激素对下丘脑的负反馈作用减弱"
+      },
+      {
+        "label": "B",
+        "text": "垂体分泌促甲状腺激素的功能减弱"
+      },
+      {
+        "label": "C",
+        "text": "促甲状腺激素释放激素含量降低"
+      },
+      {
+        "label": "D",
+        "text": "甲状腺激素含量升高"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（浙江1月卷）-15",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "关于蛋白质、磷脂和淀粉，下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "三者组成元素都有 $C$、$H$、$O$、$N$"
+      },
+      {
+        "label": "B",
+        "text": "蛋白质和磷脂是构成生物膜的主要成分"
+      },
+      {
+        "label": "C",
+        "text": "蛋白质和淀粉都是细胞内的主要储能物质"
+      },
+      {
+        "label": "D",
+        "text": "磷脂和淀粉都是生物大分子"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-1",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "关于人体细胞和酵母细胞呼吸作用的比较分析，下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞内葡萄糖分解成丙酮酸的场所不同"
+      },
+      {
+        "label": "B",
+        "text": "有氧呼吸第二阶段都有 $O_2$ 和 $H_2O$ 参与"
+      },
+      {
+        "label": "C",
+        "text": "呼吸作用都能产生 [H] 和 ATP"
+      },
+      {
+        "label": "D",
+        "text": "无氧呼吸的产物都有 $CO_2$"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-2",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "关于“研究土壤中动物类群丰富度”实验，下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "设计统计表格时应将物种数和个体数纳入其中"
+      },
+      {
+        "label": "B",
+        "text": "可用采集罐采集土壤动物"
+      },
+      {
+        "label": "C",
+        "text": "不宜采用样方法调查活动能力强的土壤动物"
+      },
+      {
+        "label": "D",
+        "text": "记名计数法适用于体型小且数量极多的土壤动物"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-3",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "图示一种植物组织培养周期，①~③表示相应过程。下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "过程①发生了细胞的脱分化和有丝分裂"
+      },
+      {
+        "label": "B",
+        "text": "过程②经细胞的再分化形成不同种类的细胞"
+      },
+      {
+        "label": "C",
+        "text": "过程②③所用培养基的成分、浓度相同"
+      },
+      {
+        "label": "D",
+        "text": "培养基中糖类既能作为碳源，又与维持渗透压有关"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-4",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "江苏某地运用生态修复工程技术，将废弃矿区建设成为中国最美的乡村湿地之一。下列相关叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "先从非生物因素入手，改善地貌条件、治理水体污染、修建引水工程"
+      },
+      {
+        "label": "B",
+        "text": "构建适合本地、结构良好的植被体系，提高生产者的生物量"
+      },
+      {
+        "label": "C",
+        "text": "生态修复工程调整了生态系统的营养结构"
+      },
+      {
+        "label": "D",
+        "text": "建设合理景观，综合提高其经济、生态等生物多样性的直接价值"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-5",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "某同学利用红叶李果实制作果醋，图示其操作简易流程：果实 $\\xrightarrow{①}$ 果汁 $\\xrightarrow{②}$ 果酒 $\\xrightarrow{③}$ 果醋。下列相关叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "果酒、果醋发酵所需菌种的细胞结构相同"
+      },
+      {
+        "label": "B",
+        "text": "过程①中添加适量果胶酶，有利于提高出汁率"
+      },
+      {
+        "label": "C",
+        "text": "过程②中，为使菌种充分吸收营养物质，需每日多次开盖搅拌"
+      },
+      {
+        "label": "D",
+        "text": "过程③发酵时会产生大量气泡，需拧松瓶盖放气"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-6",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "梅花鹿和马鹿杂交后代生命力强、茸质好，但自然杂交很难完成，人工授精能解决此难题。胚胎工程技术的应用，可提高繁殖率，增加鹿场经济效益。下列相关叙述合理的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "采集的精液无需固定、稀释，即可用血细胞计数板检测精子密度"
+      },
+      {
+        "label": "B",
+        "text": "人工授精时，采集的精液经获能处理后才能输入雌性生殖道"
+      },
+      {
+        "label": "C",
+        "text": "超数排卵处理时，常用含促性腺激素的促排卵剂"
+      },
+      {
+        "label": "D",
+        "text": "母体子宫对胚胎的免疫耐受性低下是胚胎移植的生理学基础"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-7",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "为探究淀粉酶是否具有专一性，有同学设计了实验方案，主要步骤如表。下列相关叙述合理的是（ ）\n步骤 | 甲组 | 乙组 | 丙组\n---|---|---|---\n① | 加入 2mL 淀粉溶液 | 加入 2mL 淀粉溶液 | 加入 2mL 蔗糖溶液\n② | 加入 2mL 淀粉酶溶液 | 加入 2mL 蒸馏水 | ？\n③ | 60℃水浴加热，然后各加入 2mL 斐林试剂，再 60℃水浴加热",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "丙组步骤②应加入 2mL 蔗糖酶溶液"
+      },
+      {
+        "label": "B",
+        "text": "两次水浴加热的主要目的都是提高酶活性"
+      },
+      {
+        "label": "C",
+        "text": "根据乙组的实验结果可判断淀粉溶液中是否含有还原糖"
+      },
+      {
+        "label": "D",
+        "text": "甲、丙组的预期实验结果都出现砖红色沉淀"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（江苏卷）-8",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "蛋白的表达，破坏癌细胞的连接，从而促进癌细胞转移。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "机体清除癌细胞的过程属于免疫自稳"
+      },
+      {
+        "label": "B",
+        "text": "使用 $\\beta$ 受体阻断剂可降低癌细胞转移率"
+      },
+      {
+        "label": "C",
+        "text": "可通过接种该病毒疫苗降低患相关癌症的风险"
+      },
+      {
+        "label": "D",
+        "text": "辅助性 T 细胞可能参与机体清除癌细胞的过程"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-9",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "果实脱落受多种激素调控。某植物果实脱落的调控过程如图所示。下列说法错误的是（ ）\n（图示：生长素 —| 脱落酸 —→ 乙烯合成酶 —→ 乙烯 —→ 脱落）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "脱落酸通过促进乙烯的合成促进该植物果实脱落"
+      },
+      {
+        "label": "B",
+        "text": "脱落酸与生长素含量的比值影响该植物果实脱落"
+      },
+      {
+        "label": "C",
+        "text": "喷施适宜浓度的生长素类调节剂有利于防止该植物果实脱落"
+      },
+      {
+        "label": "D",
+        "text": "该植物果实脱落过程中产生的乙烯对自身合成的调节属于负反馈"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-10",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某湿地公园出现大量由北方前来越冬的候鸟，下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "候鸟前来该湿地公园越冬的信息传递只发生在鸟类与鸟类之间"
+      },
+      {
+        "label": "B",
+        "text": "鸟类的到来改变了该湿地群落冬季的物种数目，属于群落演替"
+      },
+      {
+        "label": "C",
+        "text": "来自不同地区鸟类的交配机会增加，体现了生物多样性的间接价值"
+      },
+      {
+        "label": "D",
+        "text": "湿地水位深浅不同的区域分布着不同的鸟类种群，体现了群落的垂直结构"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-11",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某时刻某动物种群所有个体的有机物中的总能量为①，一段时后．此种群所有存活个体的有机物中的总能量为②，此种群在这段时间内通过呼吸作用散失的总能量为③，这段时间内死亡个体的有机物中的总能量为④。此种群在此期间无迁入迁出，无个体被捕食，估算这段时间内用于此种群生长、发育和繁殖的总能量时，应使用的表达式为（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "②-①+④"
+      },
+      {
+        "label": "B",
+        "text": "②-①+③"
+      },
+      {
+        "label": "C",
+        "text": "②-①-③+④"
+      },
+      {
+        "label": "D",
+        "text": "②-①+③+①"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-12",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "“绿叶中色素的提取和分离”实验操作中要注意“干燥”，下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "应使用干燥的定性滤纸"
+      },
+      {
+        "label": "B",
+        "text": "绿叶需烘干后再提取色素"
+      },
+      {
+        "label": "C",
+        "text": "重复画线前需等待滤液细线干燥"
+      },
+      {
+        "label": "D",
+        "text": "无水乙醇可用加入适量无水碳酸钠的 95% 乙醇替代"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-13",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "利用动物体细胞核移植技术培育转基因牛的过程如图所示，下列说法错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "对牛乙注射促性腺激素是为了收集更多的卵母细胞"
+      },
+      {
+        "label": "B",
+        "text": "卵母细胞去核应在其减数分裂 $I$ 中期进行"
+      },
+      {
+        "label": "C",
+        "text": "培养牛甲的体细胞时应定期更换培养液"
+      },
+      {
+        "label": "D",
+        "text": "可用 PCR 技术鉴定犊牛丁是否为转基因牛"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-14",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "深海淤泥中含有某种能降解纤维素的细菌。探究不同压强下，该细菌在以纤维素或淀粉为唯一碳源的培养基上的生长情况。其他条件相同且适宜，实验处理及结果如表所示。下列说法正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "可用平板划线法对该菌计数"
+      },
+      {
+        "label": "B",
+        "text": "制备培养基的过程中，应先倒平板再进行高压蒸汽灭菌"
+      },
+      {
+        "label": "C",
+        "text": "由②④组可知，在以纤维素为唯一碳源培养基上，该菌可在常压下生长"
+      },
+      {
+        "label": "D",
+        "text": "由③④组可知，高压下该菌不能在以淀粉为唯一碳源的培养基上生长"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-15",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "meiosis",
+    "content": "观察图甲、图乙所示的某生物细胞分裂简图（图中包含性染色体 $X$ 且存在特定基因）。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲细胞中，同源染色体分离，染色体数目减半"
+      },
+      {
+        "label": "B",
+        "text": "乙细胞中，有 4 对同源染色体，2 个染色体组"
+      },
+      {
+        "label": "C",
+        "text": "$X^D$ 与 $b$ 的分离可在甲细胞中发生，$B$ 与 $B$ 的分离可在乙细胞中发生"
+      },
+      {
+        "label": "D",
+        "text": "甲细胞产生的精细胞中基因型为 $BY$ 的占 1/4，乙细胞产生的子细胞基因型相同"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-16",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "制备蛙的坐骨神经腓肠肌标本，将其置于生理溶液中进行实验。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "刺激腓肠肌，肌肉和坐骨神经上都能检测到电位变化"
+      },
+      {
+        "label": "B",
+        "text": "降低生理溶液中 $Na^+$ 浓度，刺激神经纤维，其动作电位幅度增大"
+      },
+      {
+        "label": "C",
+        "text": "随着对坐骨神经的刺激强度不断增大，腓肠肌的收缩强度随之增大"
+      },
+      {
+        "label": "D",
+        "text": "抑制乙酰胆碱分解，刺激坐骨神经，一定时间内腓肠肌持续收缩"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-17",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "某研究小组进行微型月季的快速繁殖研究，结果如表所示：\n\n| 流程 | 最佳措施或最适培养基 |\n| :--- | :--- |\n| ①外植体腋芽消毒 | 75%乙醇浸泡 30s+5%NaClO 浸泡 6min |\n| ②诱导出丛生苗 | MS+3.0mg·$L^{-1}$ 6-BA+0.05mg·$L^{-1}$ NAA |\n| ③丛生苗的扩增 | MS+2.0mg·$L^{-1}$ 6-BA+0.1mg·$L^{-1}$ NAA |\n| ④丛生苗的生根 | 1/2MS+0.25mg·$L^{-1}$ IBA+0.25mg·$L^{-1}$ NAA |\n\n注：从生苗为丛状生长的幼苗，IBA（吲哚丁酸）为生长素类物质。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "流程①的效果取决于消毒剂浓度"
+      },
+      {
+        "label": "B",
+        "text": "流程②不需要经过脱分化形成愈伤组织的阶段"
+      },
+      {
+        "label": "C",
+        "text": "与流程②相比，流程③培养基中细胞分裂素类与生长素类物质的比值更大"
+      },
+      {
+        "label": "D",
+        "text": "与流程③相比，提高流程④培养基的盐浓度有利于从生苗的生根"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-18",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "19",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某岛 1820~1935 年间绵羊种群数量变化结果如图所示。1850 年后，由于放牧活动和对羊产品的市场需求，种群中大量中老年个体被捕杀，使其种群数量在 132 万~225 万头之间波动，以持续获得最大经济效益。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "1850 年前，种群的增长速率持续增加"
+      },
+      {
+        "label": "B",
+        "text": "1850 年前，种群的增长方式为“J”形增长"
+      },
+      {
+        "label": "C",
+        "text": "1850 年后，种群的年龄结构呈增长型"
+      },
+      {
+        "label": "D",
+        "text": "1850 年后，种群数量波动的主要原因是种内竞争"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-19",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "20",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "某遗传病家系的系谱图如图甲所示，已知该遗传病由正常基因 $A$ 突变成 $A_1$ 或 $A_2$ 引起，且 $A_1$ 对 $A$ 和 $A_2$ 为显性，$A$ 对 $A_2$ 为显性。为确定家系中某些个体的基因型，分别根据 $A_1$ 和 $A_2$ 两种基因的序列，设计鉴定该遗传病基因的引物进行 PCR 扩增，电泳结果如图乙所示。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "电泳结果相同的个体表型相同，表型相同的个体电泳结果不一定相同"
+      },
+      {
+        "label": "B",
+        "text": "若Ⅱ3 的电泳结果有 2 条条带，则Ⅱ2 和Ⅲ3 基因型相同的概率为 1/3"
+      },
+      {
+        "label": "C",
+        "text": "若Ⅲ1 与正常女子结婚，生了 1 个患病的后代，则可能是 $A_2$ 导致的"
+      },
+      {
+        "label": "D",
+        "text": "若Ⅲ5 的电泳结果仅有 1 条条带，则Ⅱ6 的基因型只有 1 种可能"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（浙江1月卷）-20",
+    "source": "2025年高考生物试卷（浙江1月卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "图示小肠上皮组织，a~c 表示 3 类不同功能的细胞。下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "a 类干细胞分裂产生的子细胞都继续分化成 b 类或 c 类细胞"
+      },
+      {
+        "label": "B",
+        "text": "压力应激引起 a 类干细胞质膜通透性改变，可促使干细胞衰老"
+      },
+      {
+        "label": "C",
+        "text": "c 类细胞凋亡和坏死，对细胞外液的影响不同"
+      },
+      {
+        "label": "D",
+        "text": "3 类不同功能的细胞都表达细胞骨架基因"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-9",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "脂肪细胞分泌的生物活性蛋白 Leptin 可使兴奋性递质 5-羟色胺的合成和释放减少，阻碍神经元之间的兴奋传递，如图所示。下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "脂肪细胞通过释放 Leptin 使 5-羟色胺的合成减少属于体液调节"
+      },
+      {
+        "label": "B",
+        "text": "Leptin 直接影响突触前膜和突触后膜的静息电位"
+      },
+      {
+        "label": "C",
+        "text": "Leptin 与突触前膜受体结合，影响兴奋在突触处的传递"
+      },
+      {
+        "label": "D",
+        "text": "5-羟色胺与突触后膜受体结合减少，导致 $Na^+$ 内流减少"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-10",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "从种植草莓的土壤中分离致病菌，简易流程如下：制备土壤悬液、分离、纯化、鉴定。下列相关叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "制备的培养基可用紫外线照射进行灭菌"
+      },
+      {
+        "label": "B",
+        "text": "将土样加入无菌水混匀，梯度稀释后取悬液加入平板并涂布"
+      },
+      {
+        "label": "C",
+        "text": "连续划线时，接上次划线的起始端开始划线"
+      },
+      {
+        "label": "D",
+        "text": "鉴定后的致病菌，可接种在斜面培养基上，并在室温下长期保存"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-11",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "用秋水仙素处理大花葱（$2n=16$），将其根尖制成有丝分裂装片，图示 2 个细胞分裂相。下列相关叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "解离时间越长，越有利于获得图甲所示的分裂相"
+      },
+      {
+        "label": "B",
+        "text": "取解离后的根尖，置于载玻片上，滴加清水并压片"
+      },
+      {
+        "label": "C",
+        "text": "图乙是有丝分裂后期的细胞分裂相"
+      },
+      {
+        "label": "D",
+        "text": "由于秋水仙素的诱导，图甲和图乙细胞的染色体数目都加倍"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-12",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "关于人体的内环境与稳态，下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "血浆 $Na^+$ 浓度升高时，肾上腺皮质分泌的醛固酮增加，抑制肾小管对 $Na^+$ 的重吸收"
+      },
+      {
+        "label": "B",
+        "text": "血浆 $H^+$ 浓度升高时，$HCO_3^-$ 与 $H^+$ 结合，$H_2CO_3$ 分解成 $CO_2$ 和 $H_2O$，$CO_2$ 排出体外"
+      },
+      {
+        "label": "C",
+        "text": "寒冷刺激时，肾上腺素、甲状腺激素分泌增加，细胞代谢增强，产热增加"
+      },
+      {
+        "label": "D",
+        "text": "体内失水过多时，抗利尿激素释放量增加，促进肾小管、集合管对水的重吸收"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-13",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "meiosis",
+    "content": "图示二倍体植物形成 2n 异常配子的过程，下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲细胞中发生过染色体交叉互换"
+      },
+      {
+        "label": "B",
+        "text": "乙细胞中不含有同源染色体"
+      },
+      {
+        "label": "C",
+        "text": "丙细胞含有两个染色体组"
+      },
+      {
+        "label": "D",
+        "text": "2n 配子是由于减数第一次分裂异常产生的"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（江苏卷）-14",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "果蝇体节发育与分别位于 2 对常染色体上的等位基因 $M$、$m$ 和 $N$、$n$ 有关，$M$ 对 $m$、$N$ 对 $n$ 均为显性。其中 1 对为母体效应基因，只要母本该基因为隐性纯合，子代就体节缺失，与自身该对基因的基因型无关；另 1 对基因无母体效应，该基因的隐性纯合子体节缺失。下列基因型的个体均体节缺失，能判断哪对等位基因为母体效应基因的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "MmNn"
+      },
+      {
+        "label": "B",
+        "text": "MmNN"
+      },
+      {
+        "label": "C",
+        "text": "mmNN"
+      },
+      {
+        "label": "D",
+        "text": "Mmnn"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-17",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "低钠血症患者的血钠浓度和细胞外液渗透压均低于正常值。依据患者细胞外液量减少、不变和增加，依次称为低容量性、等容量性和高容量性低钠血症。下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "醛固酮分泌过多可能引起低容量性低钠血症"
+      },
+      {
+        "label": "B",
+        "text": "抗利尿激素分泌过多可能引起高容量性低钠血症"
+      },
+      {
+        "label": "C",
+        "text": "与患病前相比，等容量性低钠血症患者更易产生渴感"
+      },
+      {
+        "label": "D",
+        "text": "与患病前相比，低钠血症患者的细胞外液中总钠量可能增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-18",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "BD"
+  },
+  {
+    "question_number": "19",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "种群延续所需要的最小种群密度为临界密度，只有大于临界密度，种群数量才能增加，最后会达到并维持在一个相对稳定的数量，即环境容纳量（$K$ 值）。不同环境条件下，同种动物种群的 $K$ 值不同。图中曲线上的点表示在不同环境条件下某动物种群的 $K$ 值和达到 $K$ 值时的种群密度，其中 m 为该动物种群的临界密度，$K_0$ 以下的环境表示该动物的灭绝环境。a、b、c、d 四个点表示不同环境条件下该动物的 4 个种群的 $K$ 值及当前的种群密度，且 4 个种群所在区域面积相等，各种群所处环境稳定。不考虑迁入迁出，下列说法错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "可通过提高 $K$ 值对 a 点种群进行有效保护"
+      },
+      {
+        "label": "B",
+        "text": "b 点种群发展到稳定期间，出生率大于死亡率"
+      },
+      {
+        "label": "C",
+        "text": "c 点种群发展到稳定期间，种内竞争逐渐加剧"
+      },
+      {
+        "label": "D",
+        "text": "通过一次投放适量该动物可使 d 点种群得以延续"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-19",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "ACD"
+  },
+  {
+    "question_number": "20",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "酿造某大曲白酒的过程中，微生物的主要来源有大曲和窖泥。大曲主要提供白酒酿造过程中糖化所需的微生物，制曲过程需经堆积培养，培养时温度可达 $60^{\\circ}C$ 左右；将大曲和酿酒原料混合，初步发酵后放入窖池；窖池发酵是白酒酿造过程中微生物发酵的最后阶段。下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "堆积培养过程中的高温有利于筛选酿酒酵母"
+      },
+      {
+        "label": "B",
+        "text": "大曲中存在能分泌淀粉酶的微生物"
+      },
+      {
+        "label": "C",
+        "text": "窖池发酵过程中，酵母菌以无氧呼吸为主"
+      },
+      {
+        "label": "D",
+        "text": "窖池密封不严使酒变酸是因为乳酸含量增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（山东卷）-20",
+    "source": "2025年高考生物试卷（山东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "图示某种生物基因表达的调控过程，涉及 DNA 与 mRNA 的甲基化。下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲基化通过抑制转录过程调控基因表达"
+      },
+      {
+        "label": "B",
+        "text": "图中甲基化的碱基位于脱氧核糖核苷酸链上"
+      },
+      {
+        "label": "C",
+        "text": "蛋白 Y 可结合甲基化的 mRNA 并抑制表达"
+      },
+      {
+        "label": "D",
+        "text": "若图中 DNA 的碱基甲基化也可引起表观遗传效应"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（江苏卷）-15",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "（多选）研究小组开展了 $Cl^-$ 胁迫下，添加脱落酸（ABA）对植物根系应激反应的实验，机理如图所示。下列相关叙述错误的有（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$Cl^-$ 通过自由扩散进入植物细胞"
+      },
+      {
+        "label": "B",
+        "text": "转运蛋白甲、乙的结构和功能相同"
+      },
+      {
+        "label": "C",
+        "text": "ABA 进入细胞核促进相关基因的表达"
+      },
+      {
+        "label": "D",
+        "text": "细胞质膜发挥了物质运输、信息交流的功能"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（江苏卷）-16",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "ABC"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "（多选）某岛屿上分布一种特有的爬行动物，以多种候鸟为食，候鸟主要栖息在灌丛和稀树草地。图示该爬行动物在不同生境下的年龄组成，下列相关叙述正确的有（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "该爬行动物种群的年龄结构呈稳定型"
+      },
+      {
+        "label": "B",
+        "text": "岛屿上植被和该爬行动物的分布均具有明显的垂直结构"
+      },
+      {
+        "label": "C",
+        "text": "岛屿生态系统的部分能量随候鸟的迁徙等途径流出"
+      },
+      {
+        "label": "D",
+        "text": "栖息在不同生境中的候鸟存在生态位分化"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（江苏卷）-17",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "CD"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "（多选）图示部分竹子的进化发展史，其中 A~D 和 H 代表不同的染色体组。下列相关叙述正确的有（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "新热带木本竹与温带木本竹杂交，$F_1$ 是六倍体"
+      },
+      {
+        "label": "B",
+        "text": "竹子的染色体数目变异是可遗传的"
+      },
+      {
+        "label": "C",
+        "text": "四种类群的竹子共同组成进化的基本单位"
+      },
+      {
+        "label": "D",
+        "text": "竹子化石为研究其进化提供直接证据"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（江苏卷）-18",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "BD"
+  },
+  {
+    "question_number": "19",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "（多选）图示人体正常基因 A 突变为致病基因 a 及 HindⅢ 切割位点。AluⅠ 限制酶识别序列及切割位点为 $5'-AGCT-3'$ / $3'-TCGA-5'$，下列相关叙述正确的有（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "基因 A 突变为 a 是一种碱基增添的突变"
+      },
+      {
+        "label": "B",
+        "text": "用两种限制酶分别酶切 A 基因后，形成的末端类型不同"
+      },
+      {
+        "label": "C",
+        "text": "用两种限制酶分别酶切 a 基因后，产生的片段大小一致"
+      },
+      {
+        "label": "D",
+        "text": "产前诊断时，该致病基因可选用 HindⅢ 限制酶开展酶切鉴定"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（江苏卷）-19",
+    "source": "2025年高考生物试卷（江苏卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "BD"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "化学元素含量对生命活动十分重要。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "植物缺镁导致叶绿素合成减少"
+      },
+      {
+        "label": "B",
+        "text": "哺乳动物缺钙会出现抽搐症状"
+      },
+      {
+        "label": "C",
+        "text": "人体缺铁导致镰状细胞贫血症"
+      },
+      {
+        "label": "D",
+        "text": "人体缺碘甲状腺激素合成减少"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-1",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "生物兴趣小组从橘子果肉中分离得到完整的线粒体，操作流程如图。下列说法错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "缓冲液可以用蒸馏水代替"
+      },
+      {
+        "label": "B",
+        "text": "匀浆的目的是释放线粒体"
+      },
+      {
+        "label": "C",
+        "text": "差速离心可以将不同大小的颗粒分开"
+      },
+      {
+        "label": "D",
+        "text": "该线粒体可用于研究丙酮酸氧化分解"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-2",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "细胞作为生命活动的基本单位，需要与环境进行物质交换。下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "协助扩散转运物质需消耗 ATP"
+      },
+      {
+        "label": "B",
+        "text": "被动运输是逆浓度梯度进行的"
+      },
+      {
+        "label": "C",
+        "text": "载体蛋白转运物质时自身构象发生改变"
+      },
+      {
+        "label": "D",
+        "text": "主动运输转运物质时需要通道蛋白协助"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-3",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "研究发现，细胞蛇是一种无膜细胞器，其在果蝇三龄幼虫大脑干细胞中数量较多而神经细胞中几乎没有；在人类肝癌细胞中数量比正常组织中多。据此推测细胞蛇可能参与的生命活动是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞增殖"
+      },
+      {
+        "label": "B",
+        "text": "细胞分化"
+      },
+      {
+        "label": "C",
+        "text": "细胞凋亡"
+      },
+      {
+        "label": "D",
+        "text": "细胞衰老"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-4",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "meiosis",
+    "content": "某二倍体动物（$2n=4$）的基因型为 $GgFf$，等位基因 $G/g$ 和 $F/f$ 分别位于两对同源染色体上，在不考虑基因突变的情况下，下列细胞分裂示意图中不可能出现的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "[图示A]"
+      },
+      {
+        "label": "B",
+        "text": "[图示B]"
+      },
+      {
+        "label": "C",
+        "text": "[图示C]"
+      },
+      {
+        "label": "D",
+        "text": "[图示D]"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-5",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "云南省是著名的鲜花产地，所产鲜花花色鲜艳与其独特的自然环境息息相关。花青素苷是决定被子植物色彩呈现的主要色素物质，花冠中糖类或被紫外光激活的紫外光受体均可促进相关基因表达，从而增加花青素苷的合成。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "云南平均海拔高，紫外光强，能够促进花青素苷的合成"
+      },
+      {
+        "label": "B",
+        "text": "鲜切花中花青素苷会缓慢降解，在浸泡液中添加适量糖可延缓鲜花褪色"
+      },
+      {
+        "label": "C",
+        "text": "云南平均海拔高，昼夜温差大，有利于呈色"
+      },
+      {
+        "label": "D",
+        "text": "鲜花中花青素苷的含量，与紫外光受体基因表达水平呈负相关"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-6",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "研究人员观察到川金丝猴为黄色毛发、滇/缅甸金丝猴为黑色毛发、黔金丝猴为黑灰色—黄色的镶嵌毛发，因此对金丝猴属 5 种金丝猴进行研究，证实黔金丝猴起源于 187 万年前川金丝猴祖先群与滇/缅甸金丝猴祖先群的杂交后代，其遗传信息约 70%来自川金丝猴祖先群，30%来自滇/缅甸金丝猴祖先群。下列结论无法得出的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "杂交促进了金丝猴间的基因交流，是黔金丝猴形成的重要因素"
+      },
+      {
+        "label": "B",
+        "text": "黔金丝猴毛色是有别于祖先群的新性状，该性状可遗传给后代"
+      },
+      {
+        "label": "C",
+        "text": "黔金丝猴毛色的形成是遗传和所处自然环境共同作用的结果"
+      },
+      {
+        "label": "D",
+        "text": "黔金丝猴群体中黄色毛发的基因频率大于黑色毛发的基因频率"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-7",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "长跑运动员在比赛过程中，出现呼吸加快、大量流汗等生理现象，但血浆 pH 仍保持相对稳定。分析血浆 pH 稳定的原因，下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "大量流汗排出了无机盐"
+      },
+      {
+        "label": "B",
+        "text": "喝碱性饮料以中和乳酸"
+      },
+      {
+        "label": "C",
+        "text": "内环境中存在 $HCO_3^-/H_2CO_3$ 缓冲对"
+      },
+      {
+        "label": "D",
+        "text": "呼吸过快时 $O_2$ 摄入和 $CO_2$ 排出均减少"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-8",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "抗蛇毒毒素血清用于治疗被毒蛇咬伤的患者。关于抗蛇毒毒素血清的制备和运用，下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "制备抗蛇毒毒素血清可用减毒的蛇毒毒素对动物多次免疫"
+      },
+      {
+        "label": "B",
+        "text": "从已免疫动物血液中分离抗蛇毒毒素血清时需去除血细胞"
+      },
+      {
+        "label": "C",
+        "text": "医务人员需根据毒蛇种类为患者注射对应抗蛇毒毒素血清"
+      },
+      {
+        "label": "D",
+        "text": "患者体内蛇毒记忆细胞是因注射抗蛇毒毒素血清而产生的"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-9",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "我国劳动人民在长期农业生产实践中总结了大量经验，体现出劳动人民的勤劳与智慧。下列分析错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "“打顶去心，果枝满头”：去掉顶芽，可以消除顶端优势，促进侧枝发育"
+      },
+      {
+        "label": "B",
+        "text": "“要得果子好，蜂子把花咬”：蜜蜂可帮助传粉提高受精率，增加果实数量"
+      },
+      {
+        "label": "C",
+        "text": "“庄稼一枝花，全靠肥当家”：作物可吸收有机肥中残留蛋白质，加速生长"
+      },
+      {
+        "label": "D",
+        "text": "“瓜熟蒂落”：乙烯含量升高可促进瓜果成熟，脱落酸含量升高可促进其脱落"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（云南卷）-10",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "某研究小组将合成的必需基因导入去除 DNA 的支原体中，构建出具有最小基因组且能够正常生长和分裂的细胞。下列结构中，这种细胞一定含有的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "核糖体"
+      },
+      {
+        "label": "B",
+        "text": "线粒体"
+      },
+      {
+        "label": "C",
+        "text": "中心体"
+      },
+      {
+        "label": "D",
+        "text": "溶酶体"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-1",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "在 T2 噬菌体侵染大肠杆菌的实验中，子代噬菌体中的元素全部来自其宿主细胞的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "C"
+      },
+      {
+        "label": "B",
+        "text": "S"
+      },
+      {
+        "label": "C",
+        "text": "P"
+      },
+      {
+        "label": "D",
+        "text": "N"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-2",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "耐寒黄花苜蓿的基因 M 编码的蛋白 M 属于水通道蛋白家族，将基因 M 转入烟草植株可提高其耐寒能力。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞内的结合水占比增加可提升植物的耐寒能力"
+      },
+      {
+        "label": "B",
+        "text": "低温时，水分子通过与蛋白 M 结合转运到细胞外"
+      },
+      {
+        "label": "C",
+        "text": "蛋白 M 增加了水的运输能力，但不改变水的运输方向"
+      },
+      {
+        "label": "D",
+        "text": "水通道蛋白介导跨膜运输不是水进出细胞的唯一方式"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-3",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "甜菜是我国重要的经济作物之一，根中含有大量的糖分。研究表明呼吸代谢可影响甜菜块根的生长，其中酶Ⅰ在有氧呼吸的第二阶段发挥催化功能，该酶活性与甜菜根重呈正相关。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "酶Ⅰ主要分布在线粒体内膜上，催化的反应需要消耗氧气"
+      },
+      {
+        "label": "B",
+        "text": "低温抑制酶Ⅰ的活性，进而影响二氧化碳和 NADH 的生成速率"
+      },
+      {
+        "label": "C",
+        "text": "酶Ⅰ参与的有氧呼吸第二阶段是有氧呼吸中生成 ATP 最多的阶段"
+      },
+      {
+        "label": "D",
+        "text": "呼吸作用会消耗糖分，因此生长期喷施酶Ⅰ抑制剂会增加甜菜产量"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-4",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "导管是被子植物木质部中运输水分和无机盐的主要输导组织，由导管的原始细胞分裂、分化、死亡后形成。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞坏死形成导管的过程是一种自然的生理过程"
+      },
+      {
+        "label": "B",
+        "text": "分化成熟后的导管仍具备脱分化和再分化的能力"
+      },
+      {
+        "label": "C",
+        "text": "导管的原始细胞与叶肉细胞的基因表达情况存在差异"
+      },
+      {
+        "label": "D",
+        "text": "细胞骨架在维持导管的形态及物质的运输中发挥作用"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-5",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "食醋和黄酒是我国传统的日常调味品，均通过发酵技术生产。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "醋酸的发酵是好氧发酵，而酒精的发酵是厌氧发酵"
+      },
+      {
+        "label": "B",
+        "text": "以谷物为原料酿造食醋和黄酒时，伴有 pH 下降和气体产生"
+      },
+      {
+        "label": "C",
+        "text": "食醋和黄酒发酵过程中，微生物繁殖越快发酵产物产率越高"
+      },
+      {
+        "label": "D",
+        "text": "使用天然混合菌种发酵往往会造成传统发酵食品的品质不一"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-6",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "系统进化树是一种表示物种间亲缘关系的树形图。研究人员结合形态学和分子证据，构建了绿色植物的系统进化关系，示意简图如下。下列推断正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "植物的系统进化关系是共同由来学说的体现和自然选择的结果"
+      },
+      {
+        "label": "B",
+        "text": "基因重组增强了生物变异的多样性，但不影响进化的速度和方向"
+      },
+      {
+        "label": "C",
+        "text": "绿藻化石首次出现地层的年龄小于苔藓植物化石首次出现地层的年龄"
+      },
+      {
+        "label": "D",
+        "text": "裸子植物与被子植物的亲缘关系比裸子植物与蕨类植物的亲缘关系远"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-7",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "病原体进入机体引起免疫应答过程的示意图如下。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "阶段Ⅰ发生在感染早期，①和②为参与特异性免疫的淋巴细胞"
+      },
+      {
+        "label": "B",
+        "text": "①和②通过摄取并呈递抗原，参与构成保卫机体的第一道防线"
+      },
+      {
+        "label": "C",
+        "text": "活化之后的③可以分泌细胞因子，从而加速④的分裂分化过程"
+      },
+      {
+        "label": "D",
+        "text": "阶段Ⅱ消灭病原体可通过③→⑤→⑥示意的细胞免疫过程来完成"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-8",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "$CO_2$ 是人体调节呼吸运动的重要体液因子。血液流经肌肉组织时，细胞产生的 $CO_2$ 进入红细胞，在酶的催化下迅速与水反应生成 $H_2CO_3$，进一步解离为 $H^+$ 和 $HCO_3^-$。$H^+$ 与血红蛋白结合促进 $O_2$ 释放，$HCO_3^-$ 顺浓度梯度进入血浆。下列推断错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$CO_2$ 参与血浆中 $HCO_3^- / H_2CO_3$ 缓冲对的形成"
+      },
+      {
+        "label": "B",
+        "text": "血液流经肌肉组织后，红细胞会轻度吸水“肿胀”"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-9",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "ATP 是一种能为生命活动供能的化合物，下列过程不消耗 ATP 的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "肌肉的收缩"
+      },
+      {
+        "label": "B",
+        "text": "光合作用的暗反应"
+      },
+      {
+        "label": "C",
+        "text": "$Ca^{2+}$载体蛋白的磷酸化"
+      },
+      {
+        "label": "D",
+        "text": "水的光解"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-1",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "enzymes_atp",
+    "content": "下列过程涉及酶催化作用的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "$Fe^{3+}$催化 $H_2O_2$ 的分解"
+      },
+      {
+        "label": "B",
+        "text": "$O_2$ 通过自由扩散进入细胞"
+      },
+      {
+        "label": "C",
+        "text": "PCR 过程中 DNA 双链的解旋"
+      },
+      {
+        "label": "D",
+        "text": "植物体细胞杂交前细胞壁的去除"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-2",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "下列对生物体有机物的相关叙述，错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "纤维素、淀粉酶和核酸的组成元素中都有 C、H 和 O"
+      },
+      {
+        "label": "B",
+        "text": "糖原、蛋白质和脂肪都是由单体连接成的多聚体"
+      },
+      {
+        "label": "C",
+        "text": "多肽链和核酸单链可在链内形成氢键"
+      },
+      {
+        "label": "D",
+        "text": "多糖、蛋白质和固醇可参与组成细胞结构"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-3",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "对绿色植物的光合作用和呼吸作用过程进行比较，下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "类囊体膜上消耗 $H_2O$、而线粒体基质中生成 $H_2O$"
+      },
+      {
+        "label": "B",
+        "text": "叶绿体基质中消耗 $CO_2$，而线粒体基质中生成 $CO_2$"
+      },
+      {
+        "label": "C",
+        "text": "类囊体膜上生成 $O_2$，而线粒体内膜上消耗 $O_2$"
+      },
+      {
+        "label": "D",
+        "text": "叶绿体基质中合成有机物，而线粒体基质中分解有机物"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-4",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "某科创小组将叶绿素合成相关基因转入小麦愈伤组织，获得再生植株，并进行相关检测。下列实验操作错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "将种子消毒后，取种胚接种到适当的固体培养基诱导愈伤组织"
+      },
+      {
+        "label": "B",
+        "text": "在提取的 DNA 溶液中加入二苯胺试剂，沸水浴后观察颜色以鉴定 DNA"
+      },
+      {
+        "label": "C",
+        "text": "将小麦色素提取液滴加到滤纸条，然后将色素滴加部位浸入层析液进行层析"
+      },
+      {
+        "label": "D",
+        "text": "对叶片抽气处理后，转到富含 $CO_2$ 的清水中，探究不同光照下的光合作用强度"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-5",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "M 和 N 是同一染色体上两个基因的部分序列，其转录方向如图所示。表中对 M 和 N 转录产物的碱基序列分析正确的是（ ）\n(图示显示：基因 M 转录方向向左，其序列为 5'-TCTACA-3' / 3'-AGATGT-5'；基因 N 转录方向向右，其序列为 5'-AGCTGT-3' / 3'-TCGACA-5')\n(表格给出转录产物候选项：① 5'-UCUACA-3'；② 5'-UGUAGA-3'；③ 5'-AGCUGU-3'；④ 5'-ACAGCU-3')",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "①③"
+      },
+      {
+        "label": "B",
+        "text": "①④"
+      },
+      {
+        "label": "C",
+        "text": "②③"
+      },
+      {
+        "label": "D",
+        "text": "②④"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-6",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "血液中 $CO_2$ 浓度升高刺激Ⅰ型细胞，由此引发的 $Ca^{2+}$ 内流促使神经递质释放，引起传入神经兴奋，最终使呼吸加深加快。通过Ⅰ型细胞对信息进行转换和传递的通路如图所示。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "Ⅰ型细胞受 $CO_2$ 浓度升高刺激时，胞内 $K^+$ 浓度降低，引发膜电位变化"
+      },
+      {
+        "label": "B",
+        "text": "阻断Ⅰ型细胞的 $Ca^{2+}$ 内流，可阻断该通路对呼吸的调节作用"
+      },
+      {
+        "label": "C",
+        "text": "该通路可将 $CO_2$ 浓度升高的刺激转换为传入神经的电信号"
+      },
+      {
+        "label": "D",
+        "text": "机体通过Ⅰ型细胞维持 $CO_2$ 浓度相对稳定的过程存在负反馈调节"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-7",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "轮状病毒引起的小儿腹泻是主要经消化道感染的常见传染病，多表现出高热和腹泻等症状。病毒繁殖后，经消化道排出体外。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "当体温维持在 39℃时，患儿产热量与散热量相等"
+      },
+      {
+        "label": "B",
+        "text": "检查粪便可诊断腹泻患儿是否为轮状病毒感染"
+      },
+      {
+        "label": "C",
+        "text": "抗病毒抗体可诱导机体产生针对该病毒的特异性免疫"
+      },
+      {
+        "label": "D",
+        "text": "保持手的清洁和饮食卫生有助于预防该传染病"
+      }
+    ],
+    "score_rule": "每题 2 分",
+    "id": "2025年高考生物试卷（河北卷）-8",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "向日葵具有向光生长的特性。研究人员以向日葵幼苗为实验材料，单侧光处理一段时间后，检测下胚轴两侧生长相关指标，结果如图所示。下列推断正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "向日葵下胚轴向光面 $IAA$ 促进生长的作用受抑制程度大于背光面"
+      },
+      {
+        "label": "B",
+        "text": "下胚轴两侧 $IAA$ 的含量基本一致，表明其向光生长不受 $IAA$ 影响"
+      },
+      {
+        "label": "C",
+        "text": "$IAA$ 抑制物通过调节下胚轴 $IAA$ 的含量进而导致向日葵向光生长"
+      },
+      {
+        "label": "D",
+        "text": "在下胚轴一侧喷施 $IAA$ 抑制物可导致黑暗中的向日葵向对侧弯曲"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-10",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "黄河流域是我国重要的生态屏障和经济地带，研究和保护黄河湿地生物多样性意义重大。某区域黄河湿地不同积水生境中植物物种的调查结果如图。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "永久性积水退去后的植物群落演替属于次生演替"
+      },
+      {
+        "label": "B",
+        "text": "积水生境中的植物具有适应所处非生物环境的共同特征"
+      },
+      {
+        "label": "C",
+        "text": "积水频次和积水量均可以影响湿地生态系统的抵抗力稳定性"
+      },
+      {
+        "label": "D",
+        "text": "影响季节性水涝生境中植物物种数量的关键生态因子属于密度制约因素"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-11",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "样方法是种群密度调查的常用方法，下列类群中最适用该方法调查种群密度的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "跳蝻、蕨类植物、挺水植物"
+      },
+      {
+        "label": "B",
+        "text": "灌木、鱼类、浮游植物"
+      },
+      {
+        "label": "C",
+        "text": "蚜虫、龟鳖类、土壤小动物"
+      },
+      {
+        "label": "D",
+        "text": "鸟类、酵母菌、草本植物"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-12",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "植物细胞质雄性不育由线粒体基因控制，可被核恢复基因恢复育性。现有甲（雄性不育株，38 条染色体）和乙（可育株，39 条染色体）两份油菜。甲与正常油菜（38 条染色体）杂交后代均为雄性不育，甲与乙杂交后代中可育株：雄性不育株$= 1:1$，可育株均为 39 条染色体。下列推断错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "正常油菜的初级卵母细胞中着丝粒数与核 $DNA$ 分子数不等"
+      },
+      {
+        "label": "B",
+        "text": "甲乙杂交后代的可育株含细胞质雄性不育基因和核恢复基因"
+      },
+      {
+        "label": "C",
+        "text": "乙经单倍体育种获得的 40 条染色体植株与甲杂交，$F_1$ 均可育"
+      },
+      {
+        "label": "D",
+        "text": "乙的次级精母细胞与初级精母细胞中的核恢复基因数目不等"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-13",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "构成染色体的组蛋白可发生乙酰化。由组蛋白基因表达到产生乙酰化的组蛋白，需经历转录、转录后加工、翻译、翻译后加工与修饰等过程。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "组蛋白乙酰化不改变自身的氨基酸序列但可影响个体表型"
+      },
+      {
+        "label": "B",
+        "text": "具有生物活性的 $tRNA$ 的形成涉及转录和转录后加工过程"
+      },
+      {
+        "label": "C",
+        "text": "编码组蛋白的 $mRNA$ 上结合的核糖体数量不同，可影响翻译的准确度和效率"
+      },
+      {
+        "label": "D",
+        "text": "组蛋白乙酰化发生在翻译后，是基因表达调控的结果，也会影响基因的表达"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-14",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "现有二倍体植株甲和乙，自交后代中某性状的正常株：突变株均为 $3:1$。甲自交后代中的突变株与乙自交后代中的突变株杂交，$F_1$ 全为正常株，$F_2$ 中该性状的正常株：突变株$= 9:6$（等位基因可依次使用 $A/a, B/b \\dots$）。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲的基因型是 $AaBB$ 或 $AABb$"
+      },
+      {
+        "label": "B",
+        "text": "$F_2$ 出现异常分离比是因为出现了隐性纯合致死"
+      },
+      {
+        "label": "C",
+        "text": "$F_2$ 植株中性状能稳定遗传的占 $7/15$"
+      },
+      {
+        "label": "D",
+        "text": "$F_2$ 中交配能产生 $AABB$ 基因型的亲本组合有 6 种"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河南卷）-15",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "在国家和地方政府的大力保护下，中国境内亚洲象数量明显增加。2002-2023 年西双版纳野象谷亚洲象种群数量调查结果如图。下列说法错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "可使用红外触发相机调查亚洲象种群数量"
+      },
+      {
+        "label": "B",
+        "text": "2016-2017 年，该种群新出生 3 头亚洲象"
+      },
+      {
+        "label": "C",
+        "text": "2021-2022 年，亚洲象种群增长率为 3%"
+      },
+      {
+        "label": "D",
+        "text": "亚洲象种群数量增长至 K 值后仍然会波动"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-11",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "群落演替理论为实施自然保护和生态修复提供了科学依据，关于演替，下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "森林火灾后发生的演替属于初生演替"
+      },
+      {
+        "label": "B",
+        "text": "科学合理的人工造林可加快演替的速度"
+      },
+      {
+        "label": "C",
+        "text": "优势种改变是判断群落演替的标志之一"
+      },
+      {
+        "label": "D",
+        "text": "环境变化是诱发演替的主要因素之一"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-12",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "增加碳汇的目的是减少大气中 $CO_2$ 含量。下列措施中无法实现减少碳排或增加碳汇的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "保护湿地"
+      },
+      {
+        "label": "B",
+        "text": "植树造林"
+      },
+      {
+        "label": "C",
+        "text": "秸秆还田"
+      },
+      {
+        "label": "D",
+        "text": "动物饲养"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-13",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "孕酮具有促进子宫内膜增生，为受精卵着床做准备的作用。某奶牛场发现一头高产奶量母牛生产两胎后重复配种均未成功妊娠，该牛可正常排卵但孕酮量低于正常母牛。为获得该母牛的后代，下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "运用体外受精或人工授精技术可提高该牛的妊娠率"
+      },
+      {
+        "label": "B",
+        "text": "使用外源促性腺激素处理该牛获得更多卵子进而可获得多枚胚胎"
+      },
+      {
+        "label": "C",
+        "text": "体外受精或人工授精后形成受精卵移植到健康受体可提高存活率"
+      },
+      {
+        "label": "D",
+        "text": "使用该牛 $MⅡ$ 期卵母细胞的细胞核进行核移植可获得可育后代"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-14",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "黄酒是我国古老的发酵酒之一，传统酿制中，先用蒸煮过的小麦或麸皮为原料，对之前发酵留存的少量酒曲（曲种）进行扩大制曲；再将酒曲和蒸煮后的糯米、大米混合处理一段时间后，添加足量酒母（含酵母菌）完成发酵，压榨成品。下列说法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "小麦、麸皮等原料为酒曲中微生物的生长繁殖提供了碳源和氮源等营养物质"
+      },
+      {
+        "label": "B",
+        "text": "为避免制曲过程被杂菌污染影响黄酒品质，扩大制曲前需对留存的酒曲灭菌"
+      },
+      {
+        "label": "C",
+        "text": "糯米、大米蒸煮后立即与酒曲混合会导致酶空间结构改变而降低其催化效率"
+      },
+      {
+        "label": "D",
+        "text": "将酒曲混合糯米、大米处理一段时间，是为了获得酒母发酵时的底物葡萄糖"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-15",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "RNA 干扰原理是指 $mRNA$ 形成局部互补结构后阻断 $mRNA$ 翻译。X 菌是兼性厌氧菌，能杀伤正常细胞和处于缺氧微环境的肿瘤细胞。我国科学家基于 RNA 干扰原理改造 X 菌获得 Y 菌时，将厌氧启动子 PT 置于 X 菌生存必需基因 asd 上游，启动基因 asd 转录，PT 启动转录效率与氧浓度成反比；同时将好氧启动子 PA 置于基因 asd 下游，启动互补链转录，PA 启动转录效率与氧浓度成正比。下列说法正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Y 菌存在 asd 基因 DNA 双链同时启动转录的状态"
+      },
+      {
+        "label": "B",
+        "text": "PT 和 PA 分别启动转录得到的 $mRNA$ 相同"
+      },
+      {
+        "label": "C",
+        "text": "PA 的作用是防止有氧环境下 Y 菌死亡"
+      },
+      {
+        "label": "D",
+        "text": "改造 X 菌的目的是增强无氧环境下杀伤肿瘤细胞的能力"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（云南卷）-16",
+    "source": "2025年高考生物试卷（云南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "口袋公园是指在城市中利用零星空地建设的小型绿地，可满足群众就近休闲需求，为群众增添身边的绿、眼前的美。下列分析错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "大量口袋公园的建设有效增加了绿地面积，有助于吸收和固定 $CO_2$"
+      },
+      {
+        "label": "B",
+        "text": "适当提高口袋公园的植物多样性，可增强其抵抗力稳定性"
+      },
+      {
+        "label": "C",
+        "text": "口袋公园生态系统不具备自我调节能力，需依赖人工维护"
+      },
+      {
+        "label": "D",
+        "text": "从空地到公园，鸟类等动物类群逐渐丰富，加快了生态系统的物质循环"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-10",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "被誉为“太行新愚公”的李保国在太行山区摸索出了一种成功的生态经济沟建设模式——山顶种植水土保持林、山腰种植干果林和山脚种植水果林，切实践行了“绿水青山就是金山银山”的理念。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "山顶、山腰和山脚不同林种的布局体现了群落的垂直结构"
+      },
+      {
+        "label": "B",
+        "text": "生态经济沟的建设提高了当地的生态效益和经济效益"
+      },
+      {
+        "label": "C",
+        "text": "该模式体现了生物与环境的协调与适应"
+      },
+      {
+        "label": "D",
+        "text": "生态经济沟的建设促进了人与自然的和谐发展"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-11",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "僧帽蚤接触到天敌昆虫的气味分子（利它素）后，头盔会明显增大，从而降低被天敌昆虫捕食的风险。如图所示，僧帽蚤母本和子代接触利它素的情况不同，对子代头盔占身体比例的影响具有明显差异。下列分析错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "母本接触利它素可增大幼年子代头盔占身体的比例"
+      },
+      {
+        "label": "B",
+        "text": "受利它素刺激后，僧帽蚤发生基因突变，导致头盔占身体的比例增大"
+      },
+      {
+        "label": "C",
+        "text": "僧帽蚤受利它素刺激后头盔增大的特性是自然选择的结果"
+      },
+      {
+        "label": "D",
+        "text": "在没有利它素时，僧帽蚤发育过程中头盔占身体的比例会减小"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-12",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "生物工程在社会生产中的应用日益广泛，下列相关技术和方法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "利用组织培养技术实现兰花的快速繁殖和优良性状的保持"
+      },
+      {
+        "label": "B",
+        "text": "在没有 $CO_2$ 的有氧环境中进行胚胎干细胞培养"
+      },
+      {
+        "label": "C",
+        "text": "利用灭活病毒诱导 B 淋巴细胞和骨髓瘤细胞融合"
+      },
+      {
+        "label": "D",
+        "text": "对供体母牛注射促性腺激素使其超数排卵用于胚胎制备"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-13",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "（多选）玉米 T 蛋白可影响线粒体内与呼吸作用相关的多种酶、T 蛋白缺失还会造成线粒体内膜受损。针对 T 基因缺失突变体和野生型玉米胚乳，研究者检测了其线粒体中有氧呼吸中间产物和细胞质基质中无氧呼吸产物乳酸的含量，结果如图。下列分析正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "线粒体中的 $[H]$ 可来自细胞质基质"
+      },
+      {
+        "label": "B",
+        "text": "突变体中有氧呼吸的第二阶段增强"
+      },
+      {
+        "label": "C",
+        "text": "突变体线粒体内膜上的呼吸作用阶段受阻"
+      },
+      {
+        "label": "D",
+        "text": "突变体有氧呼吸强度的变化可导致无氧呼吸的增强"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河北卷）-14",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "ACD"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "（多选）X 染色体上的 D 基因异常可导致人体患病，在男性中发病率为 $1/3500$，某患病男孩（其母亲没有患病）X 染色体上的基因 D 和 H 内各有一处断裂，断裂点间的染色体片段发生颠倒重接。研究者对患儿和母亲的 DNA 进行了 PCR 检测，所用引物和扩增产物电泳结果如图。不考虑其他变异，下列分析错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "该病患者中男性显著多于女性，女性中携带者的占比为 $1/3500$"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河北卷）-15",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "AB"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "山水林田湖草沙冰是生命共同体。这一生态文明理念最能体现生态系统的（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "整体性"
+      },
+      {
+        "label": "B",
+        "text": "独立性"
+      },
+      {
+        "label": "C",
+        "text": "稳定性"
+      },
+      {
+        "label": "D",
+        "text": "层次性"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-1",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "某同学使用双缩脲试剂检测豆浆中的蛋白质。下列做法错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "用蒸馏水稀释豆浆作样液"
+      },
+      {
+        "label": "B",
+        "text": "在常温下检测"
+      },
+      {
+        "label": "C",
+        "text": "用未加试剂的样液作对照"
+      },
+      {
+        "label": "D",
+        "text": "剩余豆浆不饮用"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-2",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "罗伯特森（J．D．Robertson）提出了“蛋白质—脂质—蛋白质”的细胞膜结构模型。下列不属于该模型提出的基础的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "化学分析表明细胞膜中含有磷脂和胆固醇"
+      },
+      {
+        "label": "B",
+        "text": "据表面张力研究推测细胞膜中含有蛋白质"
+      },
+      {
+        "label": "C",
+        "text": "电镜下观察到细胞膜暗—亮—暗三层结构"
+      },
+      {
+        "label": "D",
+        "text": "细胞融合实验结果表明细胞膜具有流动性"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-3",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "某同学用光学显微镜观察网球花胚乳细胞分裂，视野中（如图）可见（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞质分离"
+      },
+      {
+        "label": "B",
+        "text": "等位基因分离"
+      },
+      {
+        "label": "C",
+        "text": "同源染色体分离"
+      },
+      {
+        "label": "D",
+        "text": "姐妹染色单体分离"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-4",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "将人眼睑成纤维细胞传代培养后，再培养形成支架，在该支架上接种人口腔黏膜上皮细胞，培养一段时间后分离获得上皮细胞片层，可用于人工角膜的研究。上述过程不涉及（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "制备细胞悬液"
+      },
+      {
+        "label": "B",
+        "text": "置于 $5\\% CO_2$ 等适宜条件下培养"
+      },
+      {
+        "label": "C",
+        "text": "离心收集细胞"
+      },
+      {
+        "label": "D",
+        "text": "用胰蛋白酶消化支架后分离片层"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-5",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "临床上常采用体表电刺激诱发神经兴奋并检测相关指标，以用于神经病变的早期诊断和疗效评价，下列分析正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "刺激后神经纤维的钠钾泵活性不变"
+      },
+      {
+        "label": "B",
+        "text": "兴奋传导过程中刺激部位保持兴奋状态"
+      },
+      {
+        "label": "C",
+        "text": "神经纤维上 $Na^+$ 通道相继开放传导兴奋"
+      },
+      {
+        "label": "D",
+        "text": "兴奋传导过程中细胞膜 $K^+$ 通透性不变"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-6",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "Solexa 测序是一种将 PCR 与荧光检测相结合的高通量测序技术。为了确保该 PCR 过程中，DNA 聚合酶催化一个脱氧核苷酸单位完成聚合反应后，DNA 链不继续延伸，应保护底物中脱氧核糖结构上的（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1'-碱基"
+      },
+      {
+        "label": "B",
+        "text": "2'-氢"
+      },
+      {
+        "label": "C",
+        "text": "3'-羟基"
+      },
+      {
+        "label": "D",
+        "text": "5'-磷酸基团"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-7",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "物质跨膜运输是维持细胞正常生命活动的基础，下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "呼吸时 $O_2$ 从肺泡向肺毛细血管扩散的速率受 $O_2$ 浓度的影响"
+      },
+      {
+        "label": "B",
+        "text": "心肌细胞主动运输 $Ca^{2+}$ 时参与转运的载体蛋白仅与 $Ca^{2+}$ 结合"
+      },
+      {
+        "label": "C",
+        "text": "血液中葡萄糖经协助扩散进入红细胞的速率与细胞代谢无关"
+      },
+      {
+        "label": "D",
+        "text": "集合管中 $Na^+$ 与通道蛋白结合后使其通道开放进而被重吸收"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-8",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "VHL 基因的一个碱基发生突变，使其编码区中某 CCA（编码脯氨酸）变成 CCG（编码脯氨酸），导致合成的 mRNA 变短，引发 VHL 综合征。该突变（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "改变了 DNA 序列中嘧啶的数目"
+      },
+      {
+        "label": "B",
+        "text": "没有体现密码子的简并性"
+      },
+      {
+        "label": "C",
+        "text": "影响了 VHL 基因的转录起始"
+      },
+      {
+        "label": "D",
+        "text": "改变了 VHL 基因表达的蛋白序列"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-9",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "临床发现一例特殊的特纳综合征患者，其体内存在 3 种核型：“45，X”“46，XX”“47，XXX”（细胞中染色体总数，性染色体组成）。导致该患者染色体异常最可能的原因是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "其母亲卵母细胞减数分裂Ⅰ中 X 染色体不分离"
+      },
+      {
+        "label": "B",
+        "text": "其母亲卵母细胞减数分裂Ⅱ中 X 染色体不分离"
+      },
+      {
+        "label": "C",
+        "text": "胚胎发育早期有丝分裂中 1 条 X 染色体不分离"
+      },
+      {
+        "label": "D",
+        "text": "胚胎发育早期有丝分裂中 2 条 X 染色体不分离"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（广东卷）-10",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "研究者对不同受试者的检查发现：①丘脑（位于下丘脑旁侧的较高级中枢）受损患者对皮肤的触碰刺激无反应；②看到食物，引起唾液分泌；③受到惊吓时，咀嚼和吞咽食物变慢。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "①说明触觉产生于丘脑"
+      },
+      {
+        "label": "B",
+        "text": "②中引起唾液分泌的反射为条件反射"
+      },
+      {
+        "label": "C",
+        "text": "控制咀嚼和吞咽的传出神经属于外周神经系统"
+      },
+      {
+        "label": "D",
+        "text": "受到惊吓时，机体通过神经系统影响内分泌，肾上腺素分泌减少"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-16",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "BC"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某林地去除所有植被后，耐阴性不同的树种类群在植被恢复过程中优势度的变化如图所示。下列叙述正确的是（ ）\n注：优势度表示某类群在群落中的地位和作用",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "去除林中所有植被后，该地发生的演替为初生演替"
+      },
+      {
+        "label": "B",
+        "text": "该地恢复的最初阶段，林冠层郁闭度低，不耐阴类群具有竞争优势"
+      },
+      {
+        "label": "C",
+        "text": "不耐阴类群优势度的丧失，可能是由于该地环境逐渐不适于其繁殖"
+      },
+      {
+        "label": "D",
+        "text": "恢复末期，中间性类群优势度下降，耐阴性类群可获得的资源增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-17",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "BCD"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "隐甲藻是一种好氧的异养真核微藻。多在海水中腐烂的植物叶片上生长繁殖，是工业生产 DHA（一种功能性脂肪酸）的藻类之一、从海洋中筛选获得的高产油脂隐甲藻，可用于 DHA 的发酵生产。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "隐甲藻可从腐烂的叶片获得生长必需的碳源"
+      },
+      {
+        "label": "B",
+        "text": "采集海水中腐烂的叶片，湿热灭菌后接种到固体培养基，以获得隐甲藻"
+      },
+      {
+        "label": "C",
+        "text": "选择培养基中可加入抑制细菌生长的抗生素，以减少杂菌生长"
+      },
+      {
+        "label": "D",
+        "text": "适当提高发酵时的通气量和搅拌速率均可增加溶氧量，以提高 DHA 产量"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（河北卷）-18",
+    "source": "2025年高考生物试卷（河北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "ACD"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "hormonal_reg",
+    "content": "实验中，丙组的处理为“断食+切除肾上腺”，其结果显示相关指标为“无”和“正常”。根据实验处理及结果，下列相关叙述正确的是：",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "断食处理可通过体液调节使靶细胞发生一系列的代谢变化"
+      },
+      {
+        "label": "B",
+        "text": "通过甲乙组对比分析不能证明毛发的生长受肾上腺的调节"
+      },
+      {
+        "label": "C",
+        "text": "丙组切除肾上腺处理是采用了自变量控制中的“减法原理”"
+      },
+      {
+        "label": "D",
+        "text": "根据甲乙丙组实验可以证明饥饿通过皮质醇调节毛发生长"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（河南卷）-16",
+    "source": "2025年高考生物试卷（河南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "关于草地“蘑菇圈”现象（如图所示），下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "调查草地上植物和土壤分别采用样方法和取样器取样法"
+      },
+      {
+        "label": "B",
+        "text": "圈上植物长得高呈现明显的圈带形成草地群落垂直结构"
+      },
+      {
+        "label": "C",
+        "text": "蘑菇菌丝促进土壤有机质分解使圈上土壤速效养分增加"
+      },
+      {
+        "label": "D",
+        "text": "圈上植物种群的优势度增加可影响草地群落的物种组成"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-11",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "果蝇外骨骼角质中表皮烃的含量不仅影响果蝇的环境适应能力，也影响果蝇的交配对象选择（如图）。表皮烃的合成受 $mFAS$ 基因控制。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "突变和自然选择驱动果蝇物种 A 和物种 B 的形成"
+      },
+      {
+        "label": "B",
+        "text": "自然选择使具有低表皮烃性状的果蝇适应潮湿环境"
+      },
+      {
+        "label": "C",
+        "text": "果蝇种群 A 和种群 B 交配减少加速了新物种的形成"
+      },
+      {
+        "label": "D",
+        "text": "$mFAS$ 基因突变带来的双重效应足以导致生殖隔离"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-12",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "食物链可以跨越不同生境（如图）。下列分析正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "蜜蜂和油菜之间是互利共生关系"
+      },
+      {
+        "label": "B",
+        "text": "鱼在该食物链中属于四级消费者"
+      },
+      {
+        "label": "C",
+        "text": "增加鱼的数量可使池塘周边的油菜籽增产"
+      },
+      {
+        "label": "D",
+        "text": "将水陆生境联系成一个整体的关键种是鱼"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-13",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "为研究运动强度对人体生理活动的影响。某研究团队招募一批健康受试者分别进行 $3min$ 低强度运动和高强度运动，运动开始后血浆乳酸水平见图。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "高强度运动时，肾上腺素和胰高血糖素协同作用升高血糖"
+      },
+      {
+        "label": "B",
+        "text": "高强度运动血浆乳酸水平达到峰值时，骨骼肌细胞无氧呼吸强度最高"
+      },
+      {
+        "label": "C",
+        "text": "两种强度运动后，血浆乳酸水平的变化均不影响血浆 $pH$ 的相对稳定"
+      },
+      {
+        "label": "D",
+        "text": "两种强度运动后，交感神经与副交感神经活动的强弱均会发生转换"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-14",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "某高校科技特派员为协助种养专业合作社繁殖优良欧李种质，以欧李根状茎为插条，用赤霉素合成抑制剂 $S_{3307}$ 处理，使插条生根率由 $22\\%$ 提高到 $78\\%$。扦插后，插条的几种内源激素的含量变化见图。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞分裂素加快细胞分裂并促进生根"
+      },
+      {
+        "label": "B",
+        "text": "$S_{3307}$ 提高生长素含量而促进生根"
+      },
+      {
+        "label": "C",
+        "text": "推测赤霉素缺失突变体根系相对发达"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-15",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "T 细胞是重要的免疫细胞。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "T 细胞来自骨髓造血干细胞并在骨髓中成熟"
+      },
+      {
+        "label": "B",
+        "text": "树突状细胞可将病毒相关抗原呈递给辅助性 T 细胞"
+      },
+      {
+        "label": "C",
+        "text": "辅助性 T 细胞可参与细胞毒性 T 细胞的活化"
+      },
+      {
+        "label": "D",
+        "text": "T 细胞可集中分布在淋巴结等免疫器官"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-1",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "用替代的实验材料或者试剂开展下列实验，不能达成实验目的的是（ ）\n\n| 选项 | 实验内容 | 替代措施 |\n| :--- | :--- | :--- |\n| A | 用高倍显微镜观察叶绿体 | 用“菠菜叶”替代“藓类叶片” |\n| B | DNA 的粗提取与鉴定 | 用“猪成熟红细胞”替代“猪肝细胞” |\n| C | 观察根尖分生区组织细胞的有丝分裂 | 用“醋酸洋红液”替代“甲紫溶液” |\n| D | 比较过氧化氢在不同条件下的分解 | 用“过氧化氢酶溶液”替代“肝脏研磨液” |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "A"
+      },
+      {
+        "label": "B",
+        "text": "B"
+      },
+      {
+        "label": "C",
+        "text": "C"
+      },
+      {
+        "label": "D",
+        "text": "D"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-2",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "蛋白 R 功能缺失与人血液低胆固醇水平相关。蛋白 R 是肝细胞膜上的受体，参与去唾液酸糖蛋白的胞吞和降解，从而调节胆固醇代谢。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "去唾液酸糖蛋白的胞吞过程需要消耗能量"
+      },
+      {
+        "label": "B",
+        "text": "去唾液酸糖蛋白的胞吞离不开膜脂的流动"
+      },
+      {
+        "label": "C",
+        "text": "抑制蛋白 R 合成能增加血液胆固醇含量"
+      },
+      {
+        "label": "D",
+        "text": "去唾液酸糖蛋白可以在溶酶体中被降解"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-3",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "单一使用干扰素-γ 治疗肿瘤效果有限。降低线粒体蛋白 V 合成，不影响癌细胞凋亡，但同时加入干扰素-γ 能破坏线粒体膜结构，促进癌细胞凋亡。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "癌细胞凋亡是由基因决定的"
+      },
+      {
+        "label": "B",
+        "text": "蛋白 V 可能抑制干扰素-γ 诱发的癌细胞凋亡"
+      },
+      {
+        "label": "C",
+        "text": "线粒体膜结构破坏后，其 DNA 可能会释放"
+      },
+      {
+        "label": "D",
+        "text": "抑制蛋白 V 合成会减弱肿瘤治疗的效果"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-4",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "fermentation",
+    "content": "采集果园土壤进行微生物分离或计数。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "稀释涂布平板法和平板划线法都能用于尿素分解菌的分离和计数"
+      },
+      {
+        "label": "B",
+        "text": "完成平板划线后，培养时需增加一个未接种的平板作为对照"
+      },
+      {
+        "label": "C",
+        "text": "土壤中分离得到的醋酸菌能在无氧条件下将葡萄糖分离成乙酸"
+      },
+      {
+        "label": "D",
+        "text": "用于筛选尿素分解菌的培养基含有蛋白胨、尿素和无机盐等营养物质"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-5",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "酸碱平衡是维持人体正常生命活动的必要条件之一。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "细胞内液的酸碱平衡与无机盐离子无关"
+      },
+      {
+        "label": "B",
+        "text": "血浆的酸碱平衡与 $HCO_3^-$、$H_2CO_3$ 等物质有关"
+      },
+      {
+        "label": "C",
+        "text": "胃蛋白酶进入肠道后失活与内环境酸碱度有关"
+      },
+      {
+        "label": "D",
+        "text": "肌细胞无氧呼吸分解葡萄糖产生的 $CO_2$ 参与酸碱平衡的调节"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-6",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "hormonal_reg",
+    "content": "机体可通过信息分子协调各组织器官活动。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "甲状腺激素能提高神经系统的兴奋性"
+      },
+      {
+        "label": "B",
+        "text": "抗利尿激素和醛固酮协同提高血浆中 $Na^+$ 含量"
+      },
+      {
+        "label": "C",
+        "text": "交感神经兴奋释放神经递质，促进消化腺分泌活动"
+      },
+      {
+        "label": "D",
+        "text": "下丘脑释放促肾上腺皮质激素，增强肾上腺分泌功能"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-7",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "为调查某自然保护区动物资源现状，研究人员利用红外触发相机记录到多种动物，其中豹猫、猪獾在海拔分布上重叠度较高。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "建立自然保护区可对豹猫进行最有效保护"
+      },
+      {
+        "label": "B",
+        "text": "该保护区的豹猫和猪獾处于相同的生态位"
+      },
+      {
+        "label": "C",
+        "text": "红外触发相机能用于调查豹猫的种群数量"
+      },
+      {
+        "label": "D",
+        "text": "食物是影响豹猫种群数量变化的密度制约因素"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-8",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "基因 W 编码的蛋白 W 能直接抑制核基因 P 和 M 转录起始。P 和 M 可分别提高水稻抗虫性和产量。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "蛋白 W 细胞核中发挥调控功能"
+      },
+      {
+        "label": "B",
+        "text": "敲除基因 W 有助于提高水稻抗虫性和产量"
+      },
+      {
+        "label": "C",
+        "text": "在基因 P 缺失突变体水稻中，增加基因 W 的表达量能提高其抗虫性"
+      },
+      {
+        "label": "D",
+        "text": "蛋白 W 可能通过抑制 RNA 聚合酶识别基因 P 和 M 的启动子而发挥作用"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖南卷）-9",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "2023 年 7 月，习近平总书记在全国生态环境保护大会上发表的重要讲话中强调：着力提升生态系统多样性、稳定性、持续性，要站在维护国家生态安全、中华民族永续发展和对人类文明负责的高度，加强生态保护和修复，为子孙后代留下山湾水秀的生态空间。下列措施不符合以上精神的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "通过大规模围湖造田扩大耕地面积，提高粮食产量"
+      },
+      {
+        "label": "B",
+        "text": "对有代表性的自然生态系统和珍稀物种栖息地进行保护"
+      },
+      {
+        "label": "C",
+        "text": "对过度利用的森林与草原进行封育，待恢复到较好状态时再适度利用"
+      },
+      {
+        "label": "D",
+        "text": "开展大规模国土绿化行动，推进“三北”防护林体系建设和京津风沙源治理"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-1",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "internal_environment",
+    "content": "《中国睡眠研究报告（2023）》指出，长期睡眠不足会引发机体胰岛素敏感性下降、管后血糖与脂肪代谢效率降低等问题，并伴随注意力不集中、短期记忆受损、免疫力下降等症状。下列关于长期睡眠不足的危害，叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "影响神经元之间的信息交流"
+      },
+      {
+        "label": "B",
+        "text": "患高血脂、糖尿病的风险上升"
+      },
+      {
+        "label": "C",
+        "text": "可能导致与免疫相关的细胞因子分泌减少"
+      },
+      {
+        "label": "D",
+        "text": "导致体内二氧化碳浓度升高，血液 $pH$ 下降"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-2",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "我国科学家对三万余株水稻进行筛选，成功定位并克隆出耐碱—耐热基因 ATT，发现该基因编码 $GA20$ 氧化酶，从而调控赤霉素的生物合成。适宜浓度的赤霉素通过调节 $SLR1$ 蛋白的含量，能减少碱性和高温环境对植株的损伤。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "该研究表明基因与性状是一一对应关系"
+      },
+      {
+        "label": "B",
+        "text": "ATT 基因通过控制酶的合成影响水稻的性状"
+      },
+      {
+        "label": "C",
+        "text": "可以通过调节 ATT 基因的表达调控赤霉素的水平"
+      },
+      {
+        "label": "D",
+        "text": "该研究成果为培育耐碱—耐热水稻新品种提供了新思路"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-3",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "在花粉过敏症患者中，法国梧桐花粉过敏原检测阳性率较高。接触法国梧桐花粉可诱发哮喘和过敏性鼻炎等过敏反应。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "抗原-抗体特异性结合的原理可用于过敏原检测"
+      },
+      {
+        "label": "B",
+        "text": "抑制机体内辅助性 T 细胞活性的药物，可缓解过敏反应"
+      },
+      {
+        "label": "C",
+        "text": "不同人对相同过敏原的过敏反应程度不同，说明过敏反应可能与遗传因素有关"
+      },
+      {
+        "label": "D",
+        "text": "法国梧桐花粉刺激机体产生的抗体，可避免机体再次接触该种花粉时产生过敏反应"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-4",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "水母雪莲是我国的一种名贵药材，主要活性成分为次生代谢产物黄酮。水母雪莲生长缓慢，长期的掠夺性采挖导致该药材资源严重匮乏。研究人员开展了悬浮培养水母霉莲细胞合成黄酮的工程技术研究，结果如表所示。下列叙述错误的是（ ）\n\n| 转速 (r/min) | 相对生长速率 | 细胞干重 (g/L) | 黄酮产量 (g/L) |\n| :--- | :--- | :--- | :--- |\n| 55 | 0.21 | 7.5 | 0.2 |\n| 65 | 0.25 | 9.7 | 0.27 |\n| 75 | 0.26 | 11.4 | 0.32 |\n| 85 | 0.25 | 9.5 | 0.25 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "黄酮产量与细胞干重呈正相关"
+      },
+      {
+        "label": "B",
+        "text": "黄酮是水母雪莲细胞生存和生长所必需的"
+      },
+      {
+        "label": "C",
+        "text": "氧气供给对于水母雪莲细胞生长、分裂和代谢是必需的"
+      },
+      {
+        "label": "D",
+        "text": "转速为 $75r/min$ 时既利于细胞分裂，又利于黄酮的积累"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-5",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "利用犬肾细胞 MDCK 扩增流感病毒，生产流感疫苗，具有标准化、产量高等优点。但 MDCK 细胞贴壁生长的特性不利于生产规模的扩大，严重制约疫苗的生产效率。研究人员通过筛选，成功获得一种无成瘤性的（多代培养不会癌变）、可悬浮培养的 MDCK 细胞——XF06.下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "XF06 悬浮培养可提高细胞密度，进而提升生产效率"
+      },
+      {
+        "label": "B",
+        "text": "细胞贴壁生长特性的改变是由于流感病毒感染所导致"
+      },
+      {
+        "label": "C",
+        "text": "可采用离心技术从感染病毒的细胞裂解液中分离出流感病毒"
+      },
+      {
+        "label": "D",
+        "text": "采用无成瘤性细胞生产疫苗，是为了避免疫苗中有致瘤 DNA 的污染"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-6",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "我国农学家贾思勰所著《齐民要术》记载：“凡五谷种子，浥郁则不生，生者亦寻死。”意思是种子如果受潮发霉就不会发芽，即使发芽也会很快死亡。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "农业生产中，种子储藏需要干燥的环境"
+      },
+      {
+        "label": "B",
+        "text": "种子受潮导致细胞内结合水比例升高，自由水比例降低，细胞代谢减弱"
+      }
+    ],
+    "score_rule": "每题2分",
+    "id": "2025年高考生物试卷（湖北卷）-7",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "若某常染色体隐性单基因遗传病的致病基因存在两个独立的致病变异位点 1 和 2（$M$ 和 $N$ 表示正常，$m$ 和 $n$ 表示异常），理论上会形成两种变异类型且效应不同（如图），但仅凭个体的基因检测不足以区分这两种变异类型。通过对人群中变异位点的大规模基因检测，有助于该遗传病的风险评估。表为某人群中这两个变异位点的检测数据。下列对该人群的推测，合理的是（ ）\n\n变异位点组合个体数表：\n| 位点 1 \\ 位点 2 | NN | Nn | nn |\n| :--- | :--- | :--- | :--- |\n| MM | 94121 | 1180 | 44 |\n| Mm | 2273 | 4 | 0 |\n| mm | 29 | 0 | 0 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$m$ 和 $n$ 位于同一条染色体上"
+      },
+      {
+        "label": "B",
+        "text": "携带 $m$ 的基因频率约是携带 $n$ 的基因频率的 3 倍"
+      },
+      {
+        "label": "C",
+        "text": "有 3 种携带致病变异的基因"
+      },
+      {
+        "label": "D",
+        "text": "$MmNn$ 组合个体均患病"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（广东卷）-16",
+    "source": "2025年高考生物试卷（广东卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "顺向轴突运输分快速轴突运输（主要运输跨膜蛋白 L）和慢速轴突运输（主要运输细胞骨架蛋白）两种，都以移动、停滞反复交替的方式（移动时速度无差异）向轴突末梢运输物质。用带标记的某氨基酸（合成蛋白 A 和 B 所必需）分析蛋白 A 和 B 的轴突运输方式，实验如图。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "氨基酸通过自由扩散进入细胞"
+      },
+      {
+        "label": "B",
+        "text": "蛋白 A 是一种细胞骨架蛋白"
+      },
+      {
+        "label": "C",
+        "text": "轴突运输中，胞体中形成的突触小泡与跨膜蛋白 L 的运输方向不同"
+      },
+      {
+        "label": "D",
+        "text": "在单位时间内，运输蛋白 B 时的停滞时间长于蛋白 A"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-10",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "被噬菌体侵染时，某细菌以一特定 RNA 片段为重复单元，逆转录成串联重复 DNA，再指导合成含多个串联重复肽段的蛋白 Neo，如图所示。该蛋白能抑制细菌生长，从而阻止噬菌体利用细胞资源。下列叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "噬菌体侵染细菌时，会将核酸注入细菌内"
+      },
+      {
+        "label": "B",
+        "text": "蛋白 Neo 在细菌的核糖体中合成"
+      },
+      {
+        "label": "C",
+        "text": "串联重复的双链 DNA 的两条链均可作为模板指导蛋白 Neo 合成"
+      },
+      {
+        "label": "D",
+        "text": "串联重复 DNA 中单个重复单元转录产生的 mRNA 无终止密码子"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-11",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "在常温（$20^\\circ C$）、长日照条件下栽培某油菜品种，幼苗生长至 4~5 叶时，将部分植株置于低温（$5^\\circ C$）处理 6 周后，立即进行嫁接。然后将所有植株常温栽培。不同处理植株茎尖中赤霉素含量（$ng \\cdot g^{-1}$ 鲜重）及开花情况如表所示。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "除赤霉素外，低温处理诱导油菜开花不需要其他物质参与"
+      },
+      {
+        "label": "B",
+        "text": "赤霉素直接参与油菜开花生理代谢反应的浓度需达到某临界值"
+      },
+      {
+        "label": "C",
+        "text": "将油菜幼苗成熟叶片置于低温下，其余部位置于常温，不能诱导开花"
+      },
+      {
+        "label": "D",
+        "text": "若外源赤霉素代替低温也能促进油菜开花，则两者诱导开花的代谢途径相同"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-12",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "某人擅自在一湖泊中“放生”大量鲶鱼。短期内鲶鱼大量死亡，导致水质恶化，造成生态资源损失，此人被判承担相关责任。下列叙述正确的是（多选）（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "鲶鱼同化能量可用于自身生长发育繁殖"
+      },
+      {
+        "label": "B",
+        "text": "鲶鱼死亡的原因可能是水体中氧气不足"
+      },
+      {
+        "label": "C",
+        "text": "鲶鱼死亡与水质恶化间存在负反馈调节"
+      },
+      {
+        "label": "D",
+        "text": "移除死鱼有助于缩短该湖泊恢复原状的时间"
+      }
+    ],
+    "score_rule": "每题4分，全部选对的得4分，选对但不全的得2分，有选错的得0分",
+    "id": "2025年高考生物试卷（湖南卷）-13",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "ABD"
+  },
+  {
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "cell_structure",
+    "content": "下列关于真核细胞内细胞器中的酶和化学反应的叙述，正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "高尔基体膜上分布有相应的酶，可对分泌蛋白进行修饰加工"
+      },
+      {
+        "label": "B",
+        "text": "核糖体中有相应的酶，可将氨基酸结合到特定 tRNA 的 3'端"
+      },
+      {
+        "label": "C",
+        "text": "溶酶体内含有多种水解酶，仅能消化衰老、损伤细胞组分"
+      },
+      {
+        "label": "D",
+        "text": "叶绿体中的 ATP 合成酶，可将光能直接转化为 ATP 中的化学能"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-1",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "2",
+    "type": "single_choice",
+    "category": "photo_resp",
+    "content": "关于“探究光照强度对光合作用强度的影响”实验，下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "用打孔器打出叶圆片时，为保证叶圆片相对一致应避开大的叶脉"
+      },
+      {
+        "label": "B",
+        "text": "调节 LED 灯光源与盛有叶圆片烧杯之间的距离，以进行对比实验"
+      },
+      {
+        "label": "C",
+        "text": "用化学传感器监测光照时 $O_2$ 浓度变化，可计算出实际光合作用强度"
+      },
+      {
+        "label": "D",
+        "text": "同一烧杯中叶圆片浮起的快慢不同，可能与其接受的光照强度不同有关"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-2",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "3",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "胰岛类器官是由干细胞在体外诱导分化形成的具有器官特性的细胞集合体，可模拟胰岛的结构和功能，具有广泛的应用价值。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "胰岛类器官中不同细胞在结构和功能上存在差异，这是基因选择性表达的结果"
+      },
+      {
+        "label": "B",
+        "text": "胰岛类器官中胰岛 A 细胞是由干细胞诱导分化而来的，其细胞核不具有全能性"
+      },
+      {
+        "label": "C",
+        "text": "对胰岛类器官中细胞的 mRNA 序列进行分析，可判断其细胞类型"
+      },
+      {
+        "label": "D",
+        "text": "胰岛类器官模型可应用于胰岛发育和糖尿病发病机制等研究"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-3",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "4",
+    "type": "single_choice",
+    "category": "molecular_basis",
+    "content": "运用某些化学试剂可以检测生物组织中的物质或相关代谢物。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "蔗糖溶液与淀粉酶混合后温水浴，加入斐林试剂可反应生成砖红色沉淀"
+      },
+      {
+        "label": "B",
+        "text": "淡蓝色的双缩脲试剂可与豆浆中的蛋白质结合，通过吸附作用显示紫色"
+      },
+      {
+        "label": "C",
+        "text": "苏丹Ⅲ染液可与花生子叶中的脂肪结合，通过化学反应形成橘黄色"
+      },
+      {
+        "label": "D",
+        "text": "橙色的酸性重铬酸钾溶液可与酒精或葡萄糖发生反应，变成灰绿色"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-4",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "5",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "种群数量调查的具体方法因生物种类而异。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "采用标记重捕法时，重捕前要间隔适宜时长以确保标记个体在调查区域中均匀分布"
+      },
+      {
+        "label": "B",
+        "text": "利用红外触发相机的自动拍摄技术，主要是对恒温动物进行野外种群数量调查研究"
+      },
+      {
+        "label": "C",
+        "text": "对鲸进行种群数量监测时，可利用声音的稳定、非损伤、低干扰特征进行个体识别"
+      },
+      {
+        "label": "D",
+        "text": "调查某土壤小动物种群数量时，打开诱虫器顶部的电灯以驱使土壤小动物向下移动"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-5",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "6",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "过渡带是两个或多个群落之间过渡区域。大兴安岭森林与呼伦贝尔草原的过渡带中，森林和草原镶嵌分布，该区域环境较两个群落的内部核心区域更为异质多样。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "过渡带环境复杂，通过协同进化形成了适应该环境特征的物种组合"
+      },
+      {
+        "label": "B",
+        "text": "过渡带属于群落间的交错区域，其物种丰富度介于草原和森林之间"
+      },
+      {
+        "label": "C",
+        "text": "相较于森林和草原核心区域，过渡带存在明显不同的群落水平结构特征"
+      },
+      {
+        "label": "D",
+        "text": "过渡带可能有更多可抵抗不良环境波动的物种，影响群落结构的稳定性"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-6",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "7",
+    "type": "single_choice",
+    "category": "nervous_system",
+    "content": "正常情况下，神经产生的动作电位个数与所支配的骨骼肌收缩次数一致，乙酰胆碱递质的释放依赖于细胞外液中的钙离子。下图是蛙坐骨神经—腓肠肌标本示意图。刺激 a 处，电表偏转，腓肠肌收缩。对细胞外液分别进行 4 种预处理后，再进行以下实验，其中符合细胞外液中去除钙离子预处理的实验现象是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "A"
+      },
+      {
+        "label": "B",
+        "text": "B"
+      },
+      {
+        "label": "C",
+        "text": "C"
+      },
+      {
+        "label": "D",
+        "text": "D"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-7",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "immune_system",
+    "content": "病原体突破机体的第一、二道防线，会激活机体的第三道防线，产生特异性免疫。下列叙述正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "一种病原体侵入人体，机体通常只产生一种特异性的抗体"
+      },
+      {
+        "label": "B",
+        "text": "活化后的辅助性 T 细胞表面的特定分子与 B 细胞结合，参与激活 B 细胞"
+      }
+    ],
+    "score_rule": "每题3分",
+    "id": "2025年高考生物试卷（安徽卷）-8",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      0,
+      1
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "8",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "科研人员对四种植物进行不同光照处理实验，记录开花情况如下表。根据实验结果，以下推断合理的是（　　）\n\n| 植物种类 | 长日照 | 短日照 |\n| :--- | :--- | :--- |\n| 甲 | 正常开花 | 不开花 |\n| 乙 | 不开花 | 正常开花 |\n| 丙 | 正常开花 | 正常开花 |\n| 丁 | 延迟开花 | 正常开花 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "对植物丁进行人工补光延长光照时间，能使其更快开花"
+      },
+      {
+        "label": "B",
+        "text": "植物丙的开花不受环境因素影响，由自身遗传物质决定"
+      },
+      {
+        "label": "C",
+        "text": "表中植物甲和乙开花的差异，是因为它们对光照强度的敏感度不同"
+      },
+      {
+        "label": "D",
+        "text": "若在湖北同一地点种植，植物甲可能在夏季开花，植物乙可能在秋季开花"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-8",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "hormonal_reg",
+    "content": "阿维菌素是一种用于害虫防治的生物农药。科研人员研究了阿维菌素对褐飞虱的影响，结果如下图。下列叙述错误的是（　　）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "途径①与②对褐飞虱的作用效果相反"
+      },
+      {
+        "label": "B",
+        "text": "阿维菌素对褐飞虱的不同作用效果有浓度依赖性"
+      },
+      {
+        "label": "C",
+        "text": "雌虫体内成熟生殖细胞的数量与卵黄蛋白原的含量呈正相关"
+      },
+      {
+        "label": "D",
+        "text": "若干扰 AstA 蛋白与 AstA 受体的结合，会使褐飞虱产卵量增加"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-9",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "深秋时节，有机蔬菜种植基地常会收集大量糖泥堆置于池塘周边，待其自然风干，再经过冬季自然腐熟后，次年可作为优质有机肥。根据上述材料，下列叙述错误的是（　　）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "塘泥不能直接用作有机肥是因为其水分含量过高"
+      },
+      {
+        "label": "B",
+        "text": "腐熟过程中发挥核心作用的是微生物的分解活动"
+      },
+      {
+        "label": "C",
+        "text": "处理后的塘泥作为有机肥，可有效提升土壤肥力"
+      },
+      {
+        "label": "D",
+        "text": "塘泥的资源化利用符合生态学循环原理，有助于农业可持续发展"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-10",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "蚯蚓通常栖息在阴暗、潮湿的土壤环境中，以落叶、禽畜粪便和线虫等为食。四溴双酚 A（TBBPA）是土壤中常见的污染物之一。科研人员以蚯蚓为实验对象，将其培养在浓度为 $1\\text{ mg/kg}$ 的 TBBPA 污染土壤中进行 30 天富集实验，然后将蚯蚓转至干净土壤进行 30 天排出实验，实验结果如下图。下列叙述错误的是（　　）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "蚯蚓在生态系统中既是消费者也是分解者"
+      },
+      {
+        "label": "B",
+        "text": "蚯蚓对 TBBPA 的富集效应在 20 天以后趋于饱和"
+      },
+      {
+        "label": "C",
+        "text": "该实验结束时蚯蚓被其他捕食者所食，TBBPA 不会沿食物链传递"
+      },
+      {
+        "label": "D",
+        "text": "15 天时蚯蚓体内富集 TBBPA 浓度约是初始实验环境中 TBBPA 的 8 倍"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-11",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "某学生重复孟德尔豌豆杂交实验，取一粒黄色圆粒 $F_1$ 种子（YyRr），培养成植株，成熟后随机取 4 个豆荚，所得 32 粒豌豆种子表型计数结果如表所示。下列叙述最合理的是（　　）\n\n| 性状 | 黄色 | 绿色 | 圆粒 | 皱粒 |\n| :--- | :--- | :--- | :--- | :--- |\n| 个数（粒） | 25 | 7 | 20 | 12 |",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "32 粒种子中有 18 粒黄色圆粒种子，2 粒绿色皱粒种子"
+      },
+      {
+        "label": "B",
+        "text": "实验结果说明含 R 基因配子的活力低于含 r 基因的配子"
+      },
+      {
+        "label": "C",
+        "text": "不同批次随机摘取 4 个豆荚，所得种子的表型比会有差别"
+      },
+      {
+        "label": "D",
+        "text": "该实验豌豆种子的圆粒与皱粒表型比支持孟德尔分离定律"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-12",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "关于 ABO 血型系统，下列相关叙述错误的是（注：已知 $H$ 基因是形成 $A$、$B$ 抗原的基础，基因型为 $hh$ 的个体不产生 $H$ 抗原，表现为 $O$ 型血，即孟买血型；$A$ 型血清中含抗 $B$ 抗体，$B$ 型血清中含抗 $A$ 抗体，$O$ 型血清中含抗 $A$ 和抗 $B$ 抗体，$AB$ 型血清中不含抗体）：",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$A$ 和 $B$ 抗原都是红细胞的分子标签"
+      },
+      {
+        "label": "B",
+        "text": "若按 ABO 血型分型依据，基因 $H$ 缺失者的血型属于 $O$ 型"
+      },
+      {
+        "label": "C",
+        "text": "$O$ 型血的血液与 $A$ 型血的血清混合，会发生红细胞凝集"
+      },
+      {
+        "label": "D",
+        "text": "基因 $H$ 缺失者的血液与基因 $H$ 正常的 $O$ 型血液混合，不会发生红细胞凝集"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-14",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "CD"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "transport",
+    "content": "$Cl^-$ 属于植物的微量元素。分别用渗透压相同、$Na^+$ 或 $Cl^-$ 物质的量浓度也相同的三种溶液处理某荒漠植物（不考虑溶液中其他离子的影响）。5 天后，与对照组（Ⅰ）相比，Ⅱ和Ⅲ组光合速率降低，而Ⅳ组无显著差异；各组植株的地上部分和根中 $Cl^-$、$K^+$ 含量如图所示。下列叙述错误的是（ ）\n注：Ⅰ对照（正常栽培）；Ⅱ．$NaCl$ 溶液；Ⅲ．$Na^+$ 浓度与Ⅱ中相同、无 $Cl^-$ 的溶液；Ⅳ．$Cl^-$ 浓度与Ⅱ中相同、无 $Na^+$ 的溶液",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "过量的 $Cl^-$ 可能储存于液泡中，以避免高浓度 $Cl^-$ 对细胞的毒害"
+      },
+      {
+        "label": "B",
+        "text": "溶液中 $Cl^-$ 浓度越高，该植物向地上部分转运的 $K^+$ 量越多"
+      },
+      {
+        "label": "C",
+        "text": "$Na^+$ 抑制该植物组织中 $K^+$ 的积累，有利于维持 $Na^+$、$K^+$ 的平衡"
+      },
+      {
+        "label": "D",
+        "text": "$K^+$ 从根转运到地上部分的组织细胞中需要消耗能量"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-15",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "已知甲、乙家系的耳聋分别由基因 $E$、$F$ 突变导致；丙家系耳聋由线粒体基因 $G$ 突变为 $g$ 所致，部分个体携带基因 $g$ 但听力正常。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "听觉相关基因在人的 DNA 上本来就存在"
+      },
+      {
+        "label": "B",
+        "text": "遗传病是由获得了双亲的致病遗传物质所致"
+      },
+      {
+        "label": "C",
+        "text": "含基因 $g$ 的线粒体积累到一定程度才会导致耳聋"
+      },
+      {
+        "label": "D",
+        "text": "甲、乙家系的耳聋是多基因遗传病"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖南卷）-16",
+    "source": "2025年高考生物试卷（湖南卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "BD"
+  },
+  {
+    "question_number": "9",
+    "type": "single_choice",
+    "category": "plant_hormones",
+    "content": "种子萌发受多种内外因素的调节。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "玉米种子萌发后，根冠中的细胞能够感受重力信号，从而引起根的向地生长"
+      },
+      {
+        "label": "B",
+        "text": "与休眠种子相比，萌发的种子细胞内自由水所占比例高，呼吸作用旺盛"
+      },
+      {
+        "label": "C",
+        "text": "红外光可促进莴苣种子萌发，而红光可逆转红外光的效应，抑制萌发"
+      },
+      {
+        "label": "D",
+        "text": "赤霉素可打破种子休眠，促进萌发；脱落酸可维持休眠，抑制萌发"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-9",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "10",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "粗糙玉蜀螺是一种分布于海岸边的小海螺，其天冬氨酸转氨酶活性受一对等位基因 $Aat^{100}$ 和 $Aat^{120}$ 控制。至 1987 年，这对等位基因的频率在该种群世代间保持相对稳定（低潮带 $Aat^{120}$ 基因频率为 0.4）。1988 年，该螺分布区发生了一次有毒藻类爆发增殖，藻类分泌的藻毒素使低潮带个体大量死亡，而高潮带个体受影响较小，此后高潮带个体向低潮带扩散。1993 年，种群又恢复到 1987 年的相对稳定状态。$Aat^{120}$ 基因频率变化如图所示。下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "1987 年，含 $Aat^{120}$ 基因的个体在低潮带比高潮带具有更强的适应能力"
+      },
+      {
+        "label": "B",
+        "text": "在自然选择作用下，1993 年后低潮带 $Aat^{100}$ 基因频率将持续上升"
+      },
+      {
+        "label": "C",
+        "text": "1988~1993 年，影响低潮带种群基因频率变化的主要因素是个体迁移"
+      },
+      {
+        "label": "D",
+        "text": "1993 年，含 $Aat^{100}$ 基因的个体在低潮带种群中所占比例为 84%"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-10",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "11",
+    "type": "single_choice",
+    "category": "meiosis",
+    "content": "某动物初级精母细胞中，一部分细胞的一对同源染色体的两条非姐妹染色单体间发生了片段互换，产生了 4 种精细胞，如图所示。若该动物产生的精细胞中，精细胞 2、3 所占的比例均为 4%，则减数分裂过程中初级精母细胞发生交换的比例是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "2%"
+      },
+      {
+        "label": "B",
+        "text": "4%"
+      },
+      {
+        "label": "C",
+        "text": "8%"
+      },
+      {
+        "label": "D",
+        "text": "16%"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-11",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "12",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "一对体色均为灰色的昆虫亲本杂交，子代存活的个体中，灰色雄性:灰色雌性:黑色雄性:黑色雌性=6:3:2:1。假定此杂交结果涉及两对等位基因的遗传，在不考虑相关基因位于性染色体同源区段的情况下，同学们提出了 4 种解释，其中合理的是（ ）\n①体色受常染色体上一对等位基因控制，位于 X 染色体上的基因有隐性纯合致死效应\n②体色受常染色体上一对等位基因控制，位于 Z 染色体上的基因有隐性纯合致死效应\n③体色受两对等位基因共同控制，其中位于 X 染色体上的基因还有隐性纯合致死效应\n④体色受两对等位基因共同控制，其中位于 Z 染色体上的基因还有隐性纯合致死效应",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "①③"
+      },
+      {
+        "label": "B",
+        "text": "①④"
+      },
+      {
+        "label": "C",
+        "text": "②③"
+      },
+      {
+        "label": "D",
+        "text": "②④"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-12",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "大肠杆菌的两个基因 Y 和 Z 彼此相邻，转录时共用一个启动子（P）。科研小组分离到一株不能合成 Y 和 Z 蛋白的缺失突变体，但该突变体能合成另一种蛋白质，此蛋白质氨基端的 30 个氨基酸序列与 Z 蛋白氨基端的序列一致，而羧基端的 25 个氨基酸序列与 Y 蛋白羧基端的序列一致。据此，科研小组绘制了野生型菌株中 Y 和 Z 基因的排列顺序图，并推测突变体缺失的 DNA 碱基数目。下列图示和推测正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "图示排列顺序为 P-Y-Z，缺失碱基数目是 3 的整倍数"
+      },
+      {
+        "label": "B",
+        "text": "图示排列顺序为 P-Z-Y，缺失碱基数目是 3 的整倍数"
+      },
+      {
+        "label": "C",
+        "text": "图示排列顺序为 P-Z-Y，缺失碱基数目是 3 的整倍数+1"
+      },
+      {
+        "label": "D",
+        "text": "图示排列顺序为 P-Y-Z，缺失碱基数目是 3 的整倍数+2"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-13",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "细胞工程技术已在生物制药和物种繁育等领域得到了广泛应用。下列关于动物细胞工程的叙述，正确的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "从动物体内取出组织，用胰蛋白酶处理后直接培养的细胞称为传代细胞"
+      },
+      {
+        "label": "B",
+        "text": "将特定基因或特定蛋白导入已分化的 T 细胞，可将其诱导形成 iPS 细胞"
+      },
+      {
+        "label": "C",
+        "text": "将 B 淋巴细胞与骨髓瘤细胞混合，经诱导融合后的细胞即为能分泌所需抗体的细胞"
+      },
+      {
+        "label": "D",
+        "text": "采用胚胎分割技术克隆动物常选用桑葚胚或囊胚，因这两个时期的细胞未发生分化"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-14",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      2,
+      3
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "13",
+    "type": "single_choice",
+    "category": "cell_lifecycle",
+    "content": "某研究小组通过实验探讨 $AP2A1$ 基因过度表达对细胞生命历程的影响，实验结果如图所示（包含含 $SA-\beta-Gal$ 标志细胞比例、含 $EdU$ 标记细胞比例、 $p53$ 蛋白相对表达量）。下列相关叙述错误的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "对照组中也有衰老的细胞"
+      },
+      {
+        "label": "B",
+        "text": "蛋白质 $AP2A1$ 促进了细胞中 $p53$ 蛋白积累"
+      },
+      {
+        "label": "C",
+        "text": "据图可推测衰老细胞中各种蛋白质的表达量上升"
+      },
+      {
+        "label": "D",
+        "text": "含 $EdU$ 标记的细胞所占比例越大，表明细胞增殖越旺盛"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-13",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "14",
+    "type": "single_choice",
+    "category": "molecular_genetics",
+    "content": "大数据时代，全球每天产生海量数据，预计 2040 年需一百万吨硅基芯片才能储存全球一年产生的数据。为解决这一难题，科学家尝试运用 DNA 来储存数据。我国科学家已经将汉代拓片、熊猫照片等文化数据写入 DNA，实现数据长期保存。下列叙述中，DNA 可以作为存储介质的优点不包括（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "DNA 具有可复制性，有利于数据的传播"
+      },
+      {
+        "label": "B",
+        "text": "可通过 DNA 转录和翻译传递相应数据信息"
+      },
+      {
+        "label": "C",
+        "text": "DNA 长链中碱基排列的多样化，为大量数据的存储提供可能"
+      },
+      {
+        "label": "D",
+        "text": "DNA 作为存储介质体积小，为数据携带和保存节约了大量空间"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-14",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "B"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "ecology_system",
+    "content": "花鼠取食偏好红松球果，且具有分散贮食和遗忘贮藏点的特性。研究人员在 2019~2023 年间，对某地红松林中花鼠种群数量和红松结实量开展调查，发现 2022 年红松结实量最高，与其余四年的结实量存在显著差异；其余四年之间的结实量没有显著差异。花鼠种群 5 年的调查结果如下表。根据上述材料，下列推测合理的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "花鼠能促进红松种子的传播"
+      },
+      {
+        "label": "B",
+        "text": "红松结实量受到花鼠种群数量的调控"
+      },
+      {
+        "label": "C",
+        "text": "花鼠的种群数量波动与其性比之间没有关联"
+      },
+      {
+        "label": "D",
+        "text": "从年龄结构分析，上述花鼠种群属于衰退型种群"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-15",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "A"
+  },
+  {
+    "question_number": "16",
+    "type": "single_choice",
+    "category": "variation_evolution",
+    "content": "若在一个随机交配的二倍体生物种群中，偶然出现一个有利突变基因，该突变基因可能是隐性或显性，具有突变表型的个体更容易生存和繁衍。图 1 与图 2 是在自然选择下突变基因的频率变化趋势图。据图分析，下列叙述正确的是（ ）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "图 1 曲线在 1200 代左右时形成了新物种"
+      },
+      {
+        "label": "B",
+        "text": "对比图 1 与图 2，推测图 1 中有利突变基因为隐性"
+      },
+      {
+        "label": "C",
+        "text": "随着世代数的增加，图 2 曲线的峰值只能接近 1，无法等于 1"
+      },
+      {
+        "label": "D",
+        "text": "图 2 曲线在 200~400 代增长慢，推测该阶段含有利基因的纯合体占比少"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-16",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "17",
+    "type": "single_choice",
+    "category": "hormonal_reg",
+    "content": "研究表明，人体肠道中某些微生物合成、分泌植物激素生长素，能增强癌症患者对化疗药物的响应，改善胰腺癌、结直肠癌和肺癌等的治疗效果。进一步研究发现，色氨酸可提高血清中生长素的水平；生长素通过抑制 E 酶（自由基清除酶）的活性，增强化疗药物对癌细胞的杀伤作用。下列叙述错误的是（ ）",
+    "has_figure": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "自由基对癌细胞和正常细胞都有毒害作用"
+      },
+      {
+        "label": "B",
+        "text": "富含色氨酸的食品能改善癌症患者的化疗效果"
+      },
+      {
+        "label": "C",
+        "text": "患者个体肠道微生物种群差异可能会影响癌症化疗效果"
+      },
+      {
+        "label": "D",
+        "text": "该研究结果表明生长素可作为一种潜在的化疗药物用于癌症治疗"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-17",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4,
+      5
+    ],
+    "answer": "D"
+  },
+  {
+    "question_number": "18",
+    "type": "single_choice",
+    "category": "genetics_laws",
+    "content": "如图所示为某遗传病的系谱图（图中实心代表患病，空心代表正常；相关基因用 $G/g$ 表示）。下列相关叙述正确的是：",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "$Ⅲ-3$ 个体的致病基因可追溯源自 $I-2$"
+      },
+      {
+        "label": "B",
+        "text": "$Ⅲ-5$ 细胞中失活的 $X$ 染色体源自母方"
+      },
+      {
+        "label": "C",
+        "text": "$Ⅲ-2$ 所有细胞中可能检测不出 $g$ 蛋白"
+      },
+      {
+        "label": "D",
+        "text": "若 $Ⅲ-6$ 与某男性婚配，预期生出一个不患该遗传病男孩的概率是 $1/2$"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（湖北卷）-18",
+    "source": "2025年高考生物试卷（湖北卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      6
+    ],
+    "answer": "C"
+  },
+  {
+    "question_number": "15",
+    "type": "single_choice",
+    "category": "bio_engineering",
+    "content": "如图是某质粒$K$及其在高效表达目的基因过程中的操作。下列叙述错误的是（ ）\n（注：图中包含启动子、$BamHI$切割位点、卡那霉素抗性基因、$\beta$-半乳糖苷酶基因，筛选平板含$X\text{-}gal$和卡那霉素）",
+    "has_figure": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "使用氯化钙处理大肠杆菌以提高转化效率，可增加筛选平板上白色和蓝色菌落数"
+      },
+      {
+        "label": "B",
+        "text": "如果筛选平板中仅含卡那霉素，生长出的白色菌落不可判定为含目的基因的菌株"
+      },
+      {
+        "label": "C",
+        "text": "因质粒 $K$ 中含两个标记基因，筛选平板中长出的白色菌落即为表达目标蛋白的菌株"
+      },
+      {
+        "label": "D",
+        "text": "若筛选平板中蓝色菌落偏多，原因可能是质粒 $K$ 经酶切后自身环化并导入了大肠杆菌"
+      }
+    ],
+    "score_rule": "",
+    "id": "2025年高考生物试卷（安徽卷）-15",
+    "source": "2025年高考生物试卷（安徽卷）",
+    "subject": "biology",
+    "extracted_from_pages": [
+      4
+    ],
+    "answer": "C"
+  }
+]
