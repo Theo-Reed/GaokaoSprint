@@ -260,12 +260,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </span>
                     {isSubmitted && (
                         currentQ.type === 'fill_in' ? (
-                            <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200">
+                            <span className="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-100">
                                 <CheckCircle2 size={14} className="mr-1" />
                                 已核对答案
                             </span>
                         ) : (
-                            <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                            <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
                                 {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}
                                 {isCorrect() ? '回答正确' : '回答错误'}
                             </span>
@@ -315,9 +315,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             
                             let buttonClass = "flex items-start gap-4 p-4 rounded-xl border transition-all duration-200 text-left ";
                             if (isSubmitted) {
-                                if (isCorrectOpt) buttonClass += "bg-green-50 border-green-500 text-green-800 ring-1 ring-green-500 ";
-                                else if (isSelected) buttonClass += "bg-red-50 border-red-500 text-red-800 ";
-                                else buttonClass += "bg-white border-slate-100 text-slate-400 ";
+                                if (isCorrectOpt) {
+                                    buttonClass += "bg-indigo-50 border-indigo-600 text-indigo-900 ring-1 ring-indigo-600/20 ";
+                                } else if (isSelected) {
+                                    buttonClass += "bg-slate-50 border-slate-300 text-slate-400 ";
+                                } else {
+                                    buttonClass += "bg-white border-slate-100 text-slate-300 ";
+                                }
                             } else {
                                 if (isSelected) buttonClass += "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-md ";
                                 else buttonClass += "bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:bg-slate-50 ";
@@ -327,15 +331,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
                             if (isSubmitted) {
                                 if (isCorrectOpt) {
-                                    badgeClass += "bg-green-600 text-white border-green-600";
+                                    badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
                                 } else if (isSelected) {
-                                    badgeClass += "bg-red-600 text-white border-red-600";
+                                    badgeClass += "bg-slate-400 text-white border-slate-400";
                                 } else {
-                                    badgeClass += "bg-white text-slate-500 border-slate-200";
+                                    badgeClass += "bg-white text-slate-200 border-slate-100";
                                 }
                             } else {
                                 if (isSelected) {
-                                    badgeClass += "bg-indigo-600 text-white border-indigo-600";
+                                    badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
                                 } else {
                                     badgeClass += "bg-white text-slate-500 border-slate-200";
                                 }
@@ -442,9 +446,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             )}
                             <button
                                 onClick={handleNext}
-                                className="flex-grow md:flex-grow-0 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
+                                className="flex-grow md:flex-grow-0 px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 hover:border-slate-300 hover:text-indigo-600 transition-all shadow-sm"
                             >
-                                下一题 <ChevronRight size={20} />
+                                下一题 <ChevronRight size={20} className="text-slate-400 group-hover:text-indigo-500" />
                             </button>
                         </div>
                     )}
