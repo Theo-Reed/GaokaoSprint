@@ -30,6 +30,9 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [isLongPressed, setIsLongPressed] = useState(false);
   const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
+
+  const isButtonOnLeft = pos.x !== -1 && pos.x < (typeof window !== 'undefined' ? window.innerWidth / 2 : 500);
+  const menuSide = isButtonOnLeft ? 'right' : 'left';
   
   // Set default collapsed state for sections
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
@@ -57,9 +60,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const handleTouchStart = (e: React.TouchEvent) => {
     if (window.innerWidth >= 768) return; // Only mobile
     const touch = e.touches[0];
-    const startX = touch.clientX;
-    const startY = touch.clientY;
-
+    
     longPressTimer.current = setTimeout(() => {
       setIsLongPressed(true);
       if (window.navigator.vibrate) window.navigator.vibrate(50); // Haptic feedback if available
@@ -67,7 +68,12 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    // If we've started the long press timer but moved significantly, cancel it
+    // But since we want to allow small movements to not cancel long press, 
+    // we only care about if we are already in long press mode.
+    
     if (!isLongPressed) {
+      // If we move too early, it's probably a scroll, so cancel long press
       if (longPressTimer.current) {
         clearTimeout(longPressTimer.current);
         longPressTimer.current = null;
@@ -75,7 +81,8 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       return;
     }
 
-    e.preventDefault(); // Prevent scrolling during drag
+    // CRITICAL: Prevent system menus/selection during drag
+    if (e.cancelable) e.preventDefault();
     setIsDragging(true);
     const touch = e.touches[0];
     setPos({ x: touch.clientX, y: touch.clientY });
@@ -105,6 +112,14 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   };
 
   useEffect(() => {
+    if (isDragging) {
+      document.body.classList.add('select-none');
+    } else {
+      document.body.classList.remove('select-none');
+    }
+  }, [isDragging]);
+
+  useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user?.email) {
           setUserEmail(session.user.email);
@@ -127,7 +142,10 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
           top: `${pos.y - 20}px`,
           left: pos.x === -1 ? 'auto' : `${pos.x - 20}px`,
           right: pos.x === -1 ? '16px' : 'auto',
-          touchAction: 'none'
+          touchAction: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none',
+          WebkitTouchCallout: 'none'
         }}
         className={`z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-shadow ${isLongPressed ? 'scale-110 shadow-lg ring-2 ring-violet-500' : ''}`}
       >
@@ -152,10 +170,11 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
       {/* Sidebar Container */}
       <div className={`
-        fixed top-0 left-0 h-screen w-64 bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800
+        fixed top-0 h-screen w-64 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800
         transform transition-transform duration-300 ease-in-out z-[60]
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        md:translate-x-0 md:block
+        ${menuSide === 'left' ? 'left-0 border-r' : 'right-0 border-l'}
+        ${isOpen ? 'translate-x-0' : (menuSide === 'left' ? '-translate-x-full' : 'translate-x-full')}
+        md:left-0 md:right-auto md:border-r md:translate-x-0 md:block
         overflow-y-auto no-scrollbar
       `}>
         <div className="p-6">

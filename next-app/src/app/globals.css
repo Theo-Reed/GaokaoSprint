@@ -24,7 +24,7 @@
 }
 
 .dark {
-  --background: #131314;
+  --background: #131314; /* Gemini 深空灰 */
   --foreground: #e3e3e3;
   --slate-50: #f8fafc;
   --slate-100: #f1f5f9;
@@ -43,6 +43,14 @@
   --violet-400: #c4b5fd;
   --violet-600: #8b5cf6;
   --violet-700: #7c3aed;
+}
+
+@media (max-width: 767px) {
+  .dark {
+    --background: #1c1c1e; /* iOS 标准 System Background 颜色 */
+    --slate-950: #1c1c1e;
+    --slate-900: #2c2c2e;
+  }
 }
 
 @theme {
