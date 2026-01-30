@@ -3,6 +3,10 @@
         "/^python3 -c \"\nimport os\n\nfiles = \\{\n    'diet_plan\\.md': 'Diet Plan',\n    'environment\\.md': 'Environment',\n    'fatigue_intervention\\.md': 'Fatigue Intervention',\n    'study_schedule\\.md': 'Study Schedule'\n\\}\n\nbase_path = 'next-app/content/en'\n\nfor filename, title in files\\.items\\(\\):\n    path = os\\.path\\.join\\(base_path, filename\\)\n    if os\\.path\\.exists\\(path\\):\n        with open\\(path, 'r', encoding='utf-8'\\) as f:\n            content = f\\.read\\(\\)\n        lines = content\\.split\\('\\\\n'\\)\n        new_lines = \\[\\]\n        found_h1 = False\n        for line in lines:\n            if not found_h1 and line\\.startswith\\('# '\\):\n                new_lines\\.append\\(f'# \\{title\\}'\\)\n                found_h1 = True\n            else:\n                new_lines\\.append\\(line\\)\n        with open\\(path, 'w', encoding='utf-8'\\) as f:\n            f\\.write\\('\\\\n'\\.join\\(new_lines\\)\\)\n\"$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^python3 -c \"\nimport json\nimport collections\n\nfile_path = 'next-app/src/data/math/questions\\.json'\nwith open\\(file_path, 'r', encoding='utf-8'\\) as f:\n    questions = json\\.load\\(f\\)\n\ncontents = collections\\.defaultdict\\(list\\)\nfor q in questions:\n    # Use a simpler normalization for a quick check\n    c = q\\['content'\\]\\.strip\\(\\)\n    contents\\[c\\]\\.append\\(q\\['id'\\]\\)\n\nduplicates = \\{c: ids for c, ids in contents\\.items\\(\\) if len\\(ids\\) > 1\\}\nprint\\(f'Found \\{len\\(duplicates\\)\\} literal duplicate contents\\.'\\)\nfor c, ids in list\\(duplicates\\.items\\(\\)\\)\\[:3\\]:\n    print\\(f'IDs: \\{ids\\}'\\)\n\"$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
