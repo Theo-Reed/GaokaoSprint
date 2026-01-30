@@ -70,41 +70,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
 
   const currentQuiz = quizPool[currentQuizIndex];
 
-  // Initialize Exam Session when progress is ready
-  useEffect(() => {
-    if (!progressLoading) {
-      startNewExamSession();
-    }
-  }, [progressLoading]); // Re-run when progress loads
-
-  // --- Removed LocalStorage only logic, now using hook ---
-  // const getCompletedQuestions ... 
-  
-  const clearHistory = () => {
-    if (confirm(text.resetConfirm)) {
-      localStorage.removeItem('gaokao_completed_questions');
-      // Note: We can't easily clear DB without a new function, 
-      // but for now we clear local specific things if any.
-      // This button might need to be hidden or updated to say "Contact admin" 
-      // or we impl a delete. For now, let's just create a new session.
-      console.log('[GrammarQuiz] Session reset.');
-      startNewExamSession();
-    }
-  };
-
-  // Expose clearHistory to window for console access
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).resetGrammarQuiz = clearHistory;
-    }
-    return () => {
-      if (typeof window !== 'undefined') {
-        delete (window as any).resetGrammarQuiz;
-      }
-    };
-  }, []);
-
-  const startNewExamSession = () => {
+  const startNewExamSession = React.useCallback(() => {
     // Uses the hook's completedIds
     console.log(`[GrammarQuiz] Starting new session. Found ${completedIds.length} completed questions.`);
     
@@ -129,6 +95,31 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
     setExamFeedback("");
     setIsExamCorrect(false);
     setSessionScore(0);
+  }, [completedIds]);
+
+  // Initialize Exam Session when progress is ready
+  useEffect(() => {
+    if (!progressLoading) {
+      const timerId = setTimeout(() => {
+          startNewExamSession();
+      }, 0);
+      return () => clearTimeout(timerId);
+    }
+  }, [progressLoading, startNewExamSession]); // Re-run when progress loads
+
+  // --- Removed LocalStorage only logic, now using hook ---
+  // const getCompletedQuestions ... 
+  
+  const clearHistory = () => {
+    if (confirm(text.resetConfirm)) {
+      localStorage.removeItem('gaokao_completed_questions');
+      // Note: We can't easily clear DB without a new function, 
+      // but for now we clear local specific things if any.
+      // This button might need to be hidden or updated to say "Contact admin" 
+      // or we impl a delete. For now, let's just create a new session.
+      console.log('[GrammarQuiz] Session reset.');
+      startNewExamSession();
+    }
   };
 
   const handleExamSubmit = (e: React.FormEvent) => {

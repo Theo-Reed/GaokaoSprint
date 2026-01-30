@@ -73,11 +73,14 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [showHint, setShowHint] = useState(false);
 
     useEffect(() => {
-        const q = getRandomQuestion(category);
-        setQuestion(q as Question);
-        setTimer(0);
-        setIsRunning(true);
-        setShowHint(false);
+        const timerId = setTimeout(() => {
+            const q = getRandomQuestion(category);
+            setQuestion(q as Question);
+            setTimer(0);
+            setIsRunning(true);
+            setShowHint(false);
+        }, 0);
+        return () => clearTimeout(timerId);
     }, [category]);
 
     useEffect(() => {

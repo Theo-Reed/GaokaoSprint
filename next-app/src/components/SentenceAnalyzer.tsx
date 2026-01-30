@@ -41,11 +41,14 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
 
   // Reset Analyze level state
   useEffect(() => {
-    setFoundIndices({ subject: [], verb: [], object: [] });
-    setAnalyzeMessage(text.initialMsg);
-    setAnalyzeFeedbackColor("text-slate-500 dark:text-slate-400");
-    setSelectedTool(null);
-  }, [currentAnalyzeIndex, lang]); 
+    const timerId = setTimeout(() => {
+      setFoundIndices({ subject: [], verb: [], object: [] });
+      setAnalyzeMessage(text.initialMsg);
+      setAnalyzeFeedbackColor("text-slate-500 dark:text-slate-400");
+      setSelectedTool(null);
+    }, 0);
+    return () => clearTimeout(timerId);
+  }, [currentAnalyzeIndex, lang, text.initialMsg]); 
 
   const handleWordClick = (index: number) => {
     if (!selectedTool) {

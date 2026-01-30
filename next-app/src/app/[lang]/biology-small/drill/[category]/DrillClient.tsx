@@ -108,9 +108,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     // Initial Pick
     useEffect(() => {
         if (!strategyLoading && allCategoryQuestions.length > 0 && !currentQuestion) {
-            const next = pickNextQuestion();
-            setCurrentQuestion(next);
-            resetQuestionState();
+            // Avoid synchronous set-state in effect
+            const timerId = setTimeout(() => {
+                const next = pickNextQuestion();
+                setCurrentQuestion(next);
+                resetQuestionState();
+            }, 0);
+            return () => clearTimeout(timerId);
         }
     }, [strategyLoading, allCategoryQuestions, currentQuestion, pickNextQuestion]);
 

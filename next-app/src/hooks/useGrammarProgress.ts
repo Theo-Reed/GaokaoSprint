@@ -8,6 +8,26 @@ export function useGrammarProgress(isCn: boolean) {
   const [localCompleted, setLocalCompleted] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const loadLocal = () => {
+    if (typeof window === 'undefined') return;
+     try {
+      const stored = localStorage.getItem('gaokao_completed_questions');
+      if (stored) {
+          setLocalCompleted(JSON.parse(stored));
+      }
+    } catch {}
+  }
+
+  // 2. 从数据库拉取
+  const fetchProgress = async (userId: string) => {
+    setLoading(true);
+    const { data } = await supabase.from('user_syntax_progress').select('syntax_id');
+    if (data) {
+      setLocalCompleted(data.map(item => item.syntax_id));
+    }
+    setLoading(false);
+  };
+
   // 1. 初始化
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -39,26 +59,6 @@ export function useGrammarProgress(isCn: boolean) {
 
     return () => subscription.unsubscribe();
   }, []);
-
-  const loadLocal = () => {
-    if (typeof window === 'undefined') return;
-     try {
-      const stored = localStorage.getItem('gaokao_completed_questions');
-      if (stored) {
-          setLocalCompleted(JSON.parse(stored));
-      }
-    } catch {}
-  }
-
-  // 2. 从数据库拉取
-  const fetchProgress = async (userId: string) => {
-    setLoading(true);
-    const { data } = await supabase.from('user_syntax_progress').select('syntax_id');
-    if (data) {
-      setLocalCompleted(data.map(item => item.syntax_id));
-    }
-    setLoading(false);
-  };
 
   // 3. Mark as completed
   const markCompleted = async (id: string) => {

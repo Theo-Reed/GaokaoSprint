@@ -76,16 +76,19 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     };
 
     useEffect(() => {
-        if (!questionsData || !Array.isArray(questionsData)) {
-            setQuestions([]);
-            return;
-        }
-        const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
-        // Shuffle the questions
-        const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-        setQuestions(shuffled);
-        setCurrentIndex(0);
-        resetQuestionState();
+        const timerId = setTimeout(() => {
+            if (!questionsData || !Array.isArray(questionsData)) {
+                setQuestions([]);
+                return;
+            }
+            const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
+            // Shuffle the questions
+            const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+            setQuestions(shuffled);
+            setCurrentIndex(0);
+            resetQuestionState();
+        }, 0);
+        return () => clearTimeout(timerId);
     }, [category]);
 
     useEffect(() => {

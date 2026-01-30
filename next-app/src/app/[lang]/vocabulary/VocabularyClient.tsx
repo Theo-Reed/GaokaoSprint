@@ -90,119 +90,8 @@ export default function VocabularyClient() {
   // 统计
   const [masteredCount, setMasteredCount] = useState(0);
 
-  // 1. 初始化
-  useEffect(() => {
-    setIsClient(true);
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      if (session) fetchProgress(session.user.id);
-      else {
-        buildQueue(new Map()); // 未登录模式，全部视为 new
-        setLoading(false);
-      }
-    });
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-      if (session) fetchProgress(session.user.id);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  // 1.5 实时同步：监听数据库变化
-  useEffect(() => {
-    if (!session?.user?.id) return;
-
-    const channel = supabase
-      .channel('realtime_vocabulary_progress')
-      .on(
-        'postgres_changes',
-        {
-          event: '*', // 监听所有变更 (INSERT, UPDATE, DELETE)
-          schema: 'public',
-          table: 'user_progress',
-          filter: `user_id=eq.${session.user.id}`,
-        },
-        (payload) => {
-          // 只有当变更不是来自当前窗口的本地更新时，才可能需要处理（虽然 upsert 也会触发，但 Map.set 是幂等的）
-          const newData = payload.new as any;
-          if (newData && newData.word_id) {
-            setProgressMap(prev => {
-              const currentInMap = prev.get(newData.word_id);
-              if (currentInMap?.status === newData.status && currentInMap?.last_reviewed_at === newData.last_reviewed_at) {
-                return prev;
-              }
-              
-              const next = new Map(prev);
-              next.set(newData.word_id, {
-
-                status: newData.status,
-                last_reviewed_at: newData.last_reviewed_at
-              });
-
-              // 同步更新 masteredCount
-              if (newData.status === 'mastered' && currentInMap?.status !== 'mastered') {
-                setMasteredCount(c => c + 1);
-              } else if (newData.status !== 'mastered' && currentInMap?.status === 'mastered') {
-                setMasteredCount(c => Math.max(0, c - 1));
-              }
-
-              return next;
-            });
-          }
-        }
-      )
-      .subscribe();
-
-    return () => {
-      supabase.removeChannel(channel);
-    };
-  }, [session?.user?.id]);
-
-  // 2. 从数据库拉取进度
-  const fetchProgress = async (userId: string) => {
-    setLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from('user_progress')
-        .select('word_id, status, last_reviewed_at')
-        .eq('user_id', userId)
-        .order('last_reviewed_at', { ascending: true });
-      
-      const map = new Map<string, UserProgress>();
-
-      if (error) {
-        console.error('Fetch progress failed (Check RLS Policies):', error.code, error.message);
-      } else if (data) {
-        data.forEach(item => {
-          if (item.word_id.startsWith('syntax:')) return;
-          map.set(item.word_id, {
-            status: item.status as any || 'learning', 
-            last_reviewed_at: item.last_reviewed_at
-          });
-        });
-      }
-
-      // 重新计算 masteredCount
-      let mCount = 0;
-      map.forEach(val => {
-          if (val.status === 'mastered') mCount++;
-      });
-      
-      setProgressMap(map);
-      setMasteredCount(mCount);
-      buildQueue(map);
-    } catch (err) {
-      console.error('Unexpected error in fetchProgress:', err);
-      buildQueue(new Map()); // 即使出错也展示基础数据
-    } finally {
-      setLoading(false);
-    }
-  };
-
   // 3. 构建每日学习队列
-  const buildQueue = (map: Map<string, UserProgress>) => {
+  const buildQueue = React.useCallback((map: Map<string, UserProgress>) => {
     const allWords = rawData as WordData[];
     const now = new Date();
     
@@ -254,7 +143,120 @@ export default function VocabularyClient() {
     } else {
         setCurrentWord(null);
     }
-  };
+  }, []);
+
+  // 2. 从数据库拉取进度
+  const fetchProgress = React.useCallback(async (userId: string) => {
+    setLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from('user_progress')
+        .select('word_id, status, last_reviewed_at')
+        .eq('user_id', userId)
+        .order('last_reviewed_at', { ascending: true });
+      
+      const map = new Map<string, UserProgress>();
+
+      if (error) {
+        console.error('Fetch progress failed (Check RLS Policies):', error.code, error.message);
+      } else if (data) {
+        data.forEach(item => {
+          if (item.word_id.startsWith('syntax:')) return;
+          map.set(item.word_id, {
+            status: item.status as any || 'learning', 
+            last_reviewed_at: item.last_reviewed_at
+          });
+        });
+      }
+
+      // 重新计算 masteredCount
+      let mCount = 0;
+      map.forEach(val => {
+          if (val.status === 'mastered') mCount++;
+      });
+      
+      setProgressMap(map);
+      setMasteredCount(mCount);
+      buildQueue(map);
+    } catch (err) {
+      console.error('Unexpected error in fetchProgress:', err);
+      buildQueue(new Map()); // 即使出错也展示基础数据
+    } finally {
+      setLoading(false);
+    }
+  }, [buildQueue]);
+
+  // 1. 初始化
+  useEffect(() => {
+    setIsClient(true);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      if (session) fetchProgress(session.user.id);
+      else {
+        buildQueue(new Map()); // 未登录模式，全部视为 new
+        setLoading(false);
+      }
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      if (session) fetchProgress(session.user.id);
+    });
+
+    return () => subscription.unsubscribe();
+  }, [fetchProgress, buildQueue]);
+
+  // 1.5 实时同步：监听数据库变化
+  useEffect(() => {
+    if (!session?.user?.id) return;
+
+    const channel = supabase
+      .channel('realtime_vocabulary_progress')
+      .on(
+        'postgres_changes',
+        {
+          event: '*', // 监听所有变更 (INSERT, UPDATE, DELETE)
+          schema: 'public',
+          table: 'user_progress',
+          filter: `user_id=eq.${session.user.id}`,
+        },
+        (payload) => {
+          // 只有当变更不是来自当前窗口的本地更新时，才可能需要处理（虽然 upsert 也会触发，但 Map.set 是幂等的）
+          const newData = payload.new as any;
+          if (newData && newData.word_id) {
+            setProgressMap(prev => {
+              const currentInMap = prev.get(newData.word_id);
+              if (currentInMap?.status === newData.status && currentInMap?.last_reviewed_at === newData.last_reviewed_at) {
+                return prev;
+              }
+              
+              const next = new Map(prev);
+              next.set(newData.word_id, {
+
+                status: newData.status,
+                last_reviewed_at: newData.last_reviewed_at
+              });
+
+              // 同步更新 masteredCount
+              if (newData.status === 'mastered' && currentInMap?.status !== 'mastered') {
+                setMasteredCount(c => c + 1);
+              } else if (newData.status !== 'mastered' && currentInMap?.status === 'mastered') {
+                setMasteredCount(c => Math.max(0, c - 1));
+              }
+
+              return next;
+            });
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [session?.user?.id]);
+
+
 
   // 4. 用户交互处理
   const handleAction = async (action: 'familiar' | 'next' | 'mastered' | 'unmastered') => {
