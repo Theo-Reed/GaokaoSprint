@@ -195,7 +195,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
           </div>
 
           {userEmail && (
-            <div className="mb-6 p-3 bg-white dark:bg-slate-800/80 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden">
+            <div className="mb-6 p-3 bg-white dark:bg-slate-800/80 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden select-none touch-none">
                 <p className="text-sm font-bold text-slate-700 dark:text-white truncate" title={userEmail}>{userEmail}</p>
             </div>
           )}
