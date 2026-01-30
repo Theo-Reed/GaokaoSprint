@@ -1,4 +1,5 @@
 import React from 'react';
+import { escapeRegExp } from '@/lib/utils';
 
 export interface SanitizeOptions {
   stripSingleNewlines?: boolean;
@@ -40,7 +41,7 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
 
   // This specifically looks for double-escaped backslashes before known commands
   // We remove 'K', 'k', 'c' etc because they are often just letters in text
-  const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
+  const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.map(escapeRegExp).join('|')})\\b`, 'g');
   clean = clean.replace(commandPattern, '\\$1');
 
   // 5. Fix double-escaped braces and symbols

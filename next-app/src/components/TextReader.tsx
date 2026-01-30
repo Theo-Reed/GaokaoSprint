@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { getVocabEntry, VocabEntry } from '@/lib/vocabulary';
+import { escapeRegExp } from '@/lib/utils';
 import { X, BookOpen, GraduationCap, Target, CheckCircle, RotateCcw, Languages } from 'lucide-react';
 
 interface TextReaderProps {
@@ -229,7 +230,7 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
                         <span className="absolute top-2 left-2 text-emerald-200 dark:text-emerald-800 text-4xl font-serif opacity-50">“</span>
                         <span className="relative z-10 pl-2 block" dangerouslySetInnerHTML={{
                             // Simple heuristic highlight to bold the target word forms
-                            __html: ex.replace(new RegExp(`(${selectedWord.word}\\w*)`, 'gi'), '<b class="text-emerald-800 dark:text-emerald-300">$1</b>')
+                            __html: ex.replace(new RegExp(`(${escapeRegExp(selectedWord.word)}\\w*)`, 'gi'), '<b class="text-emerald-800 dark:text-emerald-300">$1</b>')
                         }} />
                     </div>
                     ))}
