@@ -174,6 +174,12 @@ function patchFile(fullPath) {
     changed = true;
   }
 
+  if (content.includes('new RegExp(_emojiRegex, "u")')) {
+      console.log(`  - Patching Emoji RegExp instantiation in ${path.relative(rootDir, fullPath)}`);
+      content = content.replace('new RegExp(_emojiRegex, "u")', 'new RegExp(_emojiRegex)');
+      changed = true;
+  }
+  
   if (changed) {
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Successfully patched ${path.relative(rootDir, fullPath)}`);
