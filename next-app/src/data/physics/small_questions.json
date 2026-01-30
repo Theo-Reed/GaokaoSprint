@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "phys-dummy-01",
+    "question_number": "1",
+    "type": "single_choice",
+    "category": "mechanics",
+    "content": "这是一个为了防止页面空白而添加的测试题目。下列说法正确的是：",
+    "options": [
+      { "label": "A", "text": "物理很有趣" },
+      { "label": "B", "text": "物理很难" },
+      { "label": "C", "text": "物理是实验科学" },
+      { "label": "D", "text": "以上都对" }
+    ],
+    "answer": "D",
+    "explanation": "物理确实既难又有趣，且以通过实验验证为基础。",
+    "source": "Mock",
+    "has_figure": false
+  }
+]

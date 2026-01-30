@@ -5,16 +5,18 @@ export interface SanitizeOptions {
 }
 
 export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
-  if (!text || typeof text !== 'string') return text;
+  if (!text || typeof text !== 'string') return "";
   
   // 1. Remove carriage returns
   let clean = text.replace(/\r/g, '');
 
   // 2. Optional: Strip single newlines (convert to space) but keep double newlines (paragraphs)
-  // This is useful for OCR'd text where lines break arbitrarily, but we want to flow the text.
-  // We use lookbehind/lookahead to match a newline that is NOT preceded/followed by another newline.
+  // This is useful for OCR'd text where lines break arbitrarily.
+  // Using a safe split/map approach instead of lookbehind for Safari compatibility.
   if (options.stripSingleNewlines) {
-    clean = clean.replace(/(?<!\n)\n(?!\n)/g, ' ');
+    clean = clean.split('\n\n')
+      .map(para => para.replace(/\n/g, ' '))
+      .join('\n\n');
   }
 
   // 3. Normalize delimiters - ONLY if they are not already properly escaped
@@ -65,9 +67,10 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
      'alpha', 'beta', 'gamma', 'delta', 'theta', 'lambda', 'mu', 'pi', 'rho', 'sigma', 'omega'
   ];
   
-  autoEscapeSymbols.forEach(sym => {
-       // Look for symbol NOT preceded by backslash
-       clean = clean.replace(new RegExp(`(?<!\\\\)\\b${sym}\\b`, 'g'), `\\${sym}`);
+  // Using a capture group approach instead of lookbehind for Safari compatibility
+  const symPattern = new RegExp(`(\\\\?)\\b(${autoEscapeSymbols.join('|')})\\b`, 'g');
+  clean = clean.replace(symPattern, (match, prefix, symbol) => {
+    return prefix === '\\' ? match : '\\' + symbol;
   });
 
   return clean;
