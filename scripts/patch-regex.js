@@ -2,11 +2,19 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 
-const FILES_TO_PATCH = [
+// ASCII Punctuation + Common Chinese Punctuation
+const SAFE_PUNCTUATION = "[!-/:-@[-`{-~\\u3000-\\u303f\\uff00-\\uffef]";
+
+// Set to track unique paths to patch
+const pathsToPatch = new Set();
+
+// 1. Hardcoded fallbacks
+const FALLBACK_PATHS = [
   // Root node_modules (hoisted)
   'node_modules/micromark-util-character/index.js',
   'node_modules/micromark-util-character/dev/index.js',
@@ -22,17 +30,51 @@ const FILES_TO_PATCH = [
   'next-app/node_modules/mdast-util-gfm-autolink-literal/lib/index.js'
 ];
 
-// ASCII Punctuation + Common Chinese Punctuation
-const SAFE_PUNCTUATION = "[!-/:-@[-`{-~\\u3000-\\u303f\\uff00-\\uffef]";
+FALLBACK_PATHS.forEach(p => pathsToPatch.add(path.resolve(rootDir, p)));
 
-function patchFile(filePath) {
-  const fullPath = path.resolve(rootDir, filePath);
-  if (!fs.existsSync(fullPath)) return;
+// 2. Dynamic Resolution
+try {
+    // Try to resolve from next-app context
+    const nextAppPkgJson = path.join(rootDir, 'next-app', 'package.json');
+    if (fs.existsSync(nextAppPkgJson)) {
+        const require = createRequire(nextAppPkgJson);
+        
+        const PACKAGES_TO_FIND = [
+            'micromark-util-character', // Resolves to main (index.js usually)
+            'estree-util-is-identifier-name',
+            'mdast-util-gfm-autolink-literal',
+            'mdast-util-gfm-autolink-literal/lib/index.js',
+            'zod'
+        ];
+
+        for (const pkg of PACKAGES_TO_FIND) {
+            try {
+                // Try resolving the package main entry point
+                const resolved = require.resolve(pkg);
+                console.log(`[Dynamic] Resolved ${pkg} -> ${resolved}`);
+                pathsToPatch.add(resolved);
+            } catch (e) {
+                // Ignore resolution failures
+                console.log(`[Dynamic] Could not resolve ${pkg}: ${e.message}`);
+            }
+        }
+    } else {
+        console.log("next-app/package.json not found, skipping dynamic resolution from next-app");
+    }
+} catch (error) {
+    console.error("Dynamic resolution error:", error);
+}
+
+function patchFile(fullPath) {
+  if (!fs.existsSync(fullPath)) {
+      return;
+  }
 
   let content = fs.readFileSync(fullPath, 'utf8');
+  let originalContent = content;
   let changed = false;
 
-  console.log(`Checking ${filePath}...`);
+  console.log(`Checking ${path.relative(rootDir, fullPath)}...`);
 
   // 1. Micromark Punctuation
   const micromarkTargets = [
@@ -42,40 +84,18 @@ function patchFile(filePath) {
   
   for (const target of micromarkTargets) {
     if (content.includes(target)) {
-      console.log(`Patching Micromark in ${filePath}`);
+      console.log(`  - Patching Micromark Punctuation`);
       content = content.replace(target, `new RegExp("${SAFE_PUNCTUATION}")`);
       changed = true;
     }
   }
 
   // 2. Mdast Autolink Literal
-  if (filePath.includes('mdast-util-gfm-autolink-literal')) {
-    // Email regex
-    const emailRegex = '/([-.\\w+]+)@([-\\w]+(?:\\.[-\\w]+)+)/gu';
-    if (content.includes(emailRegex)) {
-      console.log(`Patching Email Regex in ${filePath}`);
-      content = content.replace(
-        emailRegex,
-        'new RegExp("([-.\\\\w+]+)@([-\\\\w]+(?:\\\\.[-\\\\w]+)+)", "gu")'
-      );
-      changed = true;
-    }
-
-    // URL regex
-    const urlRegex = '/(https?:\\/\\/|www(?=\\.))([-.\\w]+)([^ \\t\\r\\n]*)/gi';
-    if (content.includes(urlRegex)) {
-      console.log(`Patching URL Regex in ${filePath}`);
-      content = content.replace(
-        urlRegex,
-        'new RegExp("(https?:\\\\/\\\\/|www(?=\\\\.))([-.\\\\w]+)([^ \\\\t\\\\r\\\\n]*)", "gi")'
-      );
-      changed = true;
-    }
-
+  if (fullPath.includes('mdast-util-gfm-autolink-literal')) {
     // Replace unicodePunctuation call with manual safe check
     const unsafeCheck = 'unicodePunctuation(code))';
     if (content.includes(unsafeCheck)) {
-       console.log(`Patching unicodePunctuation call in ${filePath}`);
+       console.log(`  - Patching unicodePunctuation call`);
        // We replace it with a direct regex check using our safe punctuation
        const safeCheck = `(code !== null && code > -1 && new RegExp("${SAFE_PUNCTUATION}").test(String.fromCharCode(code))))`;
        content = content.replace(unsafeCheck, safeCheck);
@@ -85,19 +105,20 @@ function patchFile(filePath) {
 
   // 3. ID_Start / ID_Continue
   if (content.includes('\\p{ID_Start}')) {
-    console.log(`Patching ID_Start in ${filePath}`);
+    console.log(`  - Patching ID_Start`);
+    // Global replace for this one
     content = content.split('\\p{ID_Start}').join('a-zA-Z_$');
     changed = true;
   }
   if (content.includes('\\p{ID_Continue}')) {
-    console.log(`Patching ID_Continue in ${filePath}`);
+    console.log(`  - Patching ID_Continue`);
     content = content.replace(/\\p{ID_Continue}/g, 'a-zA-Z0-9_$');
     changed = true;
   }
 
   // 4. Replace zod emoji
   if (content.includes('\\p{Extended_Pictographic}')) {
-    console.log(`Patching Emoji in ${filePath}`);
+    console.log(`  - Patching Emoji`);
     content = content.replace(/\\p{Extended_Pictographic}/g, '\\u2300-\\u23ff'); 
     changed = true;
   }
@@ -108,30 +129,15 @@ function patchFile(filePath) {
 
   if (changed) {
     fs.writeFileSync(fullPath, content);
-    console.log(`Successfully patched ${filePath}`);
-  }
-}
-
-// Also patch build chunks
-function patchChunks() {
-  const chunksDir = path.resolve(rootDir, 'next-app/.next/static/chunks');
-  if (!fs.existsSync(chunksDir)) return;
-
-  const files = fs.readdirSync(chunksDir);
-  for (const file of files) {
-    if (file.endsWith('.js')) {
-      const fullPath = path.join(chunksDir, file);
-      let content = fs.readFileSync(fullPath, 'utf8');
-      let changed = false;
-      
-      if (changed) {
-        fs.writeFileSync(fullPath, content);
-      }
-    }
+    console.log(`✅ Successfully patched ${path.relative(rootDir, fullPath)}`);
   }
 }
 
 console.log("Starting regex patching...");
-FILES_TO_PATCH.forEach(patchFile);
-patchChunks();
+console.log(`Targeting ${pathsToPatch.size} potential file paths.`);
+
+for (const p of pathsToPatch) {
+    patchFile(p);
+}
+
 console.log("Patching complete.");
