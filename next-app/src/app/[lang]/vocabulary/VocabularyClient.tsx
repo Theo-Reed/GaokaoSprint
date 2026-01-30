@@ -496,7 +496,7 @@ export default function VocabularyClient() {
                   return (
                     <div className="mt-6">
                       <h3 className="text-[10px] font-black text-slate-300 dark:text-slate-600 uppercase tracking-[0.3em] mb-2 border-b border-slate-50 dark:border-slate-800 pb-1">Usage Context</h3>
-                      <div className="space-y-3">
+                      <div className="space-y-3 mt-5">
                         {examplesToDisplay.map((ex, i) => (
                           <div key={i} className="text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100/50 dark:border-slate-700/50 p-3 rounded-2xl text-sm leading-relaxed"
                                dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-violet-600 dark:text-violet-400 font-black decoration-violet-200 dark:decoration-violet-800/30 decoration-2 underline-offset-4">$1</span>') }}
