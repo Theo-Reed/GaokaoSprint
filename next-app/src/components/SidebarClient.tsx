@@ -31,8 +31,8 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isLongPressed, setIsLongPressed] = useState(false);
   const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
 
-  const isButtonOnLeft = pos.x !== -1 && pos.x < (typeof window !== 'undefined' ? window.innerWidth / 2 : 500);
-  const menuSide = isButtonOnLeft ? 'right' : 'left';
+  // menuSide controls which side the sidebar pops out from
+  const [menuSide, setMenuSide] = useState<'left' | 'right'>('left');
   
   // Set default collapsed state for sections
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
@@ -102,6 +102,9 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         x: isLeft ? 16 : screenWidth - 16, 
         y: prev.y 
       }));
+      
+      // Update menu side ONLY after drag ends to prevent flickering
+      setMenuSide(isLeft ? 'right' : 'left');
       
       // Reset modes
       setTimeout(() => {
