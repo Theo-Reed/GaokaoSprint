@@ -31,9 +31,13 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+        <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
         <script
           dangerouslySetInnerHTML={{
              __html: `
+               if (location.search.indexOf('debug=1') > -1) {
+                 window.vConsole = new window.VConsole();
+               }
                window.onerror = function(msg, url, line, col, error) {
                  var div = document.getElementById('mobile-debug-console');
                  if (!div) {

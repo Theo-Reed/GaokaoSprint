@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node ../scripts/patch-regex.js && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -17,6 +17,7 @@
     "katex": "^0.16.28",
     "lodash": "^4.17.23",
     "lucide-react": "^0.563.0",
+    "micromark-util-character": "^2.1.1",
     "next": "16.1.4",
     "next-themes": "^0.4.6",
     "react": "19.2.3",
@@ -30,6 +31,12 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
+  "browserslist": [
+    "ios_saf 10",
+    "chrome 60",
+    "firefox 60",
+    "safari 10"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
