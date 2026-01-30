@@ -10,8 +10,8 @@ export default async function TrainerPage({ params }: { params: Promise<{ lang: 
 
   return (
     <div className="space-y-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
+      <div className="text-center mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-3xl font-extrabold text-slate-900 dark:text-white mt-5 mb-2 tracking-tight">
           {isCn ? '英语语法逻辑特训' : 'English Syntax Logic Trainer'}
         </h1>
       </div>
