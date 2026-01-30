@@ -26,7 +26,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
   // Floating button state
-  const [pos, setPos] = useState({ x: -1, y: 120 }); // -1 means right-aligned initially, y=120 to avoid top safe area
+  const [pos, setPos] = useState({ x: -1, y: 60 }); // -1 means right-aligned initially, higher up for "top-right"
   const [isDragging, setIsDragging] = useState(false);
   const [isLongPressed, setIsLongPressed] = useState(false);
   const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
@@ -59,21 +59,15 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (window.innerWidth >= 768) return; // Only mobile
-    const touch = e.touches[0];
     
     longPressTimer.current = setTimeout(() => {
       setIsLongPressed(true);
       if (window.navigator.vibrate) window.navigator.vibrate(50); // Haptic feedback if available
-    }, 500);
+    }, 400); // Shorter long press for better responsiveness
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    // If we've started the long press timer but moved significantly, cancel it
-    // But since we want to allow small movements to not cancel long press, 
-    // we only care about if we are already in long press mode.
-    
     if (!isLongPressed) {
-      // If we move too early, it's probably a scroll, so cancel long press
       if (longPressTimer.current) {
         clearTimeout(longPressTimer.current);
         longPressTimer.current = null;
@@ -81,11 +75,16 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       return;
     }
 
-    // CRITICAL: Prevent system menus/selection during drag
     if (e.cancelable) e.preventDefault();
     setIsDragging(true);
     const touch = e.touches[0];
-    setPos({ x: touch.clientX, y: touch.clientY });
+    
+    // Constraint to screen boundaries (20px is half of button width/height)
+    const margin = 20; 
+    const x = Math.max(margin, Math.min(touch.clientX, window.innerWidth - margin));
+    const y = Math.max(margin, Math.min(touch.clientY, window.innerHeight - margin));
+    
+    setPos({ x, y });
   };
 
   const handleTouchEnd = () => {
@@ -97,20 +96,20 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
     if (isLongPressed) {
       // Snap logic
       const screenWidth = window.innerWidth;
+      const margin = 20;
       const isLeft = pos.x < screenWidth / 2;
+      
+      // CRITICAL: Disable dragging state IMMEDIATELY to allow CSS transitions to animate the snap
+      setIsDragging(false);
+      setIsLongPressed(false);
+      
       setPos(prev => ({ 
-        x: isLeft ? 16 : screenWidth - 16, 
+        x: isLeft ? margin : screenWidth - margin, 
         y: prev.y 
       }));
       
       // Update menu side ONLY after drag ends to prevent flickering
       setMenuSide(isLeft ? 'right' : 'left');
-      
-      // Reset modes
-      setTimeout(() => {
-        setIsLongPressed(false);
-        setIsDragging(false);
-      }, 50);
     }
   };
 
@@ -144,13 +143,14 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
           position: 'fixed',
           top: `${pos.y - 20}px`,
           left: pos.x === -1 ? 'auto' : `${pos.x - 20}px`,
-          right: pos.x === -1 ? '16px' : 'auto',
+          right: pos.x === -1 ? '0px' : 'auto',
           touchAction: 'none',
           WebkitUserSelect: 'none',
           userSelect: 'none',
-          WebkitTouchCallout: 'none'
+          WebkitTouchCallout: 'none',
+          willChange: 'top, left, right'
         }}
-        className={`z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-shadow ${isLongPressed ? 'scale-110 shadow-lg ring-2 ring-violet-500' : ''}`}
+        className={`z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 ease-out ${isDragging ? '!transition-none' : ''} ${isLongPressed ? 'scale-110 shadow-lg ring-2 ring-violet-500' : ''}`}
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

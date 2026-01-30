@@ -9,7 +9,7 @@ export default async function TrainerPage({ params }: { params: Promise<{ lang: 
   const isCn = lang === 'cn';
 
   return (
-    <div className="space-y-8 animate-in fade-in zoom-in duration-500">
+    <div className="space-y-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
           {isCn ? '英语语法逻辑特训' : 'English Syntax Logic Trainer'}

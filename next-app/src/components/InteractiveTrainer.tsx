@@ -83,7 +83,7 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700 relative">
+    <div className="w-full max-w-4xl mx-auto space-y-8 relative">
       
       {/* Auth Blocking Overlay */}
       {isBlocking && (
