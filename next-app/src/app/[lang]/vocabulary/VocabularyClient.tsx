@@ -395,8 +395,8 @@ export default function VocabularyClient() {
 
   // 正常渲染
   return (
-    <div className="fixed inset-0 md:left-64 flex flex-col overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overscroll-none z-0">
-      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-slate-200 dark:border-slate-800 relative bg-white dark:bg-slate-900 md:shadow-2xl">
+    <div className="fixed inset-0 md:left-64 flex flex-col overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overscroll-none z-0 touch-none">
+      <div className="flex flex-col h-full w-full md:max-w-md mx-auto md:border-x border-slate-200 dark:border-slate-800 relative bg-white dark:bg-slate-900 md:shadow-2xl overflow-hidden shadow-none">
       
       {showAuth && <AuthOverlay onLoginSuccess={() => {}} />}
       

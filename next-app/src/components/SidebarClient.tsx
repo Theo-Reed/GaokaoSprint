@@ -61,7 +61,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       {/* Mobile Menu Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white"
+        className="fixed top-4 right-4 z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white"
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -77,7 +77,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       {/* Overlay for mobile */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 z-[55] md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -85,7 +85,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       {/* Sidebar Container */}
       <div className={`
         fixed top-0 left-0 h-screen w-64 bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800
-        transform transition-transform duration-300 ease-in-out z-40
+        transform transition-transform duration-300 ease-in-out z-[60]
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0 md:block
         overflow-y-auto no-scrollbar

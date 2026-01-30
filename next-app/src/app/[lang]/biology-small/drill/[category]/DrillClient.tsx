@@ -248,7 +248,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                     {/* Question Image Area */}
                     {currentQ.has_figure && (
-                        <div className="flex-shrink-0 flex flex-col items-center justify-center p-4 bg-white rounded-xl md:max-w-[300px]">
+                        <div className="flex-shrink-0 flex flex-col items-center justify-center bg-white dark:bg-transparent rounded-xl md:max-w-[300px]">
                             <img 
                                 src={`/biology-images/${encodeURIComponent(`${currentQ.source}-${currentQ.question_number}.png`)}`} 
                                 alt="题目插图" 
