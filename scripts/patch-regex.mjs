@@ -43,7 +43,6 @@ try {
             'micromark-util-character', // Resolves to main (index.js usually)
             'estree-util-is-identifier-name',
             'mdast-util-gfm-autolink-literal',
-            'mdast-util-gfm-autolink-literal/lib/index.js',
             'zod'
         ];
 
@@ -53,6 +52,30 @@ try {
                 const resolved = require.resolve(pkg);
                 console.log(`[Dynamic] Resolved ${pkg} -> ${resolved}`);
                 pathsToPatch.add(resolved);
+
+                // Heuristic: Search for package.json to find package root
+                let currentDir = path.dirname(resolved);
+                // Go up max 3 levels looking for package.json
+                for(let i=0; i<3; i++) {
+                    if (fs.existsSync(path.join(currentDir, 'package.json'))) {
+                        // Found root, check for subfiles
+                        const heuristicFiles = [
+                            'lib/index.js',
+                            'index.js',
+                            'dev/index.js',
+                            'dist/index.js'
+                        ];
+                        heuristicFiles.forEach(f => {
+                            const full = path.join(currentDir, f);
+                            if (fs.existsSync(full)) {
+                                pathsToPatch.add(full);
+                            }
+                        });
+                        break;
+                    }
+                    currentDir = path.dirname(currentDir);
+                }
+
             } catch (e) {
                 // Ignore resolution failures
                 console.log(`[Dynamic] Could not resolve ${pkg}: ${e.message}`);
