@@ -209,7 +209,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         rehypePlugins={[rehypeKatex]}
                         components={markdownComponents}
                     >
-                        {sanitizeMath(currentQ.content, { stripSingleNewlines: true })
+                        {sanitizeMath(currentQ.content)
                             .replace(/\\n/g, '\n')
                             .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ') 
                         }
@@ -284,7 +284,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                             rehypePlugins={[rehypeKatex]}
                                             components={markdownComponents}
                                         >
-                                            {sanitizeMath(opt.text, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                            {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -316,7 +316,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                             rehypePlugins={[rehypeKatex]}
                                             components={markdownComponents}
                                         >
-                                            {sanitizeMath(String(currentQ.answer), { stripSingleNewlines: true })}
+                                            {sanitizeMath(String(currentQ.answer))}
                                         </ReactMarkdown>
                                     </div>
                                 </div>
@@ -338,7 +338,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 rehypePlugins={[rehypeKatex]}
                                 components={markdownComponents}
                             >
-                                {sanitizeMath(currentQ.explanation, { stripSingleNewlines: true }).replace(/\\n/g, '\n')}
+                                {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                         </div>
                     </div>

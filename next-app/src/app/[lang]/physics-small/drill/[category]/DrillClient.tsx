@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-react';
@@ -179,26 +180,32 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     )}
                 </div>
 
-                <div className="prose prose-slate dark:prose-invert prose-lg max-w-none mb-8">
-                    <ReactMarkdown 
-                        remarkPlugins={[remarkMath]} 
-                        rehypePlugins={[rehypeKatex]} 
-                        components={markdownComponents}
-                    >
-                        {sanitizeMath(currentQ.content, { stripSingleNewlines: true }).replace(/\\n/g, '\n').replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')}
-                    </ReactMarkdown>
-                </div>
-
-                {/* Question Image Area */}
-                {currentQ.has_figure && (
-                    <div className="my-6 flex flex-col items-center justify-center p-4">
-                        <img 
-                            src={`/physics-images/${encodeURIComponent(`${currentQ.source}-${currentQ.question_number}.png`)}`} 
-                            alt="题目插图" 
-                            className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
-                        />
+                <div className="flex flex-col md:flex-row items-start gap-8">
+                    <div className="prose prose-slate dark:prose-invert prose-lg max-w-none flex-grow">
+                        <ReactMarkdown 
+                            remarkPlugins={[remarkMath, remarkGfm]} 
+                            rehypePlugins={[rehypeKatex]}
+                            components={markdownComponents}
+                        >
+                            {sanitizeMath(currentQ.content)
+                                .replace(/^\s*\d+[\.．、\s]*/, '') // 移除开头的题号
+                                .replace(/\\n/g, '\n')
+                                .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')
+                                .trim()}
+                        </ReactMarkdown>
                     </div>
-                )}
+
+                    {/* Question Image Area */}
+                    {currentQ.has_figure && (
+                        <div className="flex-shrink-0 flex flex-col items-center justify-center p-4 bg-white rounded-xl md:max-w-[300px]">
+                            <img 
+                                src={`/physics-images/${encodeURIComponent(`${currentQ.source}-${currentQ.question_number}.png`)}`} 
+                                alt="题目插图" 
+                                className="max-h-64 h-auto w-auto object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
+                            />
+                        </div>
+                    )}
+                </div>
 
                 {currentQ.type !== 'fill_in' && currentQ.options && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -236,7 +243,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                             rehypePlugins={[rehypeKatex]}
                                             components={markdownComponents}
                                         >
-                                            {sanitizeMath(opt.text, { stripSingleNewlines: true }).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
+                                            {sanitizeMath(opt.text).replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' ____ ')}
                                         </ReactMarkdown>
                                     </div>
                                 </button>
@@ -262,7 +269,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                             rehypePlugins={[rehypeKatex]}
                                             components={markdownComponents}
                                         >
-                                            {sanitizeMath(String(currentQ.answer), { stripSingleNewlines: true })}
+                                            {sanitizeMath(String(currentQ.answer))}
                                         </ReactMarkdown>
                                     </div>
                                 </div>
@@ -280,7 +287,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 rehypePlugins={[rehypeKatex]}
                                 components={markdownComponents}
                             >
-                                {sanitizeMath(currentQ.explanation, { stripSingleNewlines: true }).replace(/\\n/g, '\n')}
+                                {sanitizeMath(currentQ.explanation).replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                         </div>
                     </div>
