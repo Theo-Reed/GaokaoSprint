@@ -54,7 +54,7 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
   // 6. Heuristic: wrapping likely math expressions in $...$ if they are not already
   if (clean.includes('\\') && !clean.includes('$')) {
       // If text looks like a formula (contains backslash, ops, etc) and is short
-      if (/^[0-9a-z\s+\-*/=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
+      if (/^[0-9a-z\s+\-*\/\=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
            clean = `$${clean}$`;
       }
   }
