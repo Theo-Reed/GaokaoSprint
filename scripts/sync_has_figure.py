@@ -32,41 +32,53 @@ def sync_data(json_path, image_dir):
     originally_missing = []
 
     for q in questions:
+        q_id = q.get('id', '')
         source = q.get('source', '')
         q_num = q.get('question_number', '')
         was_true = q.get('has_figure', False)
         
-        # Determine strict expected filename
-        expected_filename = f"{source}-{q_num}.png"
-        expected_norm = normalize_brackets(expected_filename)
+        # Try different possible filenames based on how different subjects name their images
+        candidates = []
+        if q_id: candidates.append(f"{q_id}.png")
+        if source and q_num: candidates.append(f"{source}-{q_num}.png")
+        
+        # Unique candidates preserving order
+        unique_candidates = []
+        for c in candidates:
+            if c not in unique_candidates:
+                unique_candidates.append(c)
 
         found = False
+        target_filename = unique_candidates[0] if unique_candidates else None
 
-        # 1. Exact match check
-        if expected_filename in files_in_dir:
-            found = True
-        
-        # 2. Bracket mismatch check (only if exact match failed)
-        elif expected_norm in files_norm_map:
-            # We found a file that matches if we normalize brackets
-            actual_filename = files_norm_map[expected_norm]
-            print(f"  [Fix] Renaming '{actual_filename}' -> '{expected_filename}'")
-            
-            old_path = os.path.join(image_dir, actual_filename)
-            new_path = os.path.join(image_dir, expected_filename)
-            
-            try:
-                os.rename(old_path, new_path)
-                # update local cache
-                files_in_dir.remove(actual_filename)
-                files_in_dir.add(expected_filename)
-                # Update norm map is strictly not needed for this pass but good for consistency
-                files_norm_map[expected_norm] = expected_filename
-                
+        for expected_filename in unique_candidates:
+            expected_norm = normalize_brackets(expected_filename)
+
+            # 1. Exact match check
+            if expected_filename in files_in_dir:
                 found = True
-                fixed_bracket_count += 1
-            except OSError as e:
-                print(f"  [Error] Failed to rename file: {e}")
+                target_filename = expected_filename
+                break
+            
+            # 2. Bracket mismatch check
+            elif expected_norm in files_norm_map:
+                actual_filename = files_norm_map[expected_norm]
+                print(f"  [Fix] Renaming '{actual_filename}' -> '{expected_filename}'")
+                
+                old_path = os.path.join(image_dir, actual_filename)
+                new_path = os.path.join(image_dir, expected_filename)
+                
+                try:
+                    os.rename(old_path, new_path)
+                    files_in_dir.remove(actual_filename)
+                    files_in_dir.add(expected_filename)
+                    files_norm_map[expected_norm] = expected_filename
+                    found = True
+                    target_filename = expected_filename
+                    fixed_bracket_count += 1
+                except OSError as e:
+                    print(f"  [Error] Failed to rename file: {e}")
+                break
 
         # 3. Update JSON state
         if found:

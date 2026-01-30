@@ -442,7 +442,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "利用植物组织培养技术获得红豆杉试管苗，有助于解决紫杉醇药源短缺问题。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -680,7 +680,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "科研人员通过对绵羊受精卵进行基因编辑和胚胎移植等操作，获得了羊毛长度显著长于对照组的优良品系。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -698,7 +698,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "研究显示，约 70%的小鼠体细胞核移植胚胎未能成功发育至囊胚期，且仅有约 2%的胚胎移植到代孕母鼠后可正常发育。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -1004,7 +1004,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "外科医生给足外伤患者缝合伤口时，先在伤口附近注射局部麻醉药，以减轻患者疼痛。局部麻醉药的作用原理是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -1548,7 +1548,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "高温胁迫导致植物细胞中错误折叠或未折叠蛋白质在内质网中异常积累，使细胞合成更多的参与蛋白质折叠的分子伴侣蛋白，以恢复内质网中正常的蛋白质合成与加工，此过程称为“未折叠蛋白质应答反应（UPR）”。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -1886,7 +1886,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "群落演替指一个群落替代另一个群落的过程，包括初生演替和次生演替。下列实例属于初生演替的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -2124,7 +2124,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "关于细胞以葡萄糖为原料进行有氧呼吸和无氧呼吸的过程，下列说法正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -2396,7 +2396,7 @@
     "type": "single_choice",
     "category": "molecular_genetics",
     "content": "多种多样的生物通过遗传信息控制性状，并通过繁殖将遗传物质传递给子代。下列关于遗传物质的叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -2566,7 +2566,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "关于“研究土壤中动物类群丰富度”实验，下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -2770,7 +2770,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "蛋白的表达，破坏癌细胞的连接，从而促进癌细胞转移。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -3246,7 +3246,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "从种植草莓的土壤中分离致病菌，简易流程如下：制备土壤悬液、分离、纯化、鉴定。下列相关叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -3858,7 +3858,7 @@
     "type": "single_choice",
     "category": "molecular_genetics",
     "content": "云南省是著名的鲜花产地，所产鲜花花色鲜艳与其独特的自然环境息息相关。花青素苷是决定被子植物色彩呈现的主要色素物质，花冠中糖类或被紫外光激活的紫外光受体均可促进相关基因表达，从而增加花青素苷的合成。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4198,7 +4198,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "食醋和黄酒是我国传统的日常调味品，均通过发酵技术生产。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4300,7 +4300,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "$CO_2$ 是人体调节呼吸运动的重要体液因子。血液流经肌肉组织时，细胞产生的 $CO_2$ 进入红细胞，在酶的催化下迅速与水反应生成 $H_2CO_3$，进一步解离为 $H^+$ 和 $HCO_3^-$。$H^+$ 与血红蛋白结合促进 $O_2$ 释放，$HCO_3^-$ 顺浓度梯度进入血浆。下列推断错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4462,7 +4462,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "某科创小组将叶绿素合成相关基因转入小麦愈伤组织，获得再生植株，并进行相关检测。下列实验操作错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4564,7 +4564,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "轮状病毒引起的小儿腹泻是主要经消化道感染的常见传染病，多表现出高热和腹泻等症状。病毒繁殖后，经消化道排出体外。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4666,7 +4666,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "样方法是种群密度调查的常用方法，下列类群中最适用该方法调查种群密度的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -4938,7 +4938,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "黄酒是我国古老的发酵酒之一，传统酿制中，先用蒸煮过的小麦或麸皮为原料，对之前发酵留存的少量酒曲（曲种）进行扩大制曲；再将酒曲和蒸煮后的糯米、大米混合处理一段时间后，添加足量酒母（含酵母菌）完成发酵，压榨成品。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -5368,7 +5368,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "临床上常采用体表电刺激诱发神经兴奋并检测相关指标，以用于神经病变的早期诊断和疗效评价，下列分析正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -5637,7 +5637,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "实验中，丙组的处理为“断食+切除肾上腺”，其结果显示相关指标为“无”和“正常”。根据实验处理及结果，下列相关叙述正确的是：",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -5938,7 +5938,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "单一使用干扰素-γ 治疗肿瘤效果有限。降低线粒体蛋白 V 合成，不影响癌细胞凋亡，但同时加入干扰素-γ 能破坏线粒体膜结构，促进癌细胞凋亡。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -6541,7 +6541,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "下列关于真核细胞内细胞器中的酶和化学反应的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -6711,7 +6711,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "过渡带是两个或多个群落之间过渡区域。大兴安岭森林与呼伦贝尔草原的过渡带中，森林和草原镶嵌分布，该区域环境较两个群落的内部核心区域更为异质多样。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -7244,7 +7244,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "细胞工程技术已在生物制药和物种繁育等领域得到了广泛应用。下列关于动物细胞工程的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -7414,7 +7414,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "研究表明，人体肠道中某些微生物合成、分泌植物激素生长素，能增强癌症患者对化疗药物的响应，改善胰腺癌、结直肠癌和肺癌等的治疗效果。进一步研究发现，色氨酸可提高血清中生长素的水平；生长素通过抑制 E 酶（自由基清除酶）的活性，增强化疗药物对癌细胞的杀伤作用。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -7548,7 +7548,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "CD4 是辅助性 T 细胞（$CD4^+$）上的一种膜蛋白，CD8 是细胞毒性 T 细胞（$CD8^+$）上的一种膜蛋白，下列过程不能发生的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -7650,7 +7650,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "下列生物实验探究中运用的原理，前后不一致的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -8145,7 +8145,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "某团队用果蝇研究了高蛋白饮食促进深度睡眠的机制，发现肠道中的蛋白质促进肠道上皮细胞分泌神经肽 Y，最终 Y 作用于大脑相关神经元，利于果蝇保持睡眠状态。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -8553,7 +8553,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "自从践行生态文明建设以来，“酸雨”在我国发生的频率及强度都有明显下降。下列措施中，对减少“酸雨”发生效果最明显的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -8987,7 +8987,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "为筛选观察有丝分裂的合适材料，某研究小组选用不同植物的根尖，制作并观察根尖细胞的临时装片。下列关于选材依据的叙述，不合理的是（  ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -9123,7 +9123,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "肿瘤细胞在体内生长、转移及复发的过程中，必须不断逃避机体免疫系统的攻击，这就是所谓的“免疫逃逸”。关于“免疫逃逸”，下列叙述错误的是（  ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -9357,7 +9357,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "某昆虫的性别决定方式为 XY 型，其翅形长翅和残翅、眼色红眼和紫眼为两对相对性状，各由一对等位基因控制，且基因不位于 Y 染色体。现用长翅紫眼和残翅红眼昆虫各 1 只杂交获得 $F_1$，$F_1$ 有长翅红眼、长翅紫眼、残翅红眼、残翅紫眼 4 种表型，且比例相等。不考虑突变、交叉互换和致死。下列关于该杂交实验的叙述，错误的是（    ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -10123,7 +10123,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "干细胞治疗骨缺损的临床治疗提供了新思路。为探究不同细胞共培养对脂肪干细胞分化为成骨细胞的影响, 科研人员利用图 1 装置对细胞进行培养, 装置的上下层通过小孔连通, 一段时间后检测脂肪干细胞成骨分化水平, 结果如图 2 所示。下列相关叙述错误的是 ( )",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -10157,7 +10157,7 @@
     "type": "single_choice",
     "category": "enzymes_atp",
     "content": "中国制茶工艺源远流长。红茶制作包括萎凋、揉捻、发酵、高温干燥等工序，其间多酚氧化酶催化茶多酚生成适量茶黄素是红茶风味形成的关键。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -10327,7 +10327,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "某地区蝗虫在秋季产卵后死亡，以卵越冬。某年秋季降温提前，大量蝗虫在产卵前死亡，次年该地区蝗虫的种群密度明显下降。对蝗虫种群密度下降的合理解释是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -10395,7 +10395,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "空腹血糖是糖尿病筛查常用检测指标之一，但易受运动和心理状态等因素干扰，影响筛查结果。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -10735,7 +10735,7 @@
     "type": "single_choice",
     "category": "enzymes_atp",
     "content": "某同学研究某因素对酶活性的影响，实验处理及结果如下：己糖激酶溶液置于 $45^\\circ C$ 水浴 12min，酶活性丧失 50%；己糖激酶溶液中加入过量底物后置于 $45^\\circ C$ 水浴 12min，酶活性仅丧失 3%。该同学研究的因素是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -10973,7 +10973,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "种植和欣赏水仙是广东的春节习俗。当室外栽培的水仙被移入室内后，其体内会发生一系列变化，导致徒长甚至倒伏。下列分析正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11309,7 +11309,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "(多选) 科研人员研究了秸秆还田与氮肥施用模式对玉米光合作用的影响 (注：SR 表示秸秆还田，NSR 表示秸秆不还田)。根据图中实验结果，下列关于玉米光合作用的叙述正确的是：",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -11515,7 +11515,7 @@
     "type": "single_choice",
     "category": "meiosis",
     "content": "武昌鱼（$2n=48$）与长江白鱼（$2n=48$）经人工杂交可得到具有生殖能力的子代。显微观察子代精巢中的细胞，一般不能观察到的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11549,7 +11549,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "抗虫作物对害虫的生存产生压力，会使害虫种群抗性基因频率迅速提高，导致作物的抗虫效果逐渐减弱。为使转基因抗虫棉保持抗虫效果，农业生产上会采取一系列措施。以下措施不能实现上述目标（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11617,7 +11617,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "南极雌帝企鹅产蛋后，由雄帝企鹅负责孵蛋，孵蛋期间不进食。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11753,7 +11753,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "食品保存有干制、腌制、低温保存和高温处理等多种方法。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11889,7 +11889,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "我国劳动人民在漫长的历史进程中，积累了丰富的生产、生活经验，并在实践中应用。生产和生活中常采取的一些措施如下。\n①低温储存，即果实、蔬菜等收获后在低温条件下存放\n②春化处理，即对某些作物萌发的种子或幼苗进行适度低温处理\n③风干储藏，即小麦、玉米等种子收获后经适当风干处理后储藏\n④光周期处理，即在作物生长某一时期控制每天光照和黑暗的相对时长\n⑤合理密植，即栽种作物时做到密度适当，行距、株距合理\n⑥间作种植，即同一生长期内，在同一块土地上隔行种植两种高矮不同的作物\n关于这些措施，下列说法合理的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -11923,7 +11923,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "人体内的免疫细胞是体液免疫和细胞免疫过程的重要参与者。下列叙述正确的是（ ）\n①免疫细胞表面的受体可识别细菌、病毒等入侵机体的病原体\n②树突状细胞能够处理和呈递抗原，淋巴细胞不能呈递抗原\n③辅助性 $T$ 细胞参与体液免疫过程而不参与细胞免疫过程\n④体液免疫可产生记忆 $B$ 细胞，细胞免疫可产生记忆 $T$ 细胞\n⑤某些致病细菌感染人体既可引发体液免疫又可引发细胞免疫",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -13033,7 +13033,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "细胞中的核糖体由大、小 2 个亚基组成。在真核细胞的核仁中，由核 $rDNA$ 转录形成的 $rRNA$ 与相关蛋白组装成核糖体亚基。下列说法正确的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -13271,7 +13271,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "植物叶片中的色素对植物的生长发育有重要作用。下列有关叶绿体中色素的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -13339,7 +13339,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "激素调节是哺乳动物维持正常生命活动的重要调节方式。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -13509,7 +13509,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "脊髓、脑干和大脑皮层中都有调节呼吸运动的神经中枢，其中只有脊髓呼吸中枢直接支配呼吸运动的呼吸肌，且只有脑干呼吸中枢具有自主节律性。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14155,7 +14155,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "某些微生物与昆虫构建了互利共生的关系，共生微生物参与昆虫的生命活动并促进其生态功能的发挥。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14189,7 +14189,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "大量悬浮培养产流感病毒的单克隆细胞，可用于流感疫苗的生产。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14359,7 +14359,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "2023 年 4 月，武汉马拉松比赛吸引了全球约 26000 名运动员参赛。赛程中运动员出现不同程度的出汗、脱水和呼吸加深、加快。下列关于比赛中运动员生理状况的叙述，正确的是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14453,7 +14453,7 @@
     "type": "single_choice",
     "category": "transport",
     "content": "物质输入和输出细胞都需要经过细胞膜。下列有关人体内物质跨膜运输的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14623,7 +14623,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "水稻的某病害是由某种真菌（有多个不同菌株）感染引起的。水稻中与该病害抗性有关的基因有 3 个（$A_1$、$A_2$、a）；基因 $A_1$ 控制全抗性状（抗所有菌株），基因 $A_2$ 控制抗性性状（抗部分菌株），基因 a 控制易感性状（不抗任何菌株），且 $A_1$ 对 $A_2$ 为显性，$A_1$ 对 a 为显性、$A_2$ 对 a 为显性。现将不同表现型的水稻植株进行杂交，子代可能会出现不同的表现型及其分离比。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14691,7 +14691,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "在布氏田鼠种群数量爆发年份，种内竞争加剧，导致出生率下降、个体免疫力减弱，翌年种群数量大幅度减少；在种群数量低的年份，情况完全相反。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -14827,7 +14827,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "大量证据表明，地球上所有细胞生命具有共同祖先。下列可推断出此观点的证据是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -17323,7 +17323,7 @@
     "type": "single_choice",
     "category": "transport",
     "content": "植物细胞中水和矿质元素离子会表现出某些特点。下列叙述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -17859,7 +17859,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "胰岛素与细胞膜上相应受体结合后可以促进细胞对葡萄糖的吸收。下列情况可以导致血糖浓度降低的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -18458,7 +18458,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "假设在某岛屿上多年来总是存在一个约由 $m$ 只狼组成的狼群、一个约由 $n$ 只狼组成的狼群和若干只单独生活的狼。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -19099,7 +19099,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "为减少某自然水体中 $N$、$P$ 含量过高给水生生态系统带来的不良影响，环保工作者拟利用当地原有水生植物净化水体。选择其中3种植物分别置于试验池中，90天后测定它们吸收 $N$、$P$ 的量，结果见下表。\n\n| 植物种类 | 单位水体面积 $N$ 吸收量 ($g/m^2$) | 单位水体面积 $P$ 吸收量 ($g/m^2$) |\n| :--- | :--- | :--- |\n| 浮水植物 a | 22.30 | 1.70 |\n| 浮水植物 b | 8.51 | 0.72 |\n| 沉水植物 c | 14.61 | 2.22 |\n\n结合表中数据，为达到降低该自然水体中 $N$、$P$ 的最佳效果，推断应投放的两种植物及对该水体的生态影响是（  ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -20149,7 +20149,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "家蚕性别决定方式为 ZW 型。Z 染色体上的等位基因 D、d 分别控制正常蚕、油蚕性状，常染色体上的等位基因 E、e 分别控制黄茧、白茧性状。现有 $EeZ^DW \\times EeZ^dZ^d$ 的杂交组合，其 $F_1$ 中白茧、油茧雌性个体所占比例为（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -21168,7 +21168,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "白菜型油菜（$2n=20$）的种子可以榨取食用油（菜籽油）。为了培育高产新品种，科学家诱导该油菜未受精的卵细胞发育形成完整植株 $Bc$。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -21563,7 +21563,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "下列操作能达到灭菌目的的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -21631,7 +21631,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "动物正常组织干细胞突变获得异常增殖能力，并与外界因素相互作用，可恶变为癌细胞。干细胞转变为癌细胞后，下列说法正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -21665,7 +21665,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "富营养化水体中，藻类是吸收磷元素的主要生物，下列说法正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -21699,7 +21699,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "铅可导致神经元线粒体空泡化、内质网结构改变、高尔基体扩张，影响这些细胞器的正常功能。这些改变不会直接影响下列哪种生理过程（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22341,7 +22341,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "以下生物学实验的部分操作过程，正确的是（ ）\n\n| 选项 | 实验名称 | 实验操作 |\n| :--- | :--- | :--- |\n| A | 检测生物组织中的还原糖 | 在待测液中先加 $NaOH$ 溶液，再加 $CuSO_4$ 溶液 |\n| B | 观察细胞中 $DNA$ 和 $RNA$ 的分布 | 先加甲基绿染色，再加吡罗红染色 |\n| C | 观察细胞中的线粒体 | 先用盐酸水解，再用健那绿染色 |\n| D | 探究酵母菌种群数量变化 | 先将盖玻片放在计数室上，再在盖玻片边缘滴加培养液 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -22541,7 +22541,7 @@
     "type": "multi_choice",
     "category": "fermentation",
     "content": "为提高一株石油降解菌的净化能力，将菌涂布于石油为唯一碳源的固体培养基上，以致死率为 90% 的辐照剂量诱变处理，下列叙述不合理的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22643,7 +22643,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "金鱼系野生鲫鱼经长期人工选育而成，是中国古代劳动人民智慧结晶。现有形态多样、品种繁多的金鱼品系。自然状态下，金鱼能与野生鲫鱼杂交产生可育后代。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22779,7 +22779,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "阅读下列材料，完成下面小题。\n$S$ 蛋白是新冠病毒识别并感染靶细胞的重要蛋白，作为抗原被宿主免疫系统识别并应答，因此 $S$ 蛋白是新冠疫苗研发的重要靶点。下表是不同类型新冠疫苗研发策略比较。\n\n| 类型 | 研发策略 |\n| :--- | :--- |\n| 灭活疫苗 | 新冠病毒经培养、增殖，用理化方法灭活后制成疫苗。 |\n| 腺病毒载体疫苗 | 利用改造后无害的腺病毒作为载体，携带 $S$ 蛋白基因，制成疫苗。接种后，$S$ 蛋白基因启动表达。 |\n| 亚单位疫苗 | 通过基因工程方法，在体外合成 $S$ 蛋白，制成疫苗。 |\n| 核酸疫苗 | 将编码 $S$ 蛋白的核酸包裹在纳米颗粒中，制成疫苗。接种后，在人体内产生 $S$ 蛋白。 |\n| 减毒流感病毒载体疫苗 | 利用减毒流感病毒作为载体，带 $S$ 蛋白基因，并在载体病毒表面表达 $S$ 蛋白，制成疫苗。 |\n\n9. 自身不含 $S$ 蛋白抗原的疫苗是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22813,7 +22813,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "10. 通常不引发细胞免疫的疫苗是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22847,7 +22847,7 @@
     "type": "single_choice",
     "category": "enzymes_atp",
     "content": "ATP 是细胞的能量“通货”，关于 ATP 的叙述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -22949,7 +22949,7 @@
     "type": "single_choice",
     "category": "molecular_genetics",
     "content": "酵母菌的 DNA 中碱基 A 约占 32%，关于酵母菌核酸的叙述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23051,7 +23051,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "研究者拟通过有性杂交的方法将簇毛麦（$2n=14$）的优良性状导入普通小麦（$2n=42$）中。用簇毛麦花粉给数以千计的小麦小花授粉，10 天后只发现两个杂种幼胚，将其离体培养，产生愈伤组织，进而获得含 28 条染色体的大量杂种植株。以下表述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23221,7 +23221,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "关于上述基因策略（涉及转入 $Bt$ 基因等），下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23255,7 +23255,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "关于上述田间策略（如种植非转基因棉花作为庇护所等），下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23390,7 +23390,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "植物顶芽产生生长素向下运输，使侧芽附近生长素浓度较高，抑制侧芽的生长，形成顶端优势。用细胞分裂素处理侧芽，侧芽生长形成侧枝。关于植物激素作用的叙述不正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23424,7 +23424,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "野生草本植物多具有根系发达、生长较快、抗逆性强的特点，除用于生态治理外，其中一些可替代木材栽培食用菌，收获后剩余的菌渣可作肥料或饲料。相关叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23458,7 +23458,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "人体皮肤表面存在着多种微生物，某同学拟从中分离出葡萄球菌。下述操作不正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23492,7 +23492,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "关于物质提取、分离或鉴定的高中生物学相关实验，叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23526,7 +23526,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "社会上流传着一些与生物有关的说法，有些有一定的科学依据，有些违反生物学原理。以下说法中有科学依据的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23560,7 +23560,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "随着改革实践不断推进，高质量发展已成为对我国所有地区、各个领域的长期要求，生态保护是其中的重要内容。以下所列不属于生态保护措施的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23594,7 +23594,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "乳酸菌是乳酸传统生产菌，但耐酸能力较差，影响产量。酿酒酵母耐酸能力较强，但不产生乳酸。研究者将乳酸菌的乳酸脱氢酶基因（$LDH$）导入酿酒酵母，获得能产生乳酸的工程菌株。以葡萄糖为碳源，利用该转基因酿酒酵母进行厌氧发酵，结果既产生乳酸，也产生乙醇。若想进一步提高其乳酸产量，下列措施中不合理的是",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -23627,7 +23627,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "果蝇体细胞含有 8 条染色体。下列关于果蝇体细胞有丝分裂的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23729,7 +23729,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "在神经调节过程中，兴奋会在神经纤维上传导和神经元之间传递。下列有关叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23797,7 +23797,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "某种二倍体植物的 $n$ 个不同性状由 $n$ 对独立遗传的基因控制（杂合子表现显性性状）。已知植株 A 的 $n$ 对基因均杂合。理论上，下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23898,7 +23898,7 @@
     "type": "single_choice",
     "category": "transport",
     "content": "液泡是植物细胞中储存 $Ca^{2+}$ 的主要细胞器，液泡膜上的 $H^+$ 焦磷酸酶可利用水解无机焦磷酸释放的能量跨膜运输 $H^+$，建立液泡膜两侧的 $H^+$ 浓度梯度。该浓度梯度驱动 $H^+$ 通过液泡膜上的载体蛋白 CAX 完成跨膜运输，从而使 $Ca^{2+}$ 以与 $H^+$ 相反的方向同时通过 CAX 进行进入液泡并储存。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -23966,7 +23966,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "我国考古学家利用现代人的 DNA 序列设计并合成了一种类似磁铁的“引子”，成功将极其微量的古人类 DNA 从提取自土壤沉积物中的多种生物的 DNA 中识别并分离出来，用于研究人类起源及进化。下列说法正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -24136,7 +24136,7 @@
     "type": "single_choice",
     "category": "transport",
     "content": "根据阅读材料及图 1、图 2，下列实验结果支持某种植物存在乙运输方式的有（多选）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -24271,7 +24271,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "葡萄酒的制作离不开酵母菌。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -24339,7 +24339,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "解脂菌能利用分泌的脂肪酶将脂肪分解成甘油和脂肪酸并吸收利用。脂肪酸会使醇溶青琼脂平板变为深蓝色。将不能直接吸收脂肪的甲，乙两种菌分别等量接种在醇溶青琼脂平板上培养。甲菌菌落周围呈现深蓝色，乙菌菌落周围不变色，下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -24747,7 +24747,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "用白萝卜制作泡菜的过程中，采用适当方法可缩短腌制时间。下列方法中错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -24951,7 +24951,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "植物工厂是通过光调控和通风控温等措施进行精细管理高效农业生产系统，常采用无土栽培技术。下列有关叙述错误的是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -25053,7 +25053,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "下列有关中学生物学实验中观察指标的描述，正确的是（　　）\n\n| 选项 | 实验名称 | 观察指标 |\n| :--- | :--- | :--- |\n| A | 探究植物细胞的吸水和失水 | 细胞壁的位置变化 |\n| B | 绿叶中色素的提取和分离 | 滤纸条上色素带的颜色、次序和宽窄 |\n| C | 探究酵母菌细胞呼吸的方式 | 酵母菌培养液的浑浊程度 |\n| D | 观察根尖分生组织细胞有丝分裂 | 纺锤丝牵引染色体的运动 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -25121,7 +25121,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "下表为几种常用的植物生长调节剂，下列有关其应用的叙述错误的是（　　）\n\n| 名称 | 属性 |\n| :--- | :--- |\n| 萘乙酸 | 生长素类 |\n| 6-BA | 细胞分裂素类 |\n| 乙烯利 | 乙烯类 |\n| PP333 | 赤霉素合成抑制剂 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -26141,7 +26141,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "小家鼠的某1个基因发生突变，正常尾变成弯曲尾。现有一系列杂交试验，结果如下表。第①组 $F_1$ 雄性个体与第③组亲本雌性个体随机交配获得 $F_2$。$F_2$ 雌性弯曲尾个体中杂合子所占比例为（ ）\n\n表：小家鼠杂交组合及结果\n① 弯曲尾(雌) × 正常尾(雄) -> $F_1$: 1/2弯曲尾(雌), 1/2正常尾(雌); 1/2弯曲尾(雄), 1/2正常尾(雄)\n② 弯曲尾(雌) × 弯曲尾(雄) -> $F_1$: 全部弯曲尾(雌); 1/2弯曲尾(雄), 1/2正常尾(雄)\n③ 弯曲尾(雌) × 正常尾(雄) -> $F_1$: 4/5弯曲尾(雌), 1/5正常尾(雌); 4/5弯曲尾(雄), 1/5正常尾(雄)\n注：$F_1$ 中雌雄个体数相同",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -26786,7 +26786,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "某同学将酵母菌接种在马铃薯培养液中进行实验，不可能得到的结果是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -26820,7 +26820,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "生长素具有促进植物生长等多种生理功能。下列与生长素有关的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -26854,7 +26854,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "人体下丘脑具有内分泌功能，也是一些调节中枢的所在部位。下列有关下丘脑的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -26956,7 +26956,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "在真核细胞中，由细胞膜、核膜以及各种细胞器膜等共同构成生物膜系统。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -27126,7 +27126,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "月季在我国享有“花中皇后”的美誉。为了立月季某新品种的快速繁殖体系，以芽体为外植体，在 MS 培养基中添加不同浓度的 6-BA 和 IBA 进行芽体增殖实验，芽分化率（%）结果如表。关于上述实验，下列叙述错误的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -27194,7 +27194,7 @@
     "type": "single_choice",
     "category": "cell_structure",
     "content": "下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -27466,7 +27466,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "关于植物激素的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -27500,7 +27500,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "短日照植物在日照时数小于一定值时才能开花。已知某短日照植物在光照 10 小时/天的条件下连续处理 6 天能开花（人工控光控温）。为了给某地（日照时数最长为 16 小时/天）引种该植物提供理论参考，探究诱导该植物在该地区开花的光照时数 $X$（小时/天）的最大值，设计了以下四组实验方案，最合理的是（ ）\n\n| 实验方案 | 对照组（光照时数：小时/天，6 天） | 实验组（光照时数：4 小时/天，6 天） |\n| :--- | :---: | :---: |\n| A | 10 | $4 \\le X < 10$ 设置梯度 |\n| B | 10 | $8 \\le X < 10, 10 < X \\le 16$ 设置梯度 |\n| C | 10 | $10 < X \\le 16$ 设置梯度 |\n| D | 10 | $10 < X \\le 24$ 设置梯度 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -27670,7 +27670,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "20 世纪末，野生熊猫分布在秦岭、岷山和小相岭等 6 大山系。全国已建立熊猫自然保护区 40 余个，野生熊猫栖息地面积大幅增长。在秦岭，栖息地已被分割成 5 个主要活动区域；在岷山，熊猫被分割成 10 多个小种群；小相岭山系熊猫栖息地最为破碎，各隔离种群熊猫数量极少。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -27874,7 +27874,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "孟德尔的豌豆杂交实验和摩尔根的果蝇杂交实验是遗传学的两个经典实验。下列有关这两个实验的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -28078,7 +28078,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "人在幼年时期若生长激素（GH）分泌不足，会导致生长停滞，发生侏儒症，可通过及时补充 GH 进行治疗，使患者恢复生长。下列有关叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -28180,7 +28180,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "湿地生态系统生物多样性丰富，鸟类是其重要组成部分。研究者对某湿地生态系统不同退化阶段的生物多样性进行了调查，结果见下表。下列叙述正确的是（ ）\n\n| 湿地特征 | 典型湿地 | 季节性湿地 | 中度退化湿地 | 严重退化湿地 |\n| :--- | :--- | :--- | :--- | :--- |\n| 湿地特征 | 常年积水 | 季节性积水 | 无积水 | 完全干涸，鼠害严重 |\n| 生物多样性指数 | 2.7 | 2.4 | 2.1 | 1.5 |\n| 鸟类丰富度 | 25 | 17 | 12 | 9 |\n注：生物多样性指数反映生物多样性水平",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -28316,7 +28316,7 @@
     "type": "multi_choice",
     "category": "molecular_genetics",
     "content": "许多抗肿瘤药物通过干扰 DNA 合成及功能抑制肿瘤细胞增殖。下表为三种抗肿瘤药物的主要作用机理。下列叙述正确的是（ ）\n\n| 药物名称 | 作用机理 |\n| :--- | :--- |\n| 羟基脲 | 阻止脱氧核糖核苷酸的合成 |\n| 放线菌素 D | 抑制 DNA 的模板功能 |\n| 阿糖胞苷 | 抑制 DNA 聚合酶活性 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -28588,7 +28588,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "一些人中暑后会出现体温升高、大量出汗、头疼等症状。下列有关叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -28690,7 +28690,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "甲、乙、丙分别代表三个不同的纯合白色籽粒玉米品种，甲分别与乙、丙杂交产生 $F_1$，$F_1$ 自交产生 $F_2$，结果如表。\n\n组别 | 杂交组合 | $F_1$ | $F_2$\n---|---|---|---\n1 | 甲 × 乙 | 红色籽粒 | 901 红色籽粒，699 白色籽粒\n2 | 甲 × 丙 | 红色籽粒 | 630 红色籽粒，490 白色籽粒\n\n根据结果，下列叙述错误的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -28928,7 +28928,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "果蝇翅型、体色和眼色性状各由 1 对独立遗传的等位基因控制，其中弯翅、黄体和紫眼均为隐性性状，控制灰体、黄体性状的基因位于 X 染色体上。某小组以纯合体雌蝇和常染色体基因纯合的雄蝇为亲本杂交得 $F_1$，$F_1$ 相互交配得 $F_2$。在翅型、体色和眼色性状中，$F_2$ 的性状分离比不符合 $9:3:3:1$ 的亲本组合是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -29098,7 +29098,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "干旱缺水条件下，植物可通过减小气孔开度减少水分散失。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -29600,7 +29600,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "手术切除大鼠部分肝脏后，残留肝细胞可重新进入细胞周期进行增殖；肝脏中的卵圆细胞发生分化也可形成新的肝细胞，使肝脏恢复到原来体积。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -29634,7 +29634,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "下列关于森林群落演替的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -29668,7 +29668,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "关于人类活动对生态环境的影响，下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -29702,7 +29702,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "弗兰克氏菌能够与沙棘等非豆科木本植物形成根瘤，进行高效的共生固氮，促进植物根系生长，增强其对旱、寒等逆境的适应性。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -30078,7 +30078,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "越野跑、马拉松等运动需要大量消耗糖、脂肪、水和无机盐等物质。运动员到达终点时，下列各种激素水平与正常的相比。正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -32010,7 +32010,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "模拟实验是根据相似性原理，用模型来替代研究对象的实验。比如“性状分离比的模拟实验”（实验一）中用小桶甲和乙分别代表植物的雌雄生殖器官，用不同颜色的彩球代表 $D$、$d$ 雌雄配子；“建立减数分裂中染色体变化的模型”模拟实验（实验二）中可用橡皮泥制作染色体模型，细绳代表纺锤丝；DNA 分子的重组模拟实验（实验三）中可利用剪刀、订书钉和写有 DNA 序列的纸条等模拟 DNA 分子重组的过程。下列实验中模拟正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -32044,7 +32044,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "不同品种烟草在受到烟草花叶病毒（TMV）侵染后症状不同。研究者发现品种甲受 TMV 侵染后表现为无症状（非敏感型），而品种乙则表现为感病（敏感型）。甲与乙杂交，$F_1$ 均为敏感型；$F_1$ 与甲回交所得的子代中，敏感型与非敏感型植株之比为 $3:1$。对决定该性状的 $N$ 基因测序发现，甲的 $N$ 基因相较于乙的缺失了 2 个碱基对。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -32519,7 +32519,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "如图 3 是人体内物质 X 和 Y 的代谢示意图，以下表述正确的是（）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -32621,7 +32621,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "小萌正在参加百米赛跑，下列状况中符合此时身体情况的是（）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -33233,7 +33233,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "向实验狗颈动脉内灌注高渗盐水后，会出现的现象是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -33743,7 +33743,7 @@
     "type": "single_choice",
     "category": "meiosis",
     "content": "图 5 表示人体精原细胞中第 6 号和第 9 号染色体形态，该精原细胞最终形成的正常精子中,可能出现的染色体形态是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -33845,7 +33845,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "图 6 示心脏（仅显示左心房和左心室）活动的某一阶段，下列描述错误的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -33879,7 +33879,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "如图 7 所示，M 点的作用是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -33913,7 +33913,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "小萌一口气喝下 $1000ml$ 水后，每分钟尿量变化如下图，则 $O \\rightarrow A$ 血浆渗透压变化为（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -33947,7 +33947,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "调查某岛上昆虫的翅形如图 9，据图判断（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -33981,7 +33981,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "科学家将小鼠的体细胞转入一种基因使之诱变为 $ips$ 细胞，该类型细胞能发生如图 10 所示变化，则 $ips$ 细胞属于（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -34015,7 +34015,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "紫色长花粉（$RRLL$）与红色圆花粉（$rrll$）杂交，$F_1$ 全是紫色长花粉。$F_1$ 自交后代表现型紫长：紫圆：红长：红圆比例为 $4813:396:393:1377$，据此判断 $F_1$ 中两对基因的位置关系是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -34492,7 +34492,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "某生物基因型为 $A_1A_2$，$A_1$ 和 $A_2$ 的表达产物 $N_1$ 和 $N_2$ 可随机组合形成二聚体蛋白，即 $N_1N_1$、$N_1N_2$、$N_2N_2$ 三种蛋白。若该生物体内 $A_2$ 基因表达产物的数量是 $A_1$ 的 2 倍，则由 $A_1$ 和 $A_2$ 表达产物形成的二聚体蛋白中，$N_1N_1$ 型蛋白占的比例为（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -35168,7 +35168,7 @@
     "type": "multi_choice",
     "category": "molecular_basis",
     "content": "根据下表提供的生物学实验，下列实验操作或现象描述正确的是（ ）\n\n| 编号 | 实验名称 | 实验材料 | 实验操作或现象 |\n| :--- | :--- | :--- | :--- |\n| ① | 观察植物细胞的质壁分离 | 紫色洋葱外表皮、蔗糖溶液等 | 原生质层呈紫色，各组成部分结构清晰 |\n| ② | 检测生物组织中的脂肪 | 花生子叶、苏丹Ⅲ染液等 | 在高倍镜下可见细胞中被染成橘黄色的脂肪液滴 |\n| ③ | 观察细胞有丝分裂 | 洋葱根尖、龙胆紫溶液等 | 在高倍镜的同一个视野中，可见分裂前期、中期、后期、末期各时期细胞呈正方形，排列紧密 |\n| ④ | 探究培养液中酵母菌种群数量的动态变化 | 酵母菌、血细胞计数板等 | 在 $10 \\times$ 目镜、$40 \\times$ 物物镜下的一个视野中完成对整个计数室中酵母菌的计数 |",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -36612,7 +36612,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "下列是某同学分离高产脲酶菌的实验设计，不合理的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -37685,7 +37685,7 @@
     "type": "single_choice",
     "category": "transport",
     "content": "下列生理过程的完成不需要两者结合的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38195,7 +38195,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "种子质量是农业生产的前提和保障。生产实践中常用 TTC 法检测种子活力，TTC（无色）进入活细胞后可被 $[H]$ 还原成 TTF（红色）。大豆充分吸胀后，取种胚浸于 $0.5\\%$ TTC 溶液中，$30^{\\circ}C$ 保温一段时间后部分种胚出现红色。下列叙述正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38229,7 +38229,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "下列关于黑藻生命活动的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38331,7 +38331,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "新冠病毒通过 S 蛋白与细胞膜上 ACE2 蛋白结合后侵染人体细胞。病毒的 S 基因易发生突变，而 ORF1a/b 和 N 基因相对保守。奥密克戎变异株 S 基因多个位点发生突变，传染性增强，加强免疫接种可以降低重症发生率。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38433,7 +38433,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "日常生活中有许多说法，下列说法有科学依据的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38701,7 +38701,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "下列哪项药物或疗法在高血压病的治疗中是不合理的（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38768,7 +38768,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "青蒿素是治疗疟疾的主要药物。疟原虫在红细胞内生长发育过程中吞食分解血红蛋白，吸收利用氨基酸，血红蛋白分解的其他产物会激活青蒿素，激活的青蒿素能杀死疟原虫。研究表明，疟原虫 Kelch13 蛋白因基因突变而活性降低时，疟原虫吞食血红蛋白减少，生长变缓。同时血红蛋白的分解产物减少，青蒿素无法被充分激活，疟原虫对青蒿素产生耐药性。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -38970,7 +38970,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "分层现象是群落研究的重要内容。下列关于森林群落分层现象的叙述，正确的是（  ）\n① 森林群落的分层现象提高了生物对环境资源的利用能力\n② 森林植物从上到下可分为不同层次，最上层为灌木层\n③ 垂直方向上森林中植物分层现象与对光的利用有关\n④ 森林群落中动物分层现象与食物有关\n⑤ 森林群落中植物的分层现象是自然选择的结果\n⑥ 群落中植物垂直分层现象的形成是由动物种类决定的",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -39038,7 +39038,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "钙在骨骼生长和肌肉收缩等过程中发挥重要作用。晒太阳有助于青少年骨骼生长，预防老年人骨质疏松。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -39480,7 +39480,7 @@
     "type": "single_choice",
     "category": "variation_evolution",
     "content": "人与黑猩猩是从大约 700 万年前的共同祖先进化而来，两个物种成体的血红蛋白均由 $\\alpha$ 和 $\\beta$ 两种肽链组成，但 $\\alpha$ 链的相同位置上有一个氨基酸不同，据此不能得出（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -39788,7 +39788,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "“清明时节雨纷纷，路上行人欲断魂。借问酒家何处有，牧童遥指杏花村。”徜徉古诗意境，思考科学问题。下列观点错误的是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -39992,7 +39992,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "某患者，54 岁，因病切除右侧肾上腺。术后检查发现，患者血浆中肾上腺皮质激素水平仍处于正常范围。对于出现这种现象的原因，错误的解释是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -40834,7 +40834,7 @@
     "type": "multi_choice",
     "category": "internal_environment",
     "content": "（多选）人体通过多种调节机制保持体温的相对稳定。下列说法正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -40935,7 +40935,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "新采摘的柿子常常又硬又涩。若将柿子与成熟的苹果一起放入封闭的容器中，可使其快速变得软而甜。这主要是利用苹果产生的（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -41207,7 +41207,7 @@
     "type": "single_choice",
     "category": "enzymes_atp",
     "content": "下列关于研究淀粉酶的催化作用及特性实验的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -41921,7 +41921,7 @@
     "type": "single_choice",
     "category": "molecular_basis",
     "content": "种子萌发过程中，储藏的淀粉、蛋白质等物质在酶的催化下生成简单有机物，为新器官的生长和呼吸作用提供原料。下列有关叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -42461,7 +42461,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "亚麻籽可以榨油，茎秆可以生产纤维。在亚麻生长季节，北方比南方日照时间长，亚麻开花与昼夜长短有关，只有白天短于一定的时长才能开花。赤霉素可以促进植物伸长生长，但对亚麻成花没有影响。烯效唑可抑制植物体内赤霉素的合成。下列在黑龙江省栽培亚麻的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -42495,7 +42495,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "人工草坪物种比较单一，易受外界因素的影响而杂草化。双子叶植物欧亚蔊菜是常见的草坪杂草。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -42631,7 +42631,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "为避免航天器在执行载人航天任务时出现微生物污染风险，需要对航天器及洁净的组装车间进行环境微生物检测。下列叙述错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -42831,7 +42831,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "BMI1 基因具有维持红系祖细胞分化为成熟红细胞的能力。体外培养实验表明，随着红系祖细胞分化为成熟红细胞，BMI1 基因表达量迅速下降。在该基因过量表达的情况下，一段时间后成熟红细胞的数量是正常情况下的 $10^{12}$ 倍。根据以上研究结果，下列叙述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -42899,7 +42899,7 @@
     "type": "single_choice",
     "category": "hormonal_reg",
     "content": "奋战在抗击新冠疫情一线的医护人员是最美逆行者。因长时间穿防护服工作，他们汗流浃背，饮水受限，尿量减少。下列关于尿液生成及排放的调节，叙述正确的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -43001,7 +43001,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "关于白酒、啤酒和果酒的生产，下列叙述错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -43207,7 +43207,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "氨基酸在人体内分解代谢时，可以通过脱去羧基生成 $CO_2$ 和含有氨基的有机物（有机胺），有些有机胺能引起较强的生理效应。组氨酸脱去羧基后的产物组胺，可舒张血管；酪氨酸脱去羧基后的产物酪胺，可收缩血管；天冬氨酸脱去羧基后的产物 $\\beta$-丙氨酸是辅酶 A 的成分之一。下列叙述正确的是（　　）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -43377,7 +43377,7 @@
     "type": "single_choice",
     "category": "cell_lifecycle",
     "content": "在某些因素诱导下，人体造血干细胞能在体外培养成神经细胞和肝细胞。此过程主要涉及细胞的（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -43445,7 +43445,7 @@
     "type": "single_choice",
     "category": "enzymes_atp",
     "content": "下列关于腺苷三磷酸分子的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -45322,7 +45322,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "胎萌是指种子未脱离母体即发芽。下列关于种子胎萌和萌发的叙述，错误的是",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -45662,7 +45662,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "下列关于“探究培养液中酵母菌种群数量的动态变化”实验的叙述，错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -46746,7 +46746,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "阅读下列材料：甜瓣子是豆瓣酱的重要成分，风味受蚕豆蛋白分解产生的氨基酸影响，也受发酵过程中不同微生物的多种代谢产物影响。其生产工艺如下图所示。某研究团队对加盐水后的发酵阶段的传统工艺（盐度 $15\\%$，温度 $37$ $^\\circ C$，发酵 $30$ 天）进行了改良，改良后甜瓣子风味得以提升。新工艺参数如下表：前期（$0$~$12$天，盐度 $6\\%$，温度 $12$ $^\\circ C$）、中期（$12$~$16$天，盐度 $6\\%$，温度 $37$ $^\\circ C$）、后期（$16$~$30$天，盐度 $15\\%$，温度 $37$ $^\\circ C$）。下列关于本研究的实验方法与原理的描述，错误的是（ ）。",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -46780,7 +46780,7 @@
     "type": "single_choice",
     "category": "fermentation",
     "content": "（材料同第9题）下列对实验结果的分析，错误的是（ ）。",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -47290,7 +47290,7 @@
     "type": "multi_choice",
     "category": "molecular_basis",
     "content": "某同学用光学显微镜对4种实验材料进行观察并记录，下表实验现象合理的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -47323,7 +47323,7 @@
     "type": "single_choice",
     "category": "internal_environment",
     "content": "正常情况下，不会成为内环境成分的是________（多选）。",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -47458,7 +47458,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "为了对重金属污染的土壤进行生物修复，研究者将从杨树中克隆的重金属转运蛋白（$HMA3$）基因与外源高效启动子连接，导入杨树基因组中（如图）。为检测获得的转基因杨树苗中是否含有导入的$HMA3$基因，同时避免内源$HMA3$基因的干扰，在进行PCR扩增时，应选择的引物组合是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -47594,7 +47594,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "在人胰岛素A、B肽链编码序列间引入一段短肽编码序列，确保等比例表达A、B肽链。下列有关分析正确的是（多选）。",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -47728,7 +47728,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "黑藻是一种叶片薄且叶绿体较大的水生植物，分布广泛、易于取材，可用作生物学实验材料。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -47762,7 +47762,7 @@
     "type": "single_choice",
     "category": "molecular_genetics",
     "content": "人体内一些正常或异常细胞脱落破碎后，其 $DNA$ 会以游离的形式存在于血液中，称为 $cfDNA$；胚胎在发育过程中也会有细胞脱落破碎，其 $DNA$ 进入孕妇血液中，称为 $cffDNA$。近几年，结合 $DNA$ 测序技术，$cfDNA$ 和 $cffDNA$ 在临床上得到了广泛应用。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -48068,7 +48068,7 @@
     "type": "single_choice",
     "category": "immune_system",
     "content": "在上述研究的基础上，研究者利用 $f$ 的表面蛋白 $S$ 进一步展开实验，主要流程及结果见下图。① I~III 处理所需的实验材料应分别选用__________。（填选项前字母）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -48210,7 +48210,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "为加大对濒危物种绿孔雀的保护，我国建立了自然保护区，将割裂的栖息地连接起来，促进了绿孔雀种群数量的增加。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -48720,7 +48720,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "(多选) 用转基因方法在上述突变体$a$中过量表达$W$基因，获得材料甲。将材料甲、突变体$a$和野生型三组愈伤组织在高$CK$培养基中培养，三组愈伤组织分化生芽的比例如图2，由此能得出的结论包括：",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -48923,7 +48923,7 @@
     "type": "multi_choice",
     "category": "ecology_system",
     "content": "在互花米草入侵地栽种外来植物无瓣海桑，因无瓣海桑生长快，能迅速长成高大植株形成荫藏环境，使互花米草因缺乏光照而减少。与本地植物幼苗相比，无瓣海桑幼苗在荫蔽环境中成活率低，逐渐被本地植物替代，促进了本地植物群落的恢复。下列说法错误的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -49561,7 +49561,7 @@
     "type": "single_choice",
     "category": "ecology_system",
     "content": "在生态系统中，植物所固定的太阳能或所制造的有机物质称为初级生产量，其中一部分用于自身的呼吸消耗，余下部分称为净初级生产量。表为 4 个生态系统的研究实例。\n\n| 类别 | 玉米地 | 荒地 | 湖泊 I | 湖泊 II |\n| :--- | :--- | :--- | :--- | :--- |\n| 太阳能利用率（初级生产量/入射太阳能） | 1.6% | 1.2% | 0.4% | 0.1% |\n| 呼吸消耗率（呼吸消耗/初级生产量） | 23.4% | 15.1% | 22.3% | 21.0% |\n| 净初级生产效率（净初级生产量/初级生产量） | 76.6% | 84.9% | 77.7% | 79.0% |\n\n下列有关叙述错误的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -49969,7 +49969,7 @@
     "type": "multi_choice",
     "category": "nervous_system",
     "content": "若 TRPV4 的功能被抑制，所受到的影响与下列哪些情况类似（多选）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -50003,7 +50003,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "7：30-9：00，与全光照相比，遮光条件下叶绿体中发生的变化是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -50037,7 +50037,7 @@
     "type": "single_choice",
     "category": "photo_resp",
     "content": "根据表五，下列关于花瓣中还原性糖的说法正确的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -50241,7 +50241,7 @@
     "type": "single_choice",
     "category": "nervous_system",
     "content": "下列关于神经调节的叙述，正确的是（ ）",
-    "has_figure": false,
+    "has_figure": true,
     "options": [
       {
         "label": "A",
@@ -50275,7 +50275,7 @@
     "type": "single_choice",
     "category": "bio_engineering",
     "content": "将人细胞与小鼠细胞融合得到的人-鼠杂种细胞进行长期培养，杂种细胞随机丢失一部分人的染色体后，染色体数目会保持稳定。选取三种杂种细胞，对编码人的芳烃羟化酶（AHH）和磷酸甘油酸激酶（PGK）的基因进行染色体定位研究，结果如表（“+”表示有，“-”表示无）。\n| 杂种细胞 | 人的染色体 2号 | 人的染色体 11号 | 人的染色体 17号 | 人的染色体 X | AHH | PGK |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 甲 | - | + | - | + | - | + |\n| 乙 | + | + | - | - | + | - |\n| 丙 | - | + | + | + | - | + |\n下列有关叙述错误的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -50738,7 +50738,7 @@
     "type": "single_choice",
     "category": "plant_hormones",
     "content": "赤霉素（GA）和脱落酸（ABA）参与种子萌发的调控。某课题组首先证实，GA 处理大麦种子能引起 $\\alpha$-淀粉酶基因转录生成的 mRNA 量增加，他们又进一步用 GA、ABA 对大麦种子进行不同处理，检测处理后的大麦种子 $\\alpha$-淀粉酶合成量，结果如表（“+”表示有，“-”表示无，其中“+”的数量表示 $\\alpha$-淀粉酶合成量的多少）。\n\n| 分组处理 | 对照组 | 加 GA | 加 ABA | 加 GA 和 ABA |\n| :--- | :--- | :--- | :--- | :--- |\n| $\\alpha$-淀粉酶合成量 | ++ | +++ | - | + |\n\n下列有关叙述正确的是（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -51178,7 +51178,7 @@
     "type": "single_choice",
     "category": "genetics_laws",
     "content": "某植物的野生型（AABBcc）有成分R，通过诱变等技术获得3个无成分R的稳定遗传突变体（甲、乙和丙）。突变体之间相互杂交，$F_1$均无成分R。然后选其中一组杂交的$F_1$（AaBbCc）作为亲本，分别与3个突变体进行杂交，结果见下表：\n\n| 杂交编号 | 杂交组合 | 子代表现型（株数） |\n| :--- | :--- | :--- |\n| Ⅰ | $F_1$×甲 | 有（199），无（602） |\n| Ⅱ | $F_1$×乙 | 有（101），无（699） |\n| Ⅲ | $F_1$×丙 | 无（795） |\n\n注：“有”表示有成分R，“无”表示无成分R。用杂交Ⅰ子代中有成分R植株与杂交Ⅱ子代中有成分R植株杂交，理论上其后代中有成分R植株所占比例为（ ）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
