@@ -14,7 +14,11 @@ const nextConfig: NextConfig = {
     'katex', 
     'remark-gfm',
     'micromark-extension-math',
-    'micromark-extension-gfm'
+    'micromark-extension-gfm',
+    'mdast-util-gfm',
+    'mdast-util-gfm-autolink-literal',
+    'micromark-extension-gfm-autolink-literal',
+    'mdast-util-find-and-replace'
   ],
   turbopack: {
     root: path.resolve(__dirname, "../"),
