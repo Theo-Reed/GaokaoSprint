@@ -71,6 +71,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [timer, setTimer] = useState(0);
     const [isRunning, setIsRunning] = useState(true);
     const [showHint, setShowHint] = useState(false);
+    const [imageErrorCount, setImageErrorCount] = useState(0);
 
     useEffect(() => {
         const q = getRandomQuestion(category);
@@ -78,7 +79,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         setTimer(0);
         setIsRunning(true);
         setShowHint(false);
+        setImageErrorCount(0);
     }, [category]);
+
+    useEffect(() => {
+        setImageErrorCount(0);
+    }, [question]);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -107,6 +113,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     // Calculate source rank if available
     const sourceRank = question ? getQuestionRankInSource(question) : null;
 
+
+    // Determine layout mode based on category
+    // probability: vertical layout (image below text)
+    // solid_geometry and others: horizontal layout (image right of text) on large screens
+    const isVerticalLayout = category === 'probability';
 
     if (!question) {
         return (
@@ -161,54 +172,50 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </span>
                 </div>
 
-                <div className="prose prose-slate dark:prose-invert prose-lg max-w-none">
-                    <ReactMarkdown 
-                        remarkPlugins={[remarkMath, remarkGfm]} 
-                        rehypePlugins={[rehypeKatex]}
-                        components={markdownComponents}
-                    >
-                        {sanitizeMath(question.content)
-                            .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
-                            .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行，以便处理上下文
-                            .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割
-                            .map((part, index, array) => {
-                                // 如果是小问标记，检查其上下文
-                                if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
-                                    const prevPart = index > 0 ? array[index - 1] : "";
-                                    // 只有当编号位于开头，或者前面有空白字符（空格/换行）时，才触发换行
-                                    if (index === 0 || /\s$/.test(prevPart)) {
-                                        return `\n\n${part}`;
-                                    }
-                                    return part; // 否则保持原样（如在一句话中间的引用）
-                                }
-                                // Don't strip newlines
-                                return part.replace(/\r/g, '');
-                            })
-                            .join('')
-                            .trim()}
-                    </ReactMarkdown>
-                </div>
 
-                {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
-                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all empty:hidden">
-                    <img 
-                        src={`/math-images/${question.source}-${question.question_number}.png`} 
-                        alt="题目插图" 
-                        className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
-                        onLoad={(e) => {
-                            (e.target as HTMLImageElement).parentElement!.style.padding = '1rem';
-                        }}
-                        onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            const parent = target.parentElement;
-                            if (parent) {
-                                parent.style.margin = '0';
-                                parent.style.padding = '0';
-                                parent.style.height = '0';
-                            }
-                        }}
-                    />
+                <div className={`flex flex-col ${isVerticalLayout ? '' : 'md:flex-row items-start'} gap-8`}>
+                    <div className="prose prose-slate dark:prose-invert prose-lg max-w-none flex-grow">
+                        <ReactMarkdown 
+                            remarkPlugins={[remarkMath, remarkGfm]} 
+                            rehypePlugins={[rehypeKatex]}
+                            components={markdownComponents}
+                        >
+                            {sanitizeMath(question.content)
+                                .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
+                                .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行，以便处理上下文
+                                .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割
+                                .map((part, index, array) => {
+                                    // 如果是小问标记，检查其上下文
+                                    if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
+                                        const prevPart = index > 0 ? array[index - 1] : "";
+                                        // 只有当编号位于开头，或者前面有空白字符（空格/换行）时，才触发换行
+                                        if (index === 0 || /\s$/.test(prevPart)) {
+                                            return `\n\n${part}`;
+                                        }
+                                        return part; // 否则保持原样（如在一句话中间的引用）
+                                    }
+                                    // Don't strip newlines
+                                    return part.replace(/\r/g, '');
+                                })
+                                .join('')
+                                .trim()}
+                        </ReactMarkdown>
+                    </div>
+
+                    {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
+                    {imageErrorCount < 2 && (
+                        <div className={`flex-shrink-0 flex flex-col items-center justify-center transition-all ${isVerticalLayout ? 'w-full mt-6' : 'md:max-w-xs self-start mt-4 md:mt-0'}`}>
+                            <img 
+                                src={imageErrorCount === 0 
+                                    ? `/math-images/${encodeURIComponent(`${question.source}-${question.question_number}.png`)}`
+                                    : `/math-images/${question.source}-${question.question_number}.png`
+                                } 
+                                alt="题目插图" 
+                                className={`${isVerticalLayout ? 'h-48 w-auto max-w-full' : 'h-72 w-auto'} object-contain mix-blend-multiply dark:mix-blend-normal dark:invert`}
+                                onError={() => setImageErrorCount(prev => prev + 1)}
+                            />
+                        </div>
+                    )}
                 </div>
              </div>
 
