@@ -131,7 +131,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     return (
         <div className="max-w-4xl mx-auto px-2 py-4 md:p-10 min-h-screen flex flex-col">
              {/* Header */}
-             <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
+             <div className="flex justify-between items-center mb-6 md:mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                  <div>
                     <Link href={`/${lang}/math`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 -ml-1 mb-3 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -151,15 +151,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              </div>
 
              {/* Question Card */}
-             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-6 md:pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 {/* Source Badge */}
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                     {question.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
+                        <span className="inline-flex items-center px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-sm md:px-3 md:py-1 md:text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
                             {question.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
+                    <span className="inline-flex items-center px-4 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm md:px-3 md:py-1 md:text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                         {question.large_question_rank 
                             ? `第 ${question.question_number} 题 / 第 ${question.large_question_rank} 道大题`
                             : sourceRank
@@ -236,7 +236,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     <div className="flex gap-4 w-full md:w-auto">
                          <button 
                             onClick={() => setShowHint(!showHint)}
-                            className={`px-6 py-4 rounded-xl font-bold transition-all border ${
+                            className={`scale-[0.97] md:scale-100 px-6 py-4 rounded-xl font-bold transition-all border ${
                                 showHint 
                                 ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' 
                                 : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
@@ -247,7 +247,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                          </button>
                          <button 
                             onClick={handleNext}
-                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-indigo-600 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-100 dark:shadow-none"
+                            className="scale-[0.97] md:scale-100 flex-grow md:flex-grow-0 px-8 py-4 bg-indigo-600 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-100 dark:shadow-none"
                          >
                              下一题
                              <ChevronRight size={18} />

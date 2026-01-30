@@ -160,7 +160,7 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
 
     return (
         <div className="max-w-4xl mx-auto px-2 py-4 md:p-10 min-h-screen flex flex-col">
-            <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
+            <div className="flex justify-between items-center mb-6 md:mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                 <div>
                     <Link href={`/${lang}/physics-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 -ml-1 mb-3 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -176,14 +176,14 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
                 </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-6 md:pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-700">
                     {currentQ.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-slate-50 dark:bg-slate-800/50 text-indigo-700 dark:text-slate-200 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
+                        <span className="inline-flex items-center px-4 py-1.5 bg-slate-50 dark:bg-slate-800/50 text-indigo-700 dark:text-slate-200 text-sm md:px-3 md:py-1 md:text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                             {currentQ.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
+                    <span className="inline-flex items-center px-4 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm md:px-3 md:py-1 md:text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                         第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}
                     </span>
                     {isSubmitted && (
@@ -316,9 +316,9 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
                     ) : (
                         <div className="flex gap-4 w-full md:w-auto">
                             {currentQ.explanation && (
-                                <button onClick={() => setShowExplanation(!showExplanation)} className={`px-6 py-4 rounded-xl font-bold transition-all border ${showExplanation ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'}`}>{showExplanation ? '隐藏解析' : '查看解析'}</button>
+                                <button onClick={() => setShowExplanation(!showExplanation)} className={`scale-[0.97] md:scale-100 px-6 py-4 rounded-xl font-bold transition-all border ${showExplanation ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'}`}>{showExplanation ? '隐藏解析' : '查看解析'}</button>
                             )}
-                            <button onClick={handleNext} className="flex-grow md:flex-grow-0 px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm">下一题 <ChevronRight size={20} /></button>
+                            <button onClick={handleNext} className="scale-[0.97] md:scale-100 flex-grow md:flex-grow-0 px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm">下一题 <ChevronRight size={20} /></button>
                         </div>
                     )}
                 </div>
