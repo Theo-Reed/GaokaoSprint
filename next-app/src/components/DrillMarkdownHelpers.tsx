@@ -41,8 +41,12 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
 
   // This specifically looks for double-escaped backslashes before known commands
   // We remove 'K', 'k', 'c' etc because they are often just letters in text
-  const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.map(escapeRegExp).join('|')})\\b`, 'g');
-  clean = clean.replace(commandPattern, '\\$1');
+  try {
+    const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.map(escapeRegExp).join('|')})\\b`, 'g');
+    clean = clean.replace(commandPattern, '\\$1');
+  } catch (e) {
+    console.error("Markdown Helper RegExp Error (commands):", e);
+  }
 
   // 5. Fix double-escaped braces and symbols
   clean = clean.replace(/\\\\\{/g, '\\{')
@@ -69,10 +73,14 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
   ];
   
   // Using a capture group approach instead of lookbehind for Safari compatibility
-  const symPattern = new RegExp(`(\\\\?)\\b(${autoEscapeSymbols.join('|')})\\b`, 'g');
-  clean = clean.replace(symPattern, (match, prefix, symbol) => {
-    return prefix === '\\' ? match : '\\' + symbol;
-  });
+  try {
+    const symPattern = new RegExp(`(\\\\?)\\b(${autoEscapeSymbols.join('|')})\\b`, 'g');
+    clean = clean.replace(symPattern, (match, prefix, symbol) => {
+      return prefix === '\\' ? match : '\\' + symbol;
+    });
+  } catch (e) {
+    console.error("Markdown Helper RegExp Error (symbols):", e);
+  }
 
   return clean;
 };
