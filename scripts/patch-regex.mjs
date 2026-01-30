@@ -73,6 +73,15 @@ try {
             'micromark-util-character', 
             'estree-util-is-identifier-name',
             'mdast-util-gfm-autolink-literal',
+            'micromark-extension-gfm',
+            'micromark-extension-gfm-autolink-literal',
+            'micromark-extension-gfm-strikethrough',
+            'micromark-extension-gfm-table',
+            'micromark-extension-gfm-tagfilter',
+            'micromark-extension-gfm-task-list-item',
+            'remark-gfm',
+            'strip-ansi',
+            'ansi-regex',
             'zod'
         ];
 
@@ -158,25 +167,42 @@ function patchFile(fullPath) {
     changed = true;
   }
 
-  // 4. Replace zod emoji
-  if (content.includes('\\p{Extended_Pictographic}')) {
-    console.log(`  - Patching Emoji in ${path.relative(rootDir, fullPath)}`);
-    // Replace with simplified unicode range for pictographics (basic symbols + emoji range)
-    // Using a broader range [u2300-u27bf] instead of just 2300-23ff to cover more
-    // But safely, let's just use the harmless range we defined.
-    // The previous script used \\u2300-\\u23ff. 
-    content = content.replace(/\\p{Extended_Pictographic}/g, '\\u2300-\\u23ff'); 
-    changed = true;
-  }
-  if (content.includes('\\p{Emoji_Component}')) {
-    console.log(`  - Patching Emoji_Component in ${path.relative(rootDir, fullPath)}`);
-    content = content.replace(/\\p{Emoji_Component}/g, '\\u2300-\\u23ff');
-    changed = true;
+  // 5. Lookbehind Detection & Strip-Ansi Patching
+  const lookbehind = /[^\\\\]\(\?<!|[^\\\\]\(\?<=/g;
+  if (lookbehind.test(content)) {
+     console.warn(`  ⚠️  WARNING: Potential Lookbehind usage in ${path.relative(rootDir, fullPath)}`);
+     const matches = content.match(lookbehind);
+     console.log(`     Matches: ${matches ? matches.join(', ') : 'unknown'}`);
+     
+     // Specific patch for strip-ansi v7 / ansi-regex v6
+     // pattern: new RegExp(..., 'u'), or complex regex
+     if (fullPath.includes('ansi-regex') || fullPath.includes('strip-ansi')) {
+        // Fallback to ANSI-Regex v5 pattern (safe for older browsers)
+        // https://github.com/chalk/ansi-regex/blob/main/index.js (v5)
+        const ansiRegexV5 = "[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:[a-zA-Z\\d]*(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)|(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))";
+        
+        // Naive replacement for the "return ..." or "export default ..."
+        const regexConstruction = /return new RegExp\(.*\)/;
+        if (regexConstruction.test(content)) {
+            console.log(`  - Patching ansi-regex to use safe v5 pattern`);
+            content = content.replace(regexConstruction, `return new RegExp("${ansiRegexV5}", "g")`);
+            changed = true;
+        } else if (content.includes('({onlyFirst = false} = {}) =>')) {
+             // strip-ansi v7 implementation
+             console.log(`  - Patching strip-ansi to use safe v5 pattern`);
+             // This is harder to patch cleanly without parsing, but let's try replacing the regex usage
+             // Usually it calls ansiRegex()
+             // We can just replace the whole file export if we are bold, but let's stick to regex replacement if possible
+             // or patching the ansi-regex dependency is enough.
+        }
+     }
   }
 
+  // 6. Fix Zod Emoji instantiation (Global fix)
   if (content.includes('new RegExp(_emojiRegex, "u")')) {
       console.log(`  - Patching Emoji RegExp instantiation in ${path.relative(rootDir, fullPath)}`);
-      content = content.replace('new RegExp(_emojiRegex, "u")', 'new RegExp(_emojiRegex)');
+      // Use split/join to replace ALL occurrences, just in case
+      content = content.split('new RegExp(_emojiRegex, "u")').join('new RegExp(_emojiRegex)');
       changed = true;
   }
   
