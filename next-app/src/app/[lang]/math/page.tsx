@@ -39,9 +39,9 @@ export default async function MathDashboard({ params }: { params: Promise<{ lang
           <Link 
             key={category.id} 
             href={`/${lang}/math/drill/${category.id}`}
-            className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-700 transition-all duration-300 transform hover:-translate-y-1"
+            className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-700 transition-all duration-300 transform hover:-translate-y-1 active:scale-95 active:bg-slate-50 dark:active:bg-slate-800 z-10 block"
           >
-            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity dark:invert">
+            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity dark:invert pointer-events-none">
               <span className="text-6xl">{category.icon}</span>
             </div>
             <div className="flex flex-col h-full">

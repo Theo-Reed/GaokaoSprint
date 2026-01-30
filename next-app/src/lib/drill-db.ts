@@ -32,10 +32,10 @@ export async function incrementRightCount(questionId: string, subject: string) {
       question_id: questionId,
       subject: subject,
       right_count: newCount
-    });
+    }, { onConflict: 'user_id,question_id' });
 
   if (upsertError) {
-    console.error('Error updating progress:', upsertError);
+    console.error('Error updating progress:', JSON.stringify(upsertError, null, 2));
   }
 }
 
