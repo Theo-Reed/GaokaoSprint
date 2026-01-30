@@ -21,8 +21,12 @@ export function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      onClick={() => {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) return; // 手机端按钮点击无效
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      }}
+      className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 md:flex hidden"
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (

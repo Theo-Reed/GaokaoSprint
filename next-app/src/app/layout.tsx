@@ -38,19 +38,39 @@ export default function RootLayout({
                 try {
                   var isMobile = window.innerWidth < 768;
                   var key = isMobile ? 'gaokao-theme-mobile' : 'gaokao-theme-desktop';
-                  var theme = localStorage.getItem(key);
                   
-                  if (!theme || theme === 'system') {
-                    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                    // We don't force 'light' on mobile or 'dark' on desktop if system is available
-                    // but we can keep the logic as a fallback if system matchMedia isn't available
-                    theme = systemTheme;
+                  function applyTheme() {
+                    var isDark;
+                    if (isMobile) {
+                      // 手机端完全跟随系统
+                      isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    } else {
+                      // 电脑端记录用户习惯
+                      var theme = localStorage.getItem(key);
+                      if (!theme || theme === 'system') {
+                        isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                      } else {
+                        isDark = theme === 'dark';
+                      }
+                    }
+                    document.documentElement.classList.toggle('dark', isDark);
                   }
 
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
+                  applyTheme();
+
+                  // 实时监听系统主题切换
+                  var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                  if (mediaQuery.addEventListener) {
+                    mediaQuery.addEventListener('change', function() {
+                      if (isMobile) {
+                        applyTheme();
+                      } else {
+                        var currentTheme = localStorage.getItem(key);
+                        if (!currentTheme || currentTheme === 'system') {
+                          applyTheme();
+                        }
+                      }
+                    });
                   }
                 } catch (e) {}
               })();
