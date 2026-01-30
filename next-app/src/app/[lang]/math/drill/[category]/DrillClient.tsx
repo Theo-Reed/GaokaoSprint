@@ -167,7 +167,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 </div>
 
 
-                <div className={`flex flex-col ${isVerticalLayout ? '' : 'md:flex-row items-start'} gap-8`}>
+                <div className={`flex ${isVerticalLayout ? 'flex-col gap-2' : 'flex-col md:flex-row items-start gap-8'}`}>
                     <div className="prose prose-slate dark:prose-invert prose-lg max-w-none flex-grow">
                         <ReactMarkdown 
                             remarkPlugins={[remarkMath, remarkGfm]} 
@@ -198,7 +198,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                     {/* Question Illustration Area (Statically loaded based on has_figure) */}
                     {question.has_figure && (
-                        <div className={`flex-shrink-0 flex flex-col items-center justify-center transition-all ${isVerticalLayout ? 'w-full mt-2' : 'md:max-w-xs self-start mt-4 md:mt-0'}`}>
+                        <div className={`flex-shrink-0 flex flex-col items-center justify-center transition-all ${isVerticalLayout ? 'w-full' : 'md:max-w-xs self-start mt-4 md:mt-0'}`}>
                             <img 
                                 src={`/math-images/${encodeURIComponent(`${question.source}-${question.question_number}.png`)}`} 
                                 alt="题目插图" 
