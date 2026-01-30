@@ -153,7 +153,7 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
+        <div className="max-w-4xl mx-auto px-2 py-4 md:p-10 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                 <div>
                     <Link href={`/${lang}/chemistry-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 -ml-1 mb-3 flex items-center gap-1 font-medium group">
@@ -166,7 +166,7 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
                 </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+            <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-700">
                     {currentQ.source && <span className="inline-flex items-center px-3 py-1 bg-slate-50 dark:bg-slate-800/50 text-indigo-700 dark:text-slate-200 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">{currentQ.source}</span>}
                     <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}</span>

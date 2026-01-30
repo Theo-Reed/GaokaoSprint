@@ -129,7 +129,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
+        <div className="max-w-4xl mx-auto px-2 py-4 md:p-10 min-h-screen flex flex-col">
              {/* Header */}
              <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                  <div>
@@ -151,7 +151,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
              </div>
 
              {/* Question Card */}
-             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
+             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-4 md:px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 {/* Source Badge */}
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                     {question.source && (
