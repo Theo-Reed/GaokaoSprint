@@ -13,7 +13,8 @@ export function ThemeProvider({
   React.useEffect(() => {
     const isMobile = window.innerWidth < 768;
     const key = isMobile ? 'gaokao-theme-mobile' : 'gaokao-theme-desktop';
-    const def = isMobile ? 'light' : 'dark';
+    // Default to system for both mobile and desktop
+    const def = 'system';
     setConfig({ key, def });
     setMounted(true);
   }, []);
@@ -27,7 +28,7 @@ export function ThemeProvider({
       {...props} 
       storageKey={config.key}
       defaultTheme={config.def}
-      enableSystem={false}
+      enableSystem={true}
     >
       {children}
     </NextThemesProvider>

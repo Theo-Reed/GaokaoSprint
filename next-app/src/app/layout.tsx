@@ -37,9 +37,14 @@ export default function RootLayout({
                   var isMobile = window.innerWidth < 768;
                   var key = isMobile ? 'gaokao-theme-mobile' : 'gaokao-theme-desktop';
                   var theme = localStorage.getItem(key);
-                  if (!theme) {
-                    theme = isMobile ? 'light' : 'dark';
+                  
+                  if (!theme || theme === 'system') {
+                    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                    // We don't force 'light' on mobile or 'dark' on desktop if system is available
+                    // but we can keep the logic as a fallback if system matchMedia isn't available
+                    theme = systemTheme;
                   }
+
                   if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
                   } else {
