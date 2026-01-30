@@ -91,7 +91,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         overflow-y-auto no-scrollbar
       `}>
         <div className="p-6">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2 text-[13px] font-black tracking-widest uppercase">
               <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-violet-600 dark:text-violet-400' : 'text-slate-400 dark:text-slate-600 hover:text-violet-600 dark:hover:text-violet-400'}`}>
                 中文

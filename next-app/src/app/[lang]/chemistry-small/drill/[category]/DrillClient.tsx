@@ -142,7 +142,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         <div className="max-w-4xl mx-auto p-6 md:p-10 min-h-screen flex flex-col">
             <div className="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-700 pb-4">
                 <div>
-                    <Link href={`/${lang}/chemistry-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-2 flex items-center gap-1 font-medium group">
+                    <Link href={`/${lang}/chemistry-small`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 -ml-1 mb-3 flex items-center gap-1 font-medium group">
                         <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />返回
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{CATEGORY_NAMES[category]} <span className="text-indigo-600 dark:text-slate-300">小题特训</span></h1>
