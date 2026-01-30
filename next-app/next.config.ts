@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: [
+    'react-markdown', 
+    'remark-math', 
+    'rehype-katex', 
+    'katex', 
+    'remark-gfm',
+    'micromark-extension-math',
+    'micromark-extension-gfm'
+  ],
   turbopack: {
     root: path.resolve(__dirname, "../"),
   },
