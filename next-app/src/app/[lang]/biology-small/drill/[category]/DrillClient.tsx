@@ -65,11 +65,14 @@ const CATEGORY_NAMES: Record<string, string> = {
 export default function DrillClient({ lang, category }: DrillClientProps) {
     // Determine pool of questions for this category
     const allCategoryQuestions = React.useMemo(() => {
-        const rawQuestions = (questionsData as unknown as any[]).filter(q => q.category === category);
+        if (!questionsData || !Array.isArray(questionsData)) return [];
+        
+        const rawQuestions = (questionsData as any[]).filter(q => q.category === category);
         return rawQuestions.map(q => {
             if (q.id) return q as SmallQuestion;
             // Generate a stable ID based on content hash if ID is missing
-            const contentHash = q.content.split('').reduce((a: number, b: string) => {
+            const contentStr = typeof q.content === 'string' ? q.content : JSON.stringify(q);
+            const contentHash = contentStr.split('').reduce((a: number, b: string) => {
                 a = ((a << 5) - a) + b.charCodeAt(0);
                 return a & a;
             }, 0);

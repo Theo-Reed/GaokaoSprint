@@ -67,6 +67,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [showExplanation, setShowExplanation] = useState(false);
 
     useEffect(() => {
+        if (!questionsData || !Array.isArray(questionsData)) {
+            setQuestions([]);
+            return;
+        }
         const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
         // Shuffle the questions
         const shuffled = [...filtered].sort(() => Math.random() - 0.5);
