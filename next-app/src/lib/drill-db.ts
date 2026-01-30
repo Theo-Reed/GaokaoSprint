@@ -8,34 +8,58 @@ export async function incrementRightCount(questionId: string, subject: string) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return;
 
-  // 1. Check existing record
-  const { data: existing, error: fetchError } = await supabase
+  // 1. Check existing record. 
+  // We use simpler query to avoid "Column not found" errors if 'id' or 'created_at' are missing.
+  // We update ALL matching rows if duplicates exist, which is acceptable here.
+  const { data: existingData, error: fetchError } = await supabase
     .from('user_drill_progress')
     .select('right_count')
     .eq('user_id', user.id)
     .eq('question_id', questionId)
     .eq('subject', subject)
-    .single();
+    .limit(1);
 
-  if (fetchError && fetchError.code !== 'PGRST116') { // PGRST116 is "No rows found"
-    console.error('Error fetching progress:', fetchError);
+  if (fetchError) {
+    console.error('Error fetching progress (read):', JSON.stringify(fetchError, null, 2));
+    // If table doesn't exist or serious error, we probably shouldn't proceed.
     return;
   }
 
-  const newCount = (existing?.right_count || 0) + 1;
+  const existingRow = existingData?.[0];
+  const newCount = (existingRow?.right_count || 0) + 1;
 
-  // 2. Upsert
-  const { error: upsertError } = await supabase
-    .from('user_drill_progress')
-    .upsert({
-      user_id: user.id,
-      question_id: questionId,
-      subject: subject,
-      right_count: newCount
-    }, { onConflict: 'user_id,question_id' });
+  if (existingRow) {
+    // 2. Update all matching rows (safe if duplicates exist)
+    const { error: updateError } = await supabase
+      .from('user_drill_progress')
+      .update({ right_count: newCount })
+      .eq('user_id', user.id)
+      .eq('question_id', questionId)
+      .eq('subject', subject);
+      
+    if (updateError) {
+      console.error('Error updating progress (update):', updateError);
+    }
+  } else {
+    // 3. Insert new record
+    const { error: insertError } = await supabase
+      .from('user_drill_progress')
+      .insert({
+        user_id: user.id,
+        question_id: questionId,
+        subject: subject,
+        right_count: newCount
+      });
 
-  if (upsertError) {
-    console.error('Error updating progress:', JSON.stringify(upsertError, null, 2));
+    if (insertError) {
+       // Check specifically for RLS violation
+       if (insertError.code === '42501') {
+         console.error('🛑 [DrillDB] Permission Denied: Please run scripts/fix_supabase_rls.sql in Supabase SQL Editor.');
+       }
+       // If Insert fails (e.g. RLS or Constraint), log it.
+       // It's possible a race condition created the row between our read and insert.
+       console.error('Error updating progress (insert):', insertError);
+    }
   }
 }
 
@@ -55,6 +79,12 @@ export async function getUserProgressMap(subject: string): Promise<Record<string
   if (error) {
     console.error('Error loading progress map:', error);
     return {};
+  }
+  
+  if (!data || data.length === 0) {
+    console.warn(`[DrillDB] No progress records found for subject: ${subject} (User: ${user.id})`);
+  } else {
+    console.log(`[DrillDB] Loaded ${data.length} progress records for ${subject}`);
   }
 
   const map: Record<string, number> = {};

@@ -26,7 +26,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
   // Floating button state
-  const [pos, setPos] = useState({ x: -1, y: 16 }); // -1 means right-aligned initially
+  const [pos, setPos] = useState({ x: -1, y: 120 }); // -1 means right-aligned initially, y=120 to avoid top safe area
   const [isDragging, setIsDragging] = useState(false);
   const [isLongPressed, setIsLongPressed] = useState(false);
   const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
@@ -219,7 +219,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-violet-600 dark:hover:text-violet-400 hover:shadow-sm transition-all duration-200"
+                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-violet-600 dark:hover:text-violet-400 hover:shadow-sm active:scale-95 active:bg-violet-50 dark:active:bg-slate-800 transition-all duration-200"
                       >
                         {item.title}
                       </Link>
