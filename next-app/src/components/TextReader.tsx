@@ -97,7 +97,7 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
                     onClick={() => handleWordClick(token)}
                     className={`
                        cursor-pointer transition-colors duration-200
-                       ${isSelected ? 'bg-emerald-100 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-100' : 'text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-400'}
+                       ${isSelected ? 'bg-emerald-100 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-100' : 'text-slate-400 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-400'}
                     `}
                     title="Marked as Known (Click to review)"
                   >
@@ -146,7 +146,7 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
 
               <button 
                 onClick={() => setSelectedWord(null)}
-                className="text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full p-1 transition-colors"
+                className="text-slate-400 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full p-1 transition-colors"
               >
                 <X size={24} />
               </button>
@@ -192,7 +192,7 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
             
             {/* Meanings */}
             <div className="space-y-4">
-              <h4 className="flex items-center gap-2 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+              <h4 className="flex items-center gap-2 text-xs font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider">
                 <BookOpen size={14} /> Meaning
               </h4>
               <div className="space-y-3">
@@ -240,14 +240,14 @@ export const TextReader: React.FC<TextReaderProps> = ({ content, title }) => {
             {/* Exam Examples */}
             {selectedWord.examples.exams && selectedWord.examples.exams.length > 0 && (
                 <div className="space-y-3">
-                <h4 className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+                <h4 className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-slate-300 uppercase tracking-wider">
                     <Target size={14} /> Real Exam Context
                 </h4>
                 <div className="space-y-3">
                     {selectedWord.examples.exams.slice(0, 3).map((ex, i) => (
                     <div key={i} className="text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-500 transition-colors">
                         <div className="flex items-center gap-2 mb-1">
-                            <span className="text-[10px] font-bold text-white bg-indigo-500 px-1.5 py-0.5 rounded">{ex.year}</span>
+                            <span className="text-[10px] font-bold text-white bg-slate-500 px-1.5 py-0.5 rounded">{ex.year}</span>
                         </div>
                         <div className="leading-relaxed">
                             {ex.text}

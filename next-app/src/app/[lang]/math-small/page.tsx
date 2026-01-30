@@ -34,7 +34,7 @@ export default async function MathSmallDashboard({ params }: { params: Promise<{
     <div className="max-w-4xl mx-auto py-10 px-6">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
-          数学小题特训 <span className="text-indigo-600 dark:text-indigo-400">Speed</span>
+          数学小题特训 <span className="text-indigo-600 dark:text-slate-300">Speed</span>
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           专注选择题、填空题专项突破。强化基础概念，练习解题技巧与速度。
@@ -52,7 +52,7 @@ export default async function MathSmallDashboard({ params }: { params: Promise<{
               <span className="text-6xl">{category.icon}</span>
             </div>
             <div className="flex flex-col h-full">
-               <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+               <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                  {category.icon}
                </div>
                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{category.name}</h3>

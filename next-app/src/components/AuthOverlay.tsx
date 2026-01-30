@@ -58,7 +58,7 @@ export default function AuthOverlay({ onLoginSuccess }: { onLoginSuccess: () => 
         <button 
           onClick={handleAuth} 
           disabled={loading}
-          className="w-full bg-indigo-600 text-white font-black py-4 rounded-2xl disabled:opacity-50 hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 dark:shadow-none mt-6 active:scale-[0.98]"
+          className="w-full bg-indigo-600 text-white font-black py-4 rounded-2xl disabled:opacity-50 hover:bg-indigo-700 transition-all shadow-lg shadow-none dark:shadow-none mt-6 active:scale-[0.98]"
         >
           {loading ? 'Processing...' : (isSignUp ? 'Create Account' : 'Sign In')}
         </button>

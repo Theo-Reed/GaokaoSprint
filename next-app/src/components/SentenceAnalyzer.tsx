@@ -79,26 +79,26 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white dark:bg-slate-900 shadow-lg rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-indigo-500 dark:bg-indigo-900/80 text-white p-4 flex justify-between items-center">
+      <div className="bg-slate-500 dark:bg-slate-900 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>🧬</span> {text.title}
           </h3>
-          <p className="text-indigo-50 dark:text-indigo-200 text-xs mt-1">
+          <p className="text-indigo-50 dark:text-slate-200 text-xs mt-1">
             {text.level} {currentAnalyzeIndex + 1} / {ANALYSIS_LEVELS.length} • {currentSentence.difficulty}
           </p>
         </div>
         <div className="flex gap-2">
            <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.max(0, currentAnalyzeIndex - 1))}
-                className="p-2 bg-indigo-600 dark:bg-indigo-800 rounded hover:bg-indigo-400 dark:hover:bg-indigo-700 text-xs disabled:opacity-50"
+                className="p-2 bg-indigo-600 dark:bg-slate-800 rounded hover:bg-indigo-400 dark:hover:bg-indigo-700 text-xs disabled:opacity-50"
                 disabled={currentAnalyzeIndex === 0}
             >
                 {text.prev}
             </button>
             <button 
                 onClick={() => setCurrentAnalyzeIndex(Math.min(ANALYSIS_LEVELS.length - 1, currentAnalyzeIndex + 1))}
-                className="p-2 bg-white dark:bg-slate-800 text-indigo-500 dark:text-indigo-400 rounded hover:bg-indigo-50 dark:hover:bg-slate-700 text-xs font-bold disabled:opacity-50"
+                className="p-2 bg-white dark:bg-slate-800 text-indigo-500 dark:text-slate-300 rounded hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-bold disabled:opacity-50"
                 disabled={currentAnalyzeIndex === ANALYSIS_LEVELS.length - 1}
             >
                 {text.next}
@@ -121,7 +121,7 @@ export const SentenceAnalyzer = ({ lang = 'en' }: { lang?: string }) => {
             let style = "border-b-4 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-all px-1 rounded";
             if (foundIndices.subject.includes(index)) style = "border-b-4 border-red-500 bg-red-50 dark:bg-red-900/30 text-red-900 dark:text-red-100";
             if (foundIndices.verb.includes(index))    style = "border-b-4 border-yellow-500 bg-yellow-50 dark:bg-amber-900/30 text-yellow-900 dark:text-amber-100 font-bold transform scale-105 shadow-sm";
-            if (foundIndices.object.includes(index))  style = "border-b-4 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100";
+            if (foundIndices.object.includes(index))  style = "border-b-4 border-indigo-500 bg-slate-50 dark:bg-slate-800/50 text-indigo-900 dark:text-slate-100";
 
             return (
               <span key={index} className={style} onClick={() => handleWordClick(index)}>{word}</span>
@@ -151,7 +151,7 @@ const ToolButton = ({ label, color, active, onClick }: { label: string, color: s
   const colorMap: Record<string, string> = {
     red:    active ? "bg-red-500 text-white border-red-600 shadow-md transform scale-105" : "bg-white dark:bg-slate-800 text-red-600 dark:text-red-400 border-red-200 dark:border-red-900 hover:bg-red-50 dark:hover:bg-red-900/20",
     yellow: active ? "bg-amber-400 text-amber-900 border-amber-600 shadow-md transform scale-105" : "bg-white dark:bg-slate-800 text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-900 hover:bg-amber-50 dark:hover:bg-amber-900/20",
-    indigo: active ? "bg-indigo-500 text-white border-indigo-600 shadow-md transform scale-105" : "bg-white dark:bg-slate-800 text-indigo-500 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900 hover:bg-indigo-50 dark:hover:bg-indigo-900/20",
+    indigo: active ? "bg-slate-500 text-white border-indigo-600 shadow-md transform scale-105" : "bg-white dark:bg-slate-800 text-indigo-500 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-indigo-900/20",
   };
 
   return (

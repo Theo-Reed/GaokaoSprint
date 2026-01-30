@@ -34,18 +34,18 @@ export default function BiologyExplorer() {
           isSidebarOpen ? 'w-80' : 'w-0'
         } transition-all duration-300 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col h-full shadow-lg z-10`}
       >
-        <div className="p-6 border-b border-slate-100 dark:border-slate-800 bg-indigo-600 dark:bg-indigo-700">
+        <div className="p-6 border-b border-slate-100 dark:border-slate-800 bg-indigo-600 dark:bg-slate-900">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             🧬 生物背书引擎
           </h2>
-          <p className="text-indigo-100 dark:text-indigo-200 text-xs mt-1">选择性必修 1 - MVP 版本</p>
+          <p className="text-indigo-100 dark:text-slate-200 text-xs mt-1">选择性必修 1 - MVP 版本</p>
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 space-y-6">
           {/* Group points by chapter */}
           {Array.from(new Set(BIOLOGY_SC1_DATA.map(p => p.chapter))).map(chapter => (
             <div key={chapter} className="space-y-2">
-              <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest px-2">
+              <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-400 uppercase tracking-widest px-2">
                 {chapter}
               </h3>
               <div className="space-y-1">
@@ -56,12 +56,12 @@ export default function BiologyExplorer() {
                     onClick={() => handlePointSelect(point)}
                     className={`w-full text-left p-3 rounded-xl transition-all ${
                       selectedPoint.id === point.id 
-                        ? 'bg-indigo-600 dark:bg-indigo-700 text-white shadow-md' 
+                        ? 'bg-indigo-600 dark:bg-slate-900 text-white shadow-md' 
                         : 'hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400'
                     }`}
                   >
                     <div className="font-bold text-sm tracking-tight">{point.title}</div>
-                    <div className={`text-xs mt-1 line-clamp-1 ${selectedPoint.id === point.id ? 'text-indigo-100' : 'text-slate-400 dark:text-slate-500'}`}>
+                    <div className={`text-xs mt-1 line-clamp-1 ${selectedPoint.id === point.id ? 'text-indigo-100' : 'text-slate-400 dark:text-slate-400'}`}>
                       {point.description}
                     </div>
                   </button>
@@ -93,7 +93,7 @@ export default function BiologyExplorer() {
               {isSidebarOpen ? '📖' : '📚'}
             </button>
             <div>
-              <span className="text-[10px] font-bold text-indigo-500 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-0.5 rounded uppercase tracking-tighter">
+              <span className="text-[10px] font-bold text-indigo-500 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-0.5 rounded uppercase tracking-tighter">
                 {selectedPoint.chapter}
               </span>
               <h1 className="text-base font-black text-slate-800 dark:text-white leading-tight">{selectedPoint.title}</h1>
@@ -108,7 +108,7 @@ export default function BiologyExplorer() {
                   onClick={() => setReadingMode(m)}
                   className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                     readingMode === m 
-                      ? 'bg-white dark:bg-slate-600 text-indigo-600 dark:text-indigo-300 shadow-sm' 
+                      ? 'bg-white dark:bg-slate-600 text-indigo-600 dark:text-slate-200 shadow-sm' 
                       : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
                   }`}
                 >
@@ -121,7 +121,7 @@ export default function BiologyExplorer() {
                <div className="text-sm font-black text-slate-700 dark:text-slate-300">
                  Page {selectedPoint.page}
                </div>
-               <p className="text-[10px] text-slate-400 dark:text-slate-500 font-medium italic">High-Res Textbook Mode</p>
+               <p className="text-[10px] text-slate-400 dark:text-slate-400 font-medium italic">High-Res Textbook Mode</p>
              </div>
           </div>
         </div>

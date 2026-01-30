@@ -20,7 +20,7 @@ const Word: React.FC<WordProps> = ({ text, type, clauseType }) => {
   if (type === 'object') className += "border-b-4 border-indigo-500 ";
   
   if (type === 'clause') {
-    className += "border border-dashed border-gray-400 dark:border-gray-600 rounded-md relative hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:border-indigo-500 dark:hover:border-indigo-400 ";
+    className += "border border-dashed border-gray-400 dark:border-gray-600 rounded-md relative hover:bg-slate-100 dark:hover:bg-indigo-900/40 hover:border-indigo-500 dark:hover:border-indigo-400 ";
   }
 
   return (
@@ -76,7 +76,7 @@ export const SyntaxVisualizer = () => {
         .
       </div>
 
-      <div className="mt-8 p-4 bg-indigo-50 dark:bg-indigo-900/30 border-l-4 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 text-sm">
+      <div className="mt-8 p-4 bg-slate-50 dark:bg-slate-800/50 border-l-4 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-slate-200 text-sm">
         <strong>Study Strategy:</strong> This visualization simplifies the "chunking" process. Every time you see a long sentence, try to visualize these boxes and lines in your mind.
       </div>
     </div>

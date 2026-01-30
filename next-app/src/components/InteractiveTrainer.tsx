@@ -42,7 +42,7 @@ const ExpandableSection = ({ title, subtitle, children, defaultOpen = false, col
             <p className="text-sm text-slate-500 dark:text-slate-400">{subtitle}</p>
           </div>
         </div>
-        <div className="text-slate-400 dark:text-slate-500">
+        <div className="text-slate-400 dark:text-slate-400">
           <ChevronIcon isOpen={isOpen} />
         </div>
       </button>
@@ -143,7 +143,7 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
 
       </div>
 
-      <div className="text-center text-xs text-slate-300 mt-12 pb-8">
+      <div className="text-center text-xs text-slate-500 dark:text-slate-500 mt-12 pb-8">
         {text.footer}
       </div>
     </div>

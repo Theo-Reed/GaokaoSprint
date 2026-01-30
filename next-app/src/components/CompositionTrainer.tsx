@@ -171,7 +171,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             onClick={() => { setMode('write'); setType('small'); startTraining('small'); }}
             className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/40 rounded-xl flex items-center justify-center text-indigo-500 dark:text-indigo-400 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
               <Edit3 size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '小作文 (15分)' : 'Small Composition'}</h3>
@@ -181,7 +181,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             onClick={() => { setMode('write'); setType('large'); startTraining('large'); }}
             className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/40 rounded-xl flex items-center justify-center text-indigo-500 dark:text-indigo-400 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
               <BookOpen size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '读后续写 (25分)' : 'Story Continuation'}</h3>
@@ -201,7 +201,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             onClick={() => { setMode('generate'); setType('small'); startTraining('small'); }}
             className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/40 rounded-xl flex items-center justify-center text-indigo-500 dark:text-indigo-400 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '生成小作文范文' : 'Generate Small Comp'}</h3>
@@ -211,7 +211,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             onClick={() => { setMode('generate'); setType('large'); startTraining('large'); }}
             className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
           >
-            <div className="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/40 rounded-xl flex items-center justify-center text-indigo-500 dark:text-indigo-400 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '生成读后续写范文' : 'Generate Story Cont'}</h3>
@@ -242,24 +242,24 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             )}
             <button 
               onClick={() => setIsSelecting(true)}
-              className="ml-3 group inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 border border-slate-200 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-500 rounded-lg text-sm transition-all"
+              className="ml-3 group inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-indigo-900/30 border border-slate-200 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-500 rounded-lg text-sm transition-all"
             >
               <span className="text-slate-500 dark:text-slate-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 font-medium">
                 {topic.year} {Array.isArray(topic.region) ? topic.region[0] : topic.region}
               </span>
-              <Search size={14} className="text-slate-400 dark:text-slate-500 group-hover:text-indigo-400" />
+              <Search size={14} className="text-slate-400 dark:text-slate-400 group-hover:text-indigo-400" />
             </button>
           </h1>
         </div>
         
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full font-mono text-xl font-bold text-slate-700 dark:text-slate-300">
-            <Clock size={20} className="text-slate-400 dark:text-slate-500" />
+            <Clock size={20} className="text-slate-400 dark:text-slate-400" />
             {formatTime(timer)}
           </div>
           <button 
             onClick={() => startTraining(type)}
-            className="p-2 text-slate-400 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-400 hover:rotate-180 transition-all duration-500"
+            className="p-2 text-slate-400 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-400 hover:rotate-180 transition-all duration-500"
             title={isCn ? '更换题目' : 'Change Topic'}
           >
             <RefreshCw size={24} />
@@ -284,13 +284,13 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                  <h4 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">帮助结构 (Scaffold)</h4>
                  {topic.scaffold.start && (
                    <div className="mb-4">
-                     <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded mb-1 inline-block">开头必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">开头必须接续:</span>
                      <p className="text-sm italic text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700">{topic.scaffold.start}</p>
                    </div>
                  )}
                  {topic.scaffold.end && (
                    <div>
-                     <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded mb-1 inline-block">落款必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">落款必须接续:</span>
                      <p className="text-sm italic text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700">{topic.scaffold.end}</p>
                    </div>
                  )}
@@ -309,13 +309,13 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                 placeholder={isCn ? '在此输入你的作文...' : 'Start writing here...'}
                 className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-indigo-400 dark:focus:border-indigo-500 focus:ring-0 transition-all bg-white dark:bg-slate-900 font-serif resize-none text-slate-900 dark:text-gray-100 shadow-sm"
               />
-              <div className="absolute bottom-16 right-6 text-xs text-slate-400 dark:text-slate-500 font-mono bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded-md backdrop-blur-sm">
+              <div className="absolute bottom-16 right-6 text-xs text-slate-400 dark:text-slate-400 font-mono bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded-md backdrop-blur-sm">
                 {answer.trim().split(/\s+/).filter(x => x).length} words
               </div>
             </div>
           ) : (
             <div className="flex-grow min-h-[450px] w-full p-8 border-2 border-slate-200 dark:border-slate-800 border-dashed rounded-2xl bg-white dark:bg-slate-900 flex flex-col items-center justify-center text-center">
-               <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/30 rounded-full flex items-center justify-center text-indigo-500 dark:text-indigo-400 mb-6">
+               <div className="w-20 h-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6">
                   <Zap size={40} />
                </div>
                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{isCn ? '满分范文 AI 生成' : 'Model Essay AI Generation'}</h3>
@@ -329,7 +329,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
               disabled={isSubmitting || (mode === 'write' && !answer.trim())}
               className={`
                 w-[80%] py-3 rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2
-                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 dark:bg-slate-700/50 cursor-not-allowed' : 'bg-indigo-500 hover:bg-indigo-600 hover:shadow-indigo-100 dark:hover:shadow-none hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
+                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 dark:bg-slate-700/50 cursor-not-allowed' : 'bg-slate-500 hover:bg-indigo-600 hover:shadow-none dark:hover:shadow-none hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
               `}
             >
               {isSubmitting ? (
@@ -361,7 +361,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                const feedback = results[model as keyof GradingResult];
                return (
                  <div key={model} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow min-h-[150px] flex flex-col">
-                   <div className="flex items-center justify-between mb-3 text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                   <div className="flex items-center justify-between mb-3 text-sm font-bold text-slate-400 dark:text-slate-400 uppercase tracking-widest">
                      <span>
                        {model === 'gpt' ? 'ChatGPT (GPT-4o)' : 
                         model === 'gemini' ? (mode === 'write' ? 'Gemini 2.5 Flash' : 'Gemini 2.5 Pro') : 
@@ -376,7 +376,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                            <div className="flex items-baseline gap-2">
                              <span className="text-indigo-500 font-black text-xl">{isCn ? '评分：' : 'Score:'}</span>
                              <span className="text-3xl font-black text-slate-900 dark:text-white">{feedback.score}</span>
-                             <span className="text-sm text-slate-400 dark:text-slate-500 font-bold">/ {type === 'small' ? 15 : 25}</span>
+                             <span className="text-sm text-slate-400 dark:text-slate-400 font-bold">/ {type === 'small' ? 15 : 25}</span>
                            </div>
                          )}
                          
@@ -394,7 +394,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                                      <span className="text-slate-300 dark:text-slate-600 font-black shrink-0">{i + 1}.</span>
                                      <div className="prose prose-slate prose-sm dark:prose-invert max-w-none prose-strong:text-indigo-600 prose-strong:font-black dark:prose-strong:text-indigo-400">
                                        <div className="flex flex-col">
-                                         <strong className="text-indigo-600 dark:text-indigo-400 mb-[0.7em]">[{label}]</strong>
+                                         <strong className="text-indigo-600 dark:text-slate-300 mb-[0.7em]">[{label}]</strong>
                                          <div className="[&_p]:my-0 [&_>*:first-child]:mt-0 [&_>*:last-child]:mb-0 text-slate-700 dark:text-slate-300 leading-relaxed">
                                            <ReactMarkdown>{cleanContent}</ReactMarkdown>
                                          </div>
@@ -408,7 +408,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                                  <li className="flex gap-2 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
                                    <div className="prose prose-slate prose-sm dark:prose-invert max-w-none prose-strong:text-indigo-600 prose-strong:font-black dark:prose-strong:text-indigo-400 w-full">
                                      <div className="flex flex-col">
-                                       <strong className="text-indigo-600 dark:text-indigo-400 mb-[0.7em]">[{isCn ? '综合点评' : 'Summary'}]</strong>
+                                       <strong className="text-indigo-600 dark:text-slate-300 mb-[0.7em]">[{isCn ? '综合点评' : 'Summary'}]</strong>
                                        <div className="[&_p]:my-0 [&_>*:first-child]:mt-0 [&_>*:last-child]:mb-0 text-slate-700 dark:text-slate-300 leading-relaxed">
                                          <ReactMarkdown>{feedback.summary}</ReactMarkdown>
                                        </div>
@@ -448,21 +448,21 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
               <div>
                 <h3 className="text-xl font-black text-slate-900 dark:text-white">{isCn ? '题库精准匹配' : 'Topic Search'}</h3>
-                <p className="text-sm text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest">{type === 'small' ? 'Small Composition' : 'Story Continuation'}</p>
+                <p className="text-sm text-slate-400 dark:text-slate-400 font-bold uppercase tracking-widest">{type === 'small' ? 'Small Composition' : 'Story Continuation'}</p>
               </div>
               <button onClick={() => setIsSelecting(false)} className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
-                <X size={24} className="text-slate-400 dark:text-slate-500" />
+                <X size={24} className="text-slate-400 dark:text-slate-400" />
               </button>
             </div>
             
             <div className="p-6 bg-slate-50 dark:bg-slate-950">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" size={20} />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400" size={20} />
                 <input 
                   type="text"
                   autoFocus
                   placeholder={isCn ? "搜索年份、省份 (如: 2024 浙江)..." : "Search year or region..."}
-                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 focus:outline-none text-lg font-medium shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 focus:outline-none text-lg font-medium shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -481,14 +481,14 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                   <button
                     key={idx}
                     onClick={() => startTraining(type, t)}
-                    className="w-full p-4 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 border border-transparent hover:border-indigo-100 dark:hover:border-indigo-800 rounded-2xl text-left transition-all flex items-center justify-between group"
+                    className="w-full p-4 hover:bg-slate-50 dark:hover:bg-indigo-900/30 border border-transparent hover:border-slate-200 dark:hover:border-indigo-800 rounded-2xl text-left transition-all flex items-center justify-between group"
                   >
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <span className="bg-slate-900 dark:bg-slate-700 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">{t.year}</span>
                         <span className="text-slate-800 dark:text-slate-200 font-bold">{Array.isArray(t.region) ? t.region.join(' / ') : t.region}</span>
                       </div>
-                      <div className="text-sm text-slate-400 dark:text-slate-500 line-clamp-1">{t.prompt}</div>
+                      <div className="text-sm text-slate-400 dark:text-slate-400 line-clamp-1">{t.prompt}</div>
                     </div>
                     <Filter size={18} className="text-slate-200 dark:text-slate-700 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 opacity-0 group-hover:opacity-100 transition-all" />
                   </button>
@@ -496,7 +496,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
               }
             </div>
             
-            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-center text-xs text-slate-400 dark:text-slate-500 font-bold">
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-center text-xs text-slate-400 dark:text-slate-400 font-bold">
               {isCn ? '点击题目即可开始特训' : 'Click a topic to start training'}
             </div>
           </div>

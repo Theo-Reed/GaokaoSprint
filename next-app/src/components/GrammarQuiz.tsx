@@ -203,12 +203,12 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
   return (
     <div className="bg-white dark:bg-slate-900 shadow-lg rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col h-full">
       {/* Header */}
-      <div className="bg-indigo-500 dark:bg-indigo-700 text-white p-4 flex justify-between items-center">
+      <div className="bg-slate-500 dark:bg-slate-900 text-white p-4 flex justify-between items-center">
         <div>
           <h3 className="text-lg font-bold flex items-center gap-2">
             <span>⚔️</span> {text.title}
           </h3>
-          <p className="text-indigo-100 dark:text-indigo-200 text-xs mt-1">
+          <p className="text-indigo-100 dark:text-slate-200 text-xs mt-1">
             {text.question} {currentQuizIndex + 1} / {quizPool.length}
           </p>
         </div>
@@ -220,7 +220,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
       {/* Main Content */}
       <div className="p-6 flex-1 flex flex-col">
         <div className="mb-6">
-            <span className="inline-block px-2 py-0.5 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
+            <span className="inline-block px-2 py-0.5 bg-slate-100 dark:bg-indigo-900 text-indigo-700 dark:text-slate-200 text-[10px] font-bold uppercase tracking-wider rounded mb-3">
                 {getCategoryName(currentQuiz.categoryId)}
             </span>
             <p className="text-lg font-serif text-slate-800 dark:text-slate-200 leading-relaxed">
@@ -264,7 +264,7 @@ export const GrammarQuiz = ({ lang = 'en' }: { lang?: string }) => {
                 className={`w-full py-2.5 rounded-lg font-bold text-white shadow-sm transition-all ${
                     isExamCorrect 
                     ? 'bg-green-600 hover:bg-green-700' 
-                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed')
+                    : (examFeedback ? 'bg-orange-500 hover:bg-orange-600' : 'bg-slate-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-slate-500 disabled:opacity-50 disabled:cursor-not-allowed')
                 }`}
             >
                 {isExamCorrect 

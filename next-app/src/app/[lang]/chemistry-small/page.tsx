@@ -26,7 +26,7 @@ export default async function ChemistrySmallDashboard({ params }: { params: Prom
     <div className="max-w-4xl mx-auto py-10 px-6">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
-          化学小题特训 <span className="text-indigo-600 dark:text-indigo-400">Chemistry</span>
+          化学小题特训 <span className="text-indigo-600 dark:text-slate-300">Chemistry</span>
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           专注化学基础小题专项突破。强化反应方程式与基本概念，提升解题效率。
@@ -44,7 +44,7 @@ export default async function ChemistrySmallDashboard({ params }: { params: Prom
               <span className="text-6xl">{category.icon}</span>
             </div>
             <div className="flex flex-col h-full">
-               <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+               <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                  {category.icon}
                </div>
                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{category.name}</h3>

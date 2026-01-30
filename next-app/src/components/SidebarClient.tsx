@@ -76,27 +76,22 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         overflow-y-auto no-scrollbar
       `}>
         <div className="p-6">
-          <div className="flex items-center justify-between mb-4.5">
-            <Link href={`/${lang}`} onClick={() => setIsOpen(false)}>
-              <h1 className="text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tight">
-                高考 <span className="text-indigo-500">Gaokao</span>
-              </h1>
-            </Link>
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2 text-[13px] font-black tracking-widest uppercase">
+              <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+                中文
+              </Link>
+              <span className="text-slate-200 dark:text-slate-800">/</span>
+              <Link href="/en" className={`transition-colors ${lang === 'en' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+                EN
+              </Link>
+            </div>
             <ThemeToggle />
-          </div>
-          
-          <div className="flex gap-3 text-xs mb-4.5">
-            <Link href="/cn" className={`px-4 py-2 rounded-full font-bold transition-all ${lang === 'cn' ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-50' : 'text-slate-500 hover:bg-slate-200'}`}>
-              中文
-            </Link>
-            <Link href="/en" className={`px-4 py-2 rounded-full font-bold transition-all ${lang === 'en' ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-50' : 'text-slate-500 hover:bg-slate-200'}`}>
-              English
-            </Link>
           </div>
 
           {userEmail && (
-            <div className="mb-6 p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden">
-                <p className="text-sm font-bold text-slate-700 dark:text-slate-300 truncate" title={userEmail}>{userEmail}</p>
+            <div className="mb-6 p-3 bg-white dark:bg-slate-800/80 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden">
+                <p className="text-sm font-bold text-slate-700 dark:text-white truncate" title={userEmail}>{userEmail}</p>
             </div>
           )}
 

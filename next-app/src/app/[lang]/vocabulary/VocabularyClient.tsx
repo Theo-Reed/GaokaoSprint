@@ -391,7 +391,7 @@ export default function VocabularyClient() {
             </button>
         </div>
 
-        <div className="text-[10px] font-black tracking-tighter text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-indigo-800 uppercase">
+        <div className="text-[10px] font-black tracking-tighter text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 uppercase">
           Mastery: {masteredCount}
         </div>
       </div>
@@ -432,7 +432,7 @@ export default function VocabularyClient() {
 
             <div className="flex space-x-1 mb-6 opacity-20">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-200 dark:text-slate-700'}`}>★</span>
+                <span key={i} className={`text-xs ${i < currentWord.stats.stars ? 'text-indigo-600 dark:text-slate-300' : 'text-slate-200 dark:text-slate-700'}`}>★</span>
               ))}
             </div>
 
@@ -449,14 +449,14 @@ export default function VocabularyClient() {
                           {definitionMode === 'bilingual' ? (
                               <div>
                                   <div className="font-black text-slate-900 dark:text-white mb-1 flex items-baseline gap-2">
-                                    <span className="italic text-xs text-indigo-500 dark:text-indigo-400 font-serif leading-none">{formatPos(currentWord.pos?.[i])}.</span> 
+                                    <span className="italic text-xs text-indigo-500 dark:text-slate-300 font-serif leading-none">{formatPos(currentWord.pos?.[i])}.</span> 
                                     <span className="text-xl">{currentWord.meanings.cn?.[i] || ''}</span>
                                   </div>
                                   <div className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{m}</div>
                               </div>
                           ) : (
                               <div className="flex gap-3">
-                                <span className="italic text-xs text-indigo-500 dark:text-indigo-400 font-serif min-w-[2.5em] mt-1">{formatPos(currentWord.pos?.[i])}.</span>
+                                <span className="italic text-xs text-indigo-500 dark:text-slate-300 font-serif min-w-[2.5em] mt-1">{formatPos(currentWord.pos?.[i])}.</span>
                                 <span className="text-slate-700 dark:text-slate-300 font-medium">{m}</span>
                               </div>
                           )}
@@ -478,7 +478,7 @@ export default function VocabularyClient() {
                       <div className="space-y-3">
                         {examplesToDisplay.map((ex, i) => (
                           <div key={i} className="text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-800/50 border border-slate-100/50 dark:border-slate-700/50 p-3 rounded-2xl text-sm leading-relaxed"
-                               dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 dark:text-indigo-400 font-black decoration-indigo-200 dark:decoration-indigo-800 decoration-2 underline-offset-4">$1</span>') }}
+                               dangerouslySetInnerHTML={{ __html: ex.replace(/\*\*(.*?)\*\*/g, '<span class="text-indigo-600 dark:text-slate-300 font-black decoration-indigo-200 dark:decoration-indigo-800 decoration-2 underline-offset-4">$1</span>') }}
                           />
                         ))}
                       </div>
@@ -495,7 +495,7 @@ export default function VocabularyClient() {
       <div className="p-6 grid grid-cols-3 gap-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] dark:shadow-none">
         <button 
           onClick={() => handleAction('mastered')}
-          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/30 dark:hover:bg-indigo-900/30"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-400 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50/30 dark:hover:bg-indigo-900/30"
         >
           <span className="text-xl mb-1">👑</span>
           <span className="font-black text-[10px] uppercase tracking-wider">掌握</span>
@@ -503,7 +503,7 @@ export default function VocabularyClient() {
 
         <button 
           onClick={() => handleAction('familiar')}
-          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/30 dark:hover:bg-indigo-900/30"
+          className="flex flex-col items-center justify-center py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-400 transition-all active:scale-95 hover:border-indigo-300 dark:hover:border-indigo-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50/30 dark:hover:bg-indigo-900/30"
         >
           <span className="text-xl mb-1">👍</span>
           <span className="font-black text-[10px] uppercase tracking-wider">认识</span>

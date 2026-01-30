@@ -8,52 +8,49 @@
   --background: #ffffff;
   --foreground: #171717;
   --slate-50: #ffffff;
-  --slate-100: #f8fafc;
-  --slate-200: #e2e8f0;
-  --slate-300: #cbd5e1;
-  --slate-400: #94a3b8;
-  --slate-500: #64748b;
-  --slate-600: #475569;
-  --slate-700: #334155;
-  --slate-800: #1e293b;
+  --slate-100: #f1f5f9;
   --slate-900: #0f172a;
   --slate-950: #020617;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --indigo-500: #6366f1;
+  --indigo-400: #818cf8;
+  --indigo-600: #4f46e5;
 }
 
 .dark {
   --background: #131314;
   --foreground: #e3e3e3;
-  --slate-50: #1e1f20;
-  --slate-100: #252526;
-  --slate-200: #333333;
-  --slate-300: #454545;
-  --slate-400: #b4b4b4;
-  --slate-500: #94a3b8;
-  --slate-600: #64748b;
-  --slate-700: #475569;
-  --slate-800: #2f2f31;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
   --slate-900: #1e1f20;
   --slate-950: #131314;
+  --slate-800: #2b2c2e;
+  --slate-700: #3c4043;
+  --indigo-500: #8ab4f8;
+  --indigo-400: #8ab4f8;
+  --indigo-600: #1a73e8;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Reference our CSS variables so they update on theme change */
   --color-slate-50: var(--slate-50);
   --color-slate-100: var(--slate-100);
-  --color-slate-200: var(--slate-200);
-  --color-slate-300: var(--slate-300);
-  --color-slate-400: var(--slate-400);
-  --color-slate-500: var(--slate-500);
-  --color-slate-600: var(--slate-600);
-  --color-slate-700: var(--slate-700);
-  --color-slate-800: var(--slate-800);
   --color-slate-900: var(--slate-900);
   --color-slate-950: var(--slate-950);
+  --color-slate-800: var(--slate-800);
+  --color-slate-700: var(--slate-700);
+  
+  --color-indigo-500: var(--indigo-500);
+  --color-indigo-400: var(--indigo-400);
+  --color-indigo-600: var(--indigo-600);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
@@ -84,31 +81,33 @@ body {
   .prose :where(thead th) {
     white-space: nowrap !important;
     word-break: keep-all !important;
-    background-color: #f8fafc !important; /* slate-50 */
+    background-color: var(--slate-100) !important;
     padding: 0.75rem 1rem !important;
     min-width: 140px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--slate-200);
     text-align: left;
     font-weight: 600;
+    color: var(--foreground);
   }
   
   .dark .prose :where(thead th) {
-    background-color: #1e293b !important; /* slate-800 */
-    border-color: #334155 !important; /* slate-700 */
-    color: #e2e8f0 !important; /* slate-200 */
+    background-color: var(--slate-800) !important;
+    border-color: var(--slate-700) !important;
+    color: var(--foreground) !important;
   }
 
   .prose :where(tbody td) {
     word-break: break-word;
     padding: 0.75rem 1rem !important;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--slate-200);
     line-height: 1.6;
     vertical-align: top;
+    color: var(--foreground);
   }
 
   .dark .prose :where(tbody td) {
-    border-color: #334155 !important; /* slate-700 */
-    color: #cbd5e1 !important; /* slate-300 */
+    border-color: var(--slate-700) !important;
+    color: var(--foreground) !important;
   }
 
   /* Add horizontal scroll for small screens if table overflows */

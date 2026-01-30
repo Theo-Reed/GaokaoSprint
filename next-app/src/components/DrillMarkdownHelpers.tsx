@@ -86,21 +86,39 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
 
 export const markdownComponents = {
   p: ({children}: {children?: React.ReactNode}) => (
-    <div className="mb-4 text-slate-800 dark:text-slate-200 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
+    <div className="mb-4 text-slate-800 dark:text-white/90 leading-relaxed font-serif whitespace-pre-wrap">{children}</div>
   ),
   table: ({children}: {children?: React.ReactNode}) => (
-    <div className="table-container shadow-sm my-6 border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden overscroll-contain">
-      <table className="min-w-full divide-y divide-slate-200 dark:divide-slate-700">{children}</table>
+    <div className="table-container shadow-sm my-6 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden overscroll-contain">
+      <table className="min-w-full divide-y divide-slate-200 dark:divide-slate-800">{children}</table>
     </div>
   ),
   th: ({children}: {children?: React.ReactNode}) => (
-    <th className="px-4 py-3 bg-slate-50 dark:bg-slate-800 text-left text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider border-b border-r border-slate-200 dark:border-slate-700 last:border-r-0">{children}</th>
+    <th className="px-4 py-3 bg-slate-50 dark:bg-slate-900/50 text-left text-xs font-bold text-slate-500 dark:text-white/90 uppercase tracking-wider border-b border-r border-slate-200 dark:border-slate-800 last:border-r-0">{children}</th>
   ),
   td: ({children}: {children?: React.ReactNode}) => (
-    <td className="px-4 py-3 text-sm text-slate-600 dark:text-slate-300 border-b border-r border-slate-200 dark:border-slate-700 last:border-r-0 bg-white dark:bg-slate-900">{children}</td>
+    <td className="px-4 py-3 text-sm text-slate-600 dark:text-white/80 border-b border-r border-slate-200 dark:border-slate-800 last:border-r-0 bg-white dark:bg-transparent">{children}</td>
+  ),
+  strong: ({children}: {children?: React.ReactNode}) => (
+    <strong className="font-bold text-slate-900 dark:text-white">{children}</strong>
+  ),
+  li: ({children}: {children?: React.ReactNode}) => (
+    <li className="text-slate-800 dark:text-white/90 mb-1">{children}</li>
+  ),
+  h1: ({children}: {children?: React.ReactNode}) => (
+    <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{children}</h1>
+  ),
+  h2: ({children}: {children?: React.ReactNode}) => (
+    <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{children}</h2>
+  ),
+  h3: ({children}: {children?: React.ReactNode}) => (
+    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{children}</h3>
+  ),
+  span: ({children}: {children?: React.ReactNode}) => (
+    <span className="dark:text-white/90">{children}</span>
   )
 };
 
 export const simpleMarkdownComponents = {
-  p: ({children}: {children?: React.ReactNode}) => <div className="whitespace-pre-wrap">{children}</div>
+  p: ({children}: {children?: React.ReactNode}) => <div className="whitespace-pre-wrap dark:text-slate-100">{children}</div>
 };

@@ -125,8 +125,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     if (!currentQ) {
         return (
             <div className="p-10 flex flex-col items-center justify-center min-h-[50vh]">
-                <h2 className="text-xl font-bold mb-4 text-slate-400 dark:text-slate-500">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
-                <Link href={`/${lang}/physics-small`} className="text-indigo-600 dark:text-indigo-400 hover:underline">返回专题选择</Link>
+                <h2 className="text-xl font-bold mb-4 text-slate-400 dark:text-slate-400">该专题暂无题目 ({CATEGORY_NAMES[category]})</h2>
+                <Link href={`/${lang}/physics-small`} className="text-indigo-600 dark:text-slate-300 hover:underline">返回专题选择</Link>
             </div>
         );
     }
@@ -151,7 +151,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         返回
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-                        {CATEGORY_NAMES[category]} <span className="text-indigo-600 dark:text-indigo-400">小题特训</span>
+                        {CATEGORY_NAMES[category]} <span className="text-indigo-600 dark:text-slate-300">小题特训</span>
                     </h1>
                 </div>
                 <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xl font-bold ${timer > 180 ? 'bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-200' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}`}>
@@ -163,7 +163,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             <div className="bg-white dark:bg-slate-900 shadow-lg rounded-2xl pt-[29px] px-8 pb-8 mb-6 border border-slate-100 dark:border-slate-800 flex-grow relative overflow-hidden">
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-700">
                     {currentQ.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
+                        <span className="inline-flex items-center px-3 py-1 bg-slate-50 dark:bg-slate-800/50 text-indigo-700 dark:text-slate-200 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                             {currentQ.source}
                         </span>
                     )}
@@ -171,7 +171,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         第 {currentQ.question_number} 题 / 第 {currentQ.type_rank} 道{currentQ.type === 'single_choice' ? '单选题' : currentQ.type === 'multi_choice' ? '多选题' : '填空题'}
                     </span>
                     {isSubmitted && (
-                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'}`}>
+                        <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${isCorrect() ? 'bg-indigo-600 dark:bg-slate-500 text-white border-indigo-600 dark:border-indigo-500' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'}`}>
                             {isCorrect() ? <CheckCircle2 size={14} className="mr-1" /> : <XCircle size={14} className="mr-1" />}
                             {isCorrect() ? '回答正确' : '回答错误'}
                         </span>
@@ -206,8 +206,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             let badgeClass = "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold border ";
                             if (isSubmitted) {
                                 if (isCorrectOpt) {
-                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/40 border-indigo-600 dark:border-indigo-500 text-indigo-900 dark:text-indigo-100 ring-1 ring-indigo-600/20 ";
-                                    badgeClass += "bg-indigo-600 dark:bg-indigo-500 text-white border-indigo-600 dark:border-indigo-500 shadow-sm";
+                                    buttonClass += "bg-slate-50 dark:bg-slate-800/60 border-indigo-600 dark:border-indigo-500 text-indigo-900 dark:text-slate-100 ring-1 ring-indigo-600/20 ";
+                                    badgeClass += "bg-indigo-600 dark:bg-slate-500 text-white border-indigo-600 dark:border-indigo-500 shadow-sm";
                                 } else if (isSelected) {
                                     buttonClass += "bg-slate-50 dark:bg-red-900/20 border-slate-300 dark:border-red-900/50 text-slate-400 dark:text-red-300 ";
                                     badgeClass += "bg-slate-400 dark:bg-red-800 text-white border-slate-400 dark:border-red-800";
@@ -217,7 +217,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                 }
                             } else {
                                 if (isSelected) {
-                                    buttonClass += "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 text-indigo-700 dark:text-indigo-200 shadow-md ";
+                                    buttonClass += "bg-slate-50 dark:bg-slate-800/50 border-indigo-500 text-indigo-700 dark:text-slate-200 shadow-md ";
                                     badgeClass += "bg-indigo-600 text-white border-indigo-600 shadow-sm";
                                 } else {
                                     buttonClass += "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800 ";
@@ -251,9 +251,9 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             </div>
                         ) : (
                             <div className="mt-4 animate-in zoom-in-95 duration-300">
-                                <div className="p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 flex flex-col items-center">
-                                    <span className="text-sm font-bold text-indigo-400 dark:text-indigo-300 mb-2 uppercase tracking-wider">正确答案</span>
-                                    <div className="text-2xl font-serif text-indigo-900 dark:text-indigo-100 bg-white dark:bg-slate-800 px-8 py-4 rounded-xl shadow-sm border border-indigo-50 dark:border-indigo-900">
+                                <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 flex flex-col items-center">
+                                    <span className="text-sm font-bold text-indigo-400 dark:text-slate-200 mb-2 uppercase tracking-wider">正确答案</span>
+                                    <div className="text-2xl font-serif text-indigo-900 dark:text-slate-100 bg-white dark:bg-slate-800 px-8 py-4 rounded-xl shadow-sm border border-indigo-50 dark:border-slate-700">
                                         <ReactMarkdown 
                                             remarkPlugins={[remarkMath]} 
                                             rehypePlugins={[rehypeKatex]}
@@ -270,7 +270,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 {isSubmitted && showExplanation && currentQ.explanation && (
                     <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-500">
-                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-indigo-500 rounded-full"></span>答题思路</h3>
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2"><span className="w-1.5 h-6 bg-slate-500 rounded-full"></span>答题思路</h3>
                         <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/50 text-slate-700 dark:text-slate-200 leading-relaxed shadow-sm">
                             <ReactMarkdown 
                                 remarkPlugins={[remarkMath]} 
@@ -285,10 +285,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-                <div className="text-sm text-slate-400 dark:text-slate-500">专题进度：{currentIndex + 1} / {questions.length}</div>
+                <div className="text-sm text-slate-400 dark:text-slate-400">专题进度：{currentIndex + 1} / {questions.length}</div>
                 <div className="flex gap-4 w-full md:w-auto">
                     {!isSubmitted ? (
-                        <button onClick={handleSubmit} disabled={(currentQ.type !== 'fill_in' && selectedOptions.length === 0)} className={`flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${(currentQ.type !== 'fill_in' && selectedOptions.length === 0) ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-100'}`}>检查答案</button>
+                        <button onClick={handleSubmit} disabled={(currentQ.type !== 'fill_in' && selectedOptions.length === 0)} className={`flex-grow md:flex-grow-0 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${(currentQ.type !== 'fill_in' && selectedOptions.length === 0) ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-400 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-none'}`}>检查答案</button>
                     ) : (
                         <div className="flex gap-4 w-full md:w-auto">
                             {currentQ.explanation && (

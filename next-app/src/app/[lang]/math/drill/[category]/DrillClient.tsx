@@ -130,7 +130,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         返回
                     </Link>
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600 dark:text-indigo-400">大题特训</span>
+                        {CATEGORY_NAMES[category] || category} <span className="text-indigo-600 dark:text-slate-300">大题特训</span>
                     </h1>
                  </div>
                  <div className={`
@@ -147,11 +147,11 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {/* Source Badge */}
                 <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                     {question.source && (
-                        <span className="inline-flex items-center px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 text-xs font-medium rounded-full border border-indigo-100 dark:border-indigo-800">
+                        <span className="inline-flex items-center px-3 py-1 bg-slate-50 dark:bg-slate-800/50 text-indigo-700 dark:text-slate-200 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                             {question.source}
                         </span>
                     )}
-                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
+                    <span className="inline-flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-medium rounded-full border border-slate-200 dark:border-slate-700">
                         {question.large_question_rank 
                             ? `第 ${question.question_number} 题 / 第 ${question.large_question_rank} 道大题`
                             : sourceRank
@@ -191,7 +191,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
                 {/* 题目插图区域 (根据 has_figure 字段显示) */}
                 {question.has_figure && (
-                    <div className="my-6 flex flex-col items-center justify-center p-4 transition-all">
+                    <div className="my-6 flex flex-col items-center justify-center p-4 transition-all bg-white dark:bg-transparent rounded-xl">
                         <img 
                             src={`/math-images/${question.source}-${question.question_number}.png`} 
                             alt="题目插图" 
@@ -218,7 +218,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                                     <ReactMarkdown 
                                         remarkPlugins={[remarkMath, remarkGfm]} 
                                         rehypePlugins={[rehypeKatex]}
-                                        components={simpleMarkdownComponents}
+                                        components={markdownComponents}
                                     >
                                         {sanitizeMath(question.thought_process)}
                                     </ReactMarkdown>
@@ -238,8 +238,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             onClick={() => setShowHint(!showHint)}
                             className={`px-6 py-4 rounded-xl font-bold transition-all border ${
                                 showHint 
-                                ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' 
-                                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
+                                ? 'bg-amber-100 dark:bg-amber-900/40 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-200' 
+                                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
                             } flex items-center justify-center gap-2`}
                          >
                              <Lightbulb size={18} />
@@ -247,7 +247,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                          </button>
                          <button 
                             onClick={handleNext}
-                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-indigo-600 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-100 dark:shadow-none"
+                            className="flex-grow md:flex-grow-0 px-8 py-4 bg-indigo-600 dark:bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-none"
                          >
                              下一题
                              <ChevronRight size={18} />
