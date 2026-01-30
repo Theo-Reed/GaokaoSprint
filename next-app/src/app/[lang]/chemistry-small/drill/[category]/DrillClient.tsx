@@ -171,12 +171,25 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </ReactMarkdown>
                 </div>
 
-                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all">
+                {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
+                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all empty:hidden">
                     <img 
                         src={`/chemistry-images/${currentQ.id}.png`} 
                         alt="题目插图" 
                         className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
-                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                        onLoad={(e) => {
+                            (e.target as HTMLImageElement).parentElement!.style.padding = '1rem';
+                        }}
+                        onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                                parent.style.margin = '0';
+                                parent.style.padding = '0';
+                                parent.style.height = '0';
+                            }
+                        }}
                     />
                 </div>
 

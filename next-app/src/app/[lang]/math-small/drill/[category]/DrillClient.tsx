@@ -215,8 +215,8 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </ReactMarkdown>
                 </div>
 
-                {/* 题目插图区域 (自动检测是否存在) */}
-                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all">
+                {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
+                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all empty:hidden">
                     <img 
                         src={`/math-images/${currentQ.id}.png`} 
                         alt="题目插图" 
@@ -225,8 +225,14 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             (e.target as HTMLImageElement).parentElement!.style.padding = '1rem';
                         }}
                         onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = 'none';
-                            (e.target as HTMLImageElement).parentElement!.style.padding = '0';
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                                parent.style.margin = '0';
+                                parent.style.padding = '0';
+                                parent.style.height = '0';
+                            }
                         }}
                     />
                 </div>
