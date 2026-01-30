@@ -46,13 +46,13 @@ export default async function MathSmallDashboard({ params }: { params: Promise<{
           <Link 
             key={category.id} 
             href={`/${lang}/math-small/drill/${category.id}`} 
-            className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-violet-200 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1 active:scale-95 active:bg-slate-50 dark:active:bg-slate-800 z-10 block"
+            className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm md:hover:shadow-xl md:hover:border-violet-200 md:dark:hover:border-violet-500 transition-all duration-200 md:hover:-translate-y-1 active:scale-95 active:bg-slate-50 dark:active:bg-slate-800 z-10 block"
           >
-            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity dark:invert pointer-events-none">
+            <div className="absolute top-0 right-0 p-4 opacity-5 md:group-hover:opacity-10 transition-opacity dark:invert pointer-events-none">
               <span className="text-6xl">{category.icon}</span>
             </div>
             <div className="flex flex-col h-full">
-               <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+               <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl flex items-center justify-center text-2xl mb-4 md:group-hover:bg-violet-600 md:group-hover:text-white transition-colors">
                  {category.icon}
                </div>
                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{category.name}</h3>

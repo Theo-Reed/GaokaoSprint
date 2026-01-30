@@ -57,7 +57,7 @@ export default function BiologyExplorer() {
                     className={`w-full text-left p-3 rounded-xl transition-all active:scale-95 ${
                       selectedPoint.id === point.id 
                         ? 'bg-indigo-600 dark:bg-slate-900 text-white shadow-md' 
-                        : 'hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400'
+                        : 'md:hover:bg-slate-50 md:dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400'
                     }`}
                   >
                     <div className="font-bold text-sm tracking-tight">{point.title}</div>

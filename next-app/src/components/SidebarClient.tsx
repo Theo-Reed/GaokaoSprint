@@ -219,7 +219,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-violet-600 dark:hover:text-violet-400 hover:shadow-sm active:scale-95 active:bg-violet-50 dark:active:bg-slate-800 transition-all duration-200"
+                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl md:hover:bg-white md:dark:hover:bg-slate-900 md:hover:text-violet-600 md:dark:hover:text-violet-400 md:hover:shadow-sm active:scale-95 active:bg-violet-50 dark:active:bg-slate-800 transition-all duration-200"
                       >
                         {item.title}
                       </Link>
