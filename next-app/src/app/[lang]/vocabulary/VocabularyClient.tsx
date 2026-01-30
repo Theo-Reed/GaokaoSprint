@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 // @ts-ignore
 import rawData from '@/data/english/vocabulary.json';
 import { supabase } from '@/lib/supabase';
@@ -91,7 +91,7 @@ export default function VocabularyClient() {
   const [masteredCount, setMasteredCount] = useState(0);
 
   // 3. 构建每日学习队列
-  const buildQueue = React.useCallback((map: Map<string, UserProgress>) => {
+  const buildQueue = useCallback((map: Map<string, UserProgress>) => {
     const allWords = rawData as WordData[];
     const now = new Date();
     
@@ -146,7 +146,7 @@ export default function VocabularyClient() {
   }, []);
 
   // 2. 从数据库拉取进度
-  const fetchProgress = React.useCallback(async (userId: string) => {
+  const fetchProgress = useCallback(async (userId: string) => {
     setLoading(true);
     try {
       const { data, error } = await supabase
