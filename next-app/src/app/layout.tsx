@@ -33,6 +33,32 @@ export default function RootLayout({
         <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
         <script
           dangerouslySetInnerHTML={{
+             __html: `
+               window.onerror = function(msg, url, line, col, error) {
+                 var div = document.getElementById('mobile-debug-console');
+                 if (!div) {
+                   div = document.createElement('div');
+                   div.id = 'mobile-debug-console';
+                   div.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:50vh;overflow:auto;background:rgba(180,0,0,0.95);color:white;z-index:999999;padding:12px;font-family:monospace;font-size:12px;pointer-events:none;';
+                   document.documentElement.appendChild(div);
+                 }
+                 div.innerHTML += '<div style="margin-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;"><strong>[Error]</strong> ' + msg + '<br/><span style="opacity:0.8">' + (url||'').split('/').pop() + ':' + line + '</span></div>';
+               };
+               window.onunhandledrejection = function(e) {
+                 var div = document.getElementById('mobile-debug-console');
+                  if (!div) {
+                   div = document.createElement('div');
+                   div.id = 'mobile-debug-console';
+                   div.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:50vh;overflow:auto;background:rgba(180,0,0,0.95);color:white;z-index:999999;padding:12px;font-family:monospace;font-size:12px;pointer-events:none;';
+                   document.documentElement.appendChild(div);
+                 }
+                 div.innerHTML += '<div style="margin-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;"><strong>[Promise]</strong> ' + (e.reason ? e.reason.toString() : 'Unknown Rejection') + '</div>';
+               };
+             `
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
