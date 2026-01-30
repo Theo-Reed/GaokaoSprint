@@ -174,7 +174,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
                 <div className="my-6 flex flex-col items-center justify-center p-0 transition-all empty:hidden">
                     <img 
-                        src={`/chemistry-images/${currentQ.id}.png`} 
+                        src={`/chemistry-images/${currentQ.source}-${currentQ.question_number}.png`} 
                         alt="题目插图" 
                         className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
                         onLoad={(e) => {
