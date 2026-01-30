@@ -95,6 +95,16 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExplanation, setShowExplanation] = useState(false);
 
+    const resetQuestionState = () => {
+        setSelectedOptions([]);
+        setFillInAnswer("");
+        setIsSubmitted(false);
+        setShowExplanation(false);
+        setTimer(0);
+        setIsTimerRunning(true);
+
+    };
+
     // Initial Pick
     useEffect(() => {
         if (!strategyLoading && allCategoryQuestions.length > 0 && !currentQuestion) {
@@ -113,15 +123,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         }
         return () => clearInterval(interval);
     }, [isTimerRunning]);
-
-    const resetQuestionState = () => {
-        setSelectedOptions([]);
-        setFillInAnswer("");
-        setIsSubmitted(false);
-        setShowExplanation(false);
-        setTimer(0);
-        setIsTimerRunning(true);
-    };
 
     const formatTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);

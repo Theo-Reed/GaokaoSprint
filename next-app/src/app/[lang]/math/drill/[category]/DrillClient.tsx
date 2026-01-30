@@ -29,18 +29,18 @@ interface DrillClientProps {
 }
 
 const getRandomQuestion = (category: string) => {
-    const filtered = questionsData.filter(q => q.category === category);
+    if (!questionsData || !Array.isArray(questionsData)) return null;
+    const filtered = (questionsData as unknown as Question[]).filter(q => q.category === category);
     if (filtered.length === 0) return null;
     return filtered[Math.floor(Math.random() * filtered.length)];
 };
 
 const getQuestionRankInSource = (currentQ: Question): number | null => {
-    if (!currentQ.source) return null;
+    if (!currentQ.source || !questionsData || !Array.isArray(questionsData)) return null;
     
     // Filter questions from the same source
-    // Note: casting questionsData to any[] to avoid strict type checks on json import if needed, 
-    // but here it matches implicitly. Use explicit filter.
     const sameSourceQs = (questionsData as unknown as Question[]).filter(q => q.source === currentQ.source);
+
     
     // Sort by question_number strictly as integers
     sameSourceQs.sort((a, b) => {
@@ -176,22 +176,15 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         >
                             {sanitizeMath(question.content)
                                 .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
-                                .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行，以便处理上下文
-                                .split(/(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g) // 仅针对 1, 2... 或 i, ii... 进行分割
-                                .map((part, index, array) => {
-                                    // 如果是小问标记，检查其上下文
-                                    if (/^(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)$/.test(part)) {
-                                        const prevPart = index > 0 ? array[index - 1] : "";
-                                        // 只有当编号位于开头，或者前面有空白字符（空格/换行）时，才触发换行
-                                        if (index === 0 || /\s$/.test(prevPart)) {
-                                            return `\n\n${part}`;
-                                        }
-                                        return part; // 否则保持原样（如在一句话中间的引用）
-                                    }
-                                    // Don't strip newlines
-                                    return part.replace(/\r/g, '');
+                                .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行
+                                // 智能排版：在 (1), (2), (i) 等小题号前自动换行，但在行内引用时保持原样
+                                // 使用 replace 而非 split 以确保 Safari 兼容性并提升性能
+                                .replace(/(\s|^)(\((?:[1-9]\d*|i+|v|vi)\)|（[1-9]\d*）)/g, (match, prefix, num) => {
+                                    // 如果前缀包含换行符，说明已经是新行，不需要处理
+                                    if (prefix.includes('\n')) return match;
+                                    // 否则强制添加双换行
+                                    return `\n\n${num}`;
                                 })
-                                .join('')
                                 .trim()}
                         </ReactMarkdown>
                     </div>
