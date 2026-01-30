@@ -28,6 +28,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var isMobile = window.innerWidth < 768;
+                  var key = isMobile ? 'gaokao-theme-mobile' : 'gaokao-theme-desktop';
+                  var theme = localStorage.getItem(key);
+                  if (!theme) {
+                    theme = isMobile ? 'light' : 'dark';
+                  }
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`antialiased`}
       >

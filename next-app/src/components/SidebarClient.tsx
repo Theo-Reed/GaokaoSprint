@@ -93,11 +93,11 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-2 text-[13px] font-black tracking-widest uppercase">
-              <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-slate-900 dark:text-white' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+              <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-violet-600 dark:text-violet-400' : 'text-slate-400 dark:text-slate-600 hover:text-violet-600 dark:hover:text-violet-400'}`}>
                 中文
               </Link>
               <span className="text-slate-200 dark:text-slate-800">/</span>
-              <Link href="/en" className={`transition-colors ${lang === 'en' ? 'text-slate-900 dark:text-white' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+              <Link href="/en" className={`transition-colors ${lang === 'en' ? 'text-violet-600 dark:text-violet-400' : 'text-slate-400 dark:text-slate-600 hover:text-violet-600 dark:hover:text-violet-400'}`}>
                 EN
               </Link>
             </div>
@@ -115,7 +115,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
               <div key={section.title} className="space-y-2">
                 <button 
                   onClick={() => toggleSection(section.title)}
-                  className="w-full flex items-center justify-between text-sm font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors group"
+                  className="w-full flex items-center justify-between text-sm font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest hover:text-violet-600 dark:hover:text-violet-400 transition-colors group"
                 >
                   <span>{section.title}</span>
                   <span className={`transform transition-transform duration-200 ${collapsedSections[section.title] ? '-rotate-90' : 'rotate-0'}`}>
@@ -129,7 +129,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white hover:shadow-sm transition-all duration-200"
+                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-violet-600 dark:hover:text-violet-400 hover:shadow-sm transition-all duration-200"
                       >
                         {item.title}
                       </Link>

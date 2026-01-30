@@ -16,9 +16,11 @@
   --indigo-500: #8b5cf6;
   --indigo-400: #a78bfa;
   --indigo-600: #7c3aed;
+  --indigo-700: #6d28d9;
   --violet-500: #8b5cf6;
   --violet-400: #a78bfa;
   --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
 }
 
 .dark {
@@ -36,9 +38,11 @@
   --indigo-500: #a78bfa;
   --indigo-400: #c4b5fd;
   --indigo-600: #8b5cf6;
+  --indigo-700: #7c3aed;
   --violet-500: #a78bfa;
   --violet-400: #c4b5fd;
   --violet-600: #8b5cf6;
+  --violet-700: #7c3aed;
 }
 
 @theme {
@@ -54,10 +58,12 @@
   --color-indigo-500: var(--indigo-500);
   --color-indigo-400: var(--indigo-400);
   --color-indigo-600: var(--indigo-600);
+  --color-indigo-700: var(--indigo-700);
 
   --color-violet-500: var(--violet-500);
   --color-violet-400: var(--violet-400);
   --color-violet-600: var(--violet-600);
+  --color-violet-700: var(--violet-700);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

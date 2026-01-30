@@ -17,47 +17,36 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
     clean = clean.replace(/(?<!\n)\n(?!\n)/g, ' ');
   }
 
-  // 3. Normalize delimiters
-  clean = clean.replace(/\$\$/g, '$');
+  // 3. Normalize delimiters - ONLY if they are not already properly escaped
+  // High-level check: if we have $$ and they aren't part of a code block, 
+  // we usually want them to stay $$ for block math, but next-app uses $ for everything.
+  // We'll keep this but make it safer.
+  clean = clean.replace(/\$\$\$/g, '$'); 
 
-  // 4. Known LaTeX commands that should be double-escaped if they come in as single-escaped or unescaped in some contexts
-  // We essentially want `\sin` in the final string, so if we see `\\sin` (which might be in JSON string), we convert to `\sin`.
-  // Wait, the regex `\\\\sin` matches literal `\\sin` in the string.
-  // The replacement is `\$1` which is `\sin`.
-  // This seems to be fixing double-escaped backslashes from JSON data.
+  // 4. Fix escaped backslashes common in JSON data
+  // Only target actual LaTeX commands that were double-escaped (e.g., \\frac -> \frac)
   const knownCommands = [
-    // Trig & Log
     'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan',
     'ln', 'log', 'lg', 'exp',
-    // Greek Lowercase
     'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 
-    'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-    // Greek Uppercase
-    'Gamma', 'Delta', 'Theta', 'Lambda', 'Xi', 'Pi', 'Sigma', 'Upsilon', 'Phi', 'Psi', 'Omega',
-    // Operators & Calculus
-    'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty',
-    'cdot', 'times', 'div', 'pm', 'mp',
-    // Relations
+    'lambda', 'mu', 'nu', 'xi', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+    'frac', 'sqrt', 'int', 'sum', 'prod', 'lim', 'infty', 'cdot', 'times', 'div', 'pm', 'mp',
     'le', 'ge', 'leq', 'geq', 'ne', 'neq', 'approx', 'equiv', 'cong',
-    // Sets & Logic
-    'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset',
-    'forall', 'exists',
-    // Vectors, Accents, Geometry
-    'vec', 'hat', 'bar', 'tilde', 'angle', 'triangle', 'bot', 'parallel', 'perp', 'deg', 'degree',
-    // Arrows
-    'leftarrow', 'rightarrow', 'leftrightarrow', 'Leftarrow', 'Rightarrow', 'Leftrightarrow', 
-    'uparrow', 'downarrow', 'leftharpoons', 'leftrightharpoons',
-    // Chemistry
-    'mol', 'aq', 's', 'l', 'g', 'pH',
-    // Physics / Others often found
-    'B', 'F', 'E', 'Phi', 'v', 'a', 'm', 'K', 'Q', 'c', 'k', 'h'
+    'in', 'subset', 'subseteq', 'cup', 'cap', 'emptyset', 'forall', 'exists',
+    'vec', 'hat', 'bar', 'tilde', 'angle', 'triangle', 'bot', 'parallel', 'perp', 'deg', 'degree'
   ];
 
+  // This specifically looks for double-escaped backslashes before known commands
+  // We remove 'K', 'k', 'c' etc because they are often just letters in text
   const commandPattern = new RegExp(`\\\\\\\\(${knownCommands.join('|')})\\b`, 'g');
   clean = clean.replace(commandPattern, '\\$1');
 
-  // 5. Fix double-escaped braces and pipes
-  clean = clean.replace(/\\\\\{/g, '\\{').replace(/\\\\\}/g, '\\}').replace(/\\\\\|/g, '\\|');
+  // 5. Fix double-escaped braces and symbols
+  clean = clean.replace(/\\\\\{/g, '\\{')
+               .replace(/\\\\\}/g, '\\}')
+               .replace(/\\\\\|/g, '\\|')
+               .replace(/\\\\%/g, '\\%')
+               .replace(/\\%/g, '\\%'); // Ensure % is properly escaped for KaTeX
 
   // 6. Heuristic: wrapping likely math expressions in $...$ if they are not already
   if (clean.includes('\\') && !clean.includes('$')) {
@@ -113,9 +102,6 @@ export const markdownComponents = {
   ),
   h3: ({children}: {children?: React.ReactNode}) => (
     <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{children}</h3>
-  ),
-  span: ({children}: {children?: React.ReactNode}) => (
-    <span className="dark:text-white/90">{children}</span>
   )
 };
 
