@@ -178,7 +178,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                             components={markdownComponents}
                         >
                             {sanitizeMath(question.content)
-                                .replace(/^\s*\d+[\.、\s]*/, '') // 移除开头的题号
+                                .replace(/^\s*\d+[.、\s]*/, '') // 移除开头的题号
                                 .replace(/\\n/g, '\n') // 先将字面量 \n 转换为真实换行
                                 // 智能排版：在 (1), (2), (i) 等小题号前自动换行，但在行内引用时保持原样
                                 // 使用 replace 而非 split 以确保 Safari 兼容性并提升性能

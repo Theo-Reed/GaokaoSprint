@@ -185,7 +185,7 @@ export default function DrillClient({ lang, category, initialQuestions }: DrillC
                             components={markdownComponents}
                         >
                             {sanitizeMath(currentQ.content)
-                                .replace(/^\s*\d+[\.．、\s]*/, '') // 移除开头的题号
+                                .replace(/^\s*\d+[.．、\s]*/, '') // 移除开头的题号
                                 .replace(/\\n/g, '\n')
                                 .replace(/\$?(\\quad|\s*\\quad\s*)\$?/g, ' _ ')
                                 .trim()}

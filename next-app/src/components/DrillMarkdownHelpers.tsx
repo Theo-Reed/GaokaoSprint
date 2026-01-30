@@ -58,7 +58,9 @@ export const sanitizeMath = (text: string, options: SanitizeOptions = {}) => {
   // 6. Heuristic: wrapping likely math expressions in $...$ if they are not already
   if (clean.includes('\\') && !clean.includes('$')) {
       // If text looks like a formula (contains backslash, ops, etc) and is short
-      if (/^[0-9a-z\s+\-*\/\=_,.()\\{}[\]^]+$/i.test(clean) && clean.length < 100) {
+      // Regex updated for iOS 16 compatibility: removed unnecessary escapes like \= 
+      // and placed hyphen at the end of class to avoid escaping.
+      if (/^[0-9a-z\s+*/=_,.(){}[\]^\\-]+$/i.test(clean) && clean.length < 100) {
            clean = `$${clean}$`;
       }
   }
