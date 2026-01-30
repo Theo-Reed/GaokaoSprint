@@ -24,6 +24,12 @@ interface SidebarClientProps {
 export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
+
+  // Floating button state
+  const [pos, setPos] = useState({ x: -1, y: 16 }); // -1 means right-aligned initially
+  const [isDragging, setIsDragging] = useState(false);
+  const [isLongPressed, setIsLongPressed] = useState(false);
+  const longPressTimer = React.useRef<NodeJS.Timeout | null>(null);
   
   // Set default collapsed state for sections
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
@@ -48,6 +54,56 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
     }));
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (window.innerWidth >= 768) return; // Only mobile
+    const touch = e.touches[0];
+    const startX = touch.clientX;
+    const startY = touch.clientY;
+
+    longPressTimer.current = setTimeout(() => {
+      setIsLongPressed(true);
+      if (window.navigator.vibrate) window.navigator.vibrate(50); // Haptic feedback if available
+    }, 500);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isLongPressed) {
+      if (longPressTimer.current) {
+        clearTimeout(longPressTimer.current);
+        longPressTimer.current = null;
+      }
+      return;
+    }
+
+    e.preventDefault(); // Prevent scrolling during drag
+    setIsDragging(true);
+    const touch = e.touches[0];
+    setPos({ x: touch.clientX, y: touch.clientY });
+  };
+
+  const handleTouchEnd = () => {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+      longPressTimer.current = null;
+    }
+
+    if (isLongPressed) {
+      // Snap logic
+      const screenWidth = window.innerWidth;
+      const isLeft = pos.x < screenWidth / 2;
+      setPos(prev => ({ 
+        x: isLeft ? 16 : screenWidth - 16, 
+        y: prev.y 
+      }));
+      
+      // Reset modes
+      setTimeout(() => {
+        setIsLongPressed(false);
+        setIsDragging(false);
+      }, 50);
+    }
+  };
+
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user?.email) {
@@ -58,10 +114,22 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Draggable with snap */}
       <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white"
+        onClick={() => {
+          if (!isDragging) setIsOpen(!isOpen);
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{
+          position: 'fixed',
+          top: `${pos.y - 20}px`,
+          left: pos.x === -1 ? 'auto' : `${pos.x - 20}px`,
+          right: pos.x === -1 ? '16px' : 'auto',
+          touchAction: 'none'
+        }}
+        className={`z-[70] p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-shadow ${isLongPressed ? 'scale-110 shadow-lg ring-2 ring-violet-500' : ''}`}
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
