@@ -176,7 +176,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         fixed top-0 h-screen w-64 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800
         transform transition-transform duration-300 ease-in-out z-[60]
         ${menuSide === 'left' ? 'left-0 border-r' : 'right-0 border-l'}
-        ${isOpen ? 'translate-x-0' : (menuSide === 'left' ? '-translate-x-full' : 'translate-x-full')}
+        ${isOpen ? 'translate-x-0 opacity-100 visible pointer-events-auto' : (menuSide === 'left' ? '-translate-x-full' : 'translate-x-full') + ' opacity-0 invisible pointer-events-none md:opacity-100 md:visible md:pointer-events-auto'}
         md:left-0 md:right-auto md:border-r md:translate-x-0 md:block
         overflow-y-auto no-scrollbar
       `}>

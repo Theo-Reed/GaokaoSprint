@@ -158,8 +158,8 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
 
   if (!topic) {
     return (
-      <div className="max-w-4xl mx-auto py-12 px-6">
-        <div className="text-center mb-12">
+      <div className="max-w-4xl mx-auto py-4 md:py-12 px-2 md:px-6">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
             {isCn ? '英语作文限时书写' : 'English Writing Practice'}
           </h2>
@@ -223,7 +223,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto py-8 px-4 md:px-6">
+    <div className="max-w-5xl mx-auto py-4 md:py-8 px-2 md:px-6">
       {/* Header */}
       <div className="flex flex-wrap justify-between items-end gap-4 mb-8">
         <div>
@@ -270,7 +270,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Topic Column */}
         <div className="space-y-6">
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm overflow-auto max-h-[600px]">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm overflow-auto max-h-[600px] overscroll-contain">
             <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
               <AlertCircle size={20} className="text-indigo-500" />
               {isCn ? '题目要求' : 'Prompt'}
@@ -307,9 +307,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
                 placeholder={isCn ? '在此输入你的作文...' : 'Start writing here...'}
-                className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-gray-200 dark:border-slate-800 rounded-2xl focus:border-violet-500 dark:focus:border-violet-400 focus:ring-0 focus:outline-none transition-all bg-white dark:bg-slate-900 font-serif resize-none text-slate-900 dark:text-gray-100 shadow-sm"
+                className="flex-grow min-h-[300px] md:min-h-[450px] w-full p-4 md:p-6 text-lg border-2 border-gray-200 dark:border-slate-800 rounded-2xl focus:border-violet-500 dark:focus:border-violet-400 focus:ring-0 focus:outline-none transition-all bg-white dark:bg-slate-900 font-serif resize-none text-slate-900 dark:text-gray-100 shadow-sm"
               />
-              <div className="absolute bottom-16 right-6 text-xs text-slate-400 dark:text-slate-400 font-mono bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded-md backdrop-blur-sm">
+              <div className="absolute bottom-4 right-4 text-xs text-slate-400 dark:text-slate-400 font-mono bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded-md backdrop-blur-sm">
                 {answer.trim().split(/\s+/).filter(x => x).length} words
               </div>
             </div>
@@ -323,12 +323,12 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
             </div>
           )}
 
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <button 
               onClick={handleSubmit}
               disabled={isSubmitting || (mode === 'write' && !answer.trim())}
               className={`
-                w-[80%] py-3 rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2
+                w-full md:w-[80%] py-3 rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2
                 ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 dark:bg-slate-700/50 cursor-not-allowed' : 'bg-violet-600 hover:bg-violet-700 hover:shadow-none dark:hover:shadow-none hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
               `}
             >
