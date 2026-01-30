@@ -14,22 +14,12 @@ export default async function TrainerPage({ params }: { params: Promise<{ lang: 
         <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
           {isCn ? '英语语法逻辑特训' : 'English Syntax Logic Trainer'}
         </h1>
-        <div className="inline-flex items-center bg-white dark:bg-slate-900 px-4 py-1 rounded-full shadow-sm border border-slate-200 dark:border-slate-800">
-          <span className="w-2 h-2 bg-slate-500 rounded-full mr-2"></span>
-          <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">
-            {isCn ? '目标: 135+' : 'Target: 135+'}
-          </span>
-        </div>
       </div>
 
       {/* Core Training Module */}
       <section>
         <InteractiveTrainer lang={lang} />
       </section>
-      
-      <div className="mt-16 text-center">
-         <p className="text-slate-400 text-sm mb-4">Powered by Gemini 3.0 Pro & Next.js 14</p>
-      </div>
     </div>
   );
 }

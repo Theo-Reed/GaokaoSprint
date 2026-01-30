@@ -24,7 +24,22 @@ interface SidebarClientProps {
 export default function SidebarClient({ lang, nav }: SidebarClientProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
+  
+  // Set default collapsed state for sections
+  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
+    // Collect section titles from nav
+    const initialState: Record<string, boolean> = {};
+    if (nav) {
+      nav.forEach(section => {
+        // Sections that should be collapsed by default
+        const toCollapse = ['生活与健康', '学科策略', 'Life & Health', 'Strategies'];
+        if (toCollapse.includes(section.title)) {
+          initialState[section.title] = true;
+        }
+      });
+    }
+    return initialState;
+  });
 
   const toggleSection = (title: string) => {
     setCollapsedSections(prev => ({
@@ -46,7 +61,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
       {/* Mobile Menu Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+        className="fixed top-4 right-4 z-50 p-2 rounded-md bg-white dark:bg-slate-900 shadow-md md:hidden text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white"
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -78,11 +93,11 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-2 text-[13px] font-black tracking-widest uppercase">
-              <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+              <Link href="/cn" className={`transition-colors ${lang === 'cn' ? 'text-slate-900 dark:text-white' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
                 中文
               </Link>
               <span className="text-slate-200 dark:text-slate-800">/</span>
-              <Link href="/en" className={`transition-colors ${lang === 'en' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
+              <Link href="/en" className={`transition-colors ${lang === 'en' ? 'text-slate-900 dark:text-white' : 'text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400'}`}>
                 EN
               </Link>
             </div>
@@ -100,7 +115,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
               <div key={section.title} className="space-y-2">
                 <button 
                   onClick={() => toggleSection(section.title)}
-                  className="w-full flex items-center justify-between text-sm font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors group"
+                  className="w-full flex items-center justify-between text-sm font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors group"
                 >
                   <span>{section.title}</span>
                   <span className={`transform transition-transform duration-200 ${collapsedSections[section.title] ? '-rotate-90' : 'rotate-0'}`}>
@@ -114,7 +129,7 @@ export default function SidebarClient({ lang, nav }: SidebarClientProps) {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-indigo-600 dark:hover:text-indigo-400 hover:shadow-sm transition-all duration-200"
+                        className="block px-3 py-2 text-sm text-slate-600 dark:text-slate-400 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white hover:shadow-sm transition-all duration-200"
                       >
                         {item.title}
                       </Link>

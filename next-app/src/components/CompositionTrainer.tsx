@@ -169,9 +169,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <button 
             onClick={() => { setMode('write'); setType('small'); startTraining('small'); }}
-            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-left"
           >
-            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Edit3 size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '小作文 (15分)' : 'Small Composition'}</h3>
@@ -179,9 +179,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
           </button>
           <button 
             onClick={() => { setMode('write'); setType('large'); startTraining('large'); }}
-            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-left"
           >
-            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <BookOpen size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '读后续写 (25分)' : 'Story Continuation'}</h3>
@@ -199,9 +199,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <button 
             onClick={() => { setMode('generate'); setType('small'); startTraining('small'); }}
-            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-left"
           >
-            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '生成小作文范文' : 'Generate Small Comp'}</h3>
@@ -209,9 +209,9 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
           </button>
           <button 
             onClick={() => { setMode('generate'); setType('large'); startTraining('large'); }}
-            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-400 hover:shadow-xl transition-all text-left"
+            className="group p-8 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-left"
           >
-            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-slate-500 dark:group-hover:bg-slate-500 group-hover:text-white transition-colors">
+            <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-center text-indigo-500 dark:text-slate-300 mb-6 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-600 group-hover:text-white transition-colors">
               <Zap size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{isCn ? '生成读后续写范文' : 'Generate Story Cont'}</h3>
@@ -284,13 +284,13 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                  <h4 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">帮助结构 (Scaffold)</h4>
                  {topic.scaffold.start && (
                    <div className="mb-4">
-                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">开头必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">开头接续:</span>
                      <p className="text-sm italic text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700">{topic.scaffold.start}</p>
                    </div>
                  )}
                  {topic.scaffold.end && (
                    <div>
-                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">落款必须接续:</span>
+                     <span className="text-xs font-bold text-indigo-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded mb-1 inline-block">落款接续:</span>
                      <p className="text-sm italic text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700">{topic.scaffold.end}</p>
                    </div>
                  )}
@@ -307,7 +307,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
                 placeholder={isCn ? '在此输入你的作文...' : 'Start writing here...'}
-                className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-indigo-400 dark:focus:border-indigo-500 focus:ring-0 transition-all bg-white dark:bg-slate-900 font-serif resize-none text-slate-900 dark:text-gray-100 shadow-sm"
+                className="flex-grow min-h-[450px] w-full p-6 pb-24 text-lg border-2 border-gray-200 dark:border-slate-800 rounded-2xl focus:border-violet-500 dark:focus:border-violet-400 focus:ring-0 focus:outline-none transition-all bg-white dark:bg-slate-900 font-serif resize-none text-slate-900 dark:text-gray-100 shadow-sm"
               />
               <div className="absolute bottom-16 right-6 text-xs text-slate-400 dark:text-slate-400 font-mono bg-white/80 dark:bg-slate-900/80 px-2 py-1 rounded-md backdrop-blur-sm">
                 {answer.trim().split(/\s+/).filter(x => x).length} words
@@ -329,7 +329,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
               disabled={isSubmitting || (mode === 'write' && !answer.trim())}
               className={`
                 w-[80%] py-3 rounded-xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2
-                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 dark:bg-slate-700/50 cursor-not-allowed' : 'bg-slate-500 hover:bg-indigo-600 hover:shadow-none dark:hover:shadow-none hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
+                ${isSubmitting || (mode === 'write' && !answer.trim()) ? 'bg-slate-300/70 dark:bg-slate-700/50 cursor-not-allowed' : 'bg-violet-600 hover:bg-violet-700 hover:shadow-none dark:hover:shadow-none hover:-translate-y-0.5 active:scale-[0.98] blur-none'}
               `}
             >
               {isSubmitting ? (
@@ -462,7 +462,7 @@ export const CompositionTrainer = ({ lang = 'cn' }: { lang?: string }) => {
                   type="text"
                   autoFocus
                   placeholder={isCn ? "搜索年份、省份 (如: 2024 浙江)..." : "Search year or region..."}
-                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 focus:outline-none text-lg font-medium shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl focus:border-violet-500 dark:focus:border-violet-400 focus:outline-none text-lg font-medium shadow-inner text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />

@@ -70,9 +70,9 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
   const isBlocking = !session && !loading;
 
   const text = {
-    mainTitle: isCn ? '高考英语 • 核心能力特训系统' : 'GaoKao English Mastery System',
+    mainTitle: isCn ? '核心能力特训系统' : 'English Mastery System',
     subTitle: isCn ? '深度拆解长难句 / 全考点极速通关' : 'Deep structure analysis & comprehensive exam point training.',
-    footer: isCn ? 'V4.2 • 2026新课标考纲适配' : 'System v4.2 • Optimized for 2026 Curriculum',
+    footer: '',
     
     // Modules
     quizTitle: isCn ? '核心考点全能特训' : 'Core Competency Drill',
@@ -110,15 +110,6 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
       {isBlocking && <AuthOverlay onLoginSuccess={() => {}} />}
 
 
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
-          {text.mainTitle}
-        </h2>
-        <p className="text-slate-500 dark:text-slate-400 text-lg">
-          {text.subTitle}
-        </p>
-      </div>
-
       <div className="flex flex-col gap-6">
         
         {/* Module 1: Full Exam Point Coverage (NOW FIRST) */}
@@ -141,10 +132,6 @@ export const InteractiveTrainer = ({ lang = 'en' }: { lang?: string }) => {
           <SentenceAnalyzer lang={lang} />
         </ExpandableSection>
 
-      </div>
-
-      <div className="text-center text-xs text-slate-500 dark:text-slate-500 mt-12 pb-8">
-        {text.footer}
       </div>
     </div>
   );

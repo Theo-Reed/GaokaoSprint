@@ -27,7 +27,7 @@ export default async function MarkdownPage({ params }: PageProps) {
   }
 
   return (
-    <article className="prose prose-slate lg:prose-lg max-w-none">
+    <article className="prose prose-slate dark:prose-invert lg:prose-lg max-w-none prose-headings:text-slate-900 dark:prose-headings:text-white">
       <div className="overflow-x-auto">
         <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} />
       </div>

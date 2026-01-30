@@ -15,8 +15,8 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
   }
 
   return (
-    <article className="prose prose-slate lg:prose-lg mx-auto">
-      <h1>{data.title}</h1>
+    <article className="prose prose-slate lg:prose-lg mx-auto dark:prose-invert dark:prose-headings:text-white">
+      <h1 className="text-slate-900 dark:text-white">{data.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} />
     </article>
   );
