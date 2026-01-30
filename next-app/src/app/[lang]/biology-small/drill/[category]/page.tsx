@@ -1,6 +1,7 @@
 
 import React from 'react';
 import DrillClient from './DrillClient';
+import biologyQuestions from '@/data/biology/small_questions.json';
 
 interface PageProps {
   params: Promise<{
@@ -46,5 +47,9 @@ export async function generateStaticParams() {
 export default async function BiologySmallDrillPage({ params }: PageProps) {
   const { lang, category } = await params;
   
-  return <DrillClient lang={lang} category={category} />;
+  // Filter questions on the server side to reduce bundle size
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const categoryQuestions = (biologyQuestions as any[] || []).filter((q: any) => q.category === category);
+
+  return <DrillClient lang={lang} category={category} initialQuestions={categoryQuestions} />;
 }

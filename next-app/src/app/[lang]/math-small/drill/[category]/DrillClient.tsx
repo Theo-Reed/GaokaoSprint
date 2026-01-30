@@ -8,16 +8,15 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft, RotateCcw } from 'lucide-react';
-import questionsData from '@/data/math/small_questions.json';
 import Link from 'next/link';
 import { sanitizeMath, markdownComponents } from '@/components/DrillMarkdownHelpers';
 
-interface Option {
+export interface Option {
   label: string;
   text: string;
 }
 
-interface SmallQuestion {
+export interface SmallQuestion {
   id: string;
   question_number: string;
   type: 'single_choice' | 'multi_choice' | 'fill_in';
@@ -35,6 +34,7 @@ interface SmallQuestion {
 interface DrillClientProps {
   lang: string;
   category: string;
+  initialQuestions: SmallQuestion[];
 }
 
 const CATEGORY_NAMES: Record<string, string> = {
@@ -56,7 +56,7 @@ const CATEGORY_NAMES: Record<string, string> = {
 // Removed local sanitizeMath and markdownComponents
 
 
-export default function DrillClient({ lang, category }: DrillClientProps) {
+export default function DrillClient({ lang, category, initialQuestions }: DrillClientProps) {
     const [questions, setQuestions] = useState<SmallQuestion[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
@@ -68,7 +68,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     
     // Safety check for hydration
     const [isMounted, setIsMounted] = useState(false);
-    useEffect(() => { setIsMounted(true); }, []);
+    useEffect(() => { 
+        setIsMounted(true); 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const resetQuestionState = () => {
         setSelectedOptions([]);
@@ -81,19 +84,18 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     useEffect(() => {
         const timerId = setTimeout(() => {
-            if (!questionsData || !Array.isArray(questionsData)) {
+            if (!initialQuestions || !Array.isArray(initialQuestions)) {
                 setQuestions([]);
                 return;
             }
-            const filtered = (questionsData as unknown as SmallQuestion[]).filter(q => q.category === category);
             // Shuffle the questions
-            const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+            const shuffled = [...(initialQuestions as SmallQuestion[])].sort(() => Math.random() - 0.5);
             setQuestions(shuffled);
             setCurrentIndex(0);
             resetQuestionState();
         }, 0);
         return () => clearTimeout(timerId);
-    }, [category]);
+    }, [initialQuestions]);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;

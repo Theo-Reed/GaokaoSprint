@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { ChevronRight, Clock, CheckCircle2, XCircle, ChevronLeft } from 'lucide-react';
-import questionsData from '@/data/biology/small_questions.json';
+// import questionsData from '@/data/biology/small_questions.json';
 import Link from 'next/link';
 import { useDrillStrategy } from '@/hooks/useDrillStrategy';
 import { sanitizeMath, markdownComponents, simpleMarkdownComponents } from '@/components/DrillMarkdownHelpers';
@@ -36,6 +36,8 @@ interface SmallQuestion {
 interface DrillClientProps {
   lang: string;
   category: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  initialQuestions: any[];
 }
 
 const CATEGORY_NAMES: Record<string, string> = {
@@ -62,13 +64,13 @@ const CATEGORY_NAMES: Record<string, string> = {
 // Removed local sanitizeMath and markdownComponents definitions in favor of shared utilities
 
 
-export default function DrillClient({ lang, category }: DrillClientProps) {
+export default function DrillClient({ lang, category, initialQuestions }: DrillClientProps) {
     // Determine pool of questions for this category
     const allCategoryQuestions = React.useMemo(() => {
-        if (!questionsData || !Array.isArray(questionsData)) return [];
+        if (!initialQuestions || !Array.isArray(initialQuestions)) return [];
         
-        const rawQuestions = (questionsData as any[]).filter(q => q.category === category);
-        return rawQuestions.map(q => {
+        // No need to filter again, already filtered by Server Component
+        return initialQuestions.map(q => {
             if (q.id) return q as SmallQuestion;
             // Generate a stable ID based on content hash if ID is missing
             const contentStr = typeof q.content === 'string' ? q.content : JSON.stringify(q);
@@ -81,7 +83,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                 id: `bio-${q.category}-${q.question_number}-${Math.abs(contentHash).toString(16)}`
             } as SmallQuestion;
         });
-    }, [category]);
+    }, [initialQuestions]);
 
     // Use intelligent drill strategy
     const { pickNextQuestion, markAsCorrect, loading: strategyLoading } = useDrillStrategy(allCategoryQuestions, 'biology');

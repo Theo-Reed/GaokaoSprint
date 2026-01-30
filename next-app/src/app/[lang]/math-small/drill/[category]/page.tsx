@@ -1,6 +1,7 @@
 
 import React from 'react';
-import DrillClient from './DrillClient';
+import DrillClient, { SmallQuestion } from './DrillClient';
+import questionsData from '@/data/math/small_questions.json';
 
 interface PageProps {
   params: Promise<{
@@ -40,6 +41,10 @@ export async function generateStaticParams() {
 
 export default async function MathSmallDrillPage({ params }: PageProps) {
   const { lang, category } = await params;
+
+  // Filter questions on the server
+  const allQuestions = questionsData as unknown as SmallQuestion[];
+  const initialQuestions = allQuestions.filter(q => q.category === category);
   
-  return <DrillClient lang={lang} category={category} />;
+  return <DrillClient lang={lang} category={category} initialQuestions={initialQuestions} />;
 }
