@@ -87,6 +87,12 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const { pickNextQuestion, markAsCorrect, loading: strategyLoading } = useDrillStrategy(allCategoryQuestions, 'biology');
 
     const [currentQuestion, setCurrentQuestion] = useState<SmallQuestion | null>(null);
+    const [isMounted, setIsMounted] = useState(false);
+    
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(0); // Only for display progress if needed, or remove? Keeping 0 for minimal break
     const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
     const [fillInAnswer, setFillInAnswer] = useState("");
@@ -187,6 +193,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
 
     // Alias for compatibility
     const currentQ = currentQuestion;
+
+    if (!isMounted) {
+        return <div className="min-h-screen bg-slate-50 dark:bg-slate-950"></div>;
+    }
 
     if (!currentQ) {
         if (strategyLoading) return <div className="p-10 text-center text-slate-500 dark:text-slate-400">Loading Strategy...</div>;

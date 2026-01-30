@@ -65,6 +65,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [timer, setTimer] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(true);
     const [showExplanation, setShowExplanation] = useState(false);
+    
+    // Safety check for hydration
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => { setIsMounted(true); }, []);
 
     const resetQuestionState = () => {
         setSelectedOptions([]);
@@ -141,6 +145,10 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     };
 
     const currentQ = questions[currentIndex];
+
+    if (!isMounted) {
+         return <div className="min-h-screen bg-slate-50 dark:bg-slate-950"></div>;
+    }
 
     if (!currentQ) {
         return (
