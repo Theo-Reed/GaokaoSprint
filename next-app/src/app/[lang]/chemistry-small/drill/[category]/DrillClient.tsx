@@ -28,6 +28,7 @@ interface SmallQuestion {
   explanation?: string;
   score_rule?: string;
   source?: string;
+  has_figure?: boolean;
 }
 
 interface DrillClientProps {

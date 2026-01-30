@@ -1187,7 +1187,7 @@
     "type_rank": 4,
     "category": "trigo_func",
     "content": "已知函数$f(x)=\\sin(\\omega x+\\varphi)$，如图$A, B$是直线$y=\\frac{1}{2}$与曲线$y=f(x)$的两个交点，若$|AB|=\\frac{\\pi}{6}$，则$f(\\pi)=$______．",
-    "has_figure": true,
+    "has_figure": false,
     "options": null,
     "score_rule": "填空题通常每题5分",
     "answer": "$-\\frac{\\sqrt{3}}{2}$"
@@ -1599,7 +1599,7 @@
     "type_rank": 2,
     "category": "probability",
     "content": "为了解某地农村经济情况，对该地农户家庭年收入进行抽样调查，将农户家庭年收入的调查数据整理得到如下频率分布直方图： 根据此频率分布直方图，下面结论中不正确的是",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -1749,7 +1749,7 @@
     "type_rank": 8,
     "category": "trigo_sol",
     "content": "2020年12月8日，中国和尼泊尔联合公布珠穆朗玛峰最新高程为8848.86（单位：m），三角高程测量法是珠峰高程测量方法之一．如图是三角高程测量法的一个示意图，现有$A, B, C$三点，且$A, B, C$在同一水平面上的投影$A', B', C'$满足$\\angle A'C'B' = 45^\\circ$，$\\angle A'B'C' = 60^\\circ$．由$C$点测得$B$点的仰角为$15^\\circ$，$BB'$与$CC'$的差为100；由$B$点测得$A$点的仰角为$45^\\circ$，则$A, C$两点到水平面$A'B'C'$的高度差$AA' - CC'$约为（$\\sqrt{3} \\approx 1.732$）",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -3350,7 +3350,7 @@
     "type_rank": 9,
     "category": "trigo_sol",
     "content": "魏晋时期刘徽撰写的《海岛算经》是关于测量的数学著作，其中第一题是测量海盗的高。如图，点 $E,H,G$ 在水平线 $AC$ 上，$DE$ 和 $FG$ 是两个垂直于水平面且等高的测量标杆的高度，称为“表高”，$EG$ 称为“表距”，$GC$ 和 $EH$ 都称为“表目距”，$GC$ 与 $EH$ 的差称为“表目距的差”。则海岛的高 $AB=$",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -5497,7 +5497,7 @@
     "type_rank": 3,
     "category": "line_circle",
     "content": "某中学开展劳动实习，学生加工制作零件，零件的截面如图所示．$O$为圆孔及轮廓圆弧$AB$所在圆的圆心，$A$是圆弧$AB$与直线$AG$的切点，$B$是圆弧$AB$与直线$BC$的切点，四边形$DEFG$为矩形，$BC\\perp DG$，垂足为$C$，$\\tan\\angle ODC=\\frac{3}{5}$，$BH \\parallel DG$，$EF=12 \\text{ cm}$，$DE=2 \\text{ cm}$，$A$到直线$DE$和$EF$的距离均为$7 \\text{ cm}$，圆孔半径为$1 \\text{ cm}$，则图中阴影部分的面积为________$\\text{cm}^2$．",
-    "has_figure": true,
+    "has_figure": false,
     "options": null,
     "score_rule": "每小题5分",
     "answer": "$4+\\frac{5\\pi}{2}$"
@@ -5815,7 +5815,7 @@
     "type_rank": 3,
     "category": "solid_geometry",
     "content": "埃及胡夫金字塔是古代世界建筑奇迹之一，它的形状可视为一个正四棱锥。以该四棱锥的高为边长的正方形面积等于该四棱锥一个侧面三角形的面积，则其侧面三角形底边上的高与底面正方形的边长的比值为",
-    "has_figure": true,
+    "has_figure": false,
     "options": [
       {
         "label": "A",
@@ -7240,7 +7240,7 @@
     "type_rank": 3,
     "category": "probability",
     "content": "在如图的 $4\\times4$ 方格表中选 4 个方格，要求每行和每列均恰有一个方格被选中，则共有________种选法，在所有符合上述要求的选法中，选中方格中的 4 个数之和的最大值是________． \\begin{tabular}{|c|c|c|c|} \\hline 11 & 21 & 31 & 40 \\\\ \\hline 12 & 22 & 33 & 42 \\\\ \\hline 13 & 22 & 33 & 43 \\\\ \\hline 15 & 24 & 34 & 44 \\\\ \\hline \\end{tabular}",
-    "has_figure": true,
+    "has_figure": false,
     "options": null,
     "score_rule": "5分",
     "answer": "24; 112"
