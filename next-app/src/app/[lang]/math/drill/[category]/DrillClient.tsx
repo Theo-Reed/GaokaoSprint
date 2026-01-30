@@ -71,7 +71,6 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
     const [timer, setTimer] = useState(0);
     const [isRunning, setIsRunning] = useState(true);
     const [showHint, setShowHint] = useState(false);
-    const [imageErrorCount, setImageErrorCount] = useState(0);
 
     useEffect(() => {
         const q = getRandomQuestion(category);
@@ -79,12 +78,7 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
         setTimer(0);
         setIsRunning(true);
         setShowHint(false);
-        setImageErrorCount(0);
     }, [category]);
-
-    useEffect(() => {
-        setImageErrorCount(0);
-    }, [question]);
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -202,17 +196,13 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                         </ReactMarkdown>
                     </div>
 
-                    {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
-                    {imageErrorCount < 2 && (
-                        <div className={`flex-shrink-0 flex flex-col items-center justify-center transition-all ${isVerticalLayout ? 'w-full mt-6' : 'md:max-w-xs self-start mt-4 md:mt-0'}`}>
+                    {/* Question Illustration Area (Statically loaded based on has_figure) */}
+                    {question.has_figure && (
+                        <div className={`flex-shrink-0 flex flex-col items-center justify-center transition-all ${isVerticalLayout ? 'w-full mt-2' : 'md:max-w-xs self-start mt-4 md:mt-0'}`}>
                             <img 
-                                src={imageErrorCount === 0 
-                                    ? `/math-images/${encodeURIComponent(`${question.source}-${question.question_number}.png`)}`
-                                    : `/math-images/${question.source}-${question.question_number}.png`
-                                } 
+                                src={`/math-images/${encodeURIComponent(`${question.source}-${question.question_number}.png`)}`} 
                                 alt="题目插图" 
-                                className={`${isVerticalLayout ? 'h-48 w-auto max-w-full' : 'h-72 w-auto'} object-contain mix-blend-multiply dark:mix-blend-normal dark:invert`}
-                                onError={() => setImageErrorCount(prev => prev + 1)}
+                                className={`${isVerticalLayout ? 'max-h-64 h-auto w-auto max-w-full' : 'h-72 w-auto'} object-contain mix-blend-multiply dark:mix-blend-normal dark:invert`}
                             />
                         </div>
                     )}

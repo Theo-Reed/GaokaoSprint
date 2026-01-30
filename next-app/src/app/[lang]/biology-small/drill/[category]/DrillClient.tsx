@@ -240,27 +240,16 @@ export default function DrillClient({ lang, category }: DrillClientProps) {
                     </ReactMarkdown>
                 </div>
 
-                {/* 题目插图区域 (尝试显示图片，若失败则完全隐藏) */}
-                <div className="my-6 flex flex-col items-center justify-center p-0 transition-all empty:hidden">
-                    <img 
-                        src={`/biology/${currentQ.source}-${currentQ.question_number}.png`} 
-                        alt="题目插图" 
-                        className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
-                        onLoad={(e) => {
-                            (e.target as HTMLImageElement).parentElement!.style.padding = '1rem';
-                        }}
-                        onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            const parent = target.parentElement;
-                            if (parent) {
-                                parent.style.margin = '0';
-                                parent.style.padding = '0';
-                                parent.style.height = '0';
-                            }
-                        }}
-                    />
-                </div>
+                {/* Question Image Area */}
+                {currentQ.has_figure && (
+                    <div className="my-6 flex flex-col items-center justify-center p-4">
+                        <img 
+                            src={`/biology-images/${encodeURIComponent(`${currentQ.source}-${currentQ.question_number}.png`)}`} 
+                            alt="题目插图" 
+                            className="max-h-80 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert"
+                        />
+                    </div>
+                )}
 
                 {currentQ.type !== 'fill_in' && currentQ.options && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
